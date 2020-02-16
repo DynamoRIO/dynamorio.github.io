@@ -12,6 +12,12 @@ description: >-
 baseurl: ""
 url: "https://dynamorio.org"
 
+# I was hoping we could move the .md files into a _docs/ subdir and keep
+# the top-level repo dir less cluttered by setting a "root:" param or
+# "include: [_docs]" or something but I could not get it to work, and
+# even then we might need a "permalink: /foo.html" in every single
+# page.  It does not seem worth it.
+
 # Build settings
 markdown: kramdown
 theme: minima

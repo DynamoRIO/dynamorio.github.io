@@ -1,6 +1,6 @@
 ---
 title: DynamoRIO
-layout: home
+layout: default
 ---
 
 ## DynamoRIO Overview

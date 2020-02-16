@@ -1,7 +1,9 @@
 ---
-layout: page
-title: Selected Publications
+layout: default
+title: Publications
 ---
+
+# Selected Publications
 
 * [[pdf](http://groups.csail.mit.edu/commit/papers/2015/mendis-pldi15-helium.pdf)]
 Charith Mendis, Jeffrey Bosboom, Kevin Wu, Shoaib Kamil, Jonathan Ragan-Kelley,

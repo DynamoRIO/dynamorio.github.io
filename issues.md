@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: default
 title: Reporting Bugs
 ---
+
+# Reporting Bugs
 
 DynamoRIO is a tool platform, with end-user tools built on top of it.  If
 you encounter a crash in a tool provided by a third party, please locate

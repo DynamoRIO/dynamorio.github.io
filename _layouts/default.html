@@ -32,10 +32,20 @@
     <p class="sidebar">
 
     {% for entry in site.data.links %}
-    <span class="topmenu">
+      <span class="topmenu">
       <a class="{% if entry.url == page.url %}curpage{% endif %}"
          href="{{ entry.url }}">{{ entry.title }}</a>
-    </span><br>
+      </span><br>
+      <!-- The original site only expanded the submenu when the current page was the
+       parent or children.  That has not yet been implemented here. -->
+      {% if entry.children %}
+      {% for child in entry.children %}
+        &nbsp;&nbsp;&nbsp;<span class="submenu">
+        <a class="{% if child.url == page.url %}curpage{% endif %}"
+           href="{{ child.url }}">{{ child.title }}</a>
+        </span><br>
+      {% endfor %}
+      {% endif %}
     {% endfor %}
 
     </p>

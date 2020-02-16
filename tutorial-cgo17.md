@@ -1,20 +1,24 @@
-<h1>CGO 2017 Tutorial:<br> Building Dynamic Tools with DynamoRIO on x86 and ARMv8</h1>
+---
+layout: default
+---
 
-<p>
-Sunday morning, February 5, 2017</a> at
+# CGO 2017 Tutorial:<br> Building Dynamic Tools with DynamoRIO on x86 and ARMv8
+
+
+Sunday morning, February 5, 2017 at
 the [2017 International Symposium on Code
 Generation and Optimization](http://cgo.org/cgo2017/).
-</p>
 
-<h2>Audience</h2>
 
-<p>Researchers and professionals interested in building dynamic program
+## Audience
+
+Researchers and professionals interested in building dynamic program
 analysis tools.
-</p>
 
-<h2>Abstract</h2>
 
-<p>
+## Abstract
+
+
   This tutorial will present the DynamoRIO tool platform and describe how
   to use its API to build custom tools that utilize dynamic code
   manipulation for instrumentation, profiling, analysis, optimization,
@@ -23,61 +27,61 @@ analysis tools.
   to prefetch optimization.  DynamoRIO is publicly available in open source
   form and targets Windows, Linux, Mac, and Android on IA-32, AMD64, ARM,
   and AArch64 platforms.
-</p>
 
-<h2>Topics</h2>
+
+## Topics
 
 The tutorial will cover the following topics:
-<ul>
-  <li> DynamoRIO API: an overview of the full range of DynamoRIO's powerful
+
+*  DynamoRIO API: an overview of the full range of DynamoRIO's powerful
     API, which abstracts away the details of the underlying infrastructure
     and allows the tool builder to concentrate on analyzing or modifying
     the application's runtime code stream.  It includes both high-level
     features for quick prototyping and low-level features for full control
     over instrumentation performance.
-  <li> DynamoRIO system overview: a brief description of how DynamoRIO works
+*  DynamoRIO system overview: a brief description of how DynamoRIO works
     under the covers.
-  <li> Description of tools provided with the DynamoRIO package, including
+*  Description of tools provided with the DynamoRIO package, including
     the Dr. Memory memory debugging tool, the Dr. CacheSim memory tracing
     and cache simulation tool, the DrCov code coverage tool, the Dr. CPUSim
     legacy CPU tool, and the DrStrace Windows system call tracing tool.
-  <li> Sample tool starting points for building new tools.
-  <li> Advanced topics when building sophisticated tools.
-</ul>
-</p>
+*  Sample tool starting points for building new tools.
+*  Advanced topics when building sophisticated tools.
 
-<h2>Slides</h2>
 
-<p>
+
+## Slides
+
+
 The slides are now available
 in [PDF](https://github.com/DynamoRIO/dynamorio/releases/download/release_7_0_0_rc1/DynamoRIO-tutorial-feb2017.pdf), [PPSX](https://github.com/DynamoRIO/dynamorio/releases/download/release_7_0_0_rc1/DynamoRIO-tutorial-feb2017.ppsx),
 and [PDF
 with embedded fonts](https://github.com/DynamoRIO/dynamorio/releases/download/release_7_0_0_rc1/DynamoRIO-tutorial-feb2017-embedded-fonts.pdf) formats (the embedded font version contains some
 artifacts from conversion from Powerpoint that are not present in the
 non-embedded file).
-</p>
 
-<h2>Organizers</h2>
 
-<ul>
-  <li>Derek Bruening (Google)
-  <li>Chris Adeniyi-Jones (ARM)
-  <li>Edmund Grimley-Evans (ARM)
-  <li>Kevin Zhou (U. of Cambridge)
-</ul>
+## Organizers
 
-<h2>Questions</h2>
-<p>
+
+* Derek Bruening (Google)
+* Chris Adeniyi-Jones (ARM)
+* Edmund Grimley-Evans (ARM)
+* Kevin Zhou (U. of Cambridge)
+
+
+## Questions
+
 Questions about the tutorial can be sent to the
 [DynamoRIO-Users](http://groups.google.com/group/DynamoRIO-Users)
 mailing list.
-</p>
 
-<h2>References</h2>
 
-<ul>
-<li>[DynamoRIO home](http://dynamorio.org/)
-<li>[DynamoRIO API documentation](http://dynamorio.org/docs/)
-<li>[DynamoRIO code repository](https://github.com/DynamoRIO/dynamorio)
-</ul>
+## References
+
+
+* [DynamoRIO home](http://dynamorio.org/)
+* [DynamoRIO API documentation](http://dynamorio.org/docs/)
+* [DynamoRIO code repository](https://github.com/DynamoRIO/dynamorio)
+
 

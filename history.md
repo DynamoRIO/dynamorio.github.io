@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: default
 title: The History of DynamoRIO
 ---
+
+# The History of DynamoRIO
 
 DynamoRIO originated from a collaboration between MIT and Hewlett-Packard
 in 2001.  HP Labs created the

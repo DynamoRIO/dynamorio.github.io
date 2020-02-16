@@ -1,7 +1,11 @@
 - title: Home
   url: /
+- title: Download
+  url: https://github.com/DynamoRIO/dynamorio/wiki/Downloads
+- title: Source Code
+  url: https://github.com/DynamoRIO/dynamorio
 - title: Tutorials
-  url: /tutorial.html
+  url: /tutorials.html
   children:
     - title: CGO 2017
       url: /tutorial-cgo17.html
@@ -9,9 +13,15 @@
       url: /tutorial-secdev16.html
     - title: CGO 2016
       url: /tutorial-cgo16.html
+- title: Discussion List
+  url: http://groups.google.com/group/DynamoRIO-Users
+- title: Wiki
+  url: https://github.com/DynamoRIO/dynamorio/wiki
 - title: Reporting Bugs
   url: /issues.html
 - title: Publications
   url: /pubs.html
 - title: History
   url: /history.html
+- title: Dr. Memory
+  url: http://www.drmemory.org/
