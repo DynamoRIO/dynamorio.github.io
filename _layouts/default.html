@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <meta name="description" content="DynamoRIO Dynamic Instrumentation Tool Platform">
+  <meta name="keywords" content="DynamoRIO Dynamic Instrumentation Tool Platform">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+  <title>{{ page.title }}</title>
+</head>
+
+</head>
+<body height=100% leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+  <!--------------------------------------------------------------------------------->
+  <!--------------------------------------------------------------------------------->
+  <table width=100% height=100% cellpadding=0 cellspacing=0 border=0 class="master">
+
+    <tr>
+    <td colspan=2 width=100% align=center class="medbg">
+      <img width=450 src="images/toplogo.png" alt="DynamoRIO">
+    </td>
+    </tr>
+
+    <tr>
+    <td colspan=2 width=100% align=center class="medbg">
+      <div class="logo">Dynamic Instrumentation Tool Platform</div>
+    </td>
+    </tr>
+
+    <tr height=100%>
+    <td valign=top height=100% class="medbg">
+    <p class="sidebar">
+
+    {% for entry in site.data.links %}
+    <span class="topmenu">
+      <a class="{% if entry.url == page.url %}curpage{% endif %}"
+         href="{{ entry.url }}">{{ entry.title }}</a>
+    </span><br>
+    {% endfor %}
+
+    </p>
+    </td>
+
+    <td width=100% valign=top class="content"><div class="content">
+    <!-- ###################################################################### -->
+
+    {{ content }}
+
+    <!-- ###################################################################### -->
+    </div>
+    </td>
+    </tr>
+
+  </table>
+  <!--------------------------------------------------------------------------------->
+  <!--------------------------------------------------------------------------------->
+
+
+  <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-7559754-4");
+  pageTracker._trackPageview();
+  } catch(err) {}</script>
+
+</body>
+</html>
