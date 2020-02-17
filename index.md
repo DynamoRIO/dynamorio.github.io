@@ -25,12 +25,12 @@ Tools built on DynamoRIO and available in the release package include:
 * The memory debugging tool [Dr. Memory](http://drmemory.org)
 * The multi-process cache simulator
   and memory address trace collection and
-  analysis platform [drcachesim](http://dynamorio.org/docs/page_drcachesim.html)
+  analysis platform [drcachesim](http://dynamorio.org/dynamorio_docs/page_drcachesim.html)
 * The legacy processor emulator
-  [drcpusim](http://dynamorio.org/docs/page_drcpusim.html)
+  [drcpusim](http://dynamorio.org/dynamorio_docs/page_drcpusim.html)
 * The "strace for Windows" tool [drstrace](http://drmemory.org/strace_for_windows.html)
-* The code coverage tool [drcov](http://dynamorio.org/docs/page_drcov.html)
-* The library tracing tool [drltrace](http://dynamorio.org/docs/page_drltrace.html)
+* The code coverage tool [drcov](http://dynamorio.org/dynamorio_docs/page_drcov.html)
+* The library tracing tool [drltrace](http://dynamorio.org/dynamorio_docs/page_drltrace.html)
 * The memory tracing tool [memtrace](https://github.com/DynamoRIO/dynamorio/blob/master/api/samples/memtrace_x86.c)
 * The instruction tracing tool [instrace](https://github.com/DynamoRIO/dynamorio/blob/master/api/samples/instrace_x86.c)
 * The basic block tracing tool [bbbuf](https://github.com/DynamoRIO/dynamorio/blob/master/api/samples/bbbuf.c)
@@ -43,7 +43,7 @@ DynamoRIO's powerful API abstracts away the details of the underlying
 infrastructure and allows the tool builder to concentrate on analyzing or
 modifying the application's runtime code stream.  API documentation is
 included in the release package and can also be [browsed
-online](http://dynamorio.org/docs/).  [Slides from our past
+online](http://dynamorio.org/dynamorio_docs/).  [Slides from our past
 tutorials](https://github.com/DynamoRIO/dynamorio/wiki/Downloads) are also
 available.
 
