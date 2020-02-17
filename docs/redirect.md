@@ -210,7 +210,6 @@ redirect_from:
   - /docs/hashtable_8h.html
   - /docs/hierarchy.html
   - /docs/histogram__create_8h.html
-  - /docs/index.html
   - /docs/memref_8h.html
   - /docs/modules.html
   - /docs/opcode__mix__create_8h.html
