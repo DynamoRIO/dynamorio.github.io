@@ -53,6 +53,10 @@ $ echo Please ensure your author email is correct: \"$(git config user.email)\"
 $ echo "  Run \"git config user.email New Email\" to update"
 ```
 
+Replace all references in printed statements from the scripts with the
+`dynamorio.github.io` repository rather than the `dynamorio` repository, of
+course.
+
 Since we are using the issue tracker in the main `dynamorio` repository,
 instead of a simple `#NNNN` to refer to an issue, use the string
 `DynamoRIO/dynamorio#NNNN`.
