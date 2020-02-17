@@ -4,6 +4,8 @@
   url: https://github.com/DynamoRIO/dynamorio/wiki/Downloads
 - title: Source Code
   url: https://github.com/DynamoRIO/dynamorio
+- title: Documentation
+  url: https://dynamorio.org/dynamorio_docs
 - title: Tutorials
   url: /tutorials.html
   children:
