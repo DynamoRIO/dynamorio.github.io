@@ -110,9 +110,6 @@ div.menus {
 .hamburger {
     display: none;
     @media (max-width: $topmenu-trigger-width) {
-//        position: absolute;
-  //      top: 15px;
-        //    left: 120px;
         margin: 5px 10px 25px 10px;
         display: inline-block;
         text-align: center;
@@ -121,7 +118,7 @@ div.menus {
 div.bar {
     width: 150px;
     height: 15px;
-    background-color: black;
+    background-color: #444488;
     margin: 10px 5px 5px 5px;
     display: block;
 }
