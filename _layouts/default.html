@@ -1,67 +1,115 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
+<html class="full-height">
 <head>
   <meta name="description" content="DynamoRIO Dynamic Instrumentation Tool Platform">
   <meta name="keywords" content="DynamoRIO Dynamic Instrumentation Tool Platform">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
   <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
   <title>{{ page.title }}</title>
-</head>
+
+  <script type="text/javascript">
+  <!-- Begin
+  function toggle_class(el, cls) {
+    var rex_m = new RegExp('(?:^|\\s)' + cls + '(?!\\S)');
+    var rex_r = new RegExp('(?:^|\\s)' + cls + '(?!\\S)', 'g');
+    if (el.className.match(rex_m)) {
+       el.className = el.className.replace(rex_r, '');
+    } else {
+       el.className += " " + cls;
+    }
+  } 
+
+  function show_menu() {
+    var els = document.getElementsByClassName("mobile-toggle");
+    for (i = 0; i < els.length; i++) {
+      toggle_class(els[i], "mobile-invisible");
+    }
+    return false;
+  }
+
+  function expand_menu(el) {
+    toggle_class(el.parentNode, "curmenu");
+    var els = el.parentNode.children;
+    for (i = 0; i < els.length; i++) {
+      toggle_class(els[i], "curmenu");
+    }
+    return false;
+  }
+  // End -->
+  </script>
 
 </head>
-<body height=100% leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 
+</head>
+<body class="full-height">
   <!--------------------------------------------------------------------------------->
   <!--------------------------------------------------------------------------------->
-  <table width=100% height=100% cellpadding=0 cellspacing=0 border=0 class="master">
+  <header class="sidebar medbg full-height">
+    <div class="logo">
+      <img class="logo" src="/images/drmemory.png" alt="DynamoRIO">
+    </div>
+    <div class="subtitle">Dynamic Instrumentation Tool Platform</div>
 
-    <tr>
-    <td colspan=2 width=100% align=center class="medbg">
-      <img width=450 src="/images/toplogo.png" alt="DynamoRIO">
-    </td>
-    </tr>
-
-    <tr>
-    <td colspan=2 width=100% align=center class="medbg">
-      <div class="logo">Dynamic Instrumentation Tool Platform</div>
-    </td>
-    </tr>
-
-    <tr height=100%>
-    <td valign=top height=100% class="medbg">
-    <p class="sidebar">
-
+    <div class="hamburger">
+      <a class="hamburger" onclick='return show_menu();' href="">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      </a>
+    </div>
+    <div class="menus mobile-invisible mobile-toggle">
     {% for entry in site.data.links %}
-      <span class="topmenu">
-      <a class="{% if entry.url == page.url %}curpage{% endif %}"
-         href="{{ entry.url }}">{{ entry.title }}</a>
-      </span><br>
-      <!-- The original site only expanded the submenu when the current page was the
-       parent or children.  That has not yet been implemented here. -->
-      {% if entry.children %}
-      {% for child in entry.children %}
-        &nbsp;&nbsp;&nbsp;<span class="submenu">
-        <a class="{% if child.url == page.url %}curpage{% endif %}"
-           href="{{ child.url }}">{{ child.title }}</a>
-        </span><br>
-      {% endfor %}
+      <!-- submenu expansion relies on the directory hierachy matching the menus -->
+      {% assign final_char = entry.url | slice: -1, 1 %}
+      {% if final_char == '/' %}
+        {% assign entry_base_url = entry.url %}
+      {% else %}
+        {% assign entry_url_split = entry.url | split: '/' %}
+        {% assign entry_file = entry_url_split | last %}
+        {% assign entry_base_url = entry.url | replace: entry_file %}
       {% endif %}
+      {% assign aux_class = '' %}
+      {% if entry.children %}
+        {% assign aux_class = aux_class | append: ' has-children' %}
+        {% if page.url contains entry_base_url %}
+          {% assign aux_class = aux_class | append: ' curmenu' %}
+        {% endif %}
+      {% endif %}
+      <span class="topmenu">
+      <a onclick='return expand_menu(this);' href="{{ entry.url }}">
+        <i class="expand-arrow mobile-invisible mobile-toggle {{aux_class}}"></i></a>
+      <a class="{% if entry.url == page.url %}curpage{% endif %}"
+         href="{{ entry.url }}"> {{ entry.title }} </a>
+      <br>
+      {% if entry.children %}
+        {% for child in entry.children %}
+          {% assign child_aux_class = '' %}
+          {% if page.url contains entry_base_url %}
+            {% assign child_aux_class = child_aux_class | append: ' curmenu' %}
+          {% endif %}
+          {% if child.url == page.url %}
+            {% assign child_aux_class = child_aux_class | append: ' curpage' %}
+          {% endif %}
+          <span class="submenu {{child_aux_class}}">
+            <a class="submenu {{child_aux_class}}"
+               href="{{ child.url }}">{{ child.title }}</a>
+          </span><br class="submenu {{child_aux_class}}">
+        {% endfor %}
+      {% endif %}
+      </span>
     {% endfor %}
+    </div>
+  </header>
 
-    </p>
-    </td>
-
-    <td width=100% valign=top class="content"><div class="content">
+  <section class="full-height sepscroll">
+    <div class="content full-height">
     <!-- ###################################################################### -->
 
-    {{ content }}
+      {{ content }}
 
     <!-- ###################################################################### -->
     </div>
-    </td>
-    </tr>
-
-  </table>
+  </section>
   <!--------------------------------------------------------------------------------->
   <!--------------------------------------------------------------------------------->
 

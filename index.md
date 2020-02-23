@@ -3,7 +3,7 @@ title: DynamoRIO
 layout: default
 ---
 
-## DynamoRIO Overview
+# DynamoRIO
 
 DynamoRIO is a runtime code manipulation system that supports code
 transformations on any part of a program, while it executes. DynamoRIO
