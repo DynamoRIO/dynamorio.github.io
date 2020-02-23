@@ -7,14 +7,14 @@
 - title: Documentation
   url: https://dynamorio.org/dynamorio_docs
 - title: Tutorials
-  url: /tutorials.html
+  url: /tutorials/
   children:
     - title: CGO 2017
-      url: /tutorial-cgo17.html
+      url: /tutorials/tutorial-cgo17.html
     - title: SecDev 16
-      url: /tutorial-secdev16.html
+      url: /tutorials/tutorial-secdev16.html
     - title: CGO 2016
-      url: /tutorial-cgo16.html
+      url: /tutorials/tutorial-cgo16.html
 - title: Discussion List
   url: http://groups.google.com/group/DynamoRIO-Users
 - title: Wiki
