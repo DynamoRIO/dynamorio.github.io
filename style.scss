@@ -13,10 +13,8 @@ body, td, p, div {
 }
 
 body {
-    padding: 0 0 0 $sidebar-width;
-    @media (max-width: $topmenu-trigger-width) {
-        padding: $topbar-height 0 0 0;
-        overflow: hidden;
+    @media (min-width: $topmenu-trigger-width) {
+        padding: 0 0 0 $sidebar-width;
     }
 }
 
@@ -42,6 +40,7 @@ header.sidebar {
     overflow-x: hidden;
     left: 0px;
     @media (max-width: $topmenu-trigger-width) {
+        position: static;
         top: 0px;
         height: $topbar-height;
         width: 100vw;
@@ -49,14 +48,27 @@ header.sidebar {
     }
 }
 
-.sepscroll { overflow-y: scroll; }
-
 h1, h2, h3 {
     color: #000000;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.content { margin: 1em 1em 1em 1em; }
+section.content {
+    margin: 0em 0em 0em 0em;
+    @media (min-width: $topmenu-trigger-width) {
+        height: 100%;
+        // For the side bar, we scroll just the content.
+        // (For top bar we scroll the whole body.)
+        overflow-y: scroll;
+    }
+}
+
+div.content {
+    margin: 1em 1em 1em 1em;
+    @media (min-width: $topmenu-trigger-width) {
+        height: 100%;
+    }
+}
 
 p.margins { margin: 0.5em 0.5em 0.5em 0.5em; }
 
