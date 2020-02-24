@@ -51,6 +51,4 @@ DynamoRIO was moved to Github in December 2014.
 
 ## Logo
 
-The elephant logo ![elephant logo]({{site.baseurl}}/images/drmemory.png
-"elephant logo"){:height="50px" width="50px"} was created as a Dr. Memory
-logo by Natalee Ryan.
+Our logo was created by [Natalee Ryan](https://natalee.info/).
