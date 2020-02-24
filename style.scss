@@ -204,8 +204,6 @@ a:hover {color: #880000; }
     }
 }
 
-@media all and (max-width:640px) { a { padding: 5px 10px; } }
-
 .topmenu a {color: #000000; font-family: Arial, Helvetica, sans-serif;
    text-decoration: none; font-weight: normal; font-size: 110%; line-height:170%; }
 // IE inherits from a:visited, Mozilla from .topmenu a
@@ -222,9 +220,6 @@ a:hover {color: #880000; }
     text-decoration: none;
     font-size: 90%;
     margin-left: 3em;
-    @media (max-width: $topmenu-trigger-width) {
-        margin-left: 4em;
-    }
 }
 .submenu a:visited {color: #000000; font-family: Arial, Helvetica, sans-serif;
    text-decoration: none; font-size: 90%; }

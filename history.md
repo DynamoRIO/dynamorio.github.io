@@ -48,3 +48,9 @@ February 2009.  Versions from 1.4 through 5.0.0 were hosted there.
 ## Open-Source Releases on Github
 
 DynamoRIO was moved to Github in December 2014.
+
+## Logo
+
+The elephant logo ![elephant logo]({{site.baseurl}}/images/drmemory.png
+"elephant logo"){:height="50px" width="50px"} was created as a Dr. Memory
+logo by Natalee Ryan.
