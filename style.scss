@@ -88,6 +88,19 @@ img.logo {
         height: 150px;
     }
 }
+
+div.mobile-title {
+    display: none;
+    @media (max-width: $topmenu-trigger-width) {
+        font-size: 100%;
+        display: inline-block;
+        width: 150px;
+        height: 10px;
+        position: absolute;
+        top: 10px;
+        left: 220px;
+    }
+}
 div.subtitle {
     color: #000000; 
     text-decoration: none;
@@ -96,13 +109,7 @@ div.subtitle {
     text-align: center;
     font-style: italic;
     @media (max-width: $topmenu-trigger-width) {
-        font-size: 80%;
-        display: inline-block;
-        width: 150px;
-        height: 5px;
-        position: absolute;
-        top: 5px;
-        left: 160px;
+        display: none;
     }
 }
 div.menus {
