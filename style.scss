@@ -13,6 +13,9 @@ body, td, p, div {
 }
 
 body {
+    @media (max-width: $topmenu-trigger-width) {
+        overflow-x: hidden;
+    }
     @media (min-width: $topmenu-trigger-width) {
         padding: 0 0 0 $sidebar-width;
     }
@@ -80,12 +83,14 @@ div.logo {
     }
 }
 img.logo {
-    width: 250px;
-    height: 242px;
+    width: 245px;
+    height: 245px;
     text-align: center;
+    margin: 5px 0px 5px 0px;
     @media (max-width: $topmenu-trigger-width) {
-        width: 155px;
-        height: 150px;
+        width: 149px;
+        height: 149px;
+        margin: 3px 5px 3px 5px;
     }
 }
 
@@ -116,8 +121,8 @@ div.menus {
     margin: 1em 1em 1em 1.5em;
     @media (max-width: $topmenu-trigger-width) {
         position: absolute;
-        top: 100px;
-        left: 130px;
+        top: 115px;
+        left: 155px;
         z-index: 2;
         background: #8ea0d2;
         padding: 15px;
