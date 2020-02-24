@@ -51,6 +51,9 @@ header.sidebar {
     }
 }
 
+// Override the inside-<section> Chrome/Firefox rules for h1.
+h1 { font-size: 2em }
+
 h1, h2, h3 {
     color: #000000;
     font-family: Arial, Helvetica, sans-serif;
