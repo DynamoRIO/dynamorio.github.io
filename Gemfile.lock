@@ -1,15 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-<<<<<<< HEAD
-    activesupport (6.0.3.1)
-=======
-<<<<<<< HEAD
     activesupport (6.0.3.2)
-=======
-    activesupport (6.0.3.1)
->>>>>>> b7c5b5d3e8f0c28e4a2ed162a640c0301dab6e11
->>>>>>> 2c65392... Update github-pages to get udpated kramdown to fix security vuln
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
@@ -250,6 +242,9 @@ GEM
       ethon (>= 0.9.0)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.7)
     unicode-display_width (1.6.1)
     zeitwerk (2.3.0)
 
