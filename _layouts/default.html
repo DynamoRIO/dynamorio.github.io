@@ -7,6 +7,14 @@
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 64x64"
         type="image/vnd.microsoft.icon">
   <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+
+  <script type="text/javascript" src="/jquery.js"></script>
+  <script type="text/javascript" src="/dynsections.js"></script>
+  <link href="/navtree.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="/navtreedata.js"></script>
+  <script type="text/javascript" src="/navtree.js"></script>
+  <link href="/doxygen.css" rel="stylesheet" type="text/css" />
+
   <title>{{ page.title }}</title>
 
   <script type="text/javascript">
@@ -46,9 +54,13 @@
 <body class="full-height">
   <!--------------------------------------------------------------------------------->
   <!--------------------------------------------------------------------------------->
-  <header class="sidebar medbg">
+  <header class="sidebar darkbg">
+
+
     <div class="logo">
-      <img class="logo" src="/images/DynamoRIO-logo.png" alt="DynamoRIO logo">
+      <a href="/">
+        <img class="logo" src="/images/DynamoRIO-logo.png" alt="DynamoRIO logo">
+      </a>
     </div>
     <div class="subtitle">Dynamic Instrumentation Tool Platform</div>
 
@@ -59,51 +71,24 @@
       <div class="bar"></div>
       </a>
     </div>
-    <div class="menus mobile-invisible mobile-toggle">
-    {% for entry in site.data.links %}
-      <!-- submenu expansion relies on the directory hierachy matching the menus -->
-      {% assign final_char = entry.url | slice: -1, 1 %}
-      {% if final_char == '/' %}
-        {% assign entry_base_url = entry.url %}
-      {% else %}
-        {% assign entry_url_split = entry.url | split: '/' %}
-        {% assign entry_file = entry_url_split | last %}
-        {% assign entry_base_url = entry.url | replace: entry_file %}
-      {% endif %}
-      {% assign aux_class = '' %}
-      {% if entry.children %}
-        {% assign aux_class = aux_class | append: ' has-children' %}
-        {% if page.url contains entry_base_url %}
-          {% assign aux_class = aux_class | append: ' curmenu' %}
-        {% endif %}
-      {% endif %}
-      <span class="topmenu">
-      <a onclick='return expand_menu(this);' href="{{ entry.url }}">
-        <i class="expand-arrow mobile-invisible mobile-toggle {{aux_class}}"></i></a>
-      <a class="{% if entry.url == page.url %}curpage{% endif %}"
-         href="{{ entry.url }}"> {{ entry.title }} </a>
-      <br>
-      {% if entry.children %}
-        {% for child in entry.children %}
-          {% assign child_aux_class = '' %}
-          {% if page.url contains entry_base_url %}
-            {% assign child_aux_class = child_aux_class | append: ' curmenu' %}
-          {% endif %}
-          {% if child.url == page.url %}
-            {% assign child_aux_class = child_aux_class | append: ' curpage' %}
-          {% endif %}
-          <span class="submenu {{child_aux_class}}">
-            <a class="submenu {{child_aux_class}}"
-               href="{{ child.url }}">{{ child.title }}</a>
-          </span><br class="submenu {{child_aux_class}}">
-        {% endfor %}
-      {% endif %}
-      </span>
-    {% endfor %}
+
+    <div id="nav-tree" class="menus medbg noxscroll mobile-invisible mobile-toggle">
+      <div id="nav-tree-contents" class="medbg noxscroll mobile-invisible mobile-toggle">
+      </div>
+      <div id="nav-sync" class="medbg sync noxscroll mobile-invisible mobile-toggle">
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+    $(document).ready(function(){initNavTree('{{page.url}}',''); });
+    /* @license-end */
+    </script>
+      
     </div>
   </header>
 
-  <section class="content">
+  <section class="content" id="doc-content">
     <div class="content">
     <!-- ###################################################################### -->
 

@@ -21,8 +21,12 @@ body {
     }
 }
 
+.darkbg {
+    background: #f4fcf8;
+}
+
 .medbg {
-    background: #8ea0d2;
+    background: #f4fcf8;
 }
 
 .ltbg, a.curpage {
@@ -34,6 +38,16 @@ body {
     height: 100%;
 }
 
+.noxscroll {
+    overflow-x: hidden;
+}
+
+.blacktext {
+    color: #000000;
+}
+a.blacktext:visited {color: #000000; }
+a.blacktext:hover {color: #880000; }
+
 header.sidebar {
     margin: 0em 0em 0em 0em;
     white-space: nowrap;
@@ -42,12 +56,16 @@ header.sidebar {
     height: 100vh;
     overflow-x: hidden;
     left: 0px;
+    border-right: 3px ridge #f4fcf8;
+    border-bottom: 0px;
     @media (max-width: $topmenu-trigger-width) {
         position: static;
         top: 0px;
         height: $topbar-height;
         width: 100vw;
         overflow-x: visible;
+        border-right: 0px;
+        border-bottom: 3px ridge #f4fcf8;
     }
 }
 
@@ -115,7 +133,7 @@ div.menus {
         top: 115px;
         left: 155px;
         z-index: 2;
-        background: #8ea0d2;
+        background: #bedoff;
         padding: 15px;
     }
 }
@@ -176,7 +194,13 @@ a:hover {color: #880000; }
     transform: rotate(135deg);
 }
 
-.submenu {
+.l2menu {
+    display: none;
+}
+.l3menu {
+    display: none;
+}
+.l4menu {
     display: none;
 }
 .curmenu, .curmenu a {
@@ -195,26 +219,50 @@ a:hover {color: #880000; }
     }
 }
 
-.topmenu a {color: #000000; font-family: Arial, Helvetica, sans-serif;
+.l1menu a {color: #000000; font-family: Arial, Helvetica, sans-serif;
    text-decoration: none; font-weight: normal; font-size: 110%; line-height:170%; }
-// IE inherits from a:visited, Mozilla from .topmenu a
-.topmenu a:visited {color: #000000; font-family: Arial, Helvetica, sans-serif;
+// IE inherits from a:visited, Mozilla from .l1menu a
+.l1menu a:visited {color: #000000; font-family: Arial, Helvetica, sans-serif;
    text-decoration: none; font-weight: normal; }
-.topmenu a:hover {color: #880000; }
+.l1menu a:hover {color: #880000; }
 
-// IE requires this, while Mozilla uses .submenu a color
-.submenu img {border-color: #000000; }
+// IE requires this, while Mozilla uses .l2menu a color
+.l2menu img {border-color: #000000; }
+.l3menu img {border-color: #000000; }
+.l4menu img {border-color: #000000; }
 
-.submenu a {
+.l2menu a {
     color: #000000;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     font-size: 90%;
+    margin-left: 1em;
+}
+.l2menu a:visited {color: #000000; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; font-size: 90%; }
+.l2menu a:hover {color: #880000; }
+
+.l3menu a {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 80%;
+    margin-left: 2em;
+}
+.l3menu a:visited {color: #000000; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; font-size: 80%; }
+.l3menu a:hover {color: #880000; }
+
+.l4menu a {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 70%;
     margin-left: 3em;
 }
-.submenu a:visited {color: #000000; font-family: Arial, Helvetica, sans-serif;
-   text-decoration: none; font-size: 90%; }
-.submenu a:hover {color: #880000; }
+.l4menu a:visited {color: #000000; font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; font-size: 70%; }
+.l4menu a:hover {color: #880000; }
 
 .adkblue a {color: #000080; font-family: Arial, Helvetica, sans-serif;
    text-decoration: none; }
