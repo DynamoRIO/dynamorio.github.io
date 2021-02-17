@@ -65,7 +65,7 @@
   padding:0px;
 }
 
-#nav-tree {
+#nav-tree-disabled {
   padding: 0px 0px;
   background-color: #FAFAFF; 
   font-size:14px;
@@ -116,7 +116,7 @@
   margin: 0px 0px 0px 0px;
 }
 
-#nav-tree {
+#nav-tree-disabled {
   background-image:url('/images/nav_h.png');
   background-repeat:repeat-x;
   background-color: #F9FAFC;
