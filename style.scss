@@ -22,11 +22,11 @@ body {
 }
 
 .darkbg {
-    background: #f4fcf8;
+    background: #edf8ec;
 }
 
 .medbg {
-    background: #f4fcf8;
+    background: #edf8ec;
 }
 
 .ltbg, a.curpage {
@@ -56,7 +56,7 @@ header.sidebar {
     height: 100vh;
     overflow-x: hidden;
     left: 0px;
-    border-right: 3px ridge #f4fcf8;
+    border-right: 3px ridge #edf8ec;
     border-bottom: 0px;
     @media (max-width: $topmenu-trigger-width) {
         position: static;
@@ -65,7 +65,7 @@ header.sidebar {
         width: 100vw;
         overflow-x: visible;
         border-right: 0px;
-        border-bottom: 3px ridge #f4fcf8;
+        border-bottom: 3px ridge #edf8ec;
     }
 }
 
@@ -297,17 +297,10 @@ form {margin-bottom: 0px;}
 #search-input {
     display: block;
     margin: auto;
-    margin-top: 1em;
-    @media (max-width: $topmenu-trigger-width) {
-        display: inline-block;
-        margin-top: 0em;
-    }
+    margin-bottom: 1em;
 }
 
-#search-form {
-    @media (max-width: $topmenu-trigger-width) {
-        display: inline-block;
-        vertical-align: top;
-        margin-top: 75px;
-    }
+#nav-sync {
+    // We decided we don't want to show the double-array and to always sync the menu.
+    display: none;
 }

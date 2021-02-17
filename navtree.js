@@ -476,7 +476,6 @@ function navTo(o,root,hash,relpath)
       indices.pop();
       ++indices[indices.length-1];
       if (arrays.length == 0) {
-        console.log('failed to find '+root);
         indices = [0]; // fallback: show home
         break;
       }
