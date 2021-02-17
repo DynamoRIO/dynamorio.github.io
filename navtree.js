@@ -101,7 +101,8 @@ function getScript(scriptName,func,show)
   script.id = scriptName;
   script.type = 'text/javascript';
   script.onload = func;
-  if (scriptName[0] != '/') {
+  if (scriptName[0] != '/' &&
+      scriptName.substring(0,4) != 'http') {
     // We're using flat-directory doxygen output where we impose
     // a docs/ subdirectory without changing the output.
     script.src = '/docs/'+scriptName+'.js';
@@ -206,7 +207,9 @@ function newNode(o, po, text, link, childrenData, lastNode)
   a.appendChild(node.label);
   if (link) {
     var url;
-    if (link.substring(0,1)=='^') {
+    if (link.substring(0,4) == 'http') {
+      url = link;
+    } else if (link.substring(0,1)=='^') {
       url = link.substring(1);
       link = url;
     } else if (link.substring(0,1)!='/') {
