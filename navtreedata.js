@@ -35,6 +35,7 @@ var NAVTREE =
     [ "SecDev 16", "/tutorials/tutorial-secdev16.html", null ],
     [ "CGO 2016", "/tutorials/tutorial-cgo16.html", null ],
   ] ],
+  [ "Debugging", "/wiki/Debugging.html", {% include_relative wiki/Debugging.js %} ],
   [ "Discussion List", "https://groups.google.com/group/DynamoRIO-Users", null ],
   [ "Wiki", "https://github.com/DynamoRIO/dynamorio/wiki", null ],
   [ "Reporting Bugs", "/issues.html", null ],
