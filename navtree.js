@@ -484,7 +484,7 @@ function navTo(o,root,hash,relpath)
       }
     }
     if (++iters > 50000) { // Guard against a bug where we loop.
-      console.log('loop iter max reached: failed to find '+root);
+      console.log('loop iter max reached: failed to find '+url);
       indices = [0]; // fallback: show home
       break;
     }
@@ -581,7 +581,8 @@ function initNavTree(toroot,relpath)
          $('.item').removeClass('selected');
          $('.item').removeAttr('id');
        }
-       var link=stripPath2(pathName());
+       // The doxygen code uses "stripPath2(pathName())" but we want our subdirs.
+       var link=pathName();
        navTo(o,link,hashUrl(),relpath);
      } else if (!animationInProgress) {
        $('#doc-content').scrollTop(0);

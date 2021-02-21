@@ -304,3 +304,13 @@ form {margin-bottom: 0px;}
     // We decided we don't want to show the double-array and to always sync the menu.
     display: none;
 }
+
+div.highlight {
+  background-color: #eeeeee;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 2px;
+  border-style: solid;
+  border-color: #cccccc;
+  overflow: auto;
+}

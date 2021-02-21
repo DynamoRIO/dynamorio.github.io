@@ -16,7 +16,7 @@ h1.groupheader {
 
 .title {
         font: 400 14px/28px Roboto,sans-serif;
-        font-size: 150%;
+        font-size: 200%;
         font-weight: bold;
         margin: 10px 2px;
 }
@@ -1071,15 +1071,17 @@ table.fieldtable {
 .navpath ul
 {
         font-size: 11px;
-        background-image:url('images/tab_b.png');
+        background-image:url('images/nav_h.png');
         background-repeat:repeat-x;
+        background-color: #F9FAFC;
+        margin:  0px;
+        border-top: 1px solid #C4CFE5;
         background-position: 0 -5px;
         height:30px;
         line-height:30px;
         color:#8AA0CC;
-        border:solid 1px #C2CDE4;
         overflow:hidden;
-        margin:0px;
+        margin: 25px 0px 0px 0px;
         padding:0px;
 }
 
@@ -1791,3 +1793,4 @@ u {
         text-decoration: underline;
 }
 
+div#top { display: none; }

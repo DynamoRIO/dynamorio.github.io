@@ -1,5 +1,5 @@
 [
-    [ "features_t", "structfeatures__t.html", {% include_relative docs/structfeatures__t.js %} ],
+    [ "features_t", "structfeatures__t.html", {% include_relative structfeatures__t.js %} ],
     [ "DR_FPSTATE_ALIGN", "dr__proc_8h.html#accb44ca0caec6b9151ffd0c668a3f159", null ],
     [ "DR_FPSTATE_BUF_SIZE", "dr__proc_8h.html#a59e3ffef992aef6512371c679cf5d6f0", null ],
     [ "FAMILY_486", "dr__proc_8h.html#aa5917ba4e0fc4881e44bf0d44cc23dbd", null ],
@@ -48,10 +48,6 @@
     [ "MODEL_PENTIUM_M_1MB", "dr__proc_8h.html#aba5cdb3609c3f91a8d0d148b3e3d02ce", null ],
     [ "MODEL_SANDYBRIDGE", "dr__proc_8h.html#ab3ef5a3e21e33d88fce19694b61b899a", null ],
     [ "MODEL_SANDYBRIDGE_E", "dr__proc_8h.html#a6e5f23cc20fca8a28a11300b5dfd940e", null ],
-    [ "VENDOR_INTEL", "dr__proc_8h.html#a6b7b47dd702d9e331586d485013fd1eaa0ff85c91faaad5edc40b8b13bf5872a9", null ],
-    [ "VENDOR_AMD", "dr__proc_8h.html#a6b7b47dd702d9e331586d485013fd1eaa98f56d8179428f9ae8a673281e490fb7", null ],
-    [ "VENDOR_ARM", "dr__proc_8h.html#a6b7b47dd702d9e331586d485013fd1eaa2ad2ea2a2c40658bd0ded140cc6b8819", null ],
-    [ "VENDOR_UNKNOWN", "dr__proc_8h.html#a6b7b47dd702d9e331586d485013fd1eaa366adf423d8e0771406dc7be013f0fce", null ],
     [ "cache_size_t", "dr__proc_8h.html#abde92db21512f07aaf05d073c43832df", [
       [ "CACHE_SIZE_8_KB", "dr__proc_8h.html#abde92db21512f07aaf05d073c43832dfa39df034a5ced0be40065bcb55fb9f942", null ],
       [ "CACHE_SIZE_16_KB", "dr__proc_8h.html#abde92db21512f07aaf05d073c43832dfa8002cfc04251e85a48cd4062ce78029d", null ],
