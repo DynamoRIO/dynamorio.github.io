@@ -94,7 +94,7 @@
       ] ]
     ] ],
     [ "DynamoRIO System Details", "overview.html", {% include_relative docs/overview.js %} ],
-    [ "Release Notes for Version 8.0.18678", "release_notes.html", [
+    [ "Release Notes for Version 8.0.18679", "release_notes.html", [
       [ "Distribution Contents", "release_notes.html#sec_package", null ],
       [ "Changes Since Prior Releases", "release_notes.html#sec_changes", null ],
       [ "Limitations", "release_notes.html#sec_limits", [
