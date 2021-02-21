@@ -208,14 +208,14 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Adds handling for custom data fields that were stored with each module via <a class="el" href="drmemtrace_8h.html#a30ea474fd519a00de470c139c53caf03">drmemtrace_custom_module_data()</a> during trace generation. When <a class="el" href="classraw2trace__t.html#acf6b5d0b31b6f5a759b648c14686da34">do_conversion()</a> or <a class="el" href="classraw2trace__t.html#ac2476351d49c4ec1902d77fccde436de">do_module_parsing()</a> is subsequently called, its parsing of the module data will invoke <code>parse_cb</code>, which should advance the module data pointer passed in <code>src</code> and return it as its return value (or nullptr on error), returning the resulting parsed data in <code>data</code>. The <code>data</code> pointer will later be passed to both <code>process_cb</code>, which can update the module path inside <code>info</code> (and return a non-empty string on error), and <b>free_cb</b>, which can perform cleanup.</p>
-<p>A custom callback value <code>process_cb_user_data</code> can be passed to <code>process_cb</code>. The same is not provided for the other callbacks as they end up using the <a class="el" href="drcovlib_8h.html#ac315630959b846ae38f04ad40724d631">drmodtrack_add_custom_data()</a> framework where there is no support for custom callback parameters.</p>
+<p>Adds handling for custom data fields that were stored with each module via <a class="el" href="drmemtrace_8h.html#a8644981035cdedfafb000d03cd223399">drmemtrace_custom_module_data()</a> during trace generation. When <a class="el" href="classraw2trace__t.html#acf6b5d0b31b6f5a759b648c14686da34">do_conversion()</a> or <a class="el" href="classraw2trace__t.html#ac2476351d49c4ec1902d77fccde436de">do_module_parsing()</a> is subsequently called, its parsing of the module data will invoke <code>parse_cb</code>, which should advance the module data pointer passed in <code>src</code> and return it as its return value (or nullptr on error), returning the resulting parsed data in <code>data</code>. The <code>data</code> pointer will later be passed to both <code>process_cb</code>, which can update the module path inside <code>info</code> (and return a non-empty string on error), and <b>free_cb</b>, which can perform cleanup.</p>
+<p>A custom callback value <code>process_cb_user_data</code> can be passed to <code>process_cb</code>. The same is not provided for the other callbacks as they end up using the <a class="el" href="drcovlib_8h.html#a9c2889006a80254645521f81a1a486f5">drmodtrack_add_custom_data()</a> framework where there is no support for custom callback parameters.</p>
 <p>Returns a non-empty error message on failure. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>drmemtrace/<a class="el" href="raw2trace_8h.html">raw2trace.h</a></li>
+<li>/home/bruening/dr/git/build_docs/clients/include/drmemtrace/<a class="el" href="raw2trace_8h.html">raw2trace.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.1-->
@@ -223,5 +223,5 @@ Additional Inherited Members</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO API version 8.0.18670 --- Sun Feb 14 2021 12:10:58 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO API version 8.0.18678 --- Sat Feb 20 2021 19:22:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

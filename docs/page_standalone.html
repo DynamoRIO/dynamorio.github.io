@@ -36,7 +36,7 @@ Using DynamoRIO as a Standalone Library</h1>
 <div class="ttc" id="adr__tools_8h_html_af63184f56cc0508e2840f64e84b1c48d"><div class="ttname"><a href="dr__tools_8h.html#af63184f56cc0508e2840f64e84b1c48d">dr_standalone_init</a></div><div class="ttdeci">void * dr_standalone_init(void)</div></div>
 </div><!-- fragment --><p>This routine returns a dummy context that can be passed to API routines.</p>
 <p>When using <code>drdecode</code>, the special context <code>GLOBAL_DCONTEXT</code> should be used whenever a context is required. The <code>drdecode</code> library does not require initialization.</p>
-<p>Neither the context returned by <a class="el" href="dr__tools_8h.html#af63184f56cc0508e2840f64e84b1c48d">dr_standalone_init()</a> nor <code>GLOBAL_DCONTEXT</code> can be used as the drcontext for a thread running under DynamoRIO control! It is only for standalone programs that wish to use DynamoRIO as a library of routines for IA-32 instruction manipulation or other purposes.</p>
+<p>Neither the context returned by <a class="el" href="dr__tools_8h.html#af63184f56cc0508e2840f64e84b1c48d">dr_standalone_init()</a> nor <code>GLOBAL_DCONTEXT</code> can be used as the drcontext for a thread running under DynamoRIO control! It is only for standalone programs that wish to use DynamoRIO as a library of routines for instruction manipulation or other purposes.</p>
 <p>In standalone mode, the <a class="el" href="dr__ir__utils_8h.html#a69172666c0395e092a45cc471f505907">dr_set_isa_mode()</a> routine operates globally rather than per-thread.</p>
 <p>Runtime options are ignored in standalone mode. Disassembly style can be controlled via <a class="el" href="dr__ir__utils_8h.html#a3082c5db55039c72ae30e3276f622aae">disassemble_set_syntax()</a>. The processor to use will not be automatically set and will be assumed to be <code>VENDOR_INTEL</code>. Use <a class="el" href="dr__proc_8h.html#a5a9d6c28ef304d6b4f5e1a45fb9da996">proc_set_vendor()</a> to set to <code>VENDOR_AMD</code> instead.</p>
 <p>In standalone mode, there are no 32-bit-displacement reachability guarantees regarding DynamoRIO's heap.</p>
@@ -57,5 +57,5 @@ DynamoRIO Shared Library Issues</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO API version 8.0.18670 --- Sun Feb 14 2021 12:10:58 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO API version 8.0.18678 --- Sat Feb 20 2021 19:22:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

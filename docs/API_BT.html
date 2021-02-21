@@ -186,7 +186,7 @@ Decoding and Encoding</h1>
 <p>As discussed in <a class="el" href="API_BT.html#sec_events_bb">Basic Block Creation</a> and <a class="el" href="API_BT.html#sec_events_trace">Trace Creation</a>, a client's primary interface to code inspection and manipulation is via the basic block and trace hooks. However, DynamoRIO also exports a rich set of functions and data structures to decode and encode instructions directly. The following subsections overview this functionality.</p>
 <h2><a class="anchor" id="sec_Decoding"></a>
 Decoding</h2>
-<p>DynamoRIO provides several routines for decoding and disassembling IA-32 instructions. The most common method for decoding is the <a class="el" href="dr__ir__utils_8h.html#a6f62065c2b7e764fe9fb0f46557e2264">decode()</a> routine, which populates an <code><a class="el" href="structinstr__t.html">instr_t</a></code> data structure with all information about the instruction (e.g., opcode and operand information).</p>
+<p>DynamoRIO provides several routines for decoding and disassembling instructions. The most common method for decoding is the <a class="el" href="dr__ir__utils_8h.html#a6f62065c2b7e764fe9fb0f46557e2264">decode()</a> routine, which populates an <code><a class="el" href="structinstr__t.html">instr_t</a></code> data structure with all information about the instruction (e.g., opcode and operand information).</p>
 <p>When decoding instructions, clients must explicitly manage the <code><a class="el" href="structinstr__t.html">instr_t</a></code> data structure. For example, the following code shows how to use the <a class="el" href="dr__ir__instr_8h.html#a77b55daa2b3780d2c07e33b8330b2f62">instr_init()</a>, <a class="el" href="dr__ir__instr_8h.html#accd2bdee07d2e6ca0be3b252bc7b913f">instr_reset()</a>, and <a class="el" href="dr__ir__instr_8h.html#ae0f3cc7fb91265cb6c8eb15a84184c1f">instr_free()</a> routines to decode a sequence of arbritrary instructions:</p>
 <div class="fragment"><div class="line"><a class="code" href="structinstr__t.html">instr_t</a> instr;</div>
 <div class="line"><a class="code" href="dr__ir__instr_8h.html#a77b55daa2b3780d2c07e33b8330b2f62">instr_init</a>(&amp;instr);</div>
@@ -231,7 +231,7 @@ Instruction Generation</h2>
 <p>When using the second method, the exact order of operands and their sizes must match the templates that DynamoRIO uses. The INSTR_CREATE_ macros in <a class="el" href="dr__ir__macros_8h.html" title="Cross-platform instruction creation convenience macros.">dr_ir_macros.h</a> should be consulted to determine the order.</p>
 <h2><a class="anchor" id="sec_Encoding"></a>
 Encoding</h2>
-<p>DynamoRIO's encoding routines take an instruction or list of instructions and encode them into the corresponding IA-32 bit pattern:</p>
+<p>DynamoRIO's encoding routines take an instruction or list of instructions and encode them into the corresponding bit pattern:</p>
 <div class="fragment"><div class="line"><a class="code" href="dr__ir__instr_8h.html#a1cd4d0740eb0a0bcd2d387685719263c">instr_encode</a>(), <a class="code" href="dr__ir__instrlist_8h.html#aaac5ae2bc9af179b56bbbe5efc14e8b5">instrlist_encode</a>() </div>
 <div class="ttc" id="adr__ir__instr_8h_html_a1cd4d0740eb0a0bcd2d387685719263c"><div class="ttname"><a href="dr__ir__instr_8h.html#a1cd4d0740eb0a0bcd2d387685719263c">instr_encode</a></div><div class="ttdeci">byte * instr_encode(void *drcontext, instr_t *instr, byte *pc)</div></div>
 <div class="ttc" id="adr__ir__instrlist_8h_html_aaac5ae2bc9af179b56bbbe5efc14e8b5"><div class="ttname"><a href="dr__ir__instrlist_8h.html#aaac5ae2bc9af179b56bbbe5efc14e8b5">instrlist_encode</a></div><div class="ttdeci">byte * instrlist_encode(void *drcontext, instrlist_t *ilist, byte *pc, bool has_instr_jmp_targets)</div></div>
@@ -517,5 +517,5 @@ Running a Subset of an Application</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO API version 8.0.18670 --- Sun Feb 14 2021 12:10:58 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO API version 8.0.18678 --- Sat Feb 20 2021 19:22:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

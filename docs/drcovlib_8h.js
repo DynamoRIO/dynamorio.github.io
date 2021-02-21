@@ -20,7 +20,7 @@
     [ "drcovlib_exit", "drcovlib_8h.html#a9ae4cea2825fc79abec8b6c0c87855d9", null ],
     [ "drcovlib_init", "drcovlib_8h.html#af677d6ab6dbb234a71366b8bc9fafa2e", null ],
     [ "drcovlib_logfile", "drcovlib_8h.html#a669d36305d5b977e00153cb677758676", null ],
-    [ "drmodtrack_add_custom_data", "drcovlib_8h.html#ac315630959b846ae38f04ad40724d631", null ],
+    [ "drmodtrack_add_custom_data", "drcovlib_8h.html#a9c2889006a80254645521f81a1a486f5", null ],
     [ "drmodtrack_dump", "drcovlib_8h.html#aa6202b402c658db885b337fe98cdcc34", null ],
     [ "drmodtrack_dump_buf", "drcovlib_8h.html#ab4d884ebb2aa0c864b07c365b7421236", null ],
     [ "drmodtrack_exit", "drcovlib_8h.html#a69dba79c59d1cb7146efe3a01400bdbe", null ],
