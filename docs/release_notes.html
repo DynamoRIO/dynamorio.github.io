@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 8.0.18670"
+title: "Release Notes for Version 8.0.18678"
 layout: default
 ---
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -20,7 +20,7 @@ layout: default
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 8.0.18670 </div>  </div>
+<div class="title">Release Notes for Version 8.0.18678 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -62,12 +62,13 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 8.0.18670. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 8.0.18670 and 8.0.0 include the following compatibility changes:</p>
+<p>The current version is 8.0.18678. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 8.0.18678 and 8.0.0 include the following compatibility changes:</p>
 <ul>
 <li>A source compatibilty change in drcachesim analysis tools for users who have created derived classes from existing analysis tools: member fields of classes are now following a consistent style with an underscore suffix. References to renamed fields will need to be updated.</li>
+<li>A change in the load callbacks used with <a class="el" href="drcovlib_8h.html#a9c2889006a80254645521f81a1a486f5">drmodtrack_add_custom_data()</a> and <a class="el" href="drmemtrace_8h.html#a8644981035cdedfafb000d03cd223399">drmemtrace_custom_module_data()</a>: they each take an additional parameter, the segment index. The custom data field is now per-segment and not per-module, and all callbacks are invoked separately for each segment.</li>
 </ul>
-<p>The changes between version 8.0.18670 and 8.0.0 include the following minor compatibility changes:</p>
+<p>The changes between version 8.0.18678 and 8.0.0 include the following minor compatibility changes:</p>
 <ul>
 <li>drconfiglib (and thus drrun and drconfig) now sets only the new client path options which are added in this release to support other-bitwidth child processes. This means that a drconfiglib from this version will not properly configure for a DynamoRIO core library from a prior version.</li>
 <li>A new option -ldstex2cas is on by default on ARM and AArch64. This converts load-exclusive store-exclusive sequences to use compare-and-swap instead, which enables normal instrumentation of such sequences without clearing the exclusive monitor and causing infinite loops. However, the compare- and-swap's semantics are not identical: it does not detect "ABA" changes and could cause errors in lock-free data structures or other application constructs. See <a class="el" href="API_BT.html#sec_ldrex">Exclusive Monitor Instrumentation</a> for more information.</li>
@@ -188,8 +189,8 @@ Changes Since Prior Releases</h1>
 <li>Added <a class="el" href="drx_8h.html#ad71e3315ee11f3f51fd16e9488c79051">drx_buf_insert_buf_memcpy()</a>.</li>
 <li>Added <a class="el" href="dr__ir__macros__aarch64_8h.html#a4e456d2d204fa85b0cbf4bf88bb432fb">XINST_CREATE_add_sll()</a>, <a class="el" href="dr__ir__macros__aarch64_8h.html#a684a52784e1696b33643ce69a91d599e">XINST_CREATE_jump_cond()</a>, and <a class="el" href="dr__ir__macros__aarch64_8h.html#aa1135f44453ab7b2c82edf75a99bfd26">XINST_CREATE_slr_s()</a>.</li>
 <li>Added thread synchronization events via <a class="el" href="dr__tools_8h.html#a582ca101fad62cadf4493dd2c0ee870f">dr_event_create()</a>, <a class="el" href="dr__tools_8h.html#adc93299f2a1af3598e3d73c50960f68c">dr_event_destroy()</a>, <a class="el" href="dr__tools_8h.html#ab95091b07bb04049d16ce31b97d8e24b">dr_event_wait()</a>, <a class="el" href="dr__tools_8h.html#a7e00de369604d04900f5ebf18b6d04bb">dr_event_signal()</a>, and <a class="el" href="dr__tools_8h.html#a795b58fcc1dbeb872a1b72d4e5dd5eaf">dr_event_reset()</a>.</li>
-<li>Added drmodtrack customization via <a class="el" href="drcovlib_8h.html#ac315630959b846ae38f04ad40724d631">drmodtrack_add_custom_data()</a> and post-processing support via <a class="el" href="drcovlib_8h.html#a9061a6cc8cd91041303e1c714b5ec8ec">drmodtrack_offline_write()</a>.</li>
-<li>Added drcachesim customization via <a class="el" href="drmemtrace_8h.html#abb7be083ae67d4a389be1eb1c5fe1b6e">drmemtrace_replace_file_ops()</a>, <a class="el" href="drmemtrace_8h.html#a30ea474fd519a00de470c139c53caf03">drmemtrace_custom_module_data()</a>, <a class="el" href="drmemtrace_8h.html#a788e3e4e25b13c1f6148a8fd544b2d81">drmemtrace_get_output_path()</a>, <a class="el" href="drmemtrace_8h.html#a8c93fd7bcda89efb7786ad0cf27f8ff2">drmemtrace_get_modlist_path()</a>, and a separate rawtrace library for post-processing customization with <a class="el" href="classraw2trace__t.html#ae88903e56d49c6118d9bd34874794b6b">raw2trace_t::handle_custom_data()</a>, <a class="el" href="classraw2trace__t.html#ac2476351d49c4ec1902d77fccde436de">raw2trace_t::do_module_parsing()</a>, <a class="el" href="classraw2trace__t.html#acf6b5d0b31b6f5a759b648c14686da34">raw2trace_t::do_conversion()</a>, and raw2trace_directory_t. The raw2trace library also includes an interface for obtaining further instruction information than is stored in the trace via <a class="el" href="classraw2trace__t.html#a3b63b0e61660418a5c1e985a64e952b4">raw2trace_t::do_module_parsing_and_mapping()</a> and <a class="el" href="classraw2trace__t.html#addaa1498d372dafc8cd6efef5e6738ab">raw2trace_t::find_mapped_trace_address()</a>. A corresponding CMake function for finding the tracer customization header is use_DynamoRIO_drmemtrace_tracer().</li>
+<li>Added drmodtrack customization via <a class="el" href="drcovlib_8h.html#a9c2889006a80254645521f81a1a486f5">drmodtrack_add_custom_data()</a> and post-processing support via <a class="el" href="drcovlib_8h.html#a9061a6cc8cd91041303e1c714b5ec8ec">drmodtrack_offline_write()</a>.</li>
+<li>Added drcachesim customization via <a class="el" href="drmemtrace_8h.html#abb7be083ae67d4a389be1eb1c5fe1b6e">drmemtrace_replace_file_ops()</a>, <a class="el" href="drmemtrace_8h.html#a8644981035cdedfafb000d03cd223399">drmemtrace_custom_module_data()</a>, <a class="el" href="drmemtrace_8h.html#a788e3e4e25b13c1f6148a8fd544b2d81">drmemtrace_get_output_path()</a>, <a class="el" href="drmemtrace_8h.html#a8c93fd7bcda89efb7786ad0cf27f8ff2">drmemtrace_get_modlist_path()</a>, and a separate rawtrace library for post-processing customization with <a class="el" href="classraw2trace__t.html#ae88903e56d49c6118d9bd34874794b6b">raw2trace_t::handle_custom_data()</a>, <a class="el" href="classraw2trace__t.html#ac2476351d49c4ec1902d77fccde436de">raw2trace_t::do_module_parsing()</a>, <a class="el" href="classraw2trace__t.html#acf6b5d0b31b6f5a759b648c14686da34">raw2trace_t::do_conversion()</a>, and raw2trace_directory_t. The raw2trace library also includes an interface for obtaining further instruction information than is stored in the trace via <a class="el" href="classraw2trace__t.html#a3b63b0e61660418a5c1e985a64e952b4">raw2trace_t::do_module_parsing_and_mapping()</a> and <a class="el" href="classraw2trace__t.html#addaa1498d372dafc8cd6efef5e6738ab">raw2trace_t::find_mapped_trace_address()</a>. A corresponding CMake function for finding the tracer customization header is use_DynamoRIO_drmemtrace_tracer().</li>
 <li>Added <a class="el" href="drreg_8h.html#ae2ba110d4aca864533583a53f8e04d40">drreg_restore_app_aflags()</a>.</li>
 <li>Added a set_value() function to the <a class="el" href="page_droption.html">DynamoRIO Option Parser</a>.</li>
 <li>Added <a class="el" href="dr__ir__instrlist_8h.html#a53f52fe2f037e5ea68ac2a1c764505ee">instrlist_get_auto_predicate()</a> and <a class="el" href="dr__ir__instrlist_8h.html#a7d463f54560c6af2d457e183cc2a97e1">instrlist_set_auto_predicate()</a>.</li>
@@ -1031,5 +1032,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO API version 8.0.18670 --- Sun Feb 14 2021 12:10:58 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO API version 8.0.18678 --- Sat Feb 20 2021 19:22:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

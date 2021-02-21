@@ -89,7 +89,7 @@ mailing list.
 
 
 * [DynamoRIO home](http://dynamorio.org/)
-* [DynamoRIO API documentation](http://dynamorio.org/dynamorio_docs/)
+* [DynamoRIO API documentation](http://dynamorio.org/docs/)
 * [DynamoRIO code repository](https://github.com/DynamoRIO/dynamorio)
 
 
