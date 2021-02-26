@@ -1,7 +1,7 @@
 [
     [ "bytesize_t", "classbytesize__t.html", null ],
-    [ "droption_parser_t", "classdroption__parser__t.html", {% include_relative docs/classdroption__parser__t.js %} ],
-    [ "droption_t", "classdroption__t.html", {% include_relative docs/classdroption__t.js %} ],
+    [ "droption_parser_t", "classdroption__parser__t.html", {% include_relative classdroption__parser__t.js %} ],
+    [ "droption_t", "classdroption__t.html", {% include_relative classdroption__t.js %} ],
     [ "twostring_t", "droption_8h.html#aaba26721156b588d60274d3426b5292c", null ],
     [ "droption_flags_t", "droption_8h.html#a65010746491646282dd2830a02bc92fd", [
       [ "DROPTION_FLAG_ACCUMULATE", "droption_8h.html#a65010746491646282dd2830a02bc92fda17988e3d7a4c8bd898cef2aee938c34c", null ],
