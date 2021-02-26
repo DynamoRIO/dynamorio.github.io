@@ -25,6 +25,8 @@ plugins:
   - jekyll-feed
   - jekyll-redirect-from
 
+include: ['docs']
+
 # Exclude from processing.
 exclude:
   - Gemfile

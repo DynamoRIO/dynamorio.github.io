@@ -212,11 +212,6 @@ function newNode(o, po, text, link, childrenData, lastNode)
     } else if (link.substring(0,1)=='^') {
       url = link.substring(1);
       link = url;
-    } else if (link.substring(0,1)!='/') {
-      // We're using flat-directory doxygen output where we impose
-      // a docs/ subdirectory without changing the output.
-      url = "/docs/" + link;
-      link = url;
     } else {
       url = node.relpath+link;
     }
@@ -442,10 +437,9 @@ function navTo(o,root,hash,relpath)
     hash=''; // strip line number anchors
   }
   var url=root;
-  // We're using flat-directory doxygen output where we impose
-  // a docs/ subdirectory without changing the output.
-  if (url.substring(0,6)=='/docs/') {
-    url = url.substring(6);
+  if (url.substring(0,1)=='/') {
+    // The menu entries do not have leading slashes.
+    url = url.substring(1);
   }
   if (hash != '#') {
     url = url + hash;
