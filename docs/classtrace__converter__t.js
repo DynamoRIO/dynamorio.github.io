@@ -1,7 +1,7 @@
 [
     [ "trace_converter_t", "classtrace__converter__t.html#ae253fcb481b01fb3cca4cbd35cd1945d", null ],
     [ "~trace_converter_t", "classtrace__converter__t.html#a2653cfc313a65413e4f7a3fe467e237e", null ],
-    [ "modvec_", "classtrace__converter__t.html#a044751e676c6c540cde16fde06ade635", null ],
+    [ "modvec_", "classtrace__converter__t.html#a230f6b5b0ca6f2713c2deff6667fa0b7", null ],
     [ "process_offline_entry", "classtrace__converter__t.html#adba9855ba99747cb999afcf409bbab82", null ],
     [ "read_header", "classtrace__converter__t.html#a534c6ae391de423b84fe04c58768a9c4", null ],
     [ "set_modvec_", "classtrace__converter__t.html#a89c0777af8fa9ead53cb8aa6cadadee0", null ],

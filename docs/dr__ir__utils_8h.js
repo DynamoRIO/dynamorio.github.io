@@ -1,6 +1,6 @@
 [
     [ "SPILL_SLOT_REDIRECT_NATIVE_TGT", "dr__ir__utils_8h.html#a85e6559244f2fc5b84c7a07f04168bad", null ],
-    [ "dr_isa_mode_t", "dr__ir__utils_8h.html#a1ab4eb589819195ae2674b22546e3b4a", null ],
+    [ "dr_isa_mode_t", "dr__ir__utils_8h.html#a83ebdc7f73d889146aaf9f6ea7865d94", null ],
     [ "_dr_isa_mode_t", "dr__ir__utils_8h.html#a00e03b2e5e75a83eacf9a0ee1674074a", [
       [ "DR_ISA_IA32", "dr__ir__utils_8h.html#a00e03b2e5e75a83eacf9a0ee1674074aa4216aed26374dfaaf5b8e64c8bfc9c6c", null ],
       [ "DR_ISA_X86", "dr__ir__utils_8h.html#a00e03b2e5e75a83eacf9a0ee1674074aa6bec3bf2d3d264dfa7dbf67d18b47c41", null ],
