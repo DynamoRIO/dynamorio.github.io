@@ -267,10 +267,21 @@ pre.fragment {
 }
 
 div.fragment {
-  padding: 0 0 1px 0; /*Fixed: last line underline overlap border*/
+  padding: 12px 12px 12px 12px; /*Fixed: last line underline overlap border*/
   margin: 4px 8px 4px 2px;
-        background-color: #FBFCFD;
-        border: 1px solid #C4CFE5;
+  background-color: #FBFCFD;
+  border: 1px solid #C4CFE5;
+}
+
+pre.fragment {
+  font-family: monospace, fixed;
+  font-size: 13px;
+  min-height: 13px;
+  line-height: 1.5;
+  padding: 12px 12px 12px 12px; /*Fixed: last line underline overlap border*/
+  margin: 4px 8px 4px 2px;
+  background-color: #FBFCFD;
+  border: 1px solid #C4CFE5;
 }
 
 div.line {
@@ -282,11 +293,15 @@ div.line {
         white-space: -moz-pre-wrap; /* Moz */
         white-space: -pre-wrap;     /* Opera 4-6 */
         white-space: -o-pre-wrap;   /* Opera 7 */
-        white-space: pre-wrap;      /* CSS3  */
+        /* We prefer scrollbars on long code/commands rather than wrapping
+         * with misleading indentation.
+         */
+        white-space: pre;      /* CSS3  */
         word-wrap: break-word;      /* IE 5.5+ */
         text-indent: -53px;
         padding-left: 53px;
-        padding-bottom: 0px;
+        padding-top: 2px;
+        padding-bottom: 2px;
         margin: 0px;
         -webkit-transition-property: background-color, box-shadow;
         -webkit-transition-duration: 0.5s;
@@ -986,8 +1001,8 @@ table.doxtable td, table.doxtable th {
 }
 
 table.doxtable th {
-        background-color: #374F7F;
-        color: #FFFFFF;
+        background-color: #e7fff0;
+        color: #000000;
         font-size: 110%;
         padding-bottom: 4px;
         padding-top: 5px;
@@ -1441,7 +1456,7 @@ div.toc {
 }
 
 div.toc li {
-        background: url("bdwn.png") no-repeat scroll 0 5px transparent;
+        background: url("images/bdwn.png") no-repeat scroll 0 5px transparent;
         font: 10px/1.2 Verdana,DejaVu Sans,Geneva,sans-serif;
         margin-top: 5px;
         padding-left: 10px;
