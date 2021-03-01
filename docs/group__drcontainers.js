@@ -14,8 +14,8 @@
       [ "size", "struct__hashtable__config__t.html#a3aa61b25956331b55b7633bf3bbd3266", null ]
     ] ],
     [ "DRTABLE_INVALID_INDEX", "group__drcontainers.html#gaeaba87af31694a825496218053177d64", null ],
-    [ "drvector_t", "group__drcontainers.html#ga75de93b82d4075650dd24e95acf164dd", null ],
-    [ "hashtable_config_t", "group__drcontainers.html#ga9caff1942d844cffe52c953d448c2e6c", null ],
+    [ "drvector_t", "group__drcontainers.html#gad6c70a83ab635d96376710bffe4e4ced", null ],
+    [ "hashtable_config_t", "group__drcontainers.html#gad856384ed5ad3b1a1c42e5095d7432b8", null ],
     [ "drtable_flags_t", "group__drcontainers.html#gabdc8e2396ab8607a7e4c1e5f05c588c3", [
       [ "DRTABLE_MEM_REACHABLE", "group__drcontainers.html#ggabdc8e2396ab8607a7e4c1e5f05c588c3a8a428f6ca9cdbd75e3f9807d8e03379f", null ],
       [ "DRTABLE_MEM_32BIT", "group__drcontainers.html#ggabdc8e2396ab8607a7e4c1e5f05c588c3adc74fb8cb16fc3a8a9fd8f898ee05d98", null ],

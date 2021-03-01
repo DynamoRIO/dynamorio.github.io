@@ -18,8 +18,8 @@
       [ "struct_size", "struct__drmodtrack__info__t.html#af6970fbf182fb9d2489a6df7f0f404e4", null ],
       [ "timestamp", "struct__drmodtrack__info__t.html#ad859483a70668dc8a9970fd860d1d51b", null ]
     ] ],
-    [ "drcovlib_options_t", "group__drcovlib.html#ga7d547cb6d403a358eb9c7afacc21c2e5", null ],
-    [ "drmodtrack_info_t", "group__drcovlib.html#ga2d012bbd88af2ef0e6e248b57c1a8cec", null ],
+    [ "drcovlib_options_t", "group__drcovlib.html#ga0627dd15b3233f3008f460c805a97ed5", null ],
+    [ "drmodtrack_info_t", "group__drcovlib.html#ga70dd4ae0fcab1e7c8c090977eeeefa02", null ],
     [ "drcovlib_flags_t", "group__drcovlib.html#ga4e8b8bfb2b8edf258fa3ccfe99de5b35", [
       [ "DRCOVLIB_DUMP_AS_TEXT", "group__drcovlib.html#gga4e8b8bfb2b8edf258fa3ccfe99de5b35a5b120d8fd7b2aca0c3f14116ed99b01f", null ],
       [ "DRCOVLIB_THREAD_PRIVATE", "group__drcovlib.html#gga4e8b8bfb2b8edf258fa3ccfe99de5b35a2d177716bc8797ec53a7f85604d9271c", null ]

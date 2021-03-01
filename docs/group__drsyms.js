@@ -37,16 +37,16 @@
       [ "line", "struct__drsym__line__info__t.html#ad0be9544621e4d215b36248fb861d3a1", null ],
       [ "line_addr", "struct__drsym__line__info__t.html#aeda9057ec8fb963a9611e670ce399d6b", null ]
     ] ],
-    [ "drsym_compound_type_t", "group__drsyms.html#gae601868c425dd7db2c7450014f1f47b5", null ],
+    [ "drsym_compound_type_t", "group__drsyms.html#gae6d13068c822f07970613af43bcd2233", null ],
     [ "drsym_enumerate_cb", "group__drsyms.html#ga0efead709c38c583b79a06a78786199f", null ],
     [ "drsym_enumerate_ex_cb", "group__drsyms.html#ga99f1dff00e16a4abd4993590f337a21c", null ],
     [ "drsym_enumerate_lines_cb", "group__drsyms.html#gafa1e3dc644f4c77f785d95514870525a", null ],
-    [ "drsym_func_type_t", "group__drsyms.html#ga3de06a92ea1be03694869f4f38045938", null ],
-    [ "drsym_info_t", "group__drsyms.html#gac7ae60d7c499c017414574b22d6d4879", null ],
-    [ "drsym_int_type_t", "group__drsyms.html#ga9075a62cb47f48762911d8cd7c683035", null ],
-    [ "drsym_line_info_t", "group__drsyms.html#ga1970a3bc66539e8187ee33c1ce5338e7", null ],
-    [ "drsym_ptr_type_t", "group__drsyms.html#ga6536ad3236ff3d06eeeaf1450cb77b79", null ],
-    [ "drsym_type_t", "group__drsyms.html#ga75abd525d4d1710196d18d7c13b4c061", [
+    [ "drsym_func_type_t", "group__drsyms.html#ga85402f5dd1b7077926274ba11a9984bc", null ],
+    [ "drsym_info_t", "group__drsyms.html#ga4c38ae4b1348bfd1555f323037066b01", null ],
+    [ "drsym_int_type_t", "group__drsyms.html#ga97e3b69f2ae53fc2ef4cd00e7f40032e", null ],
+    [ "drsym_line_info_t", "group__drsyms.html#ga22dde1045640273b44a693142fd00326", null ],
+    [ "drsym_ptr_type_t", "group__drsyms.html#ga602ae46c255113caf7fe2661ded4ed68", null ],
+    [ "drsym_type_t", "group__drsyms.html#gafacfa0e0e79a26a608c3e1b2d5b6dfc2", [
       [ "DRSYM_TYPE_OTHER", "group__drsyms.html#ggaac34dfe6c6b73b43a4656c9dce041034a3df07cfcbf3fcb8e0e203d844421c8f3", null ],
       [ "DRSYM_TYPE_INT", "group__drsyms.html#ggaac34dfe6c6b73b43a4656c9dce041034ac4568bd915a95c4f2e641c593171ad14", null ],
       [ "DRSYM_TYPE_PTR", "group__drsyms.html#ggaac34dfe6c6b73b43a4656c9dce041034a038a317ac51c1ee78f6b85a1ad220d83", null ],

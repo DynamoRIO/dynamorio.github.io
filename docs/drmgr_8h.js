@@ -4,9 +4,9 @@
     [ "drmgr_ilist_ex_cb_t", "group__drmgr.html#gad4983d7847f2c744a6e19fc9537f00ed", null ],
     [ "drmgr_insertion_cb_t", "group__drmgr.html#ga13a6681d00526e2360f2a6b13f0272aa", null ],
     [ "drmgr_opcode_insertion_cb_t", "group__drmgr.html#ga4895c7d1731eae3076179b3aa7364343", null ],
-    [ "drmgr_priority_t", "group__drmgr.html#ga85630d78f521678da499f26dc5cda5aa", null ],
+    [ "drmgr_priority_t", "group__drmgr.html#gad1ea8251bfe11bcc02821ada3852e599", null ],
     [ "drmgr_xform_cb_t", "group__drmgr.html#ga1260c94e5eb2b34a7af2c2e99b129568", null ],
-    [ "emulated_instr_t", "group__drmgr.html#ga9319ac3414422b1924f2c9564c27ff3d", null ],
+    [ "emulated_instr_t", "group__drmgr.html#gac779b3f5c1076450ad32083da0921768", null ],
     [ "drmgr_bb_phase_t", "group__drmgr.html#gae3531e42d6cde87d19a63801ab6b9230", [
       [ "DRMGR_PHASE_NONE", "group__drmgr.html#ggae3531e42d6cde87d19a63801ab6b9230ae5168599a479256d3b95839f57e5b985", null ],
       [ "DRMGR_PHASE_APP2APP", "group__drmgr.html#ggae3531e42d6cde87d19a63801ab6b9230a7eb5e7bcc7f6d533bcb8dcc10389441e", null ],
