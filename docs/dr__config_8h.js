@@ -1,7 +1,7 @@
 [
     [ "_dr_config_client_t", "struct__dr__config__client__t.html", {% include_relative struct__dr__config__client__t.js %} ],
     [ "DR_MAX_OPTIONS_LENGTH", "dr__config_8h.html#a386c1346b4d4a46488fc050c51bfe9bc", null ],
-    [ "dr_config_client_t", "dr__config_8h.html#ae49a9391a28aac3624cc7a17ce4ae1b9", null ],
+    [ "dr_config_client_t", "dr__config_8h.html#a611e87f956e7b2d332b8004399ce06ef", null ],
     [ "dr_config_status_t", "dr__config_8h.html#a5e24de02bea5743b74adb6e64af19ae7", [
       [ "DR_SUCCESS", "dr__config_8h.html#a5e24de02bea5743b74adb6e64af19ae7a4bcaaca758394280af450e0c252715d9", null ],
       [ "DR_PROC_REG_EXISTS", "dr__config_8h.html#a5e24de02bea5743b74adb6e64af19ae7aebeb651e698240eb01f5c3b7a467fdd6", null ],
