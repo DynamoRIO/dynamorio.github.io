@@ -1,8 +1,8 @@
 [
     [ "_dr_vg_client_request_t", "struct__dr__vg__client__request__t.html", null ],
-    [ "dr_annotation_calling_convention_t", "dr__annotation_8h.html#aae588ad19f03efe895236b05c41030f1", null ],
-    [ "dr_valgrind_request_id_t", "dr__annotation_8h.html#aec24294c282cca3b3b7d4c9141b1d057", null ],
-    [ "dr_vg_client_request_t", "dr__annotation_8h.html#a2846dd2f7cfc2227f89a164378d65699", null ],
+    [ "dr_annotation_calling_convention_t", "dr__annotation_8h.html#addc1848592c2b6df346f1714b3d4ba4a", null ],
+    [ "dr_valgrind_request_id_t", "dr__annotation_8h.html#a62debfb391eab76bde7a3e024892f78c", null ],
+    [ "dr_vg_client_request_t", "dr__annotation_8h.html#a642e149d8e01ba7b38222f311e5d23eb", null ],
     [ "DR_VG_NUM_ARGS", "dr__annotation_8h.html#a06fc87d81c62e9abb8790b6e5713c55baca95e9de03395b913e665e6d98f48753", null ],
     [ "_dr_annotation_calling_convention_t", "dr__annotation_8h.html#af8841be8a34cea641a506612a365a106", [
       [ "DR_ANNOTATION_CALL_TYPE_FASTCALL", "dr__annotation_8h.html#af8841be8a34cea641a506612a365a106a857c8e97407d411a69b98c7e1ae0f530", null ],
