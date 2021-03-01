@@ -7,12 +7,7 @@ var NAVTREE =
     [ "Download", "page_download.html", {% include_relative page_download.js %} ],
     [ "Available Tools", "page_tool.html", {% include_relative page_tool.js %} ],
     [ "User Documentation", "page_user_docs.html", {% include_relative page_user_docs.js %} ],
-    [ "Obtaining Help and Reporting Bugs", "page_help.html", [
-      [ "Discussion Forum", "page_help.html#sec_emaillist", null ],
-      [ "Reporting Problems", "page_help.html#sec_reporting", null ],
-      [ "Troubleshooting", "page_help.html#sec_diagnosing", null ],
-      [ "Using Debuggers", "page_help.html#sec_debugging", null ]
-    ] ],
+    [ "Obtaining Help and Reporting Bugs", "page_help.html", {% include_relative page_help.js %} ],
     [ "Developer Documentation", "page_dev_docs.html", {% include_relative page_dev_docs.js %} ],
 [ "API Reference", "files.html", [
     [ "Deprecated List", "deprecated.html", null ],

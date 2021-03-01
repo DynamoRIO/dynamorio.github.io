@@ -90,7 +90,7 @@
     ] ],
     [ "DynamoRIO System Details", "overview.html", {% include_relative overview.js %} ],
     [ "DynamoRIO Extensions", "page_ext.html", {% include_relative page_ext.js %} ],
-    [ "Release Notes for Version 8.0.18684", "release_notes.html", [
+    [ "Release Notes for Version 8.0.18687", "release_notes.html", [
       [ "Distribution Contents", "release_notes.html#sec_package", null ],
       [ "Changes Since Prior Releases", "release_notes.html#sec_changes", null ],
       [ "Limitations", "release_notes.html#sec_limits", [
@@ -105,6 +105,6 @@
       [ "Primary DynamoRIO License: BSD", "page_license.html#sec_bsd", null ],
       [ "libelftc License", "page_license.html#sec_libelftc", null ],
       [ "Certain Extensions are instead under the LGPL 2.1 License", "page_license.html#sec_lgpl_licenses", null ],
-      [ "Code coverage \\p genhtml script is under GPL 2", "page_license.html#sec_gpl_licenses", null ]
+      [ "Code coverage genhtml script is under GPL 2", "page_license.html#sec_gpl_licenses", null ]
     ] ]
 ],

@@ -25,42 +25,17 @@ permalink: /page_help.html
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>When using a complex system like DynamoRIO, problems can be challenging to diagnose. This section contains some debugging tips and shows how to get help.</p>
+<p>Extensive tips for <a class="el" href="page_debugging.html">Debugging</a> are separated onto <a class="el" href="page_debugging.html">their own page</a>. Similarly, DynamoRIO's <a class="el" href="page_logging.html">Logging</a> is <a class="el" href="page_logging.html">described here</a>.</p>
+<p>When using the <a class="el" href="page_drcachesim.html">DrCacheSim</a> tool's <a class="el" href="page_drcachesim.html#sec_drcachesim_offline">offline traces</a>, see <a class="el" href="page_debug_memtrace.html">DrCacheSim Offline Trace Debugging</a>.</p>
 <h1><a class="anchor" id="sec_emaillist"></a>
 Discussion Forum</h1>
 <p>For questions and discussion, join the <a href="http://groups.google.com/group/dynamorio-users/">DynamoRIO Users group</a>.</p>
-<h1><a class="anchor" id="sec_reporting"></a>
-Reporting Problems</h1>
-<p>DynamoRIO is a tool platform, with end-user tools built on top of it. If you encounter a crash in a tool provided by a third party, please locate the issue tracker for the tool you are using and report the crash there.</p>
-<p>To report a bug in DynamoRIO itself or in a tool that ships with the DynamoRIO release, use <a href="https://github.com/DynamoRIO/dynamorio/issues">our Issue Tracker</a>.</p>
-<p>For general questions, or if you are not sure whether the problem you hit is a bug in your own code or a bug in DynamoRIO, use the <a href="https://groups.google.com/forum/#!forum/DynamoRIO-Users">users list</a> rather than opening an issue in the tracker. The users list will reach a wider audience of people who might have an answer, and it will reach other users who may find the information beneficial. The issue tracker is for specific detailed bugs.</p>
-<h1><a class="anchor" id="sec_diagnosing"></a>
-Troubleshooting</h1>
-<ul>
-<li>DynamoRIO disables itself when Windows is booted in safe mode (without networking). Thus, if a crash occurs in a Windows service under DynamoRIO, rebooting in safe mode will allow recovery.</li>
-<li><p class="startli">If the client library doesn't seem to function for a given process, it is likely that the client library wasn't loaded due to errors.</p>
-<dl class="section user"><dt></dt><dd>One of the common situations where this happens is when the target application runs as a different user than the user who created the client library. This results in the application process not having the right permissions to access the client library.</dd></dl>
-<dl class="section user"><dt></dt><dd>Try running the process under the debug mode of DynamoRIO (see <a class="el" href="dr__config_8h.html#a10d7c5dbc9a055fa6c18bf3f2a6eea46">dr_register_process()</a>), where diagnostic messages are raised on errors like client library permissions. To see all messages, set the notification options like -msgbox_mask and -stderr_mask options to 0xf (see <a class="el" href="using.html#sec_options">Fine-Tuning DynamoRIO: Runtime Parameters</a>). This will alert you to the problem.</dd></dl>
-</li>
-<li>DynamoRIO asserts of the form "&lt;file&gt;:1234" can be suppressed with the <a class="el" href="using.html#op_ignore_assert">-ignore_assert_list '*'</a> option. * may be replaced by a ; separated lists of individual asserts to suppress as so "-ignore_assert_list 'foo.c:333;bar.c:12'".</li>
-<li>The DynamoRIO header files have typedefs that may conflict with other header files wrapped in ifndef DR_DO_NOT_DEFINE_&lt;type&gt; to make it easier to work around such conflicts. Alternatively, use DR_DEFINE_FOR_&lt;type&gt;, in which case you may need to also specify "&lt;type&gt;_FORMAT", for printf formatting.</li>
-</ul>
-<h1><a class="anchor" id="sec_debugging"></a>
-Using Debuggers</h1>
-<p>A process under control of DynamoRIO can be executed within a debugger. For debugging on Windows we recommend using windbg version 6.3.0017 (<b>not</b> the newer versions, as they have problems displaying callstacks involving DynamoRIO code).</p>
-<p>Normally, the debugger will not be aware of the DynamoRIO library or the client library. We provide a windbg script that locates the DynamoRIO library, the client library, and any privately-loaded dependent libraries. The script is in <code>bin32/load_syms.txt</code> and <code>bin64/load_syms64.txt</code>. To load it from windbg, execute the following command:</p>
-<div class="fragment"><div class="line">$&gt;&lt;c:\path\to\DR\bin32\load_syms.txt</div></div><!-- fragment --><p> When debugging often, modify the shortcut that launches windbg to include this command as a -c argument. E.g.:</p>
-<div class="fragment"><div class="line"><span class="stringliteral">&quot;C:\Program Files (x86)\Debugging Tools for Windows\windbg.exe&quot;</span> -pt 1 -c <span class="stringliteral">&quot;$&gt;&lt;c:\tools\DynamoRIO\bin32\load_syms.txt&quot;</span></div></div><!-- fragment --><p>On Windows, the <a class="el" href="using.html#op_no_hide">-no_hide</a> option can alternatively be used so the debugger can see the DynamoRIO library, but the debugger will still not be able to see the client library or any of its dependent libraries. We recommend using our script.</p>
-<p>To attach to a process on Windows, use the <a class="el" href="using.html#op_msgbox_mask">-msgbox_mask</a> option and attach the debugger while the dialog box has paused the application. On Linux, the same option can be used and the debugger attached while the application waits for enter to be pressed. Since this may not work for applications that themselves read from standard input, we also provide the <b>-pause_via_loop</b> runtime option which sits in an infinite loop rather than waiting for a keypress.</p>
-<p>To run an application on Linux under a debugger from process start you can launch drrun under gdb as you would normally:</p>
-<div class="fragment"><div class="line">gdb --args path/to/drrun &lt;options&gt; -- path/to/app</div></div><!-- fragment --><p>Because the executable changes from drrun to the app, the app cannot be re-run from gdb's prompt.</p>
-<p>On Linux, the main drawback of debugging from application start rather than attaching is that breakpoint instructions (<code>int3</code>) inserted by the debugger get copied into the code cache. This includes internal debugger breakpoints automatically placed in the loader, as well as user-defined breakpoints. For example, gdb puts a breakpoint on __nptl_create_event, which is called by pthread_create and related calls. See <a href="https://github.com/DynamoRIO/dynamorio/issues/490">https://github.com/DynamoRIO/dynamorio/issues/490</a>. The debugger will handle these traps, but the user must tell it to continue, which is an annoyance. For user breakpoints, consider using read watchpoints on the code in question instead.</p>
-<p>On Windows, if an application invokes OutputDebugString() while under a debugger, DynamoRIO can end up losing control of the application.</p>
-<p>For additional tips, check the DynamoRIO wiki page on debugging: <a href="https://github.com/DynamoRIO/dynamorio/wiki/Debugging">https://github.com/DynamoRIO/dynamorio/wiki/Debugging</a> </p>
+<p>If you are sure a problem you hit is a bug in DynamoRIO, see the instructions for <a class="el" href="page_bug_reporting.html">Reporting Problems</a>. </p>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.11-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18684 --- Sat Feb 27 2021 02:21:37 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18687 --- Mon Mar 1 2021 02:28:20 &nbsp; <img border=0 src="favicon.png">
 </small></address>
