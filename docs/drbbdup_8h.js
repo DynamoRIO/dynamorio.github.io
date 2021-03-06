@@ -9,8 +9,6 @@
     [ "drbbdup_insert_encode_t", "group__drbbdup.html#gae2bf28a5b20a165d4d07325a49c12c4a", null ],
     [ "drbbdup_instrument_instr_t", "group__drbbdup.html#ga8928e3a20e86418d0371b3ec4e69d8cc", null ],
     [ "drbbdup_set_up_bb_dups_t", "group__drbbdup.html#gafc69f147f9c66259b8890b0d5aef38d8", null ],
-    [ "DRMGR_PRIORITY_APP2APP_DRBBDUP", "group__drbbdup.html#ggae4d5251432e1a9e6803c0240cc492e18ac74a845acab5a3356d01d583ea351996", null ],
-    [ "DRMGR_PRIORITY_INSERT_DRBBDUP", "group__drbbdup.html#ggae4d5251432e1a9e6803c0240cc492e18a20a8f68fe0adb1f3263d58e3411837ad", null ],
     [ "drbbdup_status_t", "group__drbbdup.html#ga29389438e052068540ac1fdcfc77f799", [
       [ "DRBBDUP_SUCCESS", "group__drbbdup.html#gga29389438e052068540ac1fdcfc77f799ae43e5d632661029506b3580cdd1222bb", null ],
       [ "DRBBDUP_ERROR_INVALID_PARAMETER", "group__drbbdup.html#gga29389438e052068540ac1fdcfc77f799ab46bf5c521cfe13eab724a6280b0c2de", null ],

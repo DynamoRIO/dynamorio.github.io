@@ -1272,17 +1272,5 @@
     [ "XINST_CREATE_store_pair", "dr__ir__macros__arm_8h.html#a0af576a857ca51596cc247dfa5771370", null ],
     [ "XINST_CREATE_store_simd", "dr__ir__macros__arm_8h.html#a053c0202c5a4229fbc5575183afb02d7", null ],
     [ "XINST_CREATE_sub", "dr__ir__macros__arm_8h.html#afdbcfb317d599ecde76215392878da1c", null ],
-    [ "XINST_CREATE_sub_s", "dr__ir__macros__arm_8h.html#a4cbf96f2f31e7c637e8b824741ff418f", null ],
-    [ "DR_DMB_OSHLD", "dr__ir__macros__arm_8h.html#a05589fbab0657f08285ebdfe93f5ec9ea355c826f62c3af9dcf7b2b66a3a54ff3", null ],
-    [ "DR_DMB_OSHST", "dr__ir__macros__arm_8h.html#a05589fbab0657f08285ebdfe93f5ec9eaea60a2dcf722c024982cc3601b8d0938", null ],
-    [ "DR_DMB_OSH", "dr__ir__macros__arm_8h.html#a05589fbab0657f08285ebdfe93f5ec9ea1964be693d7e5a8e0abd4428a17aac83", null ],
-    [ "DR_DMB_NSHLD", "dr__ir__macros__arm_8h.html#a05589fbab0657f08285ebdfe93f5ec9eacd7ab6ed711543b5395531eac689286b", null ],
-    [ "DR_DMB_NSHST", "dr__ir__macros__arm_8h.html#a05589fbab0657f08285ebdfe93f5ec9ea5c9333fbc04ef6cb155dbe0fcb50bca3", null ],
-    [ "DR_DMB_NSH", "dr__ir__macros__arm_8h.html#a05589fbab0657f08285ebdfe93f5ec9eadd6b81c377d2d739933262210a49dce0", null ],
-    [ "DR_DMB_ISHLD", "dr__ir__macros__arm_8h.html#a05589fbab0657f08285ebdfe93f5ec9ea556eb4f9e17e575b50b8f98b5b08826f", null ],
-    [ "DR_DMB_ISHST", "dr__ir__macros__arm_8h.html#a05589fbab0657f08285ebdfe93f5ec9eac3e48925278a1ef67995a3b9a1579306", null ],
-    [ "DR_DMB_ISH", "dr__ir__macros__arm_8h.html#a05589fbab0657f08285ebdfe93f5ec9ea1358457daa6598341eba8ff18f09540c", null ],
-    [ "DR_DMB_LD", "dr__ir__macros__arm_8h.html#a05589fbab0657f08285ebdfe93f5ec9ea4946207edae8da793c1f869d0072d521", null ],
-    [ "DR_DMB_ST", "dr__ir__macros__arm_8h.html#a05589fbab0657f08285ebdfe93f5ec9ea82aa94847f70de7b22cfeb03ba16dd57", null ],
-    [ "DR_DMB_SY", "dr__ir__macros__arm_8h.html#a05589fbab0657f08285ebdfe93f5ec9eaeb5cadc1d960d4848a8b18a0f6613637", null ]
+    [ "XINST_CREATE_sub_s", "dr__ir__macros__arm_8h.html#a4cbf96f2f31e7c637e8b824741ff418f", null ]
 ],
