@@ -25,27 +25,27 @@ permalink: /page_ldstex.html
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#autotoc_md188">Overview</a></li>
-<li class="level1"><a href="#autotoc_md189">What is an Exclusive Monitor?</a></li>
-<li class="level1"><a href="#autotoc_md190">The Problem with Instrumenting Exclusive Monitors</a><ul><li class="level2"><a href="#autotoc_md191">Consequences: Infinite Loop!</a></li>
-<li class="level2"><a href="#autotoc_md192">Problem Not Limited by Tool Type</a></li>
-<li class="level2"><a href="#autotoc_md193">Problem Exacerbated by Intervening Branches</a></li>
+<ul><li class="level1"><a href="#autotoc_md186">Overview</a></li>
+<li class="level1"><a href="#autotoc_md187">What is an Exclusive Monitor?</a></li>
+<li class="level1"><a href="#autotoc_md188">The Problem with Instrumenting Exclusive Monitors</a><ul><li class="level2"><a href="#autotoc_md189">Consequences: Infinite Loop!</a></li>
+<li class="level2"><a href="#autotoc_md190">Problem Not Limited by Tool Type</a></li>
+<li class="level2"><a href="#autotoc_md191">Problem Exacerbated by Intervening Branches</a></li>
 </ul>
 </li>
-<li class="level1"><a href="#autotoc_md194">Initial Implemented Solution: Just Avoid Clean Calls</a></li>
-<li class="level1"><a href="#autotoc_md195">Proposed Solution A: Super-Instruction</a></li>
-<li class="level1"><a href="#autotoc_md196">Proposed Solution B: Compare-and-Swap Simulation</a></li>
-<li class="level1"><a href="#autotoc_md197">Proposed Solution C: Atomic Add Conversion</a></li>
-<li class="level1"><a href="#autotoc_md198">Proposed Solution D: Run Twice</a></li>
-<li class="level1"><a href="#autotoc_md199">Combining Solutions</a></li>
-<li class="level1"><a href="#autotoc_md200">Decision: Compare-and-Swap</a></li>
-<li class="level1"><a href="#autotoc_md201">Issue Tracker References</a></li>
+<li class="level1"><a href="#autotoc_md192">Initial Implemented Solution: Just Avoid Clean Calls</a></li>
+<li class="level1"><a href="#autotoc_md193">Proposed Solution A: Super-Instruction</a></li>
+<li class="level1"><a href="#autotoc_md194">Proposed Solution B: Compare-and-Swap Simulation</a></li>
+<li class="level1"><a href="#autotoc_md195">Proposed Solution C: Atomic Add Conversion</a></li>
+<li class="level1"><a href="#autotoc_md196">Proposed Solution D: Run Twice</a></li>
+<li class="level1"><a href="#autotoc_md197">Combining Solutions</a></li>
+<li class="level1"><a href="#autotoc_md198">Decision: Compare-and-Swap</a></li>
+<li class="level1"><a href="#autotoc_md199">Issue Tracker References</a></li>
 </ul>
 </div>
-<div class="textblock"><h1><a class="anchor" id="autotoc_md188"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md186"></a>
 Overview</h1>
 <p>This document explores the challenging problem of handling exclusive monitors on the ARM/AArch64 architecture in the DynamoRIO dynamic binary instrumentation system. After explaining why the problem is so difficult, several possible solutions are presented and discussed.</p>
-<h1><a class="anchor" id="autotoc_md189"></a>
+<h1><a class="anchor" id="autotoc_md187"></a>
 What is an Exclusive Monitor?</h1>
 <p>The ARM/AArch64 architecture contains a version of load-locked/store-conditional synchronization primitives involving exclusive monitors. A pair of instructions defines the synchronization region: the load-exclusive and the store-exclusive instructions. The load-exclusive sets up an exclusive monitor on the memory containing the load’s address. The subsequent store-exclusive succeeds only if there has been no intervening access to the monitored memory since the load-exclusive. This provides a read-modify-write synchronization primitive.</p>
 <p>Below are some examples from libc. The first one is an atomic subtract with acquire semantics on the load-exclusive:</p>
@@ -67,23 +67,23 @@ What is an Exclusive Monitor?</h1>
 <div class="line">20ee8:   cbnz    w3, 20ee0 &lt;__gconv_get_alias_db@@GLIBC_PRIVATE+0xb10&gt;</div>
 </div><!-- fragment --><p>The load-exclusive and store-exclusive instructions are intended to always be used in pairs. A load-exclusive without a corresponding store-exclusive would simply waste hardware resources by engaging the monitor, causing potential performance loss. A store-exclusive without a prior load-exclusive produces undefined behavior but should be expected to fail.</p>
 <p>The exclusive monitor is cleared not only with an intervening access by another thread. It will be cleared by cache evictions, TLB maintenance, or other events. The instruction <code>clrex</code> will clear the monitor as well and is meant for paths exiting the monitor region without executing the store-exclusive. The monitor will also be cleared by too many memory references even to unrelated addresses inside the monitored region, which leads to our problem, described next.</p>
-<h1><a class="anchor" id="autotoc_md190"></a>
+<h1><a class="anchor" id="autotoc_md188"></a>
 The Problem with Instrumenting Exclusive Monitors</h1>
 <p>The exclusive monitor can be cleared by any memory operation between the load-exclusive and store-exclusive. Just how sensitive the monitor is depends on the particular hardware implementation, with some allowing several loads or stores while others clear the monitor with a single load. Since dynamic instrumentation routinely adds additional memory loads and stores in between application instructions, it is in danger of breaking every monitor in the application. Sensitive hardware is common enough that we cannot simply refuse to run on such hardware, and some tools insert extensive instrumentation that would fail on all hardware (for example, see below regarding clean calls).</p>
-<h2><a class="anchor" id="autotoc_md191"></a>
+<h2><a class="anchor" id="autotoc_md189"></a>
 Consequences: Infinite Loop!</h2>
 <p>The application must be prepared for monitor failure (which can also occur due to unpredictable cache evictions or other hardware events), and will always try again in a loop if the exclusive-store fails. When inserted instrumentation causes the store-exclusive to fail every time, the application enters an infinite loop and does not make forward progress.</p>
-<h2><a class="anchor" id="autotoc_md192"></a>
+<h2><a class="anchor" id="autotoc_md190"></a>
 Problem Not Limited by Tool Type</h2>
 <p>Even without a target tool like drcachesim's memory tracer inserting loads and stores, the core DynamoRIO instrumentation engine steals a register on ARM/AArch64. If the exclusive-load or exclusive-store uses the stolen register, the engine must add instructions to use the diverted stolen register slot. These added instructions include loads and stores and can break the monitor. When the entire exclusive-load exclusive-store sequence is in a single block, tool instrumentation and stolen register handling can in some cases plan ahead and insert all added memory references before or after the entire sequence (with complications where tool instrumentation wants to mirror execution flow, but if there is a fault or predicated execution it can be challenging to instrument too far away from the target instruction). However, these sequences frequently include branches and cross blocks, as discussed next.</p>
-<h2><a class="anchor" id="autotoc_md193"></a>
+<h2><a class="anchor" id="autotoc_md191"></a>
 Problem Exacerbated by Intervening Branches</h2>
 <p>DynamoRIO (and tools built on it) operates at a block level and rarely performs any actions that cross blocks. Typical load-exclusive store-exclusive sequences contain conditional branches in the middle, meaning the sequences cross multiple blocks. This means that any handling of the sequence is not a local intra-block affair, further complicating solutions.</p>
 <p>Creating a superblock is one possible solution. However, it is not something normally done, and would complicate many parts of the interface and assumptions made by the core engine, tools, and tool libraries.</p>
-<h1><a class="anchor" id="autotoc_md194"></a>
+<h1><a class="anchor" id="autotoc_md192"></a>
 Initial Implemented Solution: Just Avoid Clean Calls</h1>
 <p>Initially, the problem we observed on 32-bit ARM was with inserting clean calls inside the monitor region. A clean call inserts a long string of memory references in order to save application machine state and invoke an external function. We observed the problem with the drcachesim memory tracing tool, which inserts a clean call at the end of every block. Our solution was to simply shift this clean call to be after the store-exclusive, which worked on some hardware. But on other hardware, particularly Thunder X1, this was not enough: the smaller number of inserted memory references for recording the memory trace cleared the monitor. On that hardware and other sensitive processors, users have also observed the stolen register handling code by itself causing hangs.</p>
-<h1><a class="anchor" id="autotoc_md195"></a>
+<h1><a class="anchor" id="autotoc_md193"></a>
 Proposed Solution A: Super-Instruction</h1>
 <p>One idea is to convert the instruction sequence from the exclusive-load to the exclusive-store into a single super-instruction which appears as one atomic entity in the internal representation of the instrumentation engine. The engine and any tools will insert any new instructions either before or after the monolithic sequence, thereby avoiding breaking the monitor.</p>
 <p>This is implemented today under the <code>-unsafe_build_ldstex</code> option.</p>
@@ -94,7 +94,7 @@ Proposed Solution A: Super-Instruction</h1>
 <li>Tools that require observing all application instructions may fail. For example, a tracing tool would fail to include instruction fetches for all but the first instruction in the sequence, and taint-tracking or other dataflow-sensitive tools may fail altogether to handle the non-standard super-instruction, breaking their operation. This is really a solution targeting just the core engine and is not tool-friendly.</li>
 <li>Identifying or converting the sequence may fail on complicated, multi-block sequences.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md196"></a>
+<h1><a class="anchor" id="autotoc_md194"></a>
 Proposed Solution B: Compare-and-Swap Simulation</h1>
 <p>The idea here is inspired by the QEMU and Valgrind solutions. The QEMU solution is described in Section 4.3 of "Cross-ISA Machine Emulation for Multicores" by Cota, et al.: <a href="http://www.cs.columbia.edu/~luca/research/cota_CGO17.pdf">http://www.cs.columbia.edu/~luca/research/cota_CGO17.pdf</a> The Valgrind solution is discussed in the issue tracker entry linked below.</p>
 <p>The idea is to simulate the original load-exclusive store-exclusive atomic sequence with a weaker compare-and-swap atomic sequence which does not have limitations about inserting memory operations. The weaker sequence does not have the exact same semantics of the original, but it is pretty close, and the claim is that the difference almost never matters for real programs. Compare-and-swap does not detect intervening changes by another thread(s) in a combination of two writes which end up restoring the original value. This is called the ABA problem. The claim that the ABA problem does not matter states that portable synchronization code will not rely on a monitor as not all architectures provide load-locked/store-conditional synchronization primitives: thus, portable code should target the least-common-denominator of compare-and-swap (e.g., cmpxchg on x86).</p>
@@ -164,7 +164,7 @@ Proposed Solution B: Compare-and-Swap Simulation</h1>
 <li>Does not preserve the precise semantics of the original code and could lead to subtle synchronization bugs in the application.</li>
 </ul>
 <p>We could insert a counter into the original loop (after the store-exclusive to avoid perturbing the monitor) and only if it seems to be making no progress would we then move to a compare-and-swap, thus avoiding the semantic difference for at least some hardware and some monitor sequences.</p>
-<h1><a class="anchor" id="autotoc_md197"></a>
+<h1><a class="anchor" id="autotoc_md195"></a>
 Proposed Solution C: Atomic Add Conversion</h1>
 <p>In some cases, a load-exclusive store-exclusive sequence is used to perform an atomic add or subtract. ARM v8.1 added dedicated atomic add instructions. We could convert the monitor-using sequence to instead use the new instructions, avoiding the instrumentation issues.</p>
 <p>Advantages:</p><ul>
@@ -176,7 +176,7 @@ Proposed Solution C: Atomic Add Conversion</h1>
 <li>Requires identifying the whole sequence ahead of time.</li>
 <li>Modifies the original application code, affecting tools that want to observe an unmodified application. (Unless we tried to move the transformation to post-instrumentation time, which is rather difficult for a multi-instruction transformation.)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md198"></a>
+<h1><a class="anchor" id="autotoc_md196"></a>
 Proposed Solution D: Run Twice</h1>
 <p>One idea is to treat these sequences in a similar manner to restartable sequences (“rseq”), which have relatively similar restrictions on execution. We handle those by running them twice, once with instrumentation and once “for real” natively with no instrumentation: <a href="https://github.com/DynamoRIO/dynamorio/wiki/Restartable-Sequences">https://github.com/DynamoRIO/dynamorio/wiki/Restartable-Sequences</a>.</p>
 <p>We’d execute the whole sequence in a normal manner, with regular instrumentation. We’d remember the prior load-exclusive. When we see a store-exclusive, we then insert a native copy of the whole sequence since the load-exclusive, which is executed if the store-exclusive fails. If the native store-exclusive also fails, it would loop back to the start of the instrumented load-exclusive and repeat the whole process.</p>
@@ -190,13 +190,13 @@ Proposed Solution D: Run Twice</h1>
 <li>This approach might fail on complex multi-path blocks that are too difficult to embed. Even for rseq we ended up with a number of assumptions we do not handle when broken and we simply fail.</li>
 <li>The application might not loop and not handle the 2nd execution with side effects? This seems very pathological however, unlike rseq where a restart need not be handled.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md199"></a>
+<h1><a class="anchor" id="autotoc_md197"></a>
 Combining Solutions</h1>
 <p>We could take multiple solutions and use one as a fallback for another when something fails: e.g., using a run-twice solution for simple sequences, but falling back to compare-and-swap for complex sequence shapes that are difficult to embed. We could use similar ideas to the counter discussed above to measure whether progress is being made, avoiding the drawbacks of these solutions when the underlying hardware seems fine with the extra memory operations being inserted at the moment.</p>
-<h1><a class="anchor" id="autotoc_md200"></a>
+<h1><a class="anchor" id="autotoc_md198"></a>
 Decision: Compare-and-Swap</h1>
 <p>The plan is to implement the compare-and-swap solution, which is the simplest and most tool-friendly of the proposals. It will be under an option so it can be disabled. Only if we actually find an application where the weaker semantics causes a problem will we implement an alternative or multi-layer solution.</p>
-<h1><a class="anchor" id="autotoc_md201"></a>
+<h1><a class="anchor" id="autotoc_md199"></a>
 Issue Tracker References</h1>
 <p>Issue tracker entries covering this problem include:</p><ul>
 <li><a href="https://github.com/DynamoRIO/dynamorio/issues/1698">i#1698: ldrex..strex pair constraints challenge instrumentation and even core operation</a></li>
@@ -211,5 +211,5 @@ Issue Tracker References</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18692 --- Sat Mar 6 2021 19:42:52 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18692 --- Sat Mar 6 2021 21:59:08 &nbsp; <img border=0 src="favicon.png">
 </small></address>

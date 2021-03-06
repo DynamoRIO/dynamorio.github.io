@@ -52,7 +52,7 @@ Distribution Contents</h1>
 <li><a class="el" href="API_samples.html">Sample clients</a>.</li>
 <li>A graphical statistics viewer <code>DRstats.exe</code> that displays internal DynamoRIO statistics as well as custom statistics defined by a client (see <a class="el" href="API_samples.html#sec_drstats">Use of Custom Client Statistics with the Windows GUI</a>) (Windows package only). DynamoRIO exports a large number of statistics in its debug build, and a handful in release builds.</li>
 <li>A binary tracedump reader, which also functions as a sample client using DynamoRIO as a standalone library (see <a class="el" href="page_standalone.html#sec_standalone">Using DynamoRIO as a Standalone Library</a>).</li>
-<li>A number of end-user tools including a code coverage tool (see <a class="el" href="page_drcov.html">Code Coverage Tool</a>), a multi-process cache simulator (see <a class="el" href="page_drcachesim.html">Cache Simulator</a>), a last-level cache miss analyzer (see <a class="el" href="page_drcachesim.html">Cache Simulator</a>), and a legacy CPU testing tool (see <a class="el" href="page_drcpusim.html">CPU Simulator</a>). If this is a DynamoRIO public release, it also includes the Dr. Memory memory debugging tool (see <a class="el" href="page_drmemory.html">Dr. Memory Memory Debugging Tool</a>), a system call tracer for Windows (see <a class="el" href="page_drstrace.html">System Call Tracer for Windows</a>), a library tracing tool (see <a class="el" href="page_drltrace.html">Library Call Tracer</a>), and a symbol querying tool (see <a class="el" href="page_symquery.html">Symbol Query Tool</a>).</li>
+<li>A number of end-user tools including a code coverage tool (see <a class="el" href="page_drcov.html">Code Coverage Tool</a>), a multi-process cache simulator (see <a class="el" href="page_drcachesim.html">Tracing and Analysis Framework</a>), a last-level cache miss analyzer (see <a class="el" href="page_drcachesim.html">Tracing and Analysis Framework</a>), and a legacy CPU testing tool (see <a class="el" href="page_drcpusim.html">CPU Simulator</a>). If this is a DynamoRIO public release, it also includes the Dr. Memory memory debugging tool (see <a class="el" href="page_drmemory.html">Dr. Memory Memory Debugging Tool</a>), a system call tracer for Windows (see <a class="el" href="page_drstrace.html">System Call Tracer for Windows</a>), a library tracing tool (see <a class="el" href="page_drltrace.html">Library Call Tracer</a>), and a symbol querying tool (see <a class="el" href="page_symquery.html">Symbol Query Tool</a>).</li>
 </ul>
 <p>When unpacking the release package on Windows, be aware that the Cygwin unzip utility does not preserve executable permissions properly. After unzipping with Cygwin, add ugo+rx permissions to all of the .dll and .exe files in the resulting directory tree: </p><div class="fragment"><div class="line">find . -name \*.dll -exec chmod ugo+rx {} \; -o -name \*.exe -exec chmod ugo+rx {} \;</div>
 </div><!-- fragment --><p> 
@@ -199,7 +199,7 @@ Changes Since Prior Releases</h1>
 <li>Added <a class="el" href="group__drmgr.html#gada27721274b425e7b4ae5a6f5bb32d33">drmgr_disable_auto_predication()</a>.</li>
 <li>Added a new option -signal_stack_size with a smaller default value than before, to save space on applications with many threads.</li>
 <li>Added <a class="el" href="dr__ir__instr_8h.html#a9929bbea2148f2289cdc3dd2a997ced7">instr_predicate_is_cond()</a>.</li>
-<li>Added a hardware data next-line prefetcher to drcachesim. It is on by default, so simulation results may not match those in prior releases. It can be disabled by running with "-data_prefetcher none" (see <a class="el" href="page_drcachesim.html#sec_drcachesim_ops">Simulator Parameters</a>).</li>
+<li>Added a hardware data next-line prefetcher to drcachesim. It is on by default, so simulation results may not match those in prior releases. It can be disabled by running with "-data_prefetcher none" (see <a class="el" href="sec_drcachesim_ops.html">Simulator Parameters</a>).</li>
 <li>Added a last-level cache miss recording feature to drcachesim.</li>
 <li>Added a delayed tracing feature to drcachesim.</li>
 <li>Added an option to drcachesim to specify cache warmup by loaded fraction of the last level cache.</li>
@@ -260,7 +260,7 @@ Changes Since Prior Releases</h1>
 <ul>
 <li>Added preliminary AArch64 ARMv8 support: see <a class="el" href="release_notes.html#sec_limits">Limitations</a> for a description of what is not yet expected to work.</li>
 <li>Added a static library form of DynamoRIO for use either with auto-takeover or the start/stop API. The configure_DynamoRIO_static() and use_DynamoRIO_static_client() CMake utilities facilitate this.</li>
-<li>Enabled <a class="el" href="page_drcachesim.html">Cache Simulator</a> for Windows for single-process applications.</li>
+<li>Enabled <a class="el" href="page_drcachesim.html">Tracing and Analysis Framework</a> for Windows for single-process applications.</li>
 <li>Added a module tracking feature <code>drmodtrack</code> for quick identification of which library a program counter belongs to and for persistent labeling of modules for post-processing and across library reloads. This is part of the <code>drcovlib</code> Extension. See <a class="el" href="group__drcovlib.html#ga28c1e51038eae38438767c489d42499e">drmodtrack_init()</a> and related functions.</li>
 <li>Added <a class="el" href="group__drx.html#gafdcaedde814b3ff345686c6a3abf879c">drx_open_unique_appid_dir()</a>.</li>
 <li>Added <a class="el" href="group__drx.html#ga1c12b3b71826d8b412f25a0059fd2017">DRX_FILE_SKIP_OPEN</a>.</li>
@@ -340,7 +340,7 @@ Changes Since Prior Releases</h1>
 <li>Added Windows 10 support.</li>
 <li>Added a new scratch register coordination Extension, <code>drreg</code>. The <code>drreg</code> Extension is still considered experimental and its interface is subject to change in the next release.</li>
 <li>Added easy-to-use option declaration and parsing for C++ clients and standalone applications via a new Extension, the <a class="el" href="page_droption.html">DynamoRIO Option Parser</a> and the <a class="el" href="classdroption__t.html">droption_t</a> class.</li>
-<li>Added a new tool: <a class="el" href="page_drcachesim.html">Cache Simulator</a>, a multi-process cache simulator.</li>
+<li>Added a new tool: <a class="el" href="page_drcachesim.html">Tracing and Analysis Framework</a>, a multi-process cache simulator.</li>
 <li>Added a new tool: <a class="el" href="page_drcpusim.html">CPU Simulator</a>, a CPU simulator for illegal instructions on legacy processors.</li>
 <li>Added distinctions between reasons for <a class="el" href="dr__tools_8h.html#a5a6e4049f8accbc73ec5dbaf0deb25a7">dr_query_memory_ex()</a> to fail</li>
 <li>Added <a class="el" href="dr__ir__opnd_8h.html#acbdde625c69dd2bfe118dc34bac249d3">opnd_size_in_bits()</a>.</li>
@@ -1029,5 +1029,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18692 --- Sat Mar 6 2021 19:42:52 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18692 --- Sat Mar 6 2021 21:59:08 &nbsp; <img border=0 src="favicon.png">
 </small></address>

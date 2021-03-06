@@ -24,17 +24,17 @@ permalink: /page_profiling.html
 <div class="title">Profiling DynamoRIO and Clients </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md220"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md218"></a>
 Linux</h1>
-<h2><a class="anchor" id="autotoc_md221"></a>
+<h2><a class="anchor" id="autotoc_md219"></a>
 DynamoRIO PC self-sampling</h2>
 <p>The client can use <a class="el" href="dr__tools_8h.html#a9191c67a267070ed51289d7192f986aa">dr_set_itimer()</a> for programmatic PC self-sampling, with <a class="el" href="dr__tools_8h.html#ae48034d181a3d7a29e196ad3e24cc994">dr_where_am_i()</a> providing information on where the sample was taken. This provides general categorization of where time is being spent in the overall instrumentation system, with potential to drill down further offline based on the PC.</p>
 <p>For PC sampling via DR's <code>-prof_pcs</code> runtime option instead, that is available internally in varying degrees on different platforms but is not polished enough and is missing some pieces (see the bottom of this page).</p>
-<h2><a class="anchor" id="autotoc_md222"></a>
+<h2><a class="anchor" id="autotoc_md220"></a>
 External sampling tools</h2>
 <p>Perf and oprofile are the two prominent sampling profilers on Linux today. Perf is newer and has a nicer interface, but it requires patching and building from source in order to get symbols for DR. oprofile is typically available on older distros, but it's not available on Ubuntu Precise, it seems to cause system lockups, and we're not sure we trust the results.</p>
 <p>Before doing any micro-optimization based on the profile, make sure to disable CPU frequency scaling before taking measurements: </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> N in /sys/devices/system/cpu/cpu[; <span class="keywordflow">do</span> echo performance | sudo tee $N/cpufreq/scaling_governor ; done</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md223"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md221"></a>
 oprofile</h3>
 <p>To install oprofile, type: </p><div class="fragment"><div class="line"><span class="preprocessor"># Or other distro command</span></div>
 <div class="line">sudo apt-get install oprofile</div>
@@ -65,7 +65,7 @@ oprofile</h3>
 <div class="line">1647      2.3593  instr_encode_common</div>
 <div class="line">1502      2.1516  dispatch</div>
 <div class="line">1399      2.0040  hashtable_fragment_lookup</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md224"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md222"></a>
 perf</h3>
 <p>Perf currently does not handle symbols in DSOs that have a preferred base, and they only recently added support for following .gnu_debuglink. Since profiling without symbols isn't very useful, the following instructions are for building perf from source with a patch I wrote to fix the problem.</p>
 <p>The patch to get good symbols with perf is available here: <a href="https://github.com/rnk/linux/compare/perf-p_vaddr.diff">https://github.com/rnk/linux/compare/perf-p_vaddr.diff</a></p>
@@ -118,11 +118,11 @@ perf</h3>
 <div class="line">       │             pc = insert_relative_jump(pc, exit_target, NOT_HOT_PATCHABLE);                                                                                                                         ▒</div>
 <div class="line"> 97.40 │       add    $0x5,%rax</div>
 </div><!-- fragment --><p>97% of the samples in this function were on "add $0x5, %rax", which is misleading. The expensive instruction is more likely the "xchgl %r14d, (%rdx)" before it, which instruction we use to atomically update the code cache. In this particular case, we happen to be emitting the full exit stub, so it's unlikely that this needs to be an atomic update.</p>
-<h1><a class="anchor" id="autotoc_md225"></a>
+<h1><a class="anchor" id="autotoc_md223"></a>
 Windows</h1>
 <p>We've used Code Analyst successfully.</p>
 <p>TODO, more detail.</p>
-<h1><a class="anchor" id="autotoc_md226"></a>
+<h1><a class="anchor" id="autotoc_md224"></a>
 Cross-platform -prof_pcs</h1>
 <p>There are many open issues for cleaning this up, such as <a href="https://github.com/DynamoRIO/dynamorio/issues#issue/140">issue 140</a>, <a href="https://github.com/DynamoRIO/dynamorio/issues#issue/359">issue 359</a>, <a href="https://github.com/DynamoRIO/dynamorio/issues#issue/767">issue 767</a>. On Linux the <a class="el" href="dr__tools_8h.html#a9191c67a267070ed51289d7192f986aa">dr_set_itimer()</a> solution above provides programmatic support. </p>
 </div></div><!-- contents -->
@@ -133,5 +133,5 @@ Cross-platform -prof_pcs</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18692 --- Sat Mar 6 2021 19:42:52 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18692 --- Sat Mar 6 2021 21:59:08 &nbsp; <img border=0 src="favicon.png">
 </small></address>

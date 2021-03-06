@@ -83,72 +83,72 @@
       [ "Conclusion", "page_aarch64_far.html#autotoc_md11", null ]
     ] ],
     [ "JIT Optimization", "page_jitopt.html", [
-      [ "Branch Content", "page_jitopt.html#autotoc_md185", null ],
-      [ "Commit Workflow", "page_jitopt.html#autotoc_md186", null ],
-      [ "Code Quality", "page_jitopt.html#autotoc_md187", null ]
+      [ "Branch Content", "page_jitopt.html#autotoc_md183", null ],
+      [ "Commit Workflow", "page_jitopt.html#autotoc_md184", null ],
+      [ "Code Quality", "page_jitopt.html#autotoc_md185", null ]
     ] ],
     [ "Restartable Sequences", "page_rseq.html", [
-      [ "Background", "page_rseq.html#autotoc_md227", [
-        [ "Why must DynamoRIO handle Restartable Sequences specially?", "page_rseq.html#autotoc_md228", null ],
-        [ "RSEQ API/ABI", "page_rseq.html#autotoc_md229", null ]
+      [ "Background", "page_rseq.html#autotoc_md225", [
+        [ "Why must DynamoRIO handle Restartable Sequences specially?", "page_rseq.html#autotoc_md226", null ],
+        [ "RSEQ API/ABI", "page_rseq.html#autotoc_md227", null ]
       ] ],
-      [ "Challenges for Handling RSEQ in DR", "page_rseq.html#autotoc_md230", [
-        [ "Identifying Restartable Sequences", "page_rseq.html#autotoc_md231", null ],
-        [ "Running Restartable Sequences under DynamoRIO", "page_rseq.html#autotoc_md232", null ]
+      [ "Challenges for Handling RSEQ in DR", "page_rseq.html#autotoc_md228", [
+        [ "Identifying Restartable Sequences", "page_rseq.html#autotoc_md229", null ],
+        [ "Running Restartable Sequences under DynamoRIO", "page_rseq.html#autotoc_md230", null ]
       ] ],
-      [ "The \"Run Twice\" Solution", "page_rseq.html#autotoc_md233", [
-        [ "Running Twice", "page_rseq.html#autotoc_md234", null ],
-        [ "Rejected Alternatives", "page_rseq.html#autotoc_md235", [
-          [ "Emulate Restartable Sequences using CPU Affinity", "page_rseq.html#autotoc_md236", null ],
-          [ "Emulate Restartable Sequences using a Per-Sequence Mutex", "page_rseq.html#autotoc_md237", null ],
-          [ "Have DR Generate Restartable Sequence Fragment Groups", "page_rseq.html#autotoc_md238", null ]
+      [ "The \"Run Twice\" Solution", "page_rseq.html#autotoc_md231", [
+        [ "Running Twice", "page_rseq.html#autotoc_md232", null ],
+        [ "Rejected Alternatives", "page_rseq.html#autotoc_md233", [
+          [ "Emulate Restartable Sequences using CPU Affinity", "page_rseq.html#autotoc_md234", null ],
+          [ "Emulate Restartable Sequences using a Per-Sequence Mutex", "page_rseq.html#autotoc_md235", null ],
+          [ "Have DR Generate Restartable Sequence Fragment Groups", "page_rseq.html#autotoc_md236", null ]
         ] ]
       ] ],
-      [ "\"Run Twice\" Implementation Details", "page_rseq.html#autotoc_md239", [
-        [ "Fallback: Disable Rseq", "page_rseq.html#autotoc_md240", null ],
-        [ "Identifying Rseq Sequences", "page_rseq.html#autotoc_md241", null ],
-        [ "First (Instrumented) Execution", "page_rseq.html#autotoc_md242", null ],
-        [ "Second (Restartable) Execution", "page_rseq.html#autotoc_md243", [
-          [ "Application State Barrier", "page_rseq.html#autotoc_md244", null ],
-          [ "Target the Start, Not the Abort Handler", "page_rseq.html#autotoc_md245", null ],
-          [ "Local Copy", "page_rseq.html#autotoc_md246", null ],
-          [ "Marking Restartable", "page_rseq.html#autotoc_md247", null ],
-          [ "Where to Locate the rseq_cs?", "page_rseq.html#autotoc_md248", null ],
-          [ "Clearing the Rseq Bounds", "page_rseq.html#autotoc_md249", null ],
-          [ "Abort Handler", "page_rseq.html#autotoc_md250", null ],
-          [ "Obtaining Cache Addresses for rseq_cs", "page_rseq.html#autotoc_md251", null ],
-          [ "Testing", "page_rseq.html#autotoc_md252", null ]
+      [ "\"Run Twice\" Implementation Details", "page_rseq.html#autotoc_md237", [
+        [ "Fallback: Disable Rseq", "page_rseq.html#autotoc_md238", null ],
+        [ "Identifying Rseq Sequences", "page_rseq.html#autotoc_md239", null ],
+        [ "First (Instrumented) Execution", "page_rseq.html#autotoc_md240", null ],
+        [ "Second (Restartable) Execution", "page_rseq.html#autotoc_md241", [
+          [ "Application State Barrier", "page_rseq.html#autotoc_md242", null ],
+          [ "Target the Start, Not the Abort Handler", "page_rseq.html#autotoc_md243", null ],
+          [ "Local Copy", "page_rseq.html#autotoc_md244", null ],
+          [ "Marking Restartable", "page_rseq.html#autotoc_md245", null ],
+          [ "Where to Locate the rseq_cs?", "page_rseq.html#autotoc_md246", null ],
+          [ "Clearing the Rseq Bounds", "page_rseq.html#autotoc_md247", null ],
+          [ "Abort Handler", "page_rseq.html#autotoc_md248", null ],
+          [ "Obtaining Cache Addresses for rseq_cs", "page_rseq.html#autotoc_md249", null ],
+          [ "Testing", "page_rseq.html#autotoc_md250", null ]
         ] ]
       ] ],
-      [ "Future Work", "page_rseq.html#autotoc_md253", null ],
-      [ "Limitations", "page_rseq.html#autotoc_md254", null ],
-      [ "Citations", "page_rseq.html#autotoc_md255", null ]
+      [ "Future Work", "page_rseq.html#autotoc_md251", null ],
+      [ "Limitations", "page_rseq.html#autotoc_md252", null ],
+      [ "Citations", "page_rseq.html#autotoc_md253", null ]
     ] ],
     [ "Exclusive Monitors", "page_ldstex.html", [
-      [ "Overview", "page_ldstex.html#autotoc_md188", null ],
-      [ "What is an Exclusive Monitor?", "page_ldstex.html#autotoc_md189", null ],
-      [ "The Problem with Instrumenting Exclusive Monitors", "page_ldstex.html#autotoc_md190", [
-        [ "Consequences: Infinite Loop!", "page_ldstex.html#autotoc_md191", null ],
-        [ "Problem Not Limited by Tool Type", "page_ldstex.html#autotoc_md192", null ],
-        [ "Problem Exacerbated by Intervening Branches", "page_ldstex.html#autotoc_md193", null ]
+      [ "Overview", "page_ldstex.html#autotoc_md186", null ],
+      [ "What is an Exclusive Monitor?", "page_ldstex.html#autotoc_md187", null ],
+      [ "The Problem with Instrumenting Exclusive Monitors", "page_ldstex.html#autotoc_md188", [
+        [ "Consequences: Infinite Loop!", "page_ldstex.html#autotoc_md189", null ],
+        [ "Problem Not Limited by Tool Type", "page_ldstex.html#autotoc_md190", null ],
+        [ "Problem Exacerbated by Intervening Branches", "page_ldstex.html#autotoc_md191", null ]
       ] ],
-      [ "Initial Implemented Solution: Just Avoid Clean Calls", "page_ldstex.html#autotoc_md194", null ],
-      [ "Proposed Solution A: Super-Instruction", "page_ldstex.html#autotoc_md195", null ],
-      [ "Proposed Solution B: Compare-and-Swap Simulation", "page_ldstex.html#autotoc_md196", null ],
-      [ "Proposed Solution C: Atomic Add Conversion", "page_ldstex.html#autotoc_md197", null ],
-      [ "Proposed Solution D: Run Twice", "page_ldstex.html#autotoc_md198", null ],
-      [ "Combining Solutions", "page_ldstex.html#autotoc_md199", null ],
-      [ "Decision: Compare-and-Swap", "page_ldstex.html#autotoc_md200", null ],
-      [ "Issue Tracker References", "page_ldstex.html#autotoc_md201", null ]
+      [ "Initial Implemented Solution: Just Avoid Clean Calls", "page_ldstex.html#autotoc_md192", null ],
+      [ "Proposed Solution A: Super-Instruction", "page_ldstex.html#autotoc_md193", null ],
+      [ "Proposed Solution B: Compare-and-Swap Simulation", "page_ldstex.html#autotoc_md194", null ],
+      [ "Proposed Solution C: Atomic Add Conversion", "page_ldstex.html#autotoc_md195", null ],
+      [ "Proposed Solution D: Run Twice", "page_ldstex.html#autotoc_md196", null ],
+      [ "Combining Solutions", "page_ldstex.html#autotoc_md197", null ],
+      [ "Decision: Compare-and-Swap", "page_ldstex.html#autotoc_md198", null ],
+      [ "Issue Tracker References", "page_ldstex.html#autotoc_md199", null ]
     ] ],
     [ "Using an External Decoder", "page_external_decoder.html", [
-      [ "Motivation", "page_external_decoder.html#autotoc_md166", null ],
-      [ "Implementation", "page_external_decoder.html#autotoc_md167", null ],
-      [ "Requirements", "page_external_decoder.html#autotoc_md168", null ],
-      [ "Potential Decoders", "page_external_decoder.html#autotoc_md169", [
-        [ "XED", "page_external_decoder.html#autotoc_md170", null ],
-        [ "LLVM", "page_external_decoder.html#autotoc_md171", null ]
+      [ "Motivation", "page_external_decoder.html#autotoc_md164", null ],
+      [ "Implementation", "page_external_decoder.html#autotoc_md165", null ],
+      [ "Requirements", "page_external_decoder.html#autotoc_md166", null ],
+      [ "Potential Decoders", "page_external_decoder.html#autotoc_md167", [
+        [ "XED", "page_external_decoder.html#autotoc_md168", null ],
+        [ "LLVM", "page_external_decoder.html#autotoc_md169", null ]
       ] ],
-      [ "Concerns", "page_external_decoder.html#autotoc_md172", null ]
+      [ "Concerns", "page_external_decoder.html#autotoc_md170", null ]
     ] ]
 ],

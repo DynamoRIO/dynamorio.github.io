@@ -24,10 +24,7 @@ permalink: /page_user_docs.html
 <div class="title">Build Your Own Tool </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="image">
-<img src="/images/drlogo.png" alt=""/>
-</div>
- <p>DynamoRIO is a <em>runtime code manipulation system</em> that supports code transformations on any part of a program, <em>while it executes</em>. DynamoRIO gives complete control over the runtime code stream and does not limit transformations to trampoline insertion. DynamoRIO exports an interface for building dynamic tools for a wide variety of uses: program analysis and understanding, profiling, instrumentation, optimization, translation, etc. DynamoRIO provides efficient, transparent, and comprehensive manipulation of an unmodified application running on a stock operating system (Windows, Linux, or Android) and commodity IA-32, AMD64, ARM, and AArch64 hardware. See <a class="el" href="release_notes.html#sec_limit_platforms">Platform Limitations</a> for details of which platform combinations are fully supported.</p>
+<div class="textblock"><p>DynamoRIO is a <em>runtime code manipulation system</em> that supports code transformations on any part of a program, <em>while it executes</em>. DynamoRIO gives complete control over the runtime code stream and does not limit transformations to trampoline insertion. DynamoRIO exports an interface for building dynamic tools for a wide variety of uses: program analysis and understanding, profiling, instrumentation, optimization, translation, etc. DynamoRIO provides efficient, transparent, and comprehensive manipulation of an unmodified application running on a stock operating system (Windows, Linux, or Android) and commodity IA-32, AMD64, ARM, and AArch64 hardware. See <a class="el" href="release_notes.html#sec_limit_platforms">Platform Limitations</a> for details of which platform combinations are fully supported.</p>
 <p>This document describes the DynamoRIO system and the various API's that it exports for building custom tools. It is divided into the following sections:</p>
 <ul>
 <li><a class="el" href="page_tutorials.html">Tutorials</a> <br  />
@@ -42,10 +39,10 @@ How to run DynamoRIO.</li>
 The top-level interfaces provided to a tool.</li>
 <li><a class="el" href="API_BT.html">Code Manipulation API</a> <br  />
 DynamoRIO's full runtime code manipulation interface.</li>
+<li><a class="el" href="page_ext.html">Extension API</a> <br  />
+DynamoRIO's API is augmented by a collection of extension libraries.</li>
 <li><a class="el" href="page_standalone.html">Disassembly Library</a> <br  />
 DynamoRIO can be used as a standalone library for IA-32/AMD64/ARM/AArch64 disassembly, decoding, encoding, and general instruction manipulation. A separate static library is provided for this purpose.</li>
-<li><a class="el" href="page_tool.html">Available Tools</a> <br  />
-A collection of powerful DynamoRIO-based tools are provided for direct use, including our <a class="el" href="page_drcachesim.html">Cache Simulator</a> and memory access trace collection and analysis platform, the <a class="el" href="page_drmemory.html">Dr. Memory Memory Debugging Tool</a>, our <a class="el" href="page_drcov.html">Code Coverage Tool</a>, and more.</li>
 <li><a class="el" href="overview.html">DynamoRIO System Overview</a> <br  />
 A description of the implementation of the DynamoRIO system.</li>
 <li><a class="el" href="release_notes.html">Release Notes for Version 8.0.18692</a> <br  />
@@ -180,5 +177,5 @@ Release notes for this release, including changes since prior releases and plans
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18692 --- Sat Mar 6 2021 19:42:52 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18692 --- Sat Mar 6 2021 21:59:08 &nbsp; <img border=0 src="favicon.png">
 </small></address>
