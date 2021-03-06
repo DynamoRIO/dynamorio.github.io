@@ -110,10 +110,6 @@
     [ "tracedump_stub_data_t", "dr__tools_8h.html#aea2564604286f5dbd468a9b7eb8cefe3", null ],
     [ "tracedump_trace_header_t", "dr__tools_8h.html#aa8e05277d4d49752c17a49e5197e980b", null ],
     [ "version_number_t", "dr__tools_8h.html#a877bf5e803e7dfab558f0d02d8cfbc2d", null ],
-    [ "DR_MAP_PRIVATE", "dr__tools_8h.html#af9bdc3014f3d54c426b6d2df10de4960ace272a4f3f0eff24ef44c983bfa4ce63", null ],
-    [ "DR_MAP_FIXED", "dr__tools_8h.html#af9bdc3014f3d54c426b6d2df10de4960aec0156a07c55523ed4bb3d2f05c00b58", null ],
-    [ "DR_MAP_IMAGE", "dr__tools_8h.html#af9bdc3014f3d54c426b6d2df10de4960a12a6a7af3936e4c932effc9505f23be5", null ],
-    [ "DR_MAP_CACHE_REACHABLE", "dr__tools_8h.html#af9bdc3014f3d54c426b6d2df10de4960a6ba2a46cb1c2697fa81841feb05a777c", null ],
     [ "dr_alloc_flags_t", "dr__tools_8h.html#abb7e20e83f7b8e1b65428e45c8ab4211", [
       [ "DR_ALLOC_NON_HEAP", "dr__tools_8h.html#abb7e20e83f7b8e1b65428e45c8ab4211af279cdbfa6f350725efabcf5cc16a56f", null ],
       [ "DR_ALLOC_THREAD_PRIVATE", "dr__tools_8h.html#abb7e20e83f7b8e1b65428e45c8ab4211a312d65229e3450b24e59aec4b7d7410e", null ],
