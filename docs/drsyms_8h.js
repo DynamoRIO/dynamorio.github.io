@@ -9,6 +9,12 @@
     [ "drsym_line_info_t", "group__drsyms.html#ga22dde1045640273b44a693142fd00326", null ],
     [ "drsym_ptr_type_t", "group__drsyms.html#ga602ae46c255113caf7fe2661ded4ed68", null ],
     [ "drsym_type_t", "group__drsyms.html#gafacfa0e0e79a26a608c3e1b2d5b6dfc2", null ],
+    [ "DRSYM_TYPE_OTHER", "group__drsyms.html#ggaac34dfe6c6b73b43a4656c9dce041034a3df07cfcbf3fcb8e0e203d844421c8f3", null ],
+    [ "DRSYM_TYPE_INT", "group__drsyms.html#ggaac34dfe6c6b73b43a4656c9dce041034ac4568bd915a95c4f2e641c593171ad14", null ],
+    [ "DRSYM_TYPE_PTR", "group__drsyms.html#ggaac34dfe6c6b73b43a4656c9dce041034a038a317ac51c1ee78f6b85a1ad220d83", null ],
+    [ "DRSYM_TYPE_FUNC", "group__drsyms.html#ggaac34dfe6c6b73b43a4656c9dce041034ad608c508bb62b4ba8303fd66210e7481", null ],
+    [ "DRSYM_TYPE_VOID", "group__drsyms.html#ggaac34dfe6c6b73b43a4656c9dce041034a6e6814cbb29a891671ca7047d49f1e1b", null ],
+    [ "DRSYM_TYPE_COMPOUND", "group__drsyms.html#ggaac34dfe6c6b73b43a4656c9dce041034a0967e981148150fd3c30468ec047e8aa", null ],
     [ "drsym_debug_kind_t", "group__drsyms.html#gad3772ffd6c4e0d68738a31d7e25a3de9", [
       [ "DRSYM_SYMBOLS", "group__drsyms.html#ggad3772ffd6c4e0d68738a31d7e25a3de9a3906510b7b336284f72153a9c17127b0", null ],
       [ "DRSYM_LINE_NUMS", "group__drsyms.html#ggad3772ffd6c4e0d68738a31d7e25a3de9aed224abfe6e8297c7ac7bed97efda8c4", null ],

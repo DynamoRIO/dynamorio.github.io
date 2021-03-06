@@ -213,5 +213,16 @@
     [ "XINST_CREATE_store_pair", "dr__ir__macros__aarch64_8h.html#a0af576a857ca51596cc247dfa5771370", null ],
     [ "XINST_CREATE_store_simd", "dr__ir__macros__aarch64_8h.html#a053c0202c5a4229fbc5575183afb02d7", null ],
     [ "XINST_CREATE_sub", "dr__ir__macros__aarch64_8h.html#afdbcfb317d599ecde76215392878da1c", null ],
-    [ "XINST_CREATE_sub_s", "dr__ir__macros__aarch64_8h.html#a4cbf96f2f31e7c637e8b824741ff418f", null ]
+    [ "XINST_CREATE_sub_s", "dr__ir__macros__aarch64_8h.html#a4cbf96f2f31e7c637e8b824741ff418f", null ],
+    [ "DR_DC_ZVA", "dr__ir__macros__aarch64_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8afc27633d7cbcaf05492d196eb480ab92", null ],
+    [ "DR_DC_IVAC", "dr__ir__macros__aarch64_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8a63768ccfc29e3266ef1342883d97f90b", null ],
+    [ "DR_DC_ISW", "dr__ir__macros__aarch64_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8a7c46514358d93861fef65c4f31a4db88", null ],
+    [ "DR_DC_CVAC", "dr__ir__macros__aarch64_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8abd6da17fedb47fcf69184a250e4e5131", null ],
+    [ "DR_DC_CSW", "dr__ir__macros__aarch64_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8aa986f59175c2b2df26931306384983b7", null ],
+    [ "DR_DC_CVAU", "dr__ir__macros__aarch64_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8a513ad37a212bad28970955586aee0453", null ],
+    [ "DR_DC_CIVAC", "dr__ir__macros__aarch64_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8a073beaf6578aedbe4138dc7574cd56cb", null ],
+    [ "DR_DC_CISW", "dr__ir__macros__aarch64_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8a904fc8749035bef68464da642fc005f5", null ],
+    [ "DR_IC_IALLUIS", "dr__ir__macros__aarch64_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8a10e0251a4b10aa95e0a5e06e8735e41b", null ],
+    [ "DR_IC_IALLU", "dr__ir__macros__aarch64_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8a4d7cdf15b361224d494afdfde111e0d9", null ],
+    [ "DR_IC_IVAU", "dr__ir__macros__aarch64_8h.html#ac36f475ca5b446f4fde4c9b90bec77c8a16042dd2a3cd2abb2c74bb9991a47db6", null ]
 ],

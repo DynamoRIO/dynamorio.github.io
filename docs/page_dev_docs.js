@@ -33,43 +33,41 @@
         [ "Using Ninja For Better Error Messages, Faster Builds, and Proper Incremental Builds", "page_building.html#sec_ninja", [
           [ "Using Ninja With Pre-7.0 SDK", "page_building.html#autotoc_md104", null ]
         ] ],
-        [ "Using MSBuild For Slightly Better Error Messages And Faster Builds", "page_building.html#autotoc_md105", null ],
-        [ "Using Unix Makefiles On Windows For Parallel Builds", "page_building.html#autotoc_md106", null ],
-        [ "Building the Qt DrGUI extension", "page_building.html#autotoc_md107", null ]
+        [ "Using MSBuild For Slightly Better Error Messages And Faster Builds", "page_building.html#autotoc_md105", null ]
       ] ]
     ] ],
     [ "Testing", "page_test_suite.html", [
-      [ "Automated Test Machines", "page_test_suite.html#autotoc_md258", [
-        [ "Continuous Integration (CI) via Github Actions", "page_test_suite.html#autotoc_md259", null ],
-        [ "CI Job Auto-Cancellation", "page_test_suite.html#autotoc_md260", null ],
-        [ "CI for AArch64 & AArch32", "page_test_suite.html#autotoc_md261", null ],
-        [ "CI Tree Closures", "page_test_suite.html#autotoc_md262", null ],
-        [ "Trybots", "page_test_suite.html#autotoc_md263", null ]
+      [ "Automated Test Machines", "page_test_suite.html#autotoc_md256", [
+        [ "Continuous Integration (CI) via Github Actions", "page_test_suite.html#autotoc_md257", null ],
+        [ "CI Job Auto-Cancellation", "page_test_suite.html#autotoc_md258", null ],
+        [ "CI for AArch64 & AArch32", "page_test_suite.html#autotoc_md259", null ],
+        [ "CI Tree Closures", "page_test_suite.html#autotoc_md260", null ],
+        [ "Trybots", "page_test_suite.html#autotoc_md261", null ]
       ] ],
-      [ "Regression Test Suite", "page_test_suite.html#autotoc_md264", [
-        [ "Test Organization", "page_test_suite.html#autotoc_md265", null ],
-        [ "Building and Running Tests", "page_test_suite.html#autotoc_md266", null ],
-        [ "Testing AArchXX", "page_test_suite.html#autotoc_md267", null ],
-        [ "Test Output", "page_test_suite.html#autotoc_md268", null ],
-        [ "Pre-Commit Test Suite", "page_test_suite.html#autotoc_md269", null ],
-        [ "Cross-Compilation and Android Testing", "page_test_suite.html#autotoc_md270", null ],
-        [ "Pre-Commit Test Suite Over Ssh", "page_test_suite.html#autotoc_md271", null ],
-        [ "Test Failures", "page_test_suite.html#autotoc_md272", null ],
-        [ "Missing Tests", "page_test_suite.html#autotoc_md273", null ]
+      [ "Regression Test Suite", "page_test_suite.html#autotoc_md262", [
+        [ "Test Organization", "page_test_suite.html#autotoc_md263", null ],
+        [ "Building and Running Tests", "page_test_suite.html#autotoc_md264", null ],
+        [ "Testing AArchXX", "page_test_suite.html#autotoc_md265", null ],
+        [ "Test Output", "page_test_suite.html#autotoc_md266", null ],
+        [ "Pre-Commit Test Suite", "page_test_suite.html#autotoc_md267", null ],
+        [ "Cross-Compilation and Android Testing", "page_test_suite.html#autotoc_md268", null ],
+        [ "Pre-Commit Test Suite Over Ssh", "page_test_suite.html#autotoc_md269", null ],
+        [ "Test Failures", "page_test_suite.html#autotoc_md270", null ],
+        [ "Missing Tests", "page_test_suite.html#autotoc_md271", null ]
       ] ],
-      [ "Adding New Tests", "page_test_suite.html#autotoc_md274", null ]
+      [ "Adding New Tests", "page_test_suite.html#autotoc_md272", null ]
     ] ],
     [ "Profiling DynamoRIO and Clients", "page_profiling.html", [
-      [ "Linux", "page_profiling.html#autotoc_md222", [
-        [ "DynamoRIO PC self-sampling", "page_profiling.html#autotoc_md223", null ],
-        [ "External sampling tools", "page_profiling.html#autotoc_md224", [
-          [ "oprofile", "page_profiling.html#autotoc_md225", null ],
-          [ "perf", "page_profiling.html#autotoc_md226", null ]
+      [ "Linux", "page_profiling.html#autotoc_md220", [
+        [ "DynamoRIO PC self-sampling", "page_profiling.html#autotoc_md221", null ],
+        [ "External sampling tools", "page_profiling.html#autotoc_md222", [
+          [ "oprofile", "page_profiling.html#autotoc_md223", null ],
+          [ "perf", "page_profiling.html#autotoc_md224", null ]
         ] ]
       ] ],
-      [ "Windows", "page_profiling.html#autotoc_md227", null ],
-      [ "Cross-platform -prof_pcs", "page_profiling.html#autotoc_md228", null ]
+      [ "Windows", "page_profiling.html#autotoc_md225", null ],
+      [ "Cross-platform -prof_pcs", "page_profiling.html#autotoc_md226", null ]
     ] ],
-    [ "Publications", "page_publications.html", null ],
+    [ "Academic Publications", "page_publications.html", null ],
     [ "Design Documents", "page_design_docs.html", {% include_relative page_design_docs.js %} ]
 ],
