@@ -29,6 +29,7 @@ permalink: /page_code_reviews.html
 <h1><a class="anchor" id="sec_code_review_non_member"></a>
 Submitting a Change as a Non-Project Member</h1>
 <p>If you are not (yet) a member of the Committers group for DynamoRIO and thus do not have write access to the repository, you can contribute an individual source code change by having an existing developer commit it. Rather than using a feature branch on a clone of <a href="https://github.com/DynamoRIO/dynamorio">DynamoRIO/dynamorio</a> and using <code>git review</code> as described below, you'd fork <a href="https://github.com/DynamoRIO/dynamorio">DynamoRIO/dynamorio</a> into your personal github account and submit a pull request from there to the master branch of <a href="https://github.com/DynamoRIO/dynamorio">DynamoRIO/dynamorio</a>. You are expected to follow our <a class="el" href="page_code_style.html">Code Style</a> and, just like with project feature branches, <em>do not force push</em> to your personal branch: it is shared history once in a pull request.</p>
+<p>In order for the DynamoRIO automated tests to run on your pull request, be sure that you have enabled <code>Allow all actions</code> under <code>Actions</code> in the <code>Settings</code> of your forked repository.</p>
 <p>We recommend submitting a few small patches in this manner to demonstrate your work before asking to be added as a project member.</p>
 <p>Once you become a DynamoRIO project member, please switch to our workflow of using branches within the DynamoRIO/dynamorio repository rather than using personal cloned repository branches. This makes it easier for others to contribute toward or take over and finish off pull requests while still giving you credit upon merge. (It is not uncommon for an open source PR author to be busy and unable to quickly finish off small requested changes, and we'd like to be able to step in and easily finalize it within the same PR.)</p>
 <h1><a class="anchor" id="autotoc_md108"></a>
@@ -143,5 +144,5 @@ Project Branches</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18692 --- Tue Mar 9 2021 07:20:03 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18695 --- Wed Mar 10 2021 07:20:16 &nbsp; <img border=0 src="favicon.png">
 </small></address>
