@@ -8,6 +8,7 @@
     [ "handle", "struct__module__data__t.html#af9bae197c9afb2fe07ffa4e0af175c60", null ],
     [ "module_internal_size", "struct__module__data__t.html#a94f5d480b14a8c39aee1498f636dc912", null ],
     [ "names", "struct__module__data__t.html#a7c45d3b8fe564ddc1cda9239734e0ca8", null ],
+    [ "preferred_base", "struct__module__data__t.html#a1301c377dbd72f064bf939e6daeea44b", null ],
     [ "product_version", "struct__module__data__t.html#aca53ed495e74fa4852f81ab8717cad1d", null ],
     [ "start", "struct__module__data__t.html#aac28072fa786f69d70339d842052c9cf", null ],
     [ "timestamp", "struct__module__data__t.html#a5d6a0611178815d6809fbb02e9b32ecd", null ]

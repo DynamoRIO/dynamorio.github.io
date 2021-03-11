@@ -51,6 +51,8 @@ Data Fields</h2></td></tr>
 <tr class="separator:a0de50fb0c06dea5459ca6f1c292fb6bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd6f7f82cb6bd00e5f4caf379b95b914"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__drmodtrack__info__t.html#abd6f7f82cb6bd00e5f4caf379b95b914">offset</a></td></tr>
 <tr class="separator:abd6f7f82cb6bd00e5f4caf379b95b914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7087c0d8027d8f951c03b6123ae23f2a"><td class="memItemLeft" align="right" valign="top">app_pc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__drmodtrack__info__t.html#a7087c0d8027d8f951c03b6123ae23f2a">preferred_base</a></td></tr>
+<tr class="separator:a7087c0d8027d8f951c03b6123ae23f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Information for one module as recorded during execution. </p>
@@ -126,7 +128,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The offset of this segment from the beginning of this backing file. </p>
+<p>The offset of this segment from the beginning of this backing file. If this field is not present in an older-version offline file, it will be filled in with -1. On Windows this field is always 0. </p>
 
 </div>
 </div>
@@ -142,6 +144,21 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>The full path to the file backing the module. This points to a buffer of size <a class="el" href="dr__defines_8h.html#a95c7b582d53e0a376f2a0e89323b2a7b">MAXIMUM_PATH</a>. It can be modified. </p>
+
+</div>
+</div>
+<a id="a7087c0d8027d8f951c03b6123ae23f2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7087c0d8027d8f951c03b6123ae23f2a">&#9670;&nbsp;</a></span>preferred_base</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">app_pc _drmodtrack_info_t::preferred_base</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The preferred base address of this segment of the module. If this field is not present in an older-version offline file, it will be filled in with -1. </p>
 
 </div>
 </div>
@@ -214,5 +231,5 @@ Data Fields</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18695 --- Wed Mar 10 2021 07:20:17 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18696 --- Thu Mar 11 2021 07:21:06 &nbsp; <img border=0 src="favicon.png">
 </small></address>

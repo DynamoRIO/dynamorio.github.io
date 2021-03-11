@@ -5,6 +5,7 @@
     [ "index", "struct__drmodtrack__info__t.html#a0de50fb0c06dea5459ca6f1c292fb6bb", null ],
     [ "offset", "struct__drmodtrack__info__t.html#abd6f7f82cb6bd00e5f4caf379b95b914", null ],
     [ "path", "struct__drmodtrack__info__t.html#add40888e2f0dc80ee9f5c54ceb5c5827", null ],
+    [ "preferred_base", "struct__drmodtrack__info__t.html#a7087c0d8027d8f951c03b6123ae23f2a", null ],
     [ "size", "struct__drmodtrack__info__t.html#a67f5a4e48a289a528b164173457b7da7", null ],
     [ "start", "struct__drmodtrack__info__t.html#ab3887591c237b9ec4528c9ecaa598e17", null ],
     [ "struct_size", "struct__drmodtrack__info__t.html#af6970fbf182fb9d2489a6df7f0f404e4", null ],
