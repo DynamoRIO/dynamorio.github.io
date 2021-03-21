@@ -473,6 +473,12 @@ function navTo(o,root,hash,relpath)
       indices.pop();
       ++indices[indices.length-1];
       if (arrays.length == 0) {
+        if (hash != '') {
+          // At least get the right page for anchors that don't have their
+          // own menu entries.
+          navTo(o, root, '', relpath);
+          return;
+        }
         indices = [0]; // fallback: show home
         break;
       }
