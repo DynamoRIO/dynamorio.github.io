@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 8.0.18703"
+title: "Release Notes for Version 8.0.18708"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 8.0.18703 </div>  </div>
+<div class="title">Release Notes for Version 8.0.18708 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,13 +63,13 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 8.0.18703. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 8.0.18703 and 8.0.0 include the following compatibility changes:</p>
+<p>The current version is 8.0.18708. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 8.0.18708 and 8.0.0 include the following compatibility changes:</p>
 <ul>
 <li>A source compatibilty change in drcachesim analysis tools for users who have created derived classes from existing analysis tools: member fields of classes are now following a consistent style with an underscore suffix. References to renamed fields will need to be updated.</li>
 <li>A change in the load callbacks used with <a class="el" href="group__drcovlib.html#ga9c2889006a80254645521f81a1a486f5">drmodtrack_add_custom_data()</a> and <a class="el" href="drmemtrace_8h.html#a8644981035cdedfafb000d03cd223399">drmemtrace_custom_module_data()</a>: they each take an additional parameter, the segment index. The custom data field is now per-segment and not per-module, and all callbacks are invoked separately for each segment.</li>
 </ul>
-<p>The changes between version 8.0.18703 and 8.0.0 include the following minor compatibility changes:</p>
+<p>The changes between version 8.0.18708 and 8.0.0 include the following minor compatibility changes:</p>
 <ul>
 <li>drconfiglib (and thus drrun and drconfig) now sets only the new client path options which are added in this release to support other-bitwidth child processes. This means that a drconfiglib from this version will not properly configure for a DynamoRIO core library from a prior version.</li>
 <li>A new option -ldstex2cas is on by default on ARM and AArch64. This converts load-exclusive store-exclusive sequences to use compare-and-swap instead, which enables normal instrumentation of such sequences without clearing the exclusive monitor and causing infinite loops. However, the compare- and-swap's semantics are not identical: it does not detect "ABA" changes and could cause errors in lock-free data structures or other application constructs. See <a class="el" href="API_BT.html#sec_ldrex">Exclusive Monitor Instrumentation</a> for more information.</li>
@@ -707,15 +707,16 @@ Changes Since Prior Releases</h1>
 <hr  />
 <p> In version 2.0.0, the configuration and deployment API and tools changed and are not backward compatible with earlier versions: see below for details. The changes between version 2.0.0 and 1.5.0 are:</p>
 <ul>
-<li>Changed the configuration and deployment model for both Linux and Windows to use a configuration file based approach on both platforms, which adds control over child processes on Linux and supports local configuration on Windows for un-privileged and parallel execution (Issue 265). The registry is no longer used for individual application configuration on Windows other than to point at the location for global configuration files, when used.<br  />
- <b>IMPORTANT:</b> On Windows the following non-backward-compatible changes have been made:<ul>
+<li><p class="startli">Changed the configuration and deployment model for both Linux and Windows to use a configuration file based approach on both platforms, which adds control over child processes on Linux and supports local configuration on Windows for un-privileged and parallel execution (Issue 265). The registry is no longer used for individual application configuration on Windows other than to point at the location for global configuration files, when used.<br  />
+ <b>IMPORTANT:</b> On Windows the following non-backward-compatible changes have been made:</p><ul>
 <li>drdeploy.exe no longer exists (replaced by drconfig.exe and drrun.exe)</li>
 <li>drconfig.dll is now drconfiglib.dll</li>
 <li>drconfiglib.dll's API routines now take in a process id to support one-time targeted-process configuration (to support parallel execution)</li>
 <li>configuration is either per-user or global, with per-user taking precedence when both exist</li>
 <li>configuration does NOT enable systemwide injection by default: use the -syswide_on parameter to drconfig or drrun for that (it requires administrative privileges)</li>
 </ul>
-<b>IMPORTANT:</b> On Linux, if you're using custom injection via raw environment variables rather than using the <code>drdeploy</code> script, you must also set DYNAMORIO_RUNUNDER to 1 for injection to work with this release.</li>
+<p class="startli"><b>IMPORTANT:</b> On Linux, if you're using custom injection via raw environment variables rather than using the <code>drdeploy</code> script, you must also set DYNAMORIO_RUNUNDER to 1 for injection to work with this release.</p>
+</li>
 <li>Added drinjectlib.dll and <a class="el" href="dr__inject_8h.html" title="Injection API. Use these functions to launch processes under the control of DynamoRIO.">dr_inject.h</a>, making custom injection tools easier to build (Issue 246)</li>
 <li>Added DynamoRIO Extension support for auxiliary libraries that extend the DynamoRIO API (Issue 277)</li>
 <li>Added symbol lookup support via Extension (Windows only for now) (Issue 44)</li>
@@ -984,7 +985,9 @@ Platform Limitations</h2>
 Performance Limitations</h2>
 <ul>
 <li>In order to present a more straightforward code stream to clients, DynamoRIO has several optimizations disabled in this release. System-call-heavy applications are the ones most likely to be affected. Future releases may allow clients to choose performance versus visibility. This release does provide the <a class="el" href="page_deploy.html#op_memory">-opt_memory option</a> to enable prioritizing memory usage and the <a class="el" href="page_deploy.html#op_speed">-opt_speed option</a> to prioritize performance at the cost of more complex basic blocks that cross control transfers.</li>
-<li>The performance when starting up large desktop applications may be noticeably worse than native. Upcoming releases will address this issue. - The performance when running Java, .Net, Flash or similar managed execution applications can be noticeably worse then native. This can include applications that load these components as in-process plugins (such as Internet Explorer). Upcoming releases will address this issue. - When using DynamoRIO on all or many processes on a system simultaneously, memory usage may become a factor. Upcoming releases will address this issue. </li>
+<li>The performance when starting up large desktop applications may be noticeably worse than native. Upcoming releases will address this issue.</li>
+<li>The performance when running Java, .Net, Flash or similar managed execution applications can be noticeably worse then native. This can include applications that load these components as in-process plugins (such as Internet Explorer). Upcoming releases will address this issue.</li>
+<li>When using DynamoRIO on all or many processes on a system simultaneously, memory usage may become a factor. Upcoming releases will address this issue.</li>
 </ul>
 <h2><a class="anchor" id="sec_limit_deploy"></a>
 Deployment Limitations</h2>
@@ -996,7 +999,7 @@ Deployment Limitations</h2>
 <li>On Windows 7 and Windows Server 2008 R2, the digital signature requirement for AppInit_DLLs libraries is disabled when systemwide injection is requested (-syswide_on). This can be a security concern.</li>
 <li>On Windows 8 or 8.1, system wide injection (-syswide_on) is not yet supported.</li>
 <li>Cygwin processes may not work with DynamoRIO due to cygwin's implementation of fork being incompatible with DynamoRIO.</li>
-<li>A Windows application that does not statically link with user32.dll will not be run under control of DynamoRIO using system-wide injection unless its parent process (typically cmd.exe or explorer.exe, for manually launched applications) is already under DynamoRIO control . Only some small non-graphical applications do not link with user32.dll.</li>
+<li>A Windows application that does not statically link with user32.dll will not be run under control of DynamoRIO using system-wide injection unless its parent process (typically cmd.exe or explorer.exe, for manually launched applications) is already under DynamoRIO control. Only some small non-graphical applications do not link with user32.dll.</li>
 <li>When invoking an application in any way that is not from a parent process under DynamoRIO control, DynamoRIO takes control a little later and in some rare cases the application has already created a new thread. This is in violation of the Windows specficiations, but cygwin processes do this. This new thread will not be under DynamoRIO control and can cause a variety of problems. In such cases it is best to invoke from a parent process under DynamoRIO control. However, for 32-bit applications on 64-bit Windows operating systems, DynamoRIO takes over later even from the parent. Future releases will address this limitation.</li>
 <li>This release does not support running some Windows services under control of DynamoRIO: the "System" process, smss.exe, csrss.exe, and protected processes on Windows Vista.</li>
 </ul>
@@ -1030,5 +1033,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18703 --- Fri Mar 19 2021 07:20:06 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18708 --- Mon Mar 22 2021 02:35:02 &nbsp; <img border=0 src="favicon.png">
 </small></address>

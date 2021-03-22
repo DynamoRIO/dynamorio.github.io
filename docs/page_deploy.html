@@ -185,13 +185,14 @@ DynamoRIO Runtime Options</h1>
 </ul>
 <p>Options controlling notifications from DynamoRIO:</p>
 <ul>
-<li><b>-msgbox_mask</b> <em>0xN:<a class="anchor" id="op_msgbox_mask"></a></em> Controls whether DynamoRIO uses pop-up message boxes on Windows, or waits for a key press on Linux, when presenting information. The mask takes the following bitfields:<ul>
+<li><p class="startli"><b>-msgbox_mask</b> <em>0xN:<a class="anchor" id="op_msgbox_mask"></a></em> Controls whether DynamoRIO uses pop-up message boxes on Windows, or waits for a key press on Linux, when presenting information. The mask takes the following bitfields:</p><ul>
 <li>INFORMATION = 0x1</li>
 <li>WARNING = 0x2</li>
 <li>ERROR = 0x4</li>
 <li>CRITICAL = 0x8</li>
 </ul>
-<a class="el" href="dr__tools_8h.html#ad444a204e7ca45f9965cfe973470375a">dr_messagebox()</a> is not affected by -msgbox_mask. For the provided Windows debug build -msgbox_mask defaults to 0xC. On Linux the default is 0, as this feature reads from standard input and might conflict with some applications. On Linux the pause can be changed to use an infinite loop rather than reading from standard input by passing the <b>-pause_via_loop</b> runtime option, which allows attaching a debugger.</li>
+<p class="startli"><a class="el" href="dr__tools_8h.html#ad444a204e7ca45f9965cfe973470375a">dr_messagebox()</a> is not affected by -msgbox_mask. For the provided Windows debug build -msgbox_mask defaults to 0xC. On Linux the default is 0, as this feature reads from standard input and might conflict with some applications. On Linux the pause can be changed to use an infinite loop rather than reading from standard input by passing the <b>-pause_via_loop</b> runtime option, which allows attaching a debugger.</p>
+</li>
 </ul>
 <dl class="section attention"><dt>Attention</dt><dd>On Vista or higher most Windows services are currently unable to display message boxes (see <a class="el" href="release_notes.html#limits_vista_service_messagebox">Limitations</a>). Since these services also don't have an associated console for stderr printing, the <a class="el" href="page_deploy.html#op_loglevel">-loglevel</a> and <a class="el" href="page_deploy.html#op_logmask">-logmask</a> options should be used instead. For the messages that would be displayed by -msgbox_mask, setting any bit in -logmask is sufficient for the message to be included in the logfile.</dd></dl>
 <ul>
@@ -224,5 +225,5 @@ DynamoRIO Runtime Options</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18703 --- Fri Mar 19 2021 07:20:06 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18708 --- Mon Mar 22 2021 02:35:02 &nbsp; <img border=0 src="favicon.png">
 </small></address>
