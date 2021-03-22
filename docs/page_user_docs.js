@@ -18,6 +18,7 @@
       [ "Windows Deployment", "page_deploy.html#win_deploy", null ],
       [ "Linux Deployment", "page_deploy.html#lin_deploy", null ],
       [ "Android Deployment", "page_deploy.html#android_deploy", null ],
+      [ "Running Under QEMU", "page_deploy.html#qemu_deploy", null ],
       [ "Passing Options to Clients", "page_deploy.html#client_ops", null ],
       [ "Multiple Clients", "page_deploy.html#multi_client", null ],
       [ "End-User Tools", "page_deploy.html#tool_frontend", null ],
