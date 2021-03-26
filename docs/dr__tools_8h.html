@@ -917,10 +917,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">            ((void)((!(x)) ? (<a class="code" href="dr__tools_8h.html#ad444a204e7ca45f9965cfe973470375a">dr_messagebox</a>(<span class="stringliteral">&quot;ASSERT FAILURE: %s:%d: %s (%s)&quot;</span>, __FILE__, \</div>
-<div class="line">                                            __LINE__, #x, msg),                         \</div>
-<div class="line">                              dr_abort(), 0)                                            \</div>
-<div class="line">                           : 0))</div>
+<b>Value:</b><div class="fragment"><div class="line">        ((void)((!(x)) ? (<a class="code" href="dr__tools_8h.html#ad444a204e7ca45f9965cfe973470375a">dr_messagebox</a>(<span class="stringliteral">&quot;ASSERT FAILURE: %s:%d: %s (%s)&quot;</span>, __FILE__, \</div>
+<div class="line">                                        __LINE__, #x, msg),                         \</div>
+<div class="line">                          dr_abort(), 0)                                            \</div>
+<div class="line">                       : 0))</div>
 </div><!-- fragment --><p>If <code>x</code> is false, displays a message about an assertion failure (appending <code>msg</code> to the message) and then calls <a class="el" href="dr__tools_8h.html#a12c1ca981b7d3049cb2d31c0f19da332">dr_abort()</a> </p>
 
 </div>
@@ -1608,17 +1608,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">        <span class="keywordflow">do</span> {                                                           \</div>
-<div class="line">            void *try_cxt;                                             \</div>
-<div class="line">            dr_try_setup(drcontext, &amp;try_cxt);                         \</div>
-<div class="line">            if (<a class="code" href="dr__tools_8h.html#aa59cdd4f9fa2884b5d236f0fedc5bda3">dr_try_start</a>(try_cxt) == 0) {                          \</div>
-<div class="line">                try_statement <a class="code" href="dr__tools_8h.html#afde42618a83e7e1abdc58961a084e774">dr_try_stop</a>(drcontext, try_cxt);         \</div>
-<div class="line">            } <span class="keywordflow">else</span> {                                                   \</div>
-<div class="line">                <span class="comment">/* roll back first in case except faults or returns */</span> \</div>
-<div class="line">                dr_try_stop(drcontext, try_cxt);                       \</div>
-<div class="line">                except_statement                                       \</div>
-<div class="line">            }                                                          \</div>
-<div class="line">        } <span class="keywordflow">while</span> (0)</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> {                                                           \</div>
+<div class="line">        void *try_cxt;                                             \</div>
+<div class="line">        dr_try_setup(drcontext, &amp;try_cxt);                         \</div>
+<div class="line">        if (<a class="code" href="dr__tools_8h.html#aa59cdd4f9fa2884b5d236f0fedc5bda3">dr_try_start</a>(try_cxt) == 0) {                          \</div>
+<div class="line">            try_statement <a class="code" href="dr__tools_8h.html#afde42618a83e7e1abdc58961a084e774">dr_try_stop</a>(drcontext, try_cxt);         \</div>
+<div class="line">        } <span class="keywordflow">else</span> {                                                   \</div>
+<div class="line">            <span class="comment">/* roll back first in case except faults or returns */</span> \</div>
+<div class="line">            dr_try_stop(drcontext, try_cxt);                       \</div>
+<div class="line">            except_statement                                       \</div>
+<div class="line">        }                                                          \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment --><p>Simple try..except support for executing operations that might fault and recovering if they do. Be careful with this feature as it has some limitations:</p><ul>
 <li>do not use a return within a try statement (we do not have language support)</li>
 <li>any automatic variables that you want to use in the except block should be declared volatile</li>
@@ -8760,5 +8760,5 @@ DR may mark writable code pages as read-only but pretend they're writable. When 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18708 --- Mon Mar 22 2021 18:49:48 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18711 --- Fri Mar 26 2021 04:18:27 &nbsp; <img border=0 src="favicon.png">
 </small></address>

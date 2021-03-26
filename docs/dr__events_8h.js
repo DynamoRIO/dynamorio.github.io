@@ -42,6 +42,7 @@
     ] ],
     [ "dr_allow_unsafe_static_behavior", "dr__events_8h.html#a4b6f6d7d9353b04475e179c48f645b82", null ],
     [ "dr_fragment_persistable", "dr__events_8h.html#ac8f13d88a973780babf7fd223ffe8cb6", null ],
+    [ "dr_is_detaching", "dr__events_8h.html#ad258ee5e49f4e4d952c28870c2ca6c05", null ],
     [ "dr_is_nudge_thread", "dr__events_8h.html#a2ef0822d6e77a04938787cf398992592", null ],
     [ "dr_nudge_client", "dr__events_8h.html#a9d11fb8fbffdcb0cb6e7b87f804cb459", null ],
     [ "dr_nudge_client_ex", "dr__events_8h.html#aa719c9575ca2329c03ab60ef41ba14c6", null ],
