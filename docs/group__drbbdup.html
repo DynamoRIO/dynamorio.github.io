@@ -47,21 +47,21 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:gafc69f147f9c66259b8890b0d5aef38d8"><td class="memItemLeft" align="right" valign="top">typedef uintptr_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#gafc69f147f9c66259b8890b0d5aef38d8">drbbdup_set_up_bb_dups_t</a>) (void *drbbdup_ctx, void *drcontext, void *tag, instrlist_t *bb, IN bool *enable_dups, IN bool *enable_dynamic_handling, void *user_data)</td></tr>
+<tr class="memitem:gafc69f147f9c66259b8890b0d5aef38d8"><td class="memItemLeft" align="right" valign="top">typedef uintptr_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#gafc69f147f9c66259b8890b0d5aef38d8">drbbdup_set_up_bb_dups_t</a>) (void *drbbdup_ctx, void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, IN bool *enable_dups, IN bool *enable_dynamic_handling, void *user_data)</td></tr>
 <tr class="separator:gafc69f147f9c66259b8890b0d5aef38d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga793b9eacde5c3bd10f43336079d8b53a"><td class="memItemLeft" align="right" valign="top">typedef bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga793b9eacde5c3bd10f43336079d8b53a">drbbdup_allow_gen_t</a>) (void *drcontext, void *tag, instrlist_t *ilist, uintptr_t new_case, bool *enable_dynamic_handling, void *user_data)</td></tr>
+<tr class="memitem:ga793b9eacde5c3bd10f43336079d8b53a"><td class="memItemLeft" align="right" valign="top">typedef bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga793b9eacde5c3bd10f43336079d8b53a">drbbdup_allow_gen_t</a>) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, uintptr_t new_case, bool *enable_dynamic_handling, void *user_data)</td></tr>
 <tr class="separator:ga793b9eacde5c3bd10f43336079d8b53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9ad6ccdf892113423001b6559e4ee8e8"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga9ad6ccdf892113423001b6559e4ee8e8">drbbdup_analyze_orig_t</a>) (void *drcontext, void *tag, instrlist_t *bb, void *user_data, IN void **orig_analysis_data)</td></tr>
+<tr class="memitem:ga9ad6ccdf892113423001b6559e4ee8e8"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga9ad6ccdf892113423001b6559e4ee8e8">drbbdup_analyze_orig_t</a>) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, void *user_data, IN void **orig_analysis_data)</td></tr>
 <tr class="separator:ga9ad6ccdf892113423001b6559e4ee8e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafa4a35ea9eab76f19c533b7944ee3ff8"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#gafa4a35ea9eab76f19c533b7944ee3ff8">drbbdup_destroy_orig_analysis_t</a>) (void *drcontext, void *user_data, void *orig_analysis_data)</td></tr>
 <tr class="separator:gafa4a35ea9eab76f19c533b7944ee3ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1635c9540f9b8de24bfc0e37a5ba60da"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga1635c9540f9b8de24bfc0e37a5ba60da">drbbdup_analyze_case_t</a>) (void *drcontext, void *tag, instrlist_t *bb, uintptr_t encoding, void *user_data, void *orig_analysis_data, IN void **case_analysis_data)</td></tr>
+<tr class="memitem:ga1635c9540f9b8de24bfc0e37a5ba60da"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga1635c9540f9b8de24bfc0e37a5ba60da">drbbdup_analyze_case_t</a>) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, uintptr_t encoding, void *user_data, void *orig_analysis_data, IN void **case_analysis_data)</td></tr>
 <tr class="separator:ga1635c9540f9b8de24bfc0e37a5ba60da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacfdd196f0a774cc7086fff7a2fed0ce1"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#gacfdd196f0a774cc7086fff7a2fed0ce1">drbbdup_destroy_case_analysis_t</a>) (void *drcontext, uintptr_t encoding, void *user_data, void *orig_analysis_data, void *case_analysis_data)</td></tr>
 <tr class="separator:gacfdd196f0a774cc7086fff7a2fed0ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae2bf28a5b20a165d4d07325a49c12c4a"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#gae2bf28a5b20a165d4d07325a49c12c4a">drbbdup_insert_encode_t</a>) (void *drcontext, void *tag, instrlist_t *bb, <a class="el" href="structinstr__t.html">instr_t</a> *where, void *user_data, void *orig_analysis_data)</td></tr>
+<tr class="memitem:gae2bf28a5b20a165d4d07325a49c12c4a"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#gae2bf28a5b20a165d4d07325a49c12c4a">drbbdup_insert_encode_t</a>) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, <a class="el" href="structinstr__t.html">instr_t</a> *where, void *user_data, void *orig_analysis_data)</td></tr>
 <tr class="separator:gae2bf28a5b20a165d4d07325a49c12c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8928e3a20e86418d0371b3ec4e69d8cc"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga8928e3a20e86418d0371b3ec4e69d8cc">drbbdup_instrument_instr_t</a>) (void *drcontext, void *tag, instrlist_t *bb, <a class="el" href="structinstr__t.html">instr_t</a> *instr, <a class="el" href="structinstr__t.html">instr_t</a> *where, uintptr_t encoding, void *user_data, void *orig_analysis_data, void *case_analysis_data)</td></tr>
+<tr class="memitem:ga8928e3a20e86418d0371b3ec4e69d8cc"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga8928e3a20e86418d0371b3ec4e69d8cc">drbbdup_instrument_instr_t</a>) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, <a class="el" href="structinstr__t.html">instr_t</a> *instr, <a class="el" href="structinstr__t.html">instr_t</a> *where, uintptr_t encoding, void *user_data, void *orig_analysis_data, void *case_analysis_data)</td></tr>
 <tr class="separator:ga8928e3a20e86418d0371b3ec4e69d8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -152,7 +152,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef bool(* drbbdup_allow_gen_t) (void *drcontext, void *tag, instrlist_t *ilist, uintptr_t new_case, bool *enable_dynamic_handling, void *user_data)</td>
+          <td class="memname">typedef bool(* drbbdup_allow_gen_t) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, uintptr_t new_case, bool *enable_dynamic_handling, void *user_data)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -167,7 +167,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* drbbdup_analyze_case_t) (void *drcontext, void *tag, instrlist_t *bb, uintptr_t encoding, void *user_data, void *orig_analysis_data, IN void **case_analysis_data)</td>
+          <td class="memname">typedef void(* drbbdup_analyze_case_t) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, uintptr_t encoding, void *user_data, void *orig_analysis_data, IN void **case_analysis_data)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -185,7 +185,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* drbbdup_analyze_orig_t) (void *drcontext, void *tag, instrlist_t *bb, void *user_data, IN void **orig_analysis_data)</td>
+          <td class="memname">typedef void(* drbbdup_analyze_orig_t) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, void *user_data, IN void **orig_analysis_data)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -238,7 +238,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* drbbdup_insert_encode_t) (void *drcontext, void *tag, instrlist_t *bb, <a class="el" href="structinstr__t.html">instr_t</a> *where, void *user_data, void *orig_analysis_data)</td>
+          <td class="memname">typedef void(* drbbdup_insert_encode_t) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, <a class="el" href="structinstr__t.html">instr_t</a> *where, void *user_data, void *orig_analysis_data)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -255,7 +255,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* drbbdup_instrument_instr_t) (void *drcontext, void *tag, instrlist_t *bb, <a class="el" href="structinstr__t.html">instr_t</a> *instr, <a class="el" href="structinstr__t.html">instr_t</a> *where, uintptr_t encoding, void *user_data, void *orig_analysis_data, void *case_analysis_data)</td>
+          <td class="memname">typedef void(* drbbdup_instrument_instr_t) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, <a class="el" href="structinstr__t.html">instr_t</a> *instr, <a class="el" href="structinstr__t.html">instr_t</a> *where, uintptr_t encoding, void *user_data, void *orig_analysis_data, void *case_analysis_data)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -272,7 +272,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef uintptr_t(* drbbdup_set_up_bb_dups_t) (void *drbbdup_ctx, void *drcontext, void *tag, instrlist_t *bb, IN bool *enable_dups, IN bool *enable_dynamic_handling, void *user_data)</td>
+          <td class="memname">typedef uintptr_t(* drbbdup_set_up_bb_dups_t) (void *drbbdup_ctx, void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, IN bool *enable_dups, IN bool *enable_dynamic_handling, void *user_data)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -554,5 +554,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18711 --- Fri Mar 26 2021 04:18:28 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:54 &nbsp; <img border=0 src="favicon.png">
 </small></address>

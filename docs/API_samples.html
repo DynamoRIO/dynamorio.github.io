@@ -108,7 +108,7 @@ Instruction Counting</h2>
 <div class="line">}</div>
 </div><!-- fragment --><p>The real work is done in the basic block hook. We simply look for the instructions we're interested in and insert an increment of the appropriate thread-local and global counters, remembering to save the flags, of course. This sample has separate paths for incrementing the thread private counts for shared vs. thread-private caches (see the -thread_private option) to illustrate the differences in targeting for them. Note that the shared path would work fine with private caches.</p>
 <div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span></div>
-<div class="line">insert_counter_update(<span class="keywordtype">void</span> *drcontext, instrlist_t *bb, <a class="code" href="structinstr__t.html">instr_t</a> *where, <span class="keywordtype">int</span> offset)</div>
+<div class="line">insert_counter_update(<span class="keywordtype">void</span> *drcontext, <a class="code" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, <a class="code" href="structinstr__t.html">instr_t</a> *where, <span class="keywordtype">int</span> offset)</div>
 <div class="line">{</div>
 <div class="line">  <span class="comment">/* Since the inc instruction clobbers 5 of the arithmetic eflags,</span></div>
 <div class="line"><span class="comment">   * we have to save them around the inc. We could be more efficient</span></div>
@@ -150,7 +150,7 @@ Instruction Counting</h2>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">static</span> <a class="code" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a></div>
-<div class="line">event_basic_block(<span class="keywordtype">void</span> *drcontext, <span class="keywordtype">void</span> *tag, instrlist_t *bb,</div>
+<div class="line">event_basic_block(<span class="keywordtype">void</span> *drcontext, <span class="keywordtype">void</span> *tag, <a class="code" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb,</div>
 <div class="line">                  <span class="keywordtype">bool</span> for_trace, <span class="keywordtype">bool</span> translating)</div>
 <div class="line">{</div>
 <div class="line">  <a class="code" href="structinstr__t.html">instr_t</a> *instr, *next_instr;</div>
@@ -219,7 +219,7 @@ Instruction Profiling</h2>
 <div class="line">}</div>
 </div><!-- fragment --><p>The basic block hook inserts a call to a procedure for each type of instruction, using the API-provided dr_insert_call_instrumentation and dr_insert_mbr_instrumentation routines, which insert calls to procedures with a certain signature.</p>
 <div class="fragment"><div class="line"><span class="keyword">static</span> <a class="code" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a></div>
-<div class="line">event_basic_block(<span class="keywordtype">void</span> *drcontext, <span class="keywordtype">void</span> *tag, instrlist_t *bb,</div>
+<div class="line">event_basic_block(<span class="keywordtype">void</span> *drcontext, <span class="keywordtype">void</span> *tag, <a class="code" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb,</div>
 <div class="line">                  <span class="keywordtype">bool</span> for_trace, <span class="keywordtype">bool</span> translating)</div>
 <div class="line">{</div>
 <div class="line">  <a class="code" href="structinstr__t.html">instr_t</a> *instr, *next_instr;</div>
@@ -337,6 +337,7 @@ Use of Standalone API</h2>
 <div class="ttc" id="adr__events_8h_html_a689518ac5d1ad136b13e03012702b209"><div class="ttname"><a href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a></div><div class="ttdeci">dr_emit_flags_t</div><div class="ttdef"><b>Definition:</b> dr_events.h:75</div></div>
 <div class="ttc" id="adr__events_8h_html_a0b0c102bb9a99d67c3e62ea8b3790ff1"><div class="ttname"><a href="dr__events_8h.html#a0b0c102bb9a99d67c3e62ea8b3790ff1">dr_register_thread_exit_event</a></div><div class="ttdeci">void dr_register_thread_exit_event(void(*func)(void *drcontext))</div></div>
 <div class="ttc" id="adr__tools_8h_html_a05b499c8a3115e9ceb4c45dbee660738"><div class="ttname"><a href="dr__tools_8h.html#a05b499c8a3115e9ceb4c45dbee660738">dr_set_tls_field</a></div><div class="ttdeci">void dr_set_tls_field(void *drcontext, void *value)</div></div>
+<div class="ttc" id="adr__defines_8h_html_a3fb73c55def575ec5705577625491d66"><div class="ttname"><a href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a></div><div class="ttdeci">struct _instrlist_t instrlist_t</div><div class="ttdef"><b>Definition:</b> dr_defines.h:877</div></div>
 <div class="ttc" id="adr__ir__utils_8h_html_a453bc3ecddb4298ffdc1c429f30881b8"><div class="ttname"><a href="dr__ir__utils_8h.html#a453bc3ecddb4298ffdc1c429f30881b8">dr_restore_reg</a></div><div class="ttdeci">void dr_restore_reg(void *drcontext, instrlist_t *ilist, instr_t *where, reg_id_t reg, dr_spill_slot_t slot)</div></div>
 <div class="ttc" id="adr__defines_8h_html_a80e139e8f2d2dd7d5d4a92f8ad7c6f4d"><div class="ttname"><a href="dr__defines_8h.html#a80e139e8f2d2dd7d5d4a92f8ad7c6f4d">TIDFMT</a></div><div class="ttdeci">#define TIDFMT</div><div class="ttdef"><b>Definition:</b> dr_defines.h:494</div></div>
 <div class="ttc" id="adr__ir__utils_8h_html_af294ac021c84f5ec47230ee7df0e6c02"><div class="ttname"><a href="dr__ir__utils_8h.html#af294ac021c84f5ec47230ee7df0e6c02">dr_save_reg</a></div><div class="ttdeci">void dr_save_reg(void *drcontext, instrlist_t *ilist, instr_t *where, reg_id_t reg, dr_spill_slot_t slot)</div></div>
@@ -360,5 +361,5 @@ Use of Standalone API</h2>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18711 --- Fri Mar 26 2021 04:18:28 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:54 &nbsp; <img border=0 src="favicon.png">
 </small></address>

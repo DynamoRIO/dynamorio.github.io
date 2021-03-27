@@ -214,7 +214,7 @@ Experimental support. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Causes all of the application's threads to run directly on the machine upon return from this call, and additionally frees the resources used by DR. Once this is invoked, calling <a class="el" href="dr__app_8h.html#afb7b7aed03dd6f0ed8d48b8a8796e55e">dr_app_start()</a> is not supported until <a class="el" href="dr__app_8h.html#abcdedd068a4d264401c31767355ec218">dr_app_setup()</a> or <a class="el" href="dr__app_8h.html#ace92a2658a46bb5811ece68ae964fd62">dr_app_setup_and_start()</a> is called for a re-attach. Re-attach, however, is considered an experimental feature and is not guaranteed to be without problems, in particular when DR or extension libraries are static and there is no simple way to reset the state of global variables.</p>
+<p>Causes all of the application's threads to run directly on the machine upon return from this call, and additionally frees the resources used by DR. Once this is invoked, calling <a class="el" href="dr__app_8h.html#afb7b7aed03dd6f0ed8d48b8a8796e55e">dr_app_start()</a> is not supported until <a class="el" href="dr__app_8h.html#abcdedd068a4d264401c31767355ec218">dr_app_setup()</a> or <a class="el" href="dr__app_8h.html#ace92a2658a46bb5811ece68ae964fd62">dr_app_setup_and_start()</a> is called for a re-attach.</p>
 <p>This call has no effect if the application is not currently running under DR control. </p>
 
 </div>
@@ -263,5 +263,5 @@ Experimental support. </dd></dl>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18711 --- Fri Mar 26 2021 04:18:24 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:52 &nbsp; <img border=0 src="favicon.png">
 </small></address>

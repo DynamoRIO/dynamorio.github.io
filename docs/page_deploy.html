@@ -152,6 +152,10 @@ Running a Subset of an Application</h1>
 <div class="line"><a class="code" href="dr__app_8h.html#afd509bb9ea5d1947228de48dda256e8f">dr_app_stop</a>()</div>
 <div class="line"><a class="code" href="dr__app_8h.html#a216ee7d3e25b4c31edf5a9b2ba93d533">dr_app_cleanup</a>()</div>
 <div class="line"><a class="code" href="dr__app_8h.html#a43dead944cb3c75de2537404b568f8ec">dr_app_take_over</a>()</div>
+<div class="line"><a class="code" href="dr__app_8h.html#ace92a2658a46bb5811ece68ae964fd62">dr_app_setup_and_start</a>()</div>
+<div class="line"><a class="code" href="dr__app_8h.html#a7e062573c669d8a5564abf54ebf90f31">dr_app_stop_and_cleanup</a>()</div>
+<div class="line"><a class="code" href="dr__app_8h.html#af046ebf6c44ab47decbb4eba61236dcc">dr_app_stop_and_cleanup_with_stats</a>()</div>
+<div class="line"><a class="code" href="dr__app_8h.html#aea917a6c24c8bf526f77772b0b9848a8">dr_app_running_under_dynamorio</a>()</div>
 </div><!-- fragment --><p>When building an executable that uses DynamoRIO's Application Interface, follow the steps for <a class="el" href="page_build_client.html">How to Build a Tool</a> to include the header files and link with the DynamoRIO library, but omit the linker flags requesting no standard libraries or startup files. DynamoRIO's CMake support does this automatically, as the linker flags for shared libraries are separate from those for executables.</p>
 <h1><a class="anchor" id="sec_options"></a>
 DynamoRIO Runtime Options</h1>
@@ -226,15 +230,19 @@ DynamoRIO Runtime Options</h1>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
+<div class="ttc" id="adr__app_8h_html_af046ebf6c44ab47decbb4eba61236dcc"><div class="ttname"><a href="dr__app_8h.html#af046ebf6c44ab47decbb4eba61236dcc">dr_app_stop_and_cleanup_with_stats</a></div><div class="ttdeci">DR_APP_API void dr_app_stop_and_cleanup_with_stats(dr_stats_t *drstats)</div></div>
+<div class="ttc" id="adr__app_8h_html_ace92a2658a46bb5811ece68ae964fd62"><div class="ttname"><a href="dr__app_8h.html#ace92a2658a46bb5811ece68ae964fd62">dr_app_setup_and_start</a></div><div class="ttdeci">DR_APP_API int dr_app_setup_and_start(void)</div></div>
 <div class="ttc" id="adr__app_8h_html_a216ee7d3e25b4c31edf5a9b2ba93d533"><div class="ttname"><a href="dr__app_8h.html#a216ee7d3e25b4c31edf5a9b2ba93d533">dr_app_cleanup</a></div><div class="ttdeci">DR_APP_API int dr_app_cleanup(void)</div></div>
 <div class="ttc" id="adr__app_8h_html_afd509bb9ea5d1947228de48dda256e8f"><div class="ttname"><a href="dr__app_8h.html#afd509bb9ea5d1947228de48dda256e8f">dr_app_stop</a></div><div class="ttdeci">DR_APP_API void dr_app_stop(void)</div></div>
 <div class="ttc" id="adr__app_8h_html_afb7b7aed03dd6f0ed8d48b8a8796e55e"><div class="ttname"><a href="dr__app_8h.html#afb7b7aed03dd6f0ed8d48b8a8796e55e">dr_app_start</a></div><div class="ttdeci">DR_APP_API void dr_app_start(void)</div></div>
 <div class="ttc" id="adr__app_8h_html_abcdedd068a4d264401c31767355ec218"><div class="ttname"><a href="dr__app_8h.html#abcdedd068a4d264401c31767355ec218">dr_app_setup</a></div><div class="ttdeci">DR_APP_API int dr_app_setup(void)</div></div>
 <div class="ttc" id="adr__app_8h_html_a43dead944cb3c75de2537404b568f8ec"><div class="ttname"><a href="dr__app_8h.html#a43dead944cb3c75de2537404b568f8ec">dr_app_take_over</a></div><div class="ttdeci">DR_APP_API void dr_app_take_over(void)</div></div>
+<div class="ttc" id="adr__app_8h_html_aea917a6c24c8bf526f77772b0b9848a8"><div class="ttname"><a href="dr__app_8h.html#aea917a6c24c8bf526f77772b0b9848a8">dr_app_running_under_dynamorio</a></div><div class="ttdeci">DR_APP_API bool dr_app_running_under_dynamorio(void)</div></div>
+<div class="ttc" id="adr__app_8h_html_a7e062573c669d8a5564abf54ebf90f31"><div class="ttname"><a href="dr__app_8h.html#a7e062573c669d8a5564abf54ebf90f31">dr_app_stop_and_cleanup</a></div><div class="ttdeci">DR_APP_API void dr_app_stop_and_cleanup(void)</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18711 --- Fri Mar 26 2021 04:18:28 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:54 &nbsp; <img border=0 src="favicon.png">
 </small></address>

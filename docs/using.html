@@ -217,7 +217,7 @@ Common Utilities</h1>
 <ul>
 <li>For directly referencing a global variable <code>var</code> in a client library, the client can create an operand with the address <code>&amp;var</code> and it will auto-magically turn into a pc-relative addressing mode. <a class="el" href="dr__ir__macros__aarch64_8h.html#a54b8bd667a8a940e94bfcc7842c958eb">OPND_CREATE_ABSMEM()</a> directly creates a pc-relative operand, while <a class="el" href="dr__ir__opnd_8h.html#a6c4e5d5376ce4dc1ba7081119d97a16d">opnd_create_abs_addr()</a> will convert to a pc-relative operand when an absolute reference will not encode. An <a class="el" href="dr__ir__opnd_8h.html#a429f69f7bc430cf278b5702818b25fcc">opnd_create_rel_addr()</a> operand will also convert to an absolute reference when that will reach but a pc-relative reference will not.</li>
 <li>When using an address as an immediate, use the routines <a class="el" href="dr__ir__utils_8h.html#a271b766e4daebc20fcec8b9956855f6a">instrlist_insert_mov_immed_ptrsz()</a> or <a class="el" href="dr__ir__utils_8h.html#af91fbea9cd055925c4376e7858812c26">instrlist_insert_push_immed_ptrsz()</a> to conveniently insert either one or two instructions depending on whether the address is in the lower 4GB or not.</li>
-<li>When using an <code><a class="el" href="structinstr__t.html">instr_t</a></code> pointer as an immediate, use the routines <a class="el" href="dr__ir__utils_8h.html#aa7416ab72dd1f2edfaf7b99d2d7e2620">instrlist_insert_mov_instr_addr()</a> or <a class="el" href="dr__ir__utils_8h.html#a9a063518c87f568cfd3dfa514106c31a">instrlist_insert_push_instr_addr()</a> to conveniently insert either one or two instructions depending on whether the resulting <a class="el" href="structinstr__t.html">instr_t</a> encoded address is in the lower 4GB or not.</li>
+<li>When using an <a class="el" href="structinstr__t.html">instr_t</a> pointer as an immediate, use the routines <a class="el" href="dr__ir__utils_8h.html#aa7416ab72dd1f2edfaf7b99d2d7e2620">instrlist_insert_mov_instr_addr()</a> or <a class="el" href="dr__ir__utils_8h.html#a9a063518c87f568cfd3dfa514106c31a">instrlist_insert_push_instr_addr()</a> to conveniently insert either one or two instructions depending on whether the resulting <a class="el" href="structinstr__t.html">instr_t</a> encoded address is in the lower 4GB or not.</li>
 </ul>
 <h1><a class="anchor" id="sec_utf8"></a>
 String Encoding</h1>
@@ -302,5 +302,5 @@ Creating Custom Annotations</h2>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18711 --- Fri Mar 26 2021 04:18:27 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:53 &nbsp; <img border=0 src="favicon.png">
 </small></address>

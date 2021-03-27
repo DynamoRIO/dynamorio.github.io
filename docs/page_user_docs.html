@@ -45,9 +45,8 @@ DynamoRIO's API is augmented by a collection of extension libraries.</li>
 DynamoRIO can be used as a standalone library for IA-32/AMD64/ARM/AArch64 disassembly, decoding, encoding, and general instruction manipulation. A separate static library is provided for this purpose.</li>
 <li><a class="el" href="overview.html">DynamoRIO System Overview</a> <br  />
 A description of the implementation of the DynamoRIO system.</li>
-<li><a class="el" href="release_notes.html">Release Notes for Version 8.0.18711</a> <br  />
+<li><a class="el" href="release_notes.html">Release Notes for Version 8.0.18713</a> <br  />
 Release notes for this release, including changes since prior releases and plans for future releases.</li>
-<li><a class="el" href="page_license.html">Licenses</a></li>
 </ul>
 <p><br  />
  </p>
@@ -58,7 +57,9 @@ Release notes for this release, including changes since prior releases and plans
 <div class="ttc" id="adr__ir__opnd_8h_html_a80155586fa275b28773c9b203f52cabaa066a3d6699a61167eb0ba00e529c2e41"><div class="ttname"><a href="dr__ir__opnd_8h.html#a80155586fa275b28773c9b203f52cabaa066a3d6699a61167eb0ba00e529c2e41">OPSZ_8</a></div><div class="ttdeci">@ OPSZ_8</div><div class="ttdef"><b>Definition:</b> dr_ir_opnd.h:3200</div></div>
 <div class="ttc" id="adr__ir__utils_8h_html_a3831354cc7402d68719d8055fb3e9931"><div class="ttname"><a href="dr__ir__utils_8h.html#a3831354cc7402d68719d8055fb3e9931">dr_insert_read_tls_field</a></div><div class="ttdeci">void dr_insert_read_tls_field(void *drcontext, instrlist_t *ilist, instr_t *where, reg_id_t reg)</div></div>
 <div class="ttc" id="adr__tools_8h_html_a7c07630dffdfd92bc6ee63abf405768c"><div class="ttname"><a href="dr__tools_8h.html#a7c07630dffdfd92bc6ee63abf405768c">DR_ASSERT</a></div><div class="ttdeci">#define DR_ASSERT(x)</div><div class="ttdef"><b>Definition:</b> dr_tools.h:325</div></div>
+<div class="ttc" id="adr__app_8h_html_af046ebf6c44ab47decbb4eba61236dcc"><div class="ttname"><a href="dr__app_8h.html#af046ebf6c44ab47decbb4eba61236dcc">dr_app_stop_and_cleanup_with_stats</a></div><div class="ttdeci">DR_APP_API void dr_app_stop_and_cleanup_with_stats(dr_stats_t *drstats)</div></div>
 <div class="ttc" id="adr__ir__utils_8h_html_a98218650e1f61b58c5478cf68e25d9da"><div class="ttname"><a href="dr__ir__utils_8h.html#a98218650e1f61b58c5478cf68e25d9da">instrlist_meta_postinsert</a></div><div class="ttdeci">void instrlist_meta_postinsert(instrlist_t *ilist, instr_t *where, instr_t *instr)</div></div>
+<div class="ttc" id="adr__app_8h_html_ace92a2658a46bb5811ece68ae964fd62"><div class="ttname"><a href="dr__app_8h.html#ace92a2658a46bb5811ece68ae964fd62">dr_app_setup_and_start</a></div><div class="ttdeci">DR_APP_API int dr_app_setup_and_start(void)</div></div>
 <div class="ttc" id="adr__tools_8h_html_a54934632c814904bd9e0ce9c83980466"><div class="ttname"><a href="dr__tools_8h.html#a54934632c814904bd9e0ce9c83980466">dr_using_all_private_caches</a></div><div class="ttdeci">bool dr_using_all_private_caches(void)</div></div>
 <div class="ttc" id="adr__ir__utils_8h_html_a824eaa9075a7aaf443b4cc4180eec81e"><div class="ttname"><a href="dr__ir__utils_8h.html#a824eaa9075a7aaf443b4cc4180eec81e">instrlist_meta_append</a></div><div class="ttdeci">void instrlist_meta_append(instrlist_t *ilist, instr_t *instr)</div></div>
 <div class="ttc" id="adr__app_8h_html_a216ee7d3e25b4c31edf5a9b2ba93d533"><div class="ttname"><a href="dr__app_8h.html#a216ee7d3e25b4c31edf5a9b2ba93d533">dr_app_cleanup</a></div><div class="ttdeci">DR_APP_API int dr_app_cleanup(void)</div></div>
@@ -127,6 +128,8 @@ Release notes for this release, including changes since prior releases and plans
 <div class="ttc" id="agroup__drcontainers_html_ga3d443ee70d3fd35d853b9697f999cbf7"><div class="ttname"><a href="group__drcontainers.html#ga3d443ee70d3fd35d853b9697f999cbf7">hashtable_add_replace</a></div><div class="ttdeci">void * hashtable_add_replace(hashtable_t *table, void *key, void *payload)</div></div>
 <div class="ttc" id="adr__tools_8h_html_ad444a204e7ca45f9965cfe973470375a"><div class="ttname"><a href="dr__tools_8h.html#ad444a204e7ca45f9965cfe973470375a">dr_messagebox</a></div><div class="ttdeci">void dr_messagebox(const char *fmt,...)</div></div>
 <div class="ttc" id="adr__ir__macros_8h_html_a39cadf7c35d28a1dedf9b945cf1aa656"><div class="ttname"><a href="dr__ir__macros_8h.html#a39cadf7c35d28a1dedf9b945cf1aa656">OPND_CREATE_INT_32OR8</a></div><div class="ttdeci">#define OPND_CREATE_INT_32OR8(val)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros.h:136</div></div>
+<div class="ttc" id="adr__app_8h_html_aea917a6c24c8bf526f77772b0b9848a8"><div class="ttname"><a href="dr__app_8h.html#aea917a6c24c8bf526f77772b0b9848a8">dr_app_running_under_dynamorio</a></div><div class="ttdeci">DR_APP_API bool dr_app_running_under_dynamorio(void)</div></div>
+<div class="ttc" id="adr__defines_8h_html_a3fb73c55def575ec5705577625491d66"><div class="ttname"><a href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a></div><div class="ttdeci">struct _instrlist_t instrlist_t</div><div class="ttdef"><b>Definition:</b> dr_defines.h:877</div></div>
 <div class="ttc" id="adr__ir__utils_8h_html_a453bc3ecddb4298ffdc1c429f30881b8"><div class="ttname"><a href="dr__ir__utils_8h.html#a453bc3ecddb4298ffdc1c429f30881b8">dr_restore_reg</a></div><div class="ttdeci">void dr_restore_reg(void *drcontext, instrlist_t *ilist, instr_t *where, reg_id_t reg, dr_spill_slot_t slot)</div></div>
 <div class="ttc" id="adr__defines_8h_html_a80e139e8f2d2dd7d5d4a92f8ad7c6f4d"><div class="ttname"><a href="dr__defines_8h.html#a80e139e8f2d2dd7d5d4a92f8ad7c6f4d">TIDFMT</a></div><div class="ttdeci">#define TIDFMT</div><div class="ttdef"><b>Definition:</b> dr_defines.h:494</div></div>
 <div class="ttc" id="adr__ir__macros_8h_html_ae84f332c273b8547824e807453d92d16"><div class="ttname"><a href="dr__ir__macros_8h.html#ae84f332c273b8547824e807453d92d16">OPND_CREATE_MEM64</a></div><div class="ttdeci">#define OPND_CREATE_MEM64(base_reg, disp)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros.h:72</div></div>
@@ -165,6 +168,7 @@ Release notes for this release, including changes since prior releases and plans
 <div class="ttc" id="adr__ir__instrlist_8h_html_aaac5ae2bc9af179b56bbbe5efc14e8b5"><div class="ttname"><a href="dr__ir__instrlist_8h.html#aaac5ae2bc9af179b56bbbe5efc14e8b5">instrlist_encode</a></div><div class="ttdeci">byte * instrlist_encode(void *drcontext, instrlist_t *ilist, byte *pc, bool has_instr_jmp_targets)</div></div>
 <div class="ttc" id="astructinstr__noalloc__t_html"><div class="ttname"><a href="structinstr__noalloc__t.html">instr_noalloc_t</a></div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:353</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a5e1efc53088af35fa0ed6eefd80af5dd"><div class="ttname"><a href="dr__ir__instr_8h.html#a5e1efc53088af35fa0ed6eefd80af5dd">instr_set_opcode</a></div><div class="ttdeci">void instr_set_opcode(instr_t *instr, int opcode)</div></div>
+<div class="ttc" id="adr__app_8h_html_a7e062573c669d8a5564abf54ebf90f31"><div class="ttname"><a href="dr__app_8h.html#a7e062573c669d8a5564abf54ebf90f31">dr_app_stop_and_cleanup</a></div><div class="ttdeci">DR_APP_API void dr_app_stop_and_cleanup(void)</div></div>
 <div class="ttc" id="adr__ir__utils_8h_html_a359744bc2776333fbf8f057931ca8eeb"><div class="ttname"><a href="dr__ir__utils_8h.html#a359744bc2776333fbf8f057931ca8eeb">dr_insert_call_instrumentation</a></div><div class="ttdeci">void dr_insert_call_instrumentation(void *drcontext, instrlist_t *ilist, instr_t *instr, void *callee)</div></div>
 <div class="ttc" id="adr__tools_8h_html_a787aff5df1ded3de8a7ce9f3efef0594"><div class="ttname"><a href="dr__tools_8h.html#a787aff5df1ded3de8a7ce9f3efef0594">dr_get_tls_field</a></div><div class="ttdeci">void * dr_get_tls_field(void *drcontext)</div></div>
 <div class="ttc" id="adr__ir__utils_8h_html_ae7b7bd1e750b8a24ebf401fb6a6d6d5e"><div class="ttname"><a href="dr__ir__utils_8h.html#ae7b7bd1e750b8a24ebf401fb6a6d6d5e">dr_insert_clean_call</a></div><div class="ttdeci">void dr_insert_clean_call(void *drcontext, instrlist_t *ilist, instr_t *where, void *callee, bool save_fpstate, uint num_args,...)</div></div>
@@ -177,5 +181,5 @@ Release notes for this release, including changes since prior releases and plans
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18711 --- Fri Mar 26 2021 04:18:27 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:53 &nbsp; <img border=0 src="favicon.png">
 </small></address>

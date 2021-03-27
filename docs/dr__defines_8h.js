@@ -32,6 +32,8 @@
     [ "dr_xmm_t", "dr__defines_8h.html#ae3c28651854d581c78b5ed0c263eb6e7", null ],
     [ "dr_ymm_t", "dr__defines_8h.html#a95482a634591309da9028837cbb99b2d", null ],
     [ "dr_zmm_t", "dr__defines_8h.html#a6f8b2dc4a0f32c97355ef10810d54040", null ],
+    [ "instrlist_t", "dr__defines_8h.html#a3fb73c55def575ec5705577625491d66", null ],
+    [ "module_data_t", "dr__defines_8h.html#af07dd10cb5378dc69117710c18f447e9", null ],
     [ "dr_error_code_t", "dr__defines_8h.html#a5ecc0dbd0afec416ca2626dba4cd3fe1", [
       [ "DR_ERROR_INVALID_PARAMETER", "dr__defines_8h.html#a5ecc0dbd0afec416ca2626dba4cd3fe1a4322c60759a915b0f7aa488d3ce0f963", null ],
       [ "DR_ERROR_INSUFFICIENT_SPACE", "dr__defines_8h.html#a5ecc0dbd0afec416ca2626dba4cd3fe1a167232d0ba01e45aa4932c59aa8b9088", null ],

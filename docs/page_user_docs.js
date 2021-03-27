@@ -91,7 +91,7 @@
       [ "DynamoRIO Shared Library Issues", "page_standalone.html#sec_standalone_shared", null ]
     ] ],
     [ "DynamoRIO System Overview", "overview.html", {% include_relative overview.js %} ],
-    [ "Release Notes for Version 8.0.18711", "release_notes.html", [
+    [ "Release Notes for Version 8.0.18713", "release_notes.html", [
       [ "Distribution Contents", "release_notes.html#sec_package", null ],
       [ "Changes Since Prior Releases", "release_notes.html#sec_changes", null ],
       [ "Limitations", "release_notes.html#sec_limits", [
@@ -101,11 +101,5 @@
         [ "Deployment Limitations", "release_notes.html#sec_limit_deploy", null ]
       ] ],
       [ "Plans for Future Releases", "release_notes.html#sec_future", null ]
-    ] ],
-    [ "Licenses", "page_license.html", [
-      [ "Primary DynamoRIO License: BSD", "page_license.html#sec_bsd", null ],
-      [ "libelftc License", "page_license.html#sec_libelftc", null ],
-      [ "Certain Extensions are instead under the LGPL 2.1 License", "page_license.html#sec_lgpl_licenses", null ],
-      [ "Code coverage genhtml script is under GPL 2", "page_license.html#sec_gpl_licenses", null ]
     ] ]
 ],

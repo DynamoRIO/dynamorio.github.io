@@ -10,7 +10,6 @@
       [ "Simulator Parameters", "page_drcpusim.html#sec_drcpusim_ops", null ]
     ] ],
     [ "Disassembly Tool", "page_drdisas.html", null ],
-    [ "Disassembly Tool", "page_drdisas.html", null ],
     [ "Dr. Memory Memory Debugging Tool", "page_drmemory.html", null ],
     [ "System Call Tracer for Windows", "page_drstrace.html", null ],
     [ "Library Call Tracer", "page_drltrace.html", null ],

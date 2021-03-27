@@ -46,7 +46,7 @@ permalink: /API_tutorial_bbdynsize5.html
 <div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span></div>
 <div class="line">event_exit(<span class="keywordtype">void</span>);</div>
 <div class="line"><span class="keyword">static</span> <a class="code" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a></div>
-<div class="line">event_basic_block(<span class="keywordtype">void</span> *drcontext, <span class="keywordtype">void</span> *tag, instrlist_t *bb,</div>
+<div class="line">event_basic_block(<span class="keywordtype">void</span> *drcontext, <span class="keywordtype">void</span> *tag, <a class="code" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb,</div>
 <div class="line">                  <span class="keywordtype">bool</span> for_trace, <span class="keywordtype">bool</span> translating);</div>
 <div class="line"> </div>
 <div class="line">DR_EXPORT <span class="keywordtype">void</span></div>
@@ -85,7 +85,7 @@ permalink: /API_tutorial_bbdynsize5.html
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">static</span> <a class="code" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a></div>
-<div class="line">event_basic_block(<span class="keywordtype">void</span> *drcontext, <span class="keywordtype">void</span> *tag, instrlist_t *bb,</div>
+<div class="line">event_basic_block(<span class="keywordtype">void</span> *drcontext, <span class="keywordtype">void</span> *tag, <a class="code" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb,</div>
 <div class="line">                  <span class="keywordtype">bool</span> for_trace, <span class="keywordtype">bool</span> translating)</div>
 <div class="line">{</div>
 <div class="line">    uint num_instructions = 0;</div>
@@ -159,6 +159,7 @@ permalink: /API_tutorial_bbdynsize5.html
 <div class="ttc" id="adr__ir__macros__arm_8h_html_ae9fa56a85e5961d8c14846925df5abf3"><div class="ttname"><a href="dr__ir__macros__arm_8h.html#ae9fa56a85e5961d8c14846925df5abf3">INSTR_CREATE_adc</a></div><div class="ttdeci">#define INSTR_CREATE_adc(dc, Rd, Rn, Rm_or_imm)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_arm.h:1188</div></div>
 <div class="ttc" id="adr__events_8h_html_a689518ac5d1ad136b13e03012702b209"><div class="ttname"><a href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a></div><div class="ttdeci">dr_emit_flags_t</div><div class="ttdef"><b>Definition:</b> dr_events.h:75</div></div>
 <div class="ttc" id="adr__ir__macros_8h_html_a39cadf7c35d28a1dedf9b945cf1aa656"><div class="ttname"><a href="dr__ir__macros_8h.html#a39cadf7c35d28a1dedf9b945cf1aa656">OPND_CREATE_INT_32OR8</a></div><div class="ttdeci">#define OPND_CREATE_INT_32OR8(val)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros.h:136</div></div>
+<div class="ttc" id="adr__defines_8h_html_a3fb73c55def575ec5705577625491d66"><div class="ttname"><a href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a></div><div class="ttdeci">struct _instrlist_t instrlist_t</div><div class="ttdef"><b>Definition:</b> dr_defines.h:877</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a9a11b5b0700f7601087e2fda87175040"><div class="ttname"><a href="dr__ir__instr_8h.html#a9a11b5b0700f7601087e2fda87175040">instr_get_next</a></div><div class="ttdeci">INSTR_INLINE instr_t * instr_get_next(instr_t *instr)</div></div>
 <div class="ttc" id="adr__tools_8h_html_a04beaefb3e0be6bd0dac39f76398ec1e"><div class="ttname"><a href="dr__tools_8h.html#a04beaefb3e0be6bd0dac39f76398ec1e">dr_mutex_lock</a></div><div class="ttdeci">void dr_mutex_lock(void *mutex)</div></div>
 <div class="ttc" id="adr__ir__macros__arm_8h_html_a57d4ee48ed13cb7cebc3622c9a82fcb5"><div class="ttname"><a href="dr__ir__macros__arm_8h.html#a57d4ee48ed13cb7cebc3622c9a82fcb5">INSTR_CREATE_add</a></div><div class="ttdeci">#define INSTR_CREATE_add(dc, Rd, Rn, Rm_or_imm)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_arm.h:1198</div></div>
@@ -174,5 +175,5 @@ permalink: /API_tutorial_bbdynsize5.html
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18711 --- Fri Mar 26 2021 04:18:28 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:54 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -83,13 +83,13 @@ Functions</h2></td></tr>
 <tr class="separator:ga3189cbfbf85d5c32965bd8a140b2c35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae33a91872caa46e430d5d721af6d8c82"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#gae33a91872caa46e430d5d721af6d8c82">drx_aflags_are_dead</a> (<a class="el" href="structinstr__t.html">instr_t</a> *where)</td></tr>
 <tr class="separator:gae33a91872caa46e430d5d721af6d8c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5eba10b0f9536c1a108d796e0b84c4cd"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga5eba10b0f9536c1a108d796e0b84c4cd">drx_insert_counter_update</a> (void *drcontext, instrlist_t *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__ir__utils_8h.html#a89a6b714ff24d91d78589877047a29b9">dr_spill_slot_t</a> slot, IF_NOT_X86_(<a class="el" href="dr__ir__utils_8h.html#a89a6b714ff24d91d78589877047a29b9">dr_spill_slot_t</a> slot2) void *addr, int value, uint flags)</td></tr>
+<tr class="memitem:ga5eba10b0f9536c1a108d796e0b84c4cd"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga5eba10b0f9536c1a108d796e0b84c4cd">drx_insert_counter_update</a> (void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__ir__utils_8h.html#a89a6b714ff24d91d78589877047a29b9">dr_spill_slot_t</a> slot, IF_NOT_X86_(<a class="el" href="dr__ir__utils_8h.html#a89a6b714ff24d91d78589877047a29b9">dr_spill_slot_t</a> slot2) void *addr, int value, uint flags)</td></tr>
 <tr class="separator:ga5eba10b0f9536c1a108d796e0b84c4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9348e840424caf0098a8b1ba69955864"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga9348e840424caf0098a8b1ba69955864">drx_register_soft_kills</a> (bool(*event_cb)(process_id_t pid, int exit_code))</td></tr>
 <tr class="separator:ga9348e840424caf0098a8b1ba69955864"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2f2b2e6468760cdee7c55975e8cdce5c"><td class="memItemLeft" align="right" valign="top">DR_EXPORT size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga2f2b2e6468760cdee7c55975e8cdce5c">drx_instrlist_size</a> (instrlist_t *ilist)</td></tr>
+<tr class="memitem:ga2f2b2e6468760cdee7c55975e8cdce5c"><td class="memItemLeft" align="right" valign="top">DR_EXPORT size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga2f2b2e6468760cdee7c55975e8cdce5c">drx_instrlist_size</a> (<a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist)</td></tr>
 <tr class="separator:ga2f2b2e6468760cdee7c55975e8cdce5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4ced61bc9752b42236f79929a3daf830"><td class="memItemLeft" align="right" valign="top">DR_EXPORT size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga4ced61bc9752b42236f79929a3daf830">drx_instrlist_app_size</a> (instrlist_t *ilist)</td></tr>
+<tr class="memitem:ga4ced61bc9752b42236f79929a3daf830"><td class="memItemLeft" align="right" valign="top">DR_EXPORT size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga4ced61bc9752b42236f79929a3daf830">drx_instrlist_app_size</a> (<a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist)</td></tr>
 <tr class="separator:ga4ced61bc9752b42236f79929a3daf830"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa0a5fcca247de11374c3555a5326cba8"><td class="memItemLeft" align="right" valign="top">DR_EXPORT file_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#gaa0a5fcca247de11374c3555a5326cba8">drx_open_unique_file</a> (const char *dir, const char *prefix, const char *suffix, uint extra_flags, char *result OUT, size_t result_len)</td></tr>
 <tr class="separator:gaa0a5fcca247de11374c3555a5326cba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,11 +103,11 @@ Functions</h2></td></tr>
 <tr class="separator:ga26d48f2339de13a75bfe21b5fd04a6c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1182ac061717e3244891e43dab2a7d23"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga1182ac061717e3244891e43dab2a7d23">drx_buf_free</a> (<a class="el" href="group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf">drx_buf_t</a> *buf)</td></tr>
 <tr class="separator:ga1182ac061717e3244891e43dab2a7d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga42f82cda96d7ee9c3236ab520f192d96"><td class="memItemLeft" align="right" valign="top">DR_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga42f82cda96d7ee9c3236ab520f192d96">drx_buf_insert_load_buf_ptr</a> (void *drcontext, <a class="el" href="group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf">drx_buf_t</a> *buf, instrlist_t *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> buf_ptr)</td></tr>
+<tr class="memitem:ga42f82cda96d7ee9c3236ab520f192d96"><td class="memItemLeft" align="right" valign="top">DR_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga42f82cda96d7ee9c3236ab520f192d96">drx_buf_insert_load_buf_ptr</a> (void *drcontext, <a class="el" href="group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf">drx_buf_t</a> *buf, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> buf_ptr)</td></tr>
 <tr class="separator:ga42f82cda96d7ee9c3236ab520f192d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga187d0c9f694b5bbd97a509c72c3cccf6"><td class="memItemLeft" align="right" valign="top">DR_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga187d0c9f694b5bbd97a509c72c3cccf6">drx_buf_insert_update_buf_ptr</a> (void *drcontext, <a class="el" href="group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf">drx_buf_t</a> *buf, instrlist_t *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> buf_ptr, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> scratch, ushort stride)</td></tr>
+<tr class="memitem:ga187d0c9f694b5bbd97a509c72c3cccf6"><td class="memItemLeft" align="right" valign="top">DR_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga187d0c9f694b5bbd97a509c72c3cccf6">drx_buf_insert_update_buf_ptr</a> (void *drcontext, <a class="el" href="group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf">drx_buf_t</a> *buf, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> buf_ptr, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> scratch, ushort stride)</td></tr>
 <tr class="separator:ga187d0c9f694b5bbd97a509c72c3cccf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga707a2f43fd22d2203d1274a498e7cf8b"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga707a2f43fd22d2203d1274a498e7cf8b">drx_buf_insert_buf_store</a> (void *drcontext, <a class="el" href="group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf">drx_buf_t</a> *buf, instrlist_t *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> buf_ptr, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> scratch, <a class="el" href="structopnd__t.html">opnd_t</a> opnd, <a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a> opsz, short offset)</td></tr>
+<tr class="memitem:ga707a2f43fd22d2203d1274a498e7cf8b"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga707a2f43fd22d2203d1274a498e7cf8b">drx_buf_insert_buf_store</a> (void *drcontext, <a class="el" href="group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf">drx_buf_t</a> *buf, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> buf_ptr, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> scratch, <a class="el" href="structopnd__t.html">opnd_t</a> opnd, <a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a> opsz, short offset)</td></tr>
 <tr class="separator:ga707a2f43fd22d2203d1274a498e7cf8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6d46be87bc7b8ebd470609250347740f"><td class="memItemLeft" align="right" valign="top">DR_EXPORT void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga6d46be87bc7b8ebd470609250347740f">drx_buf_get_buffer_ptr</a> (void *drcontext, <a class="el" href="group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf">drx_buf_t</a> *buf)</td></tr>
 <tr class="separator:ga6d46be87bc7b8ebd470609250347740f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,11 +117,11 @@ Functions</h2></td></tr>
 <tr class="separator:gab387ef4cf4e739dba536149361d3b6c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2cf71b198fcd63f42e35df44285ceec3"><td class="memItemLeft" align="right" valign="top">DR_EXPORT size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga2cf71b198fcd63f42e35df44285ceec3">drx_buf_get_buffer_size</a> (void *drcontext, <a class="el" href="group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf">drx_buf_t</a> *buf)</td></tr>
 <tr class="separator:ga2cf71b198fcd63f42e35df44285ceec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8f9c7628a63632568aaeb62beeb3a89a"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga8f9c7628a63632568aaeb62beeb3a89a">drx_tail_pad_block</a> (void *drcontext, instrlist_t *ilist)</td></tr>
+<tr class="memitem:ga8f9c7628a63632568aaeb62beeb3a89a"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga8f9c7628a63632568aaeb62beeb3a89a">drx_tail_pad_block</a> (void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist)</td></tr>
 <tr class="separator:ga8f9c7628a63632568aaeb62beeb3a89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad71e3315ee11f3f51fd16e9488c79051"><td class="memItemLeft" align="right" valign="top">DR_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#gad71e3315ee11f3f51fd16e9488c79051">drx_buf_insert_buf_memcpy</a> (void *drcontext, <a class="el" href="group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf">drx_buf_t</a> *buf, instrlist_t *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> dst, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> src, ushort len)</td></tr>
+<tr class="memitem:gad71e3315ee11f3f51fd16e9488c79051"><td class="memItemLeft" align="right" valign="top">DR_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#gad71e3315ee11f3f51fd16e9488c79051">drx_buf_insert_buf_memcpy</a> (void *drcontext, <a class="el" href="group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf">drx_buf_t</a> *buf, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> dst, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> src, ushort len)</td></tr>
 <tr class="separator:gad71e3315ee11f3f51fd16e9488c79051"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga30c372c0385d8584660f5c449a18ec36"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga30c372c0385d8584660f5c449a18ec36">drx_expand_scatter_gather</a> (void *drcontext, instrlist_t *bb, OUT bool *expanded)</td></tr>
+<tr class="memitem:ga30c372c0385d8584660f5c449a18ec36"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga30c372c0385d8584660f5c449a18ec36">drx_expand_scatter_gather</a> (void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, OUT bool *expanded)</td></tr>
 <tr class="separator:ga30c372c0385d8584660f5c449a18ec36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -499,7 +499,7 @@ circular buffer".</dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">instrlist_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *&#160;</td>
           <td class="paramname"><em>ilist</em>, </td>
         </tr>
         <tr>
@@ -559,7 +559,7 @@ circular buffer".</dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">instrlist_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *&#160;</td>
           <td class="paramname"><em>ilist</em>, </td>
         </tr>
         <tr>
@@ -635,7 +635,7 @@ This method simply wraps a store that also sets an app translation. Make sure th
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">instrlist_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *&#160;</td>
           <td class="paramname"><em>ilist</em>, </td>
         </tr>
         <tr>
@@ -682,7 +682,7 @@ This method simply wraps a store that also sets an app translation. Make sure th
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">instrlist_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *&#160;</td>
           <td class="paramname"><em>ilist</em>, </td>
         </tr>
         <tr>
@@ -790,7 +790,7 @@ This method simply wraps a store that also sets an app translation. Make sure th
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">instrlist_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *&#160;</td>
           <td class="paramname"><em>bb</em>, </td>
         </tr>
         <tr>
@@ -860,7 +860,7 @@ The added multi-instruction sequence contains several control-transfer instructi
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">instrlist_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *&#160;</td>
           <td class="paramname"><em>ilist</em>, </td>
         </tr>
         <tr>
@@ -919,7 +919,7 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
         <tr>
           <td class="memname">DR_EXPORT size_t drx_instrlist_app_size </td>
           <td>(</td>
-          <td class="paramtype">instrlist_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *&#160;</td>
           <td class="paramname"><em>ilist</em></td><td>)</td>
           <td></td>
         </tr>
@@ -939,7 +939,7 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
         <tr>
           <td class="memname">DR_EXPORT size_t drx_instrlist_size </td>
           <td>(</td>
-          <td class="paramtype">instrlist_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *&#160;</td>
           <td class="paramname"><em>ilist</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1186,7 +1186,7 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">instrlist_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *&#160;</td>
           <td class="paramname"><em>ilist</em>&#160;</td>
         </tr>
         <tr>
@@ -1208,5 +1208,5 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18711 --- Fri Mar 26 2021 04:18:29 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:54 &nbsp; <img border=0 src="favicon.png">
 </small></address>

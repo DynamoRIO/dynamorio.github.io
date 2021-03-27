@@ -31,6 +31,12 @@ var NAVTREE =
     [ "Build Your Own Tool", "page_user_docs.html", {% include_relative page_user_docs.js %} ],
     [ "Obtaining Help and Reporting Bugs", "page_help.html", {% include_relative page_help.js %} ],
     [ "Developer Documentation", "page_dev_docs.html", {% include_relative page_dev_docs.js %} ],
+    [ "License", "page_license.html", [
+      [ "Primary DynamoRIO License: BSD", "page_license.html#sec_bsd", null ],
+      [ "libelftc License", "page_license.html#sec_libelftc", null ],
+      [ "Certain Extensions: LGPL 2.1", "page_license.html#sec_lgpl_licenses", null ],
+      [ "Code Coverage genhtml: GPL 2", "page_license.html#sec_gpl_licenses", null ]
+    ] ],
 [ "API Reference", "files.html", [
     [ "Deprecated List", "deprecated.html", null ],
     [ "DynamoRIO Extension Details", "modules.html", {% include_relative modules.js %} ],
