@@ -124,7 +124,7 @@ DynamoRIO IR for ARM: IR decisions</h1>
         OPND_CREATE_POSTIDX_LIST(base, offs)
    =&gt; “mem(base), imm(offs), reg(base)”</pre><p> But we still need INSTR_CREATE_ variants that take these extra args!</p>
 </li>
-<li><p class="startli">Negated registers Related to addressing modes: how model negative registers for writeback or post-indexed? For the memref itself I currently have positive and negative versions and will have to find a bit in <a class="el" href="structopnd__t.html">opnd_t</a> to store it, plus accessor: opnd_get_index_sign() (and assume people will use <a class="el" href="dr__ir__opnd_8h.html#a8d9ff560c86702c59cd38f9d4cb80477">opnd_compute_address()</a> and not adding index register value directly themselves &ndash; TODO: document all the IR changes tools need to be aware of), and for immed we’ll store it with the sign applied? </p><pre class="fragment">  TYPE_M,        /* mem w/ just base */
+<li><p class="startli">Negated registers Related to addressing modes: how model negative registers for writeback or post-indexed? For the memref itself I currently have positive and negative versions and will have to find a bit in <a class="el" href="structopnd__t.html">opnd_t</a> to store it, plus accessor: opnd_get_index_sign() (and assume people will use <a class="el" href="dr__ir__opnd_8h.html#ac98cf54b70db5fadcd308aa2701b4c7d">opnd_compute_address()</a> and not adding index register value directly themselves &ndash; TODO: document all the IR changes tools need to be aware of), and for immed we’ll store it with the sign applied? </p><pre class="fragment">  TYPE_M,        /* mem w/ just base */
   TYPE_M_PR,     /* mem offs + reg index */
   TYPE_M_NR,     /* mem offs - reg index */
   TYPE_M_PS,     /* mem offs + reg-shifted (or extended for A64) index */
@@ -162,7 +162,7 @@ DynamoRIO IR for ARM: IR decisions</h1>
 <li>Translate to a read-only mega-instr (a list of RISC instr), but can only instrument before mega instr.</li>
 </ol>
 </li>
-<li>Flag writing? OP_adc vs OP_adcs? I guess we need explicit OP_adcs? Or should we add a flags register as a real dst or src? If we do, would we go and change x86? Best to not break anything. But OP_adc in x86 does write flags. Tool writer should really be calling <a class="el" href="dr__ir__instr_8h.html#a2ad68b83f3990306d6af6b5a66447038">instr_get_eflags()</a> for app code. For gen code though &ndash; but no good soln? OP_arm_adc, OP_arm_adcs =&gt; OP_adc =&gt; OP_x86_adc Or only change INSTR_CREATE_ macros OP_adc_ns</li>
+<li>Flag writing? OP_adc vs OP_adcs? I guess we need explicit OP_adcs? Or should we add a flags register as a real dst or src? If we do, would we go and change x86? Best to not break anything. But OP_adc in x86 does write flags. Tool writer should really be calling <a class="el" href="dr__ir__instr_8h.html#a35d5a7d70a380ef810267fa62d0a0d60">instr_get_eflags()</a> for app code. For gen code though &ndash; but no good soln? OP_arm_adc, OP_arm_adcs =&gt; OP_adc =&gt; OP_x86_adc Or only change INSTR_CREATE_ macros OP_adc_ns</li>
 <li><p class="startli">General issue: how share opcodes when INSTR_CREATE_ macros will have to take different numbers of args? How do tools write cross-platform instrumentation without a higher-level translated IR? Should we consider a shared IR? </p><pre class="fragment">  #define INSTR_CREATE_adc(dc, d, s) \
     instr_create_1dst_2src((dc), OP_adc, (d), (s), (d))</pre><p class="startli">If doing cross-platform, can’t use the src-shifts or anything, and have to stick with destructive srcs (src==dst): have to write in LCD. So if tool sticks to load, store, and arithmetic instrs, maybe we can get it to work.</p>
 <p class="startli">Or should we assume tools will have ifdef with 2 versions of gencode and we don’t try to share to avoid all confusion of different semantics?</p>
@@ -170,7 +170,7 @@ DynamoRIO IR for ARM: IR decisions</h1>
 </li>
 <li><p class="startli">How model writes to the PC</p>
 <p class="startli">Example: OP_adc: In A32 instructions, if S is not specified and <code>&lt;Rd&gt;</code> is the PC, the instruction is a branch to the address calculated by the operation. This is an interworking branch, see Pseudocode details of operations on the AArch32 general-purpose registers and the PC on page E1-2296.</p>
-<p class="startli">So how do we model that? I guess we keep it as OP_adc but we have <a class="el" href="dr__ir__instr_8h.html#a076d0445255d4902181cb272bacd80aa">instr_is_cti()</a> and <a class="el" href="dr__ir__instr_8h.html#a963ac2677038071fc295b3b6eb45ce1d">instr_is_mbr()</a> say "yes" for any instr with Rd==PC. Does this mean decode_cti() won’t be fast? But ARM decoding in general may not need fast vs slow.</p>
+<p class="startli">So how do we model that? I guess we keep it as OP_adc but we have <a class="el" href="dr__ir__instr_8h.html#a8a5ddd73b51a72e6b8f5358ae87c2bf6">instr_is_cti()</a> and <a class="el" href="dr__ir__instr_8h.html#a9f22e2640d0b987341ee87b8b6c9fa16">instr_is_mbr()</a> say "yes" for any instr with Rd==PC. Does this mean decode_cti() won’t be fast? But ARM decoding in general may not need fast vs slow.</p>
 </li>
 <li><p class="startli">Do we need to model the condition codes separately or as one?</p>
 <p class="startli">Xref: </p><pre class="fragment">  #define EFLAGS_READ_CF   0x00000001 /**&lt; Reads CF (Carry Flag). */
@@ -277,7 +277,7 @@ Register enum</h1>
 </ol>
 <p>However, note that for multimedia partial regs we are already using the size approach on x86.</p>
 <p>Do we want to unify them and use the same approach for both? Which approach? Single name and size seems simpler and cleaner in one sense than enumerating every combination, but OTOH we would want the names used in asm to be available to INSTR_CREATE_ macros.</p>
-<p>We could try to do both for arm by having <a class="el" href="dr__ir__opnd_8h.html#a321271ddce2b40d5a094aa22fdfdeb0b">opnd_create_reg_partial()</a> switch to a sub-reg name.</p>
+<p>We could try to do both for arm by having <a class="el" href="dr__ir__opnd_8h.html#a9b9773333faf1f49cd8421ee054ad290">opnd_create_reg_partial()</a> switch to a sub-reg name.</p>
 <h1><a class="anchor" id="autotoc_md47"></a>
 TLS via Stolen Register: Interactions with tools</h1>
 <h2><a class="anchor" id="autotoc_md48"></a>
@@ -446,7 +446,7 @@ IT Block Handling</h1>
 <p>Ways to think about:</p>
 <ol type="1">
 <li><p class="startli">Don't group: have to decode from top, use ISA mode to know whether inside, store it mask somewhere and use it to set predicates for internal instrs.</p>
-<p class="startli">=&gt; add to same mode namespace, so DR_ISA_ARM_IT? But who stores the mask (see below)? OP_it sequence must be its own bb, and add FRAG_ flag? For isolated decoding in a loop: swap mode inside <a class="el" href="dr__ir__utils_8h.html#a6f62065c2b7e764fe9fb0f46557e2264">decode()</a>?</p>
+<p class="startli">=&gt; add to same mode namespace, so DR_ISA_ARM_IT? But who stores the mask (see below)? OP_it sequence must be its own bb, and add FRAG_ flag? For isolated decoding in a loop: swap mode inside <a class="el" href="dr__ir__decode_8h.html#a5ca2a278008e547130218e8cfde44e3d">decode()</a>?</p>
 <p class="startli">Big issue: tool writer can't insert instru before instrs inside it block! So just adding predicates to instrs inside does not make tool writer's life easy there.</p>
 </li>
 <li>Hierarchical instrlist to group OP_it plus its following instrs?</li>
@@ -454,7 +454,7 @@ IT Block Handling</h1>
 <li>Convert OP_it into series of conditional branches that jump over things</li>
 <li><p class="startli">WINNER: Convert instr inside OP_it into predicated instr, remove the OP_it instr, and have encoder re-add OP_it (ok to add separate OP_it for each, or maybe we also have instrlist encoder put out &gt;1-instr blocks).</p>
 <p class="startli">But for tools that want to see opcode mix, etc., can't auto-convert. This is a bigger deal than rep string: now half the tools have to request some non-default transformation or else they trip over un-encodable OP_it block splits. We can’t satisfy all tools even leveraging drmgr b/c we’d have to remove OP_it in app2app automatically and opcode-mix tools assume that won’t happen. So we require tools to call sthg like drx_transform_it_block()? We also isolate OP_it blocks to their own basic blocks, so the tool writer doesn't have to figure out # instrs in an OP_it block and to make it simpler for both tool and internal-DR ( decode_fragment() via FRAG_ flag kind of stuff).</p>
-<p class="startli">Update: we did come up with a way to satisfy all tools, leveraging drmgr. We have drmgr calling <a class="el" href="dr__ir__utils_8h.html#af0f0c67d5a85c6da782f77f6c360d40d">dr_remove_it_instrs()</a> and then <a class="el" href="dr__ir__utils_8h.html#a53f876b55bf0a07d7667557fcf7a8343">dr_insert_it_instrs()</a> automatically as a special, final pass (even after instru2instru). This means that the original OP_it is there in the analysis phase, yet all instructions can be instrumented. Those not using drmgr will have to call <a class="el" href="dr__ir__utils_8h.html#af0f0c67d5a85c6da782f77f6c360d40d">dr_remove_it_instrs()</a> and then <a class="el" href="dr__ir__utils_8h.html#a53f876b55bf0a07d7667557fcf7a8343">dr_insert_it_instrs()</a> on their own.</p>
+<p class="startli">Update: we did come up with a way to satisfy all tools, leveraging drmgr. We have drmgr calling <a class="el" href="dr__ir__utils_8h.html#ad2f75dd89d8a188f4a7fc9ae094bceaf">dr_remove_it_instrs()</a> and then <a class="el" href="dr__ir__utils_8h.html#a1f2c05b5d49ca8dedfd52d7bbb2f59bb">dr_insert_it_instrs()</a> automatically as a special, final pass (even after instru2instru). This means that the original OP_it is there in the analysis phase, yet all instructions can be instrumented. Those not using drmgr will have to call <a class="el" href="dr__ir__utils_8h.html#ad2f75dd89d8a188f4a7fc9ae094bceaf">dr_remove_it_instrs()</a> and then <a class="el" href="dr__ir__utils_8h.html#a1f2c05b5d49ca8dedfd52d7bbb2f59bb">dr_insert_it_instrs()</a> on their own.</p>
 <p class="startli">More details on decoding, which we need for #5 too:</p>
 </li>
 </ol>
@@ -498,5 +498,5 @@ Conditional Syscall</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:54 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18718 --- Fri Apr 2 2021 03:25:20 &nbsp; <img border=0 src="favicon.png">
 </small></address>

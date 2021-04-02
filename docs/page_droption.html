@@ -55,15 +55,15 @@ Usage</h1>
 </div><!-- fragment --><p>Then, ask for the <code><a class="el" href="classdroption__t.html">droption_t</a></code> instances to be filled in from the passed-in arguments from the user. In a client using <code><a class="el" href="dr__api_8h.html#a2b938c98dd186cc94eef6880f9e3c3e9">dr_client_main()</a></code>, or from a standalone application, invoke parse_argv():</p>
 <div class="fragment"><div class="line">std::string parse_err;</div>
 <div class="line"><span class="keywordflow">if</span> (!<a class="code" href="classdroption__parser__t.html#a26d4d9753b91781202dbf7c964fcb8f9">droption_parser_t::parse_argv</a>(<a class="code" href="droption_8h.html#aaa6638d4faaba3788e5af8a9090787abad66279b622a4387e56937efff1ce23af">DROPTION_SCOPE_CLIENT</a>, argc, argv, &amp;parse_err)) {</div>
-<div class="line">    <a class="code" href="dr__tools_8h.html#a1affb1a9f1c49c1959f1a01967a0a0d9">dr_fprintf</a>(<a class="code" href="dr__defines_8h.html#a3a540e3eef339eec06aff31c4ba1eb25">STDERR</a>, <span class="stringliteral">&quot;Usage error: %s&quot;</span>, parse_err.c_str());</div>
-<div class="line">    <a class="code" href="dr__tools_8h.html#a12c1ca981b7d3049cb2d31c0f19da332">dr_abort</a>();</div>
+<div class="line">    <a class="code" href="dr__tools_8h.html#ae338685a241cfeae5f3d507ae9cff957">dr_fprintf</a>(<a class="code" href="dr__defines_8h.html#a3a540e3eef339eec06aff31c4ba1eb25">STDERR</a>, <span class="stringliteral">&quot;Usage error: %s&quot;</span>, parse_err.c_str());</div>
+<div class="line">    <a class="code" href="dr__tools_8h.html#a0f1fe81ae1737aa0e34eb69c855d359c">dr_abort</a>();</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>A standalone application should pass <code>DROPTION_SCOPE_FRONTEND</code> rather than <code>DROPTION_SCOPE_CLIENT</code>.</p>
 <p>In a client using the legacy <code><a class="el" href="dr__api_8h.html#a819eb581527829240bf227d5a8f98e4c">dr_init()</a></code>, use the <code><a class="el" href="droption_8h.html#ac33405ef5e666f86d4cd826474fb3613">dr_parse_options()</a></code> function:</p>
 <div class="fragment"><div class="line">std::string parse_err;</div>
 <div class="line"><span class="keywordflow">if</span> (!<a class="code" href="droption_8h.html#ac33405ef5e666f86d4cd826474fb3613">dr_parse_options</a>(<span class="keywordtype">id</span>, &amp;parse_err)) {</div>
-<div class="line">    <a class="code" href="dr__tools_8h.html#a1affb1a9f1c49c1959f1a01967a0a0d9">dr_fprintf</a>(<a class="code" href="dr__defines_8h.html#a3a540e3eef339eec06aff31c4ba1eb25">STDERR</a>, <span class="stringliteral">&quot;Usage error: %s&quot;</span>, parse_err.c_str());</div>
-<div class="line">    <a class="code" href="dr__tools_8h.html#a12c1ca981b7d3049cb2d31c0f19da332">dr_abort</a>();</div>
+<div class="line">    <a class="code" href="dr__tools_8h.html#ae338685a241cfeae5f3d507ae9cff957">dr_fprintf</a>(<a class="code" href="dr__defines_8h.html#a3a540e3eef339eec06aff31c4ba1eb25">STDERR</a>, <span class="stringliteral">&quot;Usage error: %s&quot;</span>, parse_err.c_str());</div>
+<div class="line">    <a class="code" href="dr__tools_8h.html#a0f1fe81ae1737aa0e34eb69c855d359c">dr_abort</a>();</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>A boolean option <code>foo</code> can be negated on the command line using any of the following prefixes:</p>
 <ul>
@@ -114,14 +114,14 @@ Automated HTML</h1>
 </div><!-- fragment --><p>This program can be built and run at documentation generation time to produce HTML that can then be embedded into Doxygen or other documentation. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
+<div class="ttc" id="adr__tools_8h_html_a0f1fe81ae1737aa0e34eb69c855d359c"><div class="ttname"><a href="dr__tools_8h.html#a0f1fe81ae1737aa0e34eb69c855d359c">dr_abort</a></div><div class="ttdeci">DR_API void dr_abort(void)</div></div>
 <div class="ttc" id="adroption_8h_html"><div class="ttname"><a href="droption_8h.html">droption.h</a></div><div class="ttdoc">Options parsing support.</div></div>
 <div class="ttc" id="adroption_8h_html_aaa6638d4faaba3788e5af8a9090787aba10e0dbb30264696a8359061f128dde46"><div class="ttname"><a href="droption_8h.html#aaa6638d4faaba3788e5af8a9090787aba10e0dbb30264696a8359061f128dde46">DROPTION_SCOPE_ALL</a></div><div class="ttdeci">@ DROPTION_SCOPE_ALL</div><div class="ttdef"><b>Definition:</b> droption.h:74</div></div>
 <div class="ttc" id="aclassdroption__t_html"><div class="ttname"><a href="classdroption__t.html">droption_t</a></div><div class="ttdef"><b>Definition:</b> droption.h:366</div></div>
 <div class="ttc" id="aclassdroption__parser__t_html_a296ee6d73ca09454bd713c87b36af7d4"><div class="ttname"><a href="classdroption__parser__t.html#a296ee6d73ca09454bd713c87b36af7d4">droption_parser_t::usage_long</a></div><div class="ttdeci">static std::string usage_long(unsigned int scope, std::string pre_name=&quot;----------\n&quot;, std::string post_name=&quot;\n&quot;, std::string pre_value=&quot;&quot;, std::string post_value=&quot;\n&quot;, std::string pre_desc=&quot;&quot;, std::string post_desc=&quot;\n&quot;)</div><div class="ttdef"><b>Definition:</b> droption.h:294</div></div>
-<div class="ttc" id="adr__defines_8h_html_a3a540e3eef339eec06aff31c4ba1eb25"><div class="ttname"><a href="dr__defines_8h.html#a3a540e3eef339eec06aff31c4ba1eb25">STDERR</a></div><div class="ttdeci">#define STDERR</div><div class="ttdef"><b>Definition:</b> dr_defines.h:296</div></div>
-<div class="ttc" id="adr__tools_8h_html_a12c1ca981b7d3049cb2d31c0f19da332"><div class="ttname"><a href="dr__tools_8h.html#a12c1ca981b7d3049cb2d31c0f19da332">dr_abort</a></div><div class="ttdeci">void dr_abort(void)</div></div>
+<div class="ttc" id="adr__defines_8h_html_a3a540e3eef339eec06aff31c4ba1eb25"><div class="ttname"><a href="dr__defines_8h.html#a3a540e3eef339eec06aff31c4ba1eb25">STDERR</a></div><div class="ttdeci">#define STDERR</div><div class="ttdef"><b>Definition:</b> dr_defines.h:298</div></div>
+<div class="ttc" id="adr__tools_8h_html_ae338685a241cfeae5f3d507ae9cff957"><div class="ttname"><a href="dr__tools_8h.html#ae338685a241cfeae5f3d507ae9cff957">dr_fprintf</a></div><div class="ttdeci">DR_API ssize_t dr_fprintf(file_t f, const char *fmt,...)</div></div>
 <div class="ttc" id="adroption_8h_html_ac33405ef5e666f86d4cd826474fb3613"><div class="ttname"><a href="droption_8h.html#ac33405ef5e666f86d4cd826474fb3613">dr_parse_options</a></div><div class="ttdeci">static bool dr_parse_options(client_id_t client_id, std::string *error_msg, int *last_index)</div><div class="ttdef"><b>Definition:</b> droption.h:835</div></div>
-<div class="ttc" id="adr__tools_8h_html_a1affb1a9f1c49c1959f1a01967a0a0d9"><div class="ttname"><a href="dr__tools_8h.html#a1affb1a9f1c49c1959f1a01967a0a0d9">dr_fprintf</a></div><div class="ttdeci">ssize_t dr_fprintf(file_t f, const char *fmt,...)</div></div>
 <div class="ttc" id="adroption_8h_html_aaa6638d4faaba3788e5af8a9090787abad66279b622a4387e56937efff1ce23af"><div class="ttname"><a href="droption_8h.html#aaa6638d4faaba3788e5af8a9090787abad66279b622a4387e56937efff1ce23af">DROPTION_SCOPE_CLIENT</a></div><div class="ttdeci">@ DROPTION_SCOPE_CLIENT</div><div class="ttdef"><b>Definition:</b> droption.h:71</div></div>
 <div class="ttc" id="aclassdroption__parser__t_html_a26d4d9753b91781202dbf7c964fcb8f9"><div class="ttname"><a href="classdroption__parser__t.html#a26d4d9753b91781202dbf7c964fcb8f9">droption_parser_t::parse_argv</a></div><div class="ttdeci">static bool parse_argv(unsigned int scope, int argc, const char *argv[], std::string *error_msg, int *last_index)</div><div class="ttdef"><b>Definition:</b> droption.h:177</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
@@ -129,5 +129,5 @@ Automated HTML</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:54 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18718 --- Fri Apr 2 2021 03:25:21 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -28,7 +28,7 @@ permalink: /page_profiling.html
 Linux</h1>
 <h2><a class="anchor" id="autotoc_md219"></a>
 DynamoRIO PC self-sampling</h2>
-<p>The client can use <a class="el" href="dr__tools_8h.html#a9191c67a267070ed51289d7192f986aa">dr_set_itimer()</a> for programmatic PC self-sampling, with <a class="el" href="dr__tools_8h.html#ae48034d181a3d7a29e196ad3e24cc994">dr_where_am_i()</a> providing information on where the sample was taken. This provides general categorization of where time is being spent in the overall instrumentation system, with potential to drill down further offline based on the PC.</p>
+<p>The client can use <a class="el" href="dr__tools_8h.html#ac74de1da117d9c807b986aeda2523dd9">dr_set_itimer()</a> for programmatic PC self-sampling, with <a class="el" href="dr__tools_8h.html#a9333e0dee46cc854228efab156ce98c5">dr_where_am_i()</a> providing information on where the sample was taken. This provides general categorization of where time is being spent in the overall instrumentation system, with potential to drill down further offline based on the PC.</p>
 <p>For PC sampling via DR's <code>-prof_pcs</code> runtime option instead, that is available internally in varying degrees on different platforms but is not polished enough and is missing some pieces (see the bottom of this page).</p>
 <h2><a class="anchor" id="autotoc_md220"></a>
 External sampling tools</h2>
@@ -58,7 +58,7 @@ oprofile</h3>
 <div class="line">samples  %        symbol name</div>
 <div class="line">4971      7.1208  insert_exit_stub_other_flags</div>
 <div class="line">2107      3.0182  mutex_lock</div>
-<div class="line">2082      2.9824  <a class="code" href="dr__ir__utils_8h.html#a3cf48d044ffd8664dcdeb070baa2b8e5">decode_sizeof</a></div>
+<div class="line">2082      2.9824  <a class="code" href="dr__ir__decode_8h.html#af4a2c830c95757037eaa1a192a22aa3a">decode_sizeof</a></div>
 <div class="line">1774      2.5412  build_bb_ilist</div>
 <div class="line">1695      2.4280  encoding_possible_pass</div>
 <div class="line">1653      2.3679  fragment_lookup_fine_and_coarse</div>
@@ -124,14 +124,14 @@ Windows</h1>
 <p>TODO, more detail.</p>
 <h1><a class="anchor" id="autotoc_md224"></a>
 Cross-platform -prof_pcs</h1>
-<p>There are many open issues for cleaning this up, such as <a href="https://github.com/DynamoRIO/dynamorio/issues#issue/140">issue 140</a>, <a href="https://github.com/DynamoRIO/dynamorio/issues#issue/359">issue 359</a>, <a href="https://github.com/DynamoRIO/dynamorio/issues#issue/767">issue 767</a>. On Linux the <a class="el" href="dr__tools_8h.html#a9191c67a267070ed51289d7192f986aa">dr_set_itimer()</a> solution above provides programmatic support. </p>
+<p>There are many open issues for cleaning this up, such as <a href="https://github.com/DynamoRIO/dynamorio/issues#issue/140">issue 140</a>, <a href="https://github.com/DynamoRIO/dynamorio/issues#issue/359">issue 359</a>, <a href="https://github.com/DynamoRIO/dynamorio/issues#issue/767">issue 767</a>. On Linux the <a class="el" href="dr__tools_8h.html#ac74de1da117d9c807b986aeda2523dd9">dr_set_itimer()</a> solution above provides programmatic support. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
-<div class="ttc" id="adr__ir__utils_8h_html_a3cf48d044ffd8664dcdeb070baa2b8e5"><div class="ttname"><a href="dr__ir__utils_8h.html#a3cf48d044ffd8664dcdeb070baa2b8e5">decode_sizeof</a></div><div class="ttdeci">int decode_sizeof(void *drcontext, byte *pc, int *num_prefixes _IF_X86_64(uint *rip_rel_pos))</div></div>
+<div class="ttc" id="adr__ir__decode_8h_html_af4a2c830c95757037eaa1a192a22aa3a"><div class="ttname"><a href="dr__ir__decode_8h.html#af4a2c830c95757037eaa1a192a22aa3a">decode_sizeof</a></div><div class="ttdeci">DR_API int decode_sizeof(void *drcontext, byte *pc, int *num_prefixes _IF_X86_64(uint *rip_rel_pos))</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:54 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18718 --- Fri Apr 2 2021 03:25:21 &nbsp; <img border=0 src="favicon.png">
 </small></address>

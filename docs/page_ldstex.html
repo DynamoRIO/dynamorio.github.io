@@ -147,7 +147,7 @@ Proposed Solution B: Compare-and-Swap Simulation</h1>
 <li>Flushing the fragment every time the opcode differs and generating the same single-load-opcode code as above. This could become an overhead issue and we'd want to split the page off to avoid flushing the entire code segment every time.</li>
 <li>Flushing the fragment and adding separate versions for each opcode seen so far, inside the same fragment.</li>
 <li>Returning to dispatch and using non-code-cache generated code created at initialization time, with a variant created for every load-exclusive store-exclusive opcode pair. This would require special translation support.</li>
-<li>Storing the load opcode into its own TLS slot, but we do not know what to compare it with when we reach the store-exclusive, especially for cases like <a class="el" href="dr__tools_8h.html#a4d6cf4c4230bf98c483c8d81792b1971">dr_prepopulate_cache()</a>.</li>
+<li>Storing the load opcode into its own TLS slot, but we do not know what to compare it with when we reach the store-exclusive, especially for cases like <a class="el" href="dr__tools_8h.html#a554c5441ac5a4e4de19210562ad8ab90">dr_prepopulate_cache()</a>.</li>
 <li>Just always using the acquire version for the store-exclusive size. Since the size must match, this is the only variation, and it should not affect correctness to add the barriers even when they are not needed. This is the solution that we choose.</li>
 </ul>
 <p>There are other complexities, such as saving and comparing a second value in another TLS slot for pair opcodes. 32-bit ARM raises even more issues, such as requiring saving the flags, requiring consecutive registers for pair opcodes, and predication, all of which add further complexity.</p>
@@ -211,5 +211,5 @@ Issue Tracker References</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:54 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18718 --- Fri Apr 2 2021 03:25:21 &nbsp; <img border=0 src="favicon.png">
 </small></address>

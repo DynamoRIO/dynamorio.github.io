@@ -183,7 +183,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Flag for use with <a class="el" href="group__drx.html#gaa0a5fcca247de11374c3555a5326cba8">drx_open_unique_file()</a> or <a class="el" href="group__drx.html#gaa85537dd6726928bbd43a21dc8211a53">drx_open_unique_appid_file()</a> in <code>extra_flags</code> to skip the file open and get the path string only.</p>
-<dl class="section note"><dt>Note</dt><dd>This flag value must not conflict with any DR_FILE_* flag value used by <a class="el" href="dr__tools_8h.html#ae3ae2190774a204af207602791a32cb6">dr_open_file()</a>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This flag value must not conflict with any DR_FILE_* flag value used by <a class="el" href="dr__tools_8h.html#a8c1399687e4cbc3c0b9bddab3e7619d3">dr_open_file()</a>. </dd></dl>
 
 </div>
 </div>
@@ -999,7 +999,7 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a new directory with a name constructed from "dir/prefix.appname.id.xxxx.suffix", where xxxx is a 4-digit number incremented until a unique name is found that does not collide with any existing file. The appname string comes from <a class="el" href="dr__tools_8h.html#aace5e8084f523fd25871b31463c7ecda">dr_get_application_name()</a>. The id portion of the string is from <code>id</code>, which is meant to be either the process id or the thread id.</p>
+<p>Creates a new directory with a name constructed from "dir/prefix.appname.id.xxxx.suffix", where xxxx is a 4-digit number incremented until a unique name is found that does not collide with any existing file. The appname string comes from <a class="el" href="dr__os__utils_8h.html#aef60db347b52f1344c23b63bcb020ff6">dr_get_application_name()</a>. The id portion of the string is from <code>id</code>, which is meant to be either the process id or the thread id.</p>
 <p>Returns whether successful. On success, optionally returns the resulting path in <code>result</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>May be called without calling <a class="el" href="group__drx.html#gae0665a86427616ffc80c59375649e283">drx_init()</a>. </dd></dl>
 
@@ -1060,10 +1060,10 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Opens a new file with a name constructed from "dir/prefix.appname.id.xxxx.suffix", where xxxx is a 4-digit number incremented until a unique name is found that does not collide with any existing file. The appname string comes from <a class="el" href="dr__tools_8h.html#aace5e8084f523fd25871b31463c7ecda">dr_get_application_name()</a>. The id portion of the string is from <code>id</code>, which is meant to be either the process id or the thread id.</p>
-<p>Passes <code>extra_flags</code> through to the <a class="el" href="dr__tools_8h.html#ae3ae2190774a204af207602791a32cb6">dr_open_file()</a> call if <code>extra_flags</code> is not DRX_FILE_SKIP_OPEN.</p>
+<p>Opens a new file with a name constructed from "dir/prefix.appname.id.xxxx.suffix", where xxxx is a 4-digit number incremented until a unique name is found that does not collide with any existing file. The appname string comes from <a class="el" href="dr__os__utils_8h.html#aef60db347b52f1344c23b63bcb020ff6">dr_get_application_name()</a>. The id portion of the string is from <code>id</code>, which is meant to be either the process id or the thread id.</p>
+<p>Passes <code>extra_flags</code> through to the <a class="el" href="dr__tools_8h.html#a8c1399687e4cbc3c0b9bddab3e7619d3">dr_open_file()</a> call if <code>extra_flags</code> is not DRX_FILE_SKIP_OPEN.</p>
 <p>On success, returns the file handle and optionally the resulting path in <code>result</code>. On failure, returns INVALID_FILE.</p>
-<p>Skips <a class="el" href="dr__tools_8h.html#ae3ae2190774a204af207602791a32cb6">dr_open_file()</a> if <code>extra_flags</code> is DRX_FILE_SKIP_OPEN. Returns INVALID_FILE and optionally the resulting path in <code>result</code>. Unique name is not guaranteed and xxxx is set randomly.</p>
+<p>Skips <a class="el" href="dr__tools_8h.html#a8c1399687e4cbc3c0b9bddab3e7619d3">dr_open_file()</a> if <code>extra_flags</code> is DRX_FILE_SKIP_OPEN. Returns INVALID_FILE and optionally the resulting path in <code>result</code>. Unique name is not guaranteed and xxxx is set randomly.</p>
 <dl class="section note"><dt>Note</dt><dd>May be called without calling <a class="el" href="group__drx.html#gae0665a86427616ffc80c59375649e283">drx_init()</a>. </dd></dl>
 
 </div>
@@ -1118,9 +1118,9 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
       </table>
 </div><div class="memdoc">
 <p>Opens a new file with a name constructed from "dir/prefix.xxxx.suffix", where xxxx is a 4-digit number incremented until a unique name is found that does not collide with any existing file.</p>
-<p>Passes <code>extra_flags</code> through to the <a class="el" href="dr__tools_8h.html#ae3ae2190774a204af207602791a32cb6">dr_open_file()</a> call if <code>extra_flags</code> is not DRX_FILE_SKIP_OPEN.</p>
+<p>Passes <code>extra_flags</code> through to the <a class="el" href="dr__tools_8h.html#a8c1399687e4cbc3c0b9bddab3e7619d3">dr_open_file()</a> call if <code>extra_flags</code> is not DRX_FILE_SKIP_OPEN.</p>
 <p>On success, returns the file handle and optionally the resulting path in <code>result</code>. On failure, returns INVALID_FILE.</p>
-<p>Skips <a class="el" href="dr__tools_8h.html#ae3ae2190774a204af207602791a32cb6">dr_open_file()</a> if <code>extra_flags</code> is DRX_FILE_SKIP_OPEN. Returns INVALID_FILE and optionally the resulting path in <code>result</code>. Unique name is not guaranteed and xxxx is set randomly.</p>
+<p>Skips <a class="el" href="dr__tools_8h.html#a8c1399687e4cbc3c0b9bddab3e7619d3">dr_open_file()</a> if <code>extra_flags</code> is DRX_FILE_SKIP_OPEN. Returns INVALID_FILE and optionally the resulting path in <code>result</code>. Unique name is not guaranteed and xxxx is set randomly.</p>
 <dl class="section note"><dt>Note</dt><dd>May be called without calling <a class="el" href="group__drx.html#gae0665a86427616ffc80c59375649e283">drx_init()</a>. </dd></dl>
 
 </div>
@@ -1143,11 +1143,11 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
 <p>Registers for the "soft kills" event, which helps to execute process exit events when a process is terminated by another process.</p>
 <p>The callback's return value indicates whether to skip the termination action by the application: i.e., true indicates to skip it (the usual case) and false indicates to continue with the application action. In some cases, individually continuing requires emulation when the original application action involved multiple processes.</p>
 <p>When there are multiple registered callbacks, if any callback returns true, the application action is skipped.</p>
-<p>In normal usage, upon receiving this callback the client will send a nudge (see <a class="el" href="dr__events_8h.html#aa719c9575ca2329c03ab60ef41ba14c6">dr_nudge_client_ex()</a>) to the targeted process. The nudge handler then performs any shutdown actions, such as instrumentation result output. The handler then terminates the target process from within, allowing the callback in the targeting process to skip the termination action. Passing the exit code to the nudge handler is recommended to preserve the intended application exit code.</p>
+<p>In normal usage, upon receiving this callback the client will send a nudge (see <a class="el" href="dr__events_8h.html#a9e0a6ebc74a4aa8efaed1d6b737512d2">dr_nudge_client_ex()</a>) to the targeted process. The nudge handler then performs any shutdown actions, such as instrumentation result output. The handler then terminates the target process from within, allowing the callback in the targeting process to skip the termination action. Passing the exit code to the nudge handler is recommended to preserve the intended application exit code.</p>
 <p>The nudge handler should support being invoked multiple times (typically by having only the first one take effect) as in some cases a parent process will terminate child processes in multiple ways.</p>
 <p>This event must be registered for during process initialization, in order to properly track per-thread information. Un-registering is not supported: soft kills cannot be in effect for only part of the process lifetime.</p>
 <p>Soft kills can be risky. If the targeted process is not under DynamoRIO control, the nudge might terminate it, but in a different manner than would have occurred. If the nudge fails for some reason but the targeter's termination is still skipped, the child process might be left alive, causing the application to behave incorrectly.</p>
-<p>The implementation of this event uses drmgr's CLS (<a class="el" href="group__drmgr.html#ga933ff32be874004447af771283d0bcee">drmgr_register_cls_field()</a>), which conflicts with <a class="el" href="dr__tools_8h.html#a787aff5df1ded3de8a7ce9f3efef0594">dr_get_tls_field()</a>. A client using this event must use <a class="el" href="group__drmgr.html#ga512b4290d94b1874537e5b604cb27cab">drmgr_register_tls_field()</a> instead of <a class="el" href="dr__tools_8h.html#a787aff5df1ded3de8a7ce9f3efef0594">dr_get_tls_field()</a>.</p>
+<p>The implementation of this event uses drmgr's CLS (<a class="el" href="group__drmgr.html#ga933ff32be874004447af771283d0bcee">drmgr_register_cls_field()</a>), which conflicts with <a class="el" href="dr__tools_8h.html#aaa04a14c2cbf783b4926c2fd14445f82">dr_get_tls_field()</a>. A client using this event must use <a class="el" href="group__drmgr.html#ga512b4290d94b1874537e5b604cb27cab">drmgr_register_tls_field()</a> instead of <a class="el" href="dr__tools_8h.html#aaa04a14c2cbf783b4926c2fd14445f82">dr_get_tls_field()</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>whether successful. </dd></dl>
 
 </div>
@@ -1208,5 +1208,5 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:54 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18718 --- Fri Apr 2 2021 03:25:21 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -23,6 +23,8 @@
     [ "dr_operation_mode_t", "dr__config_8h.html#a486e581c1077fcb8a49e796c9bc188be", [
       [ "DR_MODE_NONE", "dr__config_8h.html#a486e581c1077fcb8a49e796c9bc188beab9f1f2d848cb082195e8c4c32dce3e33", null ],
       [ "DR_MODE_CODE_MANIPULATION", "dr__config_8h.html#a486e581c1077fcb8a49e796c9bc188bea9063a7ce4d71eb37a49799474fe29873", null ],
+      [ "DR_MODE_PROBE", "dr__config_8h.html#a486e581c1077fcb8a49e796c9bc188bea394a72da853ac2fafe8575fd3726fa25", null ],
+      [ "DR_MODE_MEMORY_FIREWALL", "dr__config_8h.html#a486e581c1077fcb8a49e796c9bc188bea0874f9162e289a35c67277b934713403", null ],
       [ "DR_MODE_DO_NOT_RUN", "dr__config_8h.html#a486e581c1077fcb8a49e796c9bc188beae0fab29598cc916f2dc36782c922843b", null ]
     ] ],
     [ "dr_platform_t", "dr__config_8h.html#a43632ea1157f971b7af4273ef696935c", [

@@ -150,7 +150,7 @@ Functions</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga4e8b8bfb2b8edf258fa3ccfe99de5b35a5b120d8fd7b2aca0c3f14116ed99b01f"></a>DRCOVLIB_DUMP_AS_TEXT&#160;</td><td class="fielddoc"><p>Requests to dump the log file in text format. By default the log file is in binary format. When in text format, the log file is <em>not</em> readable by the post-processing tool <a class="el" href="page_drcov.html#sec_drcov2lcov">Post-Processing</a>. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga4e8b8bfb2b8edf258fa3ccfe99de5b35a2d177716bc8797ec53a7f85604d9271c"></a>DRCOVLIB_THREAD_PRIVATE&#160;</td><td class="fielddoc"><p>By default, coverage information is dumped in a single process-wide log file. If DynamoRIO is run with thread-private code caches (i.e., <a class="el" href="dr__tools_8h.html#a54934632c814904bd9e0ce9c83980466">dr_using_all_private_caches()</a> returns true) and this flag is enabled, then per-thread coverage information will be stored and dumped in <code>drcovlib's</code> own thread exit events rather than in <a class="el" href="group__drcovlib.html#ga9ae4cea2825fc79abec8b6c0c87855d9">drcovlib_exit()</a>. </p>
+<tr><td class="fieldname"><a id="gga4e8b8bfb2b8edf258fa3ccfe99de5b35a2d177716bc8797ec53a7f85604d9271c"></a>DRCOVLIB_THREAD_PRIVATE&#160;</td><td class="fielddoc"><p>By default, coverage information is dumped in a single process-wide log file. If DynamoRIO is run with thread-private code caches (i.e., <a class="el" href="dr__tools_8h.html#a684c0fc332a5e5aa11c28ad3d1a6ef57">dr_using_all_private_caches()</a> returns true) and this flag is enabled, then per-thread coverage information will be stored and dumped in <code>drcovlib's</code> own thread exit events rather than in <a class="el" href="group__drcovlib.html#ga9ae4cea2825fc79abec8b6c0c87855d9">drcovlib_exit()</a>. </p>
 </td></tr>
 </table>
 
@@ -618,5 +618,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:54 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18718 --- Fri Apr 2 2021 03:25:21 &nbsp; <img border=0 src="favicon.png">
 </small></address>

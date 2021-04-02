@@ -16,12 +16,12 @@
       [ "DR_VG_ID__DISCARD_TRANSLATIONS", "dr__annotation_8h.html#a991e19026e652477136bd555de560c19a70fbb5f2728906ed5fef0409e06b75f1", null ],
       [ "DR_VG_ID__LAST", "dr__annotation_8h.html#a991e19026e652477136bd555de560c19ade400c6f5dbd4b8faa24da149b16e05d", null ]
     ] ],
-    [ "dr_annotation_pass_pc", "dr__annotation_8h.html#aefe92d3291e89eb78904e026cde8ce20", null ],
-    [ "dr_annotation_register_call", "dr__annotation_8h.html#a3614697e9fd7997c3303784a571fae1a", null ],
-    [ "dr_annotation_register_return", "dr__annotation_8h.html#aa1cd1500b1206677d36ef5b833a835b9", null ],
-    [ "dr_annotation_register_valgrind", "dr__annotation_8h.html#a498a6c747a98a0fbe9dfada715e50e1e", null ],
+    [ "dr_annotation_pass_pc", "dr__annotation_8h.html#ae540235e4d9025f60479d3fd181f697b", null ],
+    [ "dr_annotation_register_call", "dr__annotation_8h.html#a65cd22eacefdcd5c534a1b4aa72ae103", null ],
+    [ "dr_annotation_register_return", "dr__annotation_8h.html#a8e6f07b0e6d56086b086b9d9e565f63a", null ],
+    [ "dr_annotation_register_valgrind", "dr__annotation_8h.html#a358064bc58ac31313d07433e6e5b2d81", null ],
     [ "dr_annotation_set_return_value", "dr__annotation_8h.html#ab32f294e5bfa81b8464dc8bc0e0d4d3e", null ],
-    [ "dr_annotation_unregister_call", "dr__annotation_8h.html#ab033cbbd72964514b40f016c7ce03451", null ],
-    [ "dr_annotation_unregister_return", "dr__annotation_8h.html#a932ab4c2230b52f15166fd299cf195b8", null ],
-    [ "dr_annotation_unregister_valgrind", "dr__annotation_8h.html#a705df396cf7a24a83ae5b2819703638a", null ]
+    [ "dr_annotation_unregister_call", "dr__annotation_8h.html#a69ed751f23d641abd5a5d84c97322744", null ],
+    [ "dr_annotation_unregister_return", "dr__annotation_8h.html#a00c88b7fa482f7263c6e2614fa5f6ebe", null ],
+    [ "dr_annotation_unregister_valgrind", "dr__annotation_8h.html#a11fa34fd81e251f142bed20dddd8f37e", null ]
 ],

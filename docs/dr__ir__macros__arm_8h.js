@@ -1,4 +1,6 @@
 [
+    [ "dr_ir_macros_arm_hlt", "dr__ir__macros__arm_8h.html#a47a526dfd99843afdda9b8998ae1f0fa", null ],
+    [ "dr_ir_macros_arm_hvc", "dr__ir__macros__arm_8h.html#abb9384f8e4bceea1fc1975489797e648", null ],
     [ "INSTR_CREATE_adc", "dr__ir__macros__arm_8h.html#ae9fa56a85e5961d8c14846925df5abf3", null ],
     [ "INSTR_CREATE_adc_shimm", "dr__ir__macros__arm_8h.html#aad51266e5a31d519d9cbdcbdb7052ad2", null ],
     [ "INSTR_CREATE_adc_shreg", "dr__ir__macros__arm_8h.html#a7b038f4df9aee0a7046fe9fa80dca9db", null ],
@@ -79,8 +81,6 @@
     [ "INSTR_CREATE_eors_shreg", "dr__ir__macros__arm_8h.html#a267de03ea003342455282b6cc86a9bec", null ],
     [ "INSTR_CREATE_eret", "dr__ir__macros__arm_8h.html#ae39af6c564b142ce405ff305da2270fa", null ],
     [ "INSTR_CREATE_eret_imm", "dr__ir__macros__arm_8h.html#a17dfb404704aa30f9fc0eff8cef94e29", null ],
-    [ "INSTR_CREATE_hlt", "dr__ir__macros__arm_8h.html#a15fa0c8558f68c6bc3ebdace0e1cdf1b", null ],
-    [ "INSTR_CREATE_hvc", "dr__ir__macros__arm_8h.html#aa9abb916d45e433d0d849af3f968b25a", null ],
     [ "INSTR_CREATE_isb", "dr__ir__macros__arm_8h.html#a83458fe222f070f6d80d930b162845c9", null ],
     [ "INSTR_CREATE_it", "dr__ir__macros__arm_8h.html#a4533bef8ab0435cd49c591f07e6487de", null ],
     [ "INSTR_CREATE_lda", "dr__ir__macros__arm_8h.html#aec529e2949d287e3bc4aeba6f7154af3", null ],

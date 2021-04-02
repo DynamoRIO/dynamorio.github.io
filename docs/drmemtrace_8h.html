@@ -124,7 +124,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Function for file close. The example behavior is described in <a class="el" href="dr__tools_8h.html#ac25b305e0be9f6c09f9761b14f3bbc74">dr_close_file()</a>;</p>
+<p>Function for file close. The example behavior is described in <a class="el" href="dr__tools_8h.html#a2f9ce8187cd9bff18c879978a9ab1b8a">dr_close_file()</a>;</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>The file to be closed. </td></tr>
@@ -145,7 +145,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Function for directory creation. The example behavior is described in <a class="el" href="dr__tools_8h.html#a1ee2651cad7bafe65f3df7d4aeb82120">dr_create_dir()</a>;</p>
+<p>Function for directory creation. The example behavior is described in <a class="el" href="dr__tools_8h.html#a0317a4764f0d04b5510fcfd418131a4c">dr_create_dir()</a>;</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>The directory name for creation.</td></tr>
@@ -188,10 +188,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Function for buffer handoff. Rather than writing a buffer to a file when it is full, instead this handoff function gives ownership to the callee. The tracer allocates a new buffer and uses it for further tracing. The callee is responsible for writing out the buffer and for freeing it by calling <a class="el" href="dr__tools_8h.html#a17b097679298ae00bab97d77ed4a17c2">dr_raw_mem_free()</a>.</p>
+<p>Function for buffer handoff. Rather than writing a buffer to a file when it is full, instead this handoff function gives ownership to the callee. The tracer allocates a new buffer and uses it for further tracing. The callee is responsible for writing out the buffer and for freeing it by calling <a class="el" href="dr__tools_8h.html#aee58c732aec96032bcd5344104ef626c">dr_raw_mem_free()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>The file identifier returned by <code>open_file_func</code> or or <a class="el" href="drmemtrace_8h.html#abb7be083ae67d4a389be1eb1c5fe1b6e">drmemtrace_replace_file_ops()</a> was not called then from <a class="el" href="dr__tools_8h.html#ae3ae2190774a204af207602791a32cb6">dr_open_file()</a> for the per-thread trace file. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>The file identifier returned by <code>open_file_func</code> or or <a class="el" href="drmemtrace_8h.html#abb7be083ae67d4a389be1eb1c5fe1b6e">drmemtrace_replace_file_ops()</a> was not called then from <a class="el" href="dr__tools_8h.html#a8c1399687e4cbc3c0b9bddab3e7619d3">dr_open_file()</a> for the per-thread trace file. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>The start address of the buffer. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">data_size</td><td>The size of valid trace data in the buffer. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">alloc_size</td><td>The allocated size of the buffer.</td></tr>
@@ -213,7 +213,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Function for file open. The file access mode is set by the <code>mode_flags</code> argument which is drawn from the DR_FILE_* defines ORed together. Returns INVALID_FILE if unsuccessful. The example behavior is described in <a class="el" href="dr__tools_8h.html#ae3ae2190774a204af207602791a32cb6">dr_open_file()</a>;</p>
+<p>Function for file open. The file access mode is set by the <code>mode_flags</code> argument which is drawn from the DR_FILE_* defines ORed together. Returns INVALID_FILE if unsuccessful. The example behavior is described in <a class="el" href="dr__tools_8h.html#a8c1399687e4cbc3c0b9bddab3e7619d3">dr_open_file()</a>;</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">fname</td><td>The filename to open. </td></tr>
@@ -236,7 +236,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Function for file read. Reads up to <code>count</code> bytes from file <code>file</code> into <code>buf</code>. Returns the actual number read. The example behavior is described in <a class="el" href="dr__tools_8h.html#a71f6940085912cdce608f317a27fc397">dr_read_file()</a>;</p>
+<p>Function for file read. Reads up to <code>count</code> bytes from file <code>file</code> into <code>buf</code>. Returns the actual number read. The example behavior is described in <a class="el" href="dr__tools_8h.html#ac9600abc55b7ed7e283e6d8a9dee1ecc">dr_read_file()</a>;</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>The file to be read from. </td></tr>
@@ -260,7 +260,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Function for file write. Writes <code>count</code> bytes from <code>data</code> to file <code>file</code>. Returns the actual number written. The example behavior is described in <a class="el" href="dr__tools_8h.html#aeddf708cc2271dc50209b3e78e1d23fb">dr_write_file()</a>;</p>
+<p>Function for file write. Writes <code>count</code> bytes from <code>data</code> to file <code>file</code>. Returns the actual number written. The example behavior is described in <a class="el" href="dr__tools_8h.html#a451ff3e57783acbfdf24c1e557145807">dr_write_file()</a>;</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>The file to be written. </td></tr>
@@ -331,7 +331,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Registers a function to replace the default file write operation for offline tracing and requests that buffer ownership be transfered. The regular file open and close routines (or their replacements from <a class="el" href="drmemtrace_8h.html#abb7be083ae67d4a389be1eb1c5fe1b6e">drmemtrace_replace_file_ops()</a>) will be called, but instead of writing to the files (or calling the <code>write_file_func</code>), the provided <code>handoff_func</code> will be called instead. The callee is responsible for writing out the buffer and for freeing it by calling <a class="el" href="dr__tools_8h.html#a17b097679298ae00bab97d77ed4a17c2">dr_raw_mem_free()</a>. The amount of legitimate data is in <code>data_size</code> and the total allocated size of the buffer is in <code>alloc_size</code>. Any space in between is available for use by the callee. The return value of <code>handoff_cb</code> indicates whether successful or not: failure will be treated as fatal and unrecoverable.</p>
+<p>Registers a function to replace the default file write operation for offline tracing and requests that buffer ownership be transfered. The regular file open and close routines (or their replacements from <a class="el" href="drmemtrace_8h.html#abb7be083ae67d4a389be1eb1c5fe1b6e">drmemtrace_replace_file_ops()</a>) will be called, but instead of writing to the files (or calling the <code>write_file_func</code>), the provided <code>handoff_func</code> will be called instead. The callee is responsible for writing out the buffer and for freeing it by calling <a class="el" href="dr__tools_8h.html#aee58c732aec96032bcd5344104ef626c">dr_raw_mem_free()</a>. The amount of legitimate data is in <code>data_size</code> and the total allocated size of the buffer is in <code>alloc_size</code>. Any space in between is available for use by the callee. The return value of <code>handoff_cb</code> indicates whether successful or not: failure will be treated as fatal and unrecoverable.</p>
 <p>The module list data, written to the first file opened, is not subject to this ownership transfer and uses the <code>write_file_func</code>.</p>
 <p>Because DR memory will be freed in <a class="el" href="dr__app_8h.html#a7e062573c669d8a5564abf54ebf90f31">dr_app_stop_and_cleanup()</a>, an exit callback is provided for a control point to process and free the buffers. When <a class="el" href="dr__app_8h.html#a7e062573c669d8a5564abf54ebf90f31">dr_app_stop_and_cleanup()</a> is used, <code>exit_func</code> will be called (and passed <code>exit_func_arg</code>) after the other application threads are already native.</p>
 <dl class="section note"><dt>Note</dt><dd>The caller is responsible for the transparency and isolation of using these functions, which will be called in the middle of arbitrary application code. </dd></dl>
@@ -586,5 +586,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:51 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18718 --- Fri Apr 2 2021 03:25:16 &nbsp; <img border=0 src="favicon.png">
 </small></address>

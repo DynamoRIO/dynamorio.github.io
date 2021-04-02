@@ -1688,6 +1688,6 @@
     [ "XINST_CREATE_store_simd", "dr__ir__macros__x86_8h.html#a053c0202c5a4229fbc5575183afb02d7", null ],
     [ "XINST_CREATE_sub", "dr__ir__macros__x86_8h.html#afdbcfb317d599ecde76215392878da1c", null ],
     [ "XINST_CREATE_sub_s", "dr__ir__macros__x86_8h.html#a4cbf96f2f31e7c637e8b824741ff418f", null ],
-    [ "INSTR_CREATE_nop2byte_reg", "dr__ir__macros__x86_8h.html#a2fcec3eecc3ea3834cfd0a5bd7fc2bb1", null ],
-    [ "INSTR_CREATE_nop3byte_reg", "dr__ir__macros__x86_8h.html#aad9d30ac6f45fff44dddab2eac07a618", null ]
+    [ "INSTR_CREATE_nop2byte_reg", "dr__ir__macros__x86_8h.html#aa3cd6be1f09b15aaef209789b2cd1a75", null ],
+    [ "INSTR_CREATE_nop3byte_reg", "dr__ir__macros__x86_8h.html#acc567fad910ff9f9a47fdf8b047662a2", null ]
 ],

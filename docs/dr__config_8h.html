@@ -60,6 +60,10 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="dr__config_8h.html#a486e581c1077fcb8a49e796c9bc188bea9063a7ce4d71eb37a49799474fe29873">DR_MODE_CODE_MANIPULATION</a> = 1, 
 <br />
+&#160;&#160;<a class="el" href="dr__config_8h.html#a486e581c1077fcb8a49e796c9bc188bea394a72da853ac2fafe8575fd3726fa25">DR_MODE_PROBE</a> = 2, 
+<br />
+&#160;&#160;<a class="el" href="dr__config_8h.html#a486e581c1077fcb8a49e796c9bc188bea0874f9162e289a35c67277b934713403">DR_MODE_MEMORY_FIREWALL</a> = 3, 
+<br />
 &#160;&#160;<a class="el" href="dr__config_8h.html#a486e581c1077fcb8a49e796c9bc188beae0fab29598cc916f2dc36782c922843b">DR_MODE_DO_NOT_RUN</a> = 4
 <br />
  }</td></tr>
@@ -266,7 +270,11 @@ Functions</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a486e581c1077fcb8a49e796c9bc188beab9f1f2d848cb082195e8c4c32dce3e33"></a>DR_MODE_NONE&#160;</td><td class="fielddoc"><p>No mode. Clients should not attempt to register a process in this mode. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a486e581c1077fcb8a49e796c9bc188bea9063a7ce4d71eb37a49799474fe29873"></a>DR_MODE_CODE_MANIPULATION&#160;</td><td class="fielddoc"><p>Run DynamoRIO in Code Manipulation mode. </p>
+<tr><td class="fieldname"><a id="a486e581c1077fcb8a49e796c9bc188bea9063a7ce4d71eb37a49799474fe29873"></a>DR_MODE_CODE_MANIPULATION&#160;</td><td class="fielddoc"><p>Run DynamoRIO in Code Manipulation mode. This does not preclude using the Probe API. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a486e581c1077fcb8a49e796c9bc188bea394a72da853ac2fafe8575fd3726fa25"></a>DR_MODE_PROBE&#160;</td><td class="fielddoc"><p>Run DynamoRIO in Probe mode. This mode has no code cache. </p><dl class="section warning"><dt>Warning</dt><dd>This mode is not fully supported at this time. </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="a486e581c1077fcb8a49e796c9bc188bea0874f9162e289a35c67277b934713403"></a>DR_MODE_MEMORY_FIREWALL&#160;</td><td class="fielddoc"><p>Run DynamoRIO in security Memory Firewall mode. </p><dl class="section warning"><dt>Warning</dt><dd>This mode is not fully supported at this time. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="a486e581c1077fcb8a49e796c9bc188beae0fab29598cc916f2dc36782c922843b"></a>DR_MODE_DO_NOT_RUN&#160;</td><td class="fielddoc"><p>Do not run this application under DynamoRIO control. Useful for following all child processes except a handful (blacklist). </p>
 </td></tr>
@@ -753,7 +761,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Provides a mechanism for an external entity on the guest OS to communicate with a client. Requires administrative privileges. A process 'nudge' causes a client event handler to be invoked (use <a class="el" href="dr__events_8h.html#a9037603d0bd5bfca4198011adb8d10eb">dr_register_nudge_event()</a> to register the handler function). A nudge is ignored if the process is not running under DynamoRIO, the specified client is not loaded, or if the client does not provide a handler. Nudges are attempted to all processes running on the system.</p>
+<p>Provides a mechanism for an external entity on the guest OS to communicate with a client. Requires administrative privileges. A process 'nudge' causes a client event handler to be invoked (use <a class="el" href="dr__events_8h.html#a03da807cdb97ec8d0db68b6d24974ea4">dr_register_nudge_event()</a> to register the handler function). A nudge is ignored if the process is not running under DynamoRIO, the specified client is not loaded, or if the client does not provide a handler. Nudges are attempted to all processes running on the system.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">client_id</td><td>The unique client ID provided at client registration.</td></tr>
@@ -806,10 +814,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Provides a mechanism for an external entity on the guest OS to communicate with a client. Requires administrative privileges. A process 'nudge' causes a client event handler to be invoked (use <a class="el" href="dr__events_8h.html#a9037603d0bd5bfca4198011adb8d10eb">dr_register_nudge_event()</a> to register the handler function). A nudge is ignored if the process is not running under DynamoRIO, the specified client is not loaded, or if the client does not provide a handler.</p>
+<p>Provides a mechanism for an external entity on the guest OS to communicate with a client. Requires administrative privileges. A process 'nudge' causes a client event handler to be invoked (use <a class="el" href="dr__events_8h.html#a03da807cdb97ec8d0db68b6d24974ea4">dr_register_nudge_event()</a> to register the handler function). A nudge is ignored if the process is not running under DynamoRIO, the specified client is not loaded, or if the client does not provide a handler.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">process_id</td><td>The system id of the process to nudge (see <a class="el" href="dr__tools_8h.html#a83b3658ca78e6b7adc81c57691f0fe50">dr_get_process_id()</a>)</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">process_id</td><td>The system id of the process to nudge (see <a class="el" href="dr__os__utils_8h.html#af99715c7ad2497ad86f4769da0f19699">dr_get_process_id()</a>)</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">client_id</td><td>The unique client ID provided at client registration.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">arg</td><td>An argument passed to the client's nudge handler.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>The number of milliseconds to wait for the nudge to complete before returning. If INFINITE is supplied then the wait is unbounded. If 0 is supplied the no wait is performed. If the wait times out DR_NUDGE_TIMEOUT will be returned.</td></tr>
@@ -865,7 +873,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Provides a mechanism for an external entity on the guest OS to communicate with a client. Requires administrative privileges. A process 'nudge' causes a client event handler to be invoked (use <a class="el" href="dr__events_8h.html#a9037603d0bd5bfca4198011adb8d10eb">dr_register_nudge_event()</a> to register the handler function). A nudge is ignored if the process is not running under DynamoRIO, the specified client is not loaded, or if the client does not provide a handler.</p>
+<p>Provides a mechanism for an external entity on the guest OS to communicate with a client. Requires administrative privileges. A process 'nudge' causes a client event handler to be invoked (use <a class="el" href="dr__events_8h.html#a03da807cdb97ec8d0db68b6d24974ea4">dr_register_nudge_event()</a> to register the handler function). A nudge is ignored if the process is not running under DynamoRIO, the specified client is not loaded, or if the client does not provide a handler.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">process_name</td><td>A NULL-terminated string specifying the name of the target process. The string should identify the base name of the process, not the full path of the executable.</td></tr>
@@ -1085,7 +1093,7 @@ A process nudge is a one way asynchronous communication from an external entity 
     <tr><td class="paramdir">[in]</td><td class="paramname">client_id</td><td>A client_id_t uniquely identifying the client. DynamoRIO provides the client ID as a parameter to <a class="el" href="dr__api_8h.html#a2b938c98dd186cc94eef6880f9e3c3e9">dr_client_main()</a>. Clients use this ID to retrieve client-specific path and option information. Outside entities also identify the target of a nudge via this ID.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">client_pri</td><td>The client number, or priority. Client registration includes a value indicating the priority of a client relative to other clients. In multi-client settings, a client's priority influences event callback ordering. That is, higher priority clients can register their callbacks first; DynamoRIO then calls these routines last. Client priorities range consecutively from 0 to N-1, where N is the number of registered clients. Specify priority 0 to register a client with highest priority.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">client_path</td><td>A NULL-terminated string specifying the full path to a valid client library. The string length cannot exceed <a class="el" href="dr__defines_8h.html#a95c7b582d53e0a376f2a0e89323b2a7b">MAXIMUM_PATH</a>. The client path may not include any semicolons and when combined with <code>client_options</code> may not include all three quote characters (', ", `) simultaneously.</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">client_options</td><td>A NULL-terminated string specifying options that are available to the client as arguments of <a class="el" href="dr__api_8h.html#a2b938c98dd186cc94eef6880f9e3c3e9">dr_client_main()</a> or via <a class="el" href="dr__tools_8h.html#a52ee0b4adc12d9e67f58d55f1313f9fe">dr_get_option_array()</a>. The string length cannot exceed <a class="el" href="dr__config_8h.html#a386c1346b4d4a46488fc050c51bfe9bc">DR_MAX_OPTIONS_LENGTH</a>. The client options may not include any semicolons and when combined with <code>client_path</code> may not include all three quote characters (', ", `) simultaneously.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">client_options</td><td>A NULL-terminated string specifying options that are available to the client as arguments of <a class="el" href="dr__api_8h.html#a2b938c98dd186cc94eef6880f9e3c3e9">dr_client_main()</a> or via <a class="el" href="dr__tools_8h.html#a5f53df83b2108925fa52bd607536e25d">dr_get_option_array()</a>. The string length cannot exceed <a class="el" href="dr__config_8h.html#a386c1346b4d4a46488fc050c51bfe9bc">DR_MAX_OPTIONS_LENGTH</a>. The client options may not include any semicolons and when combined with <code>client_path</code> may not include all three quote characters (', ", `) simultaneously.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1619,5 +1627,5 @@ Not yet available on Linux or MacOS. </dd></dl>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:52 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18718 --- Fri Apr 2 2021 03:25:16 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -217,7 +217,7 @@ Obtaining Cache Addresses for rseq_cs</h3>
 <li>If using a single writable <code>rseq_cs</code> (see above) this problem goes away, but we rejected that solution.</li>
 <li>Add some kind of interface to pass patching information to emit_fragment.<ul>
 <li>Add <code>patch_list_t</code> support to emit_fragment? This would take some work, changing how we emit instructions for a fragment. (Today these patch lists are only supported on separately generated code such as context switch code.)</li>
-<li>Use label instruction notes requesting patching? We do have a few reserved notes: see DR_NOTE_FIRST_RESERVED. (As part of investigation this I noticed that <a class="el" href="dr__ir__utils_8h.html#af09cc56ad45eb3aa0f10ea5a0cb6aadd">dr_clobber_retaddr_after_read()</a> could probably be changed to use a reserved note: I filed <a href="https://github.com/DynamoRIO/dynamorio/issues/3836">i#3836</a>.)</li>
+<li>Use label instruction notes requesting patching? We do have a few reserved notes: see DR_NOTE_FIRST_RESERVED. (As part of investigation this I noticed that <a class="el" href="dr__ir__utils_8h.html#a1255b93576eb509d7fe9dfb4cfae472f">dr_clobber_retaddr_after_read()</a> could probably be changed to use a reserved note: I filed <a href="https://github.com/DynamoRIO/dynamorio/issues/3836">i#3836</a>.)</li>
 </ul>
 </li>
 <li>Decode the fragment after it was emitted. Seems the most hacky and fragile, looking for code patterns.</li>
@@ -258,5 +258,5 @@ Citations</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:54 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18718 --- Fri Apr 2 2021 03:25:21 &nbsp; <img border=0 src="favicon.png">
 </small></address>

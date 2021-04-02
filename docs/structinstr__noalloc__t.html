@@ -42,16 +42,16 @@ Data Fields</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A version of <a class="el" href="structinstr__t.html">instr_t</a> which guarantees to not use heap allocation for regular decoding and encoding. It inlines all the possible operands and encoding space inside the structure. Some operations could still use heap if custom label data is used to point at heap-allocated structures through extension libraries or custom code.</p>
-<p>The <a class="el" href="dr__ir__instr_8h.html#a16f5ae54784f4c5eb999b38e2d54eb23">instr_from_noalloc()</a> function should be used to obtain an <a class="el" href="structinstr__t.html">instr_t</a> pointer for passing to API functions:</p>
+<p>The <a class="el" href="dr__ir__instr_8h.html#a75a82f341d4ea6a5b5f29f2ef1263355">instr_from_noalloc()</a> function should be used to obtain an <a class="el" href="structinstr__t.html">instr_t</a> pointer for passing to API functions:</p>
 <div class="fragment"><div class="line"><a class="code" href="structinstr__noalloc__t.html">instr_noalloc_t</a> noalloc;</div>
-<div class="line"><a class="code" href="dr__ir__instr_8h.html#ab31c68d4b93148811d06a86d1451a624">instr_noalloc_init</a>(dcontext, &amp;noalloc);</div>
-<div class="line"><a class="code" href="structinstr__t.html">instr_t</a> *<a class="code" href="structinstr__noalloc__t.html#a885135faea8f1be7b4669f214007d96e">instr</a> = <a class="code" href="dr__ir__instr_8h.html#a16f5ae54784f4c5eb999b38e2d54eb23">instr_from_noalloc</a>(&amp;noalloc);</div>
-<div class="line">pc = <a class="code" href="dr__ir__utils_8h.html#a6f62065c2b7e764fe9fb0f46557e2264">decode</a>(dcontext, ptr, <a class="code" href="structinstr__noalloc__t.html#a885135faea8f1be7b4669f214007d96e">instr</a>);</div>
-</div><!-- fragment --><p>No freeing is required. To re-use the same structure, <a class="el" href="dr__ir__instr_8h.html#accd2bdee07d2e6ca0be3b252bc7b913f">instr_reset()</a> can be called.</p>
+<div class="line"><a class="code" href="dr__ir__instr_8h.html#a2b0ce5e5125951e4a7dfdc5ac716282a">instr_noalloc_init</a>(dcontext, &amp;noalloc);</div>
+<div class="line"><a class="code" href="structinstr__t.html">instr_t</a> *<a class="code" href="structinstr__noalloc__t.html#a885135faea8f1be7b4669f214007d96e">instr</a> = <a class="code" href="dr__ir__instr_8h.html#a75a82f341d4ea6a5b5f29f2ef1263355">instr_from_noalloc</a>(&amp;noalloc);</div>
+<div class="line">pc = <a class="code" href="dr__ir__decode_8h.html#a5ca2a278008e547130218e8cfde44e3d">decode</a>(dcontext, ptr, <a class="code" href="structinstr__noalloc__t.html#a885135faea8f1be7b4669f214007d96e">instr</a>);</div>
+</div><!-- fragment --><p>No freeing is required. To re-use the same structure, <a class="el" href="dr__ir__instr_8h.html#aaf4d287021b012cde46a3f2502dde2af">instr_reset()</a> can be called.</p>
 <p>Some operations are not supported on this instruction format:</p><ul>
-<li><a class="el" href="dr__ir__instr_8h.html#af8c874bf0f8b67dd6a85f2d54c1e87dc">instr_clone()</a></li>
-<li><a class="el" href="dr__ir__instr_8h.html#afcc087f8b47135d8f08520bf0fffa630">instr_remove_srcs()</a></li>
-<li><a class="el" href="dr__ir__instr_8h.html#ae86db389d26757898fb8a614e43bf4b7">instr_remove_dsts()</a></li>
+<li><a class="el" href="dr__ir__instr_8h.html#a36cfff6a0f3c66e861149b2c94940798">instr_clone()</a></li>
+<li><a class="el" href="dr__ir__instr_8h.html#a885dab32ac46e45dc9004f934062d7eb">instr_remove_srcs()</a></li>
+<li><a class="el" href="dr__ir__instr_8h.html#ab17f197a2ce2848973ad9ec595e2fe69">instr_remove_dsts()</a></li>
 <li>Automated re-relativization when encoding.</li>
 </ul>
 <p>This format does not support caching encodings, so it is less efficient for encoding. It is intended for use when decoding in a signal handler or other locations where heap allocation is unsafe. </p>
@@ -82,7 +82,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Encoding space for <a class="el" href="dr__ir__instr_8h.html#ace0e57a48576a4aac25b1554f6ebcbf7">instr_length()</a>, etc. </p>
+<p>Encoding space for <a class="el" href="dr__ir__instr_8h.html#aad3aa16a7ca0f44f6721cb308a80a978">instr_length()</a>, etc. </p>
 
 </div>
 </div>
@@ -120,16 +120,16 @@ Data Fields</h2></td></tr>
 <li>/home/runner/work/dynamorio/dynamorio/build_release-64/include/<a class="el" href="dr__ir__instr_8h.html">dr_ir_instr.h</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="astructinstr__noalloc__t_html_a885135faea8f1be7b4669f214007d96e"><div class="ttname"><a href="structinstr__noalloc__t.html#a885135faea8f1be7b4669f214007d96e">instr_noalloc_t::instr</a></div><div class="ttdeci">instr_t instr</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:354</div></div>
-<div class="ttc" id="adr__ir__utils_8h_html_a6f62065c2b7e764fe9fb0f46557e2264"><div class="ttname"><a href="dr__ir__utils_8h.html#a6f62065c2b7e764fe9fb0f46557e2264">decode</a></div><div class="ttdeci">byte * decode(void *drcontext, byte *pc, instr_t *instr)</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_ab31c68d4b93148811d06a86d1451a624"><div class="ttname"><a href="dr__ir__instr_8h.html#ab31c68d4b93148811d06a86d1451a624">instr_noalloc_init</a></div><div class="ttdeci">void instr_noalloc_init(void *drcontext, instr_noalloc_t *instr)</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_a16f5ae54784f4c5eb999b38e2d54eb23"><div class="ttname"><a href="dr__ir__instr_8h.html#a16f5ae54784f4c5eb999b38e2d54eb23">instr_from_noalloc</a></div><div class="ttdeci">INSTR_INLINE instr_t * instr_from_noalloc(instr_noalloc_t *noalloc)</div></div>
-<div class="ttc" id="astructinstr__t_html"><div class="ttname"><a href="structinstr__t.html">instr_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:326</div></div>
-<div class="ttc" id="astructinstr__noalloc__t_html"><div class="ttname"><a href="structinstr__noalloc__t.html">instr_noalloc_t</a></div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:353</div></div>
+<div class="ttc" id="astructinstr__noalloc__t_html_a885135faea8f1be7b4669f214007d96e"><div class="ttname"><a href="structinstr__noalloc__t.html#a885135faea8f1be7b4669f214007d96e">instr_noalloc_t::instr</a></div><div class="ttdeci">instr_t instr</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:325</div></div>
+<div class="ttc" id="adr__ir__decode_8h_html_a5ca2a278008e547130218e8cfde44e3d"><div class="ttname"><a href="dr__ir__decode_8h.html#a5ca2a278008e547130218e8cfde44e3d">decode</a></div><div class="ttdeci">DR_API byte * decode(void *drcontext, byte *pc, instr_t *instr)</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_a2b0ce5e5125951e4a7dfdc5ac716282a"><div class="ttname"><a href="dr__ir__instr_8h.html#a2b0ce5e5125951e4a7dfdc5ac716282a">instr_noalloc_init</a></div><div class="ttdeci">DR_API void instr_noalloc_init(void *drcontext, instr_noalloc_t *instr)</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_a75a82f341d4ea6a5b5f29f2ef1263355"><div class="ttname"><a href="dr__ir__instr_8h.html#a75a82f341d4ea6a5b5f29f2ef1263355">instr_from_noalloc</a></div><div class="ttdeci">DR_API INSTR_INLINE instr_t * instr_from_noalloc(instr_noalloc_t *noalloc)</div></div>
+<div class="ttc" id="astructinstr__t_html"><div class="ttname"><a href="structinstr__t.html">instr_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:328</div></div>
+<div class="ttc" id="astructinstr__noalloc__t_html"><div class="ttname"><a href="structinstr__noalloc__t.html">instr_noalloc_t</a></div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:324</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:54 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18718 --- Fri Apr 2 2021 03:25:22 &nbsp; <img border=0 src="favicon.png">
 </small></address>

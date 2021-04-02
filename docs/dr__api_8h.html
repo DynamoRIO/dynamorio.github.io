@@ -38,13 +38,20 @@ permalink: /dr__api_8h.html
 <code>#include &quot;<a class="el" href="dr__events_8h.html">dr_events.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dr__app_8h.html">dr_app.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dr__ir__opnd_8h.html">dr_ir_opnd.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dr__modules_8h.html">dr_modules.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dr__os__utils_8h.html">dr_os_utils.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dr__tools_8h.html">dr_tools.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dr__proc_8h.html">dr_proc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dr__ir__encode_8h.html">dr_ir_encode.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dr__ir__instr_8h.html">dr_ir_instr.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dr__ir__instr__inline_8h.html">dr_ir_instr_inline.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dr__ir__decode_8h.html">dr_ir_decode.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dr__ir__disassemble_8h.html">dr_ir_disassemble.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dr__ir__utils_8h.html">dr_ir_utils.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dr__ir__instrlist_8h.html">dr_ir_instrlist.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="dr__ir__instr_8h.html">dr_ir_instr.h</a>&quot;</code><br />
 <code>#include &quot;dr_ir_opcodes.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="dr__ir__macros_8h.html">dr_ir_macros.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dr__tracedump_8h.html">dr_tracedump.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dr__annotation_8h.html">dr_annotation.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -73,7 +80,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This declaration requests that DR perform sanity checks to ensure that client libraries will also operate safely when linked statically into an application. These checks include ensuring that the system allocator is not called outside of process initialization or exit, where such calls raise transparency issues due to the lack of isolation without a private loader. Currently, these checks are only performed in debug builds on UNIX. This can be overridden in client code by calling <a class="el" href="dr__events_8h.html#a4b6f6d7d9353b04475e179c48f645b82">dr_allow_unsafe_static_behavior()</a>. </p>
+<p>This declaration requests that DR perform sanity checks to ensure that client libraries will also operate safely when linked statically into an application. These checks include ensuring that the system allocator is not called outside of process initialization or exit, where such calls raise transparency issues due to the lack of isolation without a private loader. Currently, these checks are only performed in debug builds on UNIX. This can be overridden in client code by calling <a class="el" href="dr__events_8h.html#a2bab7837ca93d577e4563e470601d371">dr_allow_unsafe_static_behavior()</a>. </p>
 
 </div>
 </div>
@@ -110,7 +117,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>When registering a process, users must provide a list of paths to client libraries and their associated client-specific options. DR looks up "dr_client_main" in each client library and calls that function when the process starts. Clients can register to receive callbacks for the various events within <a class="el" href="dr__api_8h.html#a2b938c98dd186cc94eef6880f9e3c3e9">dr_client_main()</a>. Note that client paths and options cannot include semicolons.</p>
-<p><code>client_id</code> is the ID supplied at registration and is used to identify the client for <a class="el" href="dr__tools_8h.html#a52ee0b4adc12d9e67f58d55f1313f9fe">dr_get_option_array()</a>, <a class="el" href="dr__tools_8h.html#afb7d403eb032bd14ae78807ae3d59ea0">dr_get_client_path()</a>, and external nudges.</p>
+<p><code>client_id</code> is the ID supplied at registration and is used to identify the client for <a class="el" href="dr__tools_8h.html#a5f53df83b2108925fa52bd607536e25d">dr_get_option_array()</a>, <a class="el" href="dr__tools_8h.html#afccb9210ada84de4fbbaa8d851952a37">dr_get_client_path()</a>, and external nudges.</p>
 <p>The arguments passed to the client are specified in <code>argc</code> and <code>argv</code>. To match standalone application conventions, <code>argv</code>[0] is set to the client library path, with the actual parameters starting at index 1. </p>
 
 </div>
@@ -140,5 +147,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18713 --- Sat Mar 27 2021 17:36:52 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18718 --- Fri Apr 2 2021 03:25:16 &nbsp; <img border=0 src="favicon.png">
 </small></address>
