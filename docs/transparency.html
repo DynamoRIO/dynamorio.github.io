@@ -55,14 +55,14 @@ Leaving the Application Unchanged When Possible</h1>
 <p><a class="anchor" id="sec_trans_floating_point"></a></p><dl class="section user"><dt>X87 Floating Point State Transparency</dt><dd></dd></dl>
 <p>Because it is expensive to do so and rarely necessary, on x86 DynamoRIO does <em>NOT</em> save or restore the x87 floating point state or MMX (64-bit) registers during a context switch away from the application. The larger multimedia registers (XMM, YMM, ZMM, whether holding floating-point or integer values) are preserved, but if at any time a client wishes to use x87 floating point or MMX operations, it must explicitly preserve the state. The <a class="el" href="dr__ir__utils_8h.html#a1df44dbe3d8dbf82e63e96741f167c64">dr_insert_clean_call()</a> routine takes a boolean indicating whether x87 floating point state should be preserved across the call; this is the most convenient method for saving the state.</p>
 <p>The state can alternatively be saved explicitly from C code using:</p>
-<div class="fragment"><div class="line"><a class="code" href="dr__proc_8h.html#a4a11c9d5d127ce126562ad35b4d165dd">proc_save_fpstate</a>(<span class="keywordtype">byte</span> *buf)</div>
-<div class="line"><a class="code" href="dr__proc_8h.html#a23edceee5d1ae7c7d51a212432e6d644">proc_restore_fpstate</a>(<span class="keywordtype">byte</span> *buf)</div>
+<div class="fragment"><div class="line"><a class="code" href="dr__proc_8h.html#a48ca3205c37d6e41d007ac54a1d60e6a">proc_save_fpstate</a>(<span class="keywordtype">byte</span> *buf)</div>
+<div class="line"><a class="code" href="dr__proc_8h.html#aacb849daecc3021e451d9441b26cc814">proc_restore_fpstate</a>(<span class="keywordtype">byte</span> *buf)</div>
 </div><!-- fragment --><p>Saving can be done from inlined code in the code cache using:</p>
 <div class="fragment"><div class="line"><a class="code" href="dr__ir__utils_8h.html#aa23665c11b7d79a29ea185113d07944f">dr_insert_save_fpstate</a>(), <a class="code" href="dr__ir__utils_8h.html#a74016eacf3a9cfc20a93a9ac0bca9c59">dr_insert_restore_fpstate</a>() </div>
 </div><!-- fragment --><p>These routines require a buffer that is 16-byte-aligned and of a certain size (512 bytes for processors with the FXSR feature, and 108 bytes for those without). Here is a sample usage:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">byte</span> fp_raw[512 + 16];</div>
 <div class="line"><span class="keywordtype">byte</span> *fp_align = (<span class="keywordtype">byte</span> *) ( (((ptr_uint_t)fp_raw) + 16) &amp; ((ptr_uint_t)-16) );</div>
-<div class="line"><a class="code" href="dr__proc_8h.html#a4a11c9d5d127ce126562ad35b4d165dd">proc_save_fpstate</a>(fp_align);</div>
+<div class="line"><a class="code" href="dr__proc_8h.html#a48ca3205c37d6e41d007ac54a1d60e6a">proc_save_fpstate</a>(fp_align);</div>
 </div><!-- fragment --><p>Note that floating point operations include almost any operation that acts on a float, even printing one with %f, on older compilers. Modern compilers typically do not use x87 operations.</p>
 <p>The XMM (128-bit) and larger registers are saved by DynamoRIO on context switches and clean calls. See also the <a class="el" href="dr__ir__utils_8h.html#a70dc8c6ccbd73b540991c5da347e65b2">dr_mcontext_xmm_fields_valid()</a> routine.</p>
 <p>On ARM/AArch64, DynamoRIO saves and restores all the registers, including the SIMD/FP registers, during a context switch away from the application. The functions proc_save_fpstate and proc_restore_fpstate are provided, but do nothing.</p>
@@ -97,13 +97,13 @@ Alertable System Calls</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <div class="ttc" id="adr__ir__utils_8h_html_aa23665c11b7d79a29ea185113d07944f"><div class="ttname"><a href="dr__ir__utils_8h.html#aa23665c11b7d79a29ea185113d07944f">dr_insert_save_fpstate</a></div><div class="ttdeci">DR_API void dr_insert_save_fpstate(void *drcontext, instrlist_t *ilist, instr_t *where, opnd_t buf)</div></div>
-<div class="ttc" id="adr__proc_8h_html_a23edceee5d1ae7c7d51a212432e6d644"><div class="ttname"><a href="dr__proc_8h.html#a23edceee5d1ae7c7d51a212432e6d644">proc_restore_fpstate</a></div><div class="ttdeci">void proc_restore_fpstate(byte *buf)</div></div>
-<div class="ttc" id="adr__proc_8h_html_a4a11c9d5d127ce126562ad35b4d165dd"><div class="ttname"><a href="dr__proc_8h.html#a4a11c9d5d127ce126562ad35b4d165dd">proc_save_fpstate</a></div><div class="ttdeci">size_t proc_save_fpstate(byte *buf)</div></div>
+<div class="ttc" id="adr__proc_8h_html_aacb849daecc3021e451d9441b26cc814"><div class="ttname"><a href="dr__proc_8h.html#aacb849daecc3021e451d9441b26cc814">proc_restore_fpstate</a></div><div class="ttdeci">DR_API void proc_restore_fpstate(byte *buf)</div></div>
+<div class="ttc" id="adr__proc_8h_html_a48ca3205c37d6e41d007ac54a1d60e6a"><div class="ttname"><a href="dr__proc_8h.html#a48ca3205c37d6e41d007ac54a1d60e6a">proc_save_fpstate</a></div><div class="ttdeci">DR_API size_t proc_save_fpstate(byte *buf)</div></div>
 <div class="ttc" id="adr__ir__utils_8h_html_a74016eacf3a9cfc20a93a9ac0bca9c59"><div class="ttname"><a href="dr__ir__utils_8h.html#a74016eacf3a9cfc20a93a9ac0bca9c59">dr_insert_restore_fpstate</a></div><div class="ttdeci">DR_API void dr_insert_restore_fpstate(void *drcontext, instrlist_t *ilist, instr_t *where, opnd_t buf)</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18718 --- Fri Apr 2 2021 03:25:21 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18725 --- Fri Apr 9 2021 03:16:54 &nbsp; <img border=0 src="favicon.png">
 </small></address>

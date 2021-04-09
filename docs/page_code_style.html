@@ -30,10 +30,11 @@ Automated Formatting</h1>
 <p>We employ automated code formatting via <a href="https://releases.llvm.org/6.0.0/tools/clang/docs/ClangFormat.html"><code>clang-format</code> version 6.0</a>. The <a href="https://github.com/DynamoRIO/dynamorio/blob/master/.clang-format"><code>.clang-format</code> top-level file</a> specifies the style rules for all <code>.h</code>, <code>.c</code>, and <code>.cpp</code> source code files. Developers are expected to set up their editors to use <code>clang-format</code> when saving each file (see <a href="https://releases.llvm.org/6.0.0/tools/clang/docs/ClangFormat.html">the <code>clang-format</code> documentation</a> for pointers to vim, emacs, and Visual Studio setup instructions). Our test suite includes a format check and will fail any code whose formatting does not match the <code>clang-format</code> output.</p>
 <h1><a class="anchor" id="autotoc_md121"></a>
 Legacy Code</h1>
-<p>Some of the style conventions have changed over time, but we have not wanted to incur the cost in time and history confusion of changing all old code. Thus, you may observe old code that does not comply with some of these conventions. These convention overrule surrounding code! Please change the style of old code when you are making other change to the same lines.</p>
+<p>Some of the style conventions have changed over time, but we have not wanted to incur the cost in time and history confusion of changing all old code. Thus, you may observe old code that does not comply with some of these conventions. These listed conventions overrule surrounding code! Please change the style of old code when you are making other changes to the same lines.</p>
 <h1><a class="anchor" id="autotoc_md122"></a>
 Naming Conventions</h1>
 <ol type="1">
+<li>Header files consisting of exported interface content that is also used internally are named with an <code>_api.h</code> suffix: e.g., <code>encode_api.h</code>. If the content is solely used externally, it should be named the same as its exported name: e.g., <code><a class="el" href="dr__inject_8h.html" title="Injection API. Use these functions to launch processes under the control of DynamoRIO.">dr_inject.h</a></code>. For the former case, where the exported name is different, the include guards should use the exported name.</li>
 <li><p class="startli">Variable and function names use only lowercase letters. Multi-word function and variable names are all lowercase with underscores delimiting words. Do not use CamelCase for names, unless mirroring Windows-defined data structures.</p>
 <p class="startli"><b>GOOD:</b> <code><a class="el" href="dr__ir__instr_8h.html#a48b62c86bcffcd715ec554697089d1dd">instr_get_target()</a></code></p>
 <p class="startli"><em>BAD:</em> <code>instrGetTarget()</code></p>
@@ -72,6 +73,7 @@ Naming Conventions</h1>
 <div class="line"><span class="preprocessor">#define IF_WINDOWS_(x) x,</span></div>
 </div><!-- fragment --></li>
 <li>Functions that operate on a data structure should contain that structure as a prefix. For example, all of the routines that operate on the <code><a class="el" href="structinstr__t.html">instr_t</a></code> struct begin with <code>instr_</code>.</li>
+<li>In <code>core/</code>, short names or any global name with a chance of colliding with names from an including application linking statically should be qualified with a <code>d_r_</code> prefx: e.g., <code>d_r_dispatch</code>. This is distinct from the <code>dr_</code> prefix which is used on exported interface names.</li>
 <li>Use <code>static</code> when possible for every function or variable that is not needed outside of its own file.</li>
 <li>Do not shadow global variables (or variables in containing scopes) by using local variables of the same name: choose a distinct name for the local variable.</li>
 </ol>
@@ -251,13 +253,13 @@ Program Structure</h1>
 <li>A multi-line (not just multi-statement) body (of an if, loop, etc.) should always be surrounded with braces (to avoid errors in later statements arising from indentation mistakes).</li>
 <li>Statements should always begin on a new line (do not put multiple statements on the same line).</li>
 <li><p class="startli">The case statements of a switch statement should not be indented: they should line up with the switch itself. <b>GOOD:</b> </p><div class="fragment"><div class="line"><span class="keywordflow">switch</span> (opc) {</div>
-<div class="line"><span class="keywordflow">case</span> <a class="code" href="dr__ir__opcodes__arm_8h.html#a16af7b253440dadd46a80a4b9fddba4da21a776dbbf8d3e63ba27fb4854052d6a">OP_add</a>: ...</div>
-<div class="line">case <a class="code" href="dr__ir__opcodes__arm_8h.html#a16af7b253440dadd46a80a4b9fddba4da0c4b2b125daa3c94937be8625441d6f5">OP_sub</a>: ...</div>
+<div class="line"><span class="keywordflow">case</span> <a class="code" href="dr__ir__opcodes__arm_8h.html#a726ca809ffd3d67ab4b8476646f26635a21a776dbbf8d3e63ba27fb4854052d6a">OP_add</a>: ...</div>
+<div class="line">case <a class="code" href="dr__ir__opcodes__arm_8h.html#a726ca809ffd3d67ab4b8476646f26635a0c4b2b125daa3c94937be8625441d6f5">OP_sub</a>: ...</div>
 <div class="line">default: ...</div>
 <div class="line">}</div>
 </div><!-- fragment --><p class="startli"><em>BAD:</em> </p><div class="fragment"><div class="line"><span class="keywordflow">switch</span> (opc) {</div>
-<div class="line">    <span class="keywordflow">case</span> <a class="code" href="dr__ir__opcodes__arm_8h.html#a16af7b253440dadd46a80a4b9fddba4da21a776dbbf8d3e63ba27fb4854052d6a">OP_add</a>: ...</div>
-<div class="line">    <span class="keywordflow">case</span> <a class="code" href="dr__ir__opcodes__arm_8h.html#a16af7b253440dadd46a80a4b9fddba4da0c4b2b125daa3c94937be8625441d6f5">OP_sub</a>: ...</div>
+<div class="line">    <span class="keywordflow">case</span> <a class="code" href="dr__ir__opcodes__arm_8h.html#a726ca809ffd3d67ab4b8476646f26635a21a776dbbf8d3e63ba27fb4854052d6a">OP_add</a>: ...</div>
+<div class="line">    <span class="keywordflow">case</span> <a class="code" href="dr__ir__opcodes__arm_8h.html#a726ca809ffd3d67ab4b8476646f26635a0c4b2b125daa3c94937be8625441d6f5">OP_sub</a>: ...</div>
 <div class="line">    <span class="keywordflow">default</span>: ...</div>
 <div class="line">}</div>
 </div><!-- fragment --></li>
@@ -307,13 +309,13 @@ C++</h1>
 </ol>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
-<div class="ttc" id="adr__ir__opcodes__arm_8h_html_a16af7b253440dadd46a80a4b9fddba4da0c4b2b125daa3c94937be8625441d6f5"><div class="ttname"><a href="dr__ir__opcodes__arm_8h.html#a16af7b253440dadd46a80a4b9fddba4da0c4b2b125daa3c94937be8625441d6f5">OP_sub</a></div><div class="ttdeci">@ OP_sub</div><div class="ttdef"><b>Definition:</b> dr_ir_opcodes_arm.h:326</div></div>
-<div class="ttc" id="adr__ir__opcodes__arm_8h_html_a16af7b253440dadd46a80a4b9fddba4da21a776dbbf8d3e63ba27fb4854052d6a"><div class="ttname"><a href="dr__ir__opcodes__arm_8h.html#a16af7b253440dadd46a80a4b9fddba4da21a776dbbf8d3e63ba27fb4854052d6a">OP_add</a></div><div class="ttdeci">@ OP_add</div><div class="ttdef"><b>Definition:</b> dr_ir_opcodes_arm.h:69</div></div>
-<div class="ttc" id="astructinstr__t_html"><div class="ttname"><a href="structinstr__t.html">instr_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:328</div></div>
+<div class="ttc" id="adr__ir__opcodes__arm_8h_html_a726ca809ffd3d67ab4b8476646f26635a21a776dbbf8d3e63ba27fb4854052d6a"><div class="ttname"><a href="dr__ir__opcodes__arm_8h.html#a726ca809ffd3d67ab4b8476646f26635a21a776dbbf8d3e63ba27fb4854052d6a">OP_add</a></div><div class="ttdeci">@ OP_add</div><div class="ttdef"><b>Definition:</b> dr_ir_opcodes_arm.h:69</div></div>
+<div class="ttc" id="adr__ir__opcodes__arm_8h_html_a726ca809ffd3d67ab4b8476646f26635a0c4b2b125daa3c94937be8625441d6f5"><div class="ttname"><a href="dr__ir__opcodes__arm_8h.html#a726ca809ffd3d67ab4b8476646f26635a0c4b2b125daa3c94937be8625441d6f5">OP_sub</a></div><div class="ttdeci">@ OP_sub</div><div class="ttdef"><b>Definition:</b> dr_ir_opcodes_arm.h:326</div></div>
+<div class="ttc" id="astructinstr__t_html"><div class="ttname"><a href="structinstr__t.html">instr_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:371</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18718 --- Fri Apr 2 2021 03:25:20 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18725 --- Fri Apr 9 2021 03:16:54 &nbsp; <img border=0 src="favicon.png">
 </small></address>

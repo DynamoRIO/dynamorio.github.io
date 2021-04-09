@@ -695,7 +695,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns information about the reservation and restoration status of <code>reg</code>. The <code>size</code> field of <code>info</code> must be set before calling. To query information about the arithmetic flags, pass <a class="el" href="dr__ir__opnd_8h.html#a80155586fa275b28773c9b203f52cabaa3b7e285b0a732b7da09c0f65a66f7882">DR_REG_NULL</a> for <code>reg</code>.</p>
+<p>Returns information about the reservation and restoration status of <code>reg</code>. The <code>size</code> field of <code>info</code> must be set before calling. To query information about the arithmetic flags, pass <a class="el" href="dr__ir__opnd_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a3b7e285b0a732b7da09c0f65a66f7882">DR_REG_NULL</a> for <code>reg</code>.</p>
 <dl class="section return"><dt>Returns</dt><dd>whether successful or an error code on failure. </dd></dl>
 
 </div>
@@ -951,7 +951,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>This is a convenience routine that calls <a class="el" href="group__drreg.html#ga52ef72f8179e3a1eff9f74cab9d733c4">drreg_get_app_value()</a> for every register used by <code>opnd</code>, with that register passed as the application and destination registers. This routine will write to reserved as well as unreserved registers. This is intended as a convenience barrier for lazy restores performed by drreg.</p>
 <p>If called during drmgr's insertion phase, <code>where</code> must be the current application instruction.</p>
-<p>On ARM, asking to place the application value of the register returned by <a class="el" href="dr__ir__utils_8h.html#ad7af9296c9f5930b025186aea0688b13">dr_get_stolen_reg()</a> into itself is not supported. If <code>opnd</code> uses the stolen register, this routine will swap it for a scratch register. This scratch register will be <code>*swap</code> if <code>*swap</code> is not <a class="el" href="dr__ir__opnd_8h.html#a80155586fa275b28773c9b203f52cabaa3b7e285b0a732b7da09c0f65a66f7882">DR_REG_NULL</a>; otherwise, <a class="el" href="group__drreg.html#gab922bcd0f9216884db35f2e6423f6337">drreg_reserve_register()</a> with NULL for <code>reg_allowed</code> will be called, and the result returned in <code>*swap</code>. It is up to the caller to un-reserve the register in that case.</p>
+<p>On ARM, asking to place the application value of the register returned by <a class="el" href="dr__ir__utils_8h.html#ad7af9296c9f5930b025186aea0688b13">dr_get_stolen_reg()</a> into itself is not supported. If <code>opnd</code> uses the stolen register, this routine will swap it for a scratch register. This scratch register will be <code>*swap</code> if <code>*swap</code> is not <a class="el" href="dr__ir__opnd_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a3b7e285b0a732b7da09c0f65a66f7882">DR_REG_NULL</a>; otherwise, <a class="el" href="group__drreg.html#gab922bcd0f9216884db35f2e6423f6337">drreg_reserve_register()</a> with NULL for <code>reg_allowed</code> will be called, and the result returned in <code>*swap</code>. It is up to the caller to un-reserve the register in that case.</p>
 <dl class="section return"><dt>Returns</dt><dd>whether successful or an error code on failure. On failure, any values that were already restored are not undone. </dd></dl>
 
 </div>
@@ -1081,7 +1081,7 @@ Functions</h2></td></tr>
 <p>The results from <a class="el" href="group__drreg.html#gad8ff9a156f64e7146284385f2a26c8e4">drreg_reservation_info_ex()</a> can be used to predict the behavior of this routine. A restore is needed if !drreg_reserve_info_t.holds_app_value. and <a class="el" href="struct__drreg__reserve__info__t.html#ae89cf72819d8b01016d58a8c2c83b53e">drreg_reserve_info_t.app_value_retained</a>. A respill is needed if a restore is needed and <a class="el" href="struct__drreg__reserve__info__t.html#a4a12304127b48c83d2270760ff587983">drreg_reserve_info_t.opnd</a> is a register.</p>
 <p>If <code>app_reg</code> is a dead register, <a class="el" href="group__drreg.html#ggad5b7a7a020d7206b11e61e7cdae02ee9a1f21cc5ebb7031b6430b3cdb2a21ddf8">DRREG_ERROR_NO_APP_VALUE</a> may be returned. Set <code>conservative</code> in <code>drreg_options_t</code> to avoid this error.</p>
 <p>If called during drmgr's insertion phase, <code>where</code> must be the current application instruction.</p>
-<p>To restore the arithmetic flags, pass <a class="el" href="dr__ir__opnd_8h.html#a80155586fa275b28773c9b203f52cabaa3b7e285b0a732b7da09c0f65a66f7882">DR_REG_NULL</a> for <code>reg</code>.</p>
+<p>To restore the arithmetic flags, pass <a class="el" href="dr__ir__opnd_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a3b7e285b0a732b7da09c0f65a66f7882">DR_REG_NULL</a> for <code>reg</code>.</p>
 <p>On ARM, passing <code>reg</code> equal to <a class="el" href="dr__ir__utils_8h.html#ad7af9296c9f5930b025186aea0688b13">dr_get_stolen_reg()</a> is not supported.</p>
 <dl class="section return"><dt>Returns</dt><dd>whether successful or an error code on failure. </dd></dl>
 
@@ -1171,5 +1171,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18718 --- Fri Apr 2 2021 03:25:21 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18725 --- Fri Apr 9 2021 03:16:54 &nbsp; <img border=0 src="favicon.png">
 </small></address>

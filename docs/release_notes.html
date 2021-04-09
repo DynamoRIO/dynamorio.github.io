@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 8.0.18718"
+title: "Release Notes for Version 8.0.18725"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 8.0.18718 </div>  </div>
+<div class="title">Release Notes for Version 8.0.18725 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,13 +63,13 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 8.0.18718. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 8.0.18718 and 8.0.0 include the following compatibility changes:</p>
+<p>The current version is 8.0.18725. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 8.0.18725 and 8.0.0 include the following compatibility changes:</p>
 <ul>
 <li>A source compatibilty change in drcachesim analysis tools for users who have created derived classes from existing analysis tools: member fields of classes are now following a consistent style with an underscore suffix. References to renamed fields will need to be updated.</li>
 <li>A change in the load callbacks used with <a class="el" href="group__drcovlib.html#ga9c2889006a80254645521f81a1a486f5">drmodtrack_add_custom_data()</a> and <a class="el" href="drmemtrace_8h.html#a8644981035cdedfafb000d03cd223399">drmemtrace_custom_module_data()</a>: they each take an additional parameter, the segment index. The custom data field is now per-segment and not per-module, and all callbacks are invoked separately for each segment.</li>
 </ul>
-<p>The changes between version 8.0.18718 and 8.0.0 include the following minor compatibility changes:</p>
+<p>The changes between version 8.0.18725 and 8.0.0 include the following minor compatibility changes:</p>
 <ul>
 <li>drconfiglib (and thus drrun and drconfig) now sets only the new client path options which are added in this release to support other-bitwidth child processes. This means that a drconfiglib from this version will not properly configure for a DynamoRIO core library from a prior version.</li>
 <li>A new option -ldstex2cas is on by default on ARM and AArch64. This converts load-exclusive store-exclusive sequences to use compare-and-swap instead, which enables normal instrumentation of such sequences without clearing the exclusive monitor and causing infinite loops. However, the compare- and-swap's semantics are not identical: it does not detect "ABA" changes and could cause errors in lock-free data structures or other application constructs. See <a class="el" href="API_BT.html#sec_ldrex">Exclusive Monitor Instrumentation</a> for more information.</li>
@@ -111,7 +111,7 @@ Changes Since Prior Releases</h1>
 <p>The changes between version 8.0.0 and 7.1.0 include the following minor compatibility changes:</p>
 <ul>
 <li>Added the define <a class="el" href="dr__defines_8h.html#a05ac94531596e23105f33770fb9011a2">MCXT_NUM_SIMD_SLOTS</a> that was renamed from NUM_SIMD_SLOTS. <a class="el" href="dr__defines_8h.html#a05ac94531596e23105f33770fb9011a2">MCXT_NUM_SIMD_SLOTS</a> is now a constant that shall be used only to determine the number of SIMD slots in DynamoRIO's mcontext.</li>
-<li>Replaced NUM_SIMD_SLOTS with <a class="el" href="dr__proc_8h.html#a579f732531f7ea61d0bf110e056edd39">proc_num_simd_saved()</a>. Clients may set(DynamoRIO_NUM_SIMD_SLOTS_COMPATIBILITY ON) in order to provide the define NUM_SIMD_SLOTS using <a class="el" href="dr__proc_8h.html#a579f732531f7ea61d0bf110e056edd39">proc_num_simd_saved()</a>. The macro is not a constant expression and code relying on this needs to be rewritten. DynamoRIO_NUM_SIMD_SLOTS_COMPATIBILITY is set automatically if clients target version 7.1.0 or earlier.</li>
+<li>Replaced NUM_SIMD_SLOTS with <a class="el" href="dr__proc_8h.html#acbd8af78dc9f199c6d27b8fc7158fb9f">proc_num_simd_saved()</a>. Clients may set(DynamoRIO_NUM_SIMD_SLOTS_COMPATIBILITY ON) in order to provide the define NUM_SIMD_SLOTS using <a class="el" href="dr__proc_8h.html#acbd8af78dc9f199c6d27b8fc7158fb9f">proc_num_simd_saved()</a>. The macro is not a constant expression and code relying on this needs to be rewritten. DynamoRIO_NUM_SIMD_SLOTS_COMPATIBILITY is set automatically if clients target version 7.1.0 or earlier.</li>
 <li>Renamed mcontext's "ymm" structure to "simd".</li>
 <li>Deprecated <a class="el" href="dr__ir__opnd_8h.html#afa3df205f31cf4fb45b04148b1b9cf4d">reg_is_xmm()</a> and <a class="el" href="dr__ir__opnd_8h.html#ac9e2ad2c9b03ea3d789d036bcf0eee13">reg_is_ymm()</a>.</li>
 <li>The function <a class="el" href="dr__ir__opnd_8h.html#a3d184213410a0e31c4b3895fb7d4708f">reg_is_extended()</a> now returns true for the upper 8 simd registers as part of AVX-512, e.g. xmm16 - xmm31.</li>
@@ -126,7 +126,7 @@ Changes Since Prior Releases</h1>
 </ul>
 <p>Further non-compatibility-affecting changes include:</p>
 <ul>
-<li>Added the function <a class="el" href="dr__proc_8h.html#ad9ab4bbb82992dfb25a2088c76de9d05">proc_num_simd_registers()</a>.</li>
+<li>Added the function <a class="el" href="dr__proc_8h.html#a86481f6ae770b015377ec5feb2668c15">proc_num_simd_registers()</a>.</li>
 <li>Added <a class="el" href="dr__frontend_8h.html#ad681f3b7f775aaec45bda7f53167a956">drfront_set_verbose()</a> to obtain diagnostics from drfrontendlib.</li>
 <li>Added new fields to <a class="el" href="dr__os__utils_8h.html#a1074b84b2b9eb05337a431193789c9e2">dr_os_version_info_t</a> which contain the build number, edition, and Windows 10 release identifier.</li>
 <li>Added the function <a class="el" href="dr__ir__instr_8h.html#a811c5d939e913be439fe34be3c245f35">instr_is_xsave()</a>.</li>
@@ -135,7 +135,7 @@ Changes Since Prior Releases</h1>
 <li>Added the define <a class="el" href="dr__defines_8h.html#a35e60e348f7cfc65f1d03904059e7830">MCXT_NUM_OPMASK_SLOTS</a> for the number of AVX-512 OpMask registers.</li>
 <li>Renamed mcontext's ymm structure into simd.</li>
 <li>Added a new option -logprefix to drcov.</li>
-<li>Added the AVX-512 registers <a class="el" href="dr__ir__opnd_8h.html#a80155586fa275b28773c9b203f52cabaa0c8387ddb0d463457c375e24f2fce948">DR_REG_XMM16</a> - <a class="el" href="dr__ir__opnd_8h.html#a80155586fa275b28773c9b203f52cabaa0cb48aa09d10eae29358ef48dec588a5">DR_REG_XMM31</a>, <a class="el" href="dr__ir__opnd_8h.html#a80155586fa275b28773c9b203f52cabaab654351c5f29cfd8a2adbca49e1b5273">DR_REG_YMM16</a> - <a class="el" href="dr__ir__opnd_8h.html#a80155586fa275b28773c9b203f52cabaa723f3a917415df7bd1b0d5b7ae770983">DR_REG_YMM31</a> and their <a class="el" href="dr__ir__opnd_8h.html#a80155586fa275b28773c9b203f52cabaa9635f42fa6451ebf7a9a6c7af5e66ea5">DR_REG_ZMM0</a> - <a class="el" href="dr__ir__opnd_8h.html#a80155586fa275b28773c9b203f52cabaa5d95bd7690815e869b1009edbc33977b">DR_REG_ZMM31</a> siblings as well as <a class="el" href="dr__ir__opnd_8h.html#a80155586fa275b28773c9b203f52cabaacd57791a95e1c00f8b9bcc0a1dc63ecf">DR_REG_K0</a> - <a class="el" href="dr__ir__opnd_8h.html#a80155586fa275b28773c9b203f52cabaa31c30666a382d2ff223271518b78c5ae">DR_REG_K7</a>.</li>
+<li>Added the AVX-512 registers <a class="el" href="dr__ir__opnd_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a0c8387ddb0d463457c375e24f2fce948">DR_REG_XMM16</a> - <a class="el" href="dr__ir__opnd_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a0cb48aa09d10eae29358ef48dec588a5">DR_REG_XMM31</a>, <a class="el" href="dr__ir__opnd_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57ab654351c5f29cfd8a2adbca49e1b5273">DR_REG_YMM16</a> - <a class="el" href="dr__ir__opnd_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a723f3a917415df7bd1b0d5b7ae770983">DR_REG_YMM31</a> and their <a class="el" href="dr__ir__opnd_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a9635f42fa6451ebf7a9a6c7af5e66ea5">DR_REG_ZMM0</a> - <a class="el" href="dr__ir__opnd_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a5d95bd7690815e869b1009edbc33977b">DR_REG_ZMM31</a> siblings as well as <a class="el" href="dr__ir__opnd_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57acd57791a95e1c00f8b9bcc0a1dc63ecf">DR_REG_K0</a> - <a class="el" href="dr__ir__opnd_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a31c30666a382d2ff223271518b78c5ae">DR_REG_K7</a>.</li>
 <li>Added the function <a class="el" href="dr__ir__opnd_8h.html#a223bb2c6aab716d9b21ca56039c288c8">reg_is_opmask()</a>.</li>
 <li>Added the functions <a class="el" href="dr__ir__opnd_8h.html#a94dfd3331d69e734d6b458e7ffa4b113">reg_is_strictly_xmm()</a>, <a class="el" href="dr__ir__opnd_8h.html#a58520a434a0c8453532096862b78f86e">reg_is_strictly_ymm()</a> and <a class="el" href="dr__ir__opnd_8h.html#a3db6b8051352da7d6fb83ad3faf6e39d">reg_is_strictly_zmm()</a>.</li>
 <li>Added the function <a class="el" href="dr__ir__opnd_8h.html#a0c72ebc524eec58cc52c0fda76251b19">reg_is_avx512_extended()</a>.</li>
@@ -147,10 +147,10 @@ Changes Since Prior Releases</h1>
 <li>Added <a class="el" href="dr__tools_8h.html#a407fa7ac15e482174d2ff75dcc312192">dr_standalone_exit()</a> with support for re-attaching afterward.</li>
 <li>Added <a class="el" href="dr__events_8h.html#a101820819df420894a4fbb6a6c0651c3">dr_register_low_on_memory_event()</a> for tracking low on memory events.</li>
 <li>Added <a class="el" href="dr__ir__utils_8h.html#a86f35e8073bbec6ba326b7c3ff2d6284">dr_mcontext_zmm_fields_valid()</a> to query the state of lazy AVX-512 context switching.</li>
-<li>Added the function <a class="el" href="dr__proc_8h.html#a46ad30d9e9131c9e8c9a4fba077bed70">proc_avx512_enabled()</a>.</li>
+<li>Added the function <a class="el" href="dr__proc_8h.html#aaba068462550d9b73c32c0991c5f7551">proc_avx512_enabled()</a>.</li>
 <li>Added support for applications using the Linux kernel's restartable sequence ("rseq") feature, subject to the limitations listed in <a class="el" href="API_BT.html#sec_rseq">Restartable Sequence Instrumentation Constraints</a>.</li>
 <li>Added coherence support in drcachesim.</li>
-<li>Added the function <a class="el" href="dr__proc_8h.html#ae00a48eaf18751e65af182299d86c9c3">proc_num_opmask_registers()</a>;</li>
+<li>Added the function <a class="el" href="dr__proc_8h.html#a92eb558d6a91d1add4f05717938b78aa">proc_num_opmask_registers()</a>;</li>
 <li><a class="el" href="dr__ir__opnd_8h.html#a3e4f2b305b3d6536d27bad42b57cad84">reg_get_value_ex()</a> now supports reading AVX-512 mask registers.</li>
 <li>Added the function <a class="el" href="dr__ir__opnd_8h.html#a6f336ce867c15469b664a710fe8e2a2b">reg_is_bnd()</a>.</li>
 <li>Added the functions <a class="el" href="dr__ir__instr_8h.html#ab99dd3460f2fd5abc2d59a9ddb26a6b5">instr_is_gather()</a> and <a class="el" href="dr__ir__instr_8h.html#ad78d9b3a3bd6acf6ca3d1c047a6f0830">instr_is_scatter()</a>.</li>
@@ -445,7 +445,7 @@ Changes Since Prior Releases</h1>
 <li>Added <a class="el" href="dr__tools_8h.html#ac3a677a98692a1f11b4f5b0270cf0912">dr_get_current_directory()</a></li>
 <li>Added <a class="el" href="dr__tools_8h.html#a43b23d88adc4536bc69c771999fde3d2">dr_delete_dir()</a></li>
 <li>Added <a class="el" href="group__drx.html#gaa0a5fcca247de11374c3555a5326cba8">drx_open_unique_file()</a> and <a class="el" href="group__drx.html#gaa85537dd6726928bbd43a21dc8211a53">drx_open_unique_appid_file()</a></li>
-<li>Added <a class="el" href="dr__proc_8h.html#a3039c377f1b296cd8be453957f95c103">proc_avx_enabled()</a></li>
+<li>Added <a class="el" href="dr__proc_8h.html#adfd5dadf31b9a26540978b7331701770">proc_avx_enabled()</a></li>
 <li>Added support for recent IA-32/AMD64 instructions: the rdrand, fsgsbase, FMA4, XOP, TBM, LWP, BMI1, BMI2, SMX, INVPCID, TSX, and AVX2 instruction groups</li>
 <li>Added vector addressing (VSIB) support to <a class="el" href="dr__ir__instr_8h.html#a28829816cc8178aab86a55173599c477">instr_compute_address()</a>, <a class="el" href="dr__ir__instr_8h.html#ad78a69d6d54664001ebfee25847a3983">instr_compute_address_ex()</a> and <a class="el" href="dr__ir__instr_8h.html#a119b505069a5608525bafb89ba0a2b8b">instr_compute_address_ex_pos()</a></li>
 <li>Added <a class="el" href="dr__ir__opnd_8h.html#a5d0ce3414871686587c8eb7ecd3a7684">opnd_is_vsib()</a></li>
@@ -469,7 +469,7 @@ Changes Since Prior Releases</h1>
 <ul>
 <li>The <a class="el" href="group__drsyms.html#ga4c38ae4b1348bfd1555f323037066b01">drsym_info_t</a> data structure has changed. The file name is now a caller-allocated buffer, and it and the symbol name are separated out. This affects code that calls <a class="el" href="group__drsyms.html#ga201e8a9bf6746cbfd232bc4e4a243d2b">drsym_lookup_address()</a>.</li>
 <li>Memory allocated through system libraries (including malloc, operator new, and HeapAlloc) is not guaranteed to be reachable by a 32-bit displacement from the code cache: only memory directly allocated via DR's API. The <a class="el" href="page_deploy.html#op_reachable_heap">-reachable_heap runtime option</a> can be used to guarantee that all memory is reachable.</li>
-<li>For 64-bit, the opcode constants OP_fxsave, OP_fxrstor, OP_xsave, OP_xrstor, and OP_xsaveopt have all been replaced with two versions: one with a "32" suffix and one with a "64" suffix. E.g., OP_fxsave is split into <a class="el" href="dr__ir__opcodes__x86_8h.html#aba01db17f4a2bfbc3db60dc172972a25a111bfd882f3c659431fdf8fb3ab5c0a3">OP_fxsave32</a> and <a class="el" href="dr__ir__opcodes__x86_8h.html#aba01db17f4a2bfbc3db60dc172972a25a3eba626fc423adfcaad47c784bf36eca">OP_fxsave64</a>. The 32 version corresponds to the no-suffix assembler mnemonic while the 64 version coresponds to the assembler mnemonic of the same name. Previously, the 64-bit versions of these instrutions could not be distinguished nor encoded from scratch.</li>
+<li>For 64-bit, the opcode constants OP_fxsave, OP_fxrstor, OP_xsave, OP_xrstor, and OP_xsaveopt have all been replaced with two versions: one with a "32" suffix and one with a "64" suffix. E.g., OP_fxsave is split into <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da111bfd882f3c659431fdf8fb3ab5c0a3">OP_fxsave32</a> and <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da3eba626fc423adfcaad47c784bf36eca">OP_fxsave64</a>. The 32 version corresponds to the no-suffix assembler mnemonic while the 64 version coresponds to the assembler mnemonic of the same name. Previously, the 64-bit versions of these instrutions could not be distinguished nor encoded from scratch.</li>
 </ul>
 <p>Further non-compatibility-affecting changes include:</p>
 <ul>
@@ -501,7 +501,7 @@ Changes Since Prior Releases</h1>
 <li>Added support for nudging 64-bit Windows applications</li>
 <li>Added <a class="el" href="dr__tools_8h.html#ad42f2c7b95786297e1b45b6de81e257d">dr_get_dr_thread_handle()</a></li>
 <li>Added <a class="el" href="dr__os__utils_8h.html#aff97be516bbb1aecdb6bd043841aaa10aa23ff267355a0b49da1b77da5bcc4d29">DR_MEMTYPE_RESERVED</a> to <a class="el" href="dr__os__utils_8h.html#a24463a9c32e3efac726c6fc9e97a77d6">dr_mem_info_t</a></li>
-<li><a class="el" href="dr__proc_8h.html#a4a11c9d5d127ce126562ad35b4d165dd">proc_save_fpstate()</a>, <a class="el" href="dr__proc_8h.html#a23edceee5d1ae7c7d51a212432e6d644">proc_restore_fpstate()</a>, <a class="el" href="dr__ir__utils_8h.html#aa23665c11b7d79a29ea185113d07944f">dr_insert_save_fpstate()</a>, and <a class="el" href="dr__ir__utils_8h.html#a74016eacf3a9cfc20a93a9ac0bca9c59">dr_insert_restore_fpstate()</a> now use the current thread's x86 mode to determine which fxsave state format to use.</li>
+<li><a class="el" href="dr__proc_8h.html#a48ca3205c37d6e41d007ac54a1d60e6a">proc_save_fpstate()</a>, <a class="el" href="dr__proc_8h.html#aacb849daecc3021e451d9441b26cc814">proc_restore_fpstate()</a>, <a class="el" href="dr__ir__utils_8h.html#aa23665c11b7d79a29ea185113d07944f">dr_insert_save_fpstate()</a>, and <a class="el" href="dr__ir__utils_8h.html#a74016eacf3a9cfc20a93a9ac0bca9c59">dr_insert_restore_fpstate()</a> now use the current thread's x86 mode to determine which fxsave state format to use.</li>
 <li>Added partial support for presenting the proper floating point program counter when floating point state is saved. Xref the <a class="el" href="page_deploy.html#op_translate_fpu_pc">-translate_fpu_pc runtime option</a>.</li>
 <li>Added <code>drx</code> Extension: the DynamoRIO Instrumentation Utility Extension with BSD license</li>
 <li>Added automatic restarting of appropriate system calls interrupted by signals.</li>
@@ -663,7 +663,7 @@ Changes Since Prior Releases</h1>
 <li>Deprecated the "meta-instruction that can fault" property and <a class="el" href="dr__ir__instr_8h.html#a015ff65aa737638e35e76e9de1ae934a">instr_is_meta_may_fault()</a>, <a class="el" href="dr__ir__instr_8h.html#aae83ef5ab1a1442718367b5b3162ab5f">instr_set_meta_may_fault()</a>, <a class="el" href="dr__ir__utils_8h.html#a1d006431d6330adc66e372d99fa86e2f">instrlist_meta_fault_preinsert()</a>, <a class="el" href="dr__ir__utils_8h.html#a3ee2dc65e868a33347292adb54982c16">instrlist_meta_fault_postinsert()</a>, and <a class="el" href="dr__ir__utils_8h.html#ad9818755498b60ba7713a7a064b6db53">instrlist_meta_fault_append()</a>.</li>
 <li>Added <a class="el" href="dr__os__utils_8h.html#a166d041c41c9a313f56ecc1910feed9c">dr_using_app_state()</a></li>
 <li>Added <a class="el" href="dr__ir__encode_8h.html#a285a9fb1eaa589b9bb143c8c85861b2b">instr_encode_to_copy()</a> and <a class="el" href="dr__ir__encode_8h.html#a8eacc8e4f757c7d3ed0e29f464021522">instrlist_encode_to_copy()</a></li>
-<li>Added <a class="el" href="dr__ir__disassemble_8h.html#ac5e34cc6c23ce496b13eebb043184552">disassemble_set_syntax()</a> for -syntax_intel control without runtime options and <a class="el" href="dr__proc_8h.html#a5a9d6c28ef304d6b4f5e1a45fb9da996">proc_set_vendor()</a> to control vendor-specific ISA details when decoding or encoding</li>
+<li>Added <a class="el" href="dr__ir__disassemble_8h.html#ac5e34cc6c23ce496b13eebb043184552">disassemble_set_syntax()</a> for -syntax_intel control without runtime options and <a class="el" href="dr__proc_8h.html#a79cc51e1a110888f10b93ce0278ed01e">proc_set_vendor()</a> to control vendor-specific ISA details when decoding or encoding</li>
 <li>Added <a class="el" href="dr__ir__instrlist_8h.html#af7056885c9448d9702f9e3801709b379">instrlist_set_fall_through_target()</a> and <a class="el" href="dr__ir__instrlist_8h.html#a3f3342963e585ad2646bfee232ba6d14">instrlist_set_return_target()</a></li>
 <li>Added <a class="el" href="group__drcontainers.html#ga2bcb10d265f6005bbcef89129ad58548">hashtable_clear()</a> to the drcontainers Extension</li>
 <li>Several bug fixes</li>
@@ -1038,5 +1038,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18718 --- Fri Apr 2 2021 03:25:21 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18725 --- Fri Apr 9 2021 03:16:54 &nbsp; <img border=0 src="favicon.png">
 </small></address>
