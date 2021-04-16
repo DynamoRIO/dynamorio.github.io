@@ -33,6 +33,8 @@
     [ "INSTR_CREATE_fcmge_vector", "dr__ir__macros__aarch64_8h.html#afa8bdb77163204c73356b0b78d533764", null ],
     [ "INSTR_CREATE_fcmgt_vector", "dr__ir__macros__aarch64_8h.html#aa472fe596000f2fe7b9607c8c9d36b1c", null ],
     [ "INSTR_CREATE_fcvt_scalar", "dr__ir__macros__aarch64_8h.html#ab9200ac35921f8ae1a5ddac1075b4c22", null ],
+    [ "INSTR_CREATE_fcvtzu_scalar", "dr__ir__macros__aarch64_8h.html#a6c42063e338740232e8968f8da272add", null ],
+    [ "INSTR_CREATE_fcvtzu_vector", "dr__ir__macros__aarch64_8h.html#ac68769040c6d0fded0274fb696927b91", null ],
     [ "INSTR_CREATE_fdiv_scalar", "dr__ir__macros__aarch64_8h.html#a3556f3e267cc8468d1b0bc4d323be08c", null ],
     [ "INSTR_CREATE_fdiv_vector", "dr__ir__macros__aarch64_8h.html#aa6a078fadaa0781798e261df9ad83c5a", null ],
     [ "INSTR_CREATE_fmadd_scalar", "dr__ir__macros__aarch64_8h.html#a4bd35ac280e8db547e027264be9b4e9e", null ],
