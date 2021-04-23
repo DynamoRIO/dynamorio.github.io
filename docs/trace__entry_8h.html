@@ -161,7 +161,9 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9afb92a065fc3cdb8b86e463bd2ff2fdf1">TRACE_MARKER_TYPE_FILETYPE</a>, 
 <br />
-&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aec6bd14b464acb7f6e6b5e0e310474fa">TRACE_MARKER_TYPE_CACHE_LINE_SIZE</a>
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aec6bd14b464acb7f6e6b5e0e310474fa">TRACE_MARKER_TYPE_CACHE_LINE_SIZE</a>, 
+<br />
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a94cc2db87863fcdcdf9163d8c9c2152e">TRACE_MARKER_TYPE_INSTRUCTION_COUNT</a>
 <br />
  }</td></tr>
 <tr class="separator:aa7f51b43d8f1e20dc45e3618684b15e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -268,7 +270,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Bitfields used to describe the high-level characteristics of both an offline final trace and a raw not-yet-postprocessed trace. In a final trace these are stored in a marker of type <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9afb92a065fc3cdb8b86e463bd2ff2fdf1">TRACE_MARKER_TYPE_FILETYPE</a>. </p>
+<p>Bitfields used to describe the high-level characteristics of both an offline final trace and a raw not-yet-postprocessed trace, as well as (despite the OFFLINE_ prefix) an online trace. In a final trace these are stored in a marker of type <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9afb92a065fc3cdb8b86e463bd2ff2fdf1">TRACE_MARKER_TYPE_FILETYPE</a>. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a183fb25912d45f16f5dd68e7895787a1ab2adc5337c786c96c826052e1a227765"></a>OFFLINE_FILE_TYPE_FILTERED&#160;</td><td class="fielddoc"><p>Addresses filtered online. </p>
 </td></tr>
@@ -320,6 +322,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9afb92a065fc3cdb8b86e463bd2ff2fdf1"></a>TRACE_MARKER_TYPE_FILETYPE&#160;</td><td class="fielddoc"><p>The marker value contains the OFFLINE_FILE_TYPE_* bitfields of type <a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1">offline_file_type_t</a> identifying the architecture and other key high-level attributes of the trace. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9aec6bd14b464acb7f6e6b5e0e310474fa"></a>TRACE_MARKER_TYPE_CACHE_LINE_SIZE&#160;</td><td class="fielddoc"><p>The marker value contains the traced processor's cache line size in bytes. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a94cc2db87863fcdcdf9163d8c9c2152e"></a>TRACE_MARKER_TYPE_INSTRUCTION_COUNT&#160;</td><td class="fielddoc"><p>The marker value contains the count of dynamic instruction executions in this software thread since the start of the trace. This marker type is only present in online-cache-filtered traces and is placed at thread exit. </p>
 </td></tr>
 </table>
 
@@ -514,5 +518,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18732 --- Fri Apr 16 2021 03:24:29 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18739 --- Fri Apr 23 2021 03:22:03 &nbsp; <img border=0 src="favicon.png">
 </small></address>

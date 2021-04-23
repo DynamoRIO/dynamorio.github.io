@@ -176,7 +176,7 @@ First (Instrumented) Execution</h2>
 <h2><a class="anchor" id="autotoc_md241"></a>
 Second (Restartable) Execution</h2>
 <p>Once the instrumented execution reaches the final block in the sequence, we want to execute the sequence again, for the second time. We need to execute it all in one shot, as one contiguous region, since we need to set it up for restartable semantics with the kernel. We thus make a local copy of the sequence, described further below.</p>
-<p>An early version, operating on applications which only used rseq sequences as function bodies, had a simpler method of invoking the second execution: call the native sequence and assume it will simply return back. This has a number of drawbacks and assumptions and has been abandoned as we have moved to support more general rseq code. Support is still in the code base under a temporary option <code>-rseq_assume_call</code>, as a failsafe in case there are stability problems discovered with the new native execution implementation. Once we are happy with the new scheme we will remove the option.</p>
+<p>An early version, operating on applications which only used rseq sequences as function bodies, had a simpler method of invoking the second execution: call the native sequence and assume it will simply return back. This has a number of drawbacks and assumptions and has been abandoned as we have moved to support more general rseq code. Until recently support was still in the code base under a temporary option <code>-rseq_assume_call</code>, as a failsafe in case there were stability problems discovered with the new native execution implementation. We have since removed this code and option as we are happy with the new general scheme.</p>
 <h3><a class="anchor" id="autotoc_md242"></a>
 Application State Barrier</h3>
 <p>We need clients to restore the application state back into the machine state prior to the second execution. We accomplish this by ending the block after the committing store of the sequence, which is sufficient for today's drreg. <a href="https://github.com/DynamoRIO/dynamorio/issues/2350">i#3798</a> covers adding an interface for a more-guaranteed barrier.</p>
@@ -258,5 +258,5 @@ Citations</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18732 --- Fri Apr 16 2021 03:24:31 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18739 --- Fri Apr 23 2021 03:22:05 &nbsp; <img border=0 src="favicon.png">
 </small></address>

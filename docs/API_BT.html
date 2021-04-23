@@ -401,13 +401,13 @@ Restartable Sequence Instrumentation Constraints</h1>
 <p>The Linux kernel supports special code regions called restartable sequences. This "rseq" feature is challenging to support under instrumentation due to the tight restrictions on operations inside the sequence. Instrumentation inserted in the sequence would need to be designed to be restartable as well, with a single commit point. Meeting such requirements is unrealistic for most instrumentation. Instead, DR provides a "run twice" solution where the sequence is first executed as regular code with regular instrumentation up to the commit point. Then the sequence is restarted and executed without instrumentation to perform the commit.</p>
 <p>This run-twice approach is subject to the following limitations:</p>
 <ul>
-<li>Only x86 is supported for now (no arm or aarch64 support yet).</li>
+<li>Only x86 and aarch64 are supported for now, and 32-bit x86 is not as well-tested.</li>
 <li>The application must store an rseq_cs struct for each rseq region in a section of its binary named "__rseq_cs", optionally with an "__rseq_cs_ptr_array" section of pointers into the __rseq_cs section, per established conventions. These sections must be located in loaded segments.</li>
 <li>The application must use static thread-local storage for its struct rseq registrations.</li>
 <li>The application must use the same signature for every rseq system call.</li>
 <li>Each rseq region's code must never be also executed as a non-restartable sequence.</li>
 <li>Each rseq region must handle being directly restarted without its abort handler being called (with the machine state restored: though just the general-purpose registers as described in the limitation below).</li>
-<li>Each memory store instruction inside an rseq region must have no other side effects: it must only write to memory and not to any registers. For example, a push instruction which both writes to memory and the stack pointer register is not supported.</li>
+<li>Each memory store instruction inside an rseq region must have no other side effects: it must only write to memory and not to any registers. For example, a push instruction which both writes to memory and the stack pointer register is not supported. An exception is a pre-indexed or post-indexed writeback store, which is supported.</li>
 <li>Each rseq region's code must end with a fall-through (non-control-flow) instruction.</li>
 <li>Indirect branches that do not exit the rseq region are not allowed.</li>
 <li>Each rseq region must be entered only from the top, with no branches from outside the region targeting a point inside the region.</li>
@@ -497,5 +497,5 @@ Persisting Code</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18732 --- Fri Apr 16 2021 03:24:31 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18739 --- Fri Apr 23 2021 03:22:05 &nbsp; <img border=0 src="favicon.png">
 </small></address>
