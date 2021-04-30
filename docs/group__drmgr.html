@@ -71,6 +71,9 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:gae3531e42d6cde87d19a63801ab6b9230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaa131b3cd2bf8aadb9ac196911aa6b32"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#gaaa131b3cd2bf8aadb9ac196911aa6b32">dr_emulate_options_t</a> { <a class="el" href="group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a60a60d7210d981f2fb0692e125e00dc4">DR_EMULATE_REST_OF_BLOCK</a> = 0x0001
+ }</td></tr>
+<tr class="separator:gaaa131b3cd2bf8aadb9ac196911aa6b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -388,6 +391,25 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="gaaa131b3cd2bf8aadb9ac196911aa6b32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaa131b3cd2bf8aadb9ac196911aa6b32">&#9670;&nbsp;</a></span>dr_emulate_options_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__drmgr.html#gaaa131b3cd2bf8aadb9ac196911aa6b32">dr_emulate_options_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flags describing different types of emulation markers. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaaa131b3cd2bf8aadb9ac196911aa6b32a60a60d7210d981f2fb0692e125e00dc4"></a>DR_EMULATE_REST_OF_BLOCK&#160;</td><td class="fielddoc"><p>Indicates that the entire rest of the basic block is one emulation sequence. There is no end marker, so <a class="el" href="group__drmgr.html#gaf2227473141100828d097eb98828b954">drmgr_is_emulation_end()</a> will never return true. No support is provided for traces: clients must examine the constituent blocks instead to find emulation information. This is used for emulation sequences that include a block-terminating conditional branch, indirect branch, or system call or interrupt, as DR does not allow a label to appear after such instructions. These sequences typically want to isolate their emulation to include the entire block in any case. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="gae3531e42d6cde87d19a63801ab6b9230"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gae3531e42d6cde87d19a63801ab6b9230">&#9670;&nbsp;</a></span>drmgr_bb_phase_t</h2>
 
@@ -680,7 +702,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Inserts a label into <code>ilist</code> prior to <code>where</code> to indicate the end of a sequence of instructions emulating an instruction, preceded by a label created with <a class="el" href="group__drmgr.html#ga94b96a01f3fa0ce7ad6a5f675965d952">drmgr_insert_emulation_start()</a>. </p>
+<p>Inserts a label into <code>ilist</code> prior to <code>where</code> to indicate the end of a sequence of instructions emulating an instruction, preceded by a label created with <a class="el" href="group__drmgr.html#ga94b96a01f3fa0ce7ad6a5f675965d952">drmgr_insert_emulation_start()</a>. Alternatively, <a class="el" href="group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a60a60d7210d981f2fb0692e125e00dc4">DR_EMULATE_REST_OF_BLOCK</a> can be used on the start label to include the entire block, with no need for an end label. </p>
 
 </div>
 </div>
@@ -722,7 +744,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Inserts a label into <code>ilist</code> prior to <code>where</code> to indicate the start of a sequence of instructions emulating an instruction <code>instr</code>. The label has data attached which describes the instruction being emulated.</p>
-<p>A label will also appear at the end of the sequence, added using <a class="el" href="group__drmgr.html#ga2f7dd031774c812d485d4910846fbb73">drmgr_insert_emulation_end()</a>. These start and stop labels can be detected by an observational client using <a class="el" href="group__drmgr.html#gae4a20b19e779581dccac41eca9bf8321">drmgr_is_emulation_start()</a> and <a class="el" href="group__drmgr.html#gaf2227473141100828d097eb98828b954">drmgr_is_emulation_end()</a> allowing the client to distinguish between native app instructions and instructions used for emulation.</p>
+<p>A label will also appear at the end of the sequence, added using <a class="el" href="group__drmgr.html#ga2f7dd031774c812d485d4910846fbb73">drmgr_insert_emulation_end()</a> (unless <a class="el" href="group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a60a60d7210d981f2fb0692e125e00dc4">DR_EMULATE_REST_OF_BLOCK</a> is set). These start and stop labels can be detected by an observational client using <a class="el" href="group__drmgr.html#gae4a20b19e779581dccac41eca9bf8321">drmgr_is_emulation_start()</a> and <a class="el" href="group__drmgr.html#gaf2227473141100828d097eb98828b954">drmgr_is_emulation_end()</a> allowing the client to distinguish between native app instructions and instructions used for emulation.</p>
 <p>When calling this function, the <code>size</code> field of <code>instr</code> should be set using sizeof(). This allows the API to check for compatibility.</p>
 <p>Information about the instruction being emulated can be read from the label using <a class="el" href="group__drmgr.html#ga85b025c766a84bee841288d822b15380">drmgr_get_emulated_instr_data()</a>.</p>
 <p>If label callbacks are used, please note that the callback will not be cloned and its use is currently not consistent (xref i#3962).</p>
@@ -2900,5 +2922,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18739 --- Fri Apr 23 2021 03:22:05 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18746 --- Fri Apr 30 2021 03:08:58 &nbsp; <img border=0 src="favicon.png">
 </small></address>

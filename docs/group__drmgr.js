@@ -7,6 +7,7 @@
       [ "struct_size", "struct__drmgr__priority__t.html#a29c2e76e5d788b7d773df7ca04044293", null ]
     ] ],
     [ "_emulated_instr_t", "struct__emulated__instr__t.html", [
+      [ "flags", "struct__emulated__instr__t.html#a2c6d5ea583755879a77c630a80baf58e", null ],
       [ "instr", "struct__emulated__instr__t.html#a6ad237fed40b2d642bf959a64afbf0c5", null ],
       [ "pc", "struct__emulated__instr__t.html#a511b2f47ad7a0e5fd7cd7d422a8a8d4d", null ],
       [ "size", "struct__emulated__instr__t.html#ad11a8f11b085ffa7cb9da11c22a4d353", null ]
@@ -19,6 +20,9 @@
     [ "drmgr_priority_t", "group__drmgr.html#gad1ea8251bfe11bcc02821ada3852e599", null ],
     [ "drmgr_xform_cb_t", "group__drmgr.html#ga1260c94e5eb2b34a7af2c2e99b129568", null ],
     [ "emulated_instr_t", "group__drmgr.html#gac779b3f5c1076450ad32083da0921768", null ],
+    [ "dr_emulate_options_t", "group__drmgr.html#gaaa131b3cd2bf8aadb9ac196911aa6b32", [
+      [ "DR_EMULATE_REST_OF_BLOCK", "group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a60a60d7210d981f2fb0692e125e00dc4", null ]
+    ] ],
     [ "drmgr_bb_phase_t", "group__drmgr.html#gae3531e42d6cde87d19a63801ab6b9230", [
       [ "DRMGR_PHASE_NONE", "group__drmgr.html#ggae3531e42d6cde87d19a63801ab6b9230ae5168599a479256d3b95839f57e5b985", null ],
       [ "DRMGR_PHASE_APP2APP", "group__drmgr.html#ggae3531e42d6cde87d19a63801ab6b9230a7eb5e7bcc7f6d533bcb8dcc10389441e", null ],

@@ -37,11 +37,28 @@ Data Fields</h2></td></tr>
 <tr class="separator:a511b2f47ad7a0e5fd7cd7d422a8a8d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ad237fed40b2d642bf959a64afbf0c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__emulated__instr__t.html#a6ad237fed40b2d642bf959a64afbf0c5">instr</a></td></tr>
 <tr class="separator:a6ad237fed40b2d642bf959a64afbf0c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c6d5ea583755879a77c630a80baf58e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__drmgr.html#gaaa131b3cd2bf8aadb9ac196911aa6b32">dr_emulate_options_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__emulated__instr__t.html#a2c6d5ea583755879a77c630a80baf58e">flags</a></td></tr>
+<tr class="separator:a2c6d5ea583755879a77c630a80baf58e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Holds data about an emulated instruction, typically populated by an emulation client and read by an observational client.</p>
 <dl class="section note"><dt>Note</dt><dd>The emulated <code>instr</code> is part of the label represented by <code>emulated_instr_t</code> and as such it will be freed when the label created by <a class="el" href="group__drmgr.html#ga94b96a01f3fa0ce7ad6a5f675965d952">drmgr_insert_emulation_start()</a> is freed. </dd></dl>
 </div><h2 class="groupheader">Field Documentation</h2>
+<a id="a2c6d5ea583755879a77c630a80baf58e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c6d5ea583755879a77c630a80baf58e">&#9670;&nbsp;</a></span>flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__drmgr.html#gaaa131b3cd2bf8aadb9ac196911aa6b32">dr_emulate_options_t</a> _emulated_instr_t::flags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flags further describing the emulation. </p>
+
+</div>
+</div>
 <a id="a6ad237fed40b2d642bf959a64afbf0c5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ad237fed40b2d642bf959a64afbf0c5">&#9670;&nbsp;</a></span>instr</h2>
 
@@ -96,5 +113,5 @@ Data Fields</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18739 --- Fri Apr 23 2021 03:22:05 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18746 --- Fri Apr 30 2021 03:08:58 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -247,6 +247,14 @@ Macros</h2></td></tr>
 <tr class="separator:ac68769040c6d0fded0274fb696927b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70f13977692db1c43470dd0a19776631"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a70f13977692db1c43470dd0a19776631">INSTR_CREATE_fcvtzu_vector_fixed</a>(dc,  Rd,  Rm,  width,  fbits)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_fcvtzu, Rd, Rm, width, fbits)</td></tr>
 <tr class="separator:a70f13977692db1c43470dd0a19776631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22f86525989a6e0ba588b40018c53fff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a22f86525989a6e0ba588b40018c53fff">INSTR_CREATE_ucvtf_vector</a>(dc,  Rd,  Rm,  width)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_ucvtf, Rd, Rm, width)</td></tr>
+<tr class="separator:a22f86525989a6e0ba588b40018c53fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a774ec6ded3816ccc68e8af468392fbfc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a774ec6ded3816ccc68e8af468392fbfc">INSTR_CREATE_ucvtf_vector_fixed</a>(dc,  Rd,  Rm,  width,  fbits)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_ucvtf, Rd, Rm, width, fbits)</td></tr>
+<tr class="separator:a774ec6ded3816ccc68e8af468392fbfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc508efe0efaabab26c7ee3ef4e6ec5a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#acc508efe0efaabab26c7ee3ef4e6ec5a">INSTR_CREATE_scvtf_vector</a>(dc,  Rd,  Rm,  width)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_scvtf, Rd, Rm, width)</td></tr>
+<tr class="separator:acc508efe0efaabab26c7ee3ef4e6ec5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d05ce08141b439e93fd054cc2e1b12f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a9d05ce08141b439e93fd054cc2e1b12f">INSTR_CREATE_scvtf_vector_fixed</a>(dc,  Rd,  Rm,  width,  fbits)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_scvtf, Rd, Rm, width, fbits)</td></tr>
+<tr class="separator:a9d05ce08141b439e93fd054cc2e1b12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a983004a275780fdad98e1bf5e8bd3824"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a983004a275780fdad98e1bf5e8bd3824">INSTR_CREATE_fmov_scalar</a>(dc,  Rd,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_fmov, Rd, Rm)</td></tr>
 <tr class="separator:a983004a275780fdad98e1bf5e8bd3824"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d53ec4da62f0398caedec60f0a23259"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a6d53ec4da62f0398caedec60f0a23259">INSTR_CREATE_fabs_scalar</a>(dc,  Rd,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2daabde7dc0eaa966f2e3883ce0e5b9ddab">OP_fabs</a>, Rd, Rm)</td></tr>
@@ -267,10 +275,20 @@ Macros</h2></td></tr>
 <tr class="separator:af207262bd966f669aa903777dc4b1479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6989de7bd5fa00099fc6d2a9d6ed0657"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a6989de7bd5fa00099fc6d2a9d6ed0657">INSTR_CREATE_fcvtzs_scalar</a>(dc,  Rd,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_fcvtzs, Rd, Rm)</td></tr>
 <tr class="separator:a6989de7bd5fa00099fc6d2a9d6ed0657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6847ba6fb3141fc1fa13ad7f914fe992"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a6847ba6fb3141fc1fa13ad7f914fe992">INSTR_CREATE_fcvtzs_scalar_fixed</a>(dc,  Rd,  Rm,  fbits)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_fcvtzs, Rd, Rm, fbits)</td></tr>
+<tr class="separator:a6847ba6fb3141fc1fa13ad7f914fe992"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c42063e338740232e8968f8da272add"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a6c42063e338740232e8968f8da272add">INSTR_CREATE_fcvtzu_scalar</a>(dc,  Rd,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_fcvtzu, Rd, Rm)</td></tr>
 <tr class="separator:a6c42063e338740232e8968f8da272add"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d3d909c2c6ca6fbad6acf25cd5a96fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a9d3d909c2c6ca6fbad6acf25cd5a96fe">INSTR_CREATE_fcvtzu_scalar_fixed</a>(dc,  Rd,  Rm,  fbits)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_fcvtzu, Rd, Rm, fbits)</td></tr>
 <tr class="separator:a9d3d909c2c6ca6fbad6acf25cd5a96fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbecbbf38e6ee22c0eb76211938cac0e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#abbecbbf38e6ee22c0eb76211938cac0e">INSTR_CREATE_ucvtf_scalar</a>(dc,  Rd,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_ucvtf, Rd, Rm)</td></tr>
+<tr class="separator:abbecbbf38e6ee22c0eb76211938cac0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6eed6bdd7c0fd182d851fb5c72bd47a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#af6eed6bdd7c0fd182d851fb5c72bd47a">INSTR_CREATE_ucvtf_scalar_fixed</a>(dc,  Rd,  Rm,  fbits)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_ucvtf, Rd, Rm, fbits)</td></tr>
+<tr class="separator:af6eed6bdd7c0fd182d851fb5c72bd47a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf6ce2bede30ab1d573d8d6bb0e39595"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#adf6ce2bede30ab1d573d8d6bb0e39595">INSTR_CREATE_scvtf_scalar</a>(dc,  Rd,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_scvtf, Rd, Rm)</td></tr>
+<tr class="separator:adf6ce2bede30ab1d573d8d6bb0e39595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98f1b1f2aff9974237d6611d17c2f718"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a98f1b1f2aff9974237d6611d17c2f718">INSTR_CREATE_scvtf_scalar_fixed</a>(dc,  Rd,  Rm,  fbits)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_scvtf, Rd, Rm, fbits)</td></tr>
+<tr class="separator:a98f1b1f2aff9974237d6611d17c2f718"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8987a7a6ceb76d4b4dabd906806ec7fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a8987a7a6ceb76d4b4dabd906806ec7fe">INSTR_CREATE_frintn_scalar</a>(dc,  Rd,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_frintn, Rd, Rm)</td></tr>
 <tr class="separator:a8987a7a6ceb76d4b4dabd906806ec7fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecdc288c0d2a05622d3bc651b3e1c3da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#aecdc288c0d2a05622d3bc651b3e1c3da">INSTR_CREATE_frintp_scalar</a>(dc,  Rd,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_frintp, Rd, Rm)</td></tr>
@@ -2728,6 +2746,55 @@ Enumerations</h2></td></tr>
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Rd</td><td>Floating-point or integer output register. </td></tr>
     <tr><td class="paramname">Rm</td><td>Floating-point input register. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6847ba6fb3141fc1fa13ad7f914fe992"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6847ba6fb3141fc1fa13ad7f914fe992">&#9670;&nbsp;</a></span>INSTR_CREATE_fcvtzs_scalar_fixed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_fcvtzs_scalar_fixed</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fbits&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_fcvtzs, Rd, Rm, fbits)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an FCVTZS scalar floating-point to fixed-point convert instruction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>Floating-point or integer output register. </td></tr>
+    <tr><td class="paramname">Rm</td><td>Floating-point input register. </td></tr>
+    <tr><td class="paramname">fbits</td><td>The number of bits after the binary point in the fixed-point destination. </td></tr>
   </table>
   </dd>
 </dl>
@@ -6570,6 +6637,202 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a id="adf6ce2bede30ab1d573d8d6bb0e39595"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf6ce2bede30ab1d573d8d6bb0e39595">&#9670;&nbsp;</a></span>INSTR_CREATE_scvtf_scalar</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_scvtf_scalar</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_scvtf, Rd, Rm)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an SCVTF floating point instruction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>Floating-point output register. </td></tr>
+    <tr><td class="paramname">Rm</td><td>Integer input register. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a98f1b1f2aff9974237d6611d17c2f718"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98f1b1f2aff9974237d6611d17c2f718">&#9670;&nbsp;</a></span>INSTR_CREATE_scvtf_scalar_fixed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_scvtf_scalar_fixed</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fbits&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_scvtf, Rd, Rm, fbits)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an SCVTF scalar floating-point to fixed-point convert instruction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>Floating-point output register. </td></tr>
+    <tr><td class="paramname">Rm</td><td>Integer input register. </td></tr>
+    <tr><td class="paramname">fbits</td><td>The number of bits after the binary point in the fixed-point input. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acc508efe0efaabab26c7ee3ef4e6ec5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc508efe0efaabab26c7ee3ef4e6ec5a">&#9670;&nbsp;</a></span>INSTR_CREATE_scvtf_vector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_scvtf_vector</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">width&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_scvtf, Rd, Rm, width)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an SCVTF vector instruction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The output register. </td></tr>
+    <tr><td class="paramname">Rm</td><td>The first input register. </td></tr>
+    <tr><td class="paramname">width</td><td>Immediate int of the vector element width. Must be <a class="el" href="dr__ir__macros__aarch64_8h.html#a24dca05089893aac1b7be58819fc8506">OPND_CREATE_SINGLE()</a> or <a class="el" href="dr__ir__macros__aarch64_8h.html#abc0827a4d3590c1f4dbb10e85f7326e6">OPND_CREATE_DOUBLE()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9d05ce08141b439e93fd054cc2e1b12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d05ce08141b439e93fd054cc2e1b12f">&#9670;&nbsp;</a></span>INSTR_CREATE_scvtf_vector_fixed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_scvtf_vector_fixed</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">width, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fbits&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_scvtf, Rd, Rm, width, fbits)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an SCVTF vector floating-point to fixed-point convert instruction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The output register. </td></tr>
+    <tr><td class="paramname">Rm</td><td>The input register. </td></tr>
+    <tr><td class="paramname">width</td><td>The vector element width. Must be <a class="el" href="dr__ir__macros__aarch64_8h.html#a24dca05089893aac1b7be58819fc8506">OPND_CREATE_SINGLE()</a> or <a class="el" href="dr__ir__macros__aarch64_8h.html#abc0827a4d3590c1f4dbb10e85f7326e6">OPND_CREATE_DOUBLE()</a>. </td></tr>
+    <tr><td class="paramname">fbits</td><td>The number of bits after the binary point in the fixed-point destination element. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a97b320fde1a7a55d3b44336a9f636d41"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a97b320fde1a7a55d3b44336a9f636d41">&#9670;&nbsp;</a></span>INSTR_CREATE_shadd_vector</h2>
 
@@ -9077,6 +9340,202 @@ Enumerations</h2></td></tr>
     <tr><td class="paramname">Rm</td><td>The first input register. </td></tr>
     <tr><td class="paramname">Rn</td><td>The second input register. </td></tr>
     <tr><td class="paramname">width</td><td>The input vector element width. Use either <a class="el" href="dr__ir__macros__aarch64_8h.html#a9c57dfea6090119e2ef1f7b2aea4c12a">OPND_CREATE_BYTE()</a>, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF()</a> or <a class="el" href="dr__ir__macros__aarch64_8h.html#a24dca05089893aac1b7be58819fc8506">OPND_CREATE_SINGLE()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abbecbbf38e6ee22c0eb76211938cac0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbecbbf38e6ee22c0eb76211938cac0e">&#9670;&nbsp;</a></span>INSTR_CREATE_ucvtf_scalar</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ucvtf_scalar</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_ucvtf, Rd, Rm)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a UCVTF floating point instruction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>Floating-point output register. </td></tr>
+    <tr><td class="paramname">Rm</td><td>Integer input register. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af6eed6bdd7c0fd182d851fb5c72bd47a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6eed6bdd7c0fd182d851fb5c72bd47a">&#9670;&nbsp;</a></span>INSTR_CREATE_ucvtf_scalar_fixed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ucvtf_scalar_fixed</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fbits&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_ucvtf, Rd, Rm, fbits)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a UCVTF scalar floating-point to fixed-point convert instruction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>Floating-point output register. </td></tr>
+    <tr><td class="paramname">Rm</td><td>Integer input register. </td></tr>
+    <tr><td class="paramname">fbits</td><td>The number of bits after the binary point in the fixed-point input. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a22f86525989a6e0ba588b40018c53fff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22f86525989a6e0ba588b40018c53fff">&#9670;&nbsp;</a></span>INSTR_CREATE_ucvtf_vector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ucvtf_vector</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">width&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_ucvtf, Rd, Rm, width)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a UCVTF vector instruction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The output register. </td></tr>
+    <tr><td class="paramname">Rm</td><td>The first input register. </td></tr>
+    <tr><td class="paramname">width</td><td>Immediate int of the vector element width. Must be <a class="el" href="dr__ir__macros__aarch64_8h.html#a24dca05089893aac1b7be58819fc8506">OPND_CREATE_SINGLE()</a> or <a class="el" href="dr__ir__macros__aarch64_8h.html#abc0827a4d3590c1f4dbb10e85f7326e6">OPND_CREATE_DOUBLE()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a774ec6ded3816ccc68e8af468392fbfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a774ec6ded3816ccc68e8af468392fbfc">&#9670;&nbsp;</a></span>INSTR_CREATE_ucvtf_vector_fixed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ucvtf_vector_fixed</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">width, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fbits&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_ucvtf, Rd, Rm, width, fbits)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a UCVTF vector floating-point to fixed-point convert instruction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The output register. </td></tr>
+    <tr><td class="paramname">Rm</td><td>The input register. </td></tr>
+    <tr><td class="paramname">width</td><td>The vector element width. Must be <a class="el" href="dr__ir__macros__aarch64_8h.html#a24dca05089893aac1b7be58819fc8506">OPND_CREATE_SINGLE()</a> or <a class="el" href="dr__ir__macros__aarch64_8h.html#abc0827a4d3590c1f4dbb10e85f7326e6">OPND_CREATE_DOUBLE()</a>. </td></tr>
+    <tr><td class="paramname">fbits</td><td>The number of bits after the binary point in the fixed-point destination element. </td></tr>
   </table>
   </dd>
 </dl>
@@ -11980,5 +12439,5 @@ Enumerations</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18739 --- Fri Apr 23 2021 03:22:03 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18746 --- Fri Apr 30 2021 03:08:56 &nbsp; <img border=0 src="favicon.png">
 </small></address>

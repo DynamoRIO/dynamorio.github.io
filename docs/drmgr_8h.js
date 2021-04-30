@@ -7,6 +7,9 @@
     [ "drmgr_priority_t", "group__drmgr.html#gad1ea8251bfe11bcc02821ada3852e599", null ],
     [ "drmgr_xform_cb_t", "group__drmgr.html#ga1260c94e5eb2b34a7af2c2e99b129568", null ],
     [ "emulated_instr_t", "group__drmgr.html#gac779b3f5c1076450ad32083da0921768", null ],
+    [ "dr_emulate_options_t", "group__drmgr.html#gaaa131b3cd2bf8aadb9ac196911aa6b32", [
+      [ "DR_EMULATE_REST_OF_BLOCK", "group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a60a60d7210d981f2fb0692e125e00dc4", null ]
+    ] ],
     [ "drmgr_bb_phase_t", "group__drmgr.html#gae3531e42d6cde87d19a63801ab6b9230", [
       [ "DRMGR_PHASE_NONE", "group__drmgr.html#ggae3531e42d6cde87d19a63801ab6b9230ae5168599a479256d3b95839f57e5b985", null ],
       [ "DRMGR_PHASE_APP2APP", "group__drmgr.html#ggae3531e42d6cde87d19a63801ab6b9230a7eb5e7bcc7f6d533bcb8dcc10389441e", null ],

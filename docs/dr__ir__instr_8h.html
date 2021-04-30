@@ -512,6 +512,8 @@ Functions</h2></td></tr>
 <tr class="separator:a61b348667a4fc288e84e3f053033c075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bb149eae980a77ceb36798fd7ebb096"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a6bb149eae980a77ceb36798fd7ebb096">instr_zeroes_ymmh</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
 <tr class="separator:a6bb149eae980a77ceb36798fd7ebb096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86eec1ba7341719083b40da5a2f2f8f2"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a86eec1ba7341719083b40da5a2f2f8f2">instr_zeroes_zmmh</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
+<tr class="separator:a86eec1ba7341719083b40da5a2f2f8f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a811c5d939e913be439fe34be3c245f35"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a811c5d939e913be439fe34be3c245f35">instr_is_xsave</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
 <tr class="separator:a811c5d939e913be439fe34be3c245f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4dd9c7a0964854463773c9a88e06fea"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#ab4dd9c7a0964854463773c9a88e06fea">instr_get_rel_data_or_instr_target</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, app_pc *target)</td></tr>
@@ -536,6 +538,8 @@ Functions</h2></td></tr>
 <tr class="separator:a946303e1c9c3d1102603dc9842479b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d9cebf36b6c0d225dcc6f3a801876a7"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a6d9cebf36b6c0d225dcc6f3a801876a7">instr_set_label_callback</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, <a class="el" href="dr__ir__instr_8h.html#ae8b5942bc78904306cad446010dc1976">instr_label_callback_t</a> func)</td></tr>
 <tr class="separator:a6d9cebf36b6c0d225dcc6f3a801876a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948542ee1a6cc2dbffeed26fd43285dc"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a948542ee1a6cc2dbffeed26fd43285dc">instr_clear_label_callback</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
+<tr class="separator:a948542ee1a6cc2dbffeed26fd43285dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38065c3db26272edab262a5222b99598"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a38065c3db26272edab262a5222b99598">instr_is_mov</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
 <tr class="separator:a38065c3db26272edab262a5222b99598"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3f4075aeac7cfc3339c4df4f4ced40d"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#af3f4075aeac7cfc3339c4df4f4ced40d">instr_is_call</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
@@ -1740,6 +1744,25 @@ Functions</h2></td></tr>
 <li>instr_allocate_raw_bits(dcontext, instr, num_bytes)</li>
 </ul>
 <p>and returns the resulting <a class="el" href="structinstr__t.html">instr_t</a>. </p>
+
+</div>
+</div>
+<a id="a948542ee1a6cc2dbffeed26fd43285dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948542ee1a6cc2dbffeed26fd43285dc">&#9670;&nbsp;</a></span>instr_clear_label_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API void instr_clear_label_callback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
+          <td class="paramname"><em>instr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Removes the callback set by <a class="el" href="dr__ir__instr_8h.html#a6d9cebf36b6c0d225dcc6f3a801876a7">instr_set_label_callback()</a>. </p>
 
 </div>
 </div>
@@ -7397,6 +7420,25 @@ mangle" if <code>val</code> is false.</p>
 
 </div>
 </div>
+<a id="a86eec1ba7341719083b40da5a2f2f8f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86eec1ba7341719083b40da5a2f2f8f2">&#9670;&nbsp;</a></span>instr_zeroes_zmmh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API bool instr_zeroes_zmmh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
+          <td class="paramname"><em>instr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns true iff <code>instr</code> writes to an xmm or ymm register and zeroes the top half of the corresponding zmm register as a result (some instructions preserve the top half while others zero it when writing to the bottom half). This zeroing will occur even if <code>instr</code> is predicated (see <a class="el" href="dr__ir__instr_8h.html#aa0dda1bdd960e675b6b65a4093b44896">instr_is_predicated()</a>). </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <div class="ttc" id="adr__ir__decode_8h_html_a5ca2a278008e547130218e8cfde44e3d"><div class="ttname"><a href="dr__ir__decode_8h.html#a5ca2a278008e547130218e8cfde44e3d">decode</a></div><div class="ttdeci">DR_API byte * decode(void *drcontext, byte *pc, instr_t *instr)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a2b0ce5e5125951e4a7dfdc5ac716282a"><div class="ttname"><a href="dr__ir__instr_8h.html#a2b0ce5e5125951e4a7dfdc5ac716282a">instr_noalloc_init</a></div><div class="ttdeci">DR_API void instr_noalloc_init(void *drcontext, instr_noalloc_t *instr)</div></div>
@@ -7408,5 +7450,5 @@ mangle" if <code>val</code> is false.</p>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18739 --- Fri Apr 23 2021 03:22:03 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18746 --- Fri Apr 30 2021 03:08:56 &nbsp; <img border=0 src="favicon.png">
 </small></address>

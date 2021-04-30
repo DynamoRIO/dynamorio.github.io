@@ -122,6 +122,7 @@
     [ "instr_allocate_raw_bits", "dr__ir__instr_8h.html#a6d9dae99989a20372ecd82a0a441a19d", null ],
     [ "instr_build", "dr__ir__instr_8h.html#af99a6ac4a5752279561386c9b9de30c5", null ],
     [ "instr_build_bits", "dr__ir__instr_8h.html#a107b301e505c0dde72d4ce8e187a5d8f", null ],
+    [ "instr_clear_label_callback", "dr__ir__instr_8h.html#a948542ee1a6cc2dbffeed26fd43285dc", null ],
     [ "instr_clone", "dr__ir__instr_8h.html#a36cfff6a0f3c66e861149b2c94940798", null ],
     [ "instr_cmovcc_to_jcc", "dr__ir__instr_8h.html#a949d2d48163c09469cac82295ac7d6ed", null ],
     [ "instr_cmovcc_triggered", "dr__ir__instr_8h.html#a2822687082969e54135c71d16262f010", null ],
@@ -316,5 +317,6 @@
     [ "instr_writes_memory", "dr__ir__instr_8h.html#a61b348667a4fc288e84e3f053033c075", null ],
     [ "instr_writes_to_exact_reg", "dr__ir__instr_8h.html#af6e9c849fd0dc187abd048dfab67318f", null ],
     [ "instr_writes_to_reg", "dr__ir__instr_8h.html#add5c71c3dbb337d6d371dda99857a224", null ],
-    [ "instr_zeroes_ymmh", "dr__ir__instr_8h.html#a6bb149eae980a77ceb36798fd7ebb096", null ]
+    [ "instr_zeroes_ymmh", "dr__ir__instr_8h.html#a6bb149eae980a77ceb36798fd7ebb096", null ],
+    [ "instr_zeroes_zmmh", "dr__ir__instr_8h.html#a86eec1ba7341719083b40da5a2f2f8f2", null ]
 ],
