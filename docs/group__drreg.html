@@ -89,7 +89,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__drreg.html#gga9aa35aebc3d4f0f41cba66bfcde82a00a7bbb7c0168068bd904f612b89b4c5dc9">DRREG_IGNORE_CONTROL_FLOW</a> = 0x002, 
 <br />
-&#160;&#160;<a class="el" href="group__drreg.html#gga9aa35aebc3d4f0f41cba66bfcde82a00a2d5f9cc167553f4145dc5adb8eac3f9d">DRREG_USER_RESTORES_AT_BB_END</a> = 0x004
+&#160;&#160;<a class="el" href="group__drreg.html#gga9aa35aebc3d4f0f41cba66bfcde82a00a2d5f9cc167553f4145dc5adb8eac3f9d">DRREG_USER_RESTORES_AT_BB_END</a> = 0x004, 
+<br />
+&#160;&#160;<a class="el" href="group__drreg.html#gga9aa35aebc3d4f0f41cba66bfcde82a00a2d1537112f577f6e8943463069b523d6">DRREG_HANDLE_MULTI_PHASE_SLOT_RESERVATIONS</a> = 0x008
 <br />
  }</td></tr>
 <tr class="separator:ga9aa35aebc3d4f0f41cba66bfcde82a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -261,6 +263,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="gga9aa35aebc3d4f0f41cba66bfcde82a00a7bbb7c0168068bd904f612b89b4c5dc9"></a>DRREG_IGNORE_CONTROL_FLOW&#160;</td><td class="fielddoc"><p>drreg was designed for linear control flow. Normally, drreg disables optimizations if it sees any kind of internal control flow (viz., a branch with an <a class="el" href="structinstr__t.html">instr_t</a> target) that was added during drmgr's app2app phase, which includes flow added by <a class="el" href="group__drutil.html#gae38961d42fc285d7f9034c4b02690cae">drutil_expand_rep_string()</a>. The primary consequence of disabling optimizations means that application instructions become barriers to spilled scratch registers that have been unreserved but have not yet been lazily restored, which are restored prior to each application instruction. If this flag is set, drreg assumes that internal control flow either does not cross application instructions or that the client is ensuring that each forward jump contains the same set of saved scratch registers at its source and target (typically done by saving all scratch registers needed inside control flow prior to any forward branches). Such scratch registers are then restored prior to each application instruction. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga9aa35aebc3d4f0f41cba66bfcde82a00a2d5f9cc167553f4145dc5adb8eac3f9d"></a>DRREG_USER_RESTORES_AT_BB_END&#160;</td><td class="fielddoc"><p>Turns off register restoration at the end of the block. Note that it is still required that registers have their original values at the end of a basic block. Therefore, restoration needs to be handled by the user manually, usually via <a class="el" href="group__drreg.html#gad7fbf107e7b10fffb8da7d93b74153c4">drreg_restore_all()</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9aa35aebc3d4f0f41cba66bfcde82a00a2d1537112f577f6e8943463069b523d6"></a>DRREG_HANDLE_MULTI_PHASE_SLOT_RESERVATIONS&#160;</td><td class="fielddoc"><p>Turns on stricter logic to find free register spill slots. This avoids conflicts with slots used to spill some register value in prior instrumentation passes. An example usage is in <a class="el" href="group__drx.html#ga30c372c0385d8584660f5c449a18ec36">drx_expand_scatter_gather()</a> which is used in the app2app pass and requires spilling of registers to slots that may conflict with slots used during later instrumentation passes. Using this option also makes spill slots used in prior phases less available in future phases; the current logic skips over a slot if there's a usage found anywhere later in the bb added by any previous phase. So it requires additional spill slots as well. </p>
 </td></tr>
 </table>
 
@@ -732,6 +736,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Requests exclusive use of the arithmetic flags register. Spills the application value at <code>where</code> in <code>ilist</code>, if necessary. When used during drmgr's insertion phase, optimizations such as keeping the application flags value in a register and eliding duplicate spills and restores will be automatically applied. If called during drmgr's insertion phase, <code>where</code> must be the current application instruction.</p>
+<p>TODO i#3823: Support multi-phase use. This will require adding support to spill aflags to slots other than AFLAGS_SLOT.</p>
 <dl class="section return"><dt>Returns</dt><dd>whether successful or an error code on failure. </dd></dl>
 
 </div>
@@ -902,6 +907,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>This routine ensures that the application's value for the arithmetic flags is in place prior to <code>where</code>. This is automatically done when the flags are reserved prior to an application instruction, but sometimes instrumentation needs to read the value of the flags. This is intended as a convenience barrier for lazy restores performed by drreg.</p>
 <p>If called during drmgr's insertion phase, <code>where</code> must be the current application instruction.</p>
+<p>TODO i#3823: Support multi-phase use. This will require adding support to spill aflags to slots other than AFLAGS_SLOT.</p>
 <dl class="section return"><dt>Returns</dt><dd>whether successful or an error code on failure. </dd></dl>
 
 </div>
@@ -1171,5 +1177,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18746 --- Fri Apr 30 2021 03:08:58 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18752 --- Fri May 7 2021 03:10:22 &nbsp; <img border=0 src="favicon.png">
 </small></address>

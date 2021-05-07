@@ -42,20 +42,21 @@
         [ "CI Job Auto-Cancellation", "page_test_suite.html#autotoc_md256", null ],
         [ "CI for AArch64 & AArch32", "page_test_suite.html#autotoc_md257", null ],
         [ "CI Tree Closures", "page_test_suite.html#autotoc_md258", null ],
-        [ "Trybots", "page_test_suite.html#autotoc_md259", null ]
+        [ "Trybots", "page_test_suite.html#autotoc_md259", null ],
+        [ "Debugging Tests on Github Actions Runner", "page_test_suite.html#autotoc_md260", null ]
       ] ],
-      [ "Regression Test Suite", "page_test_suite.html#autotoc_md260", [
-        [ "Test Organization", "page_test_suite.html#autotoc_md261", null ],
-        [ "Building and Running Tests", "page_test_suite.html#autotoc_md262", null ],
-        [ "Testing AArchXX", "page_test_suite.html#autotoc_md263", null ],
-        [ "Test Output", "page_test_suite.html#autotoc_md264", null ],
-        [ "Pre-Commit Test Suite", "page_test_suite.html#autotoc_md265", null ],
-        [ "Cross-Compilation and Android Testing", "page_test_suite.html#autotoc_md266", null ],
-        [ "Pre-Commit Test Suite Over Ssh", "page_test_suite.html#autotoc_md267", null ],
-        [ "Test Failures", "page_test_suite.html#autotoc_md268", null ],
-        [ "Missing Tests", "page_test_suite.html#autotoc_md269", null ]
+      [ "Regression Test Suite", "page_test_suite.html#autotoc_md261", [
+        [ "Test Organization", "page_test_suite.html#autotoc_md262", null ],
+        [ "Building and Running Tests", "page_test_suite.html#autotoc_md263", null ],
+        [ "Testing AArchXX", "page_test_suite.html#autotoc_md264", null ],
+        [ "Test Output", "page_test_suite.html#autotoc_md265", null ],
+        [ "Pre-Commit Test Suite", "page_test_suite.html#autotoc_md266", null ],
+        [ "Cross-Compilation and Android Testing", "page_test_suite.html#autotoc_md267", null ],
+        [ "Pre-Commit Test Suite Over Ssh", "page_test_suite.html#autotoc_md268", null ],
+        [ "Test Failures", "page_test_suite.html#autotoc_md269", null ],
+        [ "Missing Tests", "page_test_suite.html#autotoc_md270", null ]
       ] ],
-      [ "Adding New Tests", "page_test_suite.html#autotoc_md270", null ]
+      [ "Adding New Tests", "page_test_suite.html#autotoc_md271", null ]
     ] ],
     [ "Profiling DynamoRIO and Clients", "page_profiling.html", [
       [ "Linux", "page_profiling.html#autotoc_md218", [

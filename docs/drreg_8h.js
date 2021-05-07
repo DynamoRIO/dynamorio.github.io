@@ -10,7 +10,8 @@
     [ "drreg_bb_properties_t", "group__drreg.html#ga9aa35aebc3d4f0f41cba66bfcde82a00", [
       [ "DRREG_CONTAINS_SPANNING_CONTROL_FLOW", "group__drreg.html#gga9aa35aebc3d4f0f41cba66bfcde82a00a7480b21f4a67dd853d857271f4eaf058", null ],
       [ "DRREG_IGNORE_CONTROL_FLOW", "group__drreg.html#gga9aa35aebc3d4f0f41cba66bfcde82a00a7bbb7c0168068bd904f612b89b4c5dc9", null ],
-      [ "DRREG_USER_RESTORES_AT_BB_END", "group__drreg.html#gga9aa35aebc3d4f0f41cba66bfcde82a00a2d5f9cc167553f4145dc5adb8eac3f9d", null ]
+      [ "DRREG_USER_RESTORES_AT_BB_END", "group__drreg.html#gga9aa35aebc3d4f0f41cba66bfcde82a00a2d5f9cc167553f4145dc5adb8eac3f9d", null ],
+      [ "DRREG_HANDLE_MULTI_PHASE_SLOT_RESERVATIONS", "group__drreg.html#gga9aa35aebc3d4f0f41cba66bfcde82a00a2d1537112f577f6e8943463069b523d6", null ]
     ] ],
     [ "drreg_status_t", "group__drreg.html#gad5b7a7a020d7206b11e61e7cdae02ee9", [
       [ "DRREG_SUCCESS", "group__drreg.html#ggad5b7a7a020d7206b11e61e7cdae02ee9ab62388bb72ad127e07c1ffafb213cb6e", null ],

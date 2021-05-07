@@ -24,7 +24,7 @@ permalink: /page_drreg.html
 <div class="title">Register Management </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <code>drreg</code> DynamoRIO Register Management Extension is a mediator for selecting, preserving, and using registers among multiple instrumentation components. The interface is meant to be used in concert with the <code>drmgr</code> instrumentation pass scheme. The results are most efficient when used in the <code>drmgr</code> instrumentation insertion phase. Use outside of the insertion phase, such as during <code>drmgr's</code> instrumentation-to-instrumentation transformation phase, or use outside of <code>drmgr</code> entirely, is supported, but duplicate spills and restores may not be optimized away.</p>
+<div class="textblock"><p>The <code>drreg</code> DynamoRIO Register Management Extension is a mediator for selecting, preserving, and using registers among multiple instrumentation components. The interface is meant to be used in concert with the <code>drmgr</code> instrumentation pass scheme. The results are most efficient when used in the <code>drmgr</code> instrumentation insertion phase. Use outside of the insertion phase, such as during <code>drmgr's</code> instrumentation-to-instrumentation transformation phase, or use outside of <code>drmgr</code> entirely, is supported, but duplicate spills and restores may not be optimized away. When using drreg to reserve registers in multiple phases (like app2app or instru2instru in addition to the insertion phase), it is important to call <a class="el" href="group__drreg.html#ga7910ab166b0d698c11964a7b89d90faf">drreg_set_bb_properties()</a> with <a class="el" href="group__drreg.html#gga9aa35aebc3d4f0f41cba66bfcde82a00a2d1537112f577f6e8943463069b523d6">DRREG_HANDLE_MULTI_PHASE_SLOT_RESERVATIONS</a> to enable logic that avoids conflicts with spill slots used by previous phases. This may have some performance cost, so we do not turn it on by default. Using this option also makes spill slots used in prior phases less available in future phases; the current logic skips over a slot if there's a usage found anywhere later in the bb added by any previous phase. So it requires additional spill slots as well.</p>
 <p>CAUTION: this extension is still a work in progress. Not all pieces are implemented yet, and the interface may be in flux until the details are finalized.</p>
 <ul>
 <li><a class="el" href="page_drreg.html#sec_drreg_setup">Setup</a></li>
@@ -55,5 +55,5 @@ Linear Control Flow</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18746 --- Fri Apr 30 2021 03:08:58 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18752 --- Fri May 7 2021 03:10:22 &nbsp; <img border=0 src="favicon.png">
 </small></address>
