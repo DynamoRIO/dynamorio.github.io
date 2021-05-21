@@ -43,6 +43,8 @@ Functions</h2></td></tr>
 <tr class="separator:gae38961d42fc285d7f9034c4b02690cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab75e6f41cd4ee5afaec592725abe1557"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drutil.html#gab75e6f41cd4ee5afaec592725abe1557">drutil_expand_rep_string_ex</a> (void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, OUT bool *expanded, OUT <a class="el" href="structinstr__t.html">instr_t</a> **stringop)</td></tr>
 <tr class="separator:gab75e6f41cd4ee5afaec592725abe1557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03209b5a9c85fff6402ceeb90f9995f3"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drutil.html#ga03209b5a9c85fff6402ceeb90f9995f3">drutil_instr_is_stringop_loop</a> (<a class="el" href="structinstr__t.html">instr_t</a> *inst)</td></tr>
+<tr class="separator:ga03209b5a9c85fff6402ceeb90f9995f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
@@ -286,6 +288,32 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga03209b5a9c85fff6402ceeb90f9995f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga03209b5a9c85fff6402ceeb90f9995f3">&#9670;&nbsp;</a></span>drutil_instr_is_stringop_loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT bool drutil_instr_is_stringop_loop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
+          <td class="paramname"><em>inst</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns whether the given instr is a stringop loop.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">inst</td><td>The instr to inspect.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>whether given instr is a stringop loop. </dd></dl>
+
+</div>
+</div>
 <a id="ga7e3d7896921f5bc20dd70d0de666ce6f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga7e3d7896921f5bc20dd70d0de666ce6f">&#9670;&nbsp;</a></span>drutil_opnd_mem_size_in_bytes()</h2>
 
@@ -330,5 +358,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18760 --- Fri May 14 2021 03:14:52 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18767 --- Fri May 21 2021 03:14:56 &nbsp; <img border=0 src="favicon.png">
 </small></address>

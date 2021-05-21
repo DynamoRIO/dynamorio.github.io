@@ -255,6 +255,10 @@ Macros</h2></td></tr>
 <tr class="separator:acc508efe0efaabab26c7ee3ef4e6ec5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d05ce08141b439e93fd054cc2e1b12f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a9d05ce08141b439e93fd054cc2e1b12f">INSTR_CREATE_scvtf_vector_fixed</a>(dc,  Rd,  Rm,  width,  fbits)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_scvtf, Rd, Rm, width, fbits)</td></tr>
 <tr class="separator:a9d05ce08141b439e93fd054cc2e1b12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b524b0d2cd44796ee7aff471a13314"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a33b524b0d2cd44796ee7aff471a13314">INSTR_CREATE_ldr_imm</a>(dc,  Rt,  Xn,  Rn,  imm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ad325ffad9f6165c311be190f6eaa9edc">instr_create_2dst_3src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#a726ca809ffd3d67ab4b8476646f26635a1c9e670f9ab49d768b74b280db5cae1a">OP_ldr</a>, Rt, Xn, Rn, Xn, imm)</td></tr>
+<tr class="separator:a33b524b0d2cd44796ee7aff471a13314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0872986540822ce59775c827ba687e89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a0872986540822ce59775c827ba687e89">INSTR_CREATE_str_imm</a>(dc,  Rt,  Xt,  Xn,  imm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ad325ffad9f6165c311be190f6eaa9edc">instr_create_2dst_3src</a>(dc, <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2daa6a46b02d917c3dc07fb77fc1864c37f">OP_str</a>, Rt, Xn, Xt, Xn, imm)</td></tr>
+<tr class="separator:a0872986540822ce59775c827ba687e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a983004a275780fdad98e1bf5e8bd3824"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a983004a275780fdad98e1bf5e8bd3824">INSTR_CREATE_fmov_scalar</a>(dc,  Rd,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_fmov, Rd, Rm)</td></tr>
 <tr class="separator:a983004a275780fdad98e1bf5e8bd3824"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d53ec4da62f0398caedec60f0a23259"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a6d53ec4da62f0398caedec60f0a23259">INSTR_CREATE_fabs_scalar</a>(dc,  Rd,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2daabde7dc0eaa966f2e3883ce0e5b9ddab">OP_fabs</a>, Rd, Rm)</td></tr>
@@ -5356,6 +5360,62 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a id="a33b524b0d2cd44796ee7aff471a13314"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b524b0d2cd44796ee7aff471a13314">&#9670;&nbsp;</a></span>INSTR_CREATE_ldr_imm</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ldr_imm</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">imm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ad325ffad9f6165c311be190f6eaa9edc">instr_create_2dst_3src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#a726ca809ffd3d67ab4b8476646f26635a1c9e670f9ab49d768b74b280db5cae1a">OP_ldr</a>, Rt, Xn, Rn, Xn, imm)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an LDR immediate instruction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rt</td><td>The output register. </td></tr>
+    <tr><td class="paramname">Xn</td><td>The input register or stack pointer </td></tr>
+    <tr><td class="paramname">Rn</td><td>The input memory disposition. </td></tr>
+    <tr><td class="paramname">imm</td><td>Immediate int of the input register offset </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a8749b92f4a091adb747d2b16b277c9e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8749b92f4a091adb747d2b16b277c9e0">&#9670;&nbsp;</a></span>INSTR_CREATE_mla_vector</h2>
 
@@ -8612,6 +8672,62 @@ Enumerations</h2></td></tr>
     <tr><td class="paramname">r</td><td>The destination memory operand. </td></tr>
     <tr><td class="paramname">q</td><td>The source vector register operand. </td></tr>
     <tr><td class="paramname">s</td><td>The size of the vector element. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0872986540822ce59775c827ba687e89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0872986540822ce59775c827ba687e89">&#9670;&nbsp;</a></span>INSTR_CREATE_str_imm</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_str_imm</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">imm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ad325ffad9f6165c311be190f6eaa9edc">instr_create_2dst_3src</a>(dc, <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2daa6a46b02d917c3dc07fb77fc1864c37f">OP_str</a>, Rt, Xn, Xt, Xn, imm)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a STR immediate instruction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rt</td><td>The output memory disposition. </td></tr>
+    <tr><td class="paramname">Xt</td><td>The input register or stack pointer. </td></tr>
+    <tr><td class="paramname">Xn</td><td>The output register </td></tr>
+    <tr><td class="paramname">imm</td><td>Immediate int of the output register offset </td></tr>
   </table>
   </dd>
 </dl>
@@ -12439,5 +12555,5 @@ Enumerations</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18760 --- Fri May 14 2021 03:14:50 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18767 --- Fri May 21 2021 03:14:53 &nbsp; <img border=0 src="favicon.png">
 </small></address>

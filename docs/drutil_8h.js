@@ -5,5 +5,6 @@
     [ "drutil_init", "group__drutil.html#gae2b7cca016411251a1dbebc5dbefa4f1", null ],
     [ "drutil_insert_get_mem_addr", "group__drutil.html#ga2f53127090ac749d0c17713f0eb25571", null ],
     [ "drutil_insert_get_mem_addr_ex", "group__drutil.html#gae798d2a61656f716a250996171c8cff8", null ],
+    [ "drutil_instr_is_stringop_loop", "group__drutil.html#ga03209b5a9c85fff6402ceeb90f9995f3", null ],
     [ "drutil_opnd_mem_size_in_bytes", "group__drutil.html#ga7e3d7896921f5bc20dd70d0de666ce6f", null ]
 ],
