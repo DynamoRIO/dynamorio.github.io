@@ -21,7 +21,9 @@
     [ "drmgr_xform_cb_t", "group__drmgr.html#ga1260c94e5eb2b34a7af2c2e99b129568", null ],
     [ "emulated_instr_t", "group__drmgr.html#gac779b3f5c1076450ad32083da0921768", null ],
     [ "dr_emulate_options_t", "group__drmgr.html#gaaa131b3cd2bf8aadb9ac196911aa6b32", [
-      [ "DR_EMULATE_REST_OF_BLOCK", "group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a60a60d7210d981f2fb0692e125e00dc4", null ]
+      [ "DR_EMULATE_REST_OF_BLOCK", "group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a60a60d7210d981f2fb0692e125e00dc4", null ],
+      [ "DR_EMULATE_FIRST_INSTR", "group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a14c220723e6844dd2ecdeb030c9ab396", null ],
+      [ "DR_EMULATE_INSTR_ONLY", "group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a526e36749e0fb1ca4e2a00a095a42efb", null ]
     ] ],
     [ "drmgr_bb_phase_t", "group__drmgr.html#gae3531e42d6cde87d19a63801ab6b9230", [
       [ "DRMGR_PHASE_NONE", "group__drmgr.html#ggae3531e42d6cde87d19a63801ab6b9230ae5168599a479256d3b95839f57e5b985", null ],
@@ -38,6 +40,7 @@
     [ "drmgr_get_emulated_instr_data", "group__drmgr.html#ga85b025c766a84bee841288d822b15380", null ],
     [ "drmgr_get_parent_cls_field", "group__drmgr.html#ga4f53520da678e84fd7712e2fcca0182b", null ],
     [ "drmgr_get_tls_field", "group__drmgr.html#gade57b8de9ed73d579044aa8f12abfe8d", null ],
+    [ "drmgr_in_emulation_region", "group__drmgr.html#ga37ca9b0961ad0b562318702897df729b", null ],
     [ "drmgr_init", "group__drmgr.html#ga07ab03a2182247922f756778d18bb3fd", null ],
     [ "drmgr_insert_emulation_end", "group__drmgr.html#ga2f7dd031774c812d485d4910846fbb73", null ],
     [ "drmgr_insert_emulation_start", "group__drmgr.html#ga94b96a01f3fa0ce7ad6a5f675965d952", null ],

@@ -71,7 +71,13 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:gae3531e42d6cde87d19a63801ab6b9230"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaaa131b3cd2bf8aadb9ac196911aa6b32"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#gaaa131b3cd2bf8aadb9ac196911aa6b32">dr_emulate_options_t</a> { <a class="el" href="group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a60a60d7210d981f2fb0692e125e00dc4">DR_EMULATE_REST_OF_BLOCK</a> = 0x0001
+<tr class="memitem:gaaa131b3cd2bf8aadb9ac196911aa6b32"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#gaaa131b3cd2bf8aadb9ac196911aa6b32">dr_emulate_options_t</a> { <br />
+&#160;&#160;<a class="el" href="group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a60a60d7210d981f2fb0692e125e00dc4">DR_EMULATE_REST_OF_BLOCK</a> = 0x0001, 
+<br />
+&#160;&#160;<a class="el" href="group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a14c220723e6844dd2ecdeb030c9ab396">DR_EMULATE_FIRST_INSTR</a> = 0x0002, 
+<br />
+&#160;&#160;<a class="el" href="group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a526e36749e0fb1ca4e2a00a095a42efb">DR_EMULATE_INSTR_ONLY</a> = 0x0004
+<br />
  }</td></tr>
 <tr class="separator:gaaa131b3cd2bf8aadb9ac196911aa6b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -153,6 +159,8 @@ Functions</h2></td></tr>
 <tr class="separator:gaf2227473141100828d097eb98828b954"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga85b025c766a84bee841288d822b15380"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga85b025c766a84bee841288d822b15380">drmgr_get_emulated_instr_data</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, OUT <a class="el" href="group__drmgr.html#gac779b3f5c1076450ad32083da0921768">emulated_instr_t</a> *emulated)</td></tr>
 <tr class="separator:ga85b025c766a84bee841288d822b15380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37ca9b0961ad0b562318702897df729b"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga37ca9b0961ad0b562318702897df729b">drmgr_in_emulation_region</a> (void *drcontext, OUT const <a class="el" href="group__drmgr.html#gac779b3f5c1076450ad32083da0921768">emulated_instr_t</a> **emulation_info)</td></tr>
+<tr class="separator:ga37ca9b0961ad0b562318702897df729b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga357735ce7daa0bb717556455f20040a5"><td class="memItemLeft" align="right" valign="top">DR_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga357735ce7daa0bb717556455f20040a5">drmgr_decode_sysnum_from_wrapper</a> (app_pc entry)</td></tr>
 <tr class="separator:ga357735ce7daa0bb717556455f20040a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaaac050cf70682f6fcb8e28aa942705cd"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#gaaac050cf70682f6fcb8e28aa942705cd">drmgr_register_thread_init_event</a> (void(*func)(void *drcontext))</td></tr>
@@ -406,6 +414,11 @@ Functions</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaaa131b3cd2bf8aadb9ac196911aa6b32a60a60d7210d981f2fb0692e125e00dc4"></a>DR_EMULATE_REST_OF_BLOCK&#160;</td><td class="fielddoc"><p>Indicates that the entire rest of the basic block is one emulation sequence. There is no end marker, so <a class="el" href="group__drmgr.html#gaf2227473141100828d097eb98828b954">drmgr_is_emulation_end()</a> will never return true. No support is provided for traces: clients must examine the constituent blocks instead to find emulation information. This is used for emulation sequences that include a block-terminating conditional branch, indirect branch, or system call or interrupt, as DR does not allow a label to appear after such instructions. These sequences typically want to isolate their emulation to include the entire block in any case. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="ggaaa131b3cd2bf8aadb9ac196911aa6b32a14c220723e6844dd2ecdeb030c9ab396"></a>DR_EMULATE_FIRST_INSTR&#160;</td><td class="fielddoc"><p>When used with <a class="el" href="group__drmgr.html#ga37ca9b0961ad0b562318702897df729b">drmgr_in_emulation_region()</a>, indicates that the current instruction is the first instruction of the emulation region. This allows a client to act on the original instruction just once, despite multiple emulation instructions. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaaa131b3cd2bf8aadb9ac196911aa6b32a526e36749e0fb1ca4e2a00a095a42efb"></a>DR_EMULATE_INSTR_ONLY&#160;</td><td class="fielddoc"><p>Indicates that only the instruction fetch is being emulated differently. The operation of the instruction remains the same. Observational instrumentation should examine the original instruction (in <a class="el" href="struct__emulated__instr__t.html#a6ad237fed40b2d642bf959a64afbf0c5">emulated_instr_t.instr</a>) for instruction fetch purposes, but should examine the emulation sequence for data accesses (e.g., loads and stores for a memory address tracing tool). If this flag is not set, instrumentation should instrument the original instruction in every way and ignore the emulation sequence.</p>
+<p>This flag is used for instruction refactorings that simplify instrumentation: e.g., <a class="el" href="group__drutil.html#gae38961d42fc285d7f9034c4b02690cae">drutil_expand_rep_string()</a> and <a class="el" href="group__drx.html#ga30c372c0385d8584660f5c449a18ec36">drx_expand_scatter_gather()</a>. It is not used for true emulation of an instruction, for example, for replacing an instruction that is not supported by the current hardware with an alternative sequence of instructions. </p>
+</td></tr>
 </table>
 
 </div>
@@ -648,6 +661,39 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns the user-controlled thread-local-storage field for the given index, which was returned by <a class="el" href="group__drmgr.html#ga512b4290d94b1874537e5b604cb27cab">drmgr_register_tls_field()</a>. To generate an instruction sequence that reads the drcontext field inline in the code cache, use <a class="el" href="group__drmgr.html#ga7c72a35608998e6e359a3a652a7f97f7">drmgr_insert_read_tls_field()</a>. </p>
+
+</div>
+</div>
+<a id="ga37ca9b0961ad0b562318702897df729b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga37ca9b0961ad0b562318702897df729b">&#9670;&nbsp;</a></span>drmgr_in_emulation_region()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT bool drmgr_in_emulation_region </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>drcontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OUT const <a class="el" href="group__drmgr.html#gac779b3f5c1076450ad32083da0921768">emulated_instr_t</a> **&#160;</td>
+          <td class="paramname"><em>emulation_info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Must be called during drmgr's insertion phase. Returns whether the current instruction in the phase is inside an emulation region. If it returns true, <code>emulation_info</code> is written with a pointer to information about the emulation. The pointed-at information's lifetime is the full range of the emulation region.</p>
+<p>This is a convenience routine that records the state for the <a class="el" href="group__drmgr.html#gae4a20b19e779581dccac41eca9bf8321">drmgr_is_emulation_start()</a> and <a class="el" href="group__drmgr.html#gaf2227473141100828d097eb98828b954">drmgr_is_emulation_end()</a> labels and the <a class="el" href="group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a60a60d7210d981f2fb0692e125e00dc4">DR_EMULATE_REST_OF_BLOCK</a> flag to prevent the client having to store state.</p>
+<p>This is the recommended usage for observational clients in the insertion event, highlighting the different paths for instruction versus data instrumentation:</p>
+<p>const emulated_instr_t *emulation; if (drmgr_in_emulation_region(drcontext, &amp;emulation)) { if (TEST(DR_EMULATE_FIRST_INSTR, emulation-&gt;flags)) { record_instr_fetch(emulation-&gt;instr); if (!TEST(DR_EMULATE_INSTR_ONLY, emulation-&gt;flags)) record_data_addresses(emulation-&gt;instr); } // Else skip further instr fetches until outside emulation region. if (instr_is_app(exec_instr) &amp;&amp; TEST(DR_EMULATE_INSTR_ONLY, emulation-&gt;flags)) record_data_addresses(exec_instr); } else if (instr_is_app(exec_instr)) { record_instr_fetch(exec_instr); record_data_addresses(exec_instr); }</p>
+<dl class="section return"><dt>Returns</dt><dd>false if the caller's <code>emulated_instr_t</code> is not compatible, true otherwise. </dd></dl>
 
 </div>
 </div>
@@ -2922,5 +2968,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18767 --- Fri May 21 2021 03:14:56 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18774 --- Fri May 28 2021 03:54:28 &nbsp; <img border=0 src="favicon.png">
 </small></address>

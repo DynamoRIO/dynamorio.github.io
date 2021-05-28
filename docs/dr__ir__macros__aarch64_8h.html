@@ -307,6 +307,10 @@ Macros</h2></td></tr>
 <tr class="separator:abe8b5c6576b467481cf7c9c66d4e8789"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa02752f42a529a5602a4b55f8ec8db73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#aa02752f42a529a5602a4b55f8ec8db73">INSTR_CREATE_frinti_scalar</a>(dc,  Rd,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_frinti, Rd, Rm)</td></tr>
 <tr class="separator:aa02752f42a529a5602a4b55f8ec8db73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9836c372ac3ee780fe4483376e791dea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a9836c372ac3ee780fe4483376e791dea">INSTR_CREATE_ldpsw</a>(dc,  Xt1,  Xt2,  Xn,  Xr,  imm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a47af65dc21d4bd6534dc0659835d3ef0">instr_create_3dst_3src</a>(dc, OP_ldpsw, Xt1, Xt2, Xn, Xr, Xn, imm)</td></tr>
+<tr class="separator:a9836c372ac3ee780fe4483376e791dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a401d24353c7f8c99fbc34c108b077bda"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a401d24353c7f8c99fbc34c108b077bda">INSTR_CREATE_ldpsw_2</a>(dc,  Xt1,  Xt2,  Xn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a2a59f597dc596760981fdc1ea2ea296c">instr_create_2dst_1src</a>(dc, OP_ldpsw, Xt1, Xt2, Xn)</td></tr>
+<tr class="separator:a401d24353c7f8c99fbc34c108b077bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6312cebc9c63e55df7c31b7183fd9b44"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a6312cebc9c63e55df7c31b7183fd9b44">INSTR_CREATE_fmul_scalar</a>(dc,  Rd,  Rm,  Rn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da341c62bf67247e630018ae91b1542457">OP_fmul</a>, Rd, Rm, Rn)</td></tr>
 <tr class="separator:a6312cebc9c63e55df7c31b7183fd9b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3556f3e267cc8468d1b0bc4d323be08c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a3556f3e267cc8468d1b0bc4d323be08c">INSTR_CREATE_fdiv_scalar</a>(dc,  Rd,  Rm,  Rn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da7e71d11c5c6122ae5e4b36a1624a33a6">OP_fdiv</a>, Rd, Rm, Rn)</td></tr>
@@ -333,6 +337,40 @@ Macros</h2></td></tr>
 <tr class="separator:a09174bd613cee2ef115837c5c549e635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbe5d591c7ea30bd3c47b2d98b964553"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#afbe5d591c7ea30bd3c47b2d98b964553">INSTR_CREATE_fnmsub_scalar</a>(dc,  Rd,  Rm,  Rn,  Ra)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_fnmsub, Rd, Rm, Rn, Ra)</td></tr>
 <tr class="separator:afbe5d591c7ea30bd3c47b2d98b964553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6443f7ddf83b313cff31b58f11283733"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a6443f7ddf83b313cff31b58f11283733">INSTR_CREATE_ld2_multi_2</a>(dc,  Vt1,  Vt2,  Xn,  disp,  index,  offset)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a6c7ca3f0fd739b17eb90645e758cb3da">instr_create_3dst_4src</a>(dc, OP_ld2, Vt1, Vt2, Xn, disp, index, Xn, offset)</td></tr>
+<tr class="separator:a6443f7ddf83b313cff31b58f11283733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a154d16145f900c18236e8756b9907caf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a154d16145f900c18236e8756b9907caf">INSTR_CREATE_ld2</a>(dc,  Vt1,  Vt2,  Xn,  index)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a5d8f8a71494683ce0fe5ba1995246906">instr_create_2dst_2src</a>(dc, OP_ld2, Vt1, Vt2, Xn, index)</td></tr>
+<tr class="separator:a154d16145f900c18236e8756b9907caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c82795820d57dc4b4c308c3e1078b03"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a2c82795820d57dc4b4c308c3e1078b03">INSTR_CREATE_ld2_2</a>(dc,  Vt1,  Vt2,  Xn,  Xnd,  index,  offset)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a5f02d35ea1d8c296c5cc845e5ab00e1f">instr_create_3dst_6src</a>(dc, OP_ld2, Vt1, Vt2, Xn, Vt1, Vt2, Xnd, index, Xn, offset)</td></tr>
+<tr class="separator:a2c82795820d57dc4b4c308c3e1078b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab0dc17d47eddc2ebd96bf4445e0b0f9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#aab0dc17d47eddc2ebd96bf4445e0b0f9">INSTR_CREATE_ld2r</a>(dc,  Vt1,  Vt2,  Xn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a2a59f597dc596760981fdc1ea2ea296c">instr_create_2dst_1src</a>(dc, OP_ld2r, Vt1, Vt2, Xn)</td></tr>
+<tr class="separator:aab0dc17d47eddc2ebd96bf4445e0b0f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35f503e44b41449038018fdfddf16638"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a35f503e44b41449038018fdfddf16638">INSTR_CREATE_ld2r_2</a>(dc,  Vt1,  Vt2,  Xn,  Xnd,  Xm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a47af65dc21d4bd6534dc0659835d3ef0">instr_create_3dst_3src</a>(dc, OP_ld2r, Vt1, Vt2, Xn, Xnd, Xn, Xm)</td></tr>
+<tr class="separator:a35f503e44b41449038018fdfddf16638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac173374dd1691b2886c2dfe7e1a5416d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ac173374dd1691b2886c2dfe7e1a5416d">INSTR_CREATE_ld3_multi</a>(dc,  Vt1,  Vt2,  Vt3,  Xn,  index)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a2ad1058d00bd03758ab946f4852195f7">instr_create_3dst_2src</a>(dc, OP_ld3, Vt1, Vt2, Vt3, Xn, index)</td></tr>
+<tr class="separator:ac173374dd1691b2886c2dfe7e1a5416d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22eb471f9d180122ded90771fa42ed42"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a22eb471f9d180122ded90771fa42ed42">INSTR_CREATE_ld3_multi_2</a>(dc,  Vt1,  Vt2,  Vt3,  Xn,  Xnd,  index,  Xm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a803c6fc78c39eafc40555f498f5ed04d">instr_create_4dst_4src</a>(dc, OP_ld3, Vt1, Vt2, Vt3, Xn, Xnd, index, Xn, Xm)</td></tr>
+<tr class="separator:a22eb471f9d180122ded90771fa42ed42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ddb29fdad2f991fcfb4a919a85076de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a4ddb29fdad2f991fcfb4a919a85076de">INSTR_CREATE_ld3</a>(dc,  Vt1,  Vt2,  Vt3,  Xn,  index)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a2ad1058d00bd03758ab946f4852195f7">instr_create_3dst_2src</a>(dc, OP_ld3, Vt1, Vt2, Vt3, Xn, index)</td></tr>
+<tr class="separator:a4ddb29fdad2f991fcfb4a919a85076de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb97d5170c27a7ca65b9d6c9b42617f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#aeb97d5170c27a7ca65b9d6c9b42617f4">INSTR_CREATE_ld3_2</a>(dc,  Vt1,  Vt2,  Vt3,  Xn,  Xnd,  index,  offset)</td></tr>
+<tr class="separator:aeb97d5170c27a7ca65b9d6c9b42617f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4424ed8462113060f75680110941046"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ad4424ed8462113060f75680110941046">INSTR_CREATE_ld3r</a>(dc,  Vt1,  Vt2,  Vt3,  Xn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a64605e9634624211e6479ce6545e4b3c">instr_create_3dst_1src</a>(dc, OP_ld3r, Vt1, Vt2, Vt3, Xn)</td></tr>
+<tr class="separator:ad4424ed8462113060f75680110941046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4935b01849a2a8dce2327dffdff5ea77"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a4935b01849a2a8dce2327dffdff5ea77">INSTR_CREATE_ld3r_2</a>(dc,  Vt1,  Vt2,  Vt3,  Xn,  Xnd,  offset)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ad948dcaad8d5a7f1ae70750bb1834e86">instr_create_4dst_3src</a>(dc, OP_ld3r, Vt1, Vt2, Vt3, Xn, Xnd, Xn, offset)</td></tr>
+<tr class="separator:a4935b01849a2a8dce2327dffdff5ea77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a016a7719de62c69a7290302064f87503"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a016a7719de62c69a7290302064f87503">INSTR_CREATE_ld4_multi</a>(dc,  Vt1,  Vt2,  Vt3,  Vt4,  Xn,  index)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#abf0defc37827c54bf1cdec7c4ce375b2">instr_create_4dst_2src</a>(dc, OP_ld4, Vt1, Vt2, Vt3, Vt4, Xn, index)</td></tr>
+<tr class="separator:a016a7719de62c69a7290302064f87503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb82af6a8cc4533f4d0d6e4ff19dc09d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#abb82af6a8cc4533f4d0d6e4ff19dc09d">INSTR_CREATE_ld4_multi_2</a>(dc,  Vt1,  Vt2,  Vt3,  Vt4,  Xn,  Xnd,  index,  offset)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a70781d2a018072db770f63d7588d25b7">instr_create_5dst_4src</a>(dc, OP_ld4, Vt1, Vt2, Vt3, Vt4, Xn, Xnd, index, Xn, offset)</td></tr>
+<tr class="separator:abb82af6a8cc4533f4d0d6e4ff19dc09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addeb0e8125b1fc8153d526e2b3e50729"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#addeb0e8125b1fc8153d526e2b3e50729">INSTR_CREATE_ld4</a>(dc,  Vt1,  Vt2,  Vt3,  Vt4,  Xn,  index)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#abf0defc37827c54bf1cdec7c4ce375b2">instr_create_4dst_2src</a>(dc, OP_ld4, Vt1, Vt2, Vt3, Vt4, Xn, index)</td></tr>
+<tr class="separator:addeb0e8125b1fc8153d526e2b3e50729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3ced43ee0952461b27edf5d3f19a35a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ad3ced43ee0952461b27edf5d3f19a35a">INSTR_CREATE_ld4_2</a>(dc,  Vt1,  Vt2,  Vt3,  Vt4,  Xn,  Xnd,  index,  offset)</td></tr>
+<tr class="separator:ad3ced43ee0952461b27edf5d3f19a35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0b55addb7e03b21ffca3afacfb73301"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#aa0b55addb7e03b21ffca3afacfb73301">INSTR_CREATE_ld4r</a>(dc,  Vt1,  Vt2,  Vt3,  Vt4,  Xn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a30593406c5d0d33f1b237a17e15c52b8">instr_create_4dst_1src</a>(dc, OP_ld4r, Vt1, Vt2, Vt3, Vt4, Xn)</td></tr>
+<tr class="separator:aa0b55addb7e03b21ffca3afacfb73301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a188626f8ce98372bef0803a2e22ae060"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a188626f8ce98372bef0803a2e22ae060">INSTR_CREATE_ld4r_2</a>(dc,  Vt1,  Vt2,  Vt3,  Vt4,  Xn,  Xnd,  offset)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#adc91555f23a411ede322c841774593fb">instr_create_5dst_3src</a>(dc, OP_ld4r, Vt1, Vt2, Vt3, Vt4, Xn, Xnd, Xn, offset)</td></tr>
+<tr class="separator:a188626f8ce98372bef0803a2e22ae060"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d73cb1c8c7db48787d942cdc03311e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a1d73cb1c8c7db48787d942cdc03311e2">INSTR_CREATE_ld1_multi_1</a>(dc,  q,  r,  s)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_ld1, q, r, s)</td></tr>
 <tr class="separator:a1d73cb1c8c7db48787d942cdc03311e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63dd772b440767906efc610fb1421809"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a63dd772b440767906efc610fb1421809">INSTR_CREATE_st1_multi_1</a>(dc,  r,  q,  s)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_st1, r, q, s)</td></tr>
@@ -5354,6 +5392,1284 @@ Enumerations</h2></td></tr>
     <tr><td class="paramname">q</td><td>The destination vector register operand. </td></tr>
     <tr><td class="paramname">r</td><td>The source memory operand. </td></tr>
     <tr><td class="paramname">s</td><td>The size of the vector element. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a154d16145f900c18236e8756b9907caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a154d16145f900c18236e8756b9907caf">&#9670;&nbsp;</a></span>INSTR_CREATE_ld2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a5d8f8a71494683ce0fe5ba1995246906">instr_create_2dst_2src</a>(dc, OP_ld2, Vt1, Vt2, Xn, index)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an Advanced SIMD (NEON) LD2 instruction to load a 2-element structure to the index of two vector registers, e.g. LD2 {V0.4H, V1.4H}[5], [X0]. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Vt1</td><td>The first destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt2</td><td>The second destination vector register operand. </td></tr>
+    <tr><td class="paramname">Xn</td><td>The stack-pointer or GPR to load into Vt1 and Vt2. </td></tr>
+    <tr><td class="paramname">index</td><td>The vector element index. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2c82795820d57dc4b4c308c3e1078b03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c82795820d57dc4b4c308c3e1078b03">&#9670;&nbsp;</a></span>INSTR_CREATE_ld2_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld2_2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xnd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">offset&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a5f02d35ea1d8c296c5cc845e5ab00e1f">instr_create_3dst_6src</a>(dc, OP_ld2, Vt1, Vt2, Xn, Vt1, Vt2, Xnd, index, Xn, offset)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an Advanced SIMD (NEON) LD2 instruction to load a 2-element structure to the index of two vector registers with post-indexing, e.g. LD2 {V0.4H, V1.4H}[5], [X0], X1. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Vt1</td><td>The first destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt2</td><td>The second destination vector register operand. </td></tr>
+    <tr><td class="paramname">Xn</td><td>The stack-pointer or register to load into Vt and Vt2. </td></tr>
+    <tr><td class="paramname">Xnd</td><td>The disposition of Xn. </td></tr>
+    <tr><td class="paramname">index</td><td>The index of the destination vectors. </td></tr>
+    <tr><td class="paramname">offset</td><td>The post-index offset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6443f7ddf83b313cff31b58f11283733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6443f7ddf83b313cff31b58f11283733">&#9670;&nbsp;</a></span>INSTR_CREATE_ld2_multi_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld2_multi_2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">disp, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">offset&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a6c7ca3f0fd739b17eb90645e758cb3da">instr_create_3dst_4src</a>(dc, OP_ld2, Vt1, Vt2, Xn, disp, index, Xn, offset)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an Advanced SIMD (NEON) LD2 instruction to load multiple 2-element structures to two vector registers with post-indexing, e.g. LD2 {V0.4H, V1.4H}, [X0], #32.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>.</td></tr>
+    <tr><td class="paramname">Vt1</td><td>The destination vector register operand.</td></tr>
+    <tr><td class="paramname">Vt2</td><td>The second destination vector register operand.</td></tr>
+    <tr><td class="paramname">Xn</td><td>The stack-pointer or GPR to load into Vt1 and Vt2.</td></tr>
+    <tr><td class="paramname">disp</td><td>The disposition of Xn.</td></tr>
+    <tr><td class="paramname">index</td><td>The element index of the vectors.</td></tr>
+    <tr><td class="paramname">offset</td><td>The post-index offset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aab0dc17d47eddc2ebd96bf4445e0b0f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab0dc17d47eddc2ebd96bf4445e0b0f9">&#9670;&nbsp;</a></span>INSTR_CREATE_ld2r</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld2r</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a2a59f597dc596760981fdc1ea2ea296c">instr_create_2dst_1src</a>(dc, OP_ld2r, Vt1, Vt2, Xn)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an Advanced SIMD (NEON) LD2R instruction to load and replicate a single 2-element structure to all lanes of two vector registers, e.g. LD2R {V0.4H, V1.4H}, [X0]. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Vt1</td><td>The first destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt2</td><td>The second destination vector register operand. </td></tr>
+    <tr><td class="paramname">Xn</td><td>The stack-pointer or GPR to load into Vt1 and Vt2. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a35f503e44b41449038018fdfddf16638"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35f503e44b41449038018fdfddf16638">&#9670;&nbsp;</a></span>INSTR_CREATE_ld2r_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld2r_2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xnd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a47af65dc21d4bd6534dc0659835d3ef0">instr_create_3dst_3src</a>(dc, OP_ld2r, Vt1, Vt2, Xn, Xnd, Xn, Xm)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an Advanced SIMD (NEON) LD2R instruction to load and replicate a single 2-element structure to all lanes of two vector registers with post-indexing , e.g. LD2R {V0.4H, V1.4H}, [X0], X1. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Vt1</td><td>The destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt2</td><td>The second destination vector register operand. </td></tr>
+    <tr><td class="paramname">Xn</td><td>The stack-pointer or GPR to load into Vt and Vt2. </td></tr>
+    <tr><td class="paramname">Xnd</td><td>Disposition of Xn. </td></tr>
+    <tr><td class="paramname">Xm</td><td>The post-index offset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4ddb29fdad2f991fcfb4a919a85076de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ddb29fdad2f991fcfb4a919a85076de">&#9670;&nbsp;</a></span>INSTR_CREATE_ld3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a2ad1058d00bd03758ab946f4852195f7">instr_create_3dst_2src</a>(dc, OP_ld3, Vt1, Vt2, Vt3, Xn, index)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an Advanced SIMD (NEON) LD3 instruction to load a single 3-element structure to the index of three vector registers, e.g. LD3 {V0.4H, V1.4H, V2.4H}[15], [X0].</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Vt1</td><td>The first destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt2</td><td>The second destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt3</td><td>The third destination vector register operand. </td></tr>
+    <tr><td class="paramname">Xn</td><td>The GPR to load into Vt1, Vt2 and Vt3. </td></tr>
+    <tr><td class="paramname">index</td><td>The index of the vectors. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeb97d5170c27a7ca65b9d6c9b42617f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb97d5170c27a7ca65b9d6c9b42617f4">&#9670;&nbsp;</a></span>INSTR_CREATE_ld3_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld3_2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xnd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">offset&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="dr__ir__instr_8h.html#a25b263fa2ff4a996f56c8ea17ad37735">instr_create_4dst_7src</a>(dc, OP_ld3, Vt1, Vt2, Vt3, Xn, Vt1, Vt2, Vt3, Xnd, index, Xn, \</div>
+<div class="line">                           offset)</div>
+</div><!-- fragment --><p>Creates an Advanced SIMD (NEON) LD3 instruction to load a single 3-element structure to the index of three vector registers with post-index offset, e.g. LD3 {V0.4H, V1.4H, V2.4H}[15], [X0], X1. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Vt1</td><td>The first destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt2</td><td>The second destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt3</td><td>The third destination vector register operand. </td></tr>
+    <tr><td class="paramname">Xn</td><td>The register to load into Vt, Vt2 and Vt3. </td></tr>
+    <tr><td class="paramname">Xnd</td><td>The disposition of Xn. </td></tr>
+    <tr><td class="paramname">index</td><td>The index of the vectors. </td></tr>
+    <tr><td class="paramname">offset</td><td>The immediate or GPR post-index offset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac173374dd1691b2886c2dfe7e1a5416d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac173374dd1691b2886c2dfe7e1a5416d">&#9670;&nbsp;</a></span>INSTR_CREATE_ld3_multi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld3_multi</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a2ad1058d00bd03758ab946f4852195f7">instr_create_3dst_2src</a>(dc, OP_ld3, Vt1, Vt2, Vt3, Xn, index)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an Advanced SIMD (NEON) LD3 instruction to load multiple 3-element structures from memory to three vector register, e.g. LD3 {V0.4H, V1.4H, V2.4H}, [X0]. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Vt1</td><td>The first destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt2</td><td>The second destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt3</td><td>The third destination vector register operand. </td></tr>
+    <tr><td class="paramname">Xn</td><td>The stack-pointer or GPR to load into Vt1, Vt2 and Vt3. </td></tr>
+    <tr><td class="paramname">index</td><td>The index of the vectors. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a22eb471f9d180122ded90771fa42ed42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22eb471f9d180122ded90771fa42ed42">&#9670;&nbsp;</a></span>INSTR_CREATE_ld3_multi_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld3_multi_2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xnd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a803c6fc78c39eafc40555f498f5ed04d">instr_create_4dst_4src</a>(dc, OP_ld3, Vt1, Vt2, Vt3, Xn, Xnd, index, Xn, Xm)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an Advanced SIMD (NEON) LD3 instruction to load multiple 3-element structures from memory to the index of three vector registers with post-index offset, e.g. LD3 {V0.4H, V1.4H, V2.4H}, [X0], X1. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Vt1</td><td>The first destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt2</td><td>The second destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt3</td><td>The third destination vector register operand. </td></tr>
+    <tr><td class="paramname">Xn</td><td>The stack-pointer or GPR to load into Vt1, Vt2 and Vt3. </td></tr>
+    <tr><td class="paramname">Xnd</td><td>The disposition of Xn. </td></tr>
+    <tr><td class="paramname">index</td><td>The index of the vectors. </td></tr>
+    <tr><td class="paramname">Xm</td><td>The post-index offset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad4424ed8462113060f75680110941046"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4424ed8462113060f75680110941046">&#9670;&nbsp;</a></span>INSTR_CREATE_ld3r</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld3r</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a64605e9634624211e6479ce6545e4b3c">instr_create_3dst_1src</a>(dc, OP_ld3r, Vt1, Vt2, Vt3, Xn)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an Advanced SIMD (NEON) LD3 instruction to load and replicate a single 3-element structure to the index of three vector registers, e.g. LD3 {V0.4H, V1.4H, V2.4H}[15], [X0].</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>.</td></tr>
+    <tr><td class="paramname">Vt1</td><td>The first destination vector register operand.</td></tr>
+    <tr><td class="paramname">Vt2</td><td>The second destination vector register operand.</td></tr>
+    <tr><td class="paramname">Vt3</td><td>The third destination vector register operand.</td></tr>
+    <tr><td class="paramname">Xn</td><td>The stack-pointer or GPR to load into Vt1, Vt2 and Vt3. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4935b01849a2a8dce2327dffdff5ea77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4935b01849a2a8dce2327dffdff5ea77">&#9670;&nbsp;</a></span>INSTR_CREATE_ld3r_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld3r_2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xnd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">offset&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ad948dcaad8d5a7f1ae70750bb1834e86">instr_create_4dst_3src</a>(dc, OP_ld3r, Vt1, Vt2, Vt3, Xn, Xnd, Xn, offset)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an Advanced SIMD (NEON) LD3 instruction to load and replicate a single 3-element structure to the index of three vector registers with post-index offset, e.g. LD3 {V0.4H, V1.4H, V2.4H}[15], [X0], X1.</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>.</td></tr>
+    <tr><td class="paramname">Vt1</td><td>The first destination vector register operand.</td></tr>
+    <tr><td class="paramname">Vt2</td><td>The second destination vector register operand.</td></tr>
+    <tr><td class="paramname">Vt3</td><td>The third destination vector register operand.</td></tr>
+    <tr><td class="paramname">Xn</td><td>The stack-pointer or GPR to load into Vt1, Vt2 and Vt3.</td></tr>
+    <tr><td class="paramname">Xnd</td><td>The disposition of Xn.</td></tr>
+    <tr><td class="paramname">offset</td><td>The immediate or GPR post-index offset </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="addeb0e8125b1fc8153d526e2b3e50729"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addeb0e8125b1fc8153d526e2b3e50729">&#9670;&nbsp;</a></span>INSTR_CREATE_ld4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld4</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt4, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#abf0defc37827c54bf1cdec7c4ce375b2">instr_create_4dst_2src</a>(dc, OP_ld4, Vt1, Vt2, Vt3, Vt4, Xn, index)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an Advanced SIMD (NEON) LD4 instruction to load single or multiple 4-element structures to four vector registers, e.g. LD4 {V0.4H, V1.4H, V2.4H, V3.4H}, [X0]. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Vt1</td><td>The first destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt2</td><td>The second destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt3</td><td>The third destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt4</td><td>The fourth destination vector register operand. </td></tr>
+    <tr><td class="paramname">Xn</td><td>The stack-pointer or register to load into the destination vectors. </td></tr>
+    <tr><td class="paramname">index</td><td>The immediate or GPR post-index offset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad3ced43ee0952461b27edf5d3f19a35a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3ced43ee0952461b27edf5d3f19a35a">&#9670;&nbsp;</a></span>INSTR_CREATE_ld4_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld4_2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt4, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xnd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">offset&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="dr__ir__instr_8h.html#a0ac7cd8c508eddd8ba9d07aab89c4f86">instr_create_5dst_8src</a>(dc, OP_ld4, Vt1, Vt2, Vt3, Vt4, Xn, Vt1, Vt2, Vt3, Vt4, Xnd, \</div>
+<div class="line">                           index, Xn, offset)</div>
+</div><!-- fragment --><p>Creates an Advanced SIMD (NEON) LD4 instruction to load a single 4-element structures to four vector registers with post-index, e.g. LD4 {V0.4H, V1.4H, V2.4H, V3.4H}, [X0], X1. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Vt1</td><td>The first destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt2</td><td>The second destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt3</td><td>The third destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt4</td><td>The fourth destination vector register operand. </td></tr>
+    <tr><td class="paramname">Xn</td><td>The stack-pointer or GPR to load into the destination vectors. </td></tr>
+    <tr><td class="paramname">Xnd</td><td>The disposition of Xn. </td></tr>
+    <tr><td class="paramname">index</td><td>The index of the vectors </td></tr>
+    <tr><td class="paramname">offset</td><td>The post-index offset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a016a7719de62c69a7290302064f87503"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a016a7719de62c69a7290302064f87503">&#9670;&nbsp;</a></span>INSTR_CREATE_ld4_multi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld4_multi</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt4, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#abf0defc37827c54bf1cdec7c4ce375b2">instr_create_4dst_2src</a>(dc, OP_ld4, Vt1, Vt2, Vt3, Vt4, Xn, index)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an Advanced SIMD (NEON) LD4 instruction to load single or multiple 4-element structures to four vector registers, e.g. LD4 {V0.4H, V1.4H, V2.4H, V3.4H}, [X0]. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Vt1</td><td>The first destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt2</td><td>The second destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt3</td><td>The third destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt4</td><td>The fourth destination vector register operand. </td></tr>
+    <tr><td class="paramname">Xn</td><td>The stack-pointer or register to load into the destination vectors. </td></tr>
+    <tr><td class="paramname">index</td><td>The immediate or GPR post-index offset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abb82af6a8cc4533f4d0d6e4ff19dc09d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb82af6a8cc4533f4d0d6e4ff19dc09d">&#9670;&nbsp;</a></span>INSTR_CREATE_ld4_multi_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld4_multi_2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt4, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xnd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">offset&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a70781d2a018072db770f63d7588d25b7">instr_create_5dst_4src</a>(dc, OP_ld4, Vt1, Vt2, Vt3, Vt4, Xn, Xnd, index, Xn, offset)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an Advanced SIMD (NEON) LD4 instruction to load multiple 4-element structures to four vector registers with post-index, e.g. LD4 {V0.4H, V1.4H, V2.4H, V3.4H}, [X0], X1. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Vt1</td><td>The first destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt2</td><td>The second destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt3</td><td>The third destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt4</td><td>The fourth destination vector register operand. </td></tr>
+    <tr><td class="paramname">Xn</td><td>The stack-pointer or GPR to load into the destination vectors </td></tr>
+    <tr><td class="paramname">Xnd</td><td>The disposition of Xn </td></tr>
+    <tr><td class="paramname">index</td><td>The index of the vectors. </td></tr>
+    <tr><td class="paramname">offset</td><td>The post-index offset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa0b55addb7e03b21ffca3afacfb73301"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0b55addb7e03b21ffca3afacfb73301">&#9670;&nbsp;</a></span>INSTR_CREATE_ld4r</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld4r</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt4, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a30593406c5d0d33f1b237a17e15c52b8">instr_create_4dst_1src</a>(dc, OP_ld4r, Vt1, Vt2, Vt3, Vt4, Xn)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an Advanced SIMD (NEON) LD4R instruction to load and replicate a single 4-element structure to four vector registers, e.g. LD4R {V0.4H, V1.4H, V2.4H, V3.4H}, [X0]. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Vt1</td><td>The first destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt2</td><td>The second destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt3</td><td>The third destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt4</td><td>The fourth destination vector register operand. </td></tr>
+    <tr><td class="paramname">Xn</td><td>The stack-pointer or GPR to load into the destination vectors. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a188626f8ce98372bef0803a2e22ae060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a188626f8ce98372bef0803a2e22ae060">&#9670;&nbsp;</a></span>INSTR_CREATE_ld4r_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld4r_2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Vt4, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xnd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">offset&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#adc91555f23a411ede322c841774593fb">instr_create_5dst_3src</a>(dc, OP_ld4r, Vt1, Vt2, Vt3, Vt4, Xn, Xnd, Xn, offset)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an Advanced SIMD (NEON) LD4R instruction to load and replicate a single 4-element structure to four vector registers with post-indexing, e.g. LD4 {V0.4H, V1.4H, V2.4H, V3.4H}, [X0], X1. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Vt1</td><td>The first destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt2</td><td>The second destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt3</td><td>The third destination vector register operand. </td></tr>
+    <tr><td class="paramname">Vt4</td><td>The fourth destination vector register operand. </td></tr>
+    <tr><td class="paramname">Xn</td><td>The stack-pointer or register to load into the destination vectors. </td></tr>
+    <tr><td class="paramname">Xnd</td><td>The disposition of Xn. </td></tr>
+    <tr><td class="paramname">offset</td><td>The post-index offset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9836c372ac3ee780fe4483376e791dea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9836c372ac3ee780fe4483376e791dea">&#9670;&nbsp;</a></span>INSTR_CREATE_ldpsw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ldpsw</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">imm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a47af65dc21d4bd6534dc0659835d3ef0">instr_create_3dst_3src</a>(dc, OP_ldpsw, Xt1, Xt2, Xn, Xr, Xn, imm)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a LDPSW floating point instruction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Xt1</td><td>The first GPR output register. </td></tr>
+    <tr><td class="paramname">Xt2</td><td>The second GPR output register. </td></tr>
+    <tr><td class="paramname">Xn</td><td>The input Stack-pointer or GPR register. </td></tr>
+    <tr><td class="paramname">Xr</td><td>The disposition of the input Stack-pointer or GPR register. </td></tr>
+    <tr><td class="paramname">imm</td><td>The immediate integer offset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a401d24353c7f8c99fbc34c108b077bda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a401d24353c7f8c99fbc34c108b077bda">&#9670;&nbsp;</a></span>INSTR_CREATE_ldpsw_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ldpsw_2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xt1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xt2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a2a59f597dc596760981fdc1ea2ea296c">instr_create_2dst_1src</a>(dc, OP_ldpsw, Xt1, Xt2, Xn)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a LDPSW floating point instruction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>dc </td></tr>
+    <tr><td class="paramname">Xt1</td><td>The first GPR output register. </td></tr>
+    <tr><td class="paramname">Xt2</td><td>The second GPR output register. </td></tr>
+    <tr><td class="paramname">Xn</td><td>The disposition of the input register. </td></tr>
   </table>
   </dd>
 </dl>
@@ -12527,6 +13843,7 @@ Enumerations</h2></td></tr>
 <div class="ttc" id="adr__ir__opcodes__arm_8h_html_a726ca809ffd3d67ab4b8476646f26635a21a776dbbf8d3e63ba27fb4854052d6a"><div class="ttname"><a href="dr__ir__opcodes__arm_8h.html#a726ca809ffd3d67ab4b8476646f26635a21a776dbbf8d3e63ba27fb4854052d6a">OP_add</a></div><div class="ttdeci">@ OP_add</div><div class="ttdef"><b>Definition:</b> dr_ir_opcodes_arm.h:69</div></div>
 <div class="ttc" id="adr__ir__macros__arm_8h_html_a6f30cf38f185da77631098a78a0ceebc"><div class="ttname"><a href="dr__ir__macros__arm_8h.html#a6f30cf38f185da77631098a78a0ceebc">INSTR_CREATE_ldr</a></div><div class="ttdeci">#define INSTR_CREATE_ldr(dc, Rd, mem)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_arm.h:1821</div></div>
 <div class="ttc" id="adr__ir__macros__arm_8h_html_a8f83f8223e55cc0f4204ee06a827e565"><div class="ttname"><a href="dr__ir__macros__arm_8h.html#a8f83f8223e55cc0f4204ee06a827e565">INSTR_CREATE_str</a></div><div class="ttdeci">#define INSTR_CREATE_str(dc, mem, Rt)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_arm.h:1874</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_a25b263fa2ff4a996f56c8ea17ad37735"><div class="ttname"><a href="dr__ir__instr_8h.html#a25b263fa2ff4a996f56c8ea17ad37735">instr_create_4dst_7src</a></div><div class="ttdeci">DR_API instr_t * instr_create_4dst_7src(void *drcontext, int opcode, opnd_t dst1, opnd_t dst2, opnd_t dst3, opnd_t dst4, opnd_t src1, opnd_t src2, opnd_t src3, opnd_t src4, opnd_t src5, opnd_t src6, opnd_t src7)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a68cff151182a9204f5d3168c095211c2"><div class="ttname"><a href="dr__ir__opnd_8h.html#a68cff151182a9204f5d3168c095211c2">opnd_get_size</a></div><div class="ttdeci">DR_API opnd_size_t opnd_get_size(opnd_t opnd)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a06b4d3a410d453f25bb74309ef935757"><div class="ttname"><a href="dr__ir__opnd_8h.html#a06b4d3a410d453f25bb74309ef935757">DR_REG_XSP</a></div><div class="ttdeci">#define DR_REG_XSP</div><div class="ttdef"><b>Definition:</b> dr_ir_opnd.h:1035</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a1165bad1ad9859d6ffdcead0da1cd51a"><div class="ttname"><a href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a></div><div class="ttdeci">DR_API instr_t * instr_create_1dst_4src(void *drcontext, int opcode, opnd_t dst, opnd_t src1, opnd_t src2, opnd_t src3, opnd_t src4)</div></div>
@@ -12541,6 +13858,7 @@ Enumerations</h2></td></tr>
 <div class="ttc" id="adr__ir__opnd_8h_html_a40b831f95abf3ee22f584a63e86a96c3"><div class="ttname"><a href="dr__ir__opnd_8h.html#a40b831f95abf3ee22f584a63e86a96c3">opnd_size_in_bytes</a></div><div class="ttdeci">DR_API uint opnd_size_in_bytes(opnd_size_t size)</div></div>
 <div class="ttc" id="adr__ir__opcodes__arm_8h_html_a726ca809ffd3d67ab4b8476646f26635a22b2f9b1cc54ee8394841082b8e77b01"><div class="ttname"><a href="dr__ir__opcodes__arm_8h.html#a726ca809ffd3d67ab4b8476646f26635a22b2f9b1cc54ee8394841082b8e77b01">OP_and</a></div><div class="ttdeci">@ OP_and</div><div class="ttdef"><b>Definition:</b> dr_ir_opcodes_arm.h:76</div></div>
 <div class="ttc" id="adr__ir__opcodes__arm_8h_html_a726ca809ffd3d67ab4b8476646f26635a1007b292a67372eaf62e130ed8fba2a7"><div class="ttname"><a href="dr__ir__opcodes__arm_8h.html#a726ca809ffd3d67ab4b8476646f26635a1007b292a67372eaf62e130ed8fba2a7">OP_orr</a></div><div class="ttdeci">@ OP_orr</div><div class="ttdef"><b>Definition:</b> dr_ir_opcodes_arm.h:188</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_a0ac7cd8c508eddd8ba9d07aab89c4f86"><div class="ttname"><a href="dr__ir__instr_8h.html#a0ac7cd8c508eddd8ba9d07aab89c4f86">instr_create_5dst_8src</a></div><div class="ttdeci">DR_API instr_t * instr_create_5dst_8src(void *drcontext, int opcode, opnd_t dst1, opnd_t dst2, opnd_t dst3, opnd_t dst4, opnd_t dst5, opnd_t src1, opnd_t src2, opnd_t src3, opnd_t src4, opnd_t src5, opnd_t src6, opnd_t src7, opnd_t src8)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_aa4a4d5c6b8fd6d065b4719124f4dcafe"><div class="ttname"><a href="dr__ir__opnd_8h.html#aa4a4d5c6b8fd6d065b4719124f4dcafe">opnd_is_reg</a></div><div class="ttdeci">DR_API bool opnd_is_reg(opnd_t opnd)</div></div>
 <div class="ttc" id="adr__ir__macros__aarch64_8h_html_a558ba3fb3352b374652c745790db7ce0"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#a558ba3fb3352b374652c745790db7ce0">OPND_CREATE_ZR</a></div><div class="ttdeci">#define OPND_CREATE_ZR(reg)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:105</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a77688bf46d20cc59361b79cb4c55f5f4"><div class="ttname"><a href="dr__ir__opnd_8h.html#a77688bf46d20cc59361b79cb4c55f5f4">opnd_get_immed_int</a></div><div class="ttdeci">DR_API ptr_int_t opnd_get_immed_int(opnd_t opnd)</div></div>
@@ -12555,5 +13873,5 @@ Enumerations</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18767 --- Fri May 21 2021 03:14:53 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18774 --- Fri May 28 2021 03:54:26 &nbsp; <img border=0 src="favicon.png">
 </small></address>

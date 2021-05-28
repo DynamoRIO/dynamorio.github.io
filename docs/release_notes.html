@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 8.0.18767"
+title: "Release Notes for Version 8.0.18774"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 8.0.18767 </div>  </div>
+<div class="title">Release Notes for Version 8.0.18774 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,19 +63,20 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 8.0.18767. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 8.0.18767 and 8.0.0 include the following compatibility changes:</p>
+<p>The current version is 8.0.18774. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 8.0.18774 and 8.0.0 include the following compatibility changes:</p>
 <ul>
 <li>A source compatibilty change in drcachesim analysis tools for users who have created derived classes from existing analysis tools: member fields of classes are now following a consistent style with an underscore suffix. References to renamed fields will need to be updated.</li>
 <li>A change in the load callbacks used with <a class="el" href="group__drcovlib.html#ga9c2889006a80254645521f81a1a486f5">drmodtrack_add_custom_data()</a> and <a class="el" href="drmemtrace_8h.html#a8644981035cdedfafb000d03cd223399">drmemtrace_custom_module_data()</a>: they each take an additional parameter, the segment index. The custom data field is now per-segment and not per-module, and all callbacks are invoked separately for each segment.</li>
 </ul>
-<p>The changes between version 8.0.18767 and 8.0.0 include the following minor compatibility changes:</p>
+<p>The changes between version 8.0.18774 and 8.0.0 include the following minor compatibility changes:</p>
 <ul>
 <li>drconfiglib (and thus drrun and drconfig) now sets only the new client path options which are added in this release to support other-bitwidth child processes. This means that a drconfiglib from this version will not properly configure for a DynamoRIO core library from a prior version.</li>
 <li>A new option -ldstex2cas is on by default on ARM and AArch64. This converts load-exclusive store-exclusive sequences to use compare-and-swap instead, which enables normal instrumentation of such sequences without clearing the exclusive monitor and causing infinite loops. However, the compare- and-swap's semantics are not identical: it does not detect "ABA" changes and could cause errors in lock-free data structures or other application constructs. See <a class="el" href="API_BT.html#sec_ldrex">Exclusive Monitor Instrumentation</a> for more information.</li>
 <li>The header file <a class="el" href="dr__tools_8h.html" title="Main API routines, including transparency support.">dr_tools.h</a> has been split up, with module information now in a new file <a class="el" href="dr__modules_8h.html" title="Application module (library) querying routines.">dr_modules.h</a>, os-specific queries in dr_os_api.h, and tracedump types in <a class="el" href="dr__tracedump_8h.html" title="Binary trace dump format for the -tracedump_binary option.">dr_tracedump.h</a>. <a class="el" href="dr__api_8h.html" title="Top-level include file for DynamoRIO API.">dr_api.h</a> includes the new files, so users including <a class="el" href="dr__api_8h.html" title="Top-level include file for DynamoRIO API.">dr_api.h</a> are unaffected.</li>
 <li>The header files <a class="el" href="dr__ir__utils_8h.html" title="Code transformation utilities.">dr_ir_utils.h</a>, <a class="el" href="dr__ir__opnd_8h.html" title="Functions and defines to create and manipulate instruction operands.">dr_ir_opnd.h</a>, <a class="el" href="dr__ir__instr_8h.html" title="Functions to create and manipulate instructions.">dr_ir_instr.h</a>, and <a class="el" href="dr__ir__instrlist_8h.html" title="Functions to create and manipulate lists of instructions.">dr_ir_instrlist.h</a> have been split up, with encoding routines now in a new file <a class="el" href="dr__ir__encode_8h.html" title="Encoding routines.">dr_ir_encode.h</a>, decoding routines in <a class="el" href="dr__ir__decode_8h.html" title="Decoding routines.">dr_ir_decode.h</a>, disassembly routines in <a class="el" href="dr__ir__disassemble_8h.html" title="Disassembly routines.">dr_ir_disassemble.h</a>. <a class="el" href="dr__api_8h.html" title="Top-level include file for DynamoRIO API.">dr_api.h</a> includes the new files, so users including <a class="el" href="dr__api_8h.html" title="Top-level include file for DynamoRIO API.">dr_api.h</a> are unaffected.</li>
 <li>The routines <a class="el" href="dr__ir__utils_8h.html#aa23665c11b7d79a29ea185113d07944f">dr_insert_save_fpstate()</a>, <a class="el" href="dr__ir__utils_8h.html#a74016eacf3a9cfc20a93a9ac0bca9c59">dr_insert_restore_fpstate()</a>, and <a class="el" href="dr__ir__utils_8h.html#a9038ab78f7bc0385b10ea256610022ca">dr_insert_get_seg_base()</a> moved from <a class="el" href="dr__proc_8h.html" title="Utility routines for identifying features of the processor.">dr_proc.h</a> to <a class="el" href="dr__ir__utils_8h.html" title="Code transformation utilities.">dr_ir_utils.h</a>.</li>
+<li>Added a flags field to <a class="el" href="group__drmgr.html#gac779b3f5c1076450ad32083da0921768">emulated_instr_t</a> and two emulator-set flags values: <a class="el" href="group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a60a60d7210d981f2fb0692e125e00dc4">DR_EMULATE_REST_OF_BLOCK</a>, indicating an emulation sequence that has no end label and includes the rest of the block; and <a class="el" href="group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a526e36749e0fb1ca4e2a00a095a42efb">DR_EMULATE_INSTR_ONLY</a>, indicating an emulation for which instrumentation should still examine the emulation sequence for observing data operations. A third value is set by <a class="el" href="group__drmgr.html#ga37ca9b0961ad0b562318702897df729b">drmgr_in_emulation_region()</a>: <a class="el" href="group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a14c220723e6844dd2ecdeb030c9ab396">DR_EMULATE_FIRST_INSTR</a>. This flags addition preserves binary compatibility, but source code that did not zero the structure could end up with an uninitialized flags field when calling <a class="el" href="group__drmgr.html#ga94b96a01f3fa0ce7ad6a5f675965d952">drmgr_insert_emulation_start()</a>.</li>
 </ul>
 <p>Further non-compatibility-affecting changes include:</p>
 <ul>
@@ -97,8 +98,8 @@ Changes Since Prior Releases</h1>
 <li>Added <a class="el" href="dr__events_8h.html#a66a5226e857e03ebb685b3e8e1566c7c">dr_is_detaching()</a>, an API to query whether detach is in progress.</li>
 <li>Added <a class="el" href="dr__ir__instr_8h.html#a86eec1ba7341719083b40da5a2f2f8f2">instr_zeroes_zmmh()</a> that returns true if an instruction clears the upper bits of a ZMM register with zeros.</li>
 <li>Added <a class="el" href="dr__ir__instr_8h.html#a948542ee1a6cc2dbffeed26fd43285dc">instr_clear_label_callback()</a>.</li>
-<li>Added a flags field to <a class="el" href="group__drmgr.html#gac779b3f5c1076450ad32083da0921768">emulated_instr_t</a> and a flags value <a class="el" href="group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a60a60d7210d981f2fb0692e125e00dc4">DR_EMULATE_REST_OF_BLOCK</a>, indicating an emulation sequence that has no end label and includes the rest of the block.</li>
 <li>Added <a class="el" href="group__drreg.html#gga9aa35aebc3d4f0f41cba66bfcde82a00a2d1537112f577f6e8943463069b523d6">DRREG_HANDLE_MULTI_PHASE_SLOT_RESERVATIONS</a> to <a class="el" href="group__drreg.html#ga9aa35aebc3d4f0f41cba66bfcde82a00">drreg_bb_properties_t</a> to enable logic that avoids conflicts in spill slots when drreg is used to reserve registers in multiple phases.</li>
+<li>Added <a class="el" href="group__drmgr.html#ga37ca9b0961ad0b562318702897df729b">drmgr_in_emulation_region()</a> for more conveniently handling emulation.</li>
 </ul>
 <hr  />
 <p>Version 8.0.0 includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
@@ -1042,5 +1043,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18767 --- Fri May 21 2021 03:14:56 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18774 --- Fri May 28 2021 03:54:28 &nbsp; <img border=0 src="favicon.png">
 </small></address>

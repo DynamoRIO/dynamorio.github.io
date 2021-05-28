@@ -78,7 +78,13 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:gae3531e42d6cde87d19a63801ab6b9230"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaaa131b3cd2bf8aadb9ac196911aa6b32"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#gaaa131b3cd2bf8aadb9ac196911aa6b32">dr_emulate_options_t</a> { <a class="el" href="group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a60a60d7210d981f2fb0692e125e00dc4">DR_EMULATE_REST_OF_BLOCK</a> = 0x0001
+<tr class="memitem:gaaa131b3cd2bf8aadb9ac196911aa6b32"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#gaaa131b3cd2bf8aadb9ac196911aa6b32">dr_emulate_options_t</a> { <br />
+&#160;&#160;<a class="el" href="group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a60a60d7210d981f2fb0692e125e00dc4">DR_EMULATE_REST_OF_BLOCK</a> = 0x0001, 
+<br />
+&#160;&#160;<a class="el" href="group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a14c220723e6844dd2ecdeb030c9ab396">DR_EMULATE_FIRST_INSTR</a> = 0x0002, 
+<br />
+&#160;&#160;<a class="el" href="group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a526e36749e0fb1ca4e2a00a095a42efb">DR_EMULATE_INSTR_ONLY</a> = 0x0004
+<br />
  }</td></tr>
 <tr class="separator:gaaa131b3cd2bf8aadb9ac196911aa6b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -160,6 +166,8 @@ Functions</h2></td></tr>
 <tr class="separator:gaf2227473141100828d097eb98828b954"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga85b025c766a84bee841288d822b15380"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga85b025c766a84bee841288d822b15380">drmgr_get_emulated_instr_data</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, OUT <a class="el" href="group__drmgr.html#gac779b3f5c1076450ad32083da0921768">emulated_instr_t</a> *emulated)</td></tr>
 <tr class="separator:ga85b025c766a84bee841288d822b15380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37ca9b0961ad0b562318702897df729b"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga37ca9b0961ad0b562318702897df729b">drmgr_in_emulation_region</a> (void *drcontext, OUT const <a class="el" href="group__drmgr.html#gac779b3f5c1076450ad32083da0921768">emulated_instr_t</a> **emulation_info)</td></tr>
+<tr class="separator:ga37ca9b0961ad0b562318702897df729b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga357735ce7daa0bb717556455f20040a5"><td class="memItemLeft" align="right" valign="top">DR_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga357735ce7daa0bb717556455f20040a5">drmgr_decode_sysnum_from_wrapper</a> (app_pc entry)</td></tr>
 <tr class="separator:ga357735ce7daa0bb717556455f20040a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaaac050cf70682f6fcb8e28aa942705cd"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#gaaac050cf70682f6fcb8e28aa942705cd">drmgr_register_thread_init_event</a> (void(*func)(void *drcontext))</td></tr>
@@ -275,5 +283,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18767 --- Fri May 21 2021 03:14:55 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18774 --- Fri May 28 2021 03:54:27 &nbsp; <img border=0 src="favicon.png">
 </small></address>
