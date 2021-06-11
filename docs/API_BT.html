@@ -414,7 +414,7 @@ Restartable Sequence Instrumentation Constraints</h1>
 <li>No system calls are allowed inside rseq regions.</li>
 <li>No call instructions are allowed inside rseq regions.</li>
 <li>The only register inputs to an rseq region, or registers written inside an rseq region whose values are then read afterward, must be general-purpose registers.</li>
-<li>The instrumented execution of the rseq region may not perfectly reflect the native behavior of the application. The instrumentation will never see the abort handler called, and memory addresses may be wrong if they are based on the underlying cpuid and a migration occurred mid-region. These are minor and acceptable for most tools (especially given that there is no better alternative).</li>
+<li>The instrumented execution of the rseq region may not perfectly reflect the native behavior of the application. The instrumentation will never see an abort anywhere but just prior to the committing store. Additionally, memory addresses may be wrong if they are based on the live (as opposed to cached at the rseq region entrance) underlying cpuid and a migration occurred mid-region. These are minor and acceptable for most tools (especially given that there is no better alternative).</li>
 </ul>
 <p>Some of these limitations are explicitly checked, and DR will exit with an error message if they are not met. However, not all are efficiently verifiable. If an application does not satisfy these limitations, the <a class="el" href="page_deploy.html#op_disable_rseq">disable_rseq</a> runtime option may be used to return ENOSYS, which can provide a workaround for applications which have fallback code for kernels where rseq is not supported.</p>
 <p> 
@@ -497,5 +497,5 @@ Persisting Code</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18780 --- Fri Jun 4 2021 03:49:57 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18789 --- Fri Jun 11 2021 03:11:33 &nbsp; <img border=0 src="favicon.png">
 </small></address>
