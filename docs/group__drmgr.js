@@ -22,7 +22,7 @@
     [ "emulated_instr_t", "group__drmgr.html#gac779b3f5c1076450ad32083da0921768", null ],
     [ "dr_emulate_options_t", "group__drmgr.html#gaaa131b3cd2bf8aadb9ac196911aa6b32", [
       [ "DR_EMULATE_REST_OF_BLOCK", "group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a60a60d7210d981f2fb0692e125e00dc4", null ],
-      [ "DR_EMULATE_FIRST_INSTR", "group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a14c220723e6844dd2ecdeb030c9ab396", null ],
+      [ "DR_EMULATE_IS_FIRST_INSTR", "group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32abba41ccc153c360ffe9bf664eca14c74", null ],
       [ "DR_EMULATE_INSTR_ONLY", "group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a526e36749e0fb1ca4e2a00a095a42efb", null ]
     ] ],
     [ "drmgr_bb_phase_t", "group__drmgr.html#gae3531e42d6cde87d19a63801ab6b9230", [
@@ -53,6 +53,8 @@
     [ "drmgr_is_first_instr", "group__drmgr.html#gadd8688fd6cc4d7e1f804ccd1460f5177", null ],
     [ "drmgr_is_first_nonlabel_instr", "group__drmgr.html#ga6d7f56824be0f6b04d5b6353f0681d70", null ],
     [ "drmgr_is_last_instr", "group__drmgr.html#ga60452df11f634ad4633578ba5330d2c4", null ],
+    [ "drmgr_orig_app_instr_for_fetch", "group__drmgr.html#gad375fb1c1a8683c54a78f4f5b9951f4a", null ],
+    [ "drmgr_orig_app_instr_for_operands", "group__drmgr.html#ga6373ac13132abb039c7d0593bde073ba", null ],
     [ "drmgr_pop_cls", "group__drmgr.html#ga4ac55faa0a4274ab5d8ac1cbd247b569", null ],
     [ "drmgr_push_cls", "group__drmgr.html#gae2a70abba090ee410babc6a1548bb21d", null ],
     [ "drmgr_register_bb_app2app_event", "group__drmgr.html#gae270eeb1ab24d4e05f8588b23822f45c", null ],

@@ -103,7 +103,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The number of TLS spill slots to use. This many slots will be requested from DR via <a class="el" href="dr__tools_8h.html#ac5d2a2ccd58268f84c379a38bc4aa399">dr_raw_tls_calloc()</a>. Any slots needed beyond this number will use DR's base slots, which are not allowed to be used across application instructions. DR's slots are also more expensive to access (beyond the first few). This number should be computed as one plus the number of simultaneously used general-purpose register spill slots, as drreg reserves one of the requested slots for arithmetic flag preservation.</p>
+<p>The number of TLS spill slots to use. This many slots will be requested from DR via <a class="el" href="dr__tools_8h.html#ac5d2a2ccd58268f84c379a38bc4aa399">dr_raw_tls_calloc()</a>. Any slots needed beyond this number will use DR's base slots, which are not allowed to be used across application instructions. DR's slots are also more expensive to access (beyond the first few). DR's base slots may also be used by APIs like <a class="el" href="dr__ir__utils_8h.html#ae8479716f08bbbb36d7fd27cfbbc0743">dr_save_reg()</a>/dr_restore_reg() (and the corresponding <a class="el" href="dr__ir__utils_8h.html#a6fdc15ea04e8d17fa537832acf274d9c">dr_read_saved_reg()</a>/dr_write_saved_reg()), which may cause correctness issues if there's some slot usage conflict within the same client or with other clients/libraries. Therefore, all cooperating client components should use drreg. Also, clients should make sure to request sufficient dedicated slots from drreg. This number should be computed as one plus the number of simultaneously used general-purpose register spill slots, as drreg reserves one of the requested slots for arithmetic flag preservation.</p>
 <p>For each simultaneous value that will be held in a register across application instructions, an additional slot must be requested for adjusting the saved application value with respect to application reads and writes.</p>
 <p>When <a class="el" href="group__drreg.html#ga6656df86f1a73bdf739eedaba7220c46">drreg_init()</a> is called multiple times, the number of slots is summed from each call, unless <code>do_not_sum_slots</code> is specified for that call, in which case a maximum is used rather than a sum. </p>
 
@@ -133,5 +133,5 @@ Data Fields</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18795 --- Fri Jun 18 2021 03:06:56 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18801 --- Fri Jun 25 2021 03:05:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

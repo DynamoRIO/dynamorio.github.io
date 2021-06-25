@@ -28,7 +28,7 @@ permalink: /sec_drcachesim_core.html
 <p>Offline traces guarantee that a branch target instruction entry in a trace must immediately follow the branch instruction with no intervening thread switch. This allows a core simulator to identify the target of a branch by looking at the subsequent trace entry. However, this guarantee does not hold when a kernel event such as a signal is delivered immediately after a branch.</p>
 <p>Traces include scheduling markers providing the timestamp and hardware thread identifier on each thread transition, allowing a simulator to more closely match the actual hardware if so desired.</p>
 <p>Traces also include markers indicating disruptions in user mode control flow such as signal handler entry and exit.</p>
-<p>Filtered traces (filtered via -L0_filter) include the dynamic (pre-filtered) per-thread instruction count in a <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a94cc2db87863fcdcdf9163d8c9c2152e">TRACE_MARKER_TYPE_INSTRUCTION_COUNT</a> marker at thread exit.</p>
+<p>Filtered traces (filtered via -L0_filter) include the dynamic (pre-filtered) per-thread instruction count in a <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a94cc2db87863fcdcdf9163d8c9c2152e">TRACE_MARKER_TYPE_INSTRUCTION_COUNT</a> marker at each thread buffer boundary and at thread exit.</p>
 <p>A final feature that aids core simulators is the pair of interfaces <a class="el" href="classmodule__mapper__t.html#ad58566855786b3b63cf6a05cfb496653">module_mapper_t::get_loaded_modules()</a> and <a class="el" href="classmodule__mapper__t.html#add0cc122b72c75d519971cde9eeffd87">module_mapper_t::find_mapped_trace_address()</a>, which facilitate reading the raw bytes for each instruction in order to obtain the opcode and full operand information. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -37,5 +37,5 @@ permalink: /sec_drcachesim_core.html
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18795 --- Fri Jun 18 2021 03:06:55 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18801 --- Fri Jun 25 2021 03:05:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

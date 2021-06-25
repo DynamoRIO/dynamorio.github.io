@@ -30,6 +30,7 @@
       [ "Setup", "page_drmgr.html#sec_drmgr_setup", null ],
       [ "Event Replacement", "page_drmgr.html#sec_drmgr_events", null ],
       [ "Instrumentation Stages", "page_drmgr.html#sec_drmgr_stages", [
+        [ "Emulation-Aware Instrumentation", "page_drmgr.html#sec_drmgr_emulation", null ],
         [ "Ordering", "page_drmgr.html#sec_drmgr_ordering", null ],
         [ "Traces", "page_drmgr.html#sec_drmgr_traces", null ],
         [ "IT Blocks", "page_drmgr.html#sec_drmgr_itblocks", null ],

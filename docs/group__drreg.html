@@ -660,7 +660,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns information about the TLS slot assigned to <code>reg</code>, which must be a currently-reserved register.</p>
+<p>Returns information about the TLS slot assigned to <code>reg</code>, which must be a currently-reserved register. To query information about the arithmetic flags, pass <a class="el" href="dr__ir__opnd_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a3b7e285b0a732b7da09c0f65a66f7882">DR_REG_NULL</a> for <code>reg</code>.</p>
 <p>If <code>opnd</code> is non-NULL, returns an <a class="el" href="structopnd__t.html">opnd_t</a> in <code>opnd</code> that references the TLS slot assigned to <code>reg</code>. If too many slots are in use and <code>reg</code> is stored in a non-directly-addressable slot, returns a null <a class="el" href="structopnd__t.html">opnd_t</a> in <code>opnd</code>.</p>
 <p>If <code>is_dr_slot</code> is non-NULL, returns true if the slot is a DR slot (and can thus be accessed by <a class="el" href="dr__ir__utils_8h.html#a6fdc15ea04e8d17fa537832acf274d9c">dr_read_saved_reg()</a>) and false if the slot is inside the <a class="el" href="dr__tools_8h.html#ac5d2a2ccd58268f84c379a38bc4aa399">dr_raw_tls_calloc()</a> allocation used by drreg.</p>
 <p>If <code>tls_offs</code> is non-NULL, if the slot is a DR slot, returns the DR slot index; otherwise, returns the offset from the TLS base of the slot assigned to <code>reg</code>.</p>
@@ -1084,6 +1084,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This routine is meant for use with instrumentation that uses separate control flow paths, such as a fastpath and a slowpath, where the slowpath needs access to the full application state yet must retain scratch register parity with the fastpath. The application value for <code>reg</code> is restored into <code>reg</code> at <code>where_restore</code>, but internal drreg state is not updated to reflect this. Furthermore, if doing so affects subsequent behavior, such as when <code>reg</code> is being used to hold the preserved application value for another register or flags, instructions are inserted at <code>where_respill</code> to restore the state, such that <code>where_respill</code> will operate correctly whether <code>where_restore</code> was executed or not. The optional output parameters <code>restore_needed</code> and <code>respill_needed</code> are set to indicate whether instructions were inserted at <code>where_restore</code> and <code>where_respill</code>, respectively.</p>
+<p>For correct operation on x86 in the case when aflags are in xax and this routine is invoked to get app value of xax, there shouldn't be any new reservation between <code>where_restore</code> and <code>where_respill</code> that may write to a spill slot and clobber the temporary slot used in this routine.</p>
 <p>The results from <a class="el" href="group__drreg.html#gad8ff9a156f64e7146284385f2a26c8e4">drreg_reservation_info_ex()</a> can be used to predict the behavior of this routine. A restore is needed if !drreg_reserve_info_t.holds_app_value. and <a class="el" href="struct__drreg__reserve__info__t.html#ae89cf72819d8b01016d58a8c2c83b53e">drreg_reserve_info_t.app_value_retained</a>. A respill is needed if a restore is needed and <a class="el" href="struct__drreg__reserve__info__t.html#a4a12304127b48c83d2270760ff587983">drreg_reserve_info_t.opnd</a> is a register.</p>
 <p>If <code>app_reg</code> is a dead register, <a class="el" href="group__drreg.html#ggad5b7a7a020d7206b11e61e7cdae02ee9a1f21cc5ebb7031b6430b3cdb2a21ddf8">DRREG_ERROR_NO_APP_VALUE</a> may be returned. Set <code>conservative</code> in <code>drreg_options_t</code> to avoid this error.</p>
 <p>If called during drmgr's insertion phase, <code>where</code> must be the current application instruction.</p>
@@ -1177,5 +1178,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18795 --- Fri Jun 18 2021 03:06:55 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18801 --- Fri Jun 25 2021 03:05:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

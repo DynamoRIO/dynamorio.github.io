@@ -29,6 +29,7 @@ permalink: /page_drmgr.html
 <li><a class="el" href="page_drmgr.html#sec_drmgr_setup">Setup</a></li>
 <li><a class="el" href="page_drmgr.html#sec_drmgr_events">Event Replacement</a></li>
 <li><a class="el" href="page_drmgr.html#sec_drmgr_stages">Instrumentation Stages</a></li>
+<li><a class="el" href="page_drmgr.html#sec_drmgr_emulation">Emulation-Aware Instrumentation</a></li>
 <li><a class="el" href="page_drmgr.html#sec_drmgr_tls">Thread-Local and Callback-Local Storage</a></li>
 <li><a class="el" href="page_drmgr.html#sec_drmgr_notes">Instruction Note Fields</a></li>
 </ul>
@@ -57,6 +58,13 @@ Instrumentation Stages</h1>
 <li>Instrumentation-to-instrumentation transformations</li>
 </ol>
 <p>Each component that registers with <code>drmgr</code> can register for some or all of the four stages. In each stage, each registered compoment's callback is invoked. This groups the different types of changes together and allows them to assume that no later change will invalidate their analysis or actions. The instrumentation insertion is performed in one forward pass: for each instruction, each registered component is invoked. This simplifies register allocation (register allocation is provided by a separate Extension <code>drreg</code>).</p>
+<h2><a class="anchor" id="sec_drmgr_emulation"></a>
+Emulation-Aware Instrumentation</h2>
+<p>Support for one client library or component emulating or refactoring application code while another observes application behavior is provided through emulation marking and reading support.</p>
+<p>An emulation-creating library uses <a class="el" href="group__drmgr.html#ga94b96a01f3fa0ce7ad6a5f675965d952">drmgr_insert_emulation_start()</a> and <a class="el" href="group__drmgr.html#ga2f7dd031774c812d485d4910846fbb73">drmgr_insert_emulation_end()</a> to mark the emulation region and make a copy of the original instruction being replaced.</p>
+<p>An emulation-aware observational client then wants to instrument the original copy, rather than the emulation sequence present in the instruction list. The client should use the <a class="el" href="group__drmgr.html#gad375fb1c1a8683c54a78f4f5b9951f4a">drmgr_orig_app_instr_for_fetch()</a> and <a class="el" href="group__drmgr.html#ga6373ac13132abb039c7d0593bde073ba">drmgr_orig_app_instr_for_operands()</a> routines inside the insertion event to determine the instruction to observe, ignoring the instruction passed to the insertion event except as a placeholder in the instruction list for where to place added instructions for instrumentation.</p>
+<p>The refactoring of application code for simpler instrumentation performed by <a class="el" href="group__drutil.html#gae38961d42fc285d7f9034c4b02690cae">drutil_expand_rep_string()</a> and <a class="el" href="group__drx.html#ga30c372c0385d8584660f5c449a18ec36">drx_expand_scatter_gather()</a> is also marked as emulation, but only for instructions, not data: i.e., <a class="el" href="group__drmgr.html#ggaaa131b3cd2bf8aadb9ac196911aa6b32a526e36749e0fb1ca4e2a00a095a42efb">DR_EMULATE_INSTR_ONLY</a> is set for these refactorings. These are typically used in address tracing clients, and we recommend that such clients also use the emulation-aware instrumentation approach just outlined.</p>
+<p>If expansions or true emulation is present and a client is not emulation-aware, it may not accurately observe the application's behavior. For example, an opcode recording client might record the opcodes for the expansion sequence emulating a scatter instruction, rather than the original scatter opcode.</p>
 <h2><a class="anchor" id="sec_drmgr_ordering"></a>
 Ordering</h2>
 <p>The proper ordering of instrumentation passes depends on the particulars of what each pass is doing. <code>drmgr</code> supports naming each pass and specifying relative ordering by requesting that one pass occur before and/or after another named pass. Numeric priorities are also supported for resolving order among identical placement once named ordering is resolved.</p>
@@ -89,5 +97,5 @@ Instruction Note Fields</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18795 --- Fri Jun 18 2021 03:06:55 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18801 --- Fri Jun 25 2021 03:05:47 &nbsp; <img border=0 src="favicon.png">
 </small></address>

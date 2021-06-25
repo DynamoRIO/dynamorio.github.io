@@ -807,9 +807,8 @@ This method simply wraps a store that also sets an app translation. Make sure th
       </table>
 </div><div class="memdoc">
 <p>Expands AVX2 gather and AVX-512 gather and scatter instructions to a sequence of equivalent scalar load and stores, mask register bit tests, and mask register bit updates.</p>
-<dl class="section warning"><dt>Warning</dt><dd>This function is not fully supported yet. Do not use.</dd>
-<dd>
-The added multi-instruction sequence contains several control-transfer instructions and is not straight-line code, which can complicate subsequent analysis routines.</dd></dl>
+<p>Clients applying this expansion are encouraged to use emulation-aware instrumentation via <a class="el" href="group__drmgr.html#gad375fb1c1a8683c54a78f4f5b9951f4a">drmgr_orig_app_instr_for_fetch()</a> and <a class="el" href="group__drmgr.html#ga6373ac13132abb039c7d0593bde073ba">drmgr_orig_app_instr_for_operands()</a> in order to observe the original opcode with the expanded memory operands.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The added multi-instruction sequence contains several control-transfer instructions and is not straight-line code, which can complicate subsequent analysis routines.</dd></dl>
 <p>The client must use the <code>drmgr</code> Extension to order its instrumentation in order to use this function. This function must be called from the application-to-application ("app2app") stage (see <a class="el" href="group__drmgr.html#gae270eeb1ab24d4e05f8588b23822f45c">drmgr_register_bb_app2app_event()</a>).</p>
 <p>This transformation is deterministic, so the caller can return DR_EMIT_DEFAULT from its event.</p>
 <p>The *dq, *qd, *qq, *dpd, *qps, and *qpd opcodes are not yet supported in 32-bit mode. In this case, the function will return false and no expansion will occur.</p>
@@ -1208,5 +1207,5 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18795 --- Fri Jun 18 2021 03:06:55 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18801 --- Fri Jun 25 2021 03:05:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>
