@@ -26,7 +26,7 @@ permalink: /page_drbbdup.html
 <div class="contents">
 <div class="textblock"><p>The <code>drbbdup</code> DynamoRIO Basic Block Duplicator Extension provides a mechanism to efficiently support different instrumentations of the same basic blocks. Although flushing is one viable approach to achieve this functionality, it unfortunately also incurs high overheads. Instead, drbbdup duplicates the code of each basic block to generate multiple copies and enables a client to instrument these copies with different code insertions.</p>
 <div class="image">
-<object type="image/svg+xml" data="drbbdup_image.svg" style="pointer-events: none;"></object>
+<object type="image/svg+xml" data="/images/drbbdup_image.svg" style="pointer-events: none;"></object>
 </div>
 <p>The duplication of a basic block is done at drmgr's app2app stage. Copies are prefixed by a START label, and followed by a jump instruction to direct control to the EXIT label. Note that the last code version does not need this jump. Each basic block copy is set to handle a particular case of instrumentation. A case is identified by a unique pointer-sized value that is registered by the client. The last basic block always handles the default case. During the insertion stage, the code of the dispatcher is prepended to the fragment. The dispatcher encodes the current runtime case as instructed by the client, and compares the encoding with those of the handled cases. If a match is found, the dispatcher directs control to the appropriate basic block. Otherwise, the basic block handling the default case is executed.</p>
 <ul>
@@ -66,5 +66,5 @@ Case Instrumentation</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18801 --- Fri Jun 25 2021 03:05:47 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18804 --- Sat Jun 26 2021 14:02:14 &nbsp; <img border=0 src="favicon.png">
 </small></address>
