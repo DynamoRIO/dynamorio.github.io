@@ -8,7 +8,7 @@
       [ "Reuse Time", "sec_drcachesim_tools.html#sec_tool_reuse_time", null ],
       [ "Event Counts", "sec_drcachesim_tools.html#sec_tool_basic_counts", null ],
       [ "Opcode Mix", "sec_drcachesim_tools.html#sec_tool_opcode_mix", null ],
-      [ "View Disassembly", "sec_drcachesim_tools.html#sec_tool_view", null ],
+      [ "Human-Readable View", "sec_drcachesim_tools.html#sec_tool_view", null ],
       [ "View Function Calls", "sec_drcachesim_tools.html#sec_tool_func_view", null ]
     ] ],
     [ "Configuration File", "sec_drcachesim_config_file.html", null ],

@@ -1,7 +1,6 @@
 [
     [ "DRMEMTRACE_FUNCTION_LIST_FILENAME", "trace__entry_8h.html#a9d41aaff6406ac94cd98ee7c95cd0753", null ],
     [ "DRMEMTRACE_MODULE_LIST_FILENAME", "trace__entry_8h.html#a11362437617ea146f226243e4de7ce7b", null ],
-    [ "TRACE_ENTRY_VERSION", "trace__entry_8h.html#afd3e3d65883266c5efffae016573be6f", null ],
     [ "addr_t", "trace__entry_8h.html#a1ca6d6805df0fccbaf3f7920d1845168", null ],
     [ "offline_file_type_t", "trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1", [
       [ "OFFLINE_FILE_TYPE_FILTERED", "trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1ab2adc5337c786c96c826052e1a227765", null ],
@@ -23,7 +22,8 @@
       [ "TRACE_MARKER_TYPE_FUNC_RETVAL", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a7752ed00ff040eb90f807e1745fdda67", null ],
       [ "TRACE_MARKER_TYPE_FILETYPE", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9afb92a065fc3cdb8b86e463bd2ff2fdf1", null ],
       [ "TRACE_MARKER_TYPE_CACHE_LINE_SIZE", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aec6bd14b464acb7f6e6b5e0e310474fa", null ],
-      [ "TRACE_MARKER_TYPE_INSTRUCTION_COUNT", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a94cc2db87863fcdcdf9163d8c9c2152e", null ]
+      [ "TRACE_MARKER_TYPE_INSTRUCTION_COUNT", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a94cc2db87863fcdcdf9163d8c9c2152e", null ],
+      [ "TRACE_MARKER_TYPE_VERSION", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aab9bc211e1e5f2f567a085d825e37745", null ]
     ] ],
     [ "trace_type_t", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19d", [
       [ "TRACE_TYPE_READ", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19da2264004d45a5c8fe2b6713e2fe263c32", null ],
@@ -68,6 +68,9 @@
       [ "TRACE_TYPE_PREFETCH_WRITE_L2_NT", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19dadcd3f07660dd38c9b482fbaedbc2f395", null ],
       [ "TRACE_TYPE_PREFETCH_WRITE_L3", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19da3114e4f52013c9f977d1592024c24b3a", null ],
       [ "TRACE_TYPE_PREFETCH_WRITE_L3_NT", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19da864489196c4dba6b2ebbc2f1e6c02ae1", null ]
+    ] ],
+    [ "trace_version_t", "trace__entry_8h.html#a3a78cb9ac4c3afc1444673fb9a407d76", [
+      [ "TRACE_ENTRY_VERSION", "trace__entry_8h.html#a3a78cb9ac4c3afc1444673fb9a407d76a2269f0382dd716f0831ec6ea2cdf32f2", null ]
     ] ],
     [ "type_is_instr", "trace__entry_8h.html#ad9435e2fc94c587d4af59441c0de9d3c", null ],
     [ "type_is_instr_branch", "trace__entry_8h.html#a507c56307a93f25c501b6cd72c18c269", null ],
