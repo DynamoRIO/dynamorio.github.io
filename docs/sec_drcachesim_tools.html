@@ -413,47 +413,44 @@ Human-Readable View</h1>
 <div class="line">T342626   0x0000000000404a30  41 54                push   %r12</div>
 <div class="line">T342626     write 8 byte(s) @ 0x7f899f928e70</div>
 <div class="line">...</div>
-</div><!-- fragment --><p>Here is an example of a signal handler interrupting the regular flow:</p>
-<div class="fragment"><div class="line">T342625   0x0000000000469957  49 8b 44 17 18       mov    0x18(%r15,%rdx), %rax</div>
-<div class="line">T342625     read  8 <span class="keywordtype">byte</span>(s) @ 0x4e7848</div>
-<div class="line">T342625   0x000000000046995c  48 85 c0             test   %rax, %rax</div>
-<div class="line">T342625   0x000000000046995f  0f 84 a5 00 00 00    jz     $0x0000000000469a0a</div>
-<div class="line">T342625 &lt;marker: kernel xfer to handler&gt;</div>
-<div class="line">T342625 &lt;marker: timestamp 13260900248211321&gt;</div>
-<div class="line">T342625 &lt;marker: tid 342625 on core 3&gt;</div>
-<div class="line">T342625   0x000000000040257d  55                   push   %rbp</div>
-<div class="line">T342625     write 8 byte(s) @ 0x7ffe70dcda30</div>
-<div class="line">T342625   0x000000000040257e  48 89 e5             mov    %rsp, %rbp</div>
-<div class="line">T342625   0x0000000000402581  89 7d fc             mov    %edi, -0x04(%rbp)</div>
-<div class="line">T342625     write 4 <span class="keywordtype">byte</span>(s) @ 0x7ffe70dcda2c</div>
-<div class="line">T342625   0x0000000000402584  48 89 75 f0          mov    %rsi, -0x10(%rbp)</div>
-<div class="line">T342625     write 8 <span class="keywordtype">byte</span>(s) @ 0x7ffe70dcda20</div>
-<div class="line">T342625   0x0000000000402588  48 89 55 e8          mov    %rdx, -0x18(%rbp)</div>
-<div class="line">T342625     write 8 <span class="keywordtype">byte</span>(s) @ 0x7ffe70dcda18</div>
-<div class="line">T342625   0x000000000040258c  83 7d fc 1a          cmp    -0x04(%rbp), $0x1a</div>
-<div class="line">T342625     read  4 <span class="keywordtype">byte</span>(s) @ 0x7ffe70dcda2c</div>
-<div class="line">T342625   0x0000000000402590  75 0f                jnz    $0x00000000004025a1</div>
-<div class="line">T342625   0x0000000000402592  8b 05 5c 0f 0e 00    mov    &lt;rel&gt; 0x00000000004e34f4, %eax</div>
-<div class="line">T342625     read  4 byte(s) @ 0x4e34f4</div>
-<div class="line">T342625   0x0000000000402598  83 c0 01             add    $0x01, %eax</div>
-<div class="line">T342625   0x000000000040259b  89 05 53 0f 0e 00    mov    %eax, &lt;rel&gt; 0x00000000004e34f4</div>
-<div class="line">T342625     write 4 byte(s) @ 0x4e34f4</div>
-<div class="line">T342625   0x00000000004025a1  90                   nop</div>
-<div class="line">T342625   0x00000000004025a2  5d                   pop    %rbp</div>
-<div class="line">T342625     read  8 byte(s) @ 0x7ffe70dcda30</div>
-<div class="line">T342625   0x00000000004025a3  c3                   ret</div>
-<div class="line">T342625     read  8 byte(s) @ 0x7ffe70dcda38</div>
-<div class="line">T342625   0x0000000000407bb0  48 c7 c0 0f 00 00 00 mov    $0x0000000f, %rax</div>
-<div class="line">T342625   0x0000000000407bb7  0f 05                syscall</div>
-<div class="line">T342625 &lt;marker: timestamp 13260900248211330&gt;</div>
-<div class="line">T342625 &lt;marker: tid 342625 on core 3&gt;</div>
-<div class="line">T342625 &lt;marker: syscall xfer&gt;</div>
-<div class="line">T342625 &lt;marker: timestamp 13260900248214640&gt;</div>
-<div class="line">T342625 &lt;marker: tid 342625 on core 3&gt;</div>
-<div class="line">T342625   0x0000000000469965  49 8b 54 17 10       mov    0x10(%r15,%rdx), %rdx</div>
-<div class="line">T342625     read  8 <span class="keywordtype">byte</span>(s) @ 0x4e7840</div>
-<div class="line">T342625   0x000000000046996a  48 3b 15 9f fa 07 00 cmp    %rdx, &lt;rel&gt; 0x00000000004e9410</div>
-<div class="line">T342625     read  8 byte(s) @ 0x4e9410</div>
+</div><!-- fragment --><p>Here is an example of a signal handler interrupting the regular flow, with metadata showing that the signal was delivered just after a non-taken conditional branch:</p>
+<div class="fragment"><div class="line">T585061   0x00007fdb4e95128f  41 f6 44 24 08 08    test   0x08(%r12), $0x08</div>
+<div class="line">T585061     read  1 <span class="keywordtype">byte</span>(s) @ 0x7ffd5af76b08</div>
+<div class="line">T585061   0x00007fdb4e951295  0f 85 28 04 00 00    jnz    $0x00007fdb4e9516c3</div>
+<div class="line">T585061 &lt;marker: kernel xfer from 0x7fdb4e95129b to handler&gt;</div>
+<div class="line">T585061 &lt;marker: timestamp 13269730052517230&gt;</div>
+<div class="line">T585061 &lt;marker: tid 585061 on core 3&gt;</div>
+<div class="line">T585061   0x00007fdb4ace9dba  55                   push   %rbp</div>
+<div class="line">T585061     write 8 byte(s) @ 0x7ffd5af763d0</div>
+<div class="line">T585061   0x00007fdb4ace9dbb  48 89 e5             mov    %rsp, %rbp</div>
+<div class="line">T585061   0x00007fdb4ace9dbe  89 7d fc             mov    %edi, -0x04(%rbp)</div>
+<div class="line">T585061     write 4 <span class="keywordtype">byte</span>(s) @ 0x7ffd5af763cc</div>
+<div class="line">T585061   0x00007fdb4ace9dc1  48 89 75 f0          mov    %rsi, -0x10(%rbp)</div>
+<div class="line">T585061     write 8 <span class="keywordtype">byte</span>(s) @ 0x7ffd5af763c0</div>
+<div class="line">T585061   0x00007fdb4ace9dc5  48 89 55 e8          mov    %rdx, -0x18(%rbp)</div>
+<div class="line">T585061     write 8 <span class="keywordtype">byte</span>(s) @ 0x7ffd5af763b8</div>
+<div class="line">T585061   0x00007fdb4ace9dc9  83 7d fc 1a          cmp    -0x04(%rbp), $0x1a</div>
+<div class="line">T585061     read  4 <span class="keywordtype">byte</span>(s) @ 0x7ffd5af763cc</div>
+<div class="line">T585061   0x00007fdb4ace9dcd  75 0f                jnz    $0x00007fdb4ace9dde</div>
+<div class="line">T585061   0x00007fdb4ace9dcf  8b 05 7f 23 20 00    mov    &lt;rel&gt; 0x00007fdb4aeec154, %eax</div>
+<div class="line">T585061     read  4 byte(s) @ 0x7fdb4aeec154</div>
+<div class="line">T585061   0x00007fdb4ace9dd5  83 c0 01             add    $0x01, %eax</div>
+<div class="line">T585061   0x00007fdb4ace9dd8  89 05 76 23 20 00    mov    %eax, &lt;rel&gt; 0x00007fdb4aeec154</div>
+<div class="line">T585061     write 4 byte(s) @ 0x7fdb4aeec154</div>
+<div class="line">T585061   0x00007fdb4ace9dde  90                   nop</div>
+<div class="line">T585061   0x00007fdb4ace9ddf  5d                   pop    %rbp</div>
+<div class="line">T585061     read  8 byte(s) @ 0x7ffd5af763d0</div>
+<div class="line">T585061   0x00007fdb4ace9de0  c3                   ret</div>
+<div class="line">T585061     read  8 byte(s) @ 0x7ffd5af763d8</div>
+<div class="line">T585061   0x00007fdb4e95c140  48 c7 c0 0f 00 00 00 mov    $0x0000000f, %rax</div>
+<div class="line">T585061   0x00007fdb4e95c147  0f 05                syscall</div>
+<div class="line">T585061 &lt;marker: timestamp 13269730052517239&gt;</div>
+<div class="line">T585061 &lt;marker: tid 585061 on core 3&gt;</div>
+<div class="line">T585061 &lt;marker: syscall xfer from 0x7fdb4e95c149&gt;</div>
+<div class="line">T585061 &lt;marker: timestamp 13269730052520271&gt;</div>
+<div class="line">T585061 &lt;marker: tid 585061 on core 3&gt;</div>
+<div class="line">T585061   0x00007fdb4e95129b  48 8b 1d 8e 40 01 00 mov    &lt;rel&gt; 0x00007fdb4e965330, %rbx</div>
+<div class="line">T585061     read  8 byte(s) @ 0x7fdb4e965330</div>
 </div><!-- fragment --><h1><a class="anchor" id="sec_tool_func_view"></a>
 View Function Calls</h1>
 <p>The func_view tool records function argument and return values for function names specified at tracing time. See <a class="el" href="sec_drcachesim_funcs.html">Tracing Function Calls</a> for more information.</p>
@@ -522,5 +519,5 @@ View Function Calls</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18809 --- Fri Jul 2 2021 03:06:24 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18816 --- Fri Jul 9 2021 03:04:58 &nbsp; <img border=0 src="favicon.png">
 </small></address>
