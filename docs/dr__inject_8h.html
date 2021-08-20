@@ -48,6 +48,8 @@ Functions</h2></td></tr>
 <tr class="separator:a77b0c082257a96deebb67ad23f381426"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4acf52ec4bc354ad729dd7e580e5ffb0"><td class="memItemLeft" align="right" valign="top">DR_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__inject_8h.html#a4acf52ec4bc354ad729dd7e580e5ffb0">dr_inject_prepare_to_exec</a> (const char *app_name, const char **app_cmdline, void **data)</td></tr>
 <tr class="separator:a4acf52ec4bc354ad729dd7e580e5ffb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0831f0550a732eb397b49ac2bca0575"><td class="memItemLeft" align="right" valign="top">DR_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__inject_8h.html#ab0831f0550a732eb397b49ac2bca0575">dr_inject_prepare_to_attach</a> (process_id_t pid, const char *app_name, bool wait_syscall, void **data)</td></tr>
+<tr class="separator:ab0831f0550a732eb397b49ac2bca0575"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac318714936b1f01498cd28f4718d0fc"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__inject_8h.html#aac318714936b1f01498cd28f4718d0fc">dr_inject_prepare_to_ptrace</a> (void *data)</td></tr>
 <tr class="separator:aac318714936b1f01498cd28f4718d0fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c45ee5291880dce2c26e06233c02a03"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__inject_8h.html#a6c45ee5291880dce2c26e06233c02a03">dr_inject_prepare_new_process_group</a> (void *data)</td></tr>
@@ -207,6 +209,58 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ab0831f0550a732eb397b49ac2bca0575"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0831f0550a732eb397b49ac2bca0575">&#9670;&nbsp;</a></span>dr_inject_prepare_to_attach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT int dr_inject_prepare_to_attach </td>
+          <td>(</td>
+          <td class="paramtype">process_id_t&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>app_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>wait_syscall</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Prepare to ptrace(ATTACH) the provided process. Use <a class="el" href="dr__inject_8h.html#ab2a383d92917deebddd8c5ce2d80ea12">dr_inject_process_inject()</a> to perform the ptrace(ATTACH) under DR.</p>
+<dl class="section note"><dt>Note</dt><dd>Only available on Linux.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pid</td><td>The pid for the target executable. The caller must ensure this data is valid until the inject data is disposed.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">app_name</td><td>The path to the target executable. The caller must ensure this data is valid until the inject data is disposed.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wait_syscall</td><td>Syscall handling mode in inject stage. If true, will wait for completion of ongoing syscall. Else start inject immidiately.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>An opaque pointer that should be passed to subsequent dr_inject_* routines to refer to this process. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether successful. </dd></dl>
 
 </div>
 </div>
@@ -411,7 +465,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns the exit code of the process. If the caller did not wait for the process to finish before calling this, the code will be STILL_ACTIVE. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the exit code of the process, always returns 0 for ptraced process. If the caller did not wait for the process to finish before calling this, the code will be STILL_ACTIVE. </dd></dl>
 
 </div>
 </div>
@@ -555,5 +609,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18851 --- Fri Aug 13 2021 03:05:09 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18858 --- Fri Aug 20 2021 03:06:08 &nbsp; <img border=0 src="favicon.png">
 </small></address>
