@@ -247,6 +247,10 @@ Macros</h2></td></tr>
 <tr class="separator:ac68769040c6d0fded0274fb696927b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70f13977692db1c43470dd0a19776631"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a70f13977692db1c43470dd0a19776631">INSTR_CREATE_fcvtzu_vector_fixed</a>(dc,  Rd,  Rm,  width,  fbits)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_fcvtzu, Rd, Rm, width, fbits)</td></tr>
 <tr class="separator:a70f13977692db1c43470dd0a19776631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7da4402c802338c83dd61c6f8cac3895"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a7da4402c802338c83dd61c6f8cac3895">INSTR_CREATE_sli_vector</a>(dc,  Rd,  Rn,  width,  shift)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_sli, Rd, Rn, width, shift)</td></tr>
+<tr class="separator:a7da4402c802338c83dd61c6f8cac3895"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9ff89ae82bc841c6fd7628a2a6c3d28"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ac9ff89ae82bc841c6fd7628a2a6c3d28">INSTR_CREATE_uqshrn_vector</a>(dc,  Rd,  Rn,  width,  shift)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_uqshrn, Rd, Rn, width, shift)</td></tr>
+<tr class="separator:ac9ff89ae82bc841c6fd7628a2a6c3d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22f86525989a6e0ba588b40018c53fff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a22f86525989a6e0ba588b40018c53fff">INSTR_CREATE_ucvtf_vector</a>(dc,  Rd,  Rm,  width)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_ucvtf, Rd, Rm, width)</td></tr>
 <tr class="separator:a22f86525989a6e0ba588b40018c53fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a774ec6ded3816ccc68e8af468392fbfc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a774ec6ded3816ccc68e8af468392fbfc">INSTR_CREATE_ucvtf_vector_fixed</a>(dc,  Rd,  Rm,  width,  fbits)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_ucvtf, Rd, Rm, width, fbits)</td></tr>
@@ -8321,6 +8325,62 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a id="a7da4402c802338c83dd61c6f8cac3895"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7da4402c802338c83dd61c6f8cac3895">&#9670;&nbsp;</a></span>INSTR_CREATE_sli_vector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_sli_vector</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">width, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">shift&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_sli, Rd, Rn, width, shift)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an SLI shift left and insert instruction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The output register. </td></tr>
+    <tr><td class="paramname">Rn</td><td>The input register. </td></tr>
+    <tr><td class="paramname">width</td><td>The output vector element width. Use <a class="el" href="dr__ir__macros__aarch64_8h.html#a9c57dfea6090119e2ef1f7b2aea4c12a">OPND_CREATE_BYTE()</a>, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF()</a>, <a class="el" href="dr__ir__macros__aarch64_8h.html#a24dca05089893aac1b7be58819fc8506">OPND_CREATE_SINGLE()</a> or <a class="el" href="dr__ir__macros__aarch64_8h.html#abc0827a4d3590c1f4dbb10e85f7326e6">OPND_CREATE_DOUBLE()</a>. </td></tr>
+    <tr><td class="paramname">shift</td><td>The number of bits to shift the result by. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aaf9c7dcc89ce87a9f60d6aa74bfabfde"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf9c7dcc89ce87a9f60d6aa74bfabfde">&#9670;&nbsp;</a></span>INSTR_CREATE_smax_vector</h2>
 
@@ -11814,6 +11874,62 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a id="ac9ff89ae82bc841c6fd7628a2a6c3d28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9ff89ae82bc841c6fd7628a2a6c3d28">&#9670;&nbsp;</a></span>INSTR_CREATE_uqshrn_vector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_uqshrn_vector</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">width, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">shift&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_uqshrn, Rd, Rn, width, shift)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an UQSHRN vector unsigned saturating shift right narrow (immediate) instruction. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The output register. </td></tr>
+    <tr><td class="paramname">Rn</td><td>The input register. </td></tr>
+    <tr><td class="paramname">width</td><td>The output vector element width. Use <a class="el" href="dr__ir__macros__aarch64_8h.html#a9c57dfea6090119e2ef1f7b2aea4c12a">OPND_CREATE_BYTE()</a>, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF()</a>, <a class="el" href="dr__ir__macros__aarch64_8h.html#a24dca05089893aac1b7be58819fc8506">OPND_CREATE_SINGLE()</a> or <a class="el" href="dr__ir__macros__aarch64_8h.html#abc0827a4d3590c1f4dbb10e85f7326e6">OPND_CREATE_DOUBLE()</a>. </td></tr>
+    <tr><td class="paramname">shift</td><td>The number of bits to shift the result by. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ac62a7b70b73a1efb59b89f2ad8d7fe25"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac62a7b70b73a1efb59b89f2ad8d7fe25">&#9670;&nbsp;</a></span>INSTR_CREATE_uqsub_vector</h2>
 
@@ -13873,5 +13989,5 @@ Enumerations</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18873 --- Fri Sep 3 2021 03:05:02 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18879 --- Fri Sep 10 2021 03:05:46 &nbsp; <img border=0 src="favicon.png">
 </small></address>
