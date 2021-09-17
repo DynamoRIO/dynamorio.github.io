@@ -3551,6 +3551,9 @@ permalink: /globals_d.html
 <li>drmgr_insertion_cb_t
 : <a class="el" href="group__drmgr.html#ga13a6681d00526e2360f2a6b13f0272aa">drmgr.h</a>
 </li>
+<li>drmgr_instru_events_t
+: <a class="el" href="group__drmgr.html#gaa610b2e06d4bae362405a7792b4060e3">drmgr.h</a>
+</li>
 <li>drmgr_is_emulation_end()
 : <a class="el" href="group__drmgr.html#gaf2227473141100828d097eb98828b954">drmgr.h</a>
 </li>
@@ -3587,6 +3590,9 @@ permalink: /globals_d.html
 <li>DRMGR_PHASE_INSTRU2INSTRU
 : <a class="el" href="group__drmgr.html#ggae3531e42d6cde87d19a63801ab6b9230ad4dab0dd27bdccf8b9d70727c9da5792">drmgr.h</a>
 </li>
+<li>DRMGR_PHASE_META_INSTRU
+: <a class="el" href="group__drmgr.html#ggae3531e42d6cde87d19a63801ab6b9230a6a18072668addf9e8197b66756d8be09">drmgr.h</a>
+</li>
 <li>DRMGR_PHASE_NONE
 : <a class="el" href="group__drmgr.html#ggae3531e42d6cde87d19a63801ab6b9230ae5168599a479256d3b95839f57e5b985">drmgr.h</a>
 </li>
@@ -3601,6 +3607,9 @@ permalink: /globals_d.html
 </li>
 <li>DRMGR_PRIORITY_APP2APP_NAME_DRBBDUP
 : <a class="el" href="group__drbbdup.html#ga54e90aa7a9fbe8bc3f6d56c2eb64968c">drbbdup.h</a>
+</li>
+<li>DRMGR_PRIORITY_DRSTATECMP
+: <a class="el" href="group__drstatecmp.html#ga2c0ab6e35327305d75c1a107b76e4b03">drstatecmp.h</a>
 </li>
 <li>DRMGR_PRIORITY_FAULT_DRREG
 : <a class="el" href="group__drreg.html#ggaabfcbcb5ac86a1edac4035264bc7d2b8a1e68a52ce0fc6755b47fe317d9e7afc8">drreg.h</a>
@@ -3635,6 +3644,9 @@ permalink: /globals_d.html
 <li>DRMGR_PRIORITY_NAME_DRREG_LOW
 : <a class="el" href="group__drreg.html#ga029fce197e2cdd4f155a4949ea25224b">drreg.h</a>
 </li>
+<li>DRMGR_PRIORITY_NAME_DRSTATECMP
+: <a class="el" href="group__drstatecmp.html#ga56cdfc6808c8726a0830db9ea637dc72">drstatecmp.h</a>
+</li>
 <li>DRMGR_PRIORITY_NAME_DRWRAP
 : <a class="el" href="group__drwrap.html#ga925e96b9b70bcf935279bfd79dbe6c7f">drwrap.h</a>
 </li>
@@ -3668,11 +3680,17 @@ permalink: /globals_d.html
 <li>drmgr_register_bb_instru2instru_event()
 : <a class="el" href="group__drmgr.html#ga2f1f4cb66a41c81a12a8b37ba96083de">drmgr.h</a>
 </li>
+<li>drmgr_register_bb_instrumentation_all_events()
+: <a class="el" href="group__drmgr.html#ga4917fd1c3d667e52fc77b48d1325d85b">drmgr.h</a>
+</li>
 <li>drmgr_register_bb_instrumentation_event()
 : <a class="el" href="group__drmgr.html#ga83a5fc96944e10bd7356e0c492c93966">drmgr.h</a>
 </li>
 <li>drmgr_register_bb_instrumentation_ex_event()
 : <a class="el" href="group__drmgr.html#ga26e4be9f62ffd954f2f95ba21ec92953">drmgr.h</a>
+</li>
+<li>drmgr_register_bb_meta_instru_event()
+: <a class="el" href="group__drmgr.html#ga8d3c4cfcbfe46adcaa51efc12be8eafc">drmgr.h</a>
 </li>
 <li>drmgr_register_cls_field()
 : <a class="el" href="group__drmgr.html#ga933ff32be874004447af771283d0bcee">drmgr.h</a>
@@ -3794,11 +3812,17 @@ permalink: /globals_d.html
 <li>drmgr_unregister_bb_instru2instru_event()
 : <a class="el" href="group__drmgr.html#ga4c692eb44a082c09833d13ed85360814">drmgr.h</a>
 </li>
+<li>drmgr_unregister_bb_instrumentation_all_events()
+: <a class="el" href="group__drmgr.html#ga2bda2cd032c29f0a9343265cc9cdf6bd">drmgr.h</a>
+</li>
 <li>drmgr_unregister_bb_instrumentation_event()
 : <a class="el" href="group__drmgr.html#gaff08fa96e523f613b7371835c5025422">drmgr.h</a>
 </li>
 <li>drmgr_unregister_bb_instrumentation_ex_event()
 : <a class="el" href="group__drmgr.html#ga6980f5fdc8f1f74ecaca53d0ef49c16a">drmgr.h</a>
+</li>
+<li>drmgr_unregister_bb_meta_instru_event()
+: <a class="el" href="group__drmgr.html#ga216b449b7681a092557cc78b45895899">drmgr.h</a>
 </li>
 <li>drmgr_unregister_cls_field()
 : <a class="el" href="group__drmgr.html#gaab638b9a9480b505e6ae323ffb72bb1d">drmgr.h</a>
@@ -3892,6 +3916,9 @@ permalink: /globals_d.html
 </li>
 <li>drmodtrack_lookup()
 : <a class="el" href="group__drcovlib.html#ga60950539b2bcf96a88c67ca49b17084c">drcovlib.h</a>
+</li>
+<li>drmodtrack_lookup_segment()
+: <a class="el" href="group__drcovlib.html#ga338038ccdcccfae189c746a5ebb279e3">drcovlib.h</a>
 </li>
 <li>drmodtrack_offline_exit()
 : <a class="el" href="group__drcovlib.html#gab3d505c86e6d6dfdfd789303065e1fea">drcovlib.h</a>
@@ -4042,6 +4069,30 @@ permalink: /globals_d.html
 </li>
 <li>DRREG_USER_RESTORES_AT_BB_END
 : <a class="el" href="group__drreg.html#gga9aa35aebc3d4f0f41cba66bfcde82a00a2d5f9cc167553f4145dc5adb8eac3f9d">drreg.h</a>
+</li>
+<li>drstatecmp_bb_checks_enabled()
+: <a class="el" href="group__drstatecmp.html#gac74a6ddbee6e4b5e62213c14aae363d5">drstatecmp.h</a>
+</li>
+<li>DRSTATECMP_ERROR
+: <a class="el" href="group__drstatecmp.html#gga43fe9c1bcb2395fda709ff23a6728bf4a69e78c87b43541a88b87a0c08a185a5b">drstatecmp.h</a>
+</li>
+<li>DRSTATECMP_ERROR_ALREADY_INITIALIZED
+: <a class="el" href="group__drstatecmp.html#gga43fe9c1bcb2395fda709ff23a6728bf4a692ea162bda3919e62751eca0eea5fe4">drstatecmp.h</a>
+</li>
+<li>DRSTATECMP_ERROR_NOT_INITIALIZED
+: <a class="el" href="group__drstatecmp.html#gga43fe9c1bcb2395fda709ff23a6728bf4a08b903ee49a371e832bf3caad472b252">drstatecmp.h</a>
+</li>
+<li>drstatecmp_exit()
+: <a class="el" href="group__drstatecmp.html#gaed903dd8f7a076d397cca7ff95fcb4a9">drstatecmp.h</a>
+</li>
+<li>drstatecmp_init()
+: <a class="el" href="group__drstatecmp.html#gac745683a7ae2f75d6e632a21f65067e0">drstatecmp.h</a>
+</li>
+<li>drstatecmp_status_t
+: <a class="el" href="group__drstatecmp.html#ga43fe9c1bcb2395fda709ff23a6728bf4">drstatecmp.h</a>
+</li>
+<li>DRSTATECMP_SUCCESS
+: <a class="el" href="group__drstatecmp.html#gga43fe9c1bcb2395fda709ff23a6728bf4a2d7804fb1592a3eddd4949cce6eed2f9">drstatecmp.h</a>
 </li>
 <li>drsym_compound_type_t
 : <a class="el" href="group__drsyms.html#gae6d13068c822f07970613af43bcd2233">drsyms.h</a>
@@ -4581,5 +4632,5 @@ permalink: /globals_d.html
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18879 --- Fri Sep 10 2021 03:05:49 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18886 --- Fri Sep 17 2021 03:05:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

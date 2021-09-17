@@ -34,6 +34,8 @@ permalink: /group__drmgr.html
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__drmgr__priority__t.html">_drmgr_priority_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__drmgr__instru__events__t.html">_drmgr_instru_events_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__emulated__instr__t.html">_emulated_instr_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -53,6 +55,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:ga4895c7d1731eae3076179b3aa7364343"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad1ea8251bfe11bcc02821ada3852e599"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__drmgr__priority__t.html">_drmgr_priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#gad1ea8251bfe11bcc02821ada3852e599">drmgr_priority_t</a></td></tr>
 <tr class="separator:gad1ea8251bfe11bcc02821ada3852e599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa610b2e06d4bae362405a7792b4060e3"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__drmgr__instru__events__t.html">_drmgr_instru_events_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#gaa610b2e06d4bae362405a7792b4060e3">drmgr_instru_events_t</a></td></tr>
+<tr class="separator:gaa610b2e06d4bae362405a7792b4060e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac779b3f5c1076450ad32083da0921768"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__emulated__instr__t.html">_emulated_instr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#gac779b3f5c1076450ad32083da0921768">emulated_instr_t</a></td></tr>
 <tr class="separator:gac779b3f5c1076450ad32083da0921768"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -67,7 +71,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__drmgr.html#ggae3531e42d6cde87d19a63801ab6b9230a71f2ee3487696c6f969b06920b883dee">DRMGR_PHASE_INSERTION</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__drmgr.html#ggae3531e42d6cde87d19a63801ab6b9230ad4dab0dd27bdccf8b9d70727c9da5792">DRMGR_PHASE_INSTRU2INSTRU</a>
+&#160;&#160;<a class="el" href="group__drmgr.html#ggae3531e42d6cde87d19a63801ab6b9230ad4dab0dd27bdccf8b9d70727c9da5792">DRMGR_PHASE_INSTRU2INSTRU</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__drmgr.html#ggae3531e42d6cde87d19a63801ab6b9230a6a18072668addf9e8197b66756d8be09">DRMGR_PHASE_META_INSTRU</a>
 <br />
  }</td></tr>
 <tr class="separator:gae3531e42d6cde87d19a63801ab6b9230"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,6 +115,14 @@ Functions</h2></td></tr>
 <tr class="separator:ga14834254df9e9ded4369063e5cfba909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga20ff5e38d676266d12f6641326bed87a"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga20ff5e38d676266d12f6641326bed87a">drmgr_unregister_opcode_instrumentation_event</a> (<a class="el" href="group__drmgr.html#ga4895c7d1731eae3076179b3aa7364343">drmgr_opcode_insertion_cb_t</a> func, int opcode)</td></tr>
 <tr class="separator:ga20ff5e38d676266d12f6641326bed87a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8d3c4cfcbfe46adcaa51efc12be8eafc"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga8d3c4cfcbfe46adcaa51efc12be8eafc">drmgr_register_bb_meta_instru_event</a> (<a class="el" href="group__drmgr.html#ga1260c94e5eb2b34a7af2c2e99b129568">drmgr_xform_cb_t</a> func, <a class="el" href="group__drmgr.html#gad1ea8251bfe11bcc02821ada3852e599">drmgr_priority_t</a> *priority)</td></tr>
+<tr class="separator:ga8d3c4cfcbfe46adcaa51efc12be8eafc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga216b449b7681a092557cc78b45895899"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga216b449b7681a092557cc78b45895899">drmgr_unregister_bb_meta_instru_event</a> (<a class="el" href="group__drmgr.html#ga1260c94e5eb2b34a7af2c2e99b129568">drmgr_xform_cb_t</a> func)</td></tr>
+<tr class="separator:ga216b449b7681a092557cc78b45895899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4917fd1c3d667e52fc77b48d1325d85b"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga4917fd1c3d667e52fc77b48d1325d85b">drmgr_register_bb_instrumentation_all_events</a> (<a class="el" href="group__drmgr.html#gaa610b2e06d4bae362405a7792b4060e3">drmgr_instru_events_t</a> *events, <a class="el" href="group__drmgr.html#gad1ea8251bfe11bcc02821ada3852e599">drmgr_priority_t</a> *priority)</td></tr>
+<tr class="separator:ga4917fd1c3d667e52fc77b48d1325d85b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2bda2cd032c29f0a9343265cc9cdf6bd"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga2bda2cd032c29f0a9343265cc9cdf6bd">drmgr_unregister_bb_instrumentation_all_events</a> (<a class="el" href="group__drmgr.html#gaa610b2e06d4bae362405a7792b4060e3">drmgr_instru_events_t</a> *events)</td></tr>
+<tr class="separator:ga2bda2cd032c29f0a9343265cc9cdf6bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga75f5e22831cb18cb7fbb8316cd56f09f"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="group__drmgr.html#gae3531e42d6cde87d19a63801ab6b9230">drmgr_bb_phase_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga75f5e22831cb18cb7fbb8316cd56f09f">drmgr_current_bb_phase</a> (void *drcontext)</td></tr>
 <tr class="separator:ga75f5e22831cb18cb7fbb8316cd56f09f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadd8688fd6cc4d7e1f804ccd1460f5177"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#gadd8688fd6cc4d7e1f804ccd1460f5177">drmgr_is_first_instr</a> (void *drcontext, <a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
@@ -317,7 +331,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Callback function for the second and last stages when using a user data parameter for all four: analysis and instru2instru transformations on the whole instruction list.</p>
+<p>Callback function for the second, fourth, and fifth stages when using a user data parameter for all five: analysis, instru2instru, and meta_instru transformations on the whole instruction list.</p>
 <p>See <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a> for an explanation of the return value. If any instrumentation pass requests <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209a80b741b6a35dc7424940a873bfee2ced">DR_EMIT_STORE_TRANSLATIONS</a>, they will be stored. </p>
 
 </div>
@@ -336,6 +350,21 @@ Functions</h2></td></tr>
 <p>Callback function for the third stage: instrumentation insertion.</p>
 <p>The <code>user_data</code> parameter contains data passed from the second stage to this stage.</p>
 <p>See <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a> for an explanation of the return value. If any instrumentation pass requests <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209a80b741b6a35dc7424940a873bfee2ced">DR_EMIT_STORE_TRANSLATIONS</a>, they will be stored. </p>
+
+</div>
+</div>
+<a id="gaa610b2e06d4bae362405a7792b4060e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa610b2e06d4bae362405a7792b4060e3">&#9670;&nbsp;</a></span>drmgr_instru_events_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct__drmgr__instru__events__t.html">_drmgr_instru_events_t</a> <a class="el" href="group__drmgr.html#gaa610b2e06d4bae362405a7792b4060e3">drmgr_instru_events_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Specifies the callbacks when registering all <code>drmgr's</code> bb instrumentation events </p>
 
 </div>
 </div>
@@ -381,7 +410,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Callback function for the first and last stages: app2app and instru2instru transformations on the whole instruction list.</p>
+<p>Callback function for the first, fourth, and fifth stages: app2app, instru2instru, and meta_instru transformations on the whole instruction list.</p>
 <p>See <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a> for an explanation of the return value. If any instrumentation pass requests <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209a80b741b6a35dc7424940a873bfee2ced">DR_EMIT_STORE_TRANSLATIONS</a>, they will be stored. </p>
 
 </div>
@@ -449,6 +478,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="ggae3531e42d6cde87d19a63801ab6b9230a71f2ee3487696c6f969b06920b883dee"></a>DRMGR_PHASE_INSERTION&#160;</td><td class="fielddoc"><p>Currently in the instrumentation insertion phase. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ggae3531e42d6cde87d19a63801ab6b9230ad4dab0dd27bdccf8b9d70727c9da5792"></a>DRMGR_PHASE_INSTRU2INSTRU&#160;</td><td class="fielddoc"><p>Currently in the instru2instru phase. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggae3531e42d6cde87d19a63801ab6b9230a6a18072668addf9e8197b66756d8be09"></a>DRMGR_PHASE_META_INSTRU&#160;</td><td class="fielddoc"><p>Currently in the meta-instrumentation phase. </p>
 </td></tr>
 </table>
 
@@ -1235,7 +1266,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Registers a callback function for the first instrumentation stage: application-to-application ("app2app") transformations on each basic block. drmgr will call <code>func</code> as the first of four instrumentation stages for each dynamic application basic block. Examples of app2app transformations include replacing one function with another or replacing one instruction with another throughout an application.</p>
+<p>Registers a callback function for the first instrumentation stage: application-to-application ("app2app") transformations on each basic block. drmgr will call <code>func</code> as the first of five instrumentation stages for each dynamic application basic block. Examples of app2app transformations include replacing one function with another or replacing one instruction with another throughout an application.</p>
 <p>The app2app passes are allowed to modify and insert non-meta (i.e., application) instructions and are intended for application code transformations. These passes should avoid adding meta instructions other than label instructions.</p>
 <p>All instrumentation must follow the guidelines for <a class="el" href="dr__events_8h.html#acbfe1ece2c520d409ffd59076507a710">dr_register_bb_event()</a> with the exception that multiple application control transfer instructions are supported so long as all but one have intra-block <code><a class="el" href="structinstr__t.html">instr_t</a></code> targets. This is to support internal control flow that may be necessary for some application-to-application transformations. These control transfer instructions should have a translation set so that later passes know which application address they correspond to. <code>drmgr</code> will mark all of the extra non-meta control transfers as meta, and clear their translation fields, right before passing to DynamoRIO, in order to satisfy DynamoRIO's constraints. This allows all of the instrumentation passes to see these instructions as application instructions, which is how they should be treated.</p>
 <dl class="section return"><dt>Returns</dt><dd>false if the given priority request cannot be satisfied (e.g., <code>priority-&gt;before</code> is already ordered after <code>priority-&gt;after</code>) or the given name is already taken.</dd></dl>
@@ -1274,7 +1305,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Registers a callback function for the fourth instrumentation stage: instrumentation-to-instrumentation transformations on each basic block. drmgr will call <code>func</code> as the fourth of four instrumentation stages for each dynamic application basic block. Instrumentation-to-instrumentation passes are allowed to insert meta instructions but not non-meta instructions, and are intended for optimization of prior instrumentation passes.</p>
+<p>Registers a callback function for the fourth instrumentation stage: instrumentation-to-instrumentation transformations on each basic block. drmgr will call <code>func</code> as the fourth of five instrumentation stages for each dynamic application basic block. Instrumentation-to-instrumentation passes are allowed to insert meta instructions but not non-meta instructions, and are intended for optimization of prior instrumentation passes.</p>
 <p>All instrumentation must follow the guidelines for <a class="el" href="dr__events_8h.html#acbfe1ece2c520d409ffd59076507a710">dr_register_bb_event()</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>false if the given priority request cannot be satisfied (e.g., <code>priority-&gt;before</code> is already ordered after <code>priority-&gt;after</code>) or the given name is already taken.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1284,6 +1315,35 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ga4917fd1c3d667e52fc77b48d1325d85b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4917fd1c3d667e52fc77b48d1325d85b">&#9670;&nbsp;</a></span>drmgr_register_bb_instrumentation_all_events()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT bool drmgr_register_bb_instrumentation_all_events </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__drmgr.html#gaa610b2e06d4bae362405a7792b4060e3">drmgr_instru_events_t</a> *&#160;</td>
+          <td class="paramname"><em>events</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__drmgr.html#gad1ea8251bfe11bcc02821ada3852e599">drmgr_priority_t</a> *&#160;</td>
+          <td class="paramname"><em>priority</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Registers callbacks for all five instrumentation passes at once, with a <code>user_data</code> parameter passed among them all, enabling data sharing for all five of them. See the documentation for <a class="el" href="group__drmgr.html#gae270eeb1ab24d4e05f8588b23822f45c">drmgr_register_bb_app2app_event()</a>, <a class="el" href="group__drmgr.html#ga83a5fc96944e10bd7356e0c492c93966">drmgr_register_bb_instrumentation_event()</a>, <a class="el" href="group__drmgr.html#ga2f1f4cb66a41c81a12a8b37ba96083de">drmgr_register_bb_instru2instru_event()</a>, and <a class="el" href="group__drmgr.html#ga8d3c4cfcbfe46adcaa51efc12be8eafc">drmgr_register_bb_meta_instru_event()</a> for further details of each pass. The aforementioned routines are identical to this with the exception of the extra <code>user_data</code> parameter, which is an OUT parameter to the <code>app2app_func</code> and passed in to the four subsequent callbacks. The <code>priority</code> param can be NULL, in which case a default priority is used. </p>
 
 </div>
 </div>
@@ -1318,7 +1378,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Registers callback functions for the second and third instrumentation stages: application analysis and instrumentation insertion. drmgr will call <code>func</code> as the second of four instrumentation stages for each dynamic application basic block.</p>
+<p>Registers callback functions for the second and third instrumentation stages: application analysis and instrumentation insertion. drmgr will call <code>func</code> as the second of five instrumentation stages for each dynamic application basic block.</p>
 <p>The first stage performed any changes to the original application code, and later stages are not allowed to change application code. Application analysis passes in the second stage are not allowed to add to or change the instruction list other than adding label instructions, and are intended for analysis of application code either for immediate use or for use by the third stage. Label instructions can be used to store data for use in subsequent stages with custom tags inserted as notes via <a class="el" href="group__drmgr.html#ga057f980fa9323a0bb8a4226c7c52c14a">drmgr_reserve_note_range()</a> and custom data stored via <a class="el" href="dr__ir__instr_8h.html#a946303e1c9c3d1102603dc9842479b0c">instr_get_label_data_area()</a>.</p>
 <p>The third instrumentation stage is instrumentation insertion. Unlike the other stages, this one passes only one instruction to the callback, allowing each registered component to act on one instruction before moving to the next instruction. Instrumentation insertion passes are allowed to insert meta instructions only immediately prior to the passed-in instruction: not before any prior non-meta instruction nor after any subsequent non-meta instruction. They are not allowed to insert new non-meta instructions or change existing non-meta instructions. Because other components may have already acted on the instruction list, be sure to ignore already existing meta instructions.</p>
 <p>The <code>analysis_func</code> and <code>insertion_func</code> share the same priority. Their user_data parameter can be used to pass data from the analysis stage to the insertion stage.</p>
@@ -1380,7 +1440,45 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Registers callbacks for all four instrumentation passes at once, with a <code>user_data</code> parameter passed among them all, enabling data sharing for all four. See the documentation for <a class="el" href="group__drmgr.html#gae270eeb1ab24d4e05f8588b23822f45c">drmgr_register_bb_app2app_event()</a>, <a class="el" href="group__drmgr.html#ga83a5fc96944e10bd7356e0c492c93966">drmgr_register_bb_instrumentation_event()</a>, and <a class="el" href="group__drmgr.html#ga2f1f4cb66a41c81a12a8b37ba96083de">drmgr_register_bb_instru2instru_event()</a> for further details of each pass. The aforemented routines are identical to this with the exception of the extra <code>user_data</code> parameter, which is an OUT parameter to the <code>app2app_func</code> and passed in to the three subsequent callbacks. The <code>priority</code> param can be NULL, in which case a default priority is used. </p>
+<p>Registers callbacks for the first four instrumentation passes at once, with a <code>user_data</code> parameter passed among them all, enabling data sharing for all four of them. See the documentation for <a class="el" href="group__drmgr.html#gae270eeb1ab24d4e05f8588b23822f45c">drmgr_register_bb_app2app_event()</a>, <a class="el" href="group__drmgr.html#ga83a5fc96944e10bd7356e0c492c93966">drmgr_register_bb_instrumentation_event()</a>, and <a class="el" href="group__drmgr.html#ga2f1f4cb66a41c81a12a8b37ba96083de">drmgr_register_bb_instru2instru_event()</a> for further details of each pass. The aforementioned routines are identical to this with the exception of the extra <code>user_data</code> parameter, which is an OUT parameter to the <code>app2app_func</code> and passed in to the three subsequent callbacks. The <code>priority</code> param can be NULL, in which case a default priority is used. </p>
+
+</div>
+</div>
+<a id="ga8d3c4cfcbfe46adcaa51efc12be8eafc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8d3c4cfcbfe46adcaa51efc12be8eafc">&#9670;&nbsp;</a></span>drmgr_register_bb_meta_instru_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT bool drmgr_register_bb_meta_instru_event </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__drmgr.html#ga1260c94e5eb2b34a7af2c2e99b129568">drmgr_xform_cb_t</a>&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__drmgr.html#gad1ea8251bfe11bcc02821ada3852e599">drmgr_priority_t</a> *&#160;</td>
+          <td class="paramname"><em>priority</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Registers a callback function for the fifth instrumentation stage: meta-instrumentation analysis and transformations on each basic block. drmgr will call <code>func</code> as the fifth of five instrumentation stages for each dynamic application basic block. Meta-instrumentation passes are allowed to insert both meta and non-meta instructions, and are primarily intended for debugging prior instrumentation passes.</p>
+<p>All instrumentation must follow the guidelines for <a class="el" href="dr__events_8h.html#acbfe1ece2c520d409ffd59076507a710">dr_register_bb_event()</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>false if the given priority request cannot be satisfied (e.g., <code>priority-&gt;before</code> is already ordered after <code>priority-&gt;after</code>) or the given name is already taken.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>The callback to be called. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">priority</td><td>Specifies the relative ordering of the callback. Can be NULL, in which case a default priority is used. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2474,6 +2572,26 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga2bda2cd032c29f0a9343265cc9cdf6bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2bda2cd032c29f0a9343265cc9cdf6bd">&#9670;&nbsp;</a></span>drmgr_unregister_bb_instrumentation_all_events()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT bool drmgr_unregister_bb_instrumentation_all_events </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__drmgr.html#gaa610b2e06d4bae362405a7792b4060e3">drmgr_instru_events_t</a> *&#160;</td>
+          <td class="paramname"><em>events</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Unregisters the callbacks that were registered via <a class="el" href="group__drmgr.html#ga4917fd1c3d667e52fc77b48d1325d85b">drmgr_register_bb_instrumentation_all_events()</a>. </p><dl class="section return"><dt>Returns</dt><dd>true if unregistration is successful and false if it is not (e.g., <code>func</code> was not registered).</dd></dl>
+<p>The recommendations for <a class="el" href="dr__events_8h.html#a9c2ce8d64301f81084dddb3bf2ddbbf6">dr_unregister_bb_event()</a> about when it is safe to unregister apply here as well. </p>
+
+</div>
+</div>
 <a id="gaff08fa96e523f613b7371835c5025422"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaff08fa96e523f613b7371835c5025422">&#9670;&nbsp;</a></span>drmgr_unregister_bb_instrumentation_event()</h2>
 
@@ -2531,7 +2649,27 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Unregisters the given four callbacks that were registered via <a class="el" href="group__drmgr.html#ga26e4be9f62ffd954f2f95ba21ec92953">drmgr_register_bb_instrumentation_ex_event()</a>. </p><dl class="section return"><dt>Returns</dt><dd>true if unregistration is successful and false if it is not (e.g., <code>func</code> was not registered).</dd></dl>
+<p>Unregisters the four given callbacks that were registered via <a class="el" href="group__drmgr.html#ga26e4be9f62ffd954f2f95ba21ec92953">drmgr_register_bb_instrumentation_ex_event()</a>. </p><dl class="section return"><dt>Returns</dt><dd>true if unregistration is successful and false if it is not (e.g., <code>func</code> was not registered).</dd></dl>
+<p>The recommendations for <a class="el" href="dr__events_8h.html#a9c2ce8d64301f81084dddb3bf2ddbbf6">dr_unregister_bb_event()</a> about when it is safe to unregister apply here as well. </p>
+
+</div>
+</div>
+<a id="ga216b449b7681a092557cc78b45895899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga216b449b7681a092557cc78b45895899">&#9670;&nbsp;</a></span>drmgr_unregister_bb_meta_instru_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT bool drmgr_unregister_bb_meta_instru_event </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__drmgr.html#ga1260c94e5eb2b34a7af2c2e99b129568">drmgr_xform_cb_t</a>&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Unregisters a callback function for the fifth instrumentation stage. </p><dl class="section return"><dt>Returns</dt><dd>true if unregistration is successful and false if it is not (e.g., <code>func</code> was not registered).</dd></dl>
 <p>The recommendations for <a class="el" href="dr__events_8h.html#a9c2ce8d64301f81084dddb3bf2ddbbf6">dr_unregister_bb_event()</a> about when it is safe to unregister apply here as well. </p>
 
 </div>
@@ -3014,5 +3152,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18879 --- Fri Sep 10 2021 03:05:48 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18886 --- Fri Sep 17 2021 03:05:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

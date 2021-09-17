@@ -44,20 +44,22 @@ Event Replacement</h1>
 <p>In order to provide ordering control over event callbacks, <code>drmgr</code> replaces a number of DynamoRIO's events. For many of these, simply replacing <code>dr_</code> with <code>drmgr_</code> is sufficient, as that will then use a default priority. To request a priority, use the <code>_ex</code> version of the <code>drmgr_register_</code> routine. The basic block event is a special case as it is completely replaced with a new set of multiple events for different stages of instrumentation.</p>
 <h1><a class="anchor" id="sec_drmgr_stages"></a>
 Instrumentation Stages</h1>
-<p><code>drmgr</code> divides code changes into three types:</p>
+<p><code>drmgr</code> divides code changes into four types:</p>
 <ol type="1">
 <li>Application-to-application transformations: changes to the application code itself that are meant to affect application behavior or application performance</li>
 <li>Instrumentation insertion: monitoring code added between the application instructions</li>
 <li>Instrumentation-to-instrumentation transformations: typically, optimizations applied to the full set of inserted instrumentation</li>
+<li>Meta-instrumentation transformations: typically, debugging of the full set of inserted instrumentation</li>
 </ol>
-<p>Instrumentation insertion is split into two pieces: analysis of the full application code (after any changes from its original form), followed by insertion of instrumentation, one instruction at a time. The result is four separate, sequential stages:</p>
+<p>Instrumentation insertion is split into two pieces: analysis of the full application code (after any changes from its original form), followed by insertion of instrumentation, one instruction at a time. The result is five separate, sequential stages:</p>
 <ol type="1">
 <li>Application-to-application transformations</li>
 <li>Application code analysis</li>
 <li>Instrumentation insertion, one instruction at a time</li>
 <li>Instrumentation-to-instrumentation transformations</li>
+<li>Meta-instrumentation transformations</li>
 </ol>
-<p>Each component that registers with <code>drmgr</code> can register for some or all of the four stages. In each stage, each registered compoment's callback is invoked. This groups the different types of changes together and allows them to assume that no later change will invalidate their analysis or actions. The instrumentation insertion is performed in one forward pass: for each instruction, each registered component is invoked. This simplifies register allocation (register allocation is provided by a separate Extension <code>drreg</code>).</p>
+<p>Each component that registers with <code>drmgr</code> can register for some or all of the five stages. In each stage, each registered compoment's callback is invoked. This groups the different types of changes together and allows them to assume that no later change will invalidate their analysis or actions. The instrumentation insertion is performed in one forward pass: for each instruction, each registered component is invoked. This simplifies register allocation (register allocation is provided by a separate Extension <code>drreg</code>).</p>
 <h2><a class="anchor" id="sec_drmgr_emulation"></a>
 Emulation-Aware Instrumentation</h2>
 <p>Support for one client library or component emulating or refactoring application code while another observes application behavior is provided through emulation marking and reading support.</p>
@@ -97,5 +99,5 @@ Instruction Note Fields</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18879 --- Fri Sep 10 2021 03:05:48 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18886 --- Fri Sep 17 2021 03:05:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -44,6 +44,7 @@
     [ "drmodtrack_exit", "group__drcovlib.html#ga69dba79c59d1cb7146efe3a01400bdbe", null ],
     [ "drmodtrack_init", "group__drcovlib.html#ga28c1e51038eae38438767c489d42499e", null ],
     [ "drmodtrack_lookup", "group__drcovlib.html#ga60950539b2bcf96a88c67ca49b17084c", null ],
+    [ "drmodtrack_lookup_segment", "group__drcovlib.html#ga338038ccdcccfae189c746a5ebb279e3", null ],
     [ "drmodtrack_offline_exit", "group__drcovlib.html#gab3d505c86e6d6dfdfd789303065e1fea", null ],
     [ "drmodtrack_offline_lookup", "group__drcovlib.html#ga9e3204046ef9714c492fffc7fab888a0", null ],
     [ "drmodtrack_offline_read", "group__drcovlib.html#ga56c631d77cd329a831116424204a2011", null ],

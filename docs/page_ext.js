@@ -53,6 +53,15 @@
       [ "Application Values", "page_drreg.html#sec_drreg_app_values", null ],
       [ "Linear Control Flow", "page_drreg.html#sec_drreg_linear", null ]
     ] ],
+    [ "Machine State Comparison Library", "page_drstatecmp.html", [
+      [ "Setup", "page_drstatecmp.html#sec_drstatecmp_init", null ],
+      [ "Checks", "page_drstatecmp.html#sec_drstatecmp_checks", [
+        [ "Side-effect-free Basic Blocks", "page_drstatecmp.html#sec_drstatecmp_checks_side_effects_free", null ],
+        [ "Basic Blocks with Side Effects", "page_drstatecmp.html#sec_drstatecmp_checks_side_effects", null ]
+      ] ],
+      [ "Machine States Saved", "page_drstatecmp.html#sec_drstatecmp_machine_state_saved", null ],
+      [ "Comparison with DrBBDup", "page_drstatecmp.html#sec_drstatecmp_vs_drbbdup", null ]
+    ] ],
     [ "Symbol Access Library", "page_drsyms.html", [
       [ "Setup", "page_drsyms.html#sec_drsyms_setup", null ],
       [ "Search Paths", "page_drsyms.html#sec_drsyms_paths", null ],

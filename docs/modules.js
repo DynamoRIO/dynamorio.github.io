@@ -4,6 +4,7 @@
     [ "Code Coverage Library", "group__drcovlib.html", {% include_relative group__drcovlib.js %} ],
     [ "Multi-Instrumentation Manager", "group__drmgr.html", {% include_relative group__drmgr.js %} ],
     [ "Register Usage Coordinator", "group__drreg.html", {% include_relative group__drreg.js %} ],
+    [ "Machine State Comparison Library", "group__drstatecmp.html", {% include_relative group__drstatecmp.js %} ],
     [ "Symbol Access Library", "group__drsyms.html", {% include_relative group__drsyms.js %} ],
     [ "Instrumentation Utilities", "group__drutil.html", {% include_relative group__drutil.js %} ],
     [ "Function Wrapping and Replacing", "group__drwrap.html", {% include_relative group__drwrap.js %} ],

@@ -22,6 +22,7 @@
     [ "_dr_ymm_t", "union__dr__ymm__t.html", null ],
     [ "_dr_zmm_t", "union__dr__zmm__t.html", null ],
     [ "_drcovlib_options_t", "struct__drcovlib__options__t.html", null ],
+    [ "_drmgr_instru_events_t", "struct__drmgr__instru__events__t.html", null ],
     [ "_drmgr_priority_t", "struct__drmgr__priority__t.html", null ],
     [ "_drmodtrack_info_t", "struct__drmodtrack__info__t.html", null ],
     [ "_drreg_options_t", "struct__drreg__options__t.html", null ],
@@ -63,6 +64,7 @@
     [ "droption_parser_t", "classdroption__parser__t.html", [
       [ "droption_t< T >", "classdroption__t.html", null ]
     ] ],
+    [ "drstatecmp_options_t", "structdrstatecmp__options__t.html", null ],
     [ "features_t", "structfeatures__t.html", null ],
     [ "instr_noalloc_t", "structinstr__noalloc__t.html", null ],
     [ "instr_summary_t", "structinstr__summary__t.html", null ],
