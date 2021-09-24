@@ -9,6 +9,7 @@
     [ "dr_inject_prepare_to_exec", "dr__inject_8h.html#a4acf52ec4bc354ad729dd7e580e5ffb0", null ],
     [ "dr_inject_prepare_to_ptrace", "dr__inject_8h.html#aac318714936b1f01498cd28f4718d0fc", null ],
     [ "dr_inject_print_stats", "dr__inject_8h.html#ade6be04e498ae27d72d15b00314ed230", null ],
+    [ "dr_inject_process_attach", "dr__inject_8h.html#a04e552859e90d6eb32a123a325fcccd9", null ],
     [ "dr_inject_process_create", "dr__inject_8h.html#a77b0c082257a96deebb67ad23f381426", null ],
     [ "dr_inject_process_exit", "dr__inject_8h.html#afdd617e9fd2f5876fdaa63c27839c6de", null ],
     [ "dr_inject_process_inject", "dr__inject_8h.html#ab2a383d92917deebddd8c5ce2d80ea12", null ],

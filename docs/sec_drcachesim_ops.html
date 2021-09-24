@@ -244,7 +244,10 @@ Specifies the minimum number of LLC misses of a load for it to be eligible for a
 Specifies the minimum fraction of LLC misses of a load (from all misses) for it to be eligible for analysis in search of patterns in the miss address stream.</li>
 <li><b>-confidence_threshold</b> <br  />
 <em>default value: 0.75</em> <br  />
-Specifies the minimum confidence to include a discovered pattern in the output results. Confidence in a discovered pattern for a load instruction is calculated as the fraction of the load's misses with the discovered pattern over all the load's misses. </li>
+Specifies the minimum confidence to include a discovered pattern in the output results. Confidence in a discovered pattern for a load instruction is calculated as the fraction of the load's misses with the discovered pattern over all the load's misses.</li>
+<li><b>-enable_drstatecmp</b> <br  />
+<em>default value: false</em> <br  />
+When true, this option enables the drstatecmp library that performs state comparisons to detect instrumentation-induced bugs due to state clobbering. </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -253,5 +256,5 @@ Specifies the minimum confidence to include a discovered pattern in the output r
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18886 --- Fri Sep 17 2021 03:05:48 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18893 --- Fri Sep 24 2021 03:06:12 &nbsp; <img border=0 src="favicon.png">
 </small></address>
