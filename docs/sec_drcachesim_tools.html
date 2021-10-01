@@ -34,6 +34,8 @@ permalink: /sec_drcachesim_tools.html
 <li><a class="el" href="sec_drcachesim_tools.html#sec_tool_opcode_mix">Opcode Mix</a></li>
 <li><a class="el" href="sec_drcachesim_tools.html#sec_tool_view">Human-Readable View</a></li>
 <li><a class="el" href="sec_drcachesim_tools.html#sec_tool_func_view">View Function Calls</a></li>
+<li><a class="el" href="sec_drcachesim_tools.html#sec_tool_histogram">Cache Line Histogram</a></li>
+<li><a class="el" href="sec_drcachesim_tools.html#sec_tool_invariant_checker">Invariant Checker</a></li>
 </ul>
 <h1><a class="anchor" id="sec_tool_cache_sim"></a>
 Cache Simulator</h1>
@@ -483,7 +485,9 @@ View Function Calls</h1>
 <div class="line">Function <span class="keywordtype">id</span>=0: common.fib!fib</div>
 <div class="line">       15 calls</div>
 <div class="line">       15 returns</div>
-</div><!-- fragment --><p>The top referenced cache lines are displayed by the <code>histogram</code> tool:</p>
+</div><!-- fragment --><h1><a class="anchor" id="sec_tool_histogram"></a>
+Cache Line Histogram</h1>
+<p>The top referenced cache lines are displayed by the <code>histogram</code> tool:</p>
 <div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -simulator_type histogram -- ~/test/pi_estimator</div>
 <div class="line">Estimation of pi is 3.142425985001098</div>
 <div class="line">---- &lt;application exited with code 0&gt; ----</div>
@@ -512,12 +516,15 @@ View Function Calls</h1>
 <div class="line">    0x7ffcc35e7e80: 2194</div>
 <div class="line">    0x7facdb6625c0: 2016</div>
 <div class="line">    0x7ffcc35e7e40: 1997</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --><h1><a class="anchor" id="sec_tool_invariant_checker"></a>
+Invariant Checker</h1>
+<p>The invariant_checker tool performs sanity checks on a trace, focusing on program counter continuity and guarantees around kernel control transfer interruptions. It optionally checks for restricted behavior that technically is legal but is not expected to happen in the target trace, helping to identify tracing problems and suitability for use of a trace for core simulation. </p>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18893 --- Fri Sep 24 2021 03:06:12 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18900 --- Fri Oct 1 2021 03:05:12 &nbsp; <img border=0 src="favicon.png">
 </small></address>

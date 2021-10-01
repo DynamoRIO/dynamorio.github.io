@@ -9,7 +9,9 @@
       [ "Event Counts", "sec_drcachesim_tools.html#sec_tool_basic_counts", null ],
       [ "Opcode Mix", "sec_drcachesim_tools.html#sec_tool_opcode_mix", null ],
       [ "Human-Readable View", "sec_drcachesim_tools.html#sec_tool_view", null ],
-      [ "View Function Calls", "sec_drcachesim_tools.html#sec_tool_func_view", null ]
+      [ "View Function Calls", "sec_drcachesim_tools.html#sec_tool_func_view", null ],
+      [ "Cache Line Histogram", "sec_drcachesim_tools.html#sec_tool_histogram", null ],
+      [ "Invariant Checker", "sec_drcachesim_tools.html#sec_tool_invariant_checker", null ]
     ] ],
     [ "Configuration File", "sec_drcachesim_config_file.html", null ],
     [ "Offline Traces and Analysis", "sec_drcachesim_offline.html", null ],
