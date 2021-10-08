@@ -92,8 +92,13 @@ class trace_converter_t&lt; T &gt;</h3>
 <p class="endli"></p>
 </li>
 <li>
-<p class="startli">std::string write_delayed_branches(const trace_entry_t *start, const trace_entry_t *end)</p>
+<p class="startli">std::string write_delayed_branches(void *tls, const trace_entry_t *start, const trace_entry_t *end)</p>
 <p class="interli">Similar to write(), but treat the provided traces as delayed branches: if they are the last values in a record, they belong to the next record of the same thread.</p>
+<p class="endli"></p>
+</li>
+<li>
+<p class="startli">std::string append_delayed_branch(void *tls)</p>
+<p class="interli">Flush the branches sent to write_delayed_branches().</p>
 <p class="endli"></p>
 </li>
 <li>
@@ -448,5 +453,5 @@ template&lt;typename T &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18900 --- Fri Oct 1 2021 03:05:12 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18907 --- Fri Oct 8 2021 03:05:15 &nbsp; <img border=0 src="favicon.png">
 </small></address>
