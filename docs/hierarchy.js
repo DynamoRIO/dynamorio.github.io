@@ -21,6 +21,8 @@
     [ "_dr_xmm_t", "union__dr__xmm__t.html", null ],
     [ "_dr_ymm_t", "union__dr__ymm__t.html", null ],
     [ "_dr_zmm_t", "union__dr__zmm__t.html", null ],
+    [ "_drcallstack_frame_t", "struct__drcallstack__frame__t.html", null ],
+    [ "_drcallstack_options_t", "struct__drcallstack__options__t.html", null ],
     [ "_drcovlib_options_t", "struct__drcovlib__options__t.html", null ],
     [ "_drmgr_instru_events_t", "struct__drmgr__instru__events__t.html", null ],
     [ "_drmgr_priority_t", "struct__drmgr__priority__t.html", null ],

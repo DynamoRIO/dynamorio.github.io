@@ -1470,6 +1470,8 @@
     [ "OP_ptwrite", "dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2daeb744afb9555261f699da54584bec167", null ],
     [ "OP_monitorx", "dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2daeba65608c05a8636078c8e166718adf7", null ],
     [ "OP_mwaitx", "dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da9e54fdf8fda66e80521555b580e15269", null ],
+    [ "OP_rdpkru", "dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da8d7c38f0af448422694bb6d0e0fa238d", null ],
+    [ "OP_wrpkru", "dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da8cc7467963149208708be6d524978e2d", null ],
     [ "OP_FIRST", "dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da7b616dfe8fecf0a3f45179a237d71c93", null ],
     [ "OP_LAST", "dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2dad4831564a9a3e47fd23c8b4498215ead", null ]
 ],

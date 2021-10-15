@@ -6,6 +6,11 @@
       [ "Encoder", "page_drbbdup.html#sec_drbbdup_encoder", null ],
       [ "Case Instrumentation", "page_drbbdup.html#sec_drbbdup_instrum", null ]
     ] ],
+    [ "Callstack Walking", "page_drcallstack.html", [
+      [ "Setup", "page_drcallstack.html#sec_drcallstack_setup", null ],
+      [ "Usage", "page_drcallstack.html#sec_drcallstack_usage", null ],
+      [ "Limitations", "page_drcallstack.html#sec_drcallstack_limits", null ]
+    ] ],
     [ "Container Data Structures", "page_drcontainers.html", [
       [ "Setup", "page_drcontainers.html#sec_drcontainers_setup", null ],
       [ "Hashtable", "page_drcontainers.html#sec_drcontainers_hashtable", null ],

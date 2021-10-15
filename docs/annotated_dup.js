@@ -21,6 +21,8 @@
     [ "_dr_xmm_t", "union__dr__xmm__t.html", {% include_relative union__dr__xmm__t.js %} ],
     [ "_dr_ymm_t", "union__dr__ymm__t.html", {% include_relative union__dr__ymm__t.js %} ],
     [ "_dr_zmm_t", "union__dr__zmm__t.html", {% include_relative union__dr__zmm__t.js %} ],
+    [ "_drcallstack_frame_t", "struct__drcallstack__frame__t.html", {% include_relative struct__drcallstack__frame__t.js %} ],
+    [ "_drcallstack_options_t", "struct__drcallstack__options__t.html", {% include_relative struct__drcallstack__options__t.js %} ],
     [ "_drcovlib_options_t", "struct__drcovlib__options__t.html", {% include_relative struct__drcovlib__options__t.js %} ],
     [ "_drmgr_instru_events_t", "struct__drmgr__instru__events__t.html", {% include_relative struct__drmgr__instru__events__t.js %} ],
     [ "_drmgr_priority_t", "struct__drmgr__priority__t.html", {% include_relative struct__drmgr__priority__t.js %} ],

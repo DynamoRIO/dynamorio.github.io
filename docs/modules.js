@@ -1,5 +1,6 @@
 [
     [ "Basic Block Duplicator", "group__drbbdup.html", {% include_relative group__drbbdup.js %} ],
+    [ "Callstack Walker", "group__drcallstack.html", {% include_relative group__drcallstack.js %} ],
     [ "Container Data Structures", "group__drcontainers.html", {% include_relative group__drcontainers.js %} ],
     [ "Code Coverage Library", "group__drcovlib.html", {% include_relative group__drcovlib.js %} ],
     [ "Multi-Instrumentation Manager", "group__drmgr.html", {% include_relative group__drmgr.js %} ],

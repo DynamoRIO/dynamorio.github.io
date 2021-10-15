@@ -2409,6 +2409,9 @@ permalink: /globals_o.html
 <li>OP_rdmsr
 : <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2dad5fbb95a83ddb1f9310e31a989f4b724">dr_ir_opcodes_x86.h</a>
 </li>
+<li>OP_rdpkru
+: <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da8d7c38f0af448422694bb6d0e0fa238d">dr_ir_opcodes_x86.h</a>
+</li>
 <li>OP_rdpmc
 : <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2dadf23e28946ef84deb604df1e2f0a1f83">dr_ir_opcodes_x86.h</a>
 </li>
@@ -5557,7 +5560,7 @@ permalink: /globals_o.html
 : <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da0e1169aebc0d59bad9c1464f41777619">dr_ir_opcodes_x86.h</a>
 </li>
 <li>OP_vpinsrq
-: <a class="el" href="dr__ir__opcodes__x86_8h.html#a3f71dc6819ddb5a9192f541745caa855">dr_ir_opcodes_x86.h</a>
+: <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da4ff8a8c5b1b6da86fcda73e5f85d5e77">dr_ir_opcodes_x86.h</a>
 </li>
 <li>OP_vpinsrw
 : <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2daeaccc08517d4af0b1cf18fe55f0330fa">dr_ir_opcodes_x86.h</a>
@@ -7188,6 +7191,9 @@ permalink: /globals_o.html
 <li>OP_wrmsr
 : <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2dab8ec83f83a90600814827afb4004072f">dr_ir_opcodes_x86.h</a>
 </li>
+<li>OP_wrpkru
+: <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da8cc7467963149208708be6d524978e2d">dr_ir_opcodes_x86.h</a>
+</li>
 <li>OP_xabort
 : <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2dae4dfd155b8738917cb77e80522704c2f">dr_ir_opcodes_x86.h</a>
 </li>
@@ -7264,9 +7270,9 @@ permalink: /globals_o.html
 : <a class="el" href="dr__ir__opnd_8h.html#ab73fb113359aaee37844b2592917598d">dr_ir_opnd.h</a>
 </li>
 <li>OPND_CREATE_ABSMEM
-: <a class="el" href="dr__ir__macros__x86_8h.html#a54b8bd667a8a940e94bfcc7842c958eb">dr_ir_macros_x86.h</a>
+: <a class="el" href="dr__ir__macros__arm_8h.html#a54b8bd667a8a940e94bfcc7842c958eb">dr_ir_macros_arm.h</a>
+, <a class="el" href="dr__ir__macros__x86_8h.html#a54b8bd667a8a940e94bfcc7842c958eb">dr_ir_macros_x86.h</a>
 , <a class="el" href="dr__ir__macros__aarch64_8h.html#a54b8bd667a8a940e94bfcc7842c958eb">dr_ir_macros_aarch64.h</a>
-, <a class="el" href="dr__ir__macros__arm_8h.html#a54b8bd667a8a940e94bfcc7842c958eb">dr_ir_macros_arm.h</a>
 </li>
 <li>opnd_create_base_disp()
 : <a class="el" href="dr__ir__opnd_8h.html#a13cf175bc987a24b37fbbb294fe681e0">dr_ir_opnd.h</a>
@@ -7326,8 +7332,8 @@ permalink: /globals_o.html
 : <a class="el" href="dr__ir__opnd_8h.html#a8e631e642887228643e3c248a696e1be">dr_ir_opnd.h</a>
 </li>
 <li>OPND_CREATE_INT
-: <a class="el" href="dr__ir__macros__aarch64_8h.html#aaaaa7dc76fd64fbfe69faa2be5c1c909">dr_ir_macros_aarch64.h</a>
-, <a class="el" href="dr__ir__macros__arm_8h.html#aaaaa7dc76fd64fbfe69faa2be5c1c909">dr_ir_macros_arm.h</a>
+: <a class="el" href="dr__ir__macros__arm_8h.html#aaaaa7dc76fd64fbfe69faa2be5c1c909">dr_ir_macros_arm.h</a>
+, <a class="el" href="dr__ir__macros__aarch64_8h.html#aaaaa7dc76fd64fbfe69faa2be5c1c909">dr_ir_macros_aarch64.h</a>
 </li>
 <li>OPND_CREATE_INT16
 : <a class="el" href="dr__ir__macros_8h.html#ac2d087cee8f6726f09d76852c156e0cc">dr_ir_macros.h</a>
@@ -8053,5 +8059,5 @@ permalink: /globals_o.html
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18907 --- Fri Oct 8 2021 03:05:15 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18915 --- Fri Oct 15 2021 04:10:27 &nbsp; <img border=0 src="favicon.png">
 </small></address>

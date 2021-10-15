@@ -473,7 +473,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the machine context of the wrapped function represented by <code>wrapcxt</code> corresponding to the application state at the time of the pre-function or post-function wrap callback. In order for any changes to the returned context to take effect, <a class="el" href="group__drwrap.html#gae4a50709cf98fca89860c09543176fa6">drwrap_set_mcontext()</a> must be called.</p>
+<p>Returns the machine context of the wrapped function represented by <code>wrapcxt</code> corresponding to the application state at the time of the pre-function or post-function wrap callback. The pc field is set appropriately. In order for any changes to the returned context to take effect, <a class="el" href="group__drwrap.html#gae4a50709cf98fca89860c09543176fa6">drwrap_set_mcontext()</a> must be called.</p>
 <dl class="section note"><dt>Note</dt><dd>if the <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962383818b9c92add150e3e7ba4ee203a045b936f872b4b">DRWRAP_FAST_CLEANCALLS</a> flag is set, caller-saved register values in the fields controlled by <a class="el" href="dr__defines_8h.html#af0434595b47158e7512c2bf5f0e43ae4af3780bef723b8bf1a34eb75125f7f122">DR_MC_MULTIMEDIA</a> will not contain valid values. </dd></dl>
 
 </div>
@@ -1194,5 +1194,5 @@ Far calls are not supported.</dd></dl>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18907 --- Fri Oct 8 2021 03:05:15 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18915 --- Fri Oct 15 2021 04:10:27 &nbsp; <img border=0 src="favicon.png">
 </small></address>
