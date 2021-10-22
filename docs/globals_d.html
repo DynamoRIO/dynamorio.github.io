@@ -240,28 +240,37 @@ permalink: /globals_d.html
 : <a class="el" href="dr__ir__utils_8h.html#aa1267485b39cbef76ddc0ffd683c8830">dr_ir_utils.h</a>
 </li>
 <li>DR_CLEANCALL_ALWAYS_OUT_OF_LINE
-: <a class="el" href="dr__ir__utils_8h.html#af1b1bc23c42ffb7452568176b09b1212a94dc97b7bb9e8ef9d35e9184103ef318">dr_ir_utils.h</a>
+: <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212a94dc97b7bb9e8ef9d35e9184103ef318">dr_defines.h</a>
 </li>
 <li>DR_CLEANCALL_INDIRECT
-: <a class="el" href="dr__ir__utils_8h.html#af1b1bc23c42ffb7452568176b09b1212a9fe53fc77afb460ba31666995df5b6c9">dr_ir_utils.h</a>
+: <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212a9fe53fc77afb460ba31666995df5b6c9">dr_defines.h</a>
+</li>
+<li>DR_CLEANCALL_MULTIPATH
+: <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212ab3ed3f85123fad82c4377cebaa2c36ed">dr_defines.h</a>
 </li>
 <li>DR_CLEANCALL_NOSAVE_FLAGS
-: <a class="el" href="dr__ir__utils_8h.html#af1b1bc23c42ffb7452568176b09b1212a2b03fe8506703bdcc4c24c49f6f16915">dr_ir_utils.h</a>
+: <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212a2b03fe8506703bdcc4c24c49f6f16915">dr_defines.h</a>
 </li>
 <li>DR_CLEANCALL_NOSAVE_XMM
-: <a class="el" href="dr__ir__utils_8h.html#af1b1bc23c42ffb7452568176b09b1212abde57f92afb00d994bc1ea596ba31306">dr_ir_utils.h</a>
+: <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212abde57f92afb00d994bc1ea596ba31306">dr_defines.h</a>
 </li>
 <li>DR_CLEANCALL_NOSAVE_XMM_NONPARAM
-: <a class="el" href="dr__ir__utils_8h.html#af1b1bc23c42ffb7452568176b09b1212a04d3bcbf34926384e13d48d45aa42d2a">dr_ir_utils.h</a>
+: <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212a04d3bcbf34926384e13d48d45aa42d2a">dr_defines.h</a>
 </li>
 <li>DR_CLEANCALL_NOSAVE_XMM_NONRET
-: <a class="el" href="dr__ir__utils_8h.html#af1b1bc23c42ffb7452568176b09b1212a658cc567c0e4c91c0a065a17cb7ba5ed">dr_ir_utils.h</a>
+: <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212a658cc567c0e4c91c0a065a17cb7ba5ed">dr_defines.h</a>
+</li>
+<li>DR_CLEANCALL_READS_APP_CONTEXT
+: <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212a76efe3cf7cffc2bf14da79133bc2e5c3">dr_defines.h</a>
 </li>
 <li>DR_CLEANCALL_SAVE_FLOAT
-: <a class="el" href="dr__ir__utils_8h.html#af1b1bc23c42ffb7452568176b09b1212ac04fbaff072a9ec162172cdd8305080d">dr_ir_utils.h</a>
+: <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212ac04fbaff072a9ec162172cdd8305080d">dr_defines.h</a>
 </li>
 <li>dr_cleancall_save_t
-: <a class="el" href="dr__ir__utils_8h.html#af1b1bc23c42ffb7452568176b09b1212">dr_ir_utils.h</a>
+: <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212">dr_defines.h</a>
+</li>
+<li>DR_CLEANCALL_WRITES_APP_CONTEXT
+: <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212ab0fb37c5cbbd2c2cd9ebd9eb5e53f23e">dr_defines.h</a>
 </li>
 <li>dr_cleanup_after_call()
 : <a class="el" href="dr__ir__utils_8h.html#a86baaebf4ce92dc4a3090f293ff050e0">dr_ir_utils.h</a>
@@ -1300,6 +1309,9 @@ permalink: /globals_d.html
 </li>
 <li>DR_NOTE_ANNOTATION
 : <a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a775cd05e3af0ab56c47dba3dabc32758">dr_defines.h</a>
+</li>
+<li>DR_NOTE_CLEAN_CALL_END
+: <a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a488d94a0f79cdeb9d5445da335c75d9b">dr_defines.h</a>
 </li>
 <li>DR_NOTE_FIRST_RESERVED
 : <a class="el" href="dr__defines_8h.html#ae900af3cb1032e748eefc80808c43610">dr_defines.h</a>
@@ -2468,6 +2480,9 @@ permalink: /globals_d.html
 <li>dr_register_bb_event()
 : <a class="el" href="dr__events_8h.html#acbfe1ece2c520d409ffd59076507a710">dr_events.h</a>
 </li>
+<li>dr_register_clean_call_insertion_event()
+: <a class="el" href="dr__events_8h.html#abfbfebb6df4c756bb9e4c2a9cac82ce9">dr_events.h</a>
+</li>
 <li>dr_register_client()
 : <a class="el" href="dr__config_8h.html#ae9e35bfc0682dd3bee71eb8992d9eca3">dr_config.h</a>
 </li>
@@ -2908,6 +2923,9 @@ permalink: /globals_d.html
 </li>
 <li>dr_unregister_bb_event()
 : <a class="el" href="dr__events_8h.html#a9c2ce8d64301f81084dddb3bf2ddbbf6">dr_events.h</a>
+</li>
+<li>dr_unregister_clean_call_insertion_event()
+: <a class="el" href="dr__events_8h.html#ac528d652d8df5dc001fcf15b413f9a92">dr_events.h</a>
 </li>
 <li>dr_unregister_client()
 : <a class="el" href="dr__config_8h.html#a882f9166151596e7087393384d0f50c7">dr_config.h</a>
@@ -4100,6 +4118,9 @@ permalink: /globals_d.html
 <li>drreg_set_vector_entry()
 : <a class="el" href="group__drreg.html#ga2878afd0bb1dcc73ebf1eb99a83748ce">drreg.h</a>
 </li>
+<li>drreg_statelessly_restore_all()
+: <a class="el" href="group__drreg.html#ga2ca98376d910bf8b417d60954193cae1">drreg.h</a>
+</li>
 <li>drreg_statelessly_restore_app_value()
 : <a class="el" href="group__drreg.html#ga4dd4dc9f52ffd96616ee1eb92ebd5a9c">drreg.h</a>
 </li>
@@ -4680,5 +4701,5 @@ permalink: /globals_d.html
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18915 --- Fri Oct 15 2021 04:10:27 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18921 --- Fri Oct 22 2021 03:06:10 &nbsp; <img border=0 src="favicon.png">
 </small></address>

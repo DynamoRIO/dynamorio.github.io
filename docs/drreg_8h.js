@@ -42,6 +42,7 @@
     [ "drreg_restore_app_values", "group__drreg.html#gaf3a0543b8c49f5bb7af6cae384af34d2", null ],
     [ "drreg_set_bb_properties", "group__drreg.html#ga7910ab166b0d698c11964a7b89d90faf", null ],
     [ "drreg_set_vector_entry", "group__drreg.html#ga2878afd0bb1dcc73ebf1eb99a83748ce", null ],
+    [ "drreg_statelessly_restore_all", "group__drreg.html#ga2ca98376d910bf8b417d60954193cae1", null ],
     [ "drreg_statelessly_restore_app_value", "group__drreg.html#ga4dd4dc9f52ffd96616ee1eb92ebd5a9c", null ],
     [ "drreg_unreserve_aflags", "group__drreg.html#ga5e6f06ca372fef0437652ba8915fc09d", null ],
     [ "drreg_unreserve_register", "group__drreg.html#ga3226af61d5322e93c97546e49d79d983", null ]

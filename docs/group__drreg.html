@@ -130,6 +130,8 @@ Functions</h2></td></tr>
 <tr class="separator:gad7fbf107e7b10fffb8da7d93b74153c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4dd4dc9f52ffd96616ee1eb92ebd5a9c"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="group__drreg.html#gad5b7a7a020d7206b11e61e7cdae02ee9">drreg_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drreg.html#ga4dd4dc9f52ffd96616ee1eb92ebd5a9c">drreg_statelessly_restore_app_value</a> (void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> reg, <a class="el" href="structinstr__t.html">instr_t</a> *where_restore, <a class="el" href="structinstr__t.html">instr_t</a> *where_respill, bool *restore_needed OUT, bool *respill_needed OUT)</td></tr>
 <tr class="separator:ga4dd4dc9f52ffd96616ee1eb92ebd5a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ca98376d910bf8b417d60954193cae1"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="group__drreg.html#gad5b7a7a020d7206b11e61e7cdae02ee9">drreg_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drreg.html#ga2ca98376d910bf8b417d60954193cae1">drreg_statelessly_restore_all</a> (void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where_restore, <a class="el" href="structinstr__t.html">instr_t</a> *where_respill, bool *restore_needed OUT, bool *respill_needed OUT)</td></tr>
+<tr class="separator:ga2ca98376d910bf8b417d60954193cae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga39a587dee2fc48409d6486ab5fd91e74"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="group__drreg.html#gad5b7a7a020d7206b11e61e7cdae02ee9">drreg_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drreg.html#ga39a587dee2fc48409d6486ab5fd91e74">drreg_reservation_info</a> (void *drcontext, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> reg, <a class="el" href="structopnd__t.html">opnd_t</a> *opnd OUT, bool *is_dr_slot OUT, uint *tls_offs OUT)</td></tr>
 <tr class="separator:ga39a587dee2fc48409d6486ab5fd91e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad8ff9a156f64e7146284385f2a26c8e4"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="group__drreg.html#gad5b7a7a020d7206b11e61e7cdae02ee9">drreg_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drreg.html#gad8ff9a156f64e7146284385f2a26c8e4">drreg_reservation_info_ex</a> (void *drcontext, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> reg, <a class="el" href="group__drreg.html#ga1a91ecc67def444d5922a58fe0f641e4">drreg_reserve_info_t</a> *info OUT)</td></tr>
@@ -870,7 +872,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Restores all unreserved registers and flags to their app values at <code>where</code>. </p>
+<p>Restores the spilled value (typically the application value) for all registers and flags at <code>where</code>. </p>
 
 </div>
 </div>
@@ -1028,6 +1030,59 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga2ca98376d910bf8b417d60954193cae1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2ca98376d910bf8b417d60954193cae1">&#9670;&nbsp;</a></span>drreg_statelessly_restore_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT <a class="el" href="group__drreg.html#gad5b7a7a020d7206b11e61e7cdae02ee9">drreg_status_t</a> drreg_statelessly_restore_all </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>drcontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *&#160;</td>
+          <td class="paramname"><em>ilist</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
+          <td class="paramname"><em>where_restore</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
+          <td class="paramname"><em>where_respill</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *restore_needed&#160;</td>
+          <td class="paramname"><em>OUT</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *respill_needed&#160;</td>
+          <td class="paramname"><em>OUT</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Invokes <a class="el" href="group__drreg.html#ga4dd4dc9f52ffd96616ee1eb92ebd5a9c">drreg_statelessly_restore_app_value()</a> for the arithmetic flags and every general-purpose register. Returns the logical OR of the 'restore_needed' and 'respill_needed' results from all of the <a class="el" href="group__drreg.html#ga4dd4dc9f52ffd96616ee1eb92ebd5a9c">drreg_statelessly_restore_app_value()</a> calls. If any step results in an error, that error is returned and the output parameters are not filled in (despite partial restores potentially remaining in place). </p>
+
+</div>
+</div>
 <a id="ga4dd4dc9f52ffd96616ee1eb92ebd5a9c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga4dd4dc9f52ffd96616ee1eb92ebd5a9c">&#9670;&nbsp;</a></span>drreg_statelessly_restore_app_value()</h2>
 
@@ -1178,5 +1233,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18915 --- Fri Oct 15 2021 04:10:27 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18921 --- Fri Oct 22 2021 03:06:10 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 8.0.18915"
+title: "Release Notes for Version 8.0.18921"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 8.0.18915 </div>  </div>
+<div class="title">Release Notes for Version 8.0.18921 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,13 +63,13 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 8.0.18915. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 8.0.18915 and 8.0.0 include the following compatibility changes:</p>
+<p>The current version is 8.0.18921. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 8.0.18921 and 8.0.0 include the following compatibility changes:</p>
 <ul>
 <li>A source compatibilty change in drcachesim analysis tools for users who have created derived classes from existing analysis tools: member fields of classes are now following a consistent style with an underscore suffix. References to renamed fields will need to be updated.</li>
 <li>A change in the load callbacks used with <a class="el" href="group__drcovlib.html#ga9c2889006a80254645521f81a1a486f5">drmodtrack_add_custom_data()</a> and <a class="el" href="drmemtrace_8h.html#a8644981035cdedfafb000d03cd223399">drmemtrace_custom_module_data()</a>: they each take an additional parameter, the segment index. The custom data field is now per-segment and not per-module, and all callbacks are invoked separately for each segment.</li>
 </ul>
-<p>The changes between version 8.0.18915 and 8.0.0 include the following minor compatibility changes:</p>
+<p>The changes between version 8.0.18921 and 8.0.0 include the following minor compatibility changes:</p>
 <ul>
 <li>drconfiglib (and thus drrun and drconfig) now sets only the new client path options which are added in this release to support other-bitwidth child processes. This means that a drconfiglib from this version will not properly configure for a DynamoRIO core library from a prior version.</li>
 <li>A new option -ldstex2cas is on by default on ARM and AArch64. This converts load-exclusive store-exclusive sequences to use compare-and-swap instead, which enables normal instrumentation of such sequences without clearing the exclusive monitor and causing infinite loops. However, the compare- and-swap's semantics are not identical: it does not detect "ABA" changes and could cause errors in lock-free data structures or other application constructs. See <a class="el" href="API_BT.html#sec_ldrex">Exclusive Monitor Instrumentation</a> for more information.</li>
@@ -110,6 +110,9 @@ Changes Since Prior Releases</h1>
 <li>Added <a class="el" href="group__drcovlib.html#ga338038ccdcccfae189c746a5ebb279e3">drmodtrack_lookup_segment()</a>.</li>
 <li>Added a new drrun option <code>-attach</code> for attaching to a running process. This is currently an experimental option.</li>
 <li>Added <a class="el" href="page_drcallstack.html">Callstack Walking</a> Extension for walking application callstacks, with an initial Linux-only implementation.</li>
+<li>Added new <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212">dr_cleancall_save_t</a> flags which are required for proper interaction between clean calls and drreg: <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212a76efe3cf7cffc2bf14da79133bc2e5c3">DR_CLEANCALL_READS_APP_CONTEXT</a> must be set for <a class="el" href="dr__ir__utils_8h.html#a9e348b2596b8750ce3fad234ab022ced">dr_get_mcontext()</a> to obtain the proper values, and <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212ab0fb37c5cbbd2c2cd9ebd9eb5e53f23e">DR_CLEANCALL_WRITES_APP_CONTEXT</a> must be set to ensure that <a class="el" href="dr__ir__utils_8h.html#ac4bfa7fc3f9d4adb0857675bec2712a2">dr_set_mcontext()</a> is persistent. If the call may be skipped by tool-inserted control flow, <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212ab3ed3f85123fad82c4377cebaa2c36ed">DR_CLEANCALL_MULTIPATH</a> must additionally be set.</li>
+<li>Added a new event <a class="el" href="dr__events_8h.html#abfbfebb6df4c756bb9e4c2a9cac82ce9">dr_register_clean_call_insertion_event()</a>, meant for use by register management libraries.</li>
+<li>Added <a class="el" href="group__drreg.html#ga2ca98376d910bf8b417d60954193cae1">drreg_statelessly_restore_all()</a>.</li>
 </ul>
 <hr  />
 <p>Version 8.0.0 includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
@@ -288,7 +291,7 @@ Changes Since Prior Releases</h1>
 <li>Added %[] support to dr_sscanf.</li>
 <li>Added <a class="el" href="dr__tools_8h.html#a192497da7670d454f6aae17d293f70b4">dr_map_executable_file()</a> and <a class="el" href="dr__tools_8h.html#a01d306d881c59488dd6ae41f392074af">dr_unmap_executable_file()</a>.</li>
 <li>Added <a class="el" href="dr__tools_8h.html#aec75982f030fbae7019ecf2d54cd1c21">dr_get_microseconds()</a>.</li>
-<li>Added <a class="el" href="dr__ir__utils_8h.html#af1b1bc23c42ffb7452568176b09b1212a94dc97b7bb9e8ef9d35e9184103ef318">DR_CLEANCALL_ALWAYS_OUT_OF_LINE</a>.</li>
+<li>Added <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212a94dc97b7bb9e8ef9d35e9184103ef318">DR_CLEANCALL_ALWAYS_OUT_OF_LINE</a>.</li>
 <li>Added <a class="el" href="dr__ir__instr_8h.html#abf0defc37827c54bf1cdec7c4ce375b2">instr_create_4dst_2src()</a>.</li>
 <li>Added <a class="el" href="group__drreg.html#gaf3a0543b8c49f5bb7af6cae384af34d2">drreg_restore_app_values()</a> and <a class="el" href="group__drreg.html#gae2ba110d4aca864533583a53f8e04d40">drreg_restore_app_aflags()</a>.</li>
 <li>Added <a class="el" href="group__drx.html#ga8f9c7628a63632568aaeb62beeb3a89a">drx_tail_pad_block()</a>.</li>
@@ -504,7 +507,7 @@ Changes Since Prior Releases</h1>
 <li>Added a new runtime option <a class="el" href="page_deploy.html#op_syntax_att">-syntax_att</a> for AT&amp;T-style disassembly that hides the implicit operands. Also added <a class="el" href="dr__ir__disassemble_8h.html#a4c1e2fa2049719870ad0c1007b00d4e3af82d1bee9aa93ac6df451bd80a4b1278">DR_DISASM_DR</a> to name DR's default disassembly style, with <a class="el" href="dr__ir__disassemble_8h.html#a4c1e2fa2049719870ad0c1007b00d4e3a83d3ece1134b8dabc7f0fd2f84185f11">DR_DISASM_ATT</a> selecting a true AT&amp;T disassembly style that hides implicit operands. The only compatibility change here is if a client selected DR_DISASM_ATT and expected DR-style disassembly.</li>
 <li>Added <a class="el" href="dr__tools_8h.html#aaf8fd5f0e57d456151c951e0f3715fc4a12a6a7af3936e4c932effc9505f23be5">DR_MAP_IMAGE</a></li>
 <li>Added -t option to drrun for end-user tools</li>
-<li>Added 64-bit reachability support to <a class="el" href="dr__ir__utils_8h.html#a0258cfa82416ee2ba40ed73e4d4eebf7">dr_insert_call()</a> and <a class="el" href="dr__ir__utils_8h.html#a1df44dbe3d8dbf82e63e96741f167c64">dr_insert_clean_call()</a>. Added explicit control over reachability in a new routine <a class="el" href="dr__ir__utils_8h.html#a4640c7ef1edbf0358ba3b315ec12fb64">dr_insert_call_ex()</a> and in <a class="el" href="dr__ir__utils_8h.html#af1b1bc23c42ffb7452568176b09b1212a9fe53fc77afb460ba31666995df5b6c9">DR_CLEANCALL_INDIRECT</a> for <a class="el" href="dr__ir__utils_8h.html#a175c7c2531aa70017d2fb020f93e374f">dr_insert_clean_call_ex()</a>.</li>
+<li>Added 64-bit reachability support to <a class="el" href="dr__ir__utils_8h.html#a0258cfa82416ee2ba40ed73e4d4eebf7">dr_insert_call()</a> and <a class="el" href="dr__ir__utils_8h.html#a1df44dbe3d8dbf82e63e96741f167c64">dr_insert_clean_call()</a>. Added explicit control over reachability in a new routine <a class="el" href="dr__ir__utils_8h.html#a4640c7ef1edbf0358ba3b315ec12fb64">dr_insert_call_ex()</a> and in <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212a9fe53fc77afb460ba31666995df5b6c9">DR_CLEANCALL_INDIRECT</a> for <a class="el" href="dr__ir__utils_8h.html#a175c7c2531aa70017d2fb020f93e374f">dr_insert_clean_call_ex()</a>.</li>
 <li>Added auto-magic conversion of absolute and pc-relative memory operands to each other for more flexible 64-bit encoding.</li>
 <li>Added <a class="el" href="dr__ir__opnd_8h.html#a8e631e642887228643e3c248a696e1be">opnd_create_instr_ex()</a> and <a class="el" href="dr__ir__opnd_8h.html#a73b989e5a273fa008e7c5010482358d2">opnd_get_shift()</a></li>
 <li>Added <a class="el" href="dr__tools_8h.html#a527e0746207909580b705f1743537921">dr_custom_alloc()</a></li>
@@ -1054,5 +1057,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18915 --- Fri Oct 15 2021 04:10:27 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18921 --- Fri Oct 22 2021 03:06:09 &nbsp; <img border=0 src="favicon.png">
 </small></address>

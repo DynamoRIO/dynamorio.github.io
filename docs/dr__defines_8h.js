@@ -35,6 +35,19 @@
     [ "instrlist_t", "dr__defines_8h.html#a3fb73c55def575ec5705577625491d66", null ],
     [ "module_data_t", "dr__defines_8h.html#af07dd10cb5378dc69117710c18f447e9", null ],
     [ "DR_NOTE_ANNOTATION", "dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a775cd05e3af0ab56c47dba3dabc32758", null ],
+    [ "DR_NOTE_CLEAN_CALL_END", "dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a488d94a0f79cdeb9d5445da335c75d9b", null ],
+    [ "dr_cleancall_save_t", "dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212", [
+      [ "DR_CLEANCALL_SAVE_FLOAT", "dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212ac04fbaff072a9ec162172cdd8305080d", null ],
+      [ "DR_CLEANCALL_NOSAVE_FLAGS", "dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212a2b03fe8506703bdcc4c24c49f6f16915", null ],
+      [ "DR_CLEANCALL_NOSAVE_XMM", "dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212abde57f92afb00d994bc1ea596ba31306", null ],
+      [ "DR_CLEANCALL_NOSAVE_XMM_NONPARAM", "dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212a04d3bcbf34926384e13d48d45aa42d2a", null ],
+      [ "DR_CLEANCALL_NOSAVE_XMM_NONRET", "dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212a658cc567c0e4c91c0a065a17cb7ba5ed", null ],
+      [ "DR_CLEANCALL_INDIRECT", "dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212a9fe53fc77afb460ba31666995df5b6c9", null ],
+      [ "DR_CLEANCALL_ALWAYS_OUT_OF_LINE", "dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212a94dc97b7bb9e8ef9d35e9184103ef318", null ],
+      [ "DR_CLEANCALL_READS_APP_CONTEXT", "dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212a76efe3cf7cffc2bf14da79133bc2e5c3", null ],
+      [ "DR_CLEANCALL_WRITES_APP_CONTEXT", "dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212ab0fb37c5cbbd2c2cd9ebd9eb5e53f23e", null ],
+      [ "DR_CLEANCALL_MULTIPATH", "dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212ab3ed3f85123fad82c4377cebaa2c36ed", null ]
+    ] ],
     [ "dr_error_code_t", "dr__defines_8h.html#a5ecc0dbd0afec416ca2626dba4cd3fe1", [
       [ "DR_ERROR_INVALID_PARAMETER", "dr__defines_8h.html#a5ecc0dbd0afec416ca2626dba4cd3fe1a4322c60759a915b0f7aa488d3ce0f963", null ],
       [ "DR_ERROR_INSUFFICIENT_SPACE", "dr__defines_8h.html#a5ecc0dbd0afec416ca2626dba4cd3fe1a167232d0ba01e45aa4932c59aa8b9088", null ],

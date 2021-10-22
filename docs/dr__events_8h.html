@@ -207,6 +207,10 @@ Functions</h2></td></tr>
 <tr class="separator:a101820819df420894a4fbb6a6c0651c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe0a489b6ecfbd83b5a1ed8bc7915930"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#afe0a489b6ecfbd83b5a1ed8bc7915930">dr_unregister_low_on_memory_event</a> (void(*func)())</td></tr>
 <tr class="separator:afe0a489b6ecfbd83b5a1ed8bc7915930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfbfebb6df4c756bb9e4c2a9cac82ce9"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#abfbfebb6df4c756bb9e4c2a9cac82ce9">dr_register_clean_call_insertion_event</a> (void(*func)(void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212">dr_cleancall_save_t</a> call_flags))</td></tr>
+<tr class="separator:abfbfebb6df4c756bb9e4c2a9cac82ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac528d652d8df5dc001fcf15b413f9a92"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#ac528d652d8df5dc001fcf15b413f9a92">dr_unregister_clean_call_insertion_event</a> (void(*func)(void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212">dr_cleancall_save_t</a> call_flags))</td></tr>
+<tr class="separator:ac528d652d8df5dc001fcf15b413f9a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03da807cdb97ec8d0db68b6d24974ea4"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#a03da807cdb97ec8d0db68b6d24974ea4">dr_register_nudge_event</a> (void(*func)(void *drcontext, uint64 argument), <a class="el" href="dr__defines_8h.html#a68540a70b4f8150a4fe6dcec91bf8825">client_id_t</a> id)</td></tr>
 <tr class="separator:a03da807cdb97ec8d0db68b6d24974ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7f0cb025982206e0eea04e927d4acef"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#af7f0cb025982206e0eea04e927d4acef">dr_unregister_nudge_event</a> (void(*func)(void *drcontext, uint64 argument), <a class="el" href="dr__defines_8h.html#a68540a70b4f8150a4fe6dcec91bf8825">client_id_t</a> id)</td></tr>
@@ -719,6 +723,25 @@ Basic blocks can be deleted due to hitting capacity limits or cache consistency 
 If the -thread_private runtime option is specified, clients should expect to see duplicate tags for separate threads, albeit with different dcrcontext values. Additionally, DR employs a cache-sizing algorithm for thread private operation that proactively deletes fragments. Even with thread-shared caches enabled, however, certain situations cause DR to emit thread-private basic blocks (e.g., self-modifying code). In this case, clients should be prepared to see duplicate tags without an intermediate deletion.</dd>
 <dd>
 A client can change the control flow of the application by changing the control transfer instruction at end of the basic block. If a basic block is ended with a non-control transfer instruction, an application jump instruction can be inserted. If a basic block is ended with a conditional branch, <code>instrlist_set_fall_through_target</code> can be used to change the fall-through target. If a basic block is ended with a call instruction, <code>instrlist_set_return_target</code> can be used to change the return target of the call. </dd></dl>
+
+</div>
+</div>
+<a id="abfbfebb6df4c756bb9e4c2a9cac82ce9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfbfebb6df4c756bb9e4c2a9cac82ce9">&#9670;&nbsp;</a></span>dr_register_clean_call_insertion_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API void dr_register_clean_call_insertion_event </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212">dr_cleancall_save_t</a> call_flags)&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Registers a callback function that is invoked whenever a clean call is inserted in instrumentation, such as by <a class="el" href="dr__ir__utils_8h.html#a1df44dbe3d8dbf82e63e96741f167c64">dr_insert_clean_call()</a>, <a class="el" href="dr__ir__utils_8h.html#a175c7c2531aa70017d2fb020f93e374f">dr_insert_clean_call_ex()</a>, or dr_insert_clean_call_ex_varg(). 'where' is a label with note value <a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a488d94a0f79cdeb9d5445da335c75d9b">DR_NOTE_CLEAN_CALL_END</a>; the clean call sequence will be inserted prior to the label after all clean call callbacks are finished (so the clean call sequence is not yet visible at the time this callback is invoked). </p>
 
 </div>
 </div>
@@ -1394,6 +1417,25 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
 
 </div>
 </div>
+<a id="ac528d652d8df5dc001fcf15b413f9a92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac528d652d8df5dc001fcf15b413f9a92">&#9670;&nbsp;</a></span>dr_unregister_clean_call_insertion_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API bool dr_unregister_clean_call_insertion_event </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212">dr_cleancall_save_t</a> call_flags)&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Unregisters a callback function that was registered with dr_register_call_insertion_event(). </p>
+
+</div>
+</div>
 <a id="a30d03978dc1c8d23a5141af920d868aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30d03978dc1c8d23a5141af920d868aa">&#9670;&nbsp;</a></span>dr_unregister_delete_event()</h2>
 
@@ -1897,5 +1939,5 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18915 --- Fri Oct 15 2021 04:10:23 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18921 --- Fri Oct 22 2021 03:06:07 &nbsp; <img border=0 src="favicon.png">
 </small></address>

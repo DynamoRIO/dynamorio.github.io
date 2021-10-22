@@ -1,14 +1,5 @@
 [
     [ "SPILL_SLOT_REDIRECT_NATIVE_TGT", "dr__ir__utils_8h.html#a85e6559244f2fc5b84c7a07f04168bad", null ],
-    [ "dr_cleancall_save_t", "dr__ir__utils_8h.html#af1b1bc23c42ffb7452568176b09b1212", [
-      [ "DR_CLEANCALL_SAVE_FLOAT", "dr__ir__utils_8h.html#af1b1bc23c42ffb7452568176b09b1212ac04fbaff072a9ec162172cdd8305080d", null ],
-      [ "DR_CLEANCALL_NOSAVE_FLAGS", "dr__ir__utils_8h.html#af1b1bc23c42ffb7452568176b09b1212a2b03fe8506703bdcc4c24c49f6f16915", null ],
-      [ "DR_CLEANCALL_NOSAVE_XMM", "dr__ir__utils_8h.html#af1b1bc23c42ffb7452568176b09b1212abde57f92afb00d994bc1ea596ba31306", null ],
-      [ "DR_CLEANCALL_NOSAVE_XMM_NONPARAM", "dr__ir__utils_8h.html#af1b1bc23c42ffb7452568176b09b1212a04d3bcbf34926384e13d48d45aa42d2a", null ],
-      [ "DR_CLEANCALL_NOSAVE_XMM_NONRET", "dr__ir__utils_8h.html#af1b1bc23c42ffb7452568176b09b1212a658cc567c0e4c91c0a065a17cb7ba5ed", null ],
-      [ "DR_CLEANCALL_INDIRECT", "dr__ir__utils_8h.html#af1b1bc23c42ffb7452568176b09b1212a9fe53fc77afb460ba31666995df5b6c9", null ],
-      [ "DR_CLEANCALL_ALWAYS_OUT_OF_LINE", "dr__ir__utils_8h.html#af1b1bc23c42ffb7452568176b09b1212a94dc97b7bb9e8ef9d35e9184103ef318", null ]
-    ] ],
     [ "dr_spill_slot_t", "dr__ir__utils_8h.html#a89a6b714ff24d91d78589877047a29b9", [
       [ "SPILL_SLOT_2", "dr__ir__utils_8h.html#a89a6b714ff24d91d78589877047a29b9ae4cd78beccb2525acc61f2536ba1ea71", null ],
       [ "SPILL_SLOT_3", "dr__ir__utils_8h.html#a89a6b714ff24d91d78589877047a29b9a446ae7a7df24d2c3abae567a17289566", null ],
