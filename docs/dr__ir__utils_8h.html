@@ -1555,7 +1555,9 @@ If x87 floating point state was saved by <a class="el" href="dr__ir__utils_8h.ht
 <dd>
 If the caller wishes to set any other state (such as xmm registers that are not part of the mcontext) they may do so by just setting that state in the current thread before making this call. To set system data structures, use <a class="el" href="dr__os__utils_8h.html#a89abb45db2c1f35564c5fa6f6765f55f">dr_switch_to_app_state()</a>, make the changes, and then switch back with <a class="el" href="dr__os__utils_8h.html#a3f08638719a695bcb95d101a03cfd8f3">dr_switch_to_dr_state()</a> before calling this routine.</dd>
 <dd>
-This routine may only be called from a clean call from the cache. It can not be called from any registered event callback except the exception event (<a class="el" href="dr__events_8h.html#a36fc1b4f973393d861c7740cda6c0002">dr_register_exception_event()</a>). From a signal event callback, use the <a class="el" href="dr__events_8h.html#af86ce68b89c76d46c92d36e58ddb7a33a866dcc1af9f9076edcbed9c8afb17e93">DR_SIGNAL_REDIRECT</a> return value rather than calling this routine.</dd></dl>
+This routine may only be called from a clean call from the cache. It can not be called from any registered event callback except the exception event (<a class="el" href="dr__events_8h.html#a36fc1b4f973393d861c7740cda6c0002">dr_register_exception_event()</a>). From a signal event callback, use the <a class="el" href="dr__events_8h.html#af86ce68b89c76d46c92d36e58ddb7a33a866dcc1af9f9076edcbed9c8afb17e93">DR_SIGNAL_REDIRECT</a> return value rather than calling this routine.</dd>
+<dd>
+If control is being redirected to a new pc (determined using drsyms, dr_get_proc_address, or any other way) ensure that the app state (such as the register values) are set as expected by the transfer point.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>false if unsuccessful; if successful, does not return. </dd></dl>
 
 </div>
@@ -2570,5 +2572,5 @@ sahf" code sequence, which is faster and easier than popf. The caller must ensur
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18921 --- Fri Oct 22 2021 03:06:09 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18928 --- Fri Oct 29 2021 03:05:45 &nbsp; <img border=0 src="favicon.png">
 </small></address>

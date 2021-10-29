@@ -448,7 +448,7 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="af86ce68b89c76d46c92d36e58ddb7a33a0c437214d4411687fe54ad8bb93399a1"></a>DR_SIGNAL_BYPASS&#160;</td><td class="fielddoc"><p>Deliver signal according to the default SIG_DFL action, as would happen if the application had no handler. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="af86ce68b89c76d46c92d36e58ddb7a33a866dcc1af9f9076edcbed9c8afb17e93"></a>DR_SIGNAL_REDIRECT&#160;</td><td class="fielddoc"><p>Do not deliver the signal. Instead, redirect control to the application state specified in <a class="el" href="struct__dr__siginfo__t.html#a39d67200783b38f36093cde45ebe6940">dr_siginfo_t.mcontext</a>. </p>
+<tr><td class="fieldname"><a id="af86ce68b89c76d46c92d36e58ddb7a33a866dcc1af9f9076edcbed9c8afb17e93"></a>DR_SIGNAL_REDIRECT&#160;</td><td class="fielddoc"><p>Do not deliver the signal. Instead, redirect control to the application state specified in <a class="el" href="struct__dr__siginfo__t.html#a39d67200783b38f36093cde45ebe6940">dr_siginfo_t.mcontext</a>. Clients may modify dr_siginfo_t.mcontext.pc to redirect control to a desired pc, but beware that it is important to set the app state (like the register values) as expected by the transfer point. </p>
 </td></tr>
 </table>
 
@@ -1939,5 +1939,5 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18921 --- Fri Oct 22 2021 03:06:07 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18928 --- Fri Oct 29 2021 03:05:43 &nbsp; <img border=0 src="favicon.png">
 </small></address>
