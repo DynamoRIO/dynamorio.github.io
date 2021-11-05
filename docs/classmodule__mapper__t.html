@@ -24,7 +24,7 @@ permalink: /classmodule__mapper__t.html
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">module_mapper_t Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+<div class="title">module_mapper_t Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -34,14 +34,14 @@ permalink: /classmodule__mapper__t.html
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1445cda907aa2fee4d667cd8b7e5a3e4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodule__mapper__t.html#a1445cda907aa2fee4d667cd8b7e5a3e4">get_last_error</a> (void) const</td></tr>
 <tr class="separator:a1445cda907aa2fee4d667cd8b7e5a3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad58566855786b3b63cf6a05cfb496653"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; module_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodule__mapper__t.html#ad58566855786b3b63cf6a05cfb496653">get_loaded_modules</a> ()</td></tr>
-<tr class="separator:ad58566855786b3b63cf6a05cfb496653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cc0d9c7f1afc3316b0c7edbc6325178"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; module_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodule__mapper__t.html#a1cc0d9c7f1afc3316b0c7edbc6325178">get_loaded_modules</a> ()</td></tr>
+<tr class="separator:a1cc0d9c7f1afc3316b0c7edbc6325178"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add0cc122b72c75d519971cde9eeffd87"><td class="memItemLeft" align="right" valign="top">app_pc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodule__mapper__t.html#add0cc122b72c75d519971cde9eeffd87">find_mapped_trace_address</a> (app_pc trace_address)</td></tr>
 <tr class="separator:add0cc122b72c75d519971cde9eeffd87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a174c1c59c9005e5ec414cc8ef47674e7"><td class="memItemLeft" align="right" valign="top">app_pc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodule__mapper__t.html#a174c1c59c9005e5ec414cc8ef47674e7">find_mapped_trace_bounds</a> (app_pc trace_address, OUT app_pc *module_start, OUT size_t *module_size)</td></tr>
 <tr class="separator:a174c1c59c9005e5ec414cc8ef47674e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa79abb75a0ce935dadcec2b14f05eb23"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodule__mapper__t.html#aa79abb75a0ce935dadcec2b14f05eb23">~module_mapper_t</a> ()</td></tr>
-<tr class="separator:aa79abb75a0ce935dadcec2b14f05eb23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa564b038b405e47a8ccf78129e3b7e29"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodule__mapper__t.html#aa564b038b405e47a8ccf78129e3b7e29">~module_mapper_t</a> ()</td></tr>
+<tr class="separator:aa564b038b405e47a8ccf78129e3b7e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a243cff220ab3d57f59203177a44d8b08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__drcovlib.html#gae9a3c543d0016b39bfc24748076f83af">drcovlib_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmodule__mapper__t.html#a243cff220ab3d57f59203177a44d8b08">write_module_data</a> (char *buf, size_t buf_size, int(*print_cb)(void *data, char *dst, size_t max_len), OUT size_t *wrote)</td></tr>
 <tr class="separator:a243cff220ab3d57f59203177a44d8b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -53,19 +53,27 @@ Static Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classmodule__mapper__t.html">module_mapper_t</a> maps and unloads application modules. Using it assumes a dr_context has already been setup. This class is not thread-safe. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa79abb75a0ce935dadcec2b14f05eb23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa79abb75a0ce935dadcec2b14f05eb23">&#9670;&nbsp;</a></span>~module_mapper_t()</h2>
+<a id="aa564b038b405e47a8ccf78129e3b7e29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa564b038b405e47a8ccf78129e3b7e29">&#9670;&nbsp;</a></span>~module_mapper_t()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">module_mapper_t::~module_mapper_t </td>
+          <td class="memname">virtual module_mapper_t::~module_mapper_t </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Unload modules loaded with read_and_map_modules(), freeing associated resources. </p>
 
@@ -156,7 +164,7 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This interface is meant to be used with a final trace rather than a raw trace, using the module log file saved from the raw2trace conversion. After the a call to <a class="el" href="classmodule__mapper__t.html#ad58566855786b3b63cf6a05cfb496653">get_loaded_modules()</a>, this routine may be used to convert an instruction program counter in a trace into an address in the current process where the instruction bytes for that instruction are mapped, allowing decoding for obtaining further information than is stored in the trace. Returns the mapped address. Check get_last_error_() if an error occurred. </p>
+<p>This interface is meant to be used with a final trace rather than a raw trace, using the module log file saved from the raw2trace conversion. After the a call to <a class="el" href="classmodule__mapper__t.html#a1cc0d9c7f1afc3316b0c7edbc6325178">get_loaded_modules()</a>, this routine may be used to convert an instruction program counter in a trace into an address in the current process where the instruction bytes for that instruction are mapped, allowing decoding for obtaining further information than is stored in the trace. Returns the mapped address. Check get_last_error_() if an error occurred. </p>
 
 </div>
 </div>
@@ -222,8 +230,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad58566855786b3b63cf6a05cfb496653"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad58566855786b3b63cf6a05cfb496653">&#9670;&nbsp;</a></span>get_loaded_modules()</h2>
+<a id="a1cc0d9c7f1afc3316b0c7edbc6325178"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cc0d9c7f1afc3316b0c7edbc6325178">&#9670;&nbsp;</a></span>get_loaded_modules()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -232,7 +240,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt;module_t&gt;&amp; module_mapper_t::get_loaded_modules </td>
+          <td class="memname">virtual const std::vector&lt;module_t&gt;&amp; module_mapper_t::get_loaded_modules </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -240,7 +248,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -298,5 +306,5 @@ Static Public Member Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18928 --- Fri Oct 29 2021 03:05:46 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18935 --- Fri Nov 5 2021 03:05:50 &nbsp; <img border=0 src="favicon.png">
 </small></address>
