@@ -41,10 +41,10 @@ Resource Usage Conflicts</h1>
 <img src="/images/windows.png" alt=""/>
 </div>
   <p>DynamoRIO provides access to resources to clients via a cross-platform API. We do not recommend that a client invoke its own system calls as this bypasses DynamoRIO's monitoring of changes to the process address space and changes to threads or control flow.</p>
-<p>We provide limited support to assist in using statically linked libraries in a client: see <a class="el" href="using.html#sec_extlibs">Using External Libraries</a>.</p>
+<p>DynamoRIO does have its own loader and through it support is provided to clients to use external libraries while isolating them from the libraries used by the application: see <a class="el" href="using.html#sec_extlibs">Using External Libraries</a>. This support is limited, however, and there are libraries that are not supported today.</p>
 <p>In addition to Library Transparency, several other types of transparency are of concern to a client:</p>
 <dl class="section user"><dt>Heap Transparency</dt><dd></dd></dl>
-<p>Sharing heap allocation routines with the application violates Library Transparency. Most heap allocation routines are not re-entrant (they are thread-safe, but not re-entrant). Additionally, DynamoRIO should not interfere with the data layout of the application (Data Transparency: see below) or with application memory bugs (Error Transparency: see below). DynamoRIO obtains its memory directly from system calls and parcels it out internally with a custom memory manager. It exports its heap allocation routines through its API to ensure that clients maintain Heap Transparency (see <a class="el" href="using.html#sec_utils">Common Utilities</a>).</p>
+<p>Sharing heap allocation routines with the application violates Library Transparency. Most heap allocation routines are not re-entrant (they are thread-safe, but not re-entrant). Additionally, DynamoRIO should not interfere with the data layout of the application (Data Transparency: see below) or with application memory bugs (Error Transparency: see below). DynamoRIO obtains its memory directly from system calls and parcels it out internally with a custom memory manager. It exports its heap allocation routines through its API to ensure that clients maintain Heap Transparency (see <a class="el" href="using.html#sec_utils">Common Utilities</a>). Calls to malloc in external libraries used by clients are also redirected to DynamoRIO's internal heap.</p>
 <dl class="section user"><dt>Input/Output Transparency</dt><dd></dd></dl>
 <p>DynamoRIO uses its own input/output routines to avoid interfering with the application's buffering. As with heap transparency, DynamoRIO exports its input/output routines to clients to ensure that transparency is not violated (see <a class="el" href="using.html#sec_utils">Common Utilities</a>).</p>
 <dl class="section user"><dt>Synchronization Transparency</dt><dd></dd></dl>
@@ -105,5 +105,5 @@ Alertable System Calls</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18935 --- Fri Nov 5 2021 03:05:49 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18942 --- Fri Nov 12 2021 03:06:21 &nbsp; <img border=0 src="favicon.png">
 </small></address>

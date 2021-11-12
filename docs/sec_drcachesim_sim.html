@@ -87,7 +87,7 @@ permalink: /sec_drcachesim_sim.html
 <div class="line">    Total miss rate:                  0.09%</div>
 </div><!-- fragment --><p>The memory access traces contain some optimizations that combine references for one basic block together. This may result in not considering some thread interleavings that could occur natively. There are no other disruptions to thread ordering, however, and the application runs with all of its threads concurrently just like it would natively (although slower).</p>
 <p>Once every process has exited, the simulator prints cache miss statistics for each cache to stderr. The simulator is designed to be extensible, allowing for different cache studies to be carried out: see <a class="el" href="sec_drcachesim_extend.html">Extending the Simulator</a>.</p>
-<p>For L2 caching devices, the L1 caching devices are considered its <em>children</em>. Two separate miss rates are computed, one (the "Local miss rate") considering just requests that reach L2 while the other (the "Total miss rate") includes the child hits.</p>
+<p>For L2 caching devices, the L1 caching devices are considered its <em>children</em>. Two separate miss rates are computed, one (the "Local miss rate") considering just requests that reach L2 while the other (the "Total miss rate") includes the child hits. This generalizes to deeper hierarchies: lower level caches are children and reported child hits are cumulative across all lower levels.</p>
 <p>For memory requests that cross blocks, each block touched is considered separately, resulting in separate hit and miss statistics. This can be changed by implementing a custom statistics gatherer (see <a class="el" href="sec_drcachesim_extend.html">Extending the Simulator</a>).</p>
 <p>Software and hardware prefetches are combined in the prefetch hit and miss statistics, which are reported separately from regular loads and stores. To isolate software prefetch statistics, disable the hardware prefetcher by running with "-data_prefetcher none" (see <a class="el" href="sec_drcachesim_ops.html">Simulator Parameters</a>). While misses from software prefetches are included in cache miss files, misses from hardware prefetches are not. </p>
 </div></div><!-- contents -->
@@ -97,5 +97,5 @@ permalink: /sec_drcachesim_sim.html
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18935 --- Fri Nov 5 2021 03:05:49 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18942 --- Fri Nov 12 2021 03:06:22 &nbsp; <img border=0 src="favicon.png">
 </small></address>

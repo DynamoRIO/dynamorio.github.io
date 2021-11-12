@@ -32,7 +32,7 @@ List of Samples</h1>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/bbbuf.c">bbbuf.c</a> demonstrates how to use a TLS field for per-thread basic block profiling.</p>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/bbcount.c">bbcount.c</a> illustrates how to perform performant instrumentation for reporting the dynamic execution count of all basic blocks.</p>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/bbsize.c">bbsize.c</a> collects statistics on the sizes of all basic blocks in the target application.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/callstack.c">callstack.c</a> walks the application callstack at a given function entry point.</p>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/callstack.cpp">callstack.cpp</a> walks the application callstack at a given function entry point.</p>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/cbr.c">cbr.c</a> collects conditional branch execution information and shows how to dynamically update or replace instrumented code after it executes.</p>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/cbrtrace.c">cbrtrace.c</a> collects conditional branch execution traces and writes them into files.</p>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/countcalls.c">countcalls.c</a> reports the dynamic execution count for direct calls, indirect calls, and returns in the target application. It illustrates how to perform performant inline increments and use per-thread data structures.</p>
@@ -45,15 +45,17 @@ List of Samples</h1>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/instrace_x86.c">instrace_x86.c</a> is provided as an example client that illustrates how to create a private code cache and perform lean procedure calls to generate an instruction trace in a performant manner. It is compiled into two different libraries: instrace_x86_text, which produces a readable, text-mode trace, but is much slower than instrace_x86_binary, which produces a binary-format trace file.</p>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/instrcalls.c">instrcalls.c</a> demonstrates how to instrument direct calls, indirect calls and returns.</p>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/memtrace_simple.c">memtrace_simple.c</a> is provided as an example client that illustrates how to gather a memory trace in a simple, cross-platform way. It is much slower than memtrace_x86_binary, however.</p>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/memval_simple.c">memval_simple.c</a> is provided as an example client that illustrates how to gather a memory trace of stored addresses and the values being stored.</p>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/memtrace_x86.c">memtrace_x86.c</a> is provided as an example client that illustrates how to create a private code cache and perform lean procedure calls. It is compiled into two different libraries: memtrace_x86_text, which produces a readable, text-mode trace, but is much slower than memtrace_x86_binary, which produces a binary-format trace file.</p>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/hot_bbcount.c">hot_bbcount.c</a> uses the drbbdup extension to count the execution of hot basic blocks which have exceeded a given hit threshold.</p>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/opcode_count.cpp">opcode_count.cpp</a> takes an opcode as input and uses drmgr's instrumentation events to count the number of times instructions with that opcode are executed.</p>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/modxfer.c">modxfer.c</a> reports the control flow transfers between modules.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/modxfer.c">modxfer_app2lib.c</a> reports the control flow transfers between the application executable and other dynamic libraries and modules. It illustrates how to perform performant clean calls on different modules.</p>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/modxfer_app2lib.c">modxfer_app2lib.c</a> reports the control flow transfers between the application executable and other dynamic libraries and modules. It illustrates how to perform performant clean calls on different modules.</p>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/opcodes.c">opcodes.c</a> computes dynamic execution counts broken down by instruction opcode.</p>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/prefetch.c">prefetch.c</a> demonstrates modifying the dynamic code stream for compatibility between different processor types.</p>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/signal.c">signal.c</a> demonstrates how to use the signal event.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/stl_test.c">stl_test.c</a> is provided as an example client that uses C++ STL containers.</p>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/statecmp.c">statecmp.c</a> demonstrates how to use the drstatecmp instrumentation testing library.</p>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/stl_test.cpp">stl_test.cpp</a> is provided as an example client that uses C++ STL containers.</p>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/syscall.c">syscall.c</a> displays how to use the system call events and API routines.</p>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/tracedump.c">tracedump.c</a> is provided as a standalone application that disassembles a trace dump in binary format produced by the -tracedump_binary option.</p>
 <p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/wrap.c">wrap.c</a> demonstrates how to use the drwrap extension (see <a class="el" href="page_drwrap.html">Function Wrapping and Replacing Extension</a>).</p>
@@ -361,5 +363,5 @@ Use of Standalone API</h2>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18935 --- Fri Nov 5 2021 03:05:49 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18942 --- Fri Nov 12 2021 03:06:21 &nbsp; <img border=0 src="favicon.png">
 </small></address>
