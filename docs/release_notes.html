@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 8.0.18942"
+title: "Release Notes for Version 8.0.18949"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 8.0.18942 </div>  </div>
+<div class="title">Release Notes for Version 8.0.18949 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,13 +63,13 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 8.0.18942. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 8.0.18942 and 8.0.0 include the following compatibility changes:</p>
+<p>The current version is 8.0.18949. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 8.0.18949 and 8.0.0 include the following compatibility changes:</p>
 <ul>
 <li>A source compatibilty change in drcachesim analysis tools for users who have created derived classes from existing analysis tools: member fields of classes are now following a consistent style with an underscore suffix. References to renamed fields will need to be updated.</li>
 <li>A change in the load callbacks used with <a class="el" href="group__drcovlib.html#ga9c2889006a80254645521f81a1a486f5">drmodtrack_add_custom_data()</a> and <a class="el" href="drmemtrace_8h.html#a8644981035cdedfafb000d03cd223399">drmemtrace_custom_module_data()</a>: they each take an additional parameter, the segment index. The custom data field is now per-segment and not per-module, and all callbacks are invoked separately for each segment.</li>
 </ul>
-<p>The changes between version 8.0.18942 and 8.0.0 include the following minor compatibility changes:</p>
+<p>The changes between version 8.0.18949 and 8.0.0 include the following minor compatibility changes:</p>
 <ul>
 <li>drconfiglib (and thus drrun and drconfig) now sets only the new client path options which are added in this release to support other-bitwidth child processes. This means that a drconfiglib from this version will not properly configure for a DynamoRIO core library from a prior version.</li>
 <li>A new option -ldstex2cas is on by default on ARM and AArch64. This converts load-exclusive store-exclusive sequences to use compare-and-swap instead, which enables normal instrumentation of such sequences without clearing the exclusive monitor and causing infinite loops. However, the compare- and-swap's semantics are not identical: it does not detect "ABA" changes and could cause errors in lock-free data structures or other application constructs. See <a class="el" href="API_BT.html#sec_ldrex">Exclusive Monitor Instrumentation</a> for more information.</li>
@@ -308,7 +308,7 @@ Changes Since Prior Releases</h1>
 <li>Added instruction trace samples instrace_simple, instrace_x86_text, and instrace_x86_binary.</li>
 <li>Added better drreg support for intra-bb control flow by adding <a class="el" href="group__drreg.html#ga7910ab166b0d698c11964a7b89d90faf">drreg_set_bb_properties()</a>.</li>
 <li>Added priority-controlled <a class="el" href="group__drmgr.html#gaf5d894ba37e777790c9dec6f265892cb">drmgr_register_thread_init_event_ex()</a> and <a class="el" href="group__drmgr.html#ga63e2e169d810174091e47364d53f18f5">drmgr_register_thread_exit_event_ex()</a>.</li>
-<li>Added <a class="el" href="page_drx.html#sec_drx_buf"><code>Buffer</code> Filling API</a> to drx: <a class="el" href="group__drx.html#ga4caa3e50a3cfb5ecb5c08e65fc44ada3">drx_buf_create_circular_buffer()</a>, <a class="el" href="group__drx.html#ga26d48f2339de13a75bfe21b5fd04a6c7">drx_buf_create_trace_buffer()</a>, and more.</li>
+<li>Added <a class="el" href="page_drx.html#sec_drx_buf">Buffer Filling API</a> to drx: <a class="el" href="group__drx.html#ga4caa3e50a3cfb5ecb5c08e65fc44ada3">drx_buf_create_circular_buffer()</a>, <a class="el" href="group__drx.html#ga26d48f2339de13a75bfe21b5fd04a6c7">drx_buf_create_trace_buffer()</a>, and more.</li>
 <li>Documented that <a class="el" href="group__drx.html#ga5eba10b0f9536c1a108d796e0b84c4cd">drx_insert_counter_update()</a> does rely on <a class="el" href="group__drx.html#gae0665a86427616ffc80c59375649e283">drx_init()</a>.</li>
 <li>Better international string support for usernames and application paths.</li>
 </ul>
@@ -1059,5 +1059,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18942 --- Fri Nov 12 2021 03:06:21 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18949 --- Fri Nov 19 2021 03:05:30 &nbsp; <img border=0 src="favicon.png">
 </small></address>

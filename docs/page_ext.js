@@ -91,7 +91,7 @@
     [ "DynamoRIO eXtension utilities", "page_drx.html", [
       [ "Setup", "page_drx.html#sec_drx_setup", null ],
       [ "Soft Kills", "page_drx.html#sec_drx_soft_kills", null ],
-      [ "\\p Buffer Filling API", "page_drx.html#sec_drx_buf", null ],
+      [ "Buffer Filling API", "page_drx.html#sec_drx_buf", null ],
       [ "Trace Buffer", "page_drx.html#sec_drx_buf_trace", null ],
       [ "Circular Buffer", "page_drx.html#sec_drx_buf_circular", null ],
       [ "Fast Circular Buffer", "page_drx.html#sec_drx_buf_circular_fast", null ],
