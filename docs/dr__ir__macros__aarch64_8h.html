@@ -69,6 +69,10 @@ Macros</h2></td></tr>
 <tr class="separator:acdaad3b14b4840395bfa1b095b5d901c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebe9013d0ead44c795af661f0718de90"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#aebe9013d0ead44c795af661f0718de90">INSTR_CREATE_bl</a>(dc,  pc)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>((dc), <a class="el" href="dr__ir__opcodes__arm_8h.html#a726ca809ffd3d67ab4b8476646f26635a9ea16079542f99108dd901967de8b7d7">OP_bl</a>, <a class="el" href="dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda">opnd_create_reg</a>(DR_REG_X30), (pc))</td></tr>
 <tr class="separator:aebe9013d0ead44c795af661f0718de90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f544522e0bafe7f5bad042a3b53255"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a33f544522e0bafe7f5bad042a3b53255">INSTR_CREATE_ccmp</a>(dc,  Rn,  Op,  nzcv,  cond)&#160;&#160;&#160;(<a class="el" href="dr__ir__macros_8h.html#a12de9191087b89556340223520f1ddf0">INSTR_PRED</a>(<a class="el" href="dr__ir__instr_8h.html#a4cee392cfee774e55a8e9f621db5688a">instr_create_0dst_3src</a>(dc, OP_ccmp, Rn, Op, nzcv), (cond)))</td></tr>
+<tr class="separator:a33f544522e0bafe7f5bad042a3b53255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62511e4bfc01ceca4feb51f731ff88f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a62511e4bfc01ceca4feb51f731ff88f8">INSTR_CREATE_ccmn</a>(dc,  Rn,  Op,  nzcv,  cond)&#160;&#160;&#160;(<a class="el" href="dr__ir__macros_8h.html#a12de9191087b89556340223520f1ddf0">INSTR_PRED</a>(<a class="el" href="dr__ir__instr_8h.html#a4cee392cfee774e55a8e9f621db5688a">instr_create_0dst_3src</a>(dc, OP_ccmn, Rn, Op, nzcv), (cond)))</td></tr>
+<tr class="separator:a62511e4bfc01ceca4feb51f731ff88f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a492c5fce801b7dfbc9c6ab801601a23b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a492c5fce801b7dfbc9c6ab801601a23b">INSTR_CREATE_fmov_general</a>(dc,  Rd,  Rn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_fmov, Rd, Rn)</td></tr>
 <tr class="separator:a492c5fce801b7dfbc9c6ab801601a23b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97b320fde1a7a55d3b44336a9f636d41"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a97b320fde1a7a55d3b44336a9f636d41">INSTR_CREATE_shadd_vector</a>(dc,  Rd,  Rm,  Rn,  width)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_shadd, Rd, Rm, Rn, width)</td></tr>
@@ -1357,6 +1361,118 @@ Enumerations</h2></td></tr>
     <tr><td class="paramname">Rd</td><td>The output register. </td></tr>
     <tr><td class="paramname">Rm</td><td>The first input register. </td></tr>
     <tr><td class="paramname">Rn</td><td>The second input register. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a62511e4bfc01ceca4feb51f731ff88f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62511e4bfc01ceca4feb51f731ff88f8">&#9670;&nbsp;</a></span>INSTR_CREATE_ccmn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ccmn</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Op, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">nzcv, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cond&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(<a class="el" href="dr__ir__macros_8h.html#a12de9191087b89556340223520f1ddf0">INSTR_PRED</a>(<a class="el" href="dr__ir__instr_8h.html#a4cee392cfee774e55a8e9f621db5688a">instr_create_0dst_3src</a>(dc, OP_ccmn, Rn, Op, nzcv), (cond)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a CCMN (Conditional Compare Negative) instruction. Sets the NZCV flags to the result of a comparison of its two source values if the named input condition is true, or to an immediate value if the input condition is false. The comparison is based on a negated second source value (Op) if an immediate, inverted if a register. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">cond</td><td>The comparison condition specified by <a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>, e.g. <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71aa1a14900d3e16156d2869f22547524b0">DR_PRED_EQ</a>. </td></tr>
+    <tr><td class="paramname">Rn</td><td>The GPR source register. </td></tr>
+    <tr><td class="paramname">Op</td><td>Either a 5-bit immediate (use <a class="el" href="dr__ir__opnd_8h.html#ad94bc6018660cfb0862171c3e9402f9c">opnd_create_immed_uint()</a> to create the operand, e.g. opnd_create_immed_uint(val, <a class="el" href="dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600a5fb8f68744bfa8947432fda10384e284">OPSZ_5b</a>)) or a GPR source register. </td></tr>
+    <tr><td class="paramname">nzcv</td><td>The 4 bit NZCV flags value used if the input condition is false. (use <a class="el" href="dr__ir__opnd_8h.html#ad94bc6018660cfb0862171c3e9402f9c">opnd_create_immed_uint()</a> to create the operand, e.g. opnd_create_immed_uint(val, <a class="el" href="dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600afa62d364db8465778ecd8253c2dbbd72">OPSZ_4b</a>)). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a33f544522e0bafe7f5bad042a3b53255"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33f544522e0bafe7f5bad042a3b53255">&#9670;&nbsp;</a></span>INSTR_CREATE_ccmp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ccmp</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Op, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">nzcv, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cond&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(<a class="el" href="dr__ir__macros_8h.html#a12de9191087b89556340223520f1ddf0">INSTR_PRED</a>(<a class="el" href="dr__ir__instr_8h.html#a4cee392cfee774e55a8e9f621db5688a">instr_create_0dst_3src</a>(dc, OP_ccmp, Rn, Op, nzcv), (cond)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a CCMP (Conditional Compare) instruction. Sets the NZCV flags to the result of a comparison of its two source values if the named input condition is true, or to an immediate value if the input condition is false. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">cond</td><td>The comparison condition specified by <a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>, e.g. <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71aa1a14900d3e16156d2869f22547524b0">DR_PRED_EQ</a>. </td></tr>
+    <tr><td class="paramname">Rn</td><td>The GPR source register. </td></tr>
+    <tr><td class="paramname">Op</td><td>Either a 5-bit immediate (use <a class="el" href="dr__ir__opnd_8h.html#ad94bc6018660cfb0862171c3e9402f9c">opnd_create_immed_uint()</a> to create the operand, e.g. opnd_create_immed_uint(val, <a class="el" href="dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600a5fb8f68744bfa8947432fda10384e284">OPSZ_5b</a>)) or a GPR source register. </td></tr>
+    <tr><td class="paramname">nzcv</td><td>The 4 bit NZCV flags value used if the input condition is false. (use <a class="el" href="dr__ir__opnd_8h.html#ad94bc6018660cfb0862171c3e9402f9c">opnd_create_immed_uint()</a> to create the operand, e.g. opnd_create_immed_uint(val, <a class="el" href="dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600afa62d364db8465778ecd8253c2dbbd72">OPSZ_4b</a>)). </td></tr>
   </table>
   </dd>
 </dl>
@@ -13989,5 +14105,5 @@ Enumerations</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18949 --- Fri Nov 19 2021 03:05:28 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18956 --- Fri Nov 26 2021 03:05:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 8.0.18949"
+title: "Release Notes for Version 8.0.18956"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 8.0.18949 </div>  </div>
+<div class="title">Release Notes for Version 8.0.18956 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,13 +63,13 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 8.0.18949. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 8.0.18949 and 8.0.0 include the following compatibility changes:</p>
+<p>The current version is 8.0.18956. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 8.0.18956 and 8.0.0 include the following compatibility changes:</p>
 <ul>
 <li>A source compatibilty change in drcachesim analysis tools for users who have created derived classes from existing analysis tools: member fields of classes are now following a consistent style with an underscore suffix. References to renamed fields will need to be updated.</li>
 <li>A change in the load callbacks used with <a class="el" href="group__drcovlib.html#ga9c2889006a80254645521f81a1a486f5">drmodtrack_add_custom_data()</a> and <a class="el" href="drmemtrace_8h.html#a8644981035cdedfafb000d03cd223399">drmemtrace_custom_module_data()</a>: they each take an additional parameter, the segment index. The custom data field is now per-segment and not per-module, and all callbacks are invoked separately for each segment.</li>
 </ul>
-<p>The changes between version 8.0.18949 and 8.0.0 include the following minor compatibility changes:</p>
+<p>The changes between version 8.0.18956 and 8.0.0 include the following minor compatibility changes:</p>
 <ul>
 <li>drconfiglib (and thus drrun and drconfig) now sets only the new client path options which are added in this release to support other-bitwidth child processes. This means that a drconfiglib from this version will not properly configure for a DynamoRIO core library from a prior version.</li>
 <li>A new option -ldstex2cas is on by default on ARM and AArch64. This converts load-exclusive store-exclusive sequences to use compare-and-swap instead, which enables normal instrumentation of such sequences without clearing the exclusive monitor and causing infinite loops. However, the compare- and-swap's semantics are not identical: it does not detect "ABA" changes and could cause errors in lock-free data structures or other application constructs. See <a class="el" href="API_BT.html#sec_ldrex">Exclusive Monitor Instrumentation</a> for more information.</li>
@@ -110,7 +110,7 @@ Changes Since Prior Releases</h1>
 <li>Added a fifth instrumentation phase (meta_instru) that executes after the insertion of instrumentation and instrumentation optimizations. Its primary purpose is to enable debugging of instrumentation sequences and detection of instrumentation-induced bugs.</li>
 <li>Added <code>drstatecmp</code> Extension which provides mechanisms to enable systematic and exhaustive machine state comparisons across instrumentation sequences.</li>
 <li>Added <a class="el" href="group__drcovlib.html#ga338038ccdcccfae189c746a5ebb279e3">drmodtrack_lookup_segment()</a>.</li>
-<li>Added a new drrun option <code>-attach</code> for attaching to a running process. This is currently an experimental option.</li>
+<li>Added a new drrun option <code>-attach</code> for attaching to a running process. This is currently an experimental option and is not yet as well-supported as launching a new process.</li>
 <li>Added <a class="el" href="page_drcallstack.html">Callstack Walking</a> Extension for walking application callstacks, with an initial Linux-only implementation.</li>
 <li>Added new <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212">dr_cleancall_save_t</a> flags which are required for proper interaction between clean calls and drreg: <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212a76efe3cf7cffc2bf14da79133bc2e5c3">DR_CLEANCALL_READS_APP_CONTEXT</a> must be set for <a class="el" href="dr__ir__utils_8h.html#a9e348b2596b8750ce3fad234ab022ced">dr_get_mcontext()</a> to obtain the proper values, and <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212ab0fb37c5cbbd2c2cd9ebd9eb5e53f23e">DR_CLEANCALL_WRITES_APP_CONTEXT</a> must be set to ensure that <a class="el" href="dr__ir__utils_8h.html#ac4bfa7fc3f9d4adb0857675bec2712a2">dr_set_mcontext()</a> is persistent. If the call may be skipped by tool-inserted control flow, <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212ab3ed3f85123fad82c4377cebaa2c36ed">DR_CLEANCALL_MULTIPATH</a> must additionally be set.</li>
 <li>Added a new event <a class="el" href="dr__events_8h.html#abfbfebb6df4c756bb9e4c2a9cac82ce9">dr_register_clean_call_insertion_event()</a>, meant for use by register management libraries.</li>
@@ -1059,5 +1059,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18949 --- Fri Nov 19 2021 03:05:30 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18956 --- Fri Nov 26 2021 03:05:50 &nbsp; <img border=0 src="favicon.png">
 </small></address>

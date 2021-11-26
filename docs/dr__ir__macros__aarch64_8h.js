@@ -14,6 +14,8 @@
     [ "INSTR_CREATE_bit_vector", "dr__ir__macros__aarch64_8h.html#a2bfa5a1dac95e9f16c91ce0bc68fb966", null ],
     [ "INSTR_CREATE_bl", "dr__ir__macros__aarch64_8h.html#aebe9013d0ead44c795af661f0718de90", null ],
     [ "INSTR_CREATE_bsl_vector", "dr__ir__macros__aarch64_8h.html#af080a01108b75547d5520368e8725ffc", null ],
+    [ "INSTR_CREATE_ccmn", "dr__ir__macros__aarch64_8h.html#a62511e4bfc01ceca4feb51f731ff88f8", null ],
+    [ "INSTR_CREATE_ccmp", "dr__ir__macros__aarch64_8h.html#a33f544522e0bafe7f5bad042a3b53255", null ],
     [ "INSTR_CREATE_cmeq_vector", "dr__ir__macros__aarch64_8h.html#a38b8d9ebfd17ff7b9a7a5fef209ce7e8", null ],
     [ "INSTR_CREATE_cmge_vector", "dr__ir__macros__aarch64_8h.html#a5252dc1e92cf2452180cfa99e3e3c0e6", null ],
     [ "INSTR_CREATE_cmgt_vector", "dr__ir__macros__aarch64_8h.html#ad0d340293b7bd6331d412d8c34061026", null ],
