@@ -150,7 +150,7 @@ Proposed Solution B: Compare-and-Swap Simulation</h1>
 <li>Storing the load opcode into its own TLS slot, but we do not know what to compare it with when we reach the store-exclusive, especially for cases like <a class="el" href="dr__tools_8h.html#a554c5441ac5a4e4de19210562ad8ab90">dr_prepopulate_cache()</a>.</li>
 <li>Just always using the acquire version for the store-exclusive size. Since the size must match, this is the only variation, and it should not affect correctness to add the barriers even when they are not needed. This is the solution that we choose.</li>
 </ul>
-<p>There are other complexities, such as saving and comparing a second value in another TLS slot for pair opcodes. 32-bit ARM raises even more issues, such as requiring saving the flags, requiring consecutive registers for pair opcodes, and predication, all of which add further complexity.</p>
+<p>There are other complexities, such as saving and comparing a second value in another TLS slot for pair opcodes, and handling a load-exclusive that discards a result by targeting the zero register. 32-bit ARM raises even more issues, such as requiring saving the flags, requiring consecutive registers for pair opcodes, and predication, all of which add further complexity.</p>
 <p>This solution should also act on a <code>clrex</code> instruction, clearing the stored monitor values in order to avoid incorrect success in a load-exclusive, <code>clrex</code>, store-exclusive sequence.</p>
 <p>If the store-exclusive uses the stolen register: it is best to integrate stolen register mangling with exclusive monitor mangling. To avoid translation complexities in identifying the TLS loads and stores here, we should adopt a different strategy from regular stolen register handling: we should modify the application instruction to use the swap register, and should be careful to have all additional scratch register spills and restores outside of the compare-and-swap exclusive monitor region.</p>
 <p>For a load-exclusive and store-exclusive in the same block, we can optimize by eliminating the stores and loads to TLS and directly using the values in registers, and comparing the sizes statically.</p>
@@ -211,5 +211,5 @@ Issue Tracker References</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18967 --- Fri Dec 10 2021 03:05:34 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18978 --- Fri Dec 17 2021 03:06:09 &nbsp; <img border=0 src="favicon.png">
 </small></address>
