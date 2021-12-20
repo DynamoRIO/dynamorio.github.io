@@ -52,11 +52,11 @@ Trigger a Package Build</h2>
 <li>Click on "ci-package" on the list of workflows on the left.</li>
 <li>Click on "Run workflow" on the right.</li>
 <li>Select the branch.</li>
-<li>Fill in the version number. For a test build or periodic build (i.e., not an official new-version-number release), use the current version major.minor and the date-based patchlevel. The patchlevel can be found from CMake's configuration output by running <code>cmake .</code>: <div class="fragment"><div class="line">-- Version number: 8.0.18611</div>
+<li>Fill in the version number. For an official release, use three digits (e.g., '9.0.0'). For a test build or periodic build (i.e., not an official new-version-number release), use the current version major.minor and the date-based patchlevel. The patchlevel can be found from CMake's configuration output by running <code>cmake .</code>: <div class="fragment"><div class="line">-- Version number: 8.0.18611</div>
 </div><!-- fragment --></li>
 </ol>
 <p>For the build number, start at 0 for any given version number and add 1 for each attempt to produce a successful build. If the build number is 0 it is not appended to the version number.</p>
-<p>Wait for the workflow to finish. It should create a new tag, a new Release, upload 4 binary packages to the Release, and update the online documentation.</p>
+<p>Wait for the workflow to finish. It should create a new tag, a new Release, and upload 5 binary packages to the Release.</p>
 <h2><a class="anchor" id="autotoc_md212"></a>
 Update the Release Description</h2>
 <p>Once the build is finished and posted to <a href="https://github.com/DynamoRIO/dynamorio/releases,">https://github.com/DynamoRIO/dynamorio/releases,</a> edit the description to list the highlights of the new release. You can use markdown to make a bulleted list.</p>
@@ -67,15 +67,25 @@ Update the Release Description</h2>
 Update api/docs/download.dox</h2>
 <p>Make a new list of direct links for the new version at <a class="el" href="page_releases.html">Releases</a>.</p>
 <h2><a class="anchor" id="autotoc_md214"></a>
+Trigger a Docs Update</h2>
+<ol type="1">
+<li>Go to the Actions tab for the DynamoRIO/dynamorio repository.</li>
+<li>Click on "ci-docs" on the list of workflows on the left.</li>
+<li>Click on "Run workflow" on the right.</li>
+<li>Select the branch.</li>
+<li>Fill in the version number and build number to match that used for the package build.</li>
+</ol>
+<p>Wait for the workflow to finish. It should update the online docs.</p>
+<h2><a class="anchor" id="autotoc_md215"></a>
 Verify Package and Documentation Uploads</h2>
 <p>Double-check that all binary package files were uploaded to the new release on Github, and double-check that the documentation was pushed to <a href="http://dynamorio.org">http://dynamorio.org</a>.</p>
-<h2><a class="anchor" id="autotoc_md215"></a>
+<h2><a class="anchor" id="autotoc_md216"></a>
 Announce the Release</h2>
 <p>Unless it's a minor patchlevel release or something, email the users list to announce the new release.</p>
-<h2><a class="anchor" id="autotoc_md216"></a>
+<h2><a class="anchor" id="autotoc_md217"></a>
 Add a New Changelist Section</h2>
 <p>Update the changelist in release.dox: create a new entry for the next release.</p>
-<h1><a class="anchor" id="autotoc_md217"></a>
+<h1><a class="anchor" id="autotoc_md218"></a>
 Per-Platform Testing</h1>
 <p>Perform at least the "README test" on all platforms: paste the commands from the README into your shell and make sure they behave as expected.</p>
 <p>Since the samples with their SHOW_RESULTS interactive setting aren't in our test suite I often test them (with release and debug), along with our built-in tools. Also test building the samples, which is difficult for our test suite to test.</p>
@@ -220,7 +230,7 @@ bin64/drconfig.exe -debug -reg calc.exe -syswide_on -c samples/bin64/bbsize.dll
 bin64/drconfig.exe -unreg calc.exe
 bin64/drconfig.exe -syswide_off
 </pre><p>It's best to sanity-check on all platforms we support: XP32, 2003, XP64, and {Vista, Win7, Win8, Win8.1, Win10} X {32-bit kernel, 64-bit kernel} for Windows. For Linux, check at least one Ubuntu and one Fedora platform.</p>
-<h1><a class="anchor" id="autotoc_md218"></a>
+<h1><a class="anchor" id="autotoc_md219"></a>
 Old Instructions for Locally Building Packages</h1>
 <p>Be sure to use doxygen &gt;= 1.8.1 for high-quality documentation. On Windows, use a non-Cygwin build (I use <a href="ftp://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.1.1.windows.bin.zip,">ftp://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.1.1.windows.bin.zip,</a> with doxygen.exe placed in /usr/local/bin: see <a href="https://code.google.com/p/dynamorio/issues/detail?id=815">issue 815</a>).</p>
 <p>We do not build Linux release packages with clang due to the lack of equivalent for <code>-mpreferred-stack-boundary=2</code>. More details can be found at <a href="https://github.com/DynamoRIO/dynamorio/issues/1800">issue 1800</a>.</p>
@@ -248,5 +258,5 @@ ctest -D CMAKE_SYSTEM_PROCESSOR=arm -V -S /dynamorio_package/make/package.cmake,
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.0 --- Mon Dec 20 2021 20:33:22 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.0 --- Mon Dec 20 2021 21:39:51 &nbsp; <img border=0 src="favicon.png">
 </small></address>
