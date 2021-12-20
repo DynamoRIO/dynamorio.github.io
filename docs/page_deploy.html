@@ -135,7 +135,7 @@ End-User Tools</h1>
 <div class="fragment"><div class="line">bin64/drrun -t mytool -tool_option1 -tool_option2 -- myapp</div>
 </div><!-- fragment --><p>can be made to expand to this equivalent command:</p>
 <div class="fragment"><div class="line">bin64/drrun -mytool_dr_option1 -mytool_dr_option2 -c tools/mytool/libmytool.so -tool_option1 -tool_option2 -- myapp</div>
-</div><!-- fragment --><p>For more extensive actions on launching the tool, a custom front-end executable can be created that replaces <code>drrun</code> by using <code>drinjectlib</code>, <code>drconfiglib</code>, and <code>drfrontendlib</code>. These three libraries facilitate creating cross-platform tools for configuring and launching applications under Dr. Memory. For more information about the interfaces they provide, see their header files: <a class="el" href="dr__inject_8h.html" title="Injection API. Use these functions to launch processes under the control of DynamoRIO.">dr_inject.h</a>, <a class="el" href="dr__config_8h.html" title="Deployment API for DynamoRIO. Use these functions to register processes to run under DynamoRIO,...">dr_config.h</a>, <a class="el" href="dr__frontend_8h.html" title="Tool front-end API. Use these functions to search for and query the properties of a target applicatio...">dr_frontend.h</a>.</p>
+</div><!-- fragment --><p>For more extensive actions on launching the tool, a custom front-end executable can be created that replaces <code>drrun</code> by using <code>drinjectlib</code>, <code>drconfiglib</code>, and <code>drfrontendlib</code>. These three libraries facilitate creating cross-platform tools for configuring and launching applications under DynamoRIO. For more information about the interfaces they provide, see their header files: <a class="el" href="dr__inject_8h.html" title="Injection API. Use these functions to launch processes under the control of DynamoRIO.">dr_inject.h</a>, <a class="el" href="dr__config_8h.html" title="Deployment API for DynamoRIO. Use these functions to register processes to run under DynamoRIO,...">dr_config.h</a>, <a class="el" href="dr__frontend_8h.html" title="Tool front-end API. Use these functions to search for and query the properties of a target applicatio...">dr_frontend.h</a>.</p>
 <p>A custom front-end executable can be invoked via a <code>drrun</code> <code>-t</code> configuration file using one of the following lines:</p>
 <div class="fragment"><div class="line">FRONTEND_ABS=/absolute/path/to/front-end</div>
 </div><!-- fragment --><p>or</p>
@@ -247,5 +247,5 @@ DynamoRIO Runtime Options</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18978 --- Fri Dec 17 2021 03:06:09 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.0 --- Mon Dec 20 2021 20:33:22 &nbsp; <img border=0 src="favicon.png">
 </small></address>
