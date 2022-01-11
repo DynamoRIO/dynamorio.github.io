@@ -30,6 +30,7 @@ permalink: /page_droption.html
 <li><a class="el" href="page_droption.html#sec_droption_usage">Usage</a></li>
 <li><a class="el" href="page_droption.html#sec_droption_types">Supported Types</a></li>
 <li><a class="el" href="page_droption.html#sec_droption_html">Automated HTML</a></li>
+<li><a class="el" href="page_droption.html#sec_droption_aliases">Aliases</a></li>
 </ul>
 <h1><a class="anchor" id="sec_droption_setup"></a>
 Setup</h1>
@@ -111,23 +112,34 @@ Automated HTML</h1>
 <div class="line">              &lt;&lt; std::endl;</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>This program can be built and run at documentation generation time to produce HTML that can then be embedded into Doxygen or other documentation. </p>
-</div></div><!-- contents -->
+</div><!-- fragment --><p>This program can be built and run at documentation generation time to produce HTML that can then be embedded into Doxygen or other documentation.</p>
+<h1><a class="anchor" id="sec_droption_aliases"></a>
+Aliases</h1>
+<p>To support multiple strings to trigger the same option, pass a vector of strings as the name, with the primary name (the one used in usage reports) listed first, like this:</p>
+<div class="fragment"><div class="line"><a class="code" href="classdroption__t.html">droption_t&lt;std::string&gt;</a> op_blocklist(</div>
+<div class="line">    <span class="comment">// We support the legacy name as an alias for compatibility.</span></div>
+<div class="line">    <span class="comment">// We explicitly specity the vector type to avoid ambiguity with iterators</span></div>
+<div class="line">    <span class="comment">// when we have just 2 elements in the list.</span></div>
+<div class="line">    <a class="code" href="droption_8h.html#aaa6638d4faaba3788e5af8a9090787abad66279b622a4387e56937efff1ce23af">DROPTION_SCOPE_CLIENT</a>, std::vector&lt;std::string&gt;({ <span class="stringliteral">&quot;blocklist&quot;</span>, <span class="stringliteral">&quot;blacklist&quot;</span> }),</div>
+<div class="line">    IF_WINDOWS_ELSE(<span class="stringliteral">&quot;ntdll.dll&quot;</span>, <span class="stringliteral">&quot;&quot;</span>), <span class="stringliteral">&quot;:-separated list of libs to ignore.&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;The blocklist is a :-separated list of library names for which violations &quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;should not be reported.&quot;</span>);</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <div class="ttc" id="adr__tools_8h_html_a0f1fe81ae1737aa0e34eb69c855d359c"><div class="ttname"><a href="dr__tools_8h.html#a0f1fe81ae1737aa0e34eb69c855d359c">dr_abort</a></div><div class="ttdeci">DR_API void dr_abort(void)</div></div>
 <div class="ttc" id="adroption_8h_html"><div class="ttname"><a href="droption_8h.html">droption.h</a></div><div class="ttdoc">Options parsing support.</div></div>
 <div class="ttc" id="adroption_8h_html_aaa6638d4faaba3788e5af8a9090787aba10e0dbb30264696a8359061f128dde46"><div class="ttname"><a href="droption_8h.html#aaa6638d4faaba3788e5af8a9090787aba10e0dbb30264696a8359061f128dde46">DROPTION_SCOPE_ALL</a></div><div class="ttdeci">@ DROPTION_SCOPE_ALL</div><div class="ttdef"><b>Definition:</b> droption.h:74</div></div>
-<div class="ttc" id="aclassdroption__t_html"><div class="ttname"><a href="classdroption__t.html">droption_t</a></div><div class="ttdef"><b>Definition:</b> droption.h:366</div></div>
-<div class="ttc" id="aclassdroption__parser__t_html_a296ee6d73ca09454bd713c87b36af7d4"><div class="ttname"><a href="classdroption__parser__t.html#a296ee6d73ca09454bd713c87b36af7d4">droption_parser_t::usage_long</a></div><div class="ttdeci">static std::string usage_long(unsigned int scope, std::string pre_name=&quot;----------\n&quot;, std::string post_name=&quot;\n&quot;, std::string pre_value=&quot;&quot;, std::string post_value=&quot;\n&quot;, std::string pre_desc=&quot;&quot;, std::string post_desc=&quot;\n&quot;)</div><div class="ttdef"><b>Definition:</b> droption.h:294</div></div>
+<div class="ttc" id="aclassdroption__t_html"><div class="ttname"><a href="classdroption__t.html">droption_t</a></div><div class="ttdef"><b>Definition:</b> droption.h:384</div></div>
+<div class="ttc" id="aclassdroption__parser__t_html_a296ee6d73ca09454bd713c87b36af7d4"><div class="ttname"><a href="classdroption__parser__t.html#a296ee6d73ca09454bd713c87b36af7d4">droption_parser_t::usage_long</a></div><div class="ttdeci">static std::string usage_long(unsigned int scope, std::string pre_name=&quot;----------\n&quot;, std::string post_name=&quot;\n&quot;, std::string pre_value=&quot;&quot;, std::string post_value=&quot;\n&quot;, std::string pre_desc=&quot;&quot;, std::string post_desc=&quot;\n&quot;)</div><div class="ttdef"><b>Definition:</b> droption.h:312</div></div>
 <div class="ttc" id="adr__defines_8h_html_a3a540e3eef339eec06aff31c4ba1eb25"><div class="ttname"><a href="dr__defines_8h.html#a3a540e3eef339eec06aff31c4ba1eb25">STDERR</a></div><div class="ttdeci">#define STDERR</div><div class="ttdef"><b>Definition:</b> dr_defines.h:335</div></div>
 <div class="ttc" id="adr__tools_8h_html_ae338685a241cfeae5f3d507ae9cff957"><div class="ttname"><a href="dr__tools_8h.html#ae338685a241cfeae5f3d507ae9cff957">dr_fprintf</a></div><div class="ttdeci">DR_API ssize_t dr_fprintf(file_t f, const char *fmt,...)</div></div>
-<div class="ttc" id="adroption_8h_html_ac33405ef5e666f86d4cd826474fb3613"><div class="ttname"><a href="droption_8h.html#ac33405ef5e666f86d4cd826474fb3613">dr_parse_options</a></div><div class="ttdeci">static bool dr_parse_options(client_id_t client_id, std::string *error_msg, int *last_index)</div><div class="ttdef"><b>Definition:</b> droption.h:835</div></div>
+<div class="ttc" id="adroption_8h_html_ac33405ef5e666f86d4cd826474fb3613"><div class="ttname"><a href="droption_8h.html#ac33405ef5e666f86d4cd826474fb3613">dr_parse_options</a></div><div class="ttdeci">static bool dr_parse_options(client_id_t client_id, std::string *error_msg, int *last_index)</div><div class="ttdef"><b>Definition:</b> droption.h:923</div></div>
 <div class="ttc" id="adroption_8h_html_aaa6638d4faaba3788e5af8a9090787abad66279b622a4387e56937efff1ce23af"><div class="ttname"><a href="droption_8h.html#aaa6638d4faaba3788e5af8a9090787abad66279b622a4387e56937efff1ce23af">DROPTION_SCOPE_CLIENT</a></div><div class="ttdeci">@ DROPTION_SCOPE_CLIENT</div><div class="ttdef"><b>Definition:</b> droption.h:71</div></div>
-<div class="ttc" id="aclassdroption__parser__t_html_a26d4d9753b91781202dbf7c964fcb8f9"><div class="ttname"><a href="classdroption__parser__t.html#a26d4d9753b91781202dbf7c964fcb8f9">droption_parser_t::parse_argv</a></div><div class="ttdeci">static bool parse_argv(unsigned int scope, int argc, const char *argv[], std::string *error_msg, int *last_index)</div><div class="ttdef"><b>Definition:</b> droption.h:177</div></div>
+<div class="ttc" id="aclassdroption__parser__t_html_a26d4d9753b91781202dbf7c964fcb8f9"><div class="ttname"><a href="classdroption__parser__t.html#a26d4d9753b91781202dbf7c964fcb8f9">droption_parser_t::parse_argv</a></div><div class="ttdeci">static bool parse_argv(unsigned int scope, int argc, const char *argv[], std::string *error_msg, int *last_index)</div><div class="ttdef"><b>Definition:</b> droption.h:193</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.18998 --- Fri Jan 7 2022 03:07:54 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.19003 --- Tue Jan 11 2022 16:32:32 &nbsp; <img border=0 src="favicon.png">
 </small></address>

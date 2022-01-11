@@ -1,5 +1,10 @@
 [
     [ "Overview", "sec_drcachesim.html", null ],
+    [ "Trace Format", "sec_drcachesim_format.html", [
+      [ "Instruction Records", "sec_drcachesim_format.html#sec_drcachesim_format_instrs", null ],
+      [ "Memory Access Records", "sec_drcachesim_format.html#sec_drcachesim_format_data", null ],
+      [ "Other Records", "sec_drcachesim_format.html#sec_drcachesim_format_other", null ]
+    ] ],
     [ "Running the Simulator", "sec_drcachesim_run.html", null ],
     [ "Analysis Tool Suite", "sec_drcachesim_tools.html", [
       [ "Cache Simulator", "sec_drcachesim_tools.html#sec_tool_cache_sim", null ],

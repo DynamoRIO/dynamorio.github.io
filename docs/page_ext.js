@@ -50,7 +50,8 @@
       [ "Setup", "page_droption.html#sec_droption_setup", null ],
       [ "Usage", "page_droption.html#sec_droption_usage", null ],
       [ "Supported Types", "page_droption.html#sec_droption_types", null ],
-      [ "Automated HTML", "page_droption.html#sec_droption_html", null ]
+      [ "Automated HTML", "page_droption.html#sec_droption_html", null ],
+      [ "Aliases", "page_droption.html#sec_droption_aliases", null ]
     ] ],
     [ "Register Management", "page_drreg.html", [
       [ "Setup", "page_drreg.html#sec_drreg_setup", null ],
