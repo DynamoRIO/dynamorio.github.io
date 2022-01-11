@@ -27,7 +27,7 @@ permalink: /google_workload_traces.html
 <div class="textblock"><p>With the rapid growth of internet services and cloud computing, workloads on warehouse-scale computers (WSCs) have become an important segment of today’s computing market. These workloads differ from others in their requirements of on-demand scalability, elasticity and availability. They have fundamentally different characteristics from traditional benchmarks and require changes to modern computer architecture to achieve optimal efficiency. Google is sharing instruction and memory address traces from workloads running in Google data centers so that computer architecture researchers can study and develop new architecture ideas to improve the performance and efficiency of this important class of workloads.</p>
 <h1><a class="anchor" id="sec_google_format"></a>
 Trace Format</h1>
-<p>The Google workload traces are captured using DynamoRIO's <a class="el" href="page_drcachesim.html">drmemtrace</a>. The traces are records of instruction and memory accesses stored in the <a href="https://dynamorio.org/memref_8h.html">memref_t data structure</a>. We separate instruction and memory accesses records from each software thread into a separate file (.memtrace.gz). In addition, for each software thread, we also provide a branch_trace which contains execution data (taken/not taken, branch target) about each branch instruction (conditional, non-conditional, calls, etc.). Finally, for each workload trace, we provide a thread statistics file (.threadstats.csv) which contains the thread ID (tid), instruction count, non-fetched instruction count (e.g. implicit instructions generated from microcode), load count, store count, and prefetch count.</p>
+<p>The Google workload traces are captured using DynamoRIO's <a class="el" href="page_drcachesim.html">drmemtrace</a>. The traces are records of instruction and memory accesses as described at <a class="el" href="sec_drcachesim_format.html">Trace Format</a>. We separate instruction and memory access records from each software thread into a separate file (.memtrace.gz). In addition, for each software thread, we also provide a branch_trace which contains execution data (taken/not taken, branch target) about each branch instruction (conditional, non-conditional, calls, etc.). Finally, for each workload trace, we provide a thread statistics file (.threadstats.csv) which contains the thread ID (tid), instruction count, non-fetched instruction count (e.g. implicit instructions generated from microcode), load count, store count, and prefetch count.</p>
 <h1><a class="anchor" id="sec_google_get"></a>
 Getting the Traces</h1>
 <p>The Google Workload Traces can be downloaded from:</p>
@@ -48,7 +48,7 @@ Getting Help and Reporting Bugs</h1>
 <p>For general questions, or if you are not sure whether the problem you hit is a bug in your own code or in provided code, use the <a href="http://groups.google.com/group/dynamorio-users">DynamoRIO users group mailing list/discussion forum</a> rather than opening an issue in the tracker. The users list will reach a wider audience of people who might have an answer, and it will reach other users who may find the information beneficial.</p>
 <h1><a class="anchor" id="sec_google_contrib"></a>
 Contributing</h1>
-<p>We welcome contributions to the Google workload trace project. The goal of providing the Google workload traces is to enable computer architecture researchers to develop insights and new architecture ideas to improve the performance and efficiency of workloads that run on Warehouse Scale Computers.</p>
+<p>We welcome contributions to the Google workload trace project. The goal of providing the Google workload traces is to enable computer architecture researchers to develop insights and new architecture ideas to improve the performance and efficiency of workloads that run on warehouse-scale computers.</p>
 <p>You can contribute to the project in many ways:</p>
 <ul>
 <li>Providing suggestions for improving trace formats.</li>
@@ -62,5 +62,5 @@ Contributing</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.18999 --- Mon Jan 10 2022 19:54:04 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19003 --- Tue Jan 11 2022 11:56:12 &nbsp; <img border=0 src="favicon.png">
 </small></address>
