@@ -1472,6 +1472,9 @@
     [ "OP_mwaitx", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a9e54fdf8fda66e80521555b580e15269", null ],
     [ "OP_rdpkru", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a8d7c38f0af448422694bb6d0e0fa238d", null ],
     [ "OP_wrpkru", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a8cc7467963149208708be6d524978e2d", null ],
+    [ "OP_encls", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a1348794199eff46aba3160a291b5d15a", null ],
+    [ "OP_enclu", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635ace0d8593222f161e4393ead2533ba6c3", null ],
+    [ "OP_enclv", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a28c4413dcb7ad964304ff26720474627", null ],
     [ "OP_FIRST", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a7b616dfe8fecf0a3f45179a237d71c93", null ],
     [ "OP_LAST", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635ad4831564a9a3e47fd23c8b4498215ead", null ]
 ],

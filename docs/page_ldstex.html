@@ -182,7 +182,9 @@ Proposed Solution D: Run Twice</h1>
 <p>We’d execute the whole sequence in a normal manner, with regular instrumentation. We’d remember the prior load-exclusive. When we see a store-exclusive, we then insert a native copy of the whole sequence since the load-exclusive, which is executed if the store-exclusive fails. If the native store-exclusive also fails, it would loop back to the start of the instrumented load-exclusive and repeat the whole process.</p>
 <p>Embedding a native sequence may be more complicated than for rseq, which has severe restrictions on the code range and on side effects. It is possible there could be memory stores (which happen to not break the monitor on the target hardware) which would be complex to checkpoint, though we could argue that the code should always handle running multiple times on an monitor failure. There could also be different paths taken between the two executions, or predicated instructions with different behavior.</p>
 <p>Advantages:</p><ul>
-<li>Tools see the original code, with some caveats below. Disadvantages:</li>
+<li>Tools see the original code, with some caveats below.</li>
+</ul>
+<p>Disadvantages:</p><ul>
 <li>Tools may never see a success case and only see the store-exclusive fail.</li>
 <li>Tools will not see the native execution, yet it may have side effects, unlike rseq, not captured by the tool or different from typical runs, or behavior differing from the instrumented execution that could cause errors in taint tracking or other dataflow-sensitive tools or inaccurate memory or instruction trace recordings.</li>
 <li>It is complex to embed the whole sequence: it is less bounded than for rseq.</li>
@@ -211,5 +213,5 @@ Issue Tracker References</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.19005 --- Fri Jan 14 2022 03:06:59 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.19012 --- Fri Jan 21 2022 03:05:16 &nbsp; <img border=0 src="favicon.png">
 </small></address>
