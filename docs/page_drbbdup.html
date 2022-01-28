@@ -53,7 +53,7 @@ Case Analysis</h1>
 <h1><a class="anchor" id="sec_drbbdup_encoder"></a>
 Encoder</h1>
 <p>In order for drbbdup to dispatch control to the appropriate basic block copy, it needs to determine the current runtime case encoding value. Essentially, this process depends on the use-case, and therefore drbbdup optionally invokes the <a class="el" href="group__drbbdup.html#gae2bf28a5b20a165d4d07325a49c12c4a">drbbdup_insert_encode_t</a> call-back function to obtain the encoding from the client.</p>
-<p>In terms of implementation, the call-back function must store the runtime case encoding to pointer-sized memory that is maintained by the client itself. By using the operand, which refers to the memory and is passed to <a class="el" href="group__drbbdup.html#ga70e7a3c219a3a1d1492af8d626e9832e">drbbdup_init()</a>, drbbdup will load the the current runtime case encoding and dispatch control accordingly.</p>
+<p>In terms of implementation, the call-back function must store the runtime case encoding to pointer-sized memory that is maintained by the client itself. By using the operand, which refers to the memory and is passed to <a class="el" href="group__drbbdup.html#ga70e7a3c219a3a1d1492af8d626e9832e">drbbdup_init()</a>, drbbdup will load the current runtime case encoding and dispatch control accordingly.</p>
 <p>The <a class="el" href="group__drbbdup.html#gae2bf28a5b20a165d4d07325a49c12c4a">drbbdup_insert_encode_t</a> call-back may also be set to NULL which results in the dispatcher not attempting the construction of the runtime case at every start of a basic block execution. In such cases, it is expected that the client directly sets the runtime encoding directly and updates the value on demand. The drbbdup extension guarantees that it does not modify the set encoding on its own accord.</p>
 <h1><a class="anchor" id="sec_drbbdup_instrum"></a>
 Case Instrumentation</h1>
@@ -66,5 +66,5 @@ Case Instrumentation</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.19012 --- Fri Jan 21 2022 03:05:16 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.19019 --- Fri Jan 28 2022 03:05:12 &nbsp; <img border=0 src="favicon.png">
 </small></address>
