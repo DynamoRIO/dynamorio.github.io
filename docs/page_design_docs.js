@@ -150,5 +150,19 @@
         [ "LLVM", "page_external_decoder.html#autotoc_md170", null ]
       ] ],
       [ "Concerns", "page_external_decoder.html#autotoc_md171", null ]
+    ] ],
+    [ "Emulating x86 Scatter and Gather Instructions", "page_scatter_gather_emulation.html", [
+      [ "Background", "page_scatter_gather_emulation.html#autotoc_md256", null ],
+      [ "Problem Statement", "page_scatter_gather_emulation.html#autotoc_md257", null ],
+      [ "Design", "page_scatter_gather_emulation.html#autotoc_md258", [
+        [ "Scatter/gather Instruction Expansion", "page_scatter_gather_emulation.html#autotoc_md259", null ],
+        [ "Drreg Support For Multi-phase Reservations", "page_scatter_gather_emulation.html#autotoc_md260", [
+          [ "State Restoration For Drreg", "page_scatter_gather_emulation.html#autotoc_md261", null ]
+        ] ],
+        [ "Simplifying Instrumentation For Emulated Instructions", "page_scatter_gather_emulation.html#autotoc_md262", null ],
+        [ "Support For Vector Reservation", "page_scatter_gather_emulation.html#autotoc_md263", null ],
+        [ "Using The Expansion In DR Clients", "page_scatter_gather_emulation.html#autotoc_md264", null ]
+      ] ],
+      [ "Testing On Large Apps", "page_scatter_gather_emulation.html#autotoc_md265", null ]
     ] ]
 ],

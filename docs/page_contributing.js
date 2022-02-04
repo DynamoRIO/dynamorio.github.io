@@ -18,19 +18,19 @@
       [ "Project Branches", "page_code_reviews.html#autotoc_md120", null ]
     ] ],
     [ "Development Workflow", "page_workflow.html", [
-      [ "Getting the Code", "page_workflow.html#autotoc_md296", null ],
-      [ "Configuring Author Information and Aliases", "page_workflow.html#autotoc_md297", null ],
-      [ "Working on a Small Feature or Bug Fix", "page_workflow.html#autotoc_md298", null ],
+      [ "Getting the Code", "page_workflow.html#autotoc_md306", null ],
+      [ "Configuring Author Information and Aliases", "page_workflow.html#autotoc_md307", null ],
+      [ "Working on a Small Feature or Bug Fix", "page_workflow.html#autotoc_md308", null ],
       [ "Branch Naming Conventions", "page_workflow.html#sec_branch_naming", null ],
-      [ "Merging upstream changes", "page_workflow.html#autotoc_md299", null ],
-      [ "Requesting a Code Review and Merging to Master", "page_workflow.html#autotoc_md300", null ],
-      [ "Deleting a Feature Branch", "page_workflow.html#autotoc_md301", null ],
-      [ "Checking Out an Existing Feature Branch", "page_workflow.html#autotoc_md302", null ],
-      [ "Splitting Up a Feature Branch", "page_workflow.html#autotoc_md303", null ],
-      [ "Large Features or Projects", "page_workflow.html#autotoc_md304", null ],
-      [ "Experimental Branches", "page_workflow.html#autotoc_md305", null ],
-      [ "Useful Aliases", "page_workflow.html#autotoc_md306", null ],
-      [ "No Merge Commits on Master", "page_workflow.html#autotoc_md307", null ]
+      [ "Merging upstream changes", "page_workflow.html#autotoc_md309", null ],
+      [ "Requesting a Code Review and Merging to Master", "page_workflow.html#autotoc_md310", null ],
+      [ "Deleting a Feature Branch", "page_workflow.html#autotoc_md311", null ],
+      [ "Checking Out an Existing Feature Branch", "page_workflow.html#autotoc_md312", null ],
+      [ "Splitting Up a Feature Branch", "page_workflow.html#autotoc_md313", null ],
+      [ "Large Features or Projects", "page_workflow.html#autotoc_md314", null ],
+      [ "Experimental Branches", "page_workflow.html#autotoc_md315", null ],
+      [ "Useful Aliases", "page_workflow.html#autotoc_md316", null ],
+      [ "No Merge Commits on Master", "page_workflow.html#autotoc_md317", null ]
     ] ],
     [ "Code Content Guidelines", "page_code_content.html", [
       [ "Adding New Features", "page_code_content.html#autotoc_md105", null ],

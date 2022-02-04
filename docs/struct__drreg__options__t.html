@@ -57,7 +57,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>By default, drreg assumes that the application will not rely on the particular value of a dead register when a fault happens. This allows drreg to reduce overhead. This flag can be set to request that drreg not make this assumption.</p>
-<p>If multiple <a class="el" href="group__drreg.html#ga6656df86f1a73bdf739eedaba7220c46">drreg_init()</a> calls are made, this field is combined by logical OR. </p>
+<p>If multiple <a class="el" href="group__drreg.html#ga6656df86f1a73bdf739eedaba7220c46">drreg_init()</a> calls are made, this field is combined by logical OR.</p>
+<p>XXX i#3801: If a fault occurs between two spills of a GPR or aflags, where the second spill is after an app write, the current drreg application state restoration logic does not restore the dead GPR/aflags even with this field set to true. It is difficult to do so without additional metadata passed to the state restoration callback. </p>
 
 </div>
 </div>
@@ -133,5 +134,5 @@ Data Fields</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.19019 --- Fri Jan 28 2022 03:05:13 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.19027 --- Fri Feb 4 2022 03:05:21 &nbsp; <img border=0 src="favicon.png">
 </small></address>
