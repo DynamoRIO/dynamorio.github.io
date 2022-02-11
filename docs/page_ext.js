@@ -51,7 +51,8 @@
       [ "Usage", "page_droption.html#sec_droption_usage", null ],
       [ "Supported Types", "page_droption.html#sec_droption_types", null ],
       [ "Automated HTML", "page_droption.html#sec_droption_html", null ],
-      [ "Aliases", "page_droption.html#sec_droption_aliases", null ]
+      [ "Aliases", "page_droption.html#sec_droption_aliases", null ],
+      [ "Clearing Accumulated Values on Re-attach", "page_droption.html#sec_droption_reattach", null ]
     ] ],
     [ "Register Management", "page_drreg.html", [
       [ "Setup", "page_drreg.html#sec_drreg_setup", null ],

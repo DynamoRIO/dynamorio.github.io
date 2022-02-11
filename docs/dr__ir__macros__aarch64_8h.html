@@ -74,6 +74,8 @@ Macros</h2></td></tr>
 <tr class="separator:a62511e4bfc01ceca4feb51f731ff88f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a492c5fce801b7dfbc9c6ab801601a23b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a492c5fce801b7dfbc9c6ab801601a23b">INSTR_CREATE_fmov_general</a>(dc,  Rd,  Rn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_fmov, Rd, Rn)</td></tr>
 <tr class="separator:a492c5fce801b7dfbc9c6ab801601a23b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a769354826d534d97f841a6bc8e3ecd34"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a769354826d534d97f841a6bc8e3ecd34">INSTR_CREATE_fmov_upper_vec</a>(dc,  Rd,  Rn)</td></tr>
+<tr class="separator:a769354826d534d97f841a6bc8e3ecd34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97b320fde1a7a55d3b44336a9f636d41"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a97b320fde1a7a55d3b44336a9f636d41">INSTR_CREATE_shadd_vector</a>(dc,  Rd,  Rm,  Rn,  width)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_shadd, Rd, Rm, Rn, width)</td></tr>
 <tr class="separator:a97b320fde1a7a55d3b44336a9f636d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab75b0175e9c3a3bc01c28f1ff95e397c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ab75b0175e9c3a3bc01c28f1ff95e397c">INSTR_CREATE_sqadd_vector</a>(dc,  Rd,  Rm,  Rn,  width)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_sqadd, Rd, Rm, Rn, width)</td></tr>
@@ -4412,6 +4414,50 @@ Macros</h2></td></tr>
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Rd</td><td>The output scalar register. </td></tr>
     <tr><td class="paramname">f</td><td>The source immediate floating point opnd. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a769354826d534d97f841a6bc8e3ecd34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a769354826d534d97f841a6bc8e3ecd34">&#9670;&nbsp;</a></span>INSTR_CREATE_fmov_upper_vec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_fmov_upper_vec</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="dr__ir__instr_8h.html#a5d8f8a71494683ce0fe5ba1995246906">instr_create_2dst_2src</a>(dc, OP_fmov, Rd, <a class="code" href="dr__ir__opnd_8h.html#a3eea72cb2bcbd6d414b327f0318589dc">opnd_create_immed_int</a>(1, <a class="code" href="dr__ir__opnd_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da4459927426a03d9d7ee499f43cbf7a95">OPSZ_2b</a>), Rn, \</div>
+<div class="line">                           <a class="code" href="dr__ir__macros__aarch64_8h.html#abc0827a4d3590c1f4dbb10e85f7326e6">OPND_CREATE_DOUBLE</a>())</div>
+</div><!-- fragment --><p>Creates an FMOV instruction to move between GPRs and floating point registers. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The output register. </td></tr>
+    <tr><td class="paramname">Rn</td><td>The first input vector register. </td></tr>
   </table>
   </dd>
 </dl>
@@ -14004,6 +14050,7 @@ Macros</h2></td></tr>
 </div>
 </div><!-- contents -->
 <div class="ttc" id="adr__ir__macros__arm_8h_html_a6f30cf38f185da77631098a78a0ceebc"><div class="ttname"><a href="dr__ir__macros__arm_8h.html#a6f30cf38f185da77631098a78a0ceebc">INSTR_CREATE_ldr</a></div><div class="ttdeci">#define INSTR_CREATE_ldr(dc, Rd, mem)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_arm.h:1821</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_a5d8f8a71494683ce0fe5ba1995246906"><div class="ttname"><a href="dr__ir__instr_8h.html#a5d8f8a71494683ce0fe5ba1995246906">instr_create_2dst_2src</a></div><div class="ttdeci">DR_API instr_t * instr_create_2dst_2src(void *drcontext, int opcode, opnd_t dst1, opnd_t dst2, opnd_t src1, opnd_t src2)</div></div>
 <div class="ttc" id="adr__ir__macros__arm_8h_html_a8f83f8223e55cc0f4204ee06a827e565"><div class="ttname"><a href="dr__ir__macros__arm_8h.html#a8f83f8223e55cc0f4204ee06a827e565">INSTR_CREATE_str</a></div><div class="ttdeci">#define INSTR_CREATE_str(dc, mem, Rt)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_arm.h:1874</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a25b263fa2ff4a996f56c8ea17ad37735"><div class="ttname"><a href="dr__ir__instr_8h.html#a25b263fa2ff4a996f56c8ea17ad37735">instr_create_4dst_7src</a></div><div class="ttdeci">DR_API instr_t * instr_create_4dst_7src(void *drcontext, int opcode, opnd_t dst1, opnd_t dst2, opnd_t dst3, opnd_t dst4, opnd_t src1, opnd_t src2, opnd_t src3, opnd_t src4, opnd_t src5, opnd_t src6, opnd_t src7)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a68cff151182a9204f5d3168c095211c2"><div class="ttname"><a href="dr__ir__opnd_8h.html#a68cff151182a9204f5d3168c095211c2">opnd_get_size</a></div><div class="ttdeci">DR_API opnd_size_t opnd_get_size(opnd_t opnd)</div></div>
@@ -14012,7 +14059,9 @@ Macros</h2></td></tr>
 <div class="ttc" id="adr__ir__opnd_8h_html_ac3cc66fd1a43008c1faf1a6f9a9695b2"><div class="ttname"><a href="dr__ir__opnd_8h.html#ac3cc66fd1a43008c1faf1a6f9a9695b2">opnd_is_base_disp</a></div><div class="ttdeci">DR_API bool opnd_is_base_disp(opnd_t opnd)</div></div>
 <div class="ttc" id="adr__ir__macros_8h_html_a0cf77f656e96684678c30892c0c718af"><div class="ttname"><a href="dr__ir__macros_8h.html#a0cf77f656e96684678c30892c0c718af">OPND_CREATE_INT8</a></div><div class="ttdeci">#define OPND_CREATE_INT8(val)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros.h:134</div></div>
 <div class="ttc" id="adr__ir__macros_8h_html_aa32fcd12a03eb97ef42ded7b68a85203"><div class="ttname"><a href="dr__ir__macros_8h.html#aa32fcd12a03eb97ef42ded7b68a85203">OPND_CREATE_INT32</a></div><div class="ttdeci">#define OPND_CREATE_INT32(val)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros.h:122</div></div>
+<div class="ttc" id="adr__ir__macros__aarch64_8h_html_abc0827a4d3590c1f4dbb10e85f7326e6"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#abc0827a4d3590c1f4dbb10e85f7326e6">OPND_CREATE_DOUBLE</a></div><div class="ttdeci">#define OPND_CREATE_DOUBLE()</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:84</div></div>
 <div class="ttc" id="adr__ir__macros__aarch64_8h_html_aaaaa7dc76fd64fbfe69faa2be5c1c909"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#aaaaa7dc76fd64fbfe69faa2be5c1c909">OPND_CREATE_INT</a></div><div class="ttdeci">#define OPND_CREATE_INT(val)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:102</div></div>
+<div class="ttc" id="adr__ir__opnd_8h_html_a0411cd49bb5b71852cecd93bcbf0ca2da4459927426a03d9d7ee499f43cbf7a95"><div class="ttname"><a href="dr__ir__opnd_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da4459927426a03d9d7ee499f43cbf7a95">OPSZ_2b</a></div><div class="ttdeci">@ OPSZ_2b</div><div class="ttdef"><b>Definition:</b> dr_ir_opnd.h:165</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a8ef3aeb840262664fad8e94937ae82c2"><div class="ttname"><a href="dr__ir__opnd_8h.html#a8ef3aeb840262664fad8e94937ae82c2">reg_resize_to_opsz</a></div><div class="ttdeci">DR_API reg_id_t reg_resize_to_opsz(reg_id_t reg, opnd_size_t sz)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_ae6cf2a1e25144a7c81b3b3a4a89f8dda"><div class="ttname"><a href="dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda">opnd_create_reg</a></div><div class="ttdeci">DR_API INSTR_INLINE opnd_t opnd_create_reg(reg_id_t r)</div></div>
 <div class="ttc" id="adr__ir__opcodes__arm_8h_html_a61dadd085c1777f559549e05962b2c9eac96c42b4e0362fd9d7f86d59aaa44746"><div class="ttname"><a href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9eac96c42b4e0362fd9d7f86d59aaa44746">OP_ands</a></div><div class="ttdeci">@ OP_ands</div><div class="ttdef"><b>Definition:</b> dr_ir_opcodes_arm.h:77</div></div>
@@ -14031,10 +14080,11 @@ Macros</h2></td></tr>
 <div class="ttc" id="adr__ir__opnd_8h_html_a5213b9a7ac63b871a59d95ab6fb4ec74"><div class="ttname"><a href="dr__ir__opnd_8h.html#a5213b9a7ac63b871a59d95ab6fb4ec74">opnd_is_immed</a></div><div class="ttdeci">DR_API INSTR_INLINE bool opnd_is_immed(opnd_t opnd)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_ac3ba48b3ee94afa0dde7fa025c199892"><div class="ttname"><a href="dr__ir__opnd_8h.html#ac3ba48b3ee94afa0dde7fa025c199892">opnd_get_reg</a></div><div class="ttdeci">DR_API reg_id_t opnd_get_reg(opnd_t opnd)</div></div>
 <div class="ttc" id="adr__ir__macros__aarch64_8h_html_abbaf6e38e7df5134310a779b97e16be1"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#abbaf6e38e7df5134310a779b97e16be1">OPND_CREATE_LSL</a></div><div class="ttdeci">#define OPND_CREATE_LSL()</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:109</div></div>
+<div class="ttc" id="adr__ir__opnd_8h_html_a3eea72cb2bcbd6d414b327f0318589dc"><div class="ttname"><a href="dr__ir__opnd_8h.html#a3eea72cb2bcbd6d414b327f0318589dc">opnd_create_immed_int</a></div><div class="ttdeci">DR_API opnd_t opnd_create_immed_int(ptr_int_t i, opnd_size_t data_size)</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.19031 --- Tue Feb 8 2022 18:57:37 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.19033 --- Fri Feb 11 2022 03:05:14 &nbsp; <img border=0 src="favicon.png">
 </small></address>

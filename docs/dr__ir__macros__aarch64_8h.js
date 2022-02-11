@@ -74,6 +74,7 @@
     [ "INSTR_CREATE_fmov_general", "dr__ir__macros__aarch64_8h.html#a492c5fce801b7dfbc9c6ab801601a23b", null ],
     [ "INSTR_CREATE_fmov_scalar", "dr__ir__macros__aarch64_8h.html#a983004a275780fdad98e1bf5e8bd3824", null ],
     [ "INSTR_CREATE_fmov_scalar_imm", "dr__ir__macros__aarch64_8h.html#a2e89e0b76296aea926301caff214b54b", null ],
+    [ "INSTR_CREATE_fmov_upper_vec", "dr__ir__macros__aarch64_8h.html#a769354826d534d97f841a6bc8e3ecd34", null ],
     [ "INSTR_CREATE_fmov_vector_imm", "dr__ir__macros__aarch64_8h.html#a6a2de86bc1ac89b49ad589bba0d1908c", null ],
     [ "INSTR_CREATE_fmsub_scalar", "dr__ir__macros__aarch64_8h.html#a462fbc94f0ae8a3e6a1fa5e4d6ab022f", null ],
     [ "INSTR_CREATE_fmul_scalar", "dr__ir__macros__aarch64_8h.html#a6312cebc9c63e55df7c31b7183fd9b44", null ],
