@@ -1,5 +1,6 @@
 [
     [ "basic_block_count", "struct__dr__stats__t.html#afa01997cb47c36a0f88a200fc96a695b", null ],
+    [ "num_cache_exits", "struct__dr__stats__t.html#aead5b12eecd7a7779430fd11a064c541", null ],
     [ "num_native_signals", "struct__dr__stats__t.html#a92daff8ba752aaadbe01e1732064945d", null ],
     [ "num_threads_created", "struct__dr__stats__t.html#a8eb76dd0abc19314d4c8353ed9b4d58f", null ],
     [ "peak_num_threads", "struct__dr__stats__t.html#afac412adc13d342357206eff91bebf0f", null ],
