@@ -24,7 +24,8 @@
       [ "DRWRAP_SAFE_READ_RETADDR", "group__drwrap.html#ggab82c71baab4fe0c5f9962383818b9c92af1b2f3860316577a15e3430942febc8a", null ],
       [ "DRWRAP_SAFE_READ_ARGS", "group__drwrap.html#ggab82c71baab4fe0c5f9962383818b9c92ab7a628a50b1344c943a703a72e5cfce9", null ],
       [ "DRWRAP_NO_FRILLS", "group__drwrap.html#ggab82c71baab4fe0c5f9962383818b9c92aeb299993e17993cb86912f93391f6b86", null ],
-      [ "DRWRAP_FAST_CLEANCALLS", "group__drwrap.html#ggab82c71baab4fe0c5f9962383818b9c92add150e3e7ba4ee203a045b936f872b4b", null ]
+      [ "DRWRAP_FAST_CLEANCALLS", "group__drwrap.html#ggab82c71baab4fe0c5f9962383818b9c92add150e3e7ba4ee203a045b936f872b4b", null ],
+      [ "DRWRAP_INVERT_CONTROL", "group__drwrap.html#ggab82c71baab4fe0c5f9962383818b9c92a4d963b27379bab4b820edeb0165aace6", null ]
     ] ],
     [ "drwrap_wrap_flags_t", "group__drwrap.html#ga16cc419209fcb0024d010599bb82aa76", [
       [ "DRWRAP_FLAGS_NONE", "group__drwrap.html#gga16cc419209fcb0024d010599bb82aa76a99c61e65b5338309f7588e464f706072", null ],
@@ -42,6 +43,8 @@
     [ "drwrap_get_retval", "group__drwrap.html#gae993f55e025cf80ae67ed398b35a1b61", null ],
     [ "drwrap_get_stats", "group__drwrap.html#gaff958909001824afeeaee334dc612e51", null ],
     [ "drwrap_init", "group__drwrap.html#ga23837833101ebc340ac7de6e8340bb4a", null ],
+    [ "drwrap_invoke_analysis", "group__drwrap.html#gaccffe18622c7604a78108a8248ffa7e4", null ],
+    [ "drwrap_invoke_insert", "group__drwrap.html#gad76d806076ebd9ec79305dbdd50d6253", null ],
     [ "drwrap_is_post_wrap", "group__drwrap.html#ga16fc2d260f5ebead724d5eb98bf13ac2", null ],
     [ "drwrap_is_redirect_requested", "group__drwrap.html#ga8e7cf2d5299830a3284903fc4eb19705", null ],
     [ "drwrap_is_replaced", "group__drwrap.html#ga3f23eb9d8bd537881dcea9ecb19b5a4f", null ],

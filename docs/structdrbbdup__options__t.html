@@ -63,6 +63,10 @@ Data Fields</h2></td></tr>
 <tr class="separator:a49613a119d398f0385d5d97a39fadc10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af05addf6a30e11e91b3d7e0ab2c7e221"><td class="memItemLeft" align="right" valign="top">uintptr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrbbdup__options__t.html#af05addf6a30e11e91b3d7e0ab2c7e221">max_case_encoding</a></td></tr>
 <tr class="separator:af05addf6a30e11e91b3d7e0ab2c7e221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fe3265ce76d4e5121dc515e3d6b3394"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__drbbdup.html#ga0b38993499a9e19643c9f247b327b14b">drbbdup_analyze_case_ex_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrbbdup__options__t.html#a2fe3265ce76d4e5121dc515e3d6b3394">analyze_case_ex</a></td></tr>
+<tr class="separator:a2fe3265ce76d4e5121dc515e3d6b3394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a1bfa6f9e2afd5732d82fdbaf1995d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__drbbdup.html#ga47176d17883196c07d77bcde5ad42a52">drbbdup_instrument_instr_ex_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrbbdup__options__t.html#a1a1bfa6f9e2afd5732d82fdbaf1995d5">instrument_instr_ex</a></td></tr>
+<tr class="separator:a1a1bfa6f9e2afd5732d82fdbaf1995d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Specifies the options when initialising drbbdup. <code>set_up_bb_dups</code> and <code>instrument_instr</code> cannot be NULL, while <code>non_default_case_limit</code> must be greater than zero. </p>
@@ -94,6 +98,21 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>A user-defined call-back function that analyzes a basic block for a particular case. </p>
+
+</div>
+</div>
+<a id="a2fe3265ce76d4e5121dc515e3d6b3394"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fe3265ce76d4e5121dc515e3d6b3394">&#9670;&nbsp;</a></span>analyze_case_ex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__drbbdup.html#ga0b38993499a9e19643c9f247b327b14b">drbbdup_analyze_case_ex_t</a> drbbdup_options_t::analyze_case_ex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Identical to analyze_case but taking extra parameters and with a return value. Only one of this field or the analyze_case field can be set. </p>
 
 </div>
 </div>
@@ -199,7 +218,22 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>A user-defined call-back function that instruments an instruction with respect to a particular case. </p>
+<p>A user-defined call-back function that instruments an instruction with respect to a particular case. Either this or the instrument_instr_ex field must be set. </p>
+
+</div>
+</div>
+<a id="a1a1bfa6f9e2afd5732d82fdbaf1995d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a1bfa6f9e2afd5732d82fdbaf1995d5">&#9670;&nbsp;</a></span>instrument_instr_ex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__drbbdup.html#ga47176d17883196c07d77bcde5ad42a52">drbbdup_instrument_instr_ex_t</a> drbbdup_options_t::instrument_instr_ex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Identical to instrument_instr but taking extra parameters and with a return value. Either this or the instrument_instr field must be set. </p>
 
 </div>
 </div>
@@ -318,5 +352,5 @@ Data Fields</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.1 --- Mon Feb 14 2022 20:03:29 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.19040 --- Fri Feb 18 2022 03:05:13 &nbsp; <img border=0 src="favicon.png">
 </small></address>

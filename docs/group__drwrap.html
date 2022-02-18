@@ -106,7 +106,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962383818b9c92aeb299993e17993cb86912f93391f6b86">DRWRAP_NO_FRILLS</a> = 0x04, 
 <br />
-&#160;&#160;<a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962383818b9c92add150e3e7ba4ee203a045b936f872b4b">DRWRAP_FAST_CLEANCALLS</a> = 0x08
+&#160;&#160;<a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962383818b9c92add150e3e7ba4ee203a045b936f872b4b">DRWRAP_FAST_CLEANCALLS</a> = 0x08, 
+<br />
+&#160;&#160;<a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962383818b9c92a4d963b27379bab4b820edeb0165aace6">DRWRAP_INVERT_CONTROL</a> = 0x10
 <br />
  }</td></tr>
 <tr class="separator:gab82c71baab4fe0c5f9962383818b9c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,6 +119,10 @@ Functions</h2></td></tr>
 <tr class="separator:ga23837833101ebc340ac7de6e8340bb4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0e58babc53301c4ade4027dc1e09a088"><td class="memItemLeft" align="right" valign="top">DR_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga0e58babc53301c4ade4027dc1e09a088">drwrap_exit</a> (void)</td></tr>
 <tr class="separator:ga0e58babc53301c4ade4027dc1e09a088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaccffe18622c7604a78108a8248ffa7e4"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#gaccffe18622c7604a78108a8248ffa7e4">drwrap_invoke_analysis</a> (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, bool for_trace, bool translating, OUT void **user_data)</td></tr>
+<tr class="separator:gaccffe18622c7604a78108a8248ffa7e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad76d806076ebd9ec79305dbdd50d6253"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#gad76d806076ebd9ec79305dbdd50d6253">drwrap_invoke_insert</a> (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, <a class="el" href="structinstr__t.html">instr_t</a> *inst, <a class="el" href="structinstr__t.html">instr_t</a> *where, bool for_trace, bool translating, void *user_data)</td></tr>
+<tr class="separator:gad76d806076ebd9ec79305dbdd50d6253"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga488a6566cd760a3919bdd2f49a6d672f"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga488a6566cd760a3919bdd2f49a6d672f">drwrap_replace</a> (app_pc original, app_pc replacement, bool override)</td></tr>
 <tr class="separator:ga488a6566cd760a3919bdd2f49a6d672f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0ae2e383b0005a46848c7d0497be563a"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga0ae2e383b0005a46848c7d0497be563a">drwrap_replace_native</a> (app_pc original, app_pc replacement, bool at_entry, uint stack_adjust, void *user_data, bool override)</td></tr>
@@ -340,6 +346,10 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ggab82c71baab4fe0c5f9962383818b9c92add150e3e7ba4ee203a045b936f872b4b"></a>DRWRAP_FAST_CLEANCALLS&#160;</td><td class="fielddoc"><p>If this flag is set, then a leaner clean call is used to invoke wrap pre callbacks. This clean call assumes that all wrap requests are for function entrance points and that standard ABI calling conventions are used for those functions. This means that caller-saved registers may not be saved and thus will have invalid values in <a class="el" href="group__drwrap.html#ga9a33b1049986dd8975e94827f5c0e759">drwrap_get_mcontext()</a>. When using this setting and skipping a function via <a class="el" href="group__drwrap.html#gae539b1092ba0c1a3e86172964a671805">drwrap_skip_call()</a> (or calling <a class="el" href="dr__ir__utils_8h.html#ac3aa7797e4e3ce2f741f99712bb704f5">dr_redirect_execution()</a> directly), setting xmm registers (in particular those used as return values) will work correctly (of course, be sure to retrieve the existing xmm values via <a class="el" href="group__drwrap.html#ga9a33b1049986dd8975e94827f5c0e759">drwrap_get_mcontext()</a> or drwrap_get_mcontext_ex(DR_MC_ALL) first).</p>
 <p>Only set this flag if you are certain that all uses of wrapping in your client and all libraries it uses can abide the above restrictions. Once set, this flag cannot be unset. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggab82c71baab4fe0c5f9962383818b9c92a4d963b27379bab4b820edeb0165aace6"></a>DRWRAP_INVERT_CONTROL&#160;</td><td class="fielddoc"><p>This flag must only be set before calling <a class="el" href="group__drwrap.html#ga23837833101ebc340ac7de6e8340bb4a">drwrap_init()</a>. If set, drwrap will not register for the drmgr analysis or insertion events. The user must instead explicitly invoke <a class="el" href="group__drwrap.html#gaccffe18622c7604a78108a8248ffa7e4">drwrap_invoke_analysis()</a> and <a class="el" href="group__drwrap.html#gad76d806076ebd9ec79305dbdd50d6253">drwrap_invoke_insert()</a> from its own handler for those events. This "inverted control" mode is provided for better compatibility with drbbdup where the user wishes to only perform wrapping in a subset of the drbbdup cases.</p>
+<p>Only wrapping is supported this way: <a class="el" href="group__drwrap.html#ga488a6566cd760a3919bdd2f49a6d672f">drwrap_replace()</a> and <a class="el" href="group__drwrap.html#ga0ae2e383b0005a46848c7d0497be563a">drwrap_replace_native()</a> are not supported when this flag is set.</p>
+<p>As this is a global change in how drwrap operates, be careful that its use does not conflict with drwrap uses in any libraries or joint clients. </p>
 </td></tr>
 </table>
 
@@ -581,7 +591,126 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Initializes the drwrap extension. Must be called prior to any of the other routines. Can be called multiple times (by separate components, normally) but each call must be paired with a corresponding call to <a class="el" href="group__drwrap.html#ga0e58babc53301c4ade4027dc1e09a088">drwrap_exit()</a>.</p>
+<p>Some drwrap behavior (such as <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962383818b9c92a4d963b27379bab4b820edeb0165aace6">DRWRAP_INVERT_CONTROL</a>) must be set by calling <a class="el" href="group__drwrap.html#gae2cc2affaf879182ba4d92299704c65f">drwrap_set_global_flags()</a> <em>before</em> calling this routine.</p>
 <dl class="section return"><dt>Returns</dt><dd>whether successful. </dd></dl>
+
+</div>
+</div>
+<a id="gaccffe18622c7604a78108a8248ffa7e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaccffe18622c7604a78108a8248ffa7e4">&#9670;&nbsp;</a></span>drwrap_invoke_analysis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a> drwrap_invoke_analysis </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>drcontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *&#160;</td>
+          <td class="paramname"><em>bb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>for_trace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>translating</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OUT void **&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>When <a class="el" href="group__drwrap.html#gab82c71baab4fe0c5f9962383818b9c92">drwrap_global_flags_t</a> <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962383818b9c92a4d963b27379bab4b820edeb0165aace6">DRWRAP_INVERT_CONTROL</a> is set, the user must call this function from a drmgr analysis event handler (typically registered with <a class="el" href="group__drmgr.html#ga83a5fc96944e10bd7356e0c492c93966">drmgr_register_bb_instrumentation_event()</a> or if using drbbdup with the analyze_case_ex field in <a class="el" href="structdrbbdup__options__t.html">drbbdup_options_t</a>). It is up to the user to control the ordering, since the priority <a class="el" href="group__drwrap.html#ggaac34dfe6c6b73b43a4656c9dce041034ada17e11e67b93129fede7890e032bbbd">DRMGR_PRIORITY_INSERT_DRWRAP</a> will not apply. </p>
+
+</div>
+</div>
+<a id="gad76d806076ebd9ec79305dbdd50d6253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad76d806076ebd9ec79305dbdd50d6253">&#9670;&nbsp;</a></span>drwrap_invoke_insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a> drwrap_invoke_insert </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>drcontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *&#160;</td>
+          <td class="paramname"><em>bb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
+          <td class="paramname"><em>inst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
+          <td class="paramname"><em>where</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>for_trace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>translating</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>When <a class="el" href="group__drwrap.html#gab82c71baab4fe0c5f9962383818b9c92">drwrap_global_flags_t</a> <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962383818b9c92a4d963b27379bab4b820edeb0165aace6">DRWRAP_INVERT_CONTROL</a> is set, the user must call this function from a drmgr insertion event handler (typically registered with <a class="el" href="group__drmgr.html#ga83a5fc96944e10bd7356e0c492c93966">drmgr_register_bb_instrumentation_event()</a> or if using drbbdup with the instrument_instr_ex field in <a class="el" href="structdrbbdup__options__t.html">drbbdup_options_t</a>). It is up to the user to control the ordering, since the priority <a class="el" href="group__drwrap.html#ggaac34dfe6c6b73b43a4656c9dce041034ada17e11e67b93129fede7890e032bbbd">DRMGR_PRIORITY_INSERT_DRWRAP</a> will not apply. The separate "where" handles cases such as with drbbdup's final app instruction (which cannot be duplicated into each case) or with emulation where the instruction "inst" to monitor is distinct from the location "where" to insert instrumentation. </p>
 
 </div>
 </div>
@@ -794,7 +923,9 @@ Functions</h2></td></tr>
 <p>Only one replacement is supported per target address. If a replacement already exists for <code>original</code>, this function fails unless <code>override</code> is true, in which case it replaces the prior replacement. To remove a replacement, pass NULL for <code>replacement</code> and <b>true</b> for <code>override</code>. When removing or replacing a prior replacement, existing replaced code in the code cache will be flushed lazily: i.e., there may be some execution in other threads after this call is made.</p>
 <p>Only the first target replacement address in a basic block will be honored. All code after that address is removed.</p>
 <p>When replacing a function, it is up to the user to ensure that the replacement mirrors the calling convention and other semantics of the original function. The replacement code will be executed as application code, NOT as client code.</p>
-<dl class="section note"><dt>Note</dt><dd>The priority of the app2app pass used here is DRMGR_PRIORITY_APP2APP_DRWRAP and its name is DRMGR_PRIORITY_NAME_DRWRAP.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The priority of the app2app pass used here is DRMGR_PRIORITY_APP2APP_DRWRAP and its name is DRMGR_PRIORITY_NAME_DRWRAP.</dd>
+<dd>
+Not supported if <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962383818b9c92a4d963b27379bab4b820edeb0165aace6">DRWRAP_INVERT_CONTROL</a> is set.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>whether successful. </dd></dl>
 
 </div>
@@ -876,7 +1007,9 @@ The application stack address at which its return address is stored is available
 <dd>
 The priority of the app2app pass used here is DRMGR_PRIORITY_APP2APP_DRWRAP and its name is DRMGR_PRIORITY_NAME_DRWRAP.</dd>
 <dd>
-Far calls are not supported.</dd></dl>
+Far calls are not supported.</dd>
+<dd>
+Not supported if <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962383818b9c92a4d963b27379bab4b820edeb0165aace6">DRWRAP_INVERT_CONTROL</a> is set.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>whether successful. </dd></dl>
 
 </div>
@@ -1194,5 +1327,5 @@ Far calls are not supported.</dd></dl>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.1 --- Mon Feb 14 2022 20:03:29 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.19040 --- Fri Feb 18 2022 03:05:13 &nbsp; <img border=0 src="favicon.png">
 </small></address>
