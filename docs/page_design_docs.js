@@ -88,41 +88,41 @@
       [ "Code Quality", "page_jitopt.html#autotoc_md186", null ]
     ] ],
     [ "Restartable Sequences", "page_rseq.html", [
-      [ "Background", "page_rseq.html#autotoc_md227", [
-        [ "Why must DynamoRIO handle Restartable Sequences specially?", "page_rseq.html#autotoc_md228", null ],
-        [ "RSEQ API/ABI", "page_rseq.html#autotoc_md229", null ]
+      [ "Background", "page_rseq.html#autotoc_md248", [
+        [ "Why must DynamoRIO handle Restartable Sequences specially?", "page_rseq.html#autotoc_md249", null ],
+        [ "RSEQ API/ABI", "page_rseq.html#autotoc_md250", null ]
       ] ],
-      [ "Challenges for Handling RSEQ in DR", "page_rseq.html#autotoc_md230", [
-        [ "Identifying Restartable Sequences", "page_rseq.html#autotoc_md231", null ],
-        [ "Running Restartable Sequences under DynamoRIO", "page_rseq.html#autotoc_md232", null ]
+      [ "Challenges for Handling RSEQ in DR", "page_rseq.html#autotoc_md251", [
+        [ "Identifying Restartable Sequences", "page_rseq.html#autotoc_md252", null ],
+        [ "Running Restartable Sequences under DynamoRIO", "page_rseq.html#autotoc_md253", null ]
       ] ],
-      [ "The \"Run Twice\" Solution", "page_rseq.html#autotoc_md233", [
-        [ "Running Twice", "page_rseq.html#autotoc_md234", null ],
-        [ "Rejected Alternatives", "page_rseq.html#autotoc_md235", [
-          [ "Emulate Restartable Sequences using CPU Affinity", "page_rseq.html#autotoc_md236", null ],
-          [ "Emulate Restartable Sequences using a Per-Sequence Mutex", "page_rseq.html#autotoc_md237", null ],
-          [ "Have DR Generate Restartable Sequence Fragment Groups", "page_rseq.html#autotoc_md238", null ]
+      [ "The \"Run Twice\" Solution", "page_rseq.html#autotoc_md254", [
+        [ "Running Twice", "page_rseq.html#autotoc_md255", null ],
+        [ "Rejected Alternatives", "page_rseq.html#autotoc_md256", [
+          [ "Emulate Restartable Sequences using CPU Affinity", "page_rseq.html#autotoc_md257", null ],
+          [ "Emulate Restartable Sequences using a Per-Sequence Mutex", "page_rseq.html#autotoc_md258", null ],
+          [ "Have DR Generate Restartable Sequence Fragment Groups", "page_rseq.html#autotoc_md259", null ]
         ] ]
       ] ],
-      [ "\"Run Twice\" Implementation Details", "page_rseq.html#autotoc_md239", [
-        [ "Fallback: Disable Rseq", "page_rseq.html#autotoc_md240", null ],
-        [ "Identifying Rseq Sequences", "page_rseq.html#autotoc_md241", null ],
-        [ "First (Instrumented) Execution", "page_rseq.html#autotoc_md242", null ],
-        [ "Second (Restartable) Execution", "page_rseq.html#autotoc_md243", [
-          [ "Application State Barrier", "page_rseq.html#autotoc_md244", null ],
-          [ "Target the Start, Not the Abort Handler", "page_rseq.html#autotoc_md245", null ],
-          [ "Local Copy", "page_rseq.html#autotoc_md246", null ],
-          [ "Marking Restartable", "page_rseq.html#autotoc_md247", null ],
-          [ "Where to Locate the rseq_cs?", "page_rseq.html#autotoc_md248", null ],
-          [ "Clearing the Rseq Bounds", "page_rseq.html#autotoc_md249", null ],
-          [ "Abort Handler", "page_rseq.html#autotoc_md250", null ],
-          [ "Obtaining Cache Addresses for rseq_cs", "page_rseq.html#autotoc_md251", null ],
-          [ "Testing", "page_rseq.html#autotoc_md252", null ]
+      [ "\"Run Twice\" Implementation Details", "page_rseq.html#autotoc_md260", [
+        [ "Fallback: Disable Rseq", "page_rseq.html#autotoc_md261", null ],
+        [ "Identifying Rseq Sequences", "page_rseq.html#autotoc_md262", null ],
+        [ "First (Instrumented) Execution", "page_rseq.html#autotoc_md263", null ],
+        [ "Second (Restartable) Execution", "page_rseq.html#autotoc_md264", [
+          [ "Application State Barrier", "page_rseq.html#autotoc_md265", null ],
+          [ "Target the Start, Not the Abort Handler", "page_rseq.html#autotoc_md266", null ],
+          [ "Local Copy", "page_rseq.html#autotoc_md267", null ],
+          [ "Marking Restartable", "page_rseq.html#autotoc_md268", null ],
+          [ "Where to Locate the rseq_cs?", "page_rseq.html#autotoc_md269", null ],
+          [ "Clearing the Rseq Bounds", "page_rseq.html#autotoc_md270", null ],
+          [ "Abort Handler", "page_rseq.html#autotoc_md271", null ],
+          [ "Obtaining Cache Addresses for rseq_cs", "page_rseq.html#autotoc_md272", null ],
+          [ "Testing", "page_rseq.html#autotoc_md273", null ]
         ] ]
       ] ],
-      [ "Future Work", "page_rseq.html#autotoc_md253", null ],
-      [ "Limitations", "page_rseq.html#autotoc_md254", null ],
-      [ "Citations", "page_rseq.html#autotoc_md255", null ]
+      [ "Future Work", "page_rseq.html#autotoc_md274", null ],
+      [ "Limitations", "page_rseq.html#autotoc_md275", null ],
+      [ "Citations", "page_rseq.html#autotoc_md276", null ]
     ] ],
     [ "Exclusive Monitors", "page_ldstex.html", [
       [ "Overview", "page_ldstex.html#autotoc_md187", null ],
@@ -152,17 +152,43 @@
       [ "Concerns", "page_external_decoder.html#autotoc_md171", null ]
     ] ],
     [ "Emulating x86 Scatter and Gather Instructions", "page_scatter_gather_emulation.html", [
-      [ "Background", "page_scatter_gather_emulation.html#autotoc_md256", null ],
-      [ "Problem Statement", "page_scatter_gather_emulation.html#autotoc_md257", null ],
-      [ "Design", "page_scatter_gather_emulation.html#autotoc_md258", [
-        [ "Scatter/gather Instruction Expansion", "page_scatter_gather_emulation.html#autotoc_md259", null ],
-        [ "Drreg Support For Multi-phase Reservations", "page_scatter_gather_emulation.html#autotoc_md260", [
-          [ "State Restoration For Drreg", "page_scatter_gather_emulation.html#autotoc_md261", null ]
+      [ "Background", "page_scatter_gather_emulation.html#autotoc_md277", null ],
+      [ "Problem Statement", "page_scatter_gather_emulation.html#autotoc_md278", null ],
+      [ "Design", "page_scatter_gather_emulation.html#autotoc_md279", [
+        [ "Scatter/gather Instruction Expansion", "page_scatter_gather_emulation.html#autotoc_md280", null ],
+        [ "Drreg Support For Multi-phase Reservations", "page_scatter_gather_emulation.html#autotoc_md281", [
+          [ "State Restoration For Drreg", "page_scatter_gather_emulation.html#autotoc_md282", null ]
         ] ],
-        [ "Simplifying Instrumentation For Emulated Instructions", "page_scatter_gather_emulation.html#autotoc_md262", null ],
-        [ "Support For Vector Reservation", "page_scatter_gather_emulation.html#autotoc_md263", null ],
-        [ "Using The Expansion In DR Clients", "page_scatter_gather_emulation.html#autotoc_md264", null ]
+        [ "Simplifying Instrumentation For Emulated Instructions", "page_scatter_gather_emulation.html#autotoc_md283", null ],
+        [ "Support For Vector Reservation", "page_scatter_gather_emulation.html#autotoc_md284", null ],
+        [ "Using The Expansion In DR Clients", "page_scatter_gather_emulation.html#autotoc_md285", null ]
       ] ],
-      [ "Testing On Large Apps", "page_scatter_gather_emulation.html#autotoc_md265", null ]
+      [ "Testing On Large Apps", "page_scatter_gather_emulation.html#autotoc_md286", null ]
+    ] ],
+    [ "Multi-Window Memtraces", "page_multi_trace_window.html", [
+      [ "Overview", "page_multi_trace_window.html#autotoc_md207", null ],
+      [ "Initial Use Case: SPEC2017", "page_multi_trace_window.html#autotoc_md208", null ],
+      [ "Design Point: Separate Traces v. Merged-with-Markers", "page_multi_trace_window.html#autotoc_md209", [
+        [ "Separate raw files", "page_multi_trace_window.html#autotoc_md210", null ],
+        [ "Splitting during raw2trace", "page_multi_trace_window.html#autotoc_md211", null ],
+        [ "Splitting after raw2trace using an analyzer", "page_multi_trace_window.html#autotoc_md212", null ],
+        [ "Decision: Split the final trace with an analyzer", "page_multi_trace_window.html#autotoc_md213", null ]
+      ] ],
+      [ "Design Point: Continuous Control v. Re-Attach", "page_multi_trace_window.html#autotoc_md214", null ],
+      [ "Design Point: Instrumentation Dispatch v. Flushing", "page_multi_trace_window.html#autotoc_md215", [
+        [ "AArch64 support for drbbdup", "page_multi_trace_window.html#autotoc_md216", null ],
+        [ "Function wrapping support for drbbdup", "page_multi_trace_window.html#autotoc_md217", null ],
+        [ "Write-xor-execute support for drbbdup", "page_multi_trace_window.html#autotoc_md218", null ],
+        [ "Emulation support for drbbdup", "page_multi_trace_window.html#autotoc_md219", null ],
+        [ "Consider partial detach with PMU instruction counting for non-tracing windows?", "page_multi_trace_window.html#autotoc_md220", null ]
+      ] ],
+      [ "Handling Phase Transitions", "page_multi_trace_window.html#autotoc_md221", [
+        [ "Key step: Add end-of-block phase change check", "page_multi_trace_window.html#autotoc_md222", null ],
+        [ "Proposal A: Separate raw files split at flush time", "page_multi_trace_window.html#autotoc_md223", null ],
+        [ "Proposal B (winner): Label buffers with owning window", "page_multi_trace_window.html#autotoc_md224", null ],
+        [ "Proposal C: Trigger thread identifies buffer transition point of the other threads", "page_multi_trace_window.html#autotoc_md225", null ],
+        [ "Decision: Proposal B", "page_multi_trace_window.html#autotoc_md226", null ]
+      ] ],
+      [ "Online Traces", "page_multi_trace_window.html#autotoc_md227", null ]
     ] ]
 ],

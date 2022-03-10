@@ -118,7 +118,13 @@ If non-zero, this sets a maximum size on the amount of raw trace data gathered f
 If non-zero, this sets a maximum size on the amount of trace entry references (of any type: instructions, loads, stores, markers, etc.) recorded. Once reached, instrumented execution continues, but no further data is recorded. This is similar to -exit_after_tracing but without terminating the process.The reference count is approximate.</li>
 <li><b>-trace_after_instrs</b> <br  />
 <em>default value: 0</em> <br  />
-If non-zero, this causes tracing to be suppressed until this many dynamic instruction executions are observed. At that point, regular tracing is put into place. The threshold should be considered approximate, especially for larger values. Switching to regular tracing takes some amount of time during which other threads than the one that triggered the switch can continue to execute, resulting in a larger count of executed instructions before tracing actually starts than this given threshold. Use -max_trace_size or -max_global_trace_refs to set a limit on the subsequent trace length.</li>
+If non-zero, this causes tracing to be suppressed until this many dynamic instruction executions are observed from the start of the application. At that point, regular tracing is put into place. The threshold should be considered approximate, especially for larger values. Use -trace_for_instrs, -max_trace_size, or -max_global_trace_refs to set a limit on the subsequent trace length. Use -retrace_every_instrs to trace repeatedly.</li>
+<li><b>-trace_for_instrs</b> <br  />
+<em>default value: 0</em> <br  />
+If non-zero, this stops recording a trace after the specified number of instructions are traced. Unlike -exit_after_tracing, which kills the application (and counts data as well as instructions), the application continues executing. This can be combined with -retrace_every_instrs. The actual trace period may vary slightly from this number due to optimizations that reduce the overhead of instruction counting.</li>
+<li><b>-retrace_every_instrs</b> <br  />
+<em>default value: 0</em> <br  />
+This option augments -trace_for_instrs. After tracing concludes, this option causes non-traced instructions to be counted and after the number specified by this option, tracing start up again for the -trace_for_instrs duration. This process repeats itself. This can be combined with -trace_after_instrs for an initial period of non-tracing.</li>
 <li><b>-exit_after_tracing</b> <br  />
 <em>default value: 0</em> <br  />
 If non-zero, after tracing the specified number of references, the process is exited with an exit code of 0. The reference count is approximate. Use -max_global_trace_refs instead to avoid terminating the process.</li>
@@ -259,5 +265,5 @@ When true, this option enables the drstatecmp library that performs state compar
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.19052 --- Fri Mar 4 2022 03:07:52 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.19061 --- Thu Mar 10 2022 21:01:58 &nbsp; <img border=0 src="favicon.png">
 </small></address>

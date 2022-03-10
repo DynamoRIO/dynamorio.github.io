@@ -172,7 +172,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aab9bc211e1e5f2f567a085d825e37745">TRACE_MARKER_TYPE_VERSION</a>, 
 <br />
-&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a3a011c218cb80ceeb9e3105d449e3280">TRACE_MARKER_TYPE_RSEQ_ABORT</a>
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a3a011c218cb80ceeb9e3105d449e3280">TRACE_MARKER_TYPE_RSEQ_ABORT</a>, 
+<br />
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aeb50b9e4d2eb64f29778af21501c197a">TRACE_MARKER_TYPE_WINDOW_ID</a>
 <br />
  }</td></tr>
 <tr class="separator:aa7f51b43d8f1e20dc45e3618684b15e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -322,6 +324,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9aab9bc211e1e5f2f567a085d825e37745"></a>TRACE_MARKER_TYPE_VERSION&#160;</td><td class="fielddoc"><p>The marker value contains the version of the trace format: a value of type <a class="el" href="trace__entry_8h.html#a3a78cb9ac4c3afc1444673fb9a407d76">trace_version_t</a>. The marker is present in the first few entries of a trace file. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a3a011c218cb80ceeb9e3105d449e3280"></a>TRACE_MARKER_TYPE_RSEQ_ABORT&#160;</td><td class="fielddoc"><p>Serves to further identify <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a3aa19ac796e054c478f0a6ec99286020">TRACE_MARKER_TYPE_KERNEL_EVENT</a> as a restartable sequence abort handler. This will always be immediately followed by <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a3aa19ac796e054c478f0a6ec99286020">TRACE_MARKER_TYPE_KERNEL_EVENT</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9aeb50b9e4d2eb64f29778af21501c197a"></a>TRACE_MARKER_TYPE_WINDOW_ID&#160;</td><td class="fielddoc"><p>Identifies in the marker value the ordinal of a window during a multi-window tracing run (see the options -trace_for_instrs and -retrace_every_instrs). When a marker with an ordinal value different from the last-seen marker appears, a time gap may exist immediately before this new marker. </p>
 </td></tr>
 </table>
 
@@ -537,5 +541,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.19052 --- Fri Mar 4 2022 03:07:48 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.19061 --- Thu Mar 10 2022 21:01:55 &nbsp; <img border=0 src="favicon.png">
 </small></address>

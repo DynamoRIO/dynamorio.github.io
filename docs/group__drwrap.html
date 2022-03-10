@@ -349,7 +349,7 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ggab82c71baab4fe0c5f9962383818b9c92a4d963b27379bab4b820edeb0165aace6"></a>DRWRAP_INVERT_CONTROL&#160;</td><td class="fielddoc"><p>This flag must only be set before calling <a class="el" href="group__drwrap.html#ga23837833101ebc340ac7de6e8340bb4a">drwrap_init()</a>. If set, drwrap will not register for the drmgr insertion event. The user must instead explicitly invoke <a class="el" href="group__drwrap.html#gad76d806076ebd9ec79305dbdd50d6253">drwrap_invoke_insert()</a> and <a class="el" href="group__drwrap.html#gad82b70d1b36030cbeec5894e0f9a9ff8">drwrap_invoke_insert_cleanup_only()</a> from its own handler for the insertion event. This "inverted control" mode is provided for better compatibility with drbbdup where the user wishes to only perform wrapping in a subset of the drbbdup cases. For cases where wrapping should occur, <a class="el" href="group__drwrap.html#gad76d806076ebd9ec79305dbdd50d6253">drwrap_invoke_insert()</a> should be called; for cases where no wrapping should occcur, <a class="el" href="group__drwrap.html#gad82b70d1b36030cbeec5894e0f9a9ff8">drwrap_invoke_insert_cleanup_only()</a> should be called (required for cleanup of drwrap state).</p>
 <p>Only wrapping is supported this way: <a class="el" href="group__drwrap.html#ga488a6566cd760a3919bdd2f49a6d672f">drwrap_replace()</a> and <a class="el" href="group__drwrap.html#ga0ae2e383b0005a46848c7d0497be563a">drwrap_replace_native()</a> are not supported when this flag is set.</p>
-<p>As this is a global change in how drwrap operates, be careful that its use does not conflict with drwrap uses in any libraries or joint clients. </p>
+<p>As this is a global change in how drwrap operates, be careful that its use does not conflict with drwrap uses in any libraries or joint clients: multiple calls to <a class="el" href="group__drwrap.html#gad76d806076ebd9ec79305dbdd50d6253">drwrap_invoke_insert()</a> or <a class="el" href="group__drwrap.html#gad82b70d1b36030cbeec5894e0f9a9ff8">drwrap_invoke_insert_cleanup_only()</a> are not supported, and one use of inversion will not combine well with another use that requires <a class="el" href="group__drwrap.html#ga488a6566cd760a3919bdd2f49a6d672f">drwrap_replace()</a>. </p>
 </td></tr>
 </table>
 
@@ -1339,5 +1339,5 @@ Not supported if <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.19052 --- Fri Mar 4 2022 03:07:52 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 8.0.19061 --- Thu Mar 10 2022 21:01:58 &nbsp; <img border=0 src="favicon.png">
 </small></address>

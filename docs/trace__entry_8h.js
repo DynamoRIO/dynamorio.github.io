@@ -24,7 +24,8 @@
       [ "TRACE_MARKER_TYPE_CACHE_LINE_SIZE", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aec6bd14b464acb7f6e6b5e0e310474fa", null ],
       [ "TRACE_MARKER_TYPE_INSTRUCTION_COUNT", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a94cc2db87863fcdcdf9163d8c9c2152e", null ],
       [ "TRACE_MARKER_TYPE_VERSION", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aab9bc211e1e5f2f567a085d825e37745", null ],
-      [ "TRACE_MARKER_TYPE_RSEQ_ABORT", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a3a011c218cb80ceeb9e3105d449e3280", null ]
+      [ "TRACE_MARKER_TYPE_RSEQ_ABORT", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a3a011c218cb80ceeb9e3105d449e3280", null ],
+      [ "TRACE_MARKER_TYPE_WINDOW_ID", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aeb50b9e4d2eb64f29778af21501c197a", null ]
     ] ],
     [ "trace_type_t", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19d", [
       [ "TRACE_TYPE_READ", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19da2264004d45a5c8fe2b6713e2fe263c32", null ],
