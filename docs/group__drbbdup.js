@@ -13,6 +13,7 @@
       [ "instrument_instr_ex", "structdrbbdup__options__t.html#a1a1bfa6f9e2afd5732d82fdbaf1995d5", null ],
       [ "is_stat_enabled", "structdrbbdup__options__t.html#a49613a119d398f0385d5d97a39fadc10", null ],
       [ "max_case_encoding", "structdrbbdup__options__t.html#af05addf6a30e11e91b3d7e0ab2c7e221", null ],
+      [ "never_enable_dynamic_handling", "structdrbbdup__options__t.html#a18b0f0ca08931af66770ffeea04dc4de", null ],
       [ "non_default_case_limit", "structdrbbdup__options__t.html#a893267daa77c51732baca99cb695cd96", null ],
       [ "runtime_case_opnd", "structdrbbdup__options__t.html#a7fb17bcf671377cff01cf91615462b55", null ],
       [ "set_up_bb_dups", "structdrbbdup__options__t.html#a5dd8cb68eb994d2bfbfbfbed53f8fc2d", null ],

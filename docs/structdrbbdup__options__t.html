@@ -67,9 +67,11 @@ Data Fields</h2></td></tr>
 <tr class="separator:a2fe3265ce76d4e5121dc515e3d6b3394"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a1bfa6f9e2afd5732d82fdbaf1995d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__drbbdup.html#ga47176d17883196c07d77bcde5ad42a52">drbbdup_instrument_instr_ex_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrbbdup__options__t.html#a1a1bfa6f9e2afd5732d82fdbaf1995d5">instrument_instr_ex</a></td></tr>
 <tr class="separator:a1a1bfa6f9e2afd5732d82fdbaf1995d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b0f0ca08931af66770ffeea04dc4de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrbbdup__options__t.html#a18b0f0ca08931af66770ffeea04dc4de">never_enable_dynamic_handling</a></td></tr>
+<tr class="separator:a18b0f0ca08931af66770ffeea04dc4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Specifies the options when initialising drbbdup. <code>set_up_bb_dups</code> and <code>instrument_instr</code> cannot be NULL, while <code>non_default_case_limit</code> must be greater than zero. </p>
+<div class="textblock"><p>Specifies the options when initialising drbbdup. <code>set_up_bb_dups</code> and <code>instrument_instr</code> cannot be NULL. <code>runtime_case_opnd</code> must be a pointer-sized memory reference, unless <code>non_default_case_limit</code> is 0. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a2b31d1d0f5323af61fb8240737f84525"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2b31d1d0f5323af61fb8240737f84525">&#9670;&nbsp;</a></span>allow_gen</h2>
@@ -268,6 +270,21 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="a18b0f0ca08931af66770ffeea04dc4de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18b0f0ca08931af66770ffeea04dc4de">&#9670;&nbsp;</a></span>never_enable_dynamic_handling</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool drbbdup_options_t::never_enable_dynamic_handling</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>If <code>enable_dynamic_handling</code> will <em>never</em> be set by <code>set_up_bb_dups</code> for <em>any</em> basic block, this field can be set to true. This reduces memory usage by not allocating bookkeeping data needed for dynamic handling. </p>
+
+</div>
+</div>
 <a id="a893267daa77c51732baca99cb695cd96"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a893267daa77c51732baca99cb695cd96">&#9670;&nbsp;</a></span>non_default_case_limit</h2>
 
@@ -279,7 +296,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The maximum number of alternative cases, excluding the default case, that can be associated with a basic block. Once the limit is reached and an unhandled case is encountered, control is directed to the default case. </p>
+<p>The maximum number of alternative cases, excluding the default case, that can be associated with a basic block. Once the limit is reached and an unhandled case is encountered, control is directed to the default case. If this is set to 0, no duplication is performed on any block, and 0 is passed as the encoding to the <code>analyze_case</code> and <code>instrument_instr</code> (and their extended version) callbacks. </p>
 
 </div>
 </div>
@@ -352,5 +369,5 @@ Data Fields</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19061 --- Fri Mar 11 2022 03:06:41 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19068 --- Fri Mar 18 2022 03:08:01 &nbsp; <img border=0 src="favicon.png">
 </small></address>

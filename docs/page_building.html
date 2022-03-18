@@ -51,28 +51,28 @@ Linux</h2>
 Windows</h2>
 <p>To build DynamoRIO on Windows, first install the following software.</p>
 <ul>
-<li>Visual Studio 2017. Other versions are not officially supported as our automated tests use VS 2017.</li>
+<li>Visual Studio 2019. Other versions are not officially supported as our automated tests use VS 2019.</li>
 <li><a href="http://cmake.org/cmake/resources/software.html">CMake</a>. 3.7+ is required. When prompted, we recommend adding it to your PATH.</li>
 <li>Git. Any flavor should do, including <a href="https://git-scm.com/download/win">Git on Windows</a> or Cygwin git.</li>
 <li>Perl. We recommend either <a href="http://strawberryperl.com/">Strawberry Perl</a> or Cygwin perl.</li>
 <li>(optional) <a href="http://cygwin.com">Cygwin</a>. Only needed for building documentation. Select the doxygen package if you do install it. (You can also select Cygwin's perl and git as alternatives to the links above.)</li>
 </ul>
 <p>Once these dependencies are installed, you need to generate your project and solution files for Visual Studio using CMake. The easiest way to do this is to launch a cmd prompt with the right environment from the Visual Studio folder in the Start menu.</p>
-<p>To build 32-bit DynamoRIO in release mode, launch the <code>Visual Studio 2017 &gt; x86 Native Tools Command Prompt for VS 2017</code> and run the following commands:</p>
+<p>To build 32-bit DynamoRIO in release mode, launch the <code>Visual Studio 2019 &gt; x86 Native Tools Command Prompt for VS 2019</code> and run the following commands:</p>
 <div class="fragment"><div class="line"><span class="preprocessor"># Get sources.</span></div>
 <div class="line">$ git clone https:<span class="comment">//github.com/DynamoRIO/dynamorio.git</span></div>
 <div class="line"><span class="preprocessor"># Make a separate build directory.  Building in the source directory is not</span></div>
 <div class="line"><span class="preprocessor"># supported.</span></div>
 <div class="line">$ cd dynamorio &amp;&amp; mkdir build &amp;&amp; cd build</div>
 <div class="line"><span class="preprocessor"># Configure using cmake.  Pass in the path to your source directory.</span></div>
-<div class="line">$ cmake -G<span class="stringliteral">&quot;Visual Studio 15&quot;</span> ..</div>
+<div class="line">$ cmake -G<span class="stringliteral">&quot;Visual Studio 16&quot;</span> ..</div>
 <div class="line"><span class="preprocessor"># Build from the command line.  Alternatively, open ALL_BUILD.vcproj in Visual</span></div>
 <div class="line"><span class="preprocessor"># Studio and build from there.  You must pass --config to work around a cmake</span></div>
 <div class="line"><span class="preprocessor"># bug.  (http://www.cmake.org/Bug/view.php?id=11830)</span></div>
 <div class="line">$ cmake --build . --config RelWithDebInfo</div>
 <div class="line"><span class="preprocessor"># Run notepad under DR to see whether it worked.</span></div>
 <div class="line"><span class="preprocessor">$ bin32\drrun.exe notepad.exe</span></div>
-</div><!-- fragment --><p>If you need a 64-bit build, choose <code>x64 Native Tools Command Prompt</code> and pass <code>-G"Visual Studio 15 Win64"</code> to cmake.</p>
+</div><!-- fragment --><p>If you need a 64-bit build, choose <code>x64 Native Tools Command Prompt</code> and pass <code>-G"Visual Studio 16 Win64"</code> to cmake.</p>
 <p>An alternative to the command prompt is to execute the appropriate vcvars.bat command for your compiler in your shell of choice.</p>
 <p>For developers who plan to modify the DynamoRIO sources and build on a regular basis, we recommend using <a class="el" href="page_building.html#sec_ninja">Ninja</a>.</p>
 <h2><a class="anchor" id="autotoc_md76"></a>
@@ -80,10 +80,10 @@ Debug Build</h2>
 <p>If you plan to make changes to the source code, or for debugging problems in clients, you may wish to configure DynamoRIO in debug mode. Turn on the DEBUG flag when configuring, like this on Linux:</p>
 <div class="fragment"><div class="line">$ cmake -DDEBUG=ON ..</div>
 <div class="line">$ make -j</div>
-</div><!-- fragment --><p>or on Windows: </p><div class="fragment"><div class="line">$ cmake -G<span class="stringliteral">&quot;Visual Studio 15&quot;</span> .. -DDEBUG=ON</div>
+</div><!-- fragment --><p>or on Windows: </p><div class="fragment"><div class="line">$ cmake -G<span class="stringliteral">&quot;Visual Studio 16&quot;</span> .. -DDEBUG=ON</div>
 <div class="line">$ cmake --build . --config Debug</div>
 </div><!-- fragment --><p>Passing -DCMAKE_BUILD_TYPE=Debug to cmake does <b>not</b> produce a debug build currently.</p>
-<p>For 64-bit build on Windows: </p><div class="fragment"><div class="line">$ cmake -G<span class="stringliteral">&quot;Visual Studio 15 Win64&quot;</span> .. -DDEBUG=ON</div>
+<p>For 64-bit build on Windows: </p><div class="fragment"><div class="line">$ cmake -G<span class="stringliteral">&quot;Visual Studio 16 Win64&quot;</span> .. -DDEBUG=ON</div>
 <div class="line">$ cmake --build . --config Debug</div>
 </div><!-- fragment --><p>For 32-bit build on 64-bit Linux </p><div class="fragment"><div class="line">$ CFLAGS=-m32 CXXFLAGS=-m32 cmake -DDEBUG=ON ..</div>
 <div class="line">$ make -j</div>
@@ -172,7 +172,7 @@ Building AArchXX Tooling to Execute on x86</h2>
 Details for Building on Windows</h1>
 <h2><a class="anchor" id="autotoc_md89"></a>
 Compiler</h2>
-<p>First, you need the compiler, linker, and associated tools. Install Visual Studio 2017 which is the version used by our automated tests.</p>
+<p>First, you need the compiler, linker, and associated tools. Install Visual Studio 2019 which is the version used by our automated tests.</p>
 <p>You need to use a shell with command line support for using your compiler. For example, this could be the <code>cmd</code> shell or a Cygwin shell. You need to set the environment variables <code>INCLUDE</code>, <code>LIB</code>, <code>LIBPATH</code>, and <code>PATH</code> to point at the proper directories for your compiler. You can use the <code>vcvarsall.bat</code> script that comes with the compiler (in the <code>VC</code> directory) to set these variables for the <code>cmd</code> shell. For 64-bit, be sure to use <code>vcvarsall.bat amd64</code>, or directly run <code>vcvarsamd64.bat</code>. Do NOT use <code>vcvarsall.bat x86_amd64</code> or <code>vcvarsx86_amd64.bat</code>.</p>
 <p>To build a 32-bit version of DynamoRIO on a 64-bit platform, set up your environment to use the x64 tools. As mentioned above, you can launch the command prompt from the Visual Studio Start menu folder, or run the "vcvarsall.bat amd64" script.</p>
 <h2><a class="anchor" id="autotoc_md90"></a>
@@ -249,10 +249,10 @@ Using Cygwin</h2>
       export PATH=`cygpath -u ${SDKROOT}/VC/Bin/amd64`:`cygpath -u ${SDKROOT2}/bin/x64`:`cygpath -u ${SDKROOT}/VC/Bin`:${PRE_VS_PATH}
   }
 
-  function compilerVS2017_32 {
-      export CMAKEGEN="Visual Studio 15"
-      export VSVER=$(ls -1t /c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2017/Professional/VC/Tools/MSVC | head -1)
-      export VSBASE=$(cygpath -d /c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2017/Professional)
+  function compilerVS2019_32 {
+      export CMAKEGEN="Visual Studio 16"
+      export VSVER=$(ls -1t /c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2019/Professional/VC/Tools/MSVC | head -1)
+      export VSBASE=$(cygpath -d /c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2019/Professional)
       export VSROOT=$(cygpath -d ${VSBASE}/VC/Tools/MSVC/$VSVER)
       # We assume SDK 10
       export KITROOT=$(cygpath -d /c/Program\ Files\ \(x86\)/Windows\ Kits/10)
@@ -267,10 +267,10 @@ Using Cygwin</h2>
       export PATH=`cygpath -u ${VSROOT}/bin/HostX86/x86`:`cygpath -u ${KITROOT}/bin/x86`:`cygpath -u ${KITROOT}/bin/${KITVER}/x86`:`cygpath -u ${VSBASE}/Common7/IDE`:${PRE_VS_PATH}
   }
 
-  function compilerVS2017_64 {
-      export CMAKEGEN="Visual Studio 15 Win64"
-      export VSVER=$(ls -1t /c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2017/Professional/VC/Tools/MSVC | head -1)
-      export VSBASE=$(cygpath -d /c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2017/Professional)
+  function compilerVS2019_64 {
+      export CMAKEGEN="Visual Studio 16 Win64"
+      export VSVER=$(ls -1t /c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2019/Professional/VC/Tools/MSVC | head -1)
+      export VSBASE=$(cygpath -d /c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2019/Professional)
       export VSROOT=$(cygpath -d ${VSBASE}/VC/Tools/MSVC/$VSVER)
       # We assume SDK 10
       export KITROOT=$(cygpath -d /c/Program\ Files\ \(x86\)/Windows\ Kits/10)
@@ -285,8 +285,8 @@ Using Cygwin</h2>
       export PATH=`cygpath -u ${VSROOT}/bin/HostX64/x64`:`cygpath -u ${KITROOT}/bin/x64`:`cygpath -u ${KITROOT}/bin/${KITVER}/x64`:`cygpath -u ${VSBASE}/Common7/IDE`:${PRE_VS_PATH}
   }
 
-  if test -e /c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2017; then
-      compilerVS2017_32
+  if test -e /c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2019; then
+      compilerVS2019_32
   elif test -e /c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio\ 12.0; then
       compilerVS2013_32
   fi</pre><p>However, if you get errors about mspdb80.dll or windows.h, this probably means that the environment isn't set up correctly. Open a cmd prompt with the correct Visual C++ environment variables and compare the INCLUDE, LIB, LIBPATH, and PATH environment variables in the two shells.</p>
@@ -314,7 +314,7 @@ Configuring Your Build</h2>
 <div class="fragment"><div class="line">mkdir build</div>
 <div class="line">cd build</div>
 <div class="line">cmake-gui ..</div>
-</div><!-- fragment --><p>Press Configure. On Windows, select <b>Visual Studio 15 2017</b>. On Linux, select <b>Unix Makefiles</b>.</p>
+</div><!-- fragment --><p>Press Configure. On Windows, select <b>Visual Studio 16 2019</b>. On Linux, select <b>Unix Makefiles</b>.</p>
 <p>If you are on Linux, <code>ccmake</code>, a curses-based GUI, can be used instead of <code>cmake-gui</code>; it generates <b>Unix Makefiles</b> by default. In <code>ccmake</code>, press <code>c</code> to configure.</p>
 <p>On Windows, if you are building an old version of DynamoRIO (prior to r577), you will need to use <b>NMake Makefiles</b> instead of a Visual Studio generator. If you are in Cygwin, you can use <b>Unix Makefiles</b>, but the resulting build will be slower than using a Visual Studio generator.</p>
 <p>Now you can select the parameters to configure your build. The main parameters are as follows (some may not be present if the configure process determined they do not apply: e.g., if you do not have <code>doxygen</code> installed you cannot selected <code>BUILD_DOCS</code>):</p>
@@ -361,7 +361,7 @@ An Example of Building DynamoRIO in Windows-XP 64bit in cmd</h2>
 <li>step 4: configure using cmake <pre class="fragment">E:\dynamorio\build\&gt;"c:\Program Files (x86)\CMake 3.7\bin\cmake-gui.exe" ..\
 </pre><ul>
 <li>step 4.1: click "Configure" button</li>
-<li>step 4.2: select "Visual Studio 15"</li>
+<li>step 4.2: select "Visual studio 16"</li>
 <li>step 4.3: generate configuration file</li>
 </ul>
 </li>
@@ -373,7 +373,7 @@ Configuring in Batch Mode</h2>
 <p>Instead of interactive configuration you can pass all your parameter changes to CMake on the command line. For example:</p>
 <p>On Windows: </p><div class="fragment"><div class="line">mkdir build</div>
 <div class="line">cd build</div>
-<div class="line">cmake -G<span class="stringliteral">&quot;Visual Studio 15&quot;</span> -DBUILD_DOCS:BOOL=OFF ..</div>
+<div class="line">cmake -G<span class="stringliteral">&quot;Visual studio 16&quot;</span> -DBUILD_DOCS:BOOL=OFF ..</div>
 <div class="line">cmake --build . --config Release</div>
 </div><!-- fragment --><p>On Linux: </p><div class="fragment"><div class="line">mkdir build</div>
 <div class="line">cd build</div>
@@ -399,9 +399,9 @@ Building a Distributable Package</h2>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md101"></a>
 Details of CMake Visual Studio Generators</h2>
 <p>As of version 577, DynamoRIO supports building from Visual Studio. The /MP flag is set by default for not only parallel project builds but parallel file builds. The fastest DynamoRIO build is a Visual Studio build from the command line.</p>
-<p>First, DynamoRIO requires CMake version 3.7 or higher (to support Visual Studio 2017).</p>
+<p>First, DynamoRIO requires CMake version 3.7 or higher.</p>
 <p>Then you can generate the Visual Studio project files with something like this:</p>
-<div class="fragment"><div class="line">cmake -G<span class="stringliteral">&quot;Visual Studio 15&quot;</span> -DDEBUG=ON -DCMAKE_RULE_MESSAGES:BOOL=OFF ../src</div>
+<div class="fragment"><div class="line">cmake -G<span class="stringliteral">&quot;Visual studio 16&quot;</span> -DDEBUG=ON -DCMAKE_RULE_MESSAGES:BOOL=OFF ../src</div>
 </div><!-- fragment --><p>You can build from the command line (actually for any generator) with this:</p>
 <div class="fragment"><div class="line">cmake --build .</div>
 </div><!-- fragment --><p>Due to a cmake bug (<a href="http://www.cmake.org/Bug/view.php?id=11830">http://www.cmake.org/Bug/view.php?id=11830</a>), for a release build you need to explicitly say you want release:</p>
@@ -456,7 +456,7 @@ Using MSBuild For Slightly Better Error Messages And Faster Builds</h2>
 <div class="fragment"><div class="line">cmake --build . --target Release -- /m</div>
 </div><!-- fragment --><p>The /m (full name "/maxcpucount") option is only supported with .NET 3.5 or later. In practice this means Visual Studio 2010 or later. With no numeric argument (as shown in the command line above), it requests a concurrent number of jobs equal to the number of processors on the system.</p>
 <p>MSBuild summarizes all build warnings and errors at the end of the run, unlike devenv. It is also a little faster than devenv (when parallel building is enabled). There are some general outstanding issues with MSBuild, but it seems to work well for DynamoRIO with Visual Studio 2010 and 2012. To request MSBuild set the CMAKE_MAKE_PROGRAM variable at configuration time. In a Visual Studio Command Prompt, MSBuild is on the PATH, so the absolute path is not needed:</p>
-<div class="fragment"><div class="line">cmake -G<span class="stringliteral">&quot;Visual Studio 15&quot;</span> -DCMAKE_MAKE_PROGRAM:FILEPATH=MSBuild ../src</div>
+<div class="fragment"><div class="line">cmake -G<span class="stringliteral">&quot;Visual studio 16&quot;</span> -DCMAKE_MAKE_PROGRAM:FILEPATH=MSBuild ../src</div>
 </div><!-- fragment --><p>Don't forget to pass the "/m" flag (after "--") as shown above when building.</p>
 <p>To request verbose build information, use the "/v:diag" flag:</p>
 <div class="fragment"><div class="line">cmake --build . --target Release -- /m /v:diag</div>
@@ -494,5 +494,5 @@ Building the Qt DrGUI extension</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19061 --- Fri Mar 11 2022 03:06:40 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19068 --- Fri Mar 18 2022 03:08:00 &nbsp; <img border=0 src="favicon.png">
 </small></address>
