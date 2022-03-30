@@ -26,16 +26,18 @@ permalink: /page_triager.html
 <div class="contents">
 <div class="textblock"><p>We have a rotating Triager who is responsible for monitoring our continuous testing infrastructure and for triaging incoming requests from users. Specific duties include:</p>
 <ul>
-<li>Ensure that our Continuous Integration testing through Github Actions, Appveyor, and Jenkins are operating smoothly.<ul>
+<li>Ensure that our Continuous Integration testing through Github Actions and Jenkins are operating smoothly.<ul>
 <li>If flaky tests are failing too often, assign someone to fix them ASAP, or mark them to be ignored in <code>runsuite_wrapper.pl</code>.</li>
-<li>If the Appveyor serialized queue is stacking up, warn new developers to commit more carefully and to cancel stale PR pushes (i.e., for multiple pushes within a short time span, cancel all but the most recent in Appveyor) to avoid wasting resources and blocking other developers.</li>
 </ul>
 </li>
-<li>Watch merges to master for new Mac or other failures not caught by PR testing.<ul>
-<li>File an issue and assign to the responsible developer. If it cannot be fixed quickly, revert.</li>
+<li>Watch merges to master for failures on the longer test suite.<ul>
+<li>File an issue on previously-unknown failures, or update existing issues for repeats. Consider marking tests as flaky in <code>runsuite_wrapper.pl</code> if they are keeping the master merge red.</li>
 </ul>
 </li>
-<li>Answer (or request that someone else who is more of an expert in that area answer) incoming dynamorio-users emails.</li>
+<li>Answer (or request that someone else who is more of an expert in that area answer) incoming dynamorio-users emails.<ul>
+<li>Sometimes emails to the list are marked as spam, so it is a good idea to directly watch the web interface: <a href="https://groups.google.com/g/DynamoRIO-Users">https://groups.google.com/g/DynamoRIO-Users</a></li>
+</ul>
+</li>
 <li>Triage reviewing pull requests filed by users<ul>
 <li>Make sure you receive notifications on such requests: see the issues item below on how to set that up. Alternatively, proactively monitor the pull request list through the web site.</li>
 </ul>
@@ -53,7 +55,7 @@ https://groups.google.com/forum/#!forum/DynamoRIO-Users for general questions, a
 </ul>
 </li>
 <li>If it's a slow week and you feel ambitious:<ul>
-<li>Fix a flaky test (search the tracker for the <code>Hotlist-Travis</code> label or look at the list in <code>runsuite_wrapper.pl</code>).</li>
+<li>Fix a flaky test (search the tracker for the <code>Hotlist-ContinuousIntegration</code> label or look at the list in <code>runsuite_wrapper.pl</code>).</li>
 <li>Try to close an open tracker issue. </li>
 </ul>
 </li>
@@ -65,5 +67,5 @@ https://groups.google.com/forum/#!forum/DynamoRIO-Users for general questions, a
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19074 --- Fri Mar 25 2022 03:18:47 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19081 --- Wed Mar 30 2022 17:42:36 &nbsp; <img border=0 src="favicon.png">
 </small></address>

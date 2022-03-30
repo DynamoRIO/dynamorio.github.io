@@ -18,6 +18,12 @@
       [ "Cache Line Histogram", "sec_drcachesim_tools.html#sec_tool_histogram", null ],
       [ "Invariant Checker", "sec_drcachesim_tools.html#sec_tool_invariant_checker", null ]
     ] ],
+    [ "Google Workload Traces", "google_workload_traces.html", [
+      [ "Trace Format", "google_workload_traces.html#sec_google_format", null ],
+      [ "Getting the Traces", "google_workload_traces.html#sec_google_get", null ],
+      [ "Getting Help and Reporting Bugs", "google_workload_traces.html#sec_google_help", null ],
+      [ "Contributing", "google_workload_traces.html#sec_google_contrib", null ]
+    ] ],
     [ "Configuration File", "sec_drcachesim_config_file.html", null ],
     [ "Offline Traces and Analysis", "sec_drcachesim_offline.html", null ],
     [ "Tracing a Subset of Execution", "sec_drcachesim_partial.html", null ],
