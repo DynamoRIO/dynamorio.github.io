@@ -128,6 +128,9 @@ This option augments -trace_for_instrs. After tracing concludes, this option cau
 <li><b>-exit_after_tracing</b> <br  />
 <em>default value: 0</em> <br  />
 If non-zero, after tracing the specified number of references, the process is exited with an exit code of 0. The reference count is approximate. Use -max_global_trace_refs instead to avoid terminating the process.</li>
+<li><b>-raw_compress</b> <br  />
+<em>default value: none</em> <br  />
+Specifies the compression type to use for raw offline files: either "snappy" or "none". Whether this reduces overhead depends on the storage type: for an SSD this typically adds overhead and would only be used it space is at a premium; for a spinning disk using snappy should be a performance win.</li>
 <li><b>-online_instr_types</b> <br  />
 <em>default value: false</em> <br  />
 By default, offline traces include some information on the types of instructions, branches in particular. For online traces, this comes at a performance cost, so it is turned off by default.</li>
@@ -265,5 +268,5 @@ When true, this option enables the drstatecmp library that performs state compar
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19081 --- Wed Mar 30 2022 17:42:36 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19082 --- Fri Apr 1 2022 03:44:23 &nbsp; <img border=0 src="favicon.png">
 </small></address>
