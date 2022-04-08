@@ -575,7 +575,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Registers functions to replace the default file operations for offline tracing.</p>
+<p>Registers functions to replace the default file operations for offline tracing. If tracing windows are used and separate files per window are not meant to be supported by "open_file_func", it is up to the user to set <code>-no_split_windows</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>The caller is responsible for the transparency and isolation of using those functions, which will be called in the middle of arbitrary application code. </dd></dl>
 
 </div>
@@ -586,5 +586,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19082 --- Fri Apr 1 2022 03:44:20 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19088 --- Fri Apr 8 2022 03:33:41 &nbsp; <img border=0 src="favicon.png">
 </small></address>

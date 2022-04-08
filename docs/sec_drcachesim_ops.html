@@ -124,13 +124,16 @@ If non-zero, this causes tracing to be suppressed until this many dynamic instru
 If non-zero, this stops recording a trace after the specified number of instructions are traced. Unlike -exit_after_tracing, which kills the application (and counts data as well as instructions), the application continues executing. This can be combined with -retrace_every_instrs. The actual trace period may vary slightly from this number due to optimizations that reduce the overhead of instruction counting.</li>
 <li><b>-retrace_every_instrs</b> <br  />
 <em>default value: 0</em> <br  />
-This option augments -trace_for_instrs. After tracing concludes, this option causes non-traced instructions to be counted and after the number specified by this option, tracing start up again for the -trace_for_instrs duration. This process repeats itself. This can be combined with -trace_after_instrs for an initial period of non-tracing.</li>
+This option augments -trace_for_instrs. After tracing concludes, this option causes non-traced instructions to be counted and after the number specified by this option, tracing will start up again for the -trace_for_instrs duration. This process repeats itself. This can be combined with -trace_after_instrs for an initial period of non-tracing. Each tracing window is delimited by TRACE_MARKER_TYPE_WINDOW_ID markers. For -offline traces, each window is placed into its own separate set of output files, unless -no_split_windows is set.</li>
+<li><b>-split_windows</b> <br  />
+<em>default value: true</em> <br  />
+By default, offline traces in separate windows from -retrace_every_instrs are written to a different set of files for each window. If this option is disabled, all windows are concatenated into a single trace, separated by TRACE_MARKER_TYPE_WINDOW_ID markers.</li>
 <li><b>-exit_after_tracing</b> <br  />
 <em>default value: 0</em> <br  />
 If non-zero, after tracing the specified number of references, the process is exited with an exit code of 0. The reference count is approximate. Use -max_global_trace_refs instead to avoid terminating the process.</li>
 <li><b>-raw_compress</b> <br  />
 <em>default value: none</em> <br  />
-Specifies the compression type to use for raw offline files: either "snappy" or "none". Whether this reduces overhead depends on the storage type: for an SSD this typically adds overhead and would only be used it space is at a premium; for a spinning disk using snappy should be a performance win.</li>
+Specifies the compression type to use for raw offline files: "snappy", "snappy_nocrc" (snappy without checksums, which is much faster), or "none". Whether this reduces overhead depends on the storage type: for an SSD this typically adds overhead and would only be used if space is at a premium; for a spinning disk using snappy should be a performance win.</li>
 <li><b>-online_instr_types</b> <br  />
 <em>default value: false</em> <br  />
 By default, offline traces include some information on the types of instructions, branches in particular. For online traces, this comes at a performance cost, so it is turned off by default.</li>
@@ -268,5 +271,5 @@ When true, this option enables the drstatecmp library that performs state compar
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19082 --- Fri Apr 1 2022 03:44:23 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19088 --- Fri Apr 8 2022 03:33:44 &nbsp; <img border=0 src="favicon.png">
 </small></address>

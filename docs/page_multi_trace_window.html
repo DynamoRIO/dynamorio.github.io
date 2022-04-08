@@ -66,7 +66,7 @@ Design Point: Separate Traces v. Merged-with-Markers</h1>
 Separate raw files</h2>
 <p>If we want separate final traces, at first the simplest approach is to produce a separate set of raw files for each tracing window. These would be post-processed separately and independently.</p>
 <p>However, implementing this split does not fit well in the current interfaces. To work with other filesystems, we have separated out the i/o and in particular directory creation, and some proprietary uses rework the output completely to write to a fixed set of destinations which are mapped back to per-thread raw files during post-processing. Creating new sets of outputs at tracing time would require new interfaces and significant refactoring for these use cases.</p>
-<p>For typical use with files on the local disk, we could add creation of a new directory (and duplication of the module file) for each window by the tracing thread that hits the end-of-window trigger. The other threads would each create a new output raw file each time they transitioned to a new window (see also the Proposal A discussion below).</p>
+<p>For typical use with files on the local disk, we could add creation of a new directory (and duplication of the module file) for each window by the tracing thread that hits the end-of-window trigger. The other threads would each create a new output raw file each time they transitioned to a new window (see also the Proposal A discussion below). This is implemented today with the <code>-split_windows</code> option.</p>
 <h2><a class="anchor" id="autotoc_md211"></a>
 Splitting during raw2trace</h2>
 <p>Alternatively, we could keep a single raw file for each thread and split it up into per-window final trace files during postprocessing by the raw2trace tool. We would use markers inserted at the window transition points to identify where to separate.</p>
@@ -84,6 +84,7 @@ Decision: Split the final trace with an analyzer</h2>
 <p>Separate files seems to be the most flexible and useful setup for our expected use cases, in particular parallel simulation. But given that separating early in the pipeline is complex, we’ll split after raw2trace post-processing, with a new analyzer tool.</p>
 <p>We’ll update some simple inspection and sanity tools (view, basic_counts, and invariant_checker) to handle and visualize windows, but we’ll assume that trace windows will be split before being analyzed by any more complex analysis tools. For online traces we will probably stick with multi-window-at-once.</p>
 <p>We’ll create a tool to manually split up multi-window trace files.</p>
+<p>Update: We ended up implementing splitting at the raw file output level for the local-disk use case; we may additionally implement splitting in an anlyzer for other use cases.</p>
 <h1><a class="anchor" id="autotoc_md214"></a>
 Design Point: Continuous Control v. Re-Attach</h1>
 <p>One method of obtaining multiple traces is to repeat today’s bursts over and over, with a full detach from the application after each trace. However, each attach point is expensive, with long periods of profiling and code cache pre-population. While a scheme of sharing the profiling and perhaps code cache could be developed while keeping a full detach, a simpler approach is to remain in control but switch from tracing to instruction counting in between tracing windows. Instruction counting is needed to determine where to start the next window in any case.</p>
@@ -166,5 +167,5 @@ phase" markers. If we have split offline traces, those would only be for online 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19082 --- Fri Apr 1 2022 03:44:23 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19088 --- Fri Apr 8 2022 03:33:43 &nbsp; <img border=0 src="favicon.png">
 </small></address>

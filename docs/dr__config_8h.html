@@ -123,6 +123,8 @@ Functions</h2></td></tr>
 <tr class="separator:a10d7c5dbc9a055fa6c18bf3f2a6eea46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca4a88a8e35548096f920e90d9a8ad12"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="dr__config_8h.html#a5e24de02bea5743b74adb6e64af19ae7">dr_config_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__config_8h.html#aca4a88a8e35548096f920e90d9a8ad12">dr_unregister_process</a> (const char *process_name, process_id_t pid, bool global, <a class="el" href="dr__config_8h.html#a43632ea1157f971b7af4273ef696935c">dr_platform_t</a> dr_platform)</td></tr>
 <tr class="separator:aca4a88a8e35548096f920e90d9a8ad12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b83006602812a9d0310636bb9ba5c28"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="dr__config_8h.html#a5e24de02bea5743b74adb6e64af19ae7">dr_config_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__config_8h.html#a2b83006602812a9d0310636bb9ba5c28">dr_register_inject_paths</a> (const char *process_name, process_id_t pid, bool global, <a class="el" href="dr__config_8h.html#a43632ea1157f971b7af4273ef696935c">dr_platform_t</a> dr_platform, const char *dr_lib_path, const char *dr_alt_lib_path)</td></tr>
+<tr class="separator:a2b83006602812a9d0310636bb9ba5c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a285ae07edfcba05d92510fb38e8057d1"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="dr__config_8h.html#a5e24de02bea5743b74adb6e64af19ae7">dr_config_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__config_8h.html#a285ae07edfcba05d92510fb38e8057d1">dr_register_syswide</a> (<a class="el" href="dr__config_8h.html#a43632ea1157f971b7af4273ef696935c">dr_platform_t</a> dr_platform, const char *dr_root_dir)</td></tr>
 <tr class="separator:a285ae07edfcba05d92510fb38e8057d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e9925a6b97a3fbe329f94faa60638ca"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="dr__config_8h.html#a5e24de02bea5743b74adb6e64af19ae7">dr_config_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__config_8h.html#a2e9925a6b97a3fbe329f94faa60638ca">dr_unregister_syswide</a> (<a class="el" href="dr__config_8h.html#a43632ea1157f971b7af4273ef696935c">dr_platform_t</a> dr_platform, const char *dr_root_dir)</td></tr>
@@ -1159,6 +1161,72 @@ A process nudge is a one way asynchronous communication from an external entity 
 
 </div>
 </div>
+<a id="a2b83006602812a9d0310636bb9ba5c28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b83006602812a9d0310636bb9ba5c28">&#9670;&nbsp;</a></span>dr_register_inject_paths()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT <a class="el" href="dr__config_8h.html#a5e24de02bea5743b74adb6e64af19ae7">dr_config_status_t</a> dr_register_inject_paths </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>process_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">process_id_t&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>global</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dr__config_8h.html#a43632ea1157f971b7af4273ef696935c">dr_platform_t</a>&#160;</td>
+          <td class="paramname"><em>dr_platform</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>dr_lib_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>dr_alt_lib_path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the paths to the DynamoRIO library and the alternate-bitwidth DynamoRIO library for a process that has already been registered via <a class="el" href="dr__config_8h.html#a10d7c5dbc9a055fa6c18bf3f2a6eea46">dr_register_process()</a>. If this routine is not called, default library paths will be used which assume a default path layout within the <code>dr_root_dir</code> passed to <a class="el" href="dr__config_8h.html#a10d7c5dbc9a055fa6c18bf3f2a6eea46">dr_register_process()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">process_name</td><td>A NULL-terminated string specifying the name of the target process. The string should identify the base name of the process, not the full path of the executable (e.g., calc.exe).</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pid</td><td>A process id of a target process, typically just created and suspended via <a class="el" href="dr__inject_8h.html#afdd617e9fd2f5876fdaa63c27839c6de">dr_inject_process_exit()</a>. If pid != 0, the one-time configuration for that pid will be modified. If pid == 0, the general configuration for process_name will be modified.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">global</td><td>Whether to use global or user-local config files. On Windows, global config files are stored in a dir pointed at by the DYNAMORIO_HOME registry key. On Linux, they are in /etc/dynamorio. Administrative privileges may be needed if global is true. Note that DynamoRIO gives local config files precedence when both exist. The caller must separately create the global directory.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dr_platform</td><td>Configurations are kept separate for 32-bit processes and 64-bit processes. This parameter allows selecting which of those configurations to check.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dr_lib_path</td><td>A NULL-terminated string specifying the full path to a valid DynamoRIO library of the same bitwidth as <code>dr_platform</code>. The string length cannot exceed <a class="el" href="dr__defines_8h.html#a95c7b582d53e0a376f2a0e89323b2a7b">MAXIMUM_PATH</a>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dr_alt_lib_path</td><td>A NULL-terminated string specifying the full path to a valid DynamoRIO library of the alternative bitwidth to <code>dr_platform</code>. The string length cannot exceed <a class="el" href="dr__defines_8h.html#a95c7b582d53e0a376f2a0e89323b2a7b">MAXIMUM_PATH</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A dr_config_status_t code indicating the result of registration. Note that registration fails if the requested process is already registered. To modify a process's registration, first call <a class="el" href="dr__config_8h.html#aca4a88a8e35548096f920e90d9a8ad12">dr_unregister_process()</a> to remove an existing registration.</dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>After registration, a process will run under DynamoRIO when launched by the drinject tool or using drinjectlib. Note that some processes may require a system reboot to restart. Process registration that is not specific to one pid (i.e., if <code>pid</code> == 0) persists across reboots until explicitly unregistered. </dd></dl>
+
+</div>
+</div>
 <a id="a10d7c5dbc9a055fa6c18bf3f2a6eea46"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a10d7c5dbc9a055fa6c18bf3f2a6eea46">&#9670;&nbsp;</a></span>dr_register_process()</h2>
 
@@ -1227,7 +1295,7 @@ A process nudge is a one way asynchronous communication from an external entity 
     <tr><td class="paramdir">[in]</td><td class="paramname">process_name</td><td>A NULL-terminated string specifying the name of the target process. The string should identify the base name of the process, not the full path of the executable (e.g., calc.exe).</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">pid</td><td>A process id of a target process, typically just created and suspended via <a class="el" href="dr__inject_8h.html#afdd617e9fd2f5876fdaa63c27839c6de">dr_inject_process_exit()</a>. If <code>pid</code> != 0, a one-time configuration is created just for it. If <code>pid</code> == 0, a general configuration is created for all future instances of process_name.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">global</td><td>Whether to use global or user-local config files. On Windows, global config files are stored in a dir pointed at by the DYNAMORIO_HOME registry key. On Linux, they are in /etc/dynamorio. Administrative privileges may be needed if global is true. Note that DynamoRIO gives local config files precedence when both exist. The caller must separately create the global directory.</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dr_root_dir</td><td>A NULL-terminated string specifying the full path to a valid DynamoRIO root directory. The string length cannot exceed <a class="el" href="dr__defines_8h.html#a95c7b582d53e0a376f2a0e89323b2a7b">MAXIMUM_PATH</a>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dr_root_dir</td><td>A NULL-terminated string specifying the full path to a valid DynamoRIO root directory. The string length cannot exceed <a class="el" href="dr__defines_8h.html#a95c7b582d53e0a376f2a0e89323b2a7b">MAXIMUM_PATH</a>. The path to the DynamoRIO library to be used will be constructed from this path assuming a default layout. To precisely specify the path, call <a class="el" href="dr__config_8h.html#a2b83006602812a9d0310636bb9ba5c28">dr_register_inject_paths()</a> afterward.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dr_mode</td><td>Specifies the mode under which DynamoRIO should operate. See dr_operation_mode_t.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">debug</td><td>If true, a DynamoRIO debug build will be used; otherwise, a release build will be used.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dr_platform</td><td>Configurations are kept separate for 32-bit processes and 64-bit processes. This parameter allows selecting which of those configurations to set.</td></tr>
@@ -1627,5 +1695,5 @@ Not yet available on Linux or MacOS. </dd></dl>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19082 --- Fri Apr 1 2022 03:44:20 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19088 --- Fri Apr 8 2022 03:33:42 &nbsp; <img border=0 src="favicon.png">
 </small></address>
