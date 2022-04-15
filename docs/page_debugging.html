@@ -54,7 +54,7 @@ Debugging On Linux</h1>
 Expected Signals</h2>
 <p>On Linux, DR sends itself a SIGILL signal during initialization, in order to measure the size of the signal frame used by the kernel. If you are under gdb, simply continue past this signal.</p>
 <p>Additionally, DR uses various "safe read" strategies where it may raise a SIGSEGV or SIGBUS while examining application memory. Load symbols and look for <code>safe_read</code> variants on the call stack (such as <code>safe_read_tls_magic</code>, <code>safe_read_asm_pre</code>, <code>safe_read_fast</code>) to identify these. Just like with the init-time SIGILL, simply continue past these.</p>
-<p>One final signal used by DR is SIGUSR2, which is sent to other threads to suspend or terminate them.</p>
+<p>One final signal used by DR is SIGSTKFLT (SIGFPE on MacOS), which is sent to other threads to suspend or terminate them.</p>
 <h2><a class="anchor" id="autotoc_md141"></a>
 Attaching</h2>
 <p>Use the DynamoRIO runtime option <code>-msgbox_mask</code> with a desired mask, optionally along with <code>-pause_via_loop</code> if the application uses stdin, to cause a target application to wait and let you attach gdb. To attach early on, use a debug internal build and set the mask for informational messages. See the option descriptions in the API documentation.</p>
@@ -406,5 +406,5 @@ Addr2Line</h2>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19088 --- Fri Apr 8 2022 03:33:43 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19097 --- Fri Apr 15 2022 04:02:01 &nbsp; <img border=0 src="favicon.png">
 </small></address>
