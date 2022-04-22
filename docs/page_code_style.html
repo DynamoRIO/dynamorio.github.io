@@ -25,13 +25,13 @@ permalink: /page_code_style.html
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>The overall goal is to <b>make the source code as readable and as self-documenting as possible</b>. Everyone following the same style guidelines is an important part of keeping the code consistent and maintainable.</p>
-<h1><a class="anchor" id="autotoc_md121"></a>
+<h1><a class="anchor" id="autotoc_md120"></a>
 Automated Formatting</h1>
 <p>We employ automated code formatting via <a href="https://releases.llvm.org/9.0.0/tools/clang/docs/ClangFormat.html"><code>clang-format</code> version 9.0</a>. The <a href="https://github.com/DynamoRIO/dynamorio/blob/master/.clang-format"><code>.clang-format</code> top-level file</a> specifies the style rules for all <code>.h</code>, <code>.c</code>, and <code>.cpp</code> source code files. Developers are expected to set up their editors to use <code>clang-format</code> when saving each file (see <a href="https://releases.llvm.org/6.0.0/tools/clang/docs/ClangFormat.html">the <code>clang-format</code> documentation</a> for pointers to vim, emacs, and Visual Studio setup instructions). Our test suite includes a format check and will fail any code whose formatting does not match the <code>clang-format</code> output.</p>
-<h1><a class="anchor" id="autotoc_md122"></a>
+<h1><a class="anchor" id="autotoc_md121"></a>
 Legacy Code</h1>
 <p>Some of the style conventions have changed over time, but we have not wanted to incur the cost in time and history confusion of changing all old code. Thus, you may observe old code that does not comply with some of these conventions. These listed conventions overrule surrounding code! Please change the style of old code when you are making other changes to the same lines.</p>
-<h1><a class="anchor" id="autotoc_md123"></a>
+<h1><a class="anchor" id="autotoc_md122"></a>
 Naming Conventions</h1>
 <ol type="1">
 <li>Header files consisting of exported interface content that is also used internally are named with an <code>_api.h</code> suffix: e.g., <code>encode_api.h</code>. If the content is solely used externally, it should be named the same as its exported name: e.g., <code><a class="el" href="dr__inject_8h.html" title="Injection API. Use these functions to launch processes under the control of DynamoRIO.">dr_inject.h</a></code>. For the former case, where the exported name is different, the include guards should use the exported name.</li>
@@ -77,7 +77,7 @@ Naming Conventions</h1>
 <li>Use <code>static</code> when possible for every function or variable that is not needed outside of its own file.</li>
 <li>Do not shadow global variables (or variables in containing scopes) by using local variables of the same name: choose a distinct name for the local variable.</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md124"></a>
+<h1><a class="anchor" id="autotoc_md123"></a>
 Types</h1>
 <ol type="1">
 <li>See above for naming conventions for types.</li>
@@ -134,7 +134,7 @@ Types</h1>
 </div><!-- fragment --></li>
 <li>Do not assume that <code>char</code> is signed: use our <code>sbyte</code> typedef for a signed one-byte type.</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md125"></a>
+<h1><a class="anchor" id="autotoc_md124"></a>
 Commenting Conventions</h1>
 <ol type="1">
 <li>For C code, <code>/&lowast; &lowast;/</code> comments are preferable to <code>//</code>. Put stars on each line of a multi-line comment, like this: <pre class="fragment"> /* multi-line comment
@@ -204,7 +204,7 @@ Commenting Conventions</h1>
   */</pre> If a closing marker is needed use this style: <pre class="fragment"> /*
   ****************************************************************************/</pre></li>
 </ol>
-<h1><a class="anchor" id="autotoc_md126"></a>
+<h1><a class="anchor" id="autotoc_md125"></a>
 Warnings Are Errors</h1>
 <ol type="1">
 <li><p class="startli">Uninitialized variables warning (W4701 for cl): Don't initialize variables when you don't need to, so that we can still have good warnings about uninitialized variables in the future. Only if the compiler can't analyze code properly is it better to err on the side of a deterministic bug and set to 0 or <code>{0}</code>.</p>
@@ -212,7 +212,7 @@ Warnings Are Errors</h1>
 </li>
 <li>For suggested use of static analysis tools: PreFAST or /analyze for new code, refer to case 3966.</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md127"></a>
+<h1><a class="anchor" id="autotoc_md126"></a>
 Program Structure</h1>
 <ol type="1">
 <li>Keep the line length to 90 characters or less.</li>
@@ -298,12 +298,12 @@ Program Structure</h1>
 <p class="startli"><em>BAD:</em> <code>char buf[128];</code></p>
 </li>
 </ol>
-<h1><a class="anchor" id="autotoc_md128"></a>
+<h1><a class="anchor" id="autotoc_md127"></a>
 File Organization</h1>
 <ol type="1">
 <li>Write OS-independent code as much as possible and keep it in the base <code>core/</code> directory. If code must diverge for Windows versus Linux, provide an OS-independent interface documented in <code>core/os_shared.h</code> and implemented separately in <code>core/unix/</code> and <code>core/windows/</code>.</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md129"></a>
+<h1><a class="anchor" id="autotoc_md128"></a>
 C++</h1>
 <ol type="1">
 <li>While the core DynamoRIO library and API are C, we do support C++ clients and have some C++ tests and clients ourselves. For broad compiler support we limit our code to C++11. </li>
@@ -318,5 +318,5 @@ C++</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19097 --- Fri Apr 15 2022 04:02:01 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19103 --- Fri Apr 22 2022 04:04:39 &nbsp; <img border=0 src="favicon.png">
 </small></address>

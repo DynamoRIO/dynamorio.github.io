@@ -79,30 +79,25 @@ New Committers</h2>
 <p>For new committers, code review and commit sizes should be small: less than 100 lines for the first few commits. We may reject reviews that are larger.</p>
 <h1><a class="anchor" id="autotoc_md113"></a>
 Continuous Integration Checks</h1>
-<p>Pull requests are integrated into our <a class="el" href="page_test_suite.html">continuous integration system</a>, providing pre-commit testing of all commits. Both Travis and AppVeyor are immediately run when a pull request is created and after each subsequent push to the pull request branch. The request can't be merged until the tests complete and pass.</p>
+<p>Pull requests are integrated into our <a class="el" href="page_test_suite.html">continuous integration system</a>, providing pre-commit testing of all commits. Both Github Actions and Jenkins tests are immediately run when a pull request is created and after each subsequent push to the pull request branch. The request can't be merged until the tests complete and pass.</p>
 <p>Please note that our test suite is <b>NOT THE SAME AS RUNNING "make
 test"</b>. The pre-commit test suite builds multiple builds and enables more tests than "make test". Running tests in just one build is not sufficient. See <a class="el" href="page_test_suite.html">Testing</a> for information on setting up and running the test suite locally via the <code>suite/runsuite.cmake</code> script.</p>
-<p>In addition to Travis and Appveyor, we have several machines running test suites at scheduled times and reporting results to our CDash dashboard. Be sure to look at any emails about build or test breakages in the day or so after your commit and either help to fix it or consider reverting if something is broken that the continuous integration tests did not catch (e.g., currently they only build for 32-bit Linux-ARM and Android-ARM and are not able to actually run tests there).</p>
-<p>Unfortunately we do have some flaky tests that are not yet fixed. If a flaky test fails on a pull request, on CDash, or on a merge to master, the committer is expected to look up the failure and send an email (or add a pull request comment) explaining which tests failed and which issues in the tracker cover those flaky failures.</p>
+<p>Unfortunately we do have some flaky tests that are not yet fixed. These are auto-ignored via a list in the <a href="https://github.com/DynamoRIO/dynamorio/blob/master/suite/runsuite_wrapper.pl">runsuite_wrapper</a> script.</p>
 <h1><a class="anchor" id="autotoc_md114"></a>
 Responding to Review Comments and Submitting Code Updates</h1>
-<p>Upon receiving the email requesting a review, the reviewer will visit the pull request page and add comments to the code as part of a Github review, including comments on individual lines. An email will be sent with these comments. You should view the comments, address them in your code, and reply to each comment on the review site (typically by saying "Done" if you agree with the request and have made the change in your code). Please read and reply to every comment.</p>
+<p>Upon receiving the email requesting a review, the reviewer will visit the pull request page and add comments to the code as part of a Github review, including comments on individual lines. An email will be sent with these comments. You should view the comments, address them in your code, reply to each comment on the review site (typically by saying "Done" if you agree with the request and have made the change in your code), and (if the topic is settled) marking as "Resolved". Please read and reply to every comment. Github will not allow a final merge unless every comment is resolved.</p>
 <p>Reply to comments individually at the point in the code view where they appear. Do not simply reply at the top level, as such comments are more difficult to follow as a conversation thread with context.</p>
 <p>After making changes in response to review comments, commit those changes locally as a new commit on top of your original commit. If the reviewer requested changes to the commit message, use a new proposed final commit message as the message for this change commit so that the reviewer can review the new message.</p>
 <p>Project members should then push the new commit to the pull request via:</p>
 <div class="fragment"><div class="line">git review</div>
 </div><!-- fragment --><p>Do not use a force push to change the history of the shared branch! Use a new, separate commit.</p>
-<p>When the requested changes have been pushed, you can ask for a re-review from the reviewers. This can be done by clicking the re-review button next to the reviewers' name on the right sidebar on the pull request page.</p>
+<p>When the requested changes have been pushed, request a re-review from the reviewer so they know that the pull request is ready for another round of reviewing. This can be done by clicking the re-review button next to the reviewer's name at the top of the right sidebar on the pull request page.</p>
 <p>The final squash-and-merge step will squash these additional commits with the original to make a single commit that will be fast-forward-merged into master (see below for more details).</p>
 <h1><a class="anchor" id="autotoc_md115"></a>
-Limited Continuous Integration Resources</h1>
-<p>Our Appveyor testing is globally serialized, with no parallelism, and with no logic to cancel a run if two pushes are made to a pull request in rapid succession. This can cause Appveyor jobs to queue up and block other developers if many pushes are made to a pull request in a short period of time. We thus recommend limiting pushes. If each reviewer comment is addressed with a separate commit, wait until they are all locally committed before pushing them all at once with a single push and thus triggering a single Appveyor job. If two or more jobs are triggered in a short period of time, log in to Appveyor using Github credentials and cancel all but one of the jobs, to avoid blocking other developers.</p>
-<p>Travis has logic to auto-cancel a job if a new push arrives quickly, but the above workflow still generally applies to avoid over-using Travis resources.</p>
-<h1><a class="anchor" id="autotoc_md116"></a>
 Updating from Master</h1>
 <p>During local development before requesting review, i.e., before your feature branch is on the server, rebasing to pull in new changes from master is the preferred workflow. But once you've pushed your branch and it's shared, <b>do not rebase</b>, as it will destroy history in the pull request. Instead, merge changes from master if an update is needed (but see below: normally you should only do this at the very end after approval). These merge commits will disappear when the feature branch is fast-forward-merged to master.</p>
 <p>Generally, it's better to not update at all once a review has started. Do not click on the "Update Branch" until the review is approved and you are ready to merge into master. Clicking on it earlier when you may still need to make changes to your code just wastes resources. Furthermore, in some code review systems it corrupts the reviewer's view of the code, so it is a bad habit to get into.</p>
-<h1><a class="anchor" id="autotoc_md117"></a>
+<h1><a class="anchor" id="autotoc_md116"></a>
 Merging into Master and Cleaning Up the Final Commit Message</h1>
 <p>Only once the reviewer marks the proposed code changes as accepted and all of the continuous integration tests pass can the change be merged into master. If you have merge privileges, when performing the squash-and-merge, <b>be sure to edit the final commit message</b> (after pressing the squash-and-merge button, Github presents the final message in an edit box) to create a clean description of the commit without the messy incremental steps from the multiple commits fixing small issues during the review process. (You can resize the edit box by dragging the control in the bottom right.) <b>Especially be sure to remove <em>all</em> commit message titles</b> from the body of the final squash-and-merge message**, as the commit title is in a separate edit box (and defaults to the title of the first commit, so update it as well if the title changed during review). Also be sure to avoid truncation of the commit title, as Github likes to replace the end with "...".</p>
 <p>To clarify further, here is an example of what Github will present in the squash-and-merge step for the message body:</p>
@@ -126,14 +121,14 @@ Fixes: #3192
 </pre><p>When editing the title edit box, leave in place the pointer to the pull request, which Github automatically adds to the end of the commit message title, in parentheses, for its suggested final squash-and-merge title:</p>
 <div class="fragment"><div class="line">i#3192: move delayed branches after markers (#3193)</div>
 </div><!-- fragment --><p>Re-iterating as there is a tendency to just click through the squash-and-merge: <em><b>please edit and</b></em> <em><b>clean up the final commit message</b></em>!</p>
-<h1><a class="anchor" id="autotoc_md118"></a>
+<h1><a class="anchor" id="autotoc_md117"></a>
 Deleting the Branch</h1>
 <p>Generally, the feature branch should be deleted from the repository using the button that Github provides immediately after merging.</p>
-<h1><a class="anchor" id="autotoc_md119"></a>
+<h1><a class="anchor" id="autotoc_md118"></a>
 Review Delays</h1>
 <p>With an open-source project like this where each contributor has a day job with other priorities, code reviews should be expected to take a day or two, and longer if the change is lengthy. However, if the reviewer expects to not have time to complete the review within 2 days he or she should notify the author up front to give a chance to switch to a different reviewer.</p>
 <p>For reviews performed by developers all working on the same active project as part of a day job, reviews should be much more timely: within a few hours, to avoid disrupting productivity.</p>
-<h1><a class="anchor" id="autotoc_md120"></a>
+<h1><a class="anchor" id="autotoc_md119"></a>
 Project Branches</h1>
 <p>For larger, more experimental features that do not easily fit into the one-commit-per-merge model, project branches are used. The review process is identical to above but substituting the project branch for master: i.e., single-commit feature branches are still used and reviewed, but they are squash-and-fast-forward-merged into the project branch.</p>
 <p>Clean, reviewed commits then accumulate in the project branch until they are all ready to be merged into master. Here, a rebase is used rather than a squash-and-merge. </p>
@@ -144,5 +139,5 @@ Project Branches</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19097 --- Fri Apr 15 2022 04:02:01 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19103 --- Fri Apr 22 2022 04:04:39 &nbsp; <img border=0 src="favicon.png">
 </small></address>
