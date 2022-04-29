@@ -1475,6 +1475,10 @@
     [ "OP_encls", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a1348794199eff46aba3160a291b5d15a", null ],
     [ "OP_enclu", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635ace0d8593222f161e4393ead2533ba6c3", null ],
     [ "OP_enclv", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a28c4413dcb7ad964304ff26720474627", null ],
+    [ "OP_vpdpbusd", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a0c1c353c9f3e43b3dd9ddcff724e11ed", null ],
+    [ "OP_vpdpbusds", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a33bce745fa688d5a8043eede7fb83778", null ],
+    [ "OP_vpdpwssd", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635aefe5b5a6c5bdf49299f718256618f918", null ],
+    [ "OP_vpdpwssds", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a7ac1ab66fc7eaf13070edb8535004456", null ],
     [ "OP_FIRST", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a7b616dfe8fecf0a3f45179a237d71c93", null ],
     [ "OP_LAST", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635ad4831564a9a3e47fd23c8b4498215ead", null ]
 ],
