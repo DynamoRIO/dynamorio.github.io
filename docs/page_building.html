@@ -32,7 +32,7 @@ Linux</h2>
 <p>To build DynamoRIO on Linux, use the following commands as a guide. This builds 64-bit DynamoRIO in release mode:</p>
 <div class="fragment"><div class="line"><span class="preprocessor"># Install dependencies for Ubuntu 15+.  Adjust this command as appropriate for</span></div>
 <div class="line"><span class="preprocessor"># other distributions (in particular, use &quot;cmake3&quot; for Ubuntu Trusty).</span></div>
-<div class="line">$ sudo apt-get install cmake g++ g++-multilib doxygen git zlib1g-dev libunwind-dev libsnappy-dev</div>
+<div class="line">$ sudo apt-get install cmake g++ g++-multilib doxygen git zlib1g-dev libunwind-dev libsnappy-dev liblz4-dev</div>
 <div class="line"><span class="preprocessor"># Get sources.</span></div>
 <div class="line">$ git clone https:<span class="comment">//github.com/DynamoRIO/dynamorio.git</span></div>
 <div class="line"><span class="preprocessor"># Make a separate build directory.  Building in the source directory is not</span></div>
@@ -110,7 +110,7 @@ Details for Building on Linux</h1>
 <h2><a class="anchor" id="autotoc_md79"></a>
 Setup for Simultaneous 64-bit and 32-bit Building</h2>
 <p>In order to build both 32-bit and 64-bit on the same platform you'll need compiler support for targeting both architectures. Then install these packages:</p>
-<div class="fragment"><div class="line">sudo apt-get install cmake g++ g++-multilib doxygen zlib1g-dev libunwind-dev libunwind-dev:i386 libsnappy-dev</div>
+<div class="fragment"><div class="line">sudo apt-get install cmake g++ g++-multilib doxygen zlib1g-dev libunwind-dev libunwind-dev:i386 libsnappy-dev liblz4-dev</div>
 </div><!-- fragment --><p>For older distributions, the <code>ia32-libs</code> package is needed.</p>
 <p>For 64-bit Fedora, you'll need this package to build the samples:</p>
 <div class="fragment"><div class="line">yum -y install glibc-devel.i?86</div>
@@ -494,5 +494,5 @@ Building the Qt DrGUI extension</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19110 --- Fri Apr 29 2022 03:50:20 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19117 --- Fri May 6 2022 03:39:15 &nbsp; <img border=0 src="favicon.png">
 </small></address>

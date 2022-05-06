@@ -132,8 +132,8 @@ By default, offline traces in separate windows from -retrace_every_instrs are wr
 <em>default value: 0</em> <br  />
 If non-zero, after tracing the specified number of references, the process is exited with an exit code of 0. The reference count is approximate. Use -max_global_trace_refs instead to avoid terminating the process.</li>
 <li><b>-raw_compress</b> <br  />
-<em>default value: none</em> <br  />
-Specifies the compression type to use for raw offline files: "snappy", "snappy_nocrc" (snappy without checksums, which is much faster), or "none". Whether this reduces overhead depends on the storage type: for an SSD this typically adds overhead and would only be used if space is at a premium; for a spinning disk using snappy should be a performance win.</li>
+<em>default value: lz4</em> <br  />
+Specifies the compression type to use for raw offline files: "snappy", "snappy_nocrc" (snappy without checksums, which is much faster), "gzip", "zlib", "lz4", or "none". Whether this reduces overhead depends on the storage type: for an SSD, zlib and gzip typically add overhead and would only be used if space is at a premium; snappy_nocrc and lz4 are nearly always performance wins.</li>
 <li><b>-online_instr_types</b> <br  />
 <em>default value: false</em> <br  />
 By default, offline traces include some information on the types of instructions, branches in particular. For online traces, this comes at a performance cost, so it is turned off by default.</li>
@@ -271,5 +271,5 @@ When true, this option enables the drstatecmp library that performs state compar
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19110 --- Fri Apr 29 2022 03:50:20 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19117 --- Fri May 6 2022 03:39:16 &nbsp; <img border=0 src="favicon.png">
 </small></address>
