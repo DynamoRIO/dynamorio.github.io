@@ -25,7 +25,9 @@
       [ "TRACE_MARKER_TYPE_INSTRUCTION_COUNT", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a94cc2db87863fcdcdf9163d8c9c2152e", null ],
       [ "TRACE_MARKER_TYPE_VERSION", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aab9bc211e1e5f2f567a085d825e37745", null ],
       [ "TRACE_MARKER_TYPE_RSEQ_ABORT", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a3a011c218cb80ceeb9e3105d449e3280", null ],
-      [ "TRACE_MARKER_TYPE_WINDOW_ID", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aeb50b9e4d2eb64f29778af21501c197a", null ]
+      [ "TRACE_MARKER_TYPE_WINDOW_ID", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aeb50b9e4d2eb64f29778af21501c197a", null ],
+      [ "TRACE_MARKER_TYPE_PHYSICAL_ADDRESS", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a69cdc83a07cdf547a1ecbd83e39f48c5", null ],
+      [ "TRACE_MARKER_TYPE_PHYSICAL_ADDRESS_NOT_AVAILABLE", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac138a2d29f017ea18a3bb3e1d243c593", null ]
     ] ],
     [ "trace_type_t", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19d", [
       [ "TRACE_TYPE_READ", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19da2264004d45a5c8fe2b6713e2fe263c32", null ],
@@ -75,6 +77,7 @@
       [ "TRACE_ENTRY_VERSION_NO_KERNEL_PC", "trace__entry_8h.html#a3a78cb9ac4c3afc1444673fb9a407d76ada2123379e215cf884618dd9e954d558", null ],
       [ "TRACE_ENTRY_VERSION", "trace__entry_8h.html#a3a78cb9ac4c3afc1444673fb9a407d76a2269f0382dd716f0831ec6ea2cdf32f2", null ]
     ] ],
+    [ "type_has_address", "trace__entry_8h.html#ab4d55eef56c45ede7eee1f7daee57840", null ],
     [ "type_is_instr", "trace__entry_8h.html#ad9435e2fc94c587d4af59441c0de9d3c", null ],
     [ "type_is_instr_branch", "trace__entry_8h.html#a507c56307a93f25c501b6cd72c18c269", null ],
     [ "type_is_prefetch", "trace__entry_8h.html#a7d7697dab762a2fdd95c790e554ba171", null ]

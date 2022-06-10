@@ -574,6 +574,18 @@ Functions</h2></td></tr>
 <tr class="separator:ab74baccca7b783c29e11fe63c286c26a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad390db9aee211b90323f5b06bda2e489"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#ad390db9aee211b90323f5b06bda2e489">dr_trace_exists_at</a> (void *drcontext, void *tag)</td></tr>
 <tr class="separator:ad390db9aee211b90323f5b06bda2e489"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a402fb239f3004c01919b6d9e805e27ae"><td class="memItemLeft" align="right" valign="top">DR_API void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create</a> (void *drcontext, uint bits, uint load_factor_percent, bool synch, void(*free_payload_func)(void *, void *))</td></tr>
+<tr class="separator:a402fb239f3004c01919b6d9e805e27ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a238aacd48466e8a3d2b5eaf49a778cb2"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a238aacd48466e8a3d2b5eaf49a778cb2">dr_hashtable_destroy</a> (void *drcontext, void *htable)</td></tr>
+<tr class="separator:a238aacd48466e8a3d2b5eaf49a778cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac312c646d03e68b3aae8734a76426842"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#ac312c646d03e68b3aae8734a76426842">dr_hashtable_clear</a> (void *drcontext, void *htable)</td></tr>
+<tr class="separator:ac312c646d03e68b3aae8734a76426842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5181deddb941894386f7786d92ee58e"><td class="memItemLeft" align="right" valign="top">DR_API void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#aa5181deddb941894386f7786d92ee58e">dr_hashtable_lookup</a> (void *drcontext, void *htable, ptr_uint_t key)</td></tr>
+<tr class="separator:aa5181deddb941894386f7786d92ee58e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c2c9fe087f01c73837b8773e0882ed7"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a0c2c9fe087f01c73837b8773e0882ed7">dr_hashtable_add</a> (void *drcontext, void *htable, ptr_uint_t key, void *payload)</td></tr>
+<tr class="separator:a0c2c9fe087f01c73837b8773e0882ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a591d0cd49bd9a54ee723edadf4f72895"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a591d0cd49bd9a54ee723edadf4f72895">dr_hashtable_remove</a> (void *drcontext, void *htable, ptr_uint_t key)</td></tr>
+<tr class="separator:a591d0cd49bd9a54ee723edadf4f72895"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main API routines, including transparency support. </p>
@@ -3598,6 +3610,274 @@ When printing floating-point values, the caller's code should use <a class="el" 
 
 </div>
 </div>
+<a id="a0c2c9fe087f01c73837b8773e0882ed7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c2c9fe087f01c73837b8773e0882ed7">&#9670;&nbsp;</a></span>dr_hashtable_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API void dr_hashtable_add </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>drcontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>htable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ptr_uint_t&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>payload</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds a new entry to the hashtable.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[drcontext]</td><td>Must be the same context passed to <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+    <tr><td class="paramname">[htable]</td><td>A pointer to the table itself, returned by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+    <tr><td class="paramname">[key]</td><td>The key to add. </td></tr>
+    <tr><td class="paramname">[payload]</td><td>The payload to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac312c646d03e68b3aae8734a76426842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac312c646d03e68b3aae8734a76426842">&#9670;&nbsp;</a></span>dr_hashtable_clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API void dr_hashtable_clear </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>drcontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>htable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Removes all entries in a hashtable created by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[drcontext]</td><td>Must be the same context passed to <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+    <tr><td class="paramname">[htable]</td><td>A pointer to the table itself, returned by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a402fb239f3004c01919b6d9e805e27ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a402fb239f3004c01919b6d9e805e27ae">&#9670;&nbsp;</a></span>dr_hashtable_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API void* dr_hashtable_create </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>drcontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>bits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>load_factor_percent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>synch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(void *, void *)&#160;</td>
+          <td class="paramname"><em>free_payload_func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Allocates and initializes an open-address library-independent hashtable:</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[drcontext]</td><td>This context controls whether thread-private or global heap is used for the table. </td></tr>
+    <tr><td class="paramname">[bits]</td><td>The base-2 log of the initial capacity of the table. </td></tr>
+    <tr><td class="paramname">[load_factor_percent]</td><td>The threshold of the table's occupancy at which it will be resized (so smaller values keep the table sparser and generally more performant but at the cost of more memory). This is a percentage and so must be between 0 and 100. Values are typically in the 20-80 range and for performance critical tables would usually be below 50. </td></tr>
+    <tr><td class="paramname">[synch]</td><td>Whether to use a lock around all operations. </td></tr>
+    <tr><td class="paramname">[free_payload_func]</td><td>An optional function to call when removing an entry.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the heap-allocated table. </dd></dl>
+
+</div>
+</div>
+<a id="a238aacd48466e8a3d2b5eaf49a778cb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a238aacd48466e8a3d2b5eaf49a778cb2">&#9670;&nbsp;</a></span>dr_hashtable_destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API void dr_hashtable_destroy </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>drcontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>htable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destroys a hashtable created by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[drcontext]</td><td>Must be the same context passed to <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+    <tr><td class="paramname">[htable]</td><td>A pointer to the table itself, returned by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa5181deddb941894386f7786d92ee58e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5181deddb941894386f7786d92ee58e">&#9670;&nbsp;</a></span>dr_hashtable_lookup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API void* dr_hashtable_lookup </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>drcontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>htable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ptr_uint_t&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Queries whether an entry for the given key exists.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[drcontext]</td><td>Must be the same context passed to <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+    <tr><td class="paramname">[htable]</td><td>A pointer to the table itself, returned by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+    <tr><td class="paramname">[key]</td><td>The key to query.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the payload value for the key that was passed to <a class="el" href="dr__tools_8h.html#a0c2c9fe087f01c73837b8773e0882ed7">dr_hashtable_add()</a>, or NULL if no such key is found. </dd></dl>
+
+</div>
+</div>
+<a id="a591d0cd49bd9a54ee723edadf4f72895"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a591d0cd49bd9a54ee723edadf4f72895">&#9670;&nbsp;</a></span>dr_hashtable_remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API bool dr_hashtable_remove </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>drcontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>htable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ptr_uint_t&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Removes an entry for the given key.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[drcontext]</td><td>Must be the same context passed to <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+    <tr><td class="paramname">[htable]</td><td>A pointer to the table itself, returned by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+    <tr><td class="paramname">[key]</td><td>The key to remove.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>whether the key was found. </dd></dl>
+
+</div>
+</div>
 <a id="a75586a7501d994aa4bbd70519b726c0c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a75586a7501d994aa4bbd70519b726c0c">&#9670;&nbsp;</a></span>dr_insert_read_raw_tls()</h2>
 
@@ -6357,5 +6637,5 @@ This routine is only available with either the -thread_private or -enable_full_a
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19143 --- Fri Jun 3 2022 03:43:56 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19152 --- Fri Jun 10 2022 03:46:11 &nbsp; <img border=0 src="favicon.png">
 </small></address>

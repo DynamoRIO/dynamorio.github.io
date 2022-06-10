@@ -1155,10 +1155,11 @@ Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">synch</td><td>Whether to synchronize each operation. Even when <code>synch</code> is false, the hashtable's lock is initialized and can be used via <a class="el" href="group__drcontainers.html#ga98ba198cad4e146607e8a07db005b514">hashtable_lock()</a> and <a class="el" href="group__drcontainers.html#ga8d7f9e88180c79d080113e2bec858dbf">hashtable_unlock()</a>, allowing the caller to extend synchronization beyond just the operation in question, to include accessing a looked-up payload, e.g. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">free_payload_func</td><td>A callback for freeing each payload. Leave it NULL if no callback is needed. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">hash_key_func</td><td>A callback for hashing a key. Leave it NULL if no callback is needed and the default is to be used. For HASH_CUSTOM, a callback must be provided. The hash operation can return a full uint, as its result will be truncated via a mod of the hash key bit size. This allows for resizing the table without changing the hash operation. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">cmp_key_func</td><td>A callback for comparing two keys. Leave it NULL if no callback is needed and the default is to be used. For HASH_CUSTOM, a callback must be provided. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmp_key_func</td><td>A callback for comparing two keys. Leave it NULL if no callback is needed and the default is to be used. For HASH_CUSTOM, a callback must be provided.</td></tr>
   </table>
   </dd>
 </dl>
+<p>This hashtable uses closed addressing. For an open-address hashtable, consider <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </p>
 
 </div>
 </div>
@@ -1543,5 +1544,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19143 --- Fri Jun 3 2022 03:43:57 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19152 --- Fri Jun 10 2022 03:46:12 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -33,8 +33,8 @@ Linux</h2>
 <div class="fragment"><div class="line"><span class="preprocessor"># Install dependencies for Ubuntu 15+.  Adjust this command as appropriate for</span></div>
 <div class="line"><span class="preprocessor"># other distributions (in particular, use &quot;cmake3&quot; for Ubuntu Trusty).</span></div>
 <div class="line">$ sudo apt-get install cmake g++ g++-multilib doxygen git zlib1g-dev libunwind-dev libsnappy-dev liblz4-dev</div>
-<div class="line"><span class="preprocessor"># Get sources.</span></div>
-<div class="line">$ git clone https:<span class="comment">//github.com/DynamoRIO/dynamorio.git</span></div>
+<div class="line"><span class="preprocessor"># Get sources and initialize the submodule third_party/libipt.</span></div>
+<div class="line">$ git clone --recursive https:<span class="comment">//github.com/DynamoRIO/dynamorio.git</span></div>
 <div class="line"><span class="preprocessor"># Make a separate build directory.  Building in the source directory is not</span></div>
 <div class="line"><span class="preprocessor"># supported.</span></div>
 <div class="line">$ cd dynamorio &amp;&amp; mkdir build &amp;&amp; cd build</div>
@@ -494,5 +494,5 @@ Building the Qt DrGUI extension</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19143 --- Fri Jun 3 2022 03:43:56 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19152 --- Fri Jun 10 2022 03:46:12 &nbsp; <img border=0 src="favicon.png">
 </small></address>
