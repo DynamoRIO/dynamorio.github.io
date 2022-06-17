@@ -58,21 +58,21 @@ Windows</h2>
 <li>(optional) <a href="http://cygwin.com">Cygwin</a>. Only needed for building documentation. Select the doxygen package if you do install it. (You can also select Cygwin's perl and git as alternatives to the links above.)</li>
 </ul>
 <p>Once these dependencies are installed, you need to generate your project and solution files for Visual Studio using CMake. The easiest way to do this is to launch a cmd prompt with the right environment from the Visual Studio folder in the Start menu.</p>
-<p>To build 32-bit DynamoRIO in release mode, launch the <code>Visual Studio 2019 &gt; x86 Native Tools Command Prompt for VS 2019</code> and run the following commands:</p>
+<p>To build 64-bit DynamoRIO in release mode, launch the <code>Visual Studio 2019 &gt; x64 Native Tools Command Prompt for VS 2019</code> and run the following commands:</p>
 <div class="fragment"><div class="line"><span class="preprocessor"># Get sources.</span></div>
 <div class="line">$ git clone https:<span class="comment">//github.com/DynamoRIO/dynamorio.git</span></div>
 <div class="line"><span class="preprocessor"># Make a separate build directory.  Building in the source directory is not</span></div>
 <div class="line"><span class="preprocessor"># supported.</span></div>
 <div class="line">$ cd dynamorio &amp;&amp; mkdir build &amp;&amp; cd build</div>
 <div class="line"><span class="preprocessor"># Configure using cmake.  Pass in the path to your source directory.</span></div>
-<div class="line">$ cmake -G<span class="stringliteral">&quot;Visual Studio 16&quot;</span> ..</div>
+<div class="line">$ cmake -G<span class="stringliteral">&quot;Visual Studio 16&quot;</span> -A x64 ..</div>
 <div class="line"><span class="preprocessor"># Build from the command line.  Alternatively, open ALL_BUILD.vcproj in Visual</span></div>
 <div class="line"><span class="preprocessor"># Studio and build from there.  You must pass --config to work around a cmake</span></div>
 <div class="line"><span class="preprocessor"># bug.  (http://www.cmake.org/Bug/view.php?id=11830)</span></div>
 <div class="line">$ cmake --build . --config RelWithDebInfo</div>
 <div class="line"><span class="preprocessor"># Run notepad under DR to see whether it worked.</span></div>
 <div class="line"><span class="preprocessor">$ bin32\drrun.exe notepad.exe</span></div>
-</div><!-- fragment --><p>If you need a 64-bit build, choose <code>x64 Native Tools Command Prompt</code> and pass <code>-G"Visual Studio 16 Win64"</code> to cmake.</p>
+</div><!-- fragment --><p>If you need a 32-bit build, choose <code>x32 Native Tools Command Prompt</code> and pass <code>-G"Visual Studio 16" -A x86</code> to cmake.</p>
 <p>An alternative to the command prompt is to execute the appropriate vcvars.bat command for your compiler in your shell of choice.</p>
 <p>For developers who plan to modify the DynamoRIO sources and build on a regular basis, we recommend using <a class="el" href="page_building.html#sec_ninja">Ninja</a>.</p>
 <h2><a class="anchor" id="autotoc_md76"></a>
@@ -494,5 +494,5 @@ Building the Qt DrGUI extension</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19152 --- Fri Jun 10 2022 03:46:12 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19159 --- Fri Jun 17 2022 03:51:28 &nbsp; <img border=0 src="favicon.png">
 </small></address>

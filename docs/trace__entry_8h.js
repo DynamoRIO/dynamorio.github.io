@@ -27,7 +27,9 @@
       [ "TRACE_MARKER_TYPE_RSEQ_ABORT", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a3a011c218cb80ceeb9e3105d449e3280", null ],
       [ "TRACE_MARKER_TYPE_WINDOW_ID", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aeb50b9e4d2eb64f29778af21501c197a", null ],
       [ "TRACE_MARKER_TYPE_PHYSICAL_ADDRESS", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a69cdc83a07cdf547a1ecbd83e39f48c5", null ],
-      [ "TRACE_MARKER_TYPE_PHYSICAL_ADDRESS_NOT_AVAILABLE", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac138a2d29f017ea18a3bb3e1d243c593", null ]
+      [ "TRACE_MARKER_TYPE_PHYSICAL_ADDRESS_NOT_AVAILABLE", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac138a2d29f017ea18a3bb3e1d243c593", null ],
+      [ "TRACE_MARKER_TYPE_VIRTUAL_ADDRESS", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a31b1b641e653a465b97433137330b737", null ],
+      [ "TRACE_MARKER_TYPE_PAGE_SIZE", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a602e5f40c496455081f9a11468b6b39d", null ]
     ] ],
     [ "trace_type_t", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19d", [
       [ "TRACE_TYPE_READ", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19da2264004d45a5c8fe2b6713e2fe263c32", null ],

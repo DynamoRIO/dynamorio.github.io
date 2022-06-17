@@ -178,7 +178,11 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a69cdc83a07cdf547a1ecbd83e39f48c5">TRACE_MARKER_TYPE_PHYSICAL_ADDRESS</a>, 
 <br />
-&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac138a2d29f017ea18a3bb3e1d243c593">TRACE_MARKER_TYPE_PHYSICAL_ADDRESS_NOT_AVAILABLE</a>
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac138a2d29f017ea18a3bb3e1d243c593">TRACE_MARKER_TYPE_PHYSICAL_ADDRESS_NOT_AVAILABLE</a>, 
+<br />
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a31b1b641e653a465b97433137330b737">TRACE_MARKER_TYPE_VIRTUAL_ADDRESS</a>, 
+<br />
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a602e5f40c496455081f9a11468b6b39d">TRACE_MARKER_TYPE_PAGE_SIZE</a>
 <br />
  }</td></tr>
 <tr class="separator:aa7f51b43d8f1e20dc45e3618684b15e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -333,9 +337,13 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9aeb50b9e4d2eb64f29778af21501c197a"></a>TRACE_MARKER_TYPE_WINDOW_ID&#160;</td><td class="fielddoc"><p>Identifies in the marker value the ordinal of a window during a multi-window tracing run (see the options -trace_for_instrs and -retrace_every_instrs). When a marker with an ordinal value different from the last-seen marker appears, a time gap may exist immediately before this new marker. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a69cdc83a07cdf547a1ecbd83e39f48c5"></a>TRACE_MARKER_TYPE_PHYSICAL_ADDRESS&#160;</td><td class="fielddoc"><p>The marker value contains the physical address corresponding to the subsequent entry's instruction fetch PC or data address. If translation failed, a <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac138a2d29f017ea18a3bb3e1d243c593">TRACE_MARKER_TYPE_PHYSICAL_ADDRESS_NOT_AVAILABLE</a> will be present instead. </p>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a69cdc83a07cdf547a1ecbd83e39f48c5"></a>TRACE_MARKER_TYPE_PHYSICAL_ADDRESS&#160;</td><td class="fielddoc"><p>The marker value contains the physical address corresponding to the subsequent <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a31b1b641e653a465b97433137330b737">TRACE_MARKER_TYPE_VIRTUAL_ADDRESS</a>'s virtual address. A pair of such markers will appear somewhere prior to a regular instruction fetch or data load or store whose page's physical address has not yet been reported, or when a physical mapping change is detected. If translation failed, a <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac138a2d29f017ea18a3bb3e1d243c593">TRACE_MARKER_TYPE_PHYSICAL_ADDRESS_NOT_AVAILABLE</a> will be present instead, without a corresponding <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a31b1b641e653a465b97433137330b737">TRACE_MARKER_TYPE_VIRTUAL_ADDRESS</a>. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9ac138a2d29f017ea18a3bb3e1d243c593"></a>TRACE_MARKER_TYPE_PHYSICAL_ADDRESS_NOT_AVAILABLE&#160;</td><td class="fielddoc"><p>Indicates a failure to obtain the physical address corresponding to the subsequent entry's instruction fetch PC or data address. The marker value is undefined. </p>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9ac138a2d29f017ea18a3bb3e1d243c593"></a>TRACE_MARKER_TYPE_PHYSICAL_ADDRESS_NOT_AVAILABLE&#160;</td><td class="fielddoc"><p>Indicates a failure to obtain the physical address corresponding to the virtual address contained in the marker value. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a31b1b641e653a465b97433137330b737"></a>TRACE_MARKER_TYPE_VIRTUAL_ADDRESS&#160;</td><td class="fielddoc"><p>The marker value contains the virtual address corresponding to the prior <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a69cdc83a07cdf547a1ecbd83e39f48c5">TRACE_MARKER_TYPE_PHYSICAL_ADDRESS</a>'s physical address. A pair of such markers will appear somewhere prior to a regular instruction fetch or data load or store whose page's physical address has not yet been reported, or when a physical mapping change is detected. If translation failed, a <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac138a2d29f017ea18a3bb3e1d243c593">TRACE_MARKER_TYPE_PHYSICAL_ADDRESS_NOT_AVAILABLE</a> will be present instead, without a corresponding <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a31b1b641e653a465b97433137330b737">TRACE_MARKER_TYPE_VIRTUAL_ADDRESS</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a602e5f40c496455081f9a11468b6b39d"></a>TRACE_MARKER_TYPE_PAGE_SIZE&#160;</td><td class="fielddoc"><p>The marker value contains the traced process's page size in bytes. </p>
 </td></tr>
 </table>
 
@@ -578,5 +586,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19152 --- Fri Jun 10 2022 03:46:09 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19159 --- Fri Jun 17 2022 03:51:26 &nbsp; <img border=0 src="favicon.png">
 </small></address>
