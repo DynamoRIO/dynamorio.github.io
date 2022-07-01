@@ -988,7 +988,7 @@ Registration cannot be done during the basic block event: it should be done at i
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Registers a callback function for nudge events. External entities can nudge a process through the <a class="el" href="dr__config_8h.html#a9df3d364222898cebc24264a161e2a5f">dr_nudge_process()</a> or <a class="el" href="dr__config_8h.html#a56dbe16a233afc5d2803222799ecd490">dr_nudge_pid()</a> drconfig API routines on Windows or using the <code>nudgeunix</code> tool on Linux. A client in this process can use <a class="el" href="dr__events_8h.html#a77b1a5319fb74fad6115f62393384380">dr_nudge_client()</a> to raise a nudge, while a client in another process can use <a class="el" href="dr__events_8h.html#a9e0a6ebc74a4aa8efaed1d6b737512d2">dr_nudge_client_ex()</a>.</p>
+<p>Registers a callback function for nudge events. External entities can nudge a process through the <a class="el" href="dr__config_8h.html#a9df3d364222898cebc24264a161e2a5f">dr_nudge_process()</a> or <a class="el" href="dr__config_8h.html#a56dbe16a233afc5d2803222799ecd490">dr_nudge_pid()</a> drconfig API routines on Windows or using the <code>drnudgeunix</code> tool on Linux. A client in this process can use <a class="el" href="dr__events_8h.html#a77b1a5319fb74fad6115f62393384380">dr_nudge_client()</a> to raise a nudge, while a client in another process can use <a class="el" href="dr__events_8h.html#a9e0a6ebc74a4aa8efaed1d6b737512d2">dr_nudge_client_ex()</a>.</p>
 <p>DR calls <code>func</code> whenever the current process receives a nudge. On Windows, the nudge event is delivered in a new non-application thread. Callers must specify the target client by passing the client ID that was provided in <a class="el" href="dr__api_8h.html#a2b938c98dd186cc94eef6880f9e3c3e9">dr_client_main()</a>. </p>
 
 </div>
@@ -1939,5 +1939,5 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19165 --- Fri Jun 24 2022 03:59:31 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19172 --- Fri Jul 1 2022 04:12:20 &nbsp; <img border=0 src="favicon.png">
 </small></address>

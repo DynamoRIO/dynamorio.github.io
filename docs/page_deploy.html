@@ -66,7 +66,7 @@ Linux Deployment</h1>
 <p>If a target application executes an <code>execve</code> that discards the <code>HOME</code> environment variable, the resulting process will still run under DynamoRIO control with the same settings as the parent process. Use <code>DYNAMORIO_CONFIGDIR</code> or global configuration files to specify separate options for such a child process.</p>
 <p>When running scripts it is best to explicitly invoke the interpreter rather than invoking the script directly:</p>
 <div class="fragment"><div class="line">% bin64/drrun -- /bin/bash myscript.sh</div>
-</div><!-- fragment --><p>To <a class="el" href="using.html#sec_comm">nudge</a> a process with pid <code>targetpid</code> running under DynamoRIO and pass argument "5" to the nudge callback, use the <code>nudgeunix</code> tool: </p><div class="fragment"><div class="line">bin32/nudgeunix -pid targetpid -client 0 5</div>
+</div><!-- fragment --><p>To <a class="el" href="using.html#sec_comm">nudge</a> a process with pid <code>targetpid</code> running under DynamoRIO and pass argument "5" to the nudge callback, use the <code>drnudgeunix</code> tool: </p><div class="fragment"><div class="line">bin32/drnudgeunix -pid targetpid -client 0 5</div>
 </div><!-- fragment --><p> This will result in a nudge event with argument=5 delivered to the client callback registered with <a class="el" href="dr__events_8h.html#a03da807cdb97ec8d0db68b6d24974ea4">dr_register_nudge_event()</a> in the target process. The 0 argument is an ID supplied at registration which uniquely identifies the target client (see dr_deploy.h for details). If you used the -c argument to drrun or drconfig to register the client, the client's id defaults to 0.</p>
 <p>An alternative method to run an application under DynamoRIO is the <a class="el" href="page_deploy.html#sec_startstop">app_start()/app_stop()</a> interface, which requires modifying application source code.</p>
 <h1><a class="anchor" id="android_deploy"></a>
@@ -247,5 +247,5 @@ DynamoRIO Runtime Options</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19165 --- Fri Jun 24 2022 03:59:34 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19172 --- Fri Jul 1 2022 04:12:22 &nbsp; <img border=0 src="favicon.png">
 </small></address>
