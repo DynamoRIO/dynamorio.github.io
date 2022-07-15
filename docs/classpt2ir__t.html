@@ -33,18 +33,14 @@ permalink: /classpt2ir__t.html
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8e2e63ccd0f4b07158b4ae8fa9ff8a9f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpt2ir__t.html#a8e2e63ccd0f4b07158b4ae8fa9ff8a9f">init</a> (IN <a class="el" href="structpt2ir__config__t.html">pt2ir_config_t</a> &amp;pt2ir_config)</td></tr>
 <tr class="separator:a8e2e63ccd0f4b07158b4ae8fa9ff8a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a394dca3f2d0efa430b17a39991c94d8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pt2ir_8h.html#a5b41f57890a32a5448434a726bb6c7d9">pt2ir_convert_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpt2ir__t.html#a394dca3f2d0efa430b17a39991c94d8a">convert</a> ()</td></tr>
-<tr class="separator:a394dca3f2d0efa430b17a39991c94d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2c07442becc1598afd0069637ab9c79"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpt2ir__t.html#af2c07442becc1598afd0069637ab9c79">get_instr_count</a> ()</td></tr>
-<tr class="separator:af2c07442becc1598afd0069637ab9c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36581d3972c0452d6a5f3889ccc24a80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpt2ir__t.html#a36581d3972c0452d6a5f3889ccc24a80">print_instrs_to_stdout</a> ()</td></tr>
-<tr class="separator:a36581d3972c0452d6a5f3889ccc24a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedefbf375459bd845b73ebe80a43c019"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pt2ir_8h.html#a5b41f57890a32a5448434a726bb6c7d9">pt2ir_convert_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpt2ir__t.html#aedefbf375459bd845b73ebe80a43c019">convert</a> (OUT <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> **ilist)</td></tr>
+<tr class="separator:aedefbf375459bd845b73ebe80a43c019"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classpt2ir__t.html">pt2ir_t</a> is a class that can convert PT raw trace to DynamoRIO's IR. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a394dca3f2d0efa430b17a39991c94d8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a394dca3f2d0efa430b17a39991c94d8a">&#9670;&nbsp;</a></span>convert()</h2>
+<a id="aedefbf375459bd845b73ebe80a43c019"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedefbf375459bd845b73ebe80a43c019">&#9670;&nbsp;</a></span>convert()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -52,30 +48,15 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="pt2ir_8h.html#a5b41f57890a32a5448434a726bb6c7d9">pt2ir_convert_status_t</a> pt2ir_t::convert </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">OUT <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> **&#160;</td>
+          <td class="paramname"><em>ilist</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns pt2ir_convert_status_t. </p><dl class="section note"><dt>Note</dt><dd>The convert function performs two processes: (1) decode the PT raw trace into libipt's IR format pt_insn; (2) convert pt_insn into the DynamoRIO's IR format <a class="el" href="structinstr__t.html">instr_t</a>. If the convertion is successful, the function returns PT2IR_CONV_SUCCESS. Otherwise, the function returns the corresponding error code. </dd></dl>
-
-</div>
-</div>
-<a id="af2c07442becc1598afd0069637ab9c79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2c07442becc1598afd0069637ab9c79">&#9670;&nbsp;</a></span>get_instr_count()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint64_t pt2ir_t::get_instr_count </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns the number of instructions in the converted IR. </p>
+<p>Returns pt2ir_convert_status_t. If the convertion is successful, the function returns PT2IR_CONV_SUCCESS. Otherwise, the function returns the corresponding error code. </p><dl class="section note"><dt>Note</dt><dd>The convert function performs two processes: (1) decode the PT raw trace into libipt's IR format pt_insn; (2) convert pt_insn into the DynamoRIO's IR format <a class="el" href="structinstr__t.html">instr_t</a> and append it to ilist. </dd>
+<dd>
+The caller does not need to initialize ilist. But if the convertion is successful, the caller needs to destory the ilist. </dd></dl>
 
 </div>
 </div>
@@ -98,24 +79,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a36581d3972c0452d6a5f3889ccc24a80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36581d3972c0452d6a5f3889ccc24a80">&#9670;&nbsp;</a></span>print_instrs_to_stdout()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void pt2ir_t::print_instrs_to_stdout </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Print the disassembled text of all valid instructions to STDOUT. </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/runner/work/dynamorio/dynamorio/build_release-64/clients/include/drmemtrace/<a class="el" href="pt2ir_8h.html">pt2ir.h</a></li>
 </ul>
@@ -125,5 +88,5 @@ Public Member Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19180 --- Fri Jul 8 2022 03:59:56 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19187 --- Fri Jul 15 2022 04:16:34 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -3650,10 +3650,10 @@ When printing floating-point values, the caller's code should use <a class="el" 
 <p>Adds a new entry to the hashtable.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">[drcontext]</td><td>Must be the same context passed to <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
-    <tr><td class="paramname">[htable]</td><td>A pointer to the table itself, returned by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
-    <tr><td class="paramname">[key]</td><td>The key to add. </td></tr>
-    <tr><td class="paramname">[payload]</td><td>The payload to add. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">drcontext</td><td>Must be the same context passed to <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">htable</td><td>A pointer to the table itself, returned by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>The key to add. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">payload</td><td>The payload to add. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3688,8 +3688,8 @@ When printing floating-point values, the caller's code should use <a class="el" 
 <p>Removes all entries in a hashtable created by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">[drcontext]</td><td>Must be the same context passed to <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
-    <tr><td class="paramname">[htable]</td><td>A pointer to the table itself, returned by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">drcontext</td><td>Must be the same context passed to <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">htable</td><td>A pointer to the table itself, returned by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3742,11 +3742,11 @@ When printing floating-point values, the caller's code should use <a class="el" 
 <p>Allocates and initializes an open-address library-independent hashtable:</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">[drcontext]</td><td>This context controls whether thread-private or global heap is used for the table. </td></tr>
-    <tr><td class="paramname">[bits]</td><td>The base-2 log of the initial capacity of the table. </td></tr>
-    <tr><td class="paramname">[load_factor_percent]</td><td>The threshold of the table's occupancy at which it will be resized (so smaller values keep the table sparser and generally more performant but at the cost of more memory). This is a percentage and so must be between 0 and 100. Values are typically in the 20-80 range and for performance critical tables would usually be below 50. </td></tr>
-    <tr><td class="paramname">[synch]</td><td>Whether to use a lock around all operations. </td></tr>
-    <tr><td class="paramname">[free_payload_func]</td><td>An optional function to call when removing an entry.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">drcontext</td><td>This context controls whether thread-private or global heap is used for the table. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bits</td><td>The base-2 log of the initial capacity of the table. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">load_factor_percent</td><td>The threshold of the table's occupancy at which it will be resized (so smaller values keep the table sparser and generally more performant but at the cost of more memory). This is a percentage and so must be between 0 and 100. Values are typically in the 20-80 range and for performance critical tables would usually be below 50. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">synch</td><td>Whether to use a lock around all operations. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">free_payload_func</td><td>An optional function to call when removing an entry.</td></tr>
   </table>
   </dd>
 </dl>
@@ -3782,8 +3782,8 @@ When printing floating-point values, the caller's code should use <a class="el" 
 <p>Destroys a hashtable created by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">[drcontext]</td><td>Must be the same context passed to <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
-    <tr><td class="paramname">[htable]</td><td>A pointer to the table itself, returned by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">drcontext</td><td>Must be the same context passed to <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">htable</td><td>A pointer to the table itself, returned by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3824,9 +3824,9 @@ When printing floating-point values, the caller's code should use <a class="el" 
 <p>Queries whether an entry for the given key exists.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">[drcontext]</td><td>Must be the same context passed to <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
-    <tr><td class="paramname">[htable]</td><td>A pointer to the table itself, returned by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
-    <tr><td class="paramname">[key]</td><td>The key to query.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">drcontext</td><td>Must be the same context passed to <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">htable</td><td>A pointer to the table itself, returned by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>The key to query.</td></tr>
   </table>
   </dd>
 </dl>
@@ -3868,9 +3868,9 @@ When printing floating-point values, the caller's code should use <a class="el" 
 <p>Removes an entry for the given key.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">[drcontext]</td><td>Must be the same context passed to <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
-    <tr><td class="paramname">[htable]</td><td>A pointer to the table itself, returned by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
-    <tr><td class="paramname">[key]</td><td>The key to remove.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">drcontext</td><td>Must be the same context passed to <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">htable</td><td>A pointer to the table itself, returned by <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>The key to remove.</td></tr>
   </table>
   </dd>
 </dl>
@@ -6637,5 +6637,5 @@ This routine is only available with either the -thread_private or -enable_full_a
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19180 --- Fri Jul 8 2022 03:59:55 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19187 --- Fri Jul 15 2022 04:16:33 &nbsp; <img border=0 src="favicon.png">
 </small></address>

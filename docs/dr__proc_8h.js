@@ -169,7 +169,8 @@
       [ "FEATURE_RNG", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa221043bccb690068c1e8b5bebe94697d", null ],
       [ "FEATURE_DPB", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa57708e4fe0cae86a892bb260a6a79d58", null ],
       [ "FEATURE_DPB2", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac013883d3f4b04353abcab9e522283c0", null ],
-      [ "FEATURE_FP16", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa5883ceb38ea30920f389df49b380f366", null ]
+      [ "FEATURE_FP16", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa5883ceb38ea30920f389df49b380f366", null ],
+      [ "FEATURE_SVE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa299212c8a14e60057bf69d1275af76f7", null ]
     ] ],
     [ "feature_bit_t", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bf", [
       [ "FEATURE_FPU", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac39f532dceb337cb996ebf5a8d658668", null ],
@@ -275,7 +276,8 @@
       [ "FEATURE_RNG", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa221043bccb690068c1e8b5bebe94697d", null ],
       [ "FEATURE_DPB", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa57708e4fe0cae86a892bb260a6a79d58", null ],
       [ "FEATURE_DPB2", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac013883d3f4b04353abcab9e522283c0", null ],
-      [ "FEATURE_FP16", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa5883ceb38ea30920f389df49b380f366", null ]
+      [ "FEATURE_FP16", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa5883ceb38ea30920f389df49b380f366", null ],
+      [ "FEATURE_SVE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa299212c8a14e60057bf69d1275af76f7", null ]
     ] ],
     [ "proc_avx512_enabled", "dr__proc_8h.html#aaba068462550d9b73c32c0991c5f7551", null ],
     [ "proc_avx_enabled", "dr__proc_8h.html#adfd5dadf31b9a26540978b7331701770", null ],

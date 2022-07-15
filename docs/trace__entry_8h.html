@@ -199,7 +199,11 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1acdd606c172687a860e0355ceb9e9195a">OFFLINE_FILE_TYPE_ARCH_X86_64</a> = 0x40, 
 <br />
-&#160;&#160;<a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a92ada41c4b35f253300e9c039feea086">OFFLINE_FILE_TYPE_ARCH_ALL</a>
+&#160;&#160;<a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a92ada41c4b35f253300e9c039feea086">OFFLINE_FILE_TYPE_ARCH_ALL</a>, 
+<br />
+&#160;&#160;<a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1ac9e7a222a054229abbe7e306a0dad5f6">OFFLINE_FILE_TYPE_IFILTERED</a> = 0x80, 
+<br />
+&#160;&#160;<a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1aa4b4ef06f1ecb20e6098a3a9d88d5691">OFFLINE_FILE_TYPE_DFILTERED</a> = 0x100
 <br />
  }</td></tr>
 <tr class="separator:a183fb25912d45f16f5dd68e7895787a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -278,7 +282,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Bitfields used to describe the high-level characteristics of both an offline final trace and a raw not-yet-postprocessed trace, as well as (despite the OFFLINE_ prefix) an online trace. In a final trace these are stored in a marker of type <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9afb92a065fc3cdb8b86e463bd2ff2fdf1">TRACE_MARKER_TYPE_FILETYPE</a>. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a183fb25912d45f16f5dd68e7895787a1ab2adc5337c786c96c826052e1a227765"></a>OFFLINE_FILE_TYPE_FILTERED&#160;</td><td class="fielddoc"><p>Addresses filtered online. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a183fb25912d45f16f5dd68e7895787a1ab2adc5337c786c96c826052e1a227765"></a>OFFLINE_FILE_TYPE_FILTERED&#160;</td><td class="fielddoc"><p>DEPRECATED: Addresses filtered online. Newer trace files use <a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1ac9e7a222a054229abbe7e306a0dad5f6">OFFLINE_FILE_TYPE_IFILTERED</a> and <a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1aa4b4ef06f1ecb20e6098a3a9d88d5691">OFFLINE_FILE_TYPE_DFILTERED</a>. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a183fb25912d45f16f5dd68e7895787a1a74ef5cef97b8a8fb49cc7a314126edbc"></a>OFFLINE_FILE_TYPE_INSTRUCTION_ONLY&#160;</td><td class="fielddoc"><p>Trace has no data references. </p>
 </td></tr>
@@ -291,6 +295,10 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a183fb25912d45f16f5dd68e7895787a1acdd606c172687a860e0355ceb9e9195a"></a>OFFLINE_FILE_TYPE_ARCH_X86_64&#160;</td><td class="fielddoc"><p>Recorded on x86 (64-bit). </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a183fb25912d45f16f5dd68e7895787a1a92ada41c4b35f253300e9c039feea086"></a>OFFLINE_FILE_TYPE_ARCH_ALL&#160;</td><td class="fielddoc"><p>All possible architecture types. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a183fb25912d45f16f5dd68e7895787a1ac9e7a222a054229abbe7e306a0dad5f6"></a>OFFLINE_FILE_TYPE_IFILTERED&#160;</td><td class="fielddoc"><p>Instruction addresses filtered online. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a183fb25912d45f16f5dd68e7895787a1aa4b4ef06f1ecb20e6098a3a9d88d5691"></a>OFFLINE_FILE_TYPE_DFILTERED&#160;</td><td class="fielddoc"><p>Data addresses filtered online. </p>
 </td></tr>
 </table>
 
@@ -586,5 +594,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19180 --- Fri Jul 8 2022 03:59:54 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19187 --- Fri Jul 15 2022 04:16:31 &nbsp; <img border=0 src="favicon.png">
 </small></address>
