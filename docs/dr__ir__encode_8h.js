@@ -6,7 +6,8 @@
       [ "DR_ISA_AMD64", "dr__ir__encode_8h.html#a00e03b2e5e75a83eacf9a0ee1674074aabd60fe0abfbb90ba431205b7e5345ac0", null ],
       [ "DR_ISA_ARM_A32", "dr__ir__encode_8h.html#a00e03b2e5e75a83eacf9a0ee1674074aa28dc5f6ff81766706362bfb7494a0494", null ],
       [ "DR_ISA_ARM_THUMB", "dr__ir__encode_8h.html#a00e03b2e5e75a83eacf9a0ee1674074aa3f721209faa0616ff181a7bf207a59cc", null ],
-      [ "DR_ISA_ARM_A64", "dr__ir__encode_8h.html#a00e03b2e5e75a83eacf9a0ee1674074aaefbc35f57a99a1464fda9d6d75dd8445", null ]
+      [ "DR_ISA_ARM_A64", "dr__ir__encode_8h.html#a00e03b2e5e75a83eacf9a0ee1674074aaefbc35f57a99a1464fda9d6d75dd8445", null ],
+      [ "DR_ISA_RV64IMAFDC", "dr__ir__encode_8h.html#a00e03b2e5e75a83eacf9a0ee1674074aac4d8aa6ef84f5be693a9dd65b4fb6d3a", null ]
     ] ],
     [ "dr_get_isa_mode", "dr__ir__encode_8h.html#ae8f9b08f90490fbeae26d12a461af084", null ],
     [ "dr_set_isa_mode", "dr__ir__encode_8h.html#ae796d2ff6eabe43904b17742deafd637", null ],

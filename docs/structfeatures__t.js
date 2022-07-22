@@ -3,6 +3,7 @@
     [ "ext_flags_edx", "structfeatures__t.html#a28aac2cc1a079956c2a64fe36a998898", null ],
     [ "flags_aa64isar0", "structfeatures__t.html#af993b0e9bd74a9109b72ce4cd11c592b", null ],
     [ "flags_aa64isar1", "structfeatures__t.html#a09507424c979e7999f13ef9849027f24", null ],
+    [ "flags_aa64mmfr1", "structfeatures__t.html#a973305e0be79705a6b22fee363692287", null ],
     [ "flags_aa64pfr0", "structfeatures__t.html#a65f7f47df24cc8102e7024fa33c20065", null ],
     [ "flags_ecx", "structfeatures__t.html#ad2a209c4263a77a3a3d59a752e7da4f1", null ],
     [ "flags_edx", "structfeatures__t.html#a0c091eee4836efb0926530db3bf5db2d", null ],
