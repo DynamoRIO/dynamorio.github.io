@@ -1,4 +1,6 @@
 [
+    [ "elf_base", "structpt2ir__config__t.html#ad3c69bd161159efca1591b441e6d80a7", null ],
+    [ "elf_file_path", "structpt2ir__config__t.html#a9eb6f5f5f1d6e4cb575b5ef69843e79a", null ],
     [ "kcore_path", "structpt2ir__config__t.html#ac2823b2d3dd9bc7c098ffdf0292152f8", null ],
     [ "pt_config", "structpt2ir__config__t.html#a07b047384d52823d16afc088468a3ae5", null ],
     [ "raw_file_path", "structpt2ir__config__t.html#a6f05c3cad7d9c3858222085256a393fc", null ],
