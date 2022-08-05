@@ -34,7 +34,7 @@ Instruction Records</h1>
 <p>Branch targets are also not explicitly recorded (a design decision). The executed target as well as branch direction can be obtained by examining the address of the instruction immediately following a branch. If the program flow is changed by the kernel such as by signal delivery, the branch target is explicitly recorded in the trace in a metadata marker entry of type <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a3aa19ac796e054c478f0a6ec99286020">TRACE_MARKER_TYPE_KERNEL_EVENT</a>.</p>
 <h1><a class="anchor" id="sec_drcachesim_format_data"></a>
 Memory Access Records</h1>
-<p>Memory accesses (data loads and stores) are stored in <a class="el" href="struct__memref__data__t.html">_memref_data_t</a>. The program counter of the instruction performing the memory access, the virtual address (unless <a class="el" href="sec_drcachesim_phys.html">Physical Addresses</a> are enabled), and the size are provided.</p>
+<p>Memory accesses (data loads and stores) are stored in <a class="el" href="struct__memref__data__t.html">_memref_data_t</a>. The program counter of the instruction performing the memory access, the virtual address (convertable to physical: see <a class="el" href="sec_drcachesim_phys.html">Physical Addresses</a>), and the size are provided.</p>
 <h1><a class="anchor" id="sec_drcachesim_format_other"></a>
 Other Records</h1>
 <p>Besides instruction and memory records, other trace entry types include <a class="el" href="struct__memref__marker__t.html">_memref_marker_t</a>, <a class="el" href="struct__memref__flush__t.html">_memref_flush_t</a>, <a class="el" href="struct__memref__thread__exit__t.html">_memref_thread_exit_t</a>, etc. These records provide specific inforamtion about events that can alter the program flow or the system's states.</p>
@@ -60,5 +60,5 @@ Other Records</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19200 --- Fri Jul 29 2022 04:06:35 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19208 --- Fri Aug 5 2022 04:04:19 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -54,6 +54,11 @@
       [ "Aliases", "page_droption.html#sec_droption_aliases", null ],
       [ "Clearing Accumulated Values on Re-attach", "page_droption.html#sec_droption_reattach", null ]
     ] ],
+    [ "Intel PT Tracing", "page_drpttracer.html", [
+      [ "Setup", "page_drpttracer.html#sec_drpttracer_setup", null ],
+      [ "Usage", "page_drpttracer.html#sec_drpttracer_usage", null ],
+      [ "Tracing Mode", "page_drpttracer.html#sec_drpttracer_tracing_mode", null ]
+    ] ],
     [ "Register Management", "page_drreg.html", [
       [ "Setup", "page_drreg.html#sec_drreg_setup", null ],
       [ "Usage", "page_drreg.html#sec_drreg_usage", null ],
