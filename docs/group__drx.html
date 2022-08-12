@@ -83,8 +83,8 @@ Functions</h2></td></tr>
 <tr class="separator:ga3189cbfbf85d5c32965bd8a140b2c35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae33a91872caa46e430d5d721af6d8c82"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#gae33a91872caa46e430d5d721af6d8c82">drx_aflags_are_dead</a> (<a class="el" href="structinstr__t.html">instr_t</a> *where)</td></tr>
 <tr class="separator:gae33a91872caa46e430d5d721af6d8c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5eba10b0f9536c1a108d796e0b84c4cd"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga5eba10b0f9536c1a108d796e0b84c4cd">drx_insert_counter_update</a> (void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__ir__utils_8h.html#a89a6b714ff24d91d78589877047a29b9">dr_spill_slot_t</a> slot, IF_NOT_X86_(<a class="el" href="dr__ir__utils_8h.html#a89a6b714ff24d91d78589877047a29b9">dr_spill_slot_t</a> slot2) void *addr, int value, uint flags)</td></tr>
-<tr class="separator:ga5eba10b0f9536c1a108d796e0b84c4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe776daa6afdc6759718c2656d07ff27"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#gafe776daa6afdc6759718c2656d07ff27">drx_insert_counter_update</a> (void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__ir__utils_8h.html#a89a6b714ff24d91d78589877047a29b9">dr_spill_slot_t</a> slot, IF_AARCHXX_(<a class="el" href="dr__ir__utils_8h.html#a89a6b714ff24d91d78589877047a29b9">dr_spill_slot_t</a> slot2) void *addr, int value, uint flags)</td></tr>
+<tr class="separator:gafe776daa6afdc6759718c2656d07ff27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9348e840424caf0098a8b1ba69955864"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga9348e840424caf0098a8b1ba69955864">drx_register_soft_kills</a> (bool(*event_cb)(process_id_t pid, int exit_code))</td></tr>
 <tr class="separator:ga9348e840424caf0098a8b1ba69955864"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2f2b2e6468760cdee7c55975e8cdce5c"><td class="memItemLeft" align="right" valign="top">DR_EXPORT size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga2f2b2e6468760cdee7c55975e8cdce5c">drx_instrlist_size</a> (<a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist)</td></tr>
@@ -844,8 +844,8 @@ This method simply wraps a store that also sets an app translation. Make sure th
 
 </div>
 </div>
-<a id="ga5eba10b0f9536c1a108d796e0b84c4cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5eba10b0f9536c1a108d796e0b84c4cd">&#9670;&nbsp;</a></span>drx_insert_counter_update()</h2>
+<a id="gafe776daa6afdc6759718c2656d07ff27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafe776daa6afdc6759718c2656d07ff27">&#9670;&nbsp;</a></span>drx_insert_counter_update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -877,7 +877,7 @@ This method simply wraps a store that also sets an app translation. Make sure th
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IF_NOT_X86_(<a class="el" href="dr__ir__utils_8h.html#a89a6b714ff24d91d78589877047a29b9">dr_spill_slot_t</a> slot2) void *&#160;</td>
+          <td class="paramtype">IF_AARCHXX_(<a class="el" href="dr__ir__utils_8h.html#a89a6b714ff24d91d78589877047a29b9">dr_spill_slot_t</a> slot2) void *&#160;</td>
           <td class="paramname"><em>addr</em>, </td>
         </tr>
         <tr>
@@ -905,7 +905,7 @@ This method simply wraps a store that also sets an app translation. Make sure th
 <dl class="section return"><dt>Returns</dt><dd>whether successful.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The counter update is racy (i.e., not synchronized among threads) unless <a class="el" href="group__drx.html#gga4790f45dcc812c1b00184a2edccdddf5aa45e32a1d62398b84858de6759364688">DRX_COUNTER_LOCK</a> is specified in <code>flags</code>. When <a class="el" href="group__drx.html#gga4790f45dcc812c1b00184a2edccdddf5aa45e32a1d62398b84858de6759364688">DRX_COUNTER_LOCK</a> is set, the instrumentation may fail if a 64-bit counter is updated in a 32-bit application or the counter crosses cache lines. Currently, <a class="el" href="group__drx.html#gga4790f45dcc812c1b00184a2edccdddf5aa45e32a1d62398b84858de6759364688">DRX_COUNTER_LOCK</a> is not yet supported on AArchXX. For AArchXX, if <a class="el" href="group__drx.html#gga4790f45dcc812c1b00184a2edccdddf5aa50fccbd9d5dc9f300d6033c971f95e4">DRX_COUNTER_REL_ACQ</a> is specified in <code>flags</code>, release-acquire semantics are enforced for the counter update. The <a class="el" href="group__drx.html#gga4790f45dcc812c1b00184a2edccdddf5aa50fccbd9d5dc9f300d6033c971f95e4">DRX_COUNTER_REL_ACQ</a> flag can be used in conjunction with <a class="el" href="group__drx.html#gga4790f45dcc812c1b00184a2edccdddf5a507636af18a8858c214066682d013a1a">DRX_COUNTER_64BIT</a>.</dd>
 <dd>
-To update multiple counters at the same place, multiple <a class="el" href="group__drx.html#ga5eba10b0f9536c1a108d796e0b84c4cd">drx_insert_counter_update()</a> invocations should be made in a row with the same <code>where</code> instruction and no other instructions should be inserted in between. In that case, <code>drx</code> will try to merge the instrumentation for better performance. </dd></dl>
+To update multiple counters at the same place, multiple <a class="el" href="group__drx.html#gafe776daa6afdc6759718c2656d07ff27">drx_insert_counter_update()</a> invocations should be made in a row with the same <code>where</code> instruction and no other instructions should be inserted in between. In that case, <code>drx</code> will try to merge the instrumentation for better performance. </dd></dl>
 
 </div>
 </div>
@@ -1207,5 +1207,5 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19208 --- Fri Aug 5 2022 04:04:19 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19215 --- Fri Aug 12 2022 03:53:52 &nbsp; <img border=0 src="favicon.png">
 </small></address>

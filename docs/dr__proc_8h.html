@@ -365,9 +365,13 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa5883ceb38ea30920f389df49b380f366">FEATURE_FP16</a> = DEF_FEAT(AA64PFR0, 4, 1, 1), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa299212c8a14e60057bf69d1275af76f7">FEATURE_SVE</a> = DEF_FEAT(AA64PFR0, 8, 1, 1), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaa7e022c08f18b0f0ec9228964630b7ce">FEATURE_RAS</a> = DEF_FEAT(AA64PFR0, 7, 1, 0), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa09685b77cdd25d64cbc842f03907555f">FEATURE_LOR</a> = DEF_FEAT(AA64MMFR1, 4, 1, 1)
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa299212c8a14e60057bf69d1275af76f7">FEATURE_SVE</a> = DEF_FEAT(AA64PFR0, 8, 1, 0), 
+<br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa09685b77cdd25d64cbc842f03907555f">FEATURE_LOR</a> = DEF_FEAT(AA64MMFR1, 4, 1, 0), 
+<br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadd626046ce5c535fa183e30bd955511a">FEATURE_SPE</a> = DEF_FEAT(AA64DFR0, 8, 1, 0)
 <br />
  }</td></tr>
 <tr class="separator:a5e226019d68bd13050692da392f6c4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -580,9 +584,13 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa5883ceb38ea30920f389df49b380f366">FEATURE_FP16</a> = DEF_FEAT(AA64PFR0, 4, 1, 1), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa299212c8a14e60057bf69d1275af76f7">FEATURE_SVE</a> = DEF_FEAT(AA64PFR0, 8, 1, 1), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaa7e022c08f18b0f0ec9228964630b7ce">FEATURE_RAS</a> = DEF_FEAT(AA64PFR0, 7, 1, 0), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa09685b77cdd25d64cbc842f03907555f">FEATURE_LOR</a> = DEF_FEAT(AA64MMFR1, 4, 1, 1)
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa299212c8a14e60057bf69d1275af76f7">FEATURE_SVE</a> = DEF_FEAT(AA64PFR0, 8, 1, 0), 
+<br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa09685b77cdd25d64cbc842f03907555f">FEATURE_LOR</a> = DEF_FEAT(AA64MMFR1, 4, 1, 0), 
+<br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadd626046ce5c535fa183e30bd955511a">FEATURE_SPE</a> = DEF_FEAT(AA64DFR0, 8, 1, 0)
 <br />
  }</td></tr>
 <tr class="separator:a5e226019d68bd13050692da392f6c4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1672,9 +1680,13 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa5883ceb38ea30920f389df49b380f366"></a>FEATURE_FP16&#160;</td><td class="fielddoc"><p>Half-precision FP (AArch64) </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfaa7e022c08f18b0f0ec9228964630b7ce"></a>FEATURE_RAS&#160;</td><td class="fielddoc"><p>RAS extension (AArch64) </p>
+</td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa299212c8a14e60057bf69d1275af76f7"></a>FEATURE_SVE&#160;</td><td class="fielddoc"><p>Scalable Vectors (AArch64) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa09685b77cdd25d64cbc842f03907555f"></a>FEATURE_LOR&#160;</td><td class="fielddoc"><p>Limited order regions (AArch64) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfadd626046ce5c535fa183e30bd955511a"></a>FEATURE_SPE&#160;</td><td class="fielddoc"><p>Profiling extension (AArch64) </p>
 </td></tr>
 </table>
 
@@ -1901,9 +1913,13 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa5883ceb38ea30920f389df49b380f366"></a>FEATURE_FP16&#160;</td><td class="fielddoc"><p>Half-precision FP (AArch64) </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfaa7e022c08f18b0f0ec9228964630b7ce"></a>FEATURE_RAS&#160;</td><td class="fielddoc"><p>RAS extension (AArch64) </p>
+</td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa299212c8a14e60057bf69d1275af76f7"></a>FEATURE_SVE&#160;</td><td class="fielddoc"><p>Scalable Vectors (AArch64) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa09685b77cdd25d64cbc842f03907555f"></a>FEATURE_LOR&#160;</td><td class="fielddoc"><p>Limited order regions (AArch64) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfadd626046ce5c535fa183e30bd955511a"></a>FEATURE_SPE&#160;</td><td class="fielddoc"><p>Profiling extension (AArch64) </p>
 </td></tr>
 </table>
 
@@ -2399,5 +2415,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19208 --- Fri Aug 5 2022 04:04:18 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19215 --- Fri Aug 12 2022 03:53:51 &nbsp; <img border=0 src="favicon.png">
 </small></address>

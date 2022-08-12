@@ -16,6 +16,7 @@
       [ "DRWRAP_CALLCONV_FASTCALL", "group__drwrap.html#ggae5c8c610a356f2dd2eaf27380a1645a0a92d11b17703af61d33915385865621e4", null ],
       [ "DRWRAP_CALLCONV_THISCALL", "group__drwrap.html#ggae5c8c610a356f2dd2eaf27380a1645a0abf0e3cdd3d35e05b3fa73985edec3582", null ],
       [ "DRWRAP_CALLCONV_AARCH64", "group__drwrap.html#ggae5c8c610a356f2dd2eaf27380a1645a0a3cf21e6a950ea452c7607b4acbc66c57", null ],
+      [ "DRWRAP_CALLCONV_RISCV_LP64", "group__drwrap.html#ggae5c8c610a356f2dd2eaf27380a1645a0a45de163b802a1ae5dc5af110de911e51", null ],
       [ "DRWRAP_CALLCONV_DEFAULT", "group__drwrap.html#ggae5c8c610a356f2dd2eaf27380a1645a0aba1f5ae2095604d1e1fb31715cbf75c5", null ],
       [ "DRWRAP_CALLCONV_VARARG", "group__drwrap.html#ggae5c8c610a356f2dd2eaf27380a1645a0a6c063dacd6e3e1d9da62c6c18b6b3ac8", null ],
       [ "DRWRAP_CALLCONV_MASK", "group__drwrap.html#ggae5c8c610a356f2dd2eaf27380a1645a0ad48fc0c77eedbbdcfbefa88ed682d4db", null ]

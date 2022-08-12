@@ -170,8 +170,10 @@
       [ "FEATURE_DPB", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa57708e4fe0cae86a892bb260a6a79d58", null ],
       [ "FEATURE_DPB2", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac013883d3f4b04353abcab9e522283c0", null ],
       [ "FEATURE_FP16", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa5883ceb38ea30920f389df49b380f366", null ],
+      [ "FEATURE_RAS", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaa7e022c08f18b0f0ec9228964630b7ce", null ],
       [ "FEATURE_SVE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa299212c8a14e60057bf69d1275af76f7", null ],
-      [ "FEATURE_LOR", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa09685b77cdd25d64cbc842f03907555f", null ]
+      [ "FEATURE_LOR", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa09685b77cdd25d64cbc842f03907555f", null ],
+      [ "FEATURE_SPE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadd626046ce5c535fa183e30bd955511a", null ]
     ] ],
     [ "feature_bit_t", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bf", [
       [ "FEATURE_FPU", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac39f532dceb337cb996ebf5a8d658668", null ],
@@ -278,8 +280,10 @@
       [ "FEATURE_DPB", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa57708e4fe0cae86a892bb260a6a79d58", null ],
       [ "FEATURE_DPB2", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac013883d3f4b04353abcab9e522283c0", null ],
       [ "FEATURE_FP16", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa5883ceb38ea30920f389df49b380f366", null ],
+      [ "FEATURE_RAS", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaa7e022c08f18b0f0ec9228964630b7ce", null ],
       [ "FEATURE_SVE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa299212c8a14e60057bf69d1275af76f7", null ],
-      [ "FEATURE_LOR", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa09685b77cdd25d64cbc842f03907555f", null ]
+      [ "FEATURE_LOR", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa09685b77cdd25d64cbc842f03907555f", null ],
+      [ "FEATURE_SPE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadd626046ce5c535fa183e30bd955511a", null ]
     ] ],
     [ "proc_avx512_enabled", "dr__proc_8h.html#aaba068462550d9b73c32c0991c5f7551", null ],
     [ "proc_avx_enabled", "dr__proc_8h.html#adfd5dadf31b9a26540978b7331701770", null ],

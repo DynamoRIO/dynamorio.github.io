@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 9.0.19208"
+title: "Release Notes for Version 9.0.19215"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 9.0.19208 </div>  </div>
+<div class="title">Release Notes for Version 9.0.19215 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,8 +63,8 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 9.0.19208. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 9.0.19208 and 9.0.1 include the following compatibility changes:</p><ul>
+<p>The current version is 9.0.19215. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 9.0.19215 and 9.0.1 include the following compatibility changes:</p><ul>
 <li>Eliminated the -skip_syscall option to drrun and drinject, which is now always on by default.</li>
 <li>Changed the drcachesim -use_physical option to not modify the regular trace entry virtual addresses but to instead insert metadata containing translation information for converting virtual to physical addresses.</li>
 </ul>
@@ -98,7 +98,7 @@ Changes Since Prior Releases</h1>
 <li>A source compatibilty change in drcachesim analysis tools for users who have created derived classes from existing analysis tools: member fields of classes are now following a consistent style with an underscore suffix. References to renamed fields will need to be updated.</li>
 <li>A change in the load callbacks used with <a class="el" href="group__drcovlib.html#ga9c2889006a80254645521f81a1a486f5">drmodtrack_add_custom_data()</a> and <a class="el" href="drmemtrace_8h.html#a8644981035cdedfafb000d03cd223399">drmemtrace_custom_module_data()</a>: they each take an additional parameter, the segment index. The custom data field is now per-segment and not per-module, and all callbacks are invoked separately for each segment.</li>
 </ul>
-<p>The changes between version 9.0.19208 and 8.0.0 include the following minor compatibility changes:</p>
+<p>The changes between version 9.0.19215 and 8.0.0 include the following minor compatibility changes:</p>
 <ul>
 <li>drconfiglib (and thus drrun and drconfig) now sets only the new client path options which are added in this release to support other-bitwidth child processes. This means that a drconfiglib from this version will not properly configure for a DynamoRIO core library from a prior version.</li>
 <li>A new option -ldstex2cas is on by default on ARM and AArch64. This converts load-exclusive store-exclusive sequences to use compare-and-swap instead, which enables normal instrumentation of such sequences without clearing the exclusive monitor and causing infinite loops. However, the compare- and-swap's semantics are not identical: it does not detect "ABA" changes and could cause errors in lock-free data structures or other application constructs. See <a class="el" href="API_BT.html#sec_ldrex">Exclusive Monitor Instrumentation</a> for more information.</li>
@@ -125,7 +125,7 @@ Changes Since Prior Releases</h1>
 <li>Added <a class="el" href="dr__ir__instr_8h.html#abdbd15b741792307845f5fc2df9b4b5d">instr_is_exclusive_load()</a>.</li>
 <li>Added <a class="el" href="dr__ir__macros__aarch64_8h.html#a0af576a857ca51596cc247dfa5771370">XINST_CREATE_store_pair()</a> and <a class="el" href="dr__ir__macros__aarch64_8h.html#a274c966568324357b4bb5785738bcfb7">XINST_CREATE_load_pair()</a>.</li>
 <li>Added <a class="el" href="dr__ir__instr_8h.html#a7aa1835665d4a2933d0a9bcfb0d42b4e">instr_replace_reg_resize()</a> and <a class="el" href="dr__ir__opnd_8h.html#aad964c704e6bdfcb1fe0fb633cd64e44">opnd_replace_reg_resize()</a>.</li>
-<li>Added <a class="el" href="group__drx.html#gga4790f45dcc812c1b00184a2edccdddf5aa50fccbd9d5dc9f300d6033c971f95e4">DRX_COUNTER_REL_ACQ</a> flag to optionally enable release-acquire semantics for <a class="el" href="group__drx.html#ga5eba10b0f9536c1a108d796e0b84c4cd">drx_insert_counter_update()</a> on AArchXX.</li>
+<li>Added <a class="el" href="group__drx.html#gga4790f45dcc812c1b00184a2edccdddf5aa50fccbd9d5dc9f300d6033c971f95e4">DRX_COUNTER_REL_ACQ</a> flag to optionally enable release-acquire semantics for <a class="el" href="group__drx.html#gafe776daa6afdc6759718c2656d07ff27">drx_insert_counter_update()</a> on AArchXX.</li>
 <li>Added a preferred base field to the <a class="el" href="struct__module__data__t.html">_module_data_t</a> struct and to the <a class="el" href="struct__drmodtrack__info__t.html">_drmodtrack_info_t</a> struct.</li>
 <li>Added support for running under QEMU via the <a class="el" href="page_deploy.html#op_xarch_root">-xarch_root</a> runtime option which locates guest system libraries and enables workarounds for problems with QEMU's threads.</li>
 <li>Added <a class="el" href="dr__events_8h.html#a66a5226e857e03ebb685b3e8e1566c7c">dr_is_detaching()</a>, an API to query whether detach is in progress.</li>
@@ -340,7 +340,7 @@ Changes Since Prior Releases</h1>
 <li>Added better drreg support for intra-bb control flow by adding <a class="el" href="group__drreg.html#ga7910ab166b0d698c11964a7b89d90faf">drreg_set_bb_properties()</a>.</li>
 <li>Added priority-controlled <a class="el" href="group__drmgr.html#gaf5d894ba37e777790c9dec6f265892cb">drmgr_register_thread_init_event_ex()</a> and <a class="el" href="group__drmgr.html#ga63e2e169d810174091e47364d53f18f5">drmgr_register_thread_exit_event_ex()</a>.</li>
 <li>Added <a class="el" href="page_drx.html#sec_drx_buf">Buffer Filling API</a> to drx: <a class="el" href="group__drx.html#ga4caa3e50a3cfb5ecb5c08e65fc44ada3">drx_buf_create_circular_buffer()</a>, <a class="el" href="group__drx.html#ga26d48f2339de13a75bfe21b5fd04a6c7">drx_buf_create_trace_buffer()</a>, and more.</li>
-<li>Documented that <a class="el" href="group__drx.html#ga5eba10b0f9536c1a108d796e0b84c4cd">drx_insert_counter_update()</a> does rely on <a class="el" href="group__drx.html#gae0665a86427616ffc80c59375649e283">drx_init()</a>.</li>
+<li>Documented that <a class="el" href="group__drx.html#gafe776daa6afdc6759718c2656d07ff27">drx_insert_counter_update()</a> does rely on <a class="el" href="group__drx.html#gae0665a86427616ffc80c59375649e283">drx_init()</a>.</li>
 <li>Better international string support for usernames and application paths.</li>
 </ul>
 <hr  />
@@ -361,7 +361,7 @@ Changes Since Prior Releases</h1>
 <li>Added support for C++ clients on Android via private loader support for Bionic.</li>
 <li><a class="el" href="dr__ir__opnd_8h.html#a40b831f95abf3ee22f584a63e86a96c3">opnd_size_in_bytes()</a> and <a class="el" href="dr__ir__opnd_8h.html#af8ba98539916f574a3bc0c0fc81e4c54">opnd_size_in_bits()</a> no longer accept DR_REG_ constants as input (the caller must first call <a class="el" href="dr__ir__opnd_8h.html#a5172d0f6b951c1cc23c0465fd8315aa2">reg_get_size()</a>). This was true in the 6.0.0 release but the documentation and the routines themselves did not reflect this.</li>
 <li>Added <a class="el" href="group__drreg.html#gad5d81ea8114d9aea29b340dd034cda04">drreg_init_and_fill_vector()</a> and <a class="el" href="group__drreg.html#ga2878afd0bb1dcc73ebf1eb99a83748ce">drreg_set_vector_entry()</a>.</li>
-<li>Augmented <a class="el" href="group__drx.html#ga5eba10b0f9536c1a108d796e0b84c4cd">drx_insert_counter_update()</a> to work with drreg.</li>
+<li>Augmented <a class="el" href="group__drx.html#gafe776daa6afdc6759718c2656d07ff27">drx_insert_counter_update()</a> to work with drreg.</li>
 <li>Added <a class="el" href="dr__tools_8h.html#a6b8cdf29035914846c03c4409a3f8fcf">dr_raw_tls_opnd()</a>.</li>
 <li>Added <a class="el" href="group__drreg.html#ga39a587dee2fc48409d6486ab5fd91e74">drreg_reservation_info()</a>.</li>
 <li>Added <a class="el" href="dr__ir__opnd_8h.html#a6d1d3033c01b8dc8cadc3dd84e8b983e">opnd_create_rel_addr()</a> and <a class="el" href="dr__ir__opnd_8h.html#af451897a176423eb75db2d607e9db7b3">opnd_is_rel_addr()</a> support for ARM.</li>
@@ -1089,5 +1089,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19208 --- Fri Aug 5 2022 04:04:19 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19215 --- Fri Aug 12 2022 03:53:52 &nbsp; <img border=0 src="favicon.png">
 </small></address>

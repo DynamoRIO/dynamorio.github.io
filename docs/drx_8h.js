@@ -27,7 +27,7 @@
     [ "drx_exit", "group__drx.html#ga996c662c089046984b64a627500748f5", null ],
     [ "drx_expand_scatter_gather", "group__drx.html#ga30c372c0385d8584660f5c449a18ec36", null ],
     [ "drx_init", "group__drx.html#gae0665a86427616ffc80c59375649e283", null ],
-    [ "drx_insert_counter_update", "group__drx.html#ga5eba10b0f9536c1a108d796e0b84c4cd", null ],
+    [ "drx_insert_counter_update", "group__drx.html#gafe776daa6afdc6759718c2656d07ff27", null ],
     [ "drx_instrlist_app_size", "group__drx.html#ga4ced61bc9752b42236f79929a3daf830", null ],
     [ "drx_instrlist_size", "group__drx.html#ga2f2b2e6468760cdee7c55975e8cdce5c", null ],
     [ "drx_open_unique_appid_dir", "group__drx.html#gafdcaedde814b3ff345686c6a3abf879c", null ],

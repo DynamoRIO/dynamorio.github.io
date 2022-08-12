@@ -1,6 +1,7 @@
 [
     [ "ext_flags_ecx", "structfeatures__t.html#a45f7c37d632b49e8a7ed72da9698201d", null ],
     [ "ext_flags_edx", "structfeatures__t.html#a28aac2cc1a079956c2a64fe36a998898", null ],
+    [ "flags_aa64dfr0", "structfeatures__t.html#ae8451732681e6350f6c610d8b5b3df92", null ],
     [ "flags_aa64isar0", "structfeatures__t.html#af993b0e9bd74a9109b72ce4cd11c592b", null ],
     [ "flags_aa64isar1", "structfeatures__t.html#a09507424c979e7999f13ef9849027f24", null ],
     [ "flags_aa64mmfr1", "structfeatures__t.html#a973305e0be79705a6b22fee363692287", null ],

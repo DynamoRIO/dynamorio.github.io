@@ -45,14 +45,14 @@ DynamoRIO's API is augmented by a collection of extension libraries.</li>
 DynamoRIO can be used as a standalone library for IA-32/AMD64/ARM/AArch64 disassembly, decoding, encoding, and general instruction manipulation. A separate static library is provided for this purpose.</li>
 <li><a class="el" href="overview.html">DynamoRIO System Overview</a> <br  />
 A description of the implementation of the DynamoRIO system.</li>
-<li><a class="el" href="release_notes.html">Release Notes for Version 9.0.19208</a> <br  />
+<li><a class="el" href="release_notes.html">Release Notes for Version 9.0.19215</a> <br  />
 Release notes for this release, including changes since prior releases and plans for future releases.</li>
 </ul>
 <p><br  />
  </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
-<div class="ttc" id="astruct__dr__mcontext__t_html"><div class="ttname"><a href="struct__dr__mcontext__t.html">_dr_mcontext_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:802</div></div>
+<div class="ttc" id="astruct__dr__mcontext__t_html"><div class="ttname"><a href="struct__dr__mcontext__t.html">_dr_mcontext_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:803</div></div>
 <div class="ttc" id="adr__ir__utils_8h_html_a31b8fd731ecc840fcddda04c36a7eadd"><div class="ttname"><a href="dr__ir__utils_8h.html#a31b8fd731ecc840fcddda04c36a7eadd">dr_restore_arith_flags</a></div><div class="ttdeci">DR_API void dr_restore_arith_flags(void *drcontext, instrlist_t *ilist, instr_t *where, dr_spill_slot_t slot)</div></div>
 <div class="ttc" id="adr__annotation_8h_html_a65cd22eacefdcd5c534a1b4aa72ae103"><div class="ttname"><a href="dr__annotation_8h.html#a65cd22eacefdcd5c534a1b4aa72ae103">dr_annotation_register_call</a></div><div class="ttdeci">DR_API bool dr_annotation_register_call(const char *annotation_name, void *callee, bool save_fpstate, uint num_args, dr_annotation_calling_convention_t call_type)</div></div>
 <div class="ttc" id="adr__tools_8h_html_aeea154f7dd2f1232aaba2e92d0a5cb24"><div class="ttname"><a href="dr__tools_8h.html#aeea154f7dd2f1232aaba2e92d0a5cb24">dr_log</a></div><div class="ttdeci">DR_API void dr_log(void *drcontext, uint mask, uint level, const char *fmt,...)</div></div>
@@ -127,7 +127,7 @@ Release notes for this release, including changes since prior releases and plans
 <div class="ttc" id="adr__ir__opnd_8h_html_ae6cf2a1e25144a7c81b3b3a4a89f8dda"><div class="ttname"><a href="dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda">opnd_create_reg</a></div><div class="ttdeci">DR_API INSTR_INLINE opnd_t opnd_create_reg(reg_id_t r)</div></div>
 <div class="ttc" id="adr__app_8h_html_aea917a6c24c8bf526f77772b0b9848a8"><div class="ttname"><a href="dr__app_8h.html#aea917a6c24c8bf526f77772b0b9848a8">dr_app_running_under_dynamorio</a></div><div class="ttdeci">DR_APP_API bool dr_app_running_under_dynamorio(void)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_af1bd61ffeb33af0bc87e4660a69de71d"><div class="ttname"><a href="dr__ir__instr_8h.html#af1bd61ffeb33af0bc87e4660a69de71d">instr_is_return</a></div><div class="ttdeci">DR_API bool instr_is_return(instr_t *instr)</div></div>
-<div class="ttc" id="adr__defines_8h_html_a3fb73c55def575ec5705577625491d66"><div class="ttname"><a href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a></div><div class="ttdeci">struct _instrlist_t instrlist_t</div><div class="ttdef"><b>Definition:</b> dr_defines.h:825</div></div>
+<div class="ttc" id="adr__defines_8h_html_a3fb73c55def575ec5705577625491d66"><div class="ttname"><a href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a></div><div class="ttdeci">struct _instrlist_t instrlist_t</div><div class="ttdef"><b>Definition:</b> dr_defines.h:826</div></div>
 <div class="ttc" id="adr__tools_8h_html_ae338685a241cfeae5f3d507ae9cff957"><div class="ttname"><a href="dr__tools_8h.html#ae338685a241cfeae5f3d507ae9cff957">dr_fprintf</a></div><div class="ttdeci">DR_API ssize_t dr_fprintf(file_t f, const char *fmt,...)</div></div>
 <div class="ttc" id="adr__defines_8h_html_a80e139e8f2d2dd7d5d4a92f8ad7c6f4d"><div class="ttname"><a href="dr__defines_8h.html#a80e139e8f2d2dd7d5d4a92f8ad7c6f4d">TIDFMT</a></div><div class="ttdeci">#define TIDFMT</div><div class="ttdef"><b>Definition:</b> dr_defines.h:602</div></div>
 <div class="ttc" id="adr__ir__macros_8h_html_ae84f332c273b8547824e807453d92d16"><div class="ttname"><a href="dr__ir__macros_8h.html#ae84f332c273b8547824e807453d92d16">OPND_CREATE_MEM64</a></div><div class="ttdeci">#define OPND_CREATE_MEM64(base_reg, disp)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros.h:79</div></div>
@@ -180,5 +180,5 @@ Release notes for this release, including changes since prior releases and plans
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19208 --- Fri Aug 5 2022 04:04:18 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19215 --- Fri Aug 12 2022 03:53:51 &nbsp; <img border=0 src="favicon.png">
 </small></address>
