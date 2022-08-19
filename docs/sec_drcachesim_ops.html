@@ -268,7 +268,10 @@ Specifies the minimum fraction of LLC misses of a load (from all misses) for it 
 Specifies the minimum confidence to include a discovered pattern in the output results. Confidence in a discovered pattern for a load instruction is calculated as the fraction of the load's misses with the discovered pattern over all the load's misses.</li>
 <li><b>-enable_drstatecmp</b> <br  />
 <em>default value: false</em> <br  />
-When true, this option enables the drstatecmp library that performs state comparisons to detect instrumentation-induced bugs due to state clobbering. </li>
+When true, this option enables the drstatecmp library that performs state comparisons to detect instrumentation-induced bugs due to state clobbering.</li>
+<li><b>-enable_kernel_tracing</b> <br  />
+<em>default value: false</em> <br  />
+By default, offline tracing only records a userspace trace. If this option is enabled, offline tracing will record each syscall's Kernel PT and write every syscall's PT and metadata to files in -outdir/kernel.raw/ for later offline analysis. And this feature is available only on Intel CPUs that support Intel@ Processor Trace. </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -277,5 +280,5 @@ When true, this option enables the drstatecmp library that performs state compar
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19215 --- Fri Aug 12 2022 03:53:52 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19222 --- Fri Aug 19 2022 04:07:12 &nbsp; <img border=0 src="favicon.png">
 </small></address>

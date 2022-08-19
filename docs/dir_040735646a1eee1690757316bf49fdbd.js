@@ -13,7 +13,7 @@
     [ "histogram_create.h", "histogram__create_8h.html", {% include_relative histogram__create_8h.js %} ],
     [ "memref.h", "memref_8h.html", {% include_relative memref_8h.js %} ],
     [ "opcode_mix_create.h", "opcode__mix__create_8h.html", {% include_relative opcode__mix__create_8h.js %} ],
-    [ "pt2ir.h", "pt2ir_8h.html", {% include_relative pt2ir_8h.js %} ],
+    [ "pt2ir.h", "build__release-64_2clients_2include_2drmemtrace_2pt2ir_8h.html", {% include_relative build__release-64_2clients_2include_2drmemtrace_2pt2ir_8h.js %} ],
     [ "raw2trace.h", "raw2trace_8h.html", {% include_relative raw2trace_8h.js %} ],
     [ "reuse_distance_create.h", "reuse__distance__create_8h.html", {% include_relative reuse__distance__create_8h.js %} ],
     [ "reuse_time_create.h", "reuse__time__create_8h.html", {% include_relative reuse__time__create_8h.js %} ],

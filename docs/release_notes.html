@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 9.0.19215"
+title: "Release Notes for Version 9.0.19222"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 9.0.19215 </div>  </div>
+<div class="title">Release Notes for Version 9.0.19222 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,8 +63,8 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 9.0.19215. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 9.0.19215 and 9.0.1 include the following compatibility changes:</p><ul>
+<p>The current version is 9.0.19222. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 9.0.19222 and 9.0.1 include the following compatibility changes:</p><ul>
 <li>Eliminated the -skip_syscall option to drrun and drinject, which is now always on by default.</li>
 <li>Changed the drcachesim -use_physical option to not modify the regular trace entry virtual addresses but to instead insert metadata containing translation information for converting virtual to physical addresses.</li>
 </ul>
@@ -79,6 +79,9 @@ Changes Since Prior Releases</h1>
 <li>Added an open-address hashtable implementation for cases where third-party libraries must be avoided and open addressing is best: <a class="el" href="dr__tools_8h.html#a402fb239f3004c01919b6d9e805e27ae">dr_hashtable_create()</a>, <a class="el" href="dr__tools_8h.html#a238aacd48466e8a3d2b5eaf49a778cb2">dr_hashtable_destroy()</a>, <a class="el" href="dr__tools_8h.html#ac312c646d03e68b3aae8734a76426842">dr_hashtable_clear()</a>, <a class="el" href="dr__tools_8h.html#aa5181deddb941894386f7786d92ee58e">dr_hashtable_lookup()</a>, <a class="el" href="dr__tools_8h.html#a0c2c9fe087f01c73837b8773e0882ed7">dr_hashtable_add()</a>, <a class="el" href="dr__tools_8h.html#a591d0cd49bd9a54ee723edadf4f72895">dr_hashtable_remove()</a>.</li>
 <li>Added a new <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a602e5f40c496455081f9a11468b6b39d">TRACE_MARKER_TYPE_PAGE_SIZE</a> record to drcachesim offline traces.</li>
 <li>Added new drmemtrace options -L0I_filter and -L0D_filter that allow enabling online filtering for only instruction or only data entries respectively. The old option -L0_filter is deprecated but still supported for backward compatibility. It simply sets both the new options.</li>
+<li>Added a new DR extension, namely "drpttracer", which provides clients with tracing functionality via Intel's PT instruction tracing feature. This feature is still experimental and available only on Intel processors.</li>
+<li>Added a new drmemtrace option -enable_kernel_tracing that allows recording each syscall's Kernel PT and writes every syscall's PT and metadata to files in -outdir/kernel.raw/ for later offline analysis. This feature is still experimental and available only on Intel processors that support the Intel@ Processor Trace feature.</li>
+<li>Added <a class="el" href="drmemtrace_8h.html#a6bcffc37afba45e1cb6dab58d407d48c">drmemtrace_get_encoding_path()</a>.</li>
 </ul>
 <p>The changes between version 9.0.1 and 9.0.0 include the following compatibility changes:</p><ul>
 <li>Introduced a new CMake option called BUILD_PACKAGE to skip glibc compatibility checks. This is off by default such that building DynamoRIO from source is straight-forward to do on rolling release Linux distributions, and enabled by make/package.cmake when building a distributable version of DynamoRIO.</li>
@@ -98,7 +101,7 @@ Changes Since Prior Releases</h1>
 <li>A source compatibilty change in drcachesim analysis tools for users who have created derived classes from existing analysis tools: member fields of classes are now following a consistent style with an underscore suffix. References to renamed fields will need to be updated.</li>
 <li>A change in the load callbacks used with <a class="el" href="group__drcovlib.html#ga9c2889006a80254645521f81a1a486f5">drmodtrack_add_custom_data()</a> and <a class="el" href="drmemtrace_8h.html#a8644981035cdedfafb000d03cd223399">drmemtrace_custom_module_data()</a>: they each take an additional parameter, the segment index. The custom data field is now per-segment and not per-module, and all callbacks are invoked separately for each segment.</li>
 </ul>
-<p>The changes between version 9.0.19215 and 8.0.0 include the following minor compatibility changes:</p>
+<p>The changes between version 9.0.19222 and 8.0.0 include the following minor compatibility changes:</p>
 <ul>
 <li>drconfiglib (and thus drrun and drconfig) now sets only the new client path options which are added in this release to support other-bitwidth child processes. This means that a drconfiglib from this version will not properly configure for a DynamoRIO core library from a prior version.</li>
 <li>A new option -ldstex2cas is on by default on ARM and AArch64. This converts load-exclusive store-exclusive sequences to use compare-and-swap instead, which enables normal instrumentation of such sequences without clearing the exclusive monitor and causing infinite loops. However, the compare- and-swap's semantics are not identical: it does not detect "ABA" changes and could cause errors in lock-free data structures or other application constructs. See <a class="el" href="API_BT.html#sec_ldrex">Exclusive Monitor Instrumentation</a> for more information.</li>
@@ -1089,5 +1092,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19215 --- Fri Aug 12 2022 03:53:52 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19222 --- Fri Aug 19 2022 04:07:12 &nbsp; <img border=0 src="favicon.png">
 </small></address>

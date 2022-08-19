@@ -45,6 +45,8 @@ Macros</h2></td></tr>
 <tr class="separator:a11362437617ea146f226243e4de7ce7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d41aaff6406ac94cd98ee7c95cd0753"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace__entry_8h.html#a9d41aaff6406ac94cd98ee7c95cd0753">DRMEMTRACE_FUNCTION_LIST_FILENAME</a>&#160;&#160;&#160;&quot;funclist.log&quot;</td></tr>
 <tr class="separator:a9d41aaff6406ac94cd98ee7c95cd0753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f588e2a6e442b98010f7424720d33c5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace__entry_8h.html#a6f588e2a6e442b98010f7424720d33c5">DRMEMTRACE_ENCODING_FILENAME</a>&#160;&#160;&#160;&quot;encodings.bin&quot;</td></tr>
+<tr class="separator:a6f588e2a6e442b98010f7424720d33c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -182,7 +184,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a31b1b641e653a465b97433137330b737">TRACE_MARKER_TYPE_VIRTUAL_ADDRESS</a>, 
 <br />
-&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a602e5f40c496455081f9a11468b6b39d">TRACE_MARKER_TYPE_PAGE_SIZE</a>
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a602e5f40c496455081f9a11468b6b39d">TRACE_MARKER_TYPE_PAGE_SIZE</a>, 
+<br />
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac792d7856c0c7bcb062ec1e069317413">TRACE_MARKER_TYPE_SYSCALL_ID</a>
 <br />
  }</td></tr>
 <tr class="separator:aa7f51b43d8f1e20dc45e3618684b15e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -222,6 +226,21 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>DrMemtrace trace entry enum types and definitions. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a6f588e2a6e442b98010f7424720d33c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f588e2a6e442b98010f7424720d33c5">&#9670;&nbsp;</a></span>DRMEMTRACE_ENCODING_FILENAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRMEMTRACE_ENCODING_FILENAME&#160;&#160;&#160;&quot;encodings.bin&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The name of the file in -offline mode where non-module instruction encodings are written. Use <a class="el" href="drmemtrace_8h.html#a6bcffc37afba45e1cb6dab58d407d48c">drmemtrace_get_encoding_path()</a> to obtain the full path. </p>
+
+</div>
+</div>
 <a id="a9d41aaff6406ac94cd98ee7c95cd0753"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9d41aaff6406ac94cd98ee7c95cd0753">&#9670;&nbsp;</a></span>DRMEMTRACE_FUNCTION_LIST_FILENAME</h2>
 
@@ -352,6 +371,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a31b1b641e653a465b97433137330b737"></a>TRACE_MARKER_TYPE_VIRTUAL_ADDRESS&#160;</td><td class="fielddoc"><p>The marker value contains the virtual address corresponding to the prior <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a69cdc83a07cdf547a1ecbd83e39f48c5">TRACE_MARKER_TYPE_PHYSICAL_ADDRESS</a>'s physical address. A pair of such markers will appear somewhere prior to a regular instruction fetch or data load or store whose page's physical address has not yet been reported, or when a physical mapping change is detected. If translation failed, a <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac138a2d29f017ea18a3bb3e1d243c593">TRACE_MARKER_TYPE_PHYSICAL_ADDRESS_NOT_AVAILABLE</a> will be present instead, without a corresponding <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a31b1b641e653a465b97433137330b737">TRACE_MARKER_TYPE_VIRTUAL_ADDRESS</a>. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a602e5f40c496455081f9a11468b6b39d"></a>TRACE_MARKER_TYPE_PAGE_SIZE&#160;</td><td class="fielddoc"><p>The marker value contains the traced process's page size in bytes. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9ac792d7856c0c7bcb062ec1e069317413"></a>TRACE_MARKER_TYPE_SYSCALL_ID&#160;</td><td class="fielddoc"><p>This marker is emitted prior to each system call when -enable_kernel_tracing is specified. The marker value contains a unique system call identifier. </p>
 </td></tr>
 </table>
 
@@ -594,5 +615,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19215 --- Fri Aug 12 2022 03:53:50 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19222 --- Fri Aug 19 2022 04:07:10 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -1,4 +1,5 @@
 [
+    [ "DRMEMTRACE_ENCODING_FILENAME", "trace__entry_8h.html#a6f588e2a6e442b98010f7424720d33c5", null ],
     [ "DRMEMTRACE_FUNCTION_LIST_FILENAME", "trace__entry_8h.html#a9d41aaff6406ac94cd98ee7c95cd0753", null ],
     [ "DRMEMTRACE_MODULE_LIST_FILENAME", "trace__entry_8h.html#a11362437617ea146f226243e4de7ce7b", null ],
     [ "addr_t", "trace__entry_8h.html#a1ca6d6805df0fccbaf3f7920d1845168", null ],
@@ -31,7 +32,8 @@
       [ "TRACE_MARKER_TYPE_PHYSICAL_ADDRESS", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a69cdc83a07cdf547a1ecbd83e39f48c5", null ],
       [ "TRACE_MARKER_TYPE_PHYSICAL_ADDRESS_NOT_AVAILABLE", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac138a2d29f017ea18a3bb3e1d243c593", null ],
       [ "TRACE_MARKER_TYPE_VIRTUAL_ADDRESS", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a31b1b641e653a465b97433137330b737", null ],
-      [ "TRACE_MARKER_TYPE_PAGE_SIZE", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a602e5f40c496455081f9a11468b6b39d", null ]
+      [ "TRACE_MARKER_TYPE_PAGE_SIZE", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a602e5f40c496455081f9a11468b6b39d", null ],
+      [ "TRACE_MARKER_TYPE_SYSCALL_ID", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac792d7856c0c7bcb062ec1e069317413", null ]
     ] ],
     [ "trace_type_t", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19d", [
       [ "TRACE_TYPE_READ", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19da2264004d45a5c8fe2b6713e2fe263c32", null ],

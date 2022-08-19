@@ -17,6 +17,7 @@
     [ "drmemtrace_client_main", "drmemtrace_8h.html#ab21913507ae5665dd43fd24a20cbf03c", null ],
     [ "drmemtrace_custom_module_data", "drmemtrace_8h.html#a8644981035cdedfafb000d03cd223399", null ],
     [ "drmemtrace_filter_threads", "drmemtrace_8h.html#a8e640ae52a85bcd0eb544087d264672a", null ],
+    [ "drmemtrace_get_encoding_path", "drmemtrace_8h.html#a6bcffc37afba45e1cb6dab58d407d48c", null ],
     [ "drmemtrace_get_funclist_path", "drmemtrace_8h.html#abc71b61ef30155adbc03800ce7597261", null ],
     [ "drmemtrace_get_modlist_path", "drmemtrace_8h.html#a8c93fd7bcda89efb7786ad0cf27f8ff2", null ],
     [ "drmemtrace_get_output_path", "drmemtrace_8h.html#a788e3e4e25b13c1f6148a8fd544b2d81", null ],

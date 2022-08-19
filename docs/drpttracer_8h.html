@@ -63,7 +63,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45dab09a7ff2105b8eb3b46317c253ec5e8d">DRPTTRACER_ERROR_FAILED_TO_OPEN_PERF_EVENT</a>, 
 <br />
-&#160;&#160;<a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45da892f96fdd33c40ac3d7e1789c1f7b4af">DRPTTRACER_ERROR_FAILED_TO_CREATE_PTTRACER_HANDLE</a>, 
+&#160;&#160;<a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45da036841364a0e53fba420bed52ee1c5f0">DRPTTRACER_ERROR_FAILED_TO_MMAP_PERF_DATA</a>, 
+<br />
+&#160;&#160;<a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45dac4d8cf608e4e2a7d6f197250bd2df691">DRPTTRACER_ERROR_FAILED_TO_MMAP_PT_DATA</a>, 
 <br />
 &#160;&#160;<a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45da5810bfac6ed2c2b271e17ca1661b8bae">DRPTTRACER_ERROR_FAILED_TO_START_TRACING</a>, 
 <br />
@@ -71,7 +73,11 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45dac3626cf9c2740a80ca15c99e6fba493a">DRPTTRACER_ERROR_OVERWRITTEN_PT_TRACE</a>, 
 <br />
-&#160;&#160;<a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45da3beefda8ad4ea9aa597f6a07053c56af">DRPTTRACER_ERROR_OVERWRITTEN_SIDEBAND_DATA</a>
+&#160;&#160;<a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45da178ccc3073b124e34ba2542ac7514061">DRPTTRACER_ERROR_FAILED_TO_READ_PT_DATA</a>, 
+<br />
+&#160;&#160;<a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45da3beefda8ad4ea9aa597f6a07053c56af">DRPTTRACER_ERROR_OVERWRITTEN_SIDEBAND_DATA</a>, 
+<br />
+&#160;&#160;<a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45da6cf6c48b7fa9c81b83444d022ac34308">DRPTTRACER_ERROR_FAILED_TO_READ_SIDEBAND_DATA</a>
 <br />
  }</td></tr>
 <tr class="separator:a7846187879de367e706edaed0293e45d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -91,10 +97,14 @@ Functions</h2></td></tr>
 <tr class="separator:a2ce2d81e3de5e6969eb2742f1eab15d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85f7b141497601e4205789e490ca3535"><td class="memItemLeft" align="right" valign="top">DR_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drpttracer_8h.html#a85f7b141497601e4205789e490ca3535">drpttracer_exit</a> (void)</td></tr>
 <tr class="separator:a85f7b141497601e4205789e490ca3535"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7ab13371efc223533ec49a0d93a62d8"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45d">drpttracer_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drpttracer_8h.html#ad7ab13371efc223533ec49a0d93a62d8">drpttracer_start_tracing</a> (IN void *drcontext, IN <a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5">drpttracer_tracing_mode_t</a> mode, IN uint pt_size_shift, IN uint sideband_size_shift, OUT void **tracer_handle)</td></tr>
-<tr class="separator:ad7ab13371efc223533ec49a0d93a62d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a485c509ee7493fae6e018bc4807012fc"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45d">drpttracer_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drpttracer_8h.html#a485c509ee7493fae6e018bc4807012fc">drpttracer_end_tracing</a> (IN void *drcontext, IN void *tracer_handle, OUT <a class="el" href="drpttracer_8h.html#a2a039aa7d15f79edcbae537289181000">drpttracer_output_t</a> **output)</td></tr>
-<tr class="separator:a485c509ee7493fae6e018bc4807012fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0df98e25ae870fddf34da980f1801f3a"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45d">drpttracer_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drpttracer_8h.html#a0df98e25ae870fddf34da980f1801f3a">drpttracer_create_handle</a> (IN void *drcontext, IN <a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5">drpttracer_tracing_mode_t</a> tracing_mode, IN uint pt_size_shift, IN uint sideband_size_shift, OUT void **tracer_handle)</td></tr>
+<tr class="separator:a0df98e25ae870fddf34da980f1801f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad80d0c63dadc4dac1d21d0caf662f2f9"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45d">drpttracer_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drpttracer_8h.html#ad80d0c63dadc4dac1d21d0caf662f2f9">drpttracer_destroy_handle</a> (IN void *drcontext, IN void *tracer_handle)</td></tr>
+<tr class="separator:ad80d0c63dadc4dac1d21d0caf662f2f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb2c6fe798b7b3125647d647fb8e7835"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45d">drpttracer_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drpttracer_8h.html#afb2c6fe798b7b3125647d647fb8e7835">drpttracer_start_tracing</a> (IN void *drcontext, IN void *tracer_handle)</td></tr>
+<tr class="separator:afb2c6fe798b7b3125647d647fb8e7835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75d42188aac044aef56517160b355433"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45d">drpttracer_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drpttracer_8h.html#a75d42188aac044aef56517160b355433">drpttracer_stop_tracing</a> (IN void *drcontext, IN void *tracer_handle, OUT <a class="el" href="drpttracer_8h.html#a2a039aa7d15f79edcbae537289181000">drpttracer_output_t</a> **output)</td></tr>
+<tr class="separator:a75d42188aac044aef56517160b355433"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6722673d8102754af9c4284f76bc2acf"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45d">drpttracer_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drpttracer_8h.html#a6722673d8102754af9c4284f76bc2acf">drpttracer_destroy_output</a> (IN void *drcontext, IN <a class="el" href="drpttracer_8h.html#a2a039aa7d15f79edcbae537289181000">drpttracer_output_t</a> *output)</td></tr>
 <tr class="separator:a6722673d8102754af9c4284f76bc2acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -112,7 +122,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The storage container type of drpttracer's output. This data struct is used by drpttracer to store PT metadata, PT trace, and sideband data. These data can be dumped into different files by the caller. These files can be the inputs of <a class="el" href="classpt2ir__t.html">pt2ir_t</a>, which decodes the PT data into Dynamorio's IR. </p>
+<p>The storage container type of drpttracer's output. This data struct is used by drpttracer to store PT metadata, PT trace, and sideband data. These data can be dumped into different files by the client. These files can be the inputs of <a class="el" href="classpt2ir__t.html">pt2ir_t</a>, which decodes the PT data into Dynamorio's IR. </p>
 
 </div>
 </div>
@@ -156,7 +166,9 @@ drpttracer gets the time_shift, time_mult and time_zero from the opened perf eve
 </td></tr>
 <tr><td class="fieldname"><a id="a7846187879de367e706edaed0293e45dab09a7ff2105b8eb3b46317c253ec5e8d"></a>DRPTTRACER_ERROR_FAILED_TO_OPEN_PERF_EVENT&#160;</td><td class="fielddoc"><p>Operation failed: failed to open perf event. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a7846187879de367e706edaed0293e45da892f96fdd33c40ac3d7e1789c1f7b4af"></a>DRPTTRACER_ERROR_FAILED_TO_CREATE_PTTRACER_HANDLE&#160;</td><td class="fielddoc"><p>Operation failed: failed to create tracer handle. </p>
+<tr><td class="fieldname"><a id="a7846187879de367e706edaed0293e45da036841364a0e53fba420bed52ee1c5f0"></a>DRPTTRACER_ERROR_FAILED_TO_MMAP_PERF_DATA&#160;</td><td class="fielddoc"><p>Operation failed: failed to mmap perf data. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7846187879de367e706edaed0293e45dac4d8cf608e4e2a7d6f197250bd2df691"></a>DRPTTRACER_ERROR_FAILED_TO_MMAP_PT_DATA&#160;</td><td class="fielddoc"><p>Operation failed: failed to mmap PT data. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a7846187879de367e706edaed0293e45da5810bfac6ed2c2b271e17ca1661b8bae"></a>DRPTTRACER_ERROR_FAILED_TO_START_TRACING&#160;</td><td class="fielddoc"><p>Operation failed: failed to start tracing. </p>
 </td></tr>
@@ -164,7 +176,11 @@ drpttracer gets the time_shift, time_mult and time_zero from the opened perf eve
 </td></tr>
 <tr><td class="fieldname"><a id="a7846187879de367e706edaed0293e45dac3626cf9c2740a80ca15c99e6fba493a"></a>DRPTTRACER_ERROR_OVERWRITTEN_PT_TRACE&#160;</td><td class="fielddoc"><p>Operation failed: overwritten PT trace. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a7846187879de367e706edaed0293e45da178ccc3073b124e34ba2542ac7514061"></a>DRPTTRACER_ERROR_FAILED_TO_READ_PT_DATA&#160;</td><td class="fielddoc"><p>Operation failed: failed to read PT data from PT ring buffer. </p>
+</td></tr>
 <tr><td class="fieldname"><a id="a7846187879de367e706edaed0293e45da3beefda8ad4ea9aa597f6a07053c56af"></a>DRPTTRACER_ERROR_OVERWRITTEN_SIDEBAND_DATA&#160;</td><td class="fielddoc"><p>Operation failed: overwritten sideband data. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7846187879de367e706edaed0293e45da6cf6c48b7fa9c81b83444d022ac34308"></a>DRPTTRACER_ERROR_FAILED_TO_READ_SIDEBAND_DATA&#160;</td><td class="fielddoc"><p>Operation failed: failed to read SIDEBAND data from perf data ring buffer. </p>
 </td></tr>
 </table>
 
@@ -181,7 +197,7 @@ drpttracer gets the time_shift, time_mult and time_zero from the opened perf eve
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The tracing modes for <a class="el" href="drpttracer_8h.html#ad7ab13371efc223533ec49a0d93a62d8">drpttracer_start_tracing()</a>.</p>
+<p>The tracing modes for <a class="el" href="drpttracer_8h.html#afb2c6fe798b7b3125647d647fb8e7835">drpttracer_start_tracing()</a>.</p>
 <p>XXX: The <a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5a2a5a1e4a865cb2c334cf8419b2ec56fa">DRPTTRACER_TRACING_ONLY_USER</a> and <a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5a9d97d6e409ada6de57b31fe55aa0e4db">DRPTTRACER_TRACING_USER_AND_KERNEL</a> modes are not completely supported yet. The sideband data collected in these two modes do not include the initial mmap2 event recording. Therefore, if the user uses <a class="el" href="classpt2ir__t.html">pt2ir_t</a> in sideband converter mode, <a class="el" href="classpt2ir__t.html">pt2ir_t</a> cannot find the image and cannot decode the PT trace. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab099a83052a5a8b244083b57ddffcbc5a2a5a1e4a865cb2c334cf8419b2ec56fa"></a>DRPTTRACER_TRACING_ONLY_USER&#160;</td><td class="fielddoc"><p>Trace only userspace instructions. </p>
@@ -195,6 +211,108 @@ drpttracer gets the time_shift, time_mult and time_zero from the opened perf eve
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a0df98e25ae870fddf34da980f1801f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0df98e25ae870fddf34da980f1801f3a">&#9670;&nbsp;</a></span>drpttracer_create_handle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45d">drpttracer_status_t</a> drpttracer_create_handle </td>
+          <td>(</td>
+          <td class="paramtype">IN void *&#160;</td>
+          <td class="paramname"><em>drcontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IN <a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5">drpttracer_tracing_mode_t</a>&#160;</td>
+          <td class="paramname"><em>tracing_mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IN uint&#160;</td>
+          <td class="paramname"><em>pt_size_shift</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IN uint&#160;</td>
+          <td class="paramname"><em>sideband_size_shift</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OUT void **&#160;</td>
+          <td class="paramname"><em>tracer_handle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a pttracer handle. Must be called after <a class="el" href="drpttracer_8h.html#a2ce2d81e3de5e6969eb2742f1eab15d2">drpttracer_init()</a> and before <a class="el" href="drpttracer_8h.html#a85f7b141497601e4205789e490ca3535">drpttracer_exit()</a>. The handle is used to start and stop PT tracing.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">drcontext</td><td>The context of DynamoRIO. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tracing_mode</td><td>The tracing mode. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pt_size_shift</td><td>The size shift of PT trace's buffer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sideband_size_shift</td><td>The size shift of sideband data's buffer. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">tracer_handle</td><td>The pttracer handle.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The size offset is used to control the size of the buffer allocated by the perf: sizeof(PT trace's buffer) = 2 ^ pt_size_shift * PAGE_SIZE. sizeof(Sideband data's buffer) = 2 ^ sideband_size_shift * PAGE_SIZE. Additionally, perf sets the buffer size to 4MiB by default. Therefore, when the client uses drpttracer to trace, it is best to set the trace and sideband buffer larger than 4Mib.</dd>
+<dd>
+The client must ensure that the buffer is large enough to hold the PT data. Insufficient buffer size will lead to lost data, which may cause issues in <a class="el" href="classpt2ir__t.html">pt2ir_t</a> decoding. If we detect an overflow, <a class="el" href="drpttracer_8h.html#a75d42188aac044aef56517160b355433">drpttracer_stop_tracing()</a> will return an error code <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45dac3626cf9c2740a80ca15c99e6fba493a">DRPTTRACER_ERROR_OVERWRITTEN_PT_TRACE</a> or <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45da3beefda8ad4ea9aa597f6a07053c56af">DRPTTRACER_ERROR_OVERWRITTEN_SIDEBAND_DATA</a>.</dd>
+<dd>
+Each thread corresponds to a trace handle. When calling <a class="el" href="drpttracer_8h.html#a0df98e25ae870fddf34da980f1801f3a">drpttracer_create_handle()</a>, the client will get a tracer_handle. The client can start and stop tracing by passing it to <a class="el" href="drpttracer_8h.html#afb2c6fe798b7b3125647d647fb8e7835">drpttracer_start_tracing()</a> and <a class="el" href="drpttracer_8h.html#a75d42188aac044aef56517160b355433">drpttracer_stop_tracing()</a>. And if the thread hold a tracer_handle, the client needs to call <a class="el" href="drpttracer_8h.html#ad80d0c63dadc4dac1d21d0caf662f2f9">drpttracer_destroy_handle()</a> to destroy the corresponding tracer_handle and release the resources before the thread end.</dd>
+<dd>
+For one thread, only one tracing can execute at the same time. So the client needs to ensure one thread only owns one pttracer handle.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the status code. </dd></dl>
+
+</div>
+</div>
+<a id="ad80d0c63dadc4dac1d21d0caf662f2f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad80d0c63dadc4dac1d21d0caf662f2f9">&#9670;&nbsp;</a></span>drpttracer_destroy_handle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45d">drpttracer_status_t</a> drpttracer_destroy_handle </td>
+          <td>(</td>
+          <td class="paramtype">IN void *&#160;</td>
+          <td class="paramname"><em>drcontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IN void *&#160;</td>
+          <td class="paramname"><em>tracer_handle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destroy a pttracer handle and release the resources. Must be called after <a class="el" href="drpttracer_8h.html#a2ce2d81e3de5e6969eb2742f1eab15d2">drpttracer_init()</a> and before <a class="el" href="drpttracer_8h.html#a85f7b141497601e4205789e490ca3535">drpttracer_exit()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">drcontext</td><td>The context of DynamoRIO. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tracer_handle</td><td>The pttracer handle.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the status code. </dd></dl>
+
+</div>
+</div>
 <a id="a6722673d8102754af9c4284f76bc2acf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6722673d8102754af9c4284f76bc2acf">&#9670;&nbsp;</a></span>drpttracer_destroy_output()</h2>
 
@@ -220,7 +338,7 @@ drpttracer gets the time_shift, time_mult and time_zero from the opened perf eve
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Destroys an output object of drpttrace.</p>
+<p>Destroys an output object of drpttracer.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">drcontext</td><td>The context of DynamoRIO. </td></tr>
@@ -228,59 +346,6 @@ drpttracer gets the time_shift, time_mult and time_zero from the opened perf eve
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the status code. </dd></dl>
-
-</div>
-</div>
-<a id="a485c509ee7493fae6e018bc4807012fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a485c509ee7493fae6e018bc4807012fc">&#9670;&nbsp;</a></span>drpttracer_end_tracing()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">DR_EXPORT <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45d">drpttracer_status_t</a> drpttracer_end_tracing </td>
-          <td>(</td>
-          <td class="paramtype">IN void *&#160;</td>
-          <td class="paramname"><em>drcontext</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">IN void *&#160;</td>
-          <td class="paramname"><em>tracer_handle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">OUT <a class="el" href="drpttracer_8h.html#a2a039aa7d15f79edcbae537289181000">drpttracer_output_t</a> **&#160;</td>
-          <td class="paramname"><em>output</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Stops PT tracing.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">drcontext</td><td>The context of DynamoRIO. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">tracer_handle</td><td>The tracer handle. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>The output of PT tracing. This function will allocate and fill this output. It will copy the PT trace to the pt_buf of the output. When the tracing mode is <a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5a2a5a1e4a865cb2c334cf8419b2ec56fa">DRPTTRACER_TRACING_ONLY_USER</a> or <a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5a9d97d6e409ada6de57b31fe55aa0e4db">DRPTTRACER_TRACING_USER_AND_KERNEL</a>, the PT sideband data will be copied to the sideband_buf of the output. When the tracing mode is <a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5a567592a17aff204f5a4b194f66eaed0a">DRPTTRACER_TRACING_ONLY_KERNEL</a>, it will not copy the sideband data to the buffer.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>If the buffer size that was set in <a class="el" href="drpttracer_8h.html#ad7ab13371efc223533ec49a0d93a62d8">drpttracer_start_tracing()</a> is not enough, this function will return an error status code:<ul>
-<li>Return <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45dac3626cf9c2740a80ca15c99e6fba493a">DRPTTRACER_ERROR_OVERWRITTEN_PT_TRACE</a> if the PT trace is overwritten.</li>
-<li>Return <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45da3beefda8ad4ea9aa597f6a07053c56af">DRPTTRACER_ERROR_OVERWRITTEN_SIDEBAND_DATA</a> if the sideband data is overwritten.</li>
-</ul>
-</dd>
-<dd>
-The caller can dump the output data to files. After online tracing is done, <a class="el" href="classpt2ir__t.html">pt2ir_t</a> can use these files to decode the online PT trace.</dd>
-<dd>
-The caller doesn't need to allocate the output object, but it needs to free the output object using <a class="el" href="drpttracer_8h.html#a6722673d8102754af9c4284f76bc2acf">drpttracer_destroy_output()</a>.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the status code. </dd></dl>
 
 </div>
@@ -324,8 +389,8 @@ The caller doesn't need to allocate the output object, but it needs to free the 
 
 </div>
 </div>
-<a id="ad7ab13371efc223533ec49a0d93a62d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7ab13371efc223533ec49a0d93a62d8">&#9670;&nbsp;</a></span>drpttracer_start_tracing()</h2>
+<a id="afb2c6fe798b7b3125647d647fb8e7835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb2c6fe798b7b3125647d647fb8e7835">&#9670;&nbsp;</a></span>drpttracer_start_tracing()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -339,25 +404,7 @@ The caller doesn't need to allocate the output object, but it needs to free the 
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN <a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5">drpttracer_tracing_mode_t</a>&#160;</td>
-          <td class="paramname"><em>mode</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">IN uint&#160;</td>
-          <td class="paramname"><em>pt_size_shift</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">IN uint&#160;</td>
-          <td class="paramname"><em>sideband_size_shift</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">OUT void **&#160;</td>
+          <td class="paramtype">IN void *&#160;</td>
           <td class="paramname"><em>tracer_handle</em>&#160;</td>
         </tr>
         <tr>
@@ -367,24 +414,67 @@ The caller doesn't need to allocate the output object, but it needs to free the 
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Starts PT tracing. Must be called after <a class="el" href="drpttracer_8h.html#a2ce2d81e3de5e6969eb2742f1eab15d2">drpttracer_init()</a> and before <a class="el" href="drpttracer_8h.html#a85f7b141497601e4205789e490ca3535">drpttracer_exit()</a>.</p>
+<p>Start a PT tracing session. Must pass a valid pttracer handle to this function.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">drcontext</td><td>The context of DynamoRIO. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>The tracing mode. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pt_size_shift</td><td>The size shift of PT trace's buffer. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">sideband_size_shift</td><td>The size shift of sideband data's buffer. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">tracer_handle</td><td>The tracer handle.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tracer_handle</td><td>The pttracer handle.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>The size shift is used to control the size of buffers: sizeof(PT trace's buffer) = 2 ^ pt_size_shift * PAGE_SIZE. sizeof(Sideband data's buffer) = 2 ^ sideband_size_shift * PAGE_SIZE. Additionally, perf sets the buffer size to 4MiB by default. Therefore, when the client uses drpttracer to trace, it is best to set the trace and sideband buffer larger than 4Mib.</dd>
+<dl class="section return"><dt>Returns</dt><dd>the status code. </dd></dl>
+
+</div>
+</div>
+<a id="a75d42188aac044aef56517160b355433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75d42188aac044aef56517160b355433">&#9670;&nbsp;</a></span>drpttracer_stop_tracing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45d">drpttracer_status_t</a> drpttracer_stop_tracing </td>
+          <td>(</td>
+          <td class="paramtype">IN void *&#160;</td>
+          <td class="paramname"><em>drcontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IN void *&#160;</td>
+          <td class="paramname"><em>tracer_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OUT <a class="el" href="drpttracer_8h.html#a2a039aa7d15f79edcbae537289181000">drpttracer_output_t</a> **&#160;</td>
+          <td class="paramname"><em>output</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stops a PT tracing session. Must pass a valid pttracer handle to this function.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">drcontext</td><td>The context of DynamoRIO. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tracer_handle</td><td>The pttracer handle. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>The output of PT tracing. This function will allocate and fill this output. It will copy the PT trace to the pt_buf of the output. When the tracing mode is <a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5a2a5a1e4a865cb2c334cf8419b2ec56fa">DRPTTRACER_TRACING_ONLY_USER</a> or <a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5a9d97d6e409ada6de57b31fe55aa0e4db">DRPTTRACER_TRACING_USER_AND_KERNEL</a>, the PT sideband data will be copied to the sideband_buf of the output. When the tracing mode is <a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5a567592a17aff204f5a4b194f66eaed0a">DRPTTRACER_TRACING_ONLY_KERNEL</a>, it will not copy the sideband data to the buffer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>If the buffer size that was set in <a class="el" href="drpttracer_8h.html#afb2c6fe798b7b3125647d647fb8e7835">drpttracer_start_tracing()</a> is not enough, this function will return an error status code:<ul>
+<li>Return <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45dac3626cf9c2740a80ca15c99e6fba493a">DRPTTRACER_ERROR_OVERWRITTEN_PT_TRACE</a> if the PT trace is overwritten.</li>
+<li>Return <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45da3beefda8ad4ea9aa597f6a07053c56af">DRPTTRACER_ERROR_OVERWRITTEN_SIDEBAND_DATA</a> if the sideband data is overwritten.</li>
+</ul>
+</dd>
 <dd>
-The client must ensure that the buffer is large enough to hold the PT data. Insufficient buffer size will lead to lost data, which may cause issues in <a class="el" href="classpt2ir__t.html">pt2ir_t</a> decoding. If we detect an overflow, <a class="el" href="drpttracer_8h.html#a485c509ee7493fae6e018bc4807012fc">drpttracer_end_tracing()</a> will return an error code <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45dac3626cf9c2740a80ca15c99e6fba493a">DRPTTRACER_ERROR_OVERWRITTEN_PT_TRACE</a> or <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45da3beefda8ad4ea9aa597f6a07053c56af">DRPTTRACER_ERROR_OVERWRITTEN_SIDEBAND_DATA</a>.</dd>
+The client can dump the output data to files. After online tracing is done, <a class="el" href="classpt2ir__t.html">pt2ir_t</a> can use these files to decode the online PT trace.</dd>
 <dd>
-Each tracing corresponds to a trace_handle. When calling <a class="el" href="drpttracer_8h.html#ad7ab13371efc223533ec49a0d93a62d8">drpttracer_start_tracing()</a>, the caller will get a tracer_handle. The caller can stop tracing by passing it to <a class="el" href="drpttracer_8h.html#a485c509ee7493fae6e018bc4807012fc">drpttracer_end_tracing()</a>.</dd>
-<dd>
-For one thread, only one tracing can execute at the same time.</dd></dl>
+The client doesn't need to allocate the output object, but it needs to free the output object using <a class="el" href="drpttracer_8h.html#a6722673d8102754af9c4284f76bc2acf">drpttracer_destroy_output()</a>.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the status code. </dd></dl>
 
 </div>
@@ -395,5 +485,5 @@ For one thread, only one tracing can execute at the same time.</dd></dl>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19215 --- Fri Aug 12 2022 03:53:51 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19222 --- Fri Aug 19 2022 04:07:11 &nbsp; <img border=0 src="favicon.png">
 </small></address>

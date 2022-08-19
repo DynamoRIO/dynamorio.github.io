@@ -691,7 +691,7 @@ Functions</h2></td></tr>
 <li><code>bb</code> is a pointer to the list of instructions that comprise the basic block. Clients can examine, manipulate, or completely replace the instructions in the list.</li>
 <li><code>translating</code> indicates whether this callback is for basic block creation (false) or is for address translation (true). This is further explained below.</li>
 </ul>
-<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a> flag.</dd></dl>
+<p>The callback function should return a <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a> flag.</p>
 <p>The user is free to inspect and modify the block before it executes, but must adhere to the following restrictions:</p><ul>
 <li>If there is more than one application branch, only the last can be conditional.</li>
 <li>An application conditional branch must be the final instruction in the block.</li>
@@ -1356,7 +1356,7 @@ If the client uses signals for its own communication it should set a flag to dis
 <li><code>trace</code> is a pointer to the list of instructions that comprise the trace.</li>
 <li><code>translating</code> indicates whether this callback is for trace creation (false) or is for fault address recreation (true). This is further explained below.</li>
 </ul>
-<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a> flag.</dd></dl>
+<p>The callback function should return a <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a> flag.</p>
 <p>The user is free to inspect and modify the non-control-flow instructions in the trace before it executes, with certain restrictions that include those for basic blocks (see <a class="el" href="dr__events_8h.html#acbfe1ece2c520d409ffd59076507a710">dr_register_bb_event()</a>). Additional restrictions unique to traces also apply:</p><ul>
 <li>The sequence of blocks composing the trace cannot be changed once the trace is created. Instead, modify the component blocks by changing the block continuation addresses in the basic block callbacks (called with <code>for_trace</code> set to true) as the trace is being built.</li>
 <li>The (application) control flow instruction (if any) terminating each component block cannot be changed.</li>
@@ -1939,5 +1939,5 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19215 --- Fri Aug 12 2022 03:53:50 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19222 --- Fri Aug 19 2022 04:07:10 &nbsp; <img border=0 src="favicon.png">
 </small></address>

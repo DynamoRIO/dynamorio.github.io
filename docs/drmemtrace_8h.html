@@ -87,6 +87,8 @@ Functions</h2></td></tr>
 <tr class="separator:a8c93fd7bcda89efb7786ad0cf27f8ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc71b61ef30155adbc03800ce7597261"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemtrace_8h.html#a74f96316a038d687c65092c9b9e645e9">drmemtrace_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drmemtrace_8h.html#abc71b61ef30155adbc03800ce7597261">drmemtrace_get_funclist_path</a> (OUT const char **path)</td></tr>
 <tr class="separator:abc71b61ef30155adbc03800ce7597261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bcffc37afba45e1cb6dab58d407d48c"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemtrace_8h.html#a74f96316a038d687c65092c9b9e645e9">drmemtrace_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drmemtrace_8h.html#a6bcffc37afba45e1cb6dab58d407d48c">drmemtrace_get_encoding_path</a> (OUT const char **path)</td></tr>
+<tr class="separator:a6bcffc37afba45e1cb6dab58d407d48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8644981035cdedfafb000d03cd223399"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="drmemtrace_8h.html#a74f96316a038d687c65092c9b9e645e9">drmemtrace_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drmemtrace_8h.html#a8644981035cdedfafb000d03cd223399">drmemtrace_custom_module_data</a> (void *(*load_cb)(<a class="el" href="dr__defines_8h.html#af07dd10cb5378dc69117710c18f447e9">module_data_t</a> *module, int seg_idx), int(*print_cb)(void *data, char *dst, size_t max_len), void(*free_cb)(void *data))</td></tr>
 <tr class="separator:a8644981035cdedfafb000d03cd223399"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e640ae52a85bcd0eb544087d264672a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="drmemtrace_8h.html#a74f96316a038d687c65092c9b9e645e9">drmemtrace_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drmemtrace_8h.html#a8e640ae52a85bcd0eb544087d264672a">drmemtrace_filter_threads</a> (bool(*should_trace_thread_cb)(thread_id_t tid, void *user_data), void *user_value)</td></tr>
@@ -438,6 +440,25 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a6bcffc37afba45e1cb6dab58d407d48c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bcffc37afba45e1cb6dab58d407d48c">&#9670;&nbsp;</a></span>drmemtrace_get_encoding_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT <a class="el" href="drmemtrace_8h.html#a74f96316a038d687c65092c9b9e645e9">drmemtrace_status_t</a> drmemtrace_get_encoding_path </td>
+          <td>(</td>
+          <td class="paramtype">OUT const char **&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retrieves the full path to the file in -offline mode where non-module instruction encoding data is written. The basename of the file is <a class="el" href="trace__entry_8h.html#a6f588e2a6e442b98010f7424720d33c5">DRMEMTRACE_ENCODING_FILENAME</a>. It contains binary data read by the raw2trace tool. </p>
+
+</div>
+</div>
 <a id="abc71b61ef30155adbc03800ce7597261"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc71b61ef30155adbc03800ce7597261">&#9670;&nbsp;</a></span>drmemtrace_get_funclist_path()</h2>
 
@@ -586,5 +607,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19215 --- Fri Aug 12 2022 03:53:50 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19222 --- Fri Aug 19 2022 04:07:10 &nbsp; <img border=0 src="favicon.png">
 </small></address>

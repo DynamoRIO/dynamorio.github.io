@@ -40,33 +40,39 @@ Setup</h1>
 <h1><a class="anchor" id="sec_drpttracer_usage"></a>
 Usage</h1>
 <p>Intel PT (Processor Trace) only logs control flow changes. Therefore, when decoding a trace, the decoder needs to get raw bits of every instruction from images. <code>drpttracer</code> provides APIs to use Intel PT to generate trace data and some auxiliary data to help the decoder (e.g. libipt) to decode the trace. One type of auxiliary data is sideband data. This sideband data stores perf event records, which contain the image change messages necessary for decoding the trace. Another type of auxiliary data is the metadata for a trace. The metadata contains the CPU information and some other information that can be used to synthesize the time of PT trace and the perf event records. The auxiliary data enables the decoder to find the correct raw bits for every instruction.</p>
-<p><code>drpttracer</code> provides one data structure to store all generated data:</p>
+<p><code>drpttracer</code> uses the pttracer handle to manage the tracing sessions. The handle is a pointer to <code>drpttracer's</code> internal data structure, which contains the tracing's PT data buffer, sideband data buffer, and metadata. To generate a pttracer handle, the client needs to call:</p>
 <ul>
-<li><a class="el" href="drpttracer_8h.html#a2a039aa7d15f79edcbae537289181000">drpttracer_output_t</a></li>
+<li><a class="el" href="drpttracer_8h.html#a0df98e25ae870fddf34da980f1801f3a">drpttracer_create_handle()</a></li>
 </ul>
-<p>Additionally, <code>drpttracer</code> provides two APIs for a client to start and stop tracing:</p>
-<ul>
-<li><a class="el" href="drpttracer_8h.html#ad7ab13371efc223533ec49a0d93a62d8">drpttracer_start_tracing()</a></li>
-<li><a class="el" href="drpttracer_8h.html#a485c509ee7493fae6e018bc4807012fc">drpttracer_end_tracing()</a></li>
-</ul>
-<p>To record a PT trace, the client uses <a class="el" href="drpttracer_8h.html#ad7ab13371efc223533ec49a0d93a62d8">drpttracer_start_tracing()</a> to start the tracing. The start function lets the client specify the following parameters:</p>
+<p>The create function lets the client specify the following parameters:</p>
 <ul>
 <li>trace_mode : The tracing mode.</li>
 <li>pt_size_shift: The size shift of PT trace's ring buffer. It must be greater than 0, and the buffer size is 2^pt_size_shift * PAGE_SIZE.</li>
 <li>sideband_size_shift: The size shift of PT sideband data's ring buffer. It must be greater than 0, and the buffer size is 2^sideband_size_shift * PAGE_SIZE.</li>
 </ul>
-<dl class="section note"><dt>Note</dt><dd>Linux perf sets the buffer size to 4MiB by default. Therefore, it is best for clients to set trace and sideband buffers larger than 4Mib.</dd></dl>
-<p>The client must ensure that the PT trace's ring buffer and the sideband data's ring buffer is large enough to hold the PT data. Insufficient buffer size will lead to lost data, which may cause issues in <a class="el" href="classpt2ir__t.html">pt2ir_t</a> decoding. After the tracing is started, the client can get a handle for the PT tracing. The handle is a pointer to <code>drpttracer's</code> internal data structure which contains the tracing's PT data buffer, sideband data buffer, and metadata.</p>
-<p>To stop collecting the trace, the client needs to pass the trace handle to <a class="el" href="drpttracer_8h.html#a485c509ee7493fae6e018bc4807012fc">drpttracer_end_tracing()</a>. When the tracing is stopped, the stop function will allocate an instance of <a class="el" href="drpttracer_8h.html#a2a039aa7d15f79edcbae537289181000">drpttracer_output_t</a>, and copy the PT data, sideband data, and metadata to a <a class="el" href="drpttracer_8h.html#a2a039aa7d15f79edcbae537289181000">drpttracer_output_t</a> instance which is returned to the instance to the client. The client can dump the data in the output to different files for offline post-processing. The user can use the library <a class="el" href="classpt2ir__t.html">pt2ir_t</a> in drcachesim to convert the PT trace to DynamoRIO's IR.</p>
-<p>Additionally, if <a class="el" href="drpttracer_8h.html#a485c509ee7493fae6e018bc4807012fc">drpttracer_end_tracing()</a> detect an overflow, it will return an error status code:</p>
+<dl class="section note"><dt>Note</dt><dd>Linux perf sets the buffer size to 4MiB by default. Therefore, it is best for clients to set trace and sideband buffers larger than 4Mib.</dd>
+<dd>
+For one thread, only one tracing can execute at the same time. So the client needs to ensure one thread only owns one pttracer handle.</dd></dl>
+<p>The client must ensure that the PT trace's ring buffer and the sideband data's ring buffer is large enough to hold the PT data. Insufficient buffer size will lead to lost data, which may cause issues in <a class="el" href="classpt2ir__t.html">pt2ir_t</a> decoding.</p>
+<p>After creating a pttracer handle successfully, the client can start or stop a tracing session by calling <a class="el" href="drpttracer_8h.html#afb2c6fe798b7b3125647d647fb8e7835">drpttracer_start_tracing()</a> and <a class="el" href="drpttracer_8h.html#a75d42188aac044aef56517160b355433">drpttracer_stop_tracing()</a>.</p>
+<ul>
+<li><a class="el" href="drpttracer_8h.html#afb2c6fe798b7b3125647d647fb8e7835">drpttracer_start_tracing()</a></li>
+<li><a class="el" href="drpttracer_8h.html#a75d42188aac044aef56517160b355433">drpttracer_stop_tracing()</a></li>
+</ul>
+<p>The client must pass a valid trace handle to the start and stop function. And the client can use one handle for multiple tracing sessions. When the tracing is stopped, the stop function will allocate an instance of <a class="el" href="drpttracer_8h.html#a2a039aa7d15f79edcbae537289181000">drpttracer_output_t</a>, and copy the PT data, sideband data, and metadata to a <a class="el" href="drpttracer_8h.html#a2a039aa7d15f79edcbae537289181000">drpttracer_output_t</a> instance which is returned to the client. If drpttracer_end_tracing() detects an overflow, it will return an error status code:</p>
 <ul>
 <li>Return <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45dac3626cf9c2740a80ca15c99e6fba493a">DRPTTRACER_ERROR_OVERWRITTEN_PT_TRACE</a> if the PT trace is overwritten.</li>
 <li>Return <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45da3beefda8ad4ea9aa597f6a07053c56af">DRPTTRACER_ERROR_OVERWRITTEN_SIDEBAND_DATA</a> if the sideband data is overwritten.</li>
 </ul>
-<p>Also, to avoid memory leak, the client must call the following function to destroy the output instance after using it:</p>
+<p>After all the tracing sessions are stopped, the client needs to call the following function to free the pttracer handle:</p>
+<ul>
+<li><a class="el" href="drpttracer_8h.html#ad80d0c63dadc4dac1d21d0caf662f2f9">drpttracer_destroy_handle()</a></li>
+</ul>
+<p>Additionally, to avoid memory leak, the client must call the following function to destroy the output instances after using them:</p>
 <ul>
 <li><a class="el" href="drpttracer_8h.html#a6722673d8102754af9c4284f76bc2acf">drpttracer_destroy_output()</a></li>
 </ul>
+<p>Also, the client can dump the data in the output to different files for offline post-processing. The user can use the library <a class="el" href="classpt2ir__t.html">pt2ir_t</a> in drcachesim to convert the PT trace to DynamoRIO's IR.</p>
 <h1><a class="anchor" id="sec_drpttracer_tracing_mode"></a>
 Tracing Mode</h1>
 <p><code>drpttracer</code> provides three types of tracing modes:</p>
@@ -75,7 +81,7 @@ Tracing Mode</h1>
 <li><a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5a567592a17aff204f5a4b194f66eaed0a">DRPTTRACER_TRACING_ONLY_KERNEL</a></li>
 <li><a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5a9d97d6e409ada6de57b31fe55aa0e4db">DRPTTRACER_TRACING_USER_AND_KERNEL</a></li>
 </ul>
-<p>When starting tracing, the client can choose the tracing mode by passing the appropriate flag to <a class="el" href="drpttracer_8h.html#ad7ab13371efc223533ec49a0d93a62d8">drpttracer_start_tracing()</a>.</p>
+<p>When starting tracing, the client can choose the tracing mode by passing the appropriate flag to <a class="el" href="drpttracer_8h.html#afb2c6fe798b7b3125647d647fb8e7835">drpttracer_start_tracing()</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>For kernel PT traces, the trace data's raw bits are all from kcore. So the output data from <code>drpttracer</code> doesn't contain sideband data; it only contains the trace data and metadata. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -84,5 +90,5 @@ Tracing Mode</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19215 --- Fri Aug 12 2022 03:53:52 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19222 --- Fri Aug 19 2022 04:07:12 &nbsp; <img border=0 src="favicon.png">
 </small></address>
