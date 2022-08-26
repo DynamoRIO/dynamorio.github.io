@@ -1,6 +1,6 @@
 [
     [ "~module_mapper_t", "classmodule__mapper__t.html#aa564b038b405e47a8ccf78129e3b7e29", null ],
-    [ "create", "classmodule__mapper__t.html#aee56dbea310a6318fd63bf1fb477f566", null ],
+    [ "create", "classmodule__mapper__t.html#a89147ccfbee1f42859eff37154f15ecf", null ],
     [ "find_mapped_trace_address", "classmodule__mapper__t.html#add0cc122b72c75d519971cde9eeffd87", null ],
     [ "find_mapped_trace_bounds", "classmodule__mapper__t.html#a174c1c59c9005e5ec414cc8ef47674e7", null ],
     [ "get_last_error", "classmodule__mapper__t.html#a1445cda907aa2fee4d667cd8b7e5a3e4", null ],
