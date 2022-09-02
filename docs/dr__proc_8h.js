@@ -49,10 +49,10 @@
     [ "MODEL_PENTIUM_M_1MB", "dr__proc_8h.html#aba5cdb3609c3f91a8d0d148b3e3d02ce", null ],
     [ "MODEL_SANDYBRIDGE", "dr__proc_8h.html#ab3ef5a3e21e33d88fce19694b61b899a", null ],
     [ "MODEL_SANDYBRIDGE_E", "dr__proc_8h.html#a6e5f23cc20fca8a28a11300b5dfd940e", null ],
-    [ "VENDOR_INTEL", "dr__proc_8h.html#aae05225933a42f81e7c4a9fb286596f9a0ff85c91faaad5edc40b8b13bf5872a9", null ],
-    [ "VENDOR_AMD", "dr__proc_8h.html#aae05225933a42f81e7c4a9fb286596f9a98f56d8179428f9ae8a673281e490fb7", null ],
-    [ "VENDOR_ARM", "dr__proc_8h.html#aae05225933a42f81e7c4a9fb286596f9a2ad2ea2a2c40658bd0ded140cc6b8819", null ],
-    [ "VENDOR_UNKNOWN", "dr__proc_8h.html#aae05225933a42f81e7c4a9fb286596f9a366adf423d8e0771406dc7be013f0fce", null ],
+    [ "VENDOR_INTEL", "dr__proc_8h.html#a39fca1837c5ce7715cbf571669660c13a0ff85c91faaad5edc40b8b13bf5872a9", null ],
+    [ "VENDOR_AMD", "dr__proc_8h.html#a39fca1837c5ce7715cbf571669660c13a98f56d8179428f9ae8a673281e490fb7", null ],
+    [ "VENDOR_ARM", "dr__proc_8h.html#a39fca1837c5ce7715cbf571669660c13a2ad2ea2a2c40658bd0ded140cc6b8819", null ],
+    [ "VENDOR_UNKNOWN", "dr__proc_8h.html#a39fca1837c5ce7715cbf571669660c13a366adf423d8e0771406dc7be013f0fce", null ],
     [ "cache_size_t", "dr__proc_8h.html#abde92db21512f07aaf05d073c43832df", [
       [ "CACHE_SIZE_8_KB", "dr__proc_8h.html#abde92db21512f07aaf05d073c43832dfa39df034a5ced0be40065bcb55fb9f942", null ],
       [ "CACHE_SIZE_16_KB", "dr__proc_8h.html#abde92db21512f07aaf05d073c43832dfa8002cfc04251e85a48cd4062ce78029d", null ],
@@ -173,7 +173,8 @@
       [ "FEATURE_RAS", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaa7e022c08f18b0f0ec9228964630b7ce", null ],
       [ "FEATURE_SVE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa299212c8a14e60057bf69d1275af76f7", null ],
       [ "FEATURE_LOR", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa09685b77cdd25d64cbc842f03907555f", null ],
-      [ "FEATURE_SPE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadd626046ce5c535fa183e30bd955511a", null ]
+      [ "FEATURE_SPE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadd626046ce5c535fa183e30bd955511a", null ],
+      [ "FEATURE_PAUTH", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadcd15b8387c9a5f27331315ef3697734", null ]
     ] ],
     [ "feature_bit_t", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bf", [
       [ "FEATURE_FPU", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac39f532dceb337cb996ebf5a8d658668", null ],
@@ -283,7 +284,8 @@
       [ "FEATURE_RAS", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaa7e022c08f18b0f0ec9228964630b7ce", null ],
       [ "FEATURE_SVE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa299212c8a14e60057bf69d1275af76f7", null ],
       [ "FEATURE_LOR", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa09685b77cdd25d64cbc842f03907555f", null ],
-      [ "FEATURE_SPE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadd626046ce5c535fa183e30bd955511a", null ]
+      [ "FEATURE_SPE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadd626046ce5c535fa183e30bd955511a", null ],
+      [ "FEATURE_PAUTH", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadcd15b8387c9a5f27331315ef3697734", null ]
     ] ],
     [ "proc_avx512_enabled", "dr__proc_8h.html#aaba068462550d9b73c32c0991c5f7551", null ],
     [ "proc_avx_enabled", "dr__proc_8h.html#adfd5dadf31b9a26540978b7331701770", null ],

@@ -307,6 +307,7 @@
     [ "INSTR_CREATE_usubw2_vector", "dr__ir__macros__aarch64_8h.html#a765336f2af73dffffda0f2deb87cd7c5", null ],
     [ "INSTR_CREATE_usubw_vector", "dr__ir__macros__aarch64_8h.html#a1e8af9d8829e92d545c4416cd86a1802", null ],
     [ "INSTR_CREATE_xar", "dr__ir__macros__aarch64_8h.html#a64d83506835ca09d5d0ee171dca743f7", null ],
+    [ "INSTR_CREATE_xpaci", "dr__ir__macros__aarch64_8h.html#aba779414eb8acdf1d5f5497ade5b7adc", null ],
     [ "OPND_CREATE_ABSMEM", "dr__ir__macros__aarch64_8h.html#a54b8bd667a8a940e94bfcc7842c958eb", null ],
     [ "OPND_CREATE_BYTE", "dr__ir__macros__aarch64_8h.html#a9c57dfea6090119e2ef1f7b2aea4c12a", null ],
     [ "OPND_CREATE_DOUBLE", "dr__ir__macros__aarch64_8h.html#abc0827a4d3590c1f4dbb10e85f7326e6", null ],

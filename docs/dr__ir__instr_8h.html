@@ -1889,7 +1889,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns NULL if none of <code>instr's</code> operands is a memory reference. Otherwise, returns the effective address of the first memory operand when the operands are considered in this order: destinations and then sources. The address is computed using the passed-in registers. <code>mc-&gt;flags</code> must include DR_MC_CONTROL and DR_MC_INTEGER. For instructions that use vector addressing (VSIB, introduced in AVX2), mc-&gt;flags must additionally include DR_MC_MULTIMEDIA.</p>
-<p>Like <a class="el" href="dr__ir__instr_8h.html#a461a626cbf3748356a96a0a5538871bd">instr_reads_memory()</a>, this routine does not consider multi-byte nops that use addressing operands, or the <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a8e5722f2fffd08c1e03efa408a6a0f55">OP_lea</a> instruction's source operand, to be memory references. </p>
+<p>Like <a class="el" href="dr__ir__instr_8h.html#a461a626cbf3748356a96a0a5538871bd">instr_reads_memory()</a>, this routine does not consider multi-byte nops that use addressing operands, or the <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da8e5722f2fffd08c1e03efa408a6a0f55">OP_lea</a> instruction's source operand, to be memory references. </p>
 
 </div>
 </div>
@@ -1937,7 +1937,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Performs address calculation in the same manner as <a class="el" href="dr__ir__instr_8h.html#a28829816cc8178aab86a55173599c477">instr_compute_address()</a> but handles multiple memory operands. The <code>index</code> parameter should be initially set to 0 and then incremented with each successive call until this routine returns false, which indicates that there are no more memory operands. The address of each is computed in the same manner as <a class="el" href="dr__ir__instr_8h.html#a28829816cc8178aab86a55173599c477">instr_compute_address()</a> and returned in <code>addr</code>; whether it is a write is returned in <code>is_write</code>. Either or both OUT variables can be NULL. <code>mc-&gt;flags</code> must include DR_MC_CONTROL and DR_MC_INTEGER. For instructions that use vector addressing (VSIB, introduced in AVX2), mc-&gt;flags must additionally include DR_MC_MULTIMEDIA.</p>
-<p>Like <a class="el" href="dr__ir__instr_8h.html#a461a626cbf3748356a96a0a5538871bd">instr_reads_memory()</a>, this routine does not consider multi-byte nops that use addressing operands, or the <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a8e5722f2fffd08c1e03efa408a6a0f55">OP_lea</a> instruction's source operand, to be memory references. </p>
+<p>Like <a class="el" href="dr__ir__instr_8h.html#a461a626cbf3748356a96a0a5538871bd">instr_reads_memory()</a>, this routine does not consider multi-byte nops that use addressing operands, or the <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da8e5722f2fffd08c1e03efa408a6a0f55">OP_lea</a> instruction's source operand, to be memory references. </p>
 
 </div>
 </div>
@@ -1991,7 +1991,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Performs address calculation in the same manner as <a class="el" href="dr__ir__instr_8h.html#ad78a69d6d54664001ebfee25847a3983">instr_compute_address_ex()</a> with additional information of which opnd is used for address computation returned in <code>pos</code>. If <code>pos</code> is NULL, it is the same as <a class="el" href="dr__ir__instr_8h.html#ad78a69d6d54664001ebfee25847a3983">instr_compute_address_ex()</a>.</p>
-<p>Like <a class="el" href="dr__ir__instr_8h.html#a461a626cbf3748356a96a0a5538871bd">instr_reads_memory()</a>, this routine does not consider multi-byte nops that use addressing operands, or the <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a8e5722f2fffd08c1e03efa408a6a0f55">OP_lea</a> instruction's source operand, to be memory references. </p>
+<p>Like <a class="el" href="dr__ir__instr_8h.html#a461a626cbf3748356a96a0a5538871bd">instr_reads_memory()</a>, this routine does not consider multi-byte nops that use addressing operands, or the <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da8e5722f2fffd08c1e03efa408a6a0f55">OP_lea</a> instruction's source operand, to be memory references. </p>
 
 </div>
 </div>
@@ -6300,7 +6300,7 @@ We recommend using this routine during the phase of application code analysis, a
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns true if <code>instr's</code> opcode is <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a6575ad72769fb182c4347a3ef47f0d3d">OP_xsave32</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a2f4007b3ac1c49adf6932abb07a591f5">OP_xsaveopt32</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635ada373b4c19b296439101a6b414d3fc97">OP_xsave64</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a07bf2e028f6f09add15a1bc1cee5c40a">OP_xsaveopt64</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635ae666a35320f2dd755235611fd1ed9455">OP_xsavec32</a> or <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a178fa0b5ae1cc309bd03c34120de0c81">OP_xsavec64</a>. </p>
+<p>Returns true if <code>instr's</code> opcode is <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da6575ad72769fb182c4347a3ef47f0d3d">OP_xsave32</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da2f4007b3ac1c49adf6932abb07a591f5">OP_xsaveopt32</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2dada373b4c19b296439101a6b414d3fc97">OP_xsave64</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da07bf2e028f6f09add15a1bc1cee5c40a">OP_xsaveopt64</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2dae666a35320f2dd755235611fd1ed9455">OP_xsavec32</a> or <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da178fa0b5ae1cc309bd03c34120de0c81">OP_xsavec64</a>. </p>
 
 </div>
 </div>
@@ -6919,7 +6919,7 @@ We recommend using this routine during the phase of application code analysis, a
       </table>
 </div><div class="memdoc">
 <p>Returns true iff any of <code>instr's</code> source operands is a memory reference.</p>
-<p>Unlike <a class="el" href="dr__ir__opnd_8h.html#a881480893401eb03ebb00af0dbe36f64">opnd_is_memory_reference()</a>, this routine conisders the semantics of the instruction and returns false for both multi-byte nops with a memory operand and for the <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a8e5722f2fffd08c1e03efa408a6a0f55">OP_lea</a> instruction, as they do not really reference the memory. It does return true for prefetch instructions.</p>
+<p>Unlike <a class="el" href="dr__ir__opnd_8h.html#a881480893401eb03ebb00af0dbe36f64">opnd_is_memory_reference()</a>, this routine conisders the semantics of the instruction and returns false for both multi-byte nops with a memory operand and for the <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da8e5722f2fffd08c1e03efa408a6a0f55">OP_lea</a> instruction, as they do not really reference the memory. It does return true for prefetch instructions.</p>
 <p>If <code>instr</code> is predicated (see <a class="el" href="dr__ir__instr_8h.html#aa0dda1bdd960e675b6b65a4093b44896">instr_is_predicated()</a>), the memory reference may not always be accessed. </p>
 
 </div>
@@ -8302,5 +8302,5 @@ mangle" if <code>val</code> is false.</p>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19228 --- Fri Aug 26 2022 04:44:28 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19237 --- Fri Sep 2 2022 04:43:49 &nbsp; <img border=0 src="favicon.png">
 </small></address>

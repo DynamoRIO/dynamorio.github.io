@@ -128,14 +128,14 @@ Instruction Counting</h2>
 <div class="line"><span class="comment">   * instrumentation.</span></div>
 <div class="line"><span class="comment">   */</span></div>
 <div class="line">  <a class="code" href="dr__ir__utils_8h.html#a4c8c687663c2f51e60e564ca9626acea">instrlist_meta_preinsert</a>(bb, where, <a class="code" href="dr__ir__macros__x86_8h.html#a8104e895719c1f3a8558067b023cf9c5">LOCK</a>(<a class="code" href="dr__ir__macros__x86_8h.html#a759b7342ed4080b9c12809d3b2e2718a">INSTR_CREATE_inc</a></div>
-<div class="line">    (drcontext, <a class="code" href="dr__ir__macros__aarch64_8h.html#a54b8bd667a8a940e94bfcc7842c958eb">OPND_CREATE_ABSMEM</a>(((<span class="keywordtype">byte</span> *)&amp;global_count) + offset, <a class="code" href="dr__ir__opnd_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da0ccef0d75b3f473bf275388804c8b85c">OPSZ_4</a>))));</div>
+<div class="line">    (drcontext, <a class="code" href="dr__ir__macros__aarch64_8h.html#a54b8bd667a8a940e94bfcc7842c958eb">OPND_CREATE_ABSMEM</a>(((<span class="keywordtype">byte</span> *)&amp;global_count) + offset, <a class="code" href="dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600a0ccef0d75b3f473bf275388804c8b85c">OPSZ_4</a>))));</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">/* Increment the thread private counter. */</span></div>
 <div class="line">  <span class="keywordflow">if</span> (<a class="code" href="dr__tools_8h.html#a684c0fc332a5e5aa11c28ad3d1a6ef57">dr_using_all_private_caches</a>()) {</div>
 <div class="line">    per_thread_t *data = (per_thread_t *) <a class="code" href="dr__tools_8h.html#aaa04a14c2cbf783b4926c2fd14445f82">dr_get_tls_field</a>(drcontext);</div>
 <div class="line">    <span class="comment">/* private caches - we can use an absolute address */</span></div>
 <div class="line">    <a class="code" href="dr__ir__utils_8h.html#a4c8c687663c2f51e60e564ca9626acea">instrlist_meta_preinsert</a>(bb, where, <a class="code" href="dr__ir__macros__x86_8h.html#a759b7342ed4080b9c12809d3b2e2718a">INSTR_CREATE_inc</a>(drcontext,</div>
-<div class="line">        <a class="code" href="dr__ir__macros__aarch64_8h.html#a54b8bd667a8a940e94bfcc7842c958eb">OPND_CREATE_ABSMEM</a>(((<span class="keywordtype">byte</span> *)&amp;data) + offset, <a class="code" href="dr__ir__opnd_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da0ccef0d75b3f473bf275388804c8b85c">OPSZ_4</a>)));</div>
+<div class="line">        <a class="code" href="dr__ir__macros__aarch64_8h.html#a54b8bd667a8a940e94bfcc7842c958eb">OPND_CREATE_ABSMEM</a>(((<span class="keywordtype">byte</span> *)&amp;data) + offset, <a class="code" href="dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600a0ccef0d75b3f473bf275388804c8b85c">OPSZ_4</a>)));</div>
 <div class="line">  } <span class="keywordflow">else</span> {</div>
 <div class="line">    <span class="comment">/* shared caches - we must indirect via thread local storage */</span></div>
 <div class="line">    <span class="comment">/* We spill xbx to use a scratch register (we could do a liveness</span></div>
@@ -332,6 +332,7 @@ Use of Standalone API</h2>
 <div class="ttc" id="adr__tools_8h_html_acab56792af6a64911a9e62dfeb8b0981"><div class="ttname"><a href="dr__tools_8h.html#acab56792af6a64911a9e62dfeb8b0981">DR_LOG_ALL</a></div><div class="ttdeci">#define DR_LOG_ALL</div><div class="ttdef"><b>Definition:</b> dr_tools.h:1543</div></div>
 <div class="ttc" id="adr__tools_8h_html_a56eae1c5bac30a5336a99c5d91d5a10c"><div class="ttname"><a href="dr__tools_8h.html#a56eae1c5bac30a5336a99c5d91d5a10c">dr_get_thread_id</a></div><div class="ttdeci">DR_API thread_id_t dr_get_thread_id(void *drcontext)</div></div>
 <div class="ttc" id="adr__tools_8h_html_aaa04a14c2cbf783b4926c2fd14445f82"><div class="ttname"><a href="dr__tools_8h.html#aaa04a14c2cbf783b4926c2fd14445f82">dr_get_tls_field</a></div><div class="ttdeci">DR_API void * dr_get_tls_field(void *drcontext)</div></div>
+<div class="ttc" id="adr__ir__opnd_8h_html_abed82baf7f470b522273a3e37c24c600a0ccef0d75b3f473bf275388804c8b85c"><div class="ttname"><a href="dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600a0ccef0d75b3f473bf275388804c8b85c">OPSZ_4</a></div><div class="ttdeci">@ OPSZ_4</div><div class="ttdef"><b>Definition:</b> dr_ir_opnd.h:85</div></div>
 <div class="ttc" id="adr__proc_8h_html_aacb849daecc3021e451d9441b26cc814"><div class="ttname"><a href="dr__proc_8h.html#aacb849daecc3021e451d9441b26cc814">proc_restore_fpstate</a></div><div class="ttdeci">DR_API void proc_restore_fpstate(byte *buf)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_ac897243e24d71890e196586b8373b821"><div class="ttname"><a href="dr__ir__instr_8h.html#ac897243e24d71890e196586b8373b821">instr_get_next</a></div><div class="ttdeci">DR_API INSTR_INLINE instr_t * instr_get_next(instr_t *instr)</div></div>
 <div class="ttc" id="adr__ir__utils_8h_html_abd9f556b8175c4ac72d8e7df8295f121"><div class="ttname"><a href="dr__ir__utils_8h.html#abd9f556b8175c4ac72d8e7df8295f121">dr_save_arith_flags</a></div><div class="ttdeci">DR_API void dr_save_arith_flags(void *drcontext, instrlist_t *ilist, instr_t *where, dr_spill_slot_t slot)</div></div>
@@ -355,7 +356,6 @@ Use of Standalone API</h2>
 <div class="ttc" id="adr__ir__instr_8h_html_a0dcbe0be5c00766249964bb3919e9a63"><div class="ttname"><a href="dr__ir__instr_8h.html#a0dcbe0be5c00766249964bb3919e9a63">instr_opcode_valid</a></div><div class="ttdeci">DR_API bool instr_opcode_valid(instr_t *instr)</div></div>
 <div class="ttc" id="adr__ir__utils_8h_html_a97e9767e1ff0f426b552a5f18c528ced"><div class="ttname"><a href="dr__ir__utils_8h.html#a97e9767e1ff0f426b552a5f18c528ced">dr_restore_reg</a></div><div class="ttdeci">DR_API void dr_restore_reg(void *drcontext, instrlist_t *ilist, instr_t *where, reg_id_t reg, dr_spill_slot_t slot)</div></div>
 <div class="ttc" id="astructinstr__t_html"><div class="ttname"><a href="structinstr__t.html">instr_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:378</div></div>
-<div class="ttc" id="adr__ir__opnd_8h_html_a0411cd49bb5b71852cecd93bcbf0ca2da0ccef0d75b3f473bf275388804c8b85c"><div class="ttname"><a href="dr__ir__opnd_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da0ccef0d75b3f473bf275388804c8b85c">OPSZ_4</a></div><div class="ttdeci">@ OPSZ_4</div><div class="ttdef"><b>Definition:</b> dr_ir_opnd.h:85</div></div>
 <div class="ttc" id="adr__tools_8h_html_a534b38808801da50be64b9f0e6c8616f"><div class="ttname"><a href="dr__tools_8h.html#a534b38808801da50be64b9f0e6c8616f">dr_set_tls_field</a></div><div class="ttdeci">DR_API void dr_set_tls_field(void *drcontext, void *value)</div></div>
 <div class="ttc" id="adr__defines_8h_html_a68540a70b4f8150a4fe6dcec91bf8825"><div class="ttname"><a href="dr__defines_8h.html#a68540a70b4f8150a4fe6dcec91bf8825">client_id_t</a></div><div class="ttdeci">uint client_id_t</div><div class="ttdef"><b>Definition:</b> dr_defines.h:357</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
@@ -363,5 +363,5 @@ Use of Standalone API</h2>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19228 --- Fri Aug 26 2022 04:44:30 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19237 --- Fri Sep 2 2022 04:43:51 &nbsp; <img border=0 src="favicon.png">
 </small></address>

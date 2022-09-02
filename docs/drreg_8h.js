@@ -4,9 +4,9 @@
     [ "DRMGR_PRIORITY_NAME_DRREG_LOW", "group__drreg.html#ga029fce197e2cdd4f155a4949ea25224b", null ],
     [ "drreg_options_t", "group__drreg.html#ga0aaceb18f0b53676faca34a2d43746f7", null ],
     [ "drreg_reserve_info_t", "group__drreg.html#ga1a91ecc67def444d5922a58fe0f641e4", null ],
-    [ "DRMGR_PRIORITY_INSERT_DRREG_HIGH", "group__drreg.html#gga7ff5f2dff38e7639981794c43dc9167ba6ec36608f877bb98ba1d9d0cd0941b6a", null ],
-    [ "DRMGR_PRIORITY_INSERT_DRREG_LOW", "group__drreg.html#gga7ff5f2dff38e7639981794c43dc9167ba4681b1eae66fea088d2437640a837caf", null ],
-    [ "DRMGR_PRIORITY_FAULT_DRREG", "group__drreg.html#gga7ff5f2dff38e7639981794c43dc9167ba1e68a52ce0fc6755b47fe317d9e7afc8", null ],
+    [ "DRMGR_PRIORITY_INSERT_DRREG_HIGH", "group__drreg.html#ggaabfcbcb5ac86a1edac4035264bc7d2b8a6ec36608f877bb98ba1d9d0cd0941b6a", null ],
+    [ "DRMGR_PRIORITY_INSERT_DRREG_LOW", "group__drreg.html#ggaabfcbcb5ac86a1edac4035264bc7d2b8a4681b1eae66fea088d2437640a837caf", null ],
+    [ "DRMGR_PRIORITY_FAULT_DRREG", "group__drreg.html#ggaabfcbcb5ac86a1edac4035264bc7d2b8a1e68a52ce0fc6755b47fe317d9e7afc8", null ],
     [ "drreg_bb_properties_t", "group__drreg.html#ga9aa35aebc3d4f0f41cba66bfcde82a00", [
       [ "DRREG_CONTAINS_SPANNING_CONTROL_FLOW", "group__drreg.html#gga9aa35aebc3d4f0f41cba66bfcde82a00a7480b21f4a67dd853d857271f4eaf058", null ],
       [ "DRREG_IGNORE_CONTROL_FLOW", "group__drreg.html#gga9aa35aebc3d4f0f41cba66bfcde82a00a7bbb7c0168068bd904f612b89b4c5dc9", null ],

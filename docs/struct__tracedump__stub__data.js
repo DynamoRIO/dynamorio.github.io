@@ -1,5 +1,5 @@
 [
-    [ "count", "struct__tracedump__stub__data.html#ac3da097596559c4958a3e313dffe015d", null ],
+    [ "count", "struct__tracedump__stub__data.html#a854001c203bf9e5662efef517be271a4", null ],
     [ "count32", "struct__tracedump__stub__data.html#ab9d87dcca0d8b506b3972264970d94c0", null ],
     [ "count64", "struct__tracedump__stub__data.html#a692a7235a27b257680877c773b574aa6", null ],
     [ "cti_offs", "struct__tracedump__stub__data.html#a7f8548b5681a5806ca06b55e954d5a3c", null ],
