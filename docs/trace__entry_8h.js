@@ -33,7 +33,9 @@
       [ "TRACE_MARKER_TYPE_PHYSICAL_ADDRESS_NOT_AVAILABLE", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac138a2d29f017ea18a3bb3e1d243c593", null ],
       [ "TRACE_MARKER_TYPE_VIRTUAL_ADDRESS", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a31b1b641e653a465b97433137330b737", null ],
       [ "TRACE_MARKER_TYPE_PAGE_SIZE", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a602e5f40c496455081f9a11468b6b39d", null ],
-      [ "TRACE_MARKER_TYPE_SYSCALL_ID", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac792d7856c0c7bcb062ec1e069317413", null ]
+      [ "TRACE_MARKER_TYPE_SYSCALL_ID", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac792d7856c0c7bcb062ec1e069317413", null ],
+      [ "TRACE_MARKER_TYPE_CHUNK_INSTR_COUNT", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ab24290006bf319f5d18a5bba698f5d81", null ],
+      [ "TRACE_MARKER_TYPE_CHUNK_FOOTER", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a46b4254a430bf51c15d9e477c9bc6d63", null ]
     ] ],
     [ "trace_type_t", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19d", [
       [ "TRACE_TYPE_READ", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19da2264004d45a5c8fe2b6713e2fe263c32", null ],
@@ -59,6 +61,7 @@
       [ "TRACE_TYPE_INSTR_FLUSH", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19dae5877dfac70932ee85076f0a5926c6d2", null ],
       [ "TRACE_TYPE_DATA_FLUSH", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19daccb6561ea4d6a69731520126eff5d965", null ],
       [ "TRACE_TYPE_THREAD_EXIT", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19dabc61f2a3ccb63ec2f39cb0c49b6b1a4e", null ],
+      [ "TRACE_TYPE_FOOTER", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19da9c9cc33e3947e5c75101a13efabb84ba", null ],
       [ "TRACE_TYPE_HARDWARE_PREFETCH", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19da834a4e5932c7553822094c50218b541b", null ],
       [ "TRACE_TYPE_MARKER", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19daf649d254f7789cf368fb1d52431ad2b2", null ],
       [ "TRACE_TYPE_INSTR_NO_FETCH", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19dad25c12963676fab16cf2185c66105b70", null ],

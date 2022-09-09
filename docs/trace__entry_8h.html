@@ -109,6 +109,8 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="trace__entry_8h.html#a00405f99b069de9812b34db3a192b19dabc61f2a3ccb63ec2f39cb0c49b6b1a4e">TRACE_TYPE_THREAD_EXIT</a>
 , <br />
+&#160;&#160;<a class="el" href="trace__entry_8h.html#a00405f99b069de9812b34db3a192b19da9c9cc33e3947e5c75101a13efabb84ba">TRACE_TYPE_FOOTER</a>, 
+<br />
 &#160;&#160;<a class="el" href="trace__entry_8h.html#a00405f99b069de9812b34db3a192b19da834a4e5932c7553822094c50218b541b">TRACE_TYPE_HARDWARE_PREFETCH</a>, 
 <br />
 &#160;&#160;<a class="el" href="trace__entry_8h.html#a00405f99b069de9812b34db3a192b19daf649d254f7789cf368fb1d52431ad2b2">TRACE_TYPE_MARKER</a>, 
@@ -186,7 +188,11 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a602e5f40c496455081f9a11468b6b39d">TRACE_MARKER_TYPE_PAGE_SIZE</a>, 
 <br />
-&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac792d7856c0c7bcb062ec1e069317413">TRACE_MARKER_TYPE_SYSCALL_ID</a>
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac792d7856c0c7bcb062ec1e069317413">TRACE_MARKER_TYPE_SYSCALL_ID</a>, 
+<br />
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ab24290006bf319f5d18a5bba698f5d81">TRACE_MARKER_TYPE_CHUNK_INSTR_COUNT</a>, 
+<br />
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a46b4254a430bf51c15d9e477c9bc6d63">TRACE_MARKER_TYPE_CHUNK_FOOTER</a>
 <br />
  }</td></tr>
 <tr class="separator:aa7f51b43d8f1e20dc45e3618684b15e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -374,6 +380,10 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9ac792d7856c0c7bcb062ec1e069317413"></a>TRACE_MARKER_TYPE_SYSCALL_ID&#160;</td><td class="fielddoc"><p>This marker is emitted prior to each system call when -enable_kernel_tracing is specified. The marker value contains a unique system call identifier. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9ab24290006bf319f5d18a5bba698f5d81"></a>TRACE_MARKER_TYPE_CHUNK_INSTR_COUNT&#160;</td><td class="fielddoc"><p>This top-level marker identifies the instruction count in each chunk of the output file. This is the granularity of a fast seek. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a46b4254a430bf51c15d9e477c9bc6d63"></a>TRACE_MARKER_TYPE_CHUNK_FOOTER&#160;</td><td class="fielddoc"><p>Marks the end of a chunk. The final chunk does not have such a marker but instead relies on the <a class="el" href="trace__entry_8h.html#a00405f99b069de9812b34db3a192b19da9c9cc33e3947e5c75101a13efabb84ba">TRACE_TYPE_FOOTER</a> entry. </p>
+</td></tr>
 </table>
 
 </div>
@@ -436,6 +446,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a00405f99b069de9812b34db3a192b19daccb6561ea4d6a69731520126eff5d965"></a>TRACE_TYPE_DATA_FLUSH&#160;</td><td class="fielddoc"><p>A data cache flush. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a00405f99b069de9812b34db3a192b19dabc61f2a3ccb63ec2f39cb0c49b6b1a4e"></a>TRACE_TYPE_THREAD_EXIT&#160;</td><td class="fielddoc"><p>A thread exit. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a00405f99b069de9812b34db3a192b19da9c9cc33e3947e5c75101a13efabb84ba"></a>TRACE_TYPE_FOOTER&#160;</td><td class="fielddoc"><p>The final entry in an offline file or a pipe. Not exposed to tools. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a00405f99b069de9812b34db3a192b19da834a4e5932c7553822094c50218b541b"></a>TRACE_TYPE_HARDWARE_PREFETCH&#160;</td><td class="fielddoc"><p>A hardware-issued prefetch (generated after tracing by a cache simulator). </p>
 </td></tr>
@@ -615,5 +627,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19237 --- Fri Sep 2 2022 04:43:49 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19243 --- Fri Sep 9 2022 04:24:40 &nbsp; <img border=0 src="favicon.png">
 </small></address>
