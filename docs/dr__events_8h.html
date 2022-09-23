@@ -131,6 +131,14 @@ Functions</h2></td></tr>
 <tr class="separator:a32f38cabf4b2c554ce4e476c5d5f6f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66e385b71b2a43038d8ce86fe5631457"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#a66e385b71b2a43038d8ce86fe5631457">dr_unregister_exit_event</a> (void(*func)(void))</td></tr>
 <tr class="separator:a66e385b71b2a43038d8ce86fe5631457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d993f7bdcf2f7f10be9d0adeda09327"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#a6d993f7bdcf2f7f10be9d0adeda09327">dr_register_post_attach_event</a> (void(*func)(void))</td></tr>
+<tr class="separator:a6d993f7bdcf2f7f10be9d0adeda09327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9649dcb8afae1334a6397383b900006"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#ab9649dcb8afae1334a6397383b900006">dr_unregister_post_attach_event</a> (void(*func)(void))</td></tr>
+<tr class="separator:ab9649dcb8afae1334a6397383b900006"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62b3d8421215e3bcdbc9c86aa68c0421"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#a62b3d8421215e3bcdbc9c86aa68c0421">dr_register_pre_detach_event</a> (void(*func)(void))</td></tr>
+<tr class="separator:a62b3d8421215e3bcdbc9c86aa68c0421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbc49b69cdd71f286bd19640817f1973"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#afbc49b69cdd71f286bd19640817f1973">dr_unregister_pre_detach_event</a> (void(*func)(void))</td></tr>
+<tr class="separator:afbc49b69cdd71f286bd19640817f1973"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbfe1ece2c520d409ffd59076507a710"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#acbfe1ece2c520d409ffd59076507a710">dr_register_bb_event</a> (<a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a>(*func)(void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, bool for_trace, bool translating))</td></tr>
 <tr class="separator:acbfe1ece2c520d409ffd59076507a710"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c2ce8d64301f81084dddb3bf2ddbbf6"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#a9c2ce8d64301f81084dddb3bf2ddbbf6">dr_unregister_bb_event</a> (<a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a>(*func)(void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, bool for_trace, bool translating))</td></tr>
@@ -1161,6 +1169,26 @@ Registration cannot be done during the basic block event: it should be done at i
 
 </div>
 </div>
+<a id="a6d993f7bdcf2f7f10be9d0adeda09327"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d993f7bdcf2f7f10be9d0adeda09327">&#9670;&nbsp;</a></span>dr_register_post_attach_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API bool dr_register_post_attach_event </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(void)&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Registers a function which is called after all other threads have been taken over during a process attach event, whether externally triggered or internally triggered (via <a class="el" href="dr__app_8h.html#afb7b7aed03dd6f0ed8d48b8a8796e55e">dr_app_start()</a> or related functions). If this process instance was not initiated by an attach or takeover methodology where multiple application threads may exist at the time of takeover (such as a process newly created on Linux), this registration function returns false.</p>
+<p>The attach methodology operates in a staggered fashion, with each thread being taken over and executed under DR control in turn. If the application has many threads, threads taken over early in this process may execute substantial amounts of instrumented code before the threads taken over last start executing instrumented code. The purpose of this event is to provide a single control point where all threads are known to be under DR control and running instrumented code. </p>
+
+</div>
+</div>
 <a id="a7a62b6c11f3b0ae2fe7773189f6e4826"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a62b6c11f3b0ae2fe7773189f6e4826">&#9670;&nbsp;</a></span>dr_register_post_syscall_event()</h2>
 
@@ -1182,6 +1210,26 @@ Registration cannot be done during the basic block event: it should be done at i
 <p>The application's machine state can be accessed and set with <a class="el" href="dr__ir__utils_8h.html#a9e348b2596b8750ce3fad234ab022ced">dr_get_mcontext()</a> and <a class="el" href="dr__ir__utils_8h.html#ac4bfa7fc3f9d4adb0857675bec2712a2">dr_set_mcontext()</a>.</p>
 <p>On MacOS, whether 32-bit or 64-bit, the system call number passed (<code>sysnum</code>) has been normalized to a positive number with the top 8 bits set to 0x1 for a Mach system call, 0x3 for Machdep, and 0x0 for BSD (allowing the direct use of SYS_ constants). Access the raw eax register to view the unmodified number.</p>
 <p>Additional system calls may be invoked by calling <a class="el" href="dr__tools_8h.html#aedb494e753b1a2f0e79cb4bd09700c3c">dr_syscall_invoke_another()</a> prior to returning from the post-syscall event callback. The system call to be invoked should be specified with <a class="el" href="dr__tools_8h.html#ae66c42a269f48b13ed57609029e5202b">dr_syscall_set_sysnum()</a>, and its parameters can be set with <a class="el" href="dr__tools_8h.html#a2ba5b83fedf0082d4170c3caaf2224a9">dr_syscall_set_param()</a>. </p>
+
+</div>
+</div>
+<a id="a62b3d8421215e3bcdbc9c86aa68c0421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62b3d8421215e3bcdbc9c86aa68c0421">&#9670;&nbsp;</a></span>dr_register_pre_detach_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API void dr_register_pre_detach_event </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(void)&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Registers a function which is called at the start of a full detach of DR from the current process, whether externally triggered or internally triggered (via <a class="el" href="dr__app_8h.html#a7e062573c669d8a5564abf54ebf90f31">dr_app_stop_and_cleanup()</a> or related functions), as well as at the start of DR sending all threads native but not cleaning up its own state (through <a class="el" href="dr__app_8h.html#afd509bb9ea5d1947228de48dda256e8f">dr_app_stop()</a>).</p>
+<p>The detach methodology operates in a staggered fashion, with each thread being returned to native control in turn. If the application has many threads, threads detached late in this process may execute substantial amounts of instrumented code before the full detach process is complete, while threads detached early are running natively. The purpose of this event is to provide a single final control point where all threads are known to be under DR control and running instrumented code. The exit event (see <a class="el" href="dr__events_8h.html#a32f38cabf4b2c554ce4e476c5d5f6f3a">dr_register_exit_event()</a>) is not called until after all other threads have been detached. </p>
 
 </div>
 </div>
@@ -1780,6 +1828,25 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
 
 </div>
 </div>
+<a id="ab9649dcb8afae1334a6397383b900006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9649dcb8afae1334a6397383b900006">&#9670;&nbsp;</a></span>dr_unregister_post_attach_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API bool dr_unregister_post_attach_event </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(void)&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Unregister a callback function for the post-attach event (see <a class="el" href="dr__events_8h.html#a6d993f7bdcf2f7f10be9d0adeda09327">dr_register_post_attach_event()</a>). </p><dl class="section return"><dt>Returns</dt><dd>true if unregistration is successful and false if it is not (e.g., <code>func</code> was not registered). </dd></dl>
+
+</div>
+</div>
 <a id="a849dec7ca8579d2a486a15cf08b4fc54"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a849dec7ca8579d2a486a15cf08b4fc54">&#9670;&nbsp;</a></span>dr_unregister_post_syscall_event()</h2>
 
@@ -1796,6 +1863,25 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
       </table>
 </div><div class="memdoc">
 <p>Unregister a callback function for the post-syscall event. </p><dl class="section return"><dt>Returns</dt><dd>true if unregistration is successful and false if it is not (e.g., <code>func</code> was not registered). </dd></dl>
+
+</div>
+</div>
+<a id="afbc49b69cdd71f286bd19640817f1973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbc49b69cdd71f286bd19640817f1973">&#9670;&nbsp;</a></span>dr_unregister_pre_detach_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API bool dr_unregister_pre_detach_event </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(void)&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Unregister a callback function for the post-attach event (see <a class="el" href="dr__events_8h.html#a62b3d8421215e3bcdbc9c86aa68c0421">dr_register_pre_detach_event()</a>). </p><dl class="section return"><dt>Returns</dt><dd>true if unregistration is successful and false if it is not (e.g., <code>func</code> was not registered). </dd></dl>
 
 </div>
 </div>
@@ -1939,5 +2025,5 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19249 --- Fri Sep 16 2022 04:50:40 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19255 --- Fri Sep 23 2022 04:46:56 &nbsp; <img border=0 src="favicon.png">
 </small></address>
