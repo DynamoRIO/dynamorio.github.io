@@ -287,11 +287,12 @@ Clean Calls</h2>
 <p>DynamoRIO analyzes the callee target of each clean call and attempts to reduce the context switch size and, if the callee is simple enough, to automatically inline it. This analysis and potential inlining works best when the callee is fully optimized. Thus, we recommend using high optimization levels in clients, even when running DynamoRIO itself in debug build in order to examine whether callees are being inlined. See <a class="el" href="page_deploy.html#op_cleancall">-opt_cleancall</a> for information on how to adjust the aggressiveness of these optimizations and for a list of specific conditions that affect inlining.</p>
 <h2><a class="anchor" id="sec_state"></a>
 State Preservation</h2>
-<p>To facilitate code transformations, DynamoRIO makes available its register spill slots and other state preservation functionality. It exports API routines for saving and restoring registers to and from thread-local spill slots:</p>
+<p>To facilitate code transformations, DynamoRIO makes available its register spill slots and other state preservation functionality. The <a class="el" href="page_drreg.html">Register Management</a> Extension Library is recommended to manage registers. DynamoRIO's direct interfaces for saving and restoring registers to and from thread-local spill slots may also be used:</p>
 <div class="fragment"><div class="line"><a class="code" href="dr__ir__utils_8h.html#ae8479716f08bbbb36d7fd27cfbbc0743">dr_save_reg</a>(), <a class="code" href="dr__ir__utils_8h.html#a97e9767e1ff0f426b552a5f18c528ced">dr_restore_reg</a>(), and <a class="code" href="dr__ir__utils_8h.html#ab633296eeff7b481e148ef78aad56722">dr_reg_spill_slot_opnd</a>() </div>
 </div><!-- fragment --><p>The values stored in these spill slots remain valid until the next application (i.e. non-meta) instruction and as such can be accessed from clean calls using:</p>
 <div class="fragment"><div class="line"><a class="code" href="dr__ir__utils_8h.html#a6fdc15ea04e8d17fa537832acf274d9c">dr_read_saved_reg</a>(), <a class="code" href="dr__ir__utils_8h.html#a178b4afb7bc059afbb92e9bee3572ca0">dr_write_saved_reg</a>() </div>
-</div><!-- fragment --><p>For longer term persistence DynamoRIO also provides a generic dedicated thread-local storage field for use by clients, making it easy to write thread-aware clients. From C code, use:</p>
+</div><!-- fragment --><p>When using DynamoRIO's interfaces instead of drreg, be sure to look for the labels <a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a775cd05e3af0ab56c47dba3dabc32758">DR_NOTE_ANNOTATION</a> and <a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a0a0435e4c2e2f5afb41bd54b4d0e3d10">DR_NOTE_REG_BARRIER</a> at which all application values should be restored to registers.</p>
+<p>For longer term persistence DynamoRIO also provides a generic dedicated thread-local storage field for use by clients, making it easy to write thread-aware clients. From C code, use:</p>
 <div class="fragment"><div class="line"><a class="code" href="dr__tools_8h.html#aaa04a14c2cbf783b4926c2fd14445f82">dr_get_tls_field</a>(), <a class="code" href="dr__tools_8h.html#a534b38808801da50be64b9f0e6c8616f">dr_set_tls_field</a>() </div>
 </div><!-- fragment --><p>To access this thread-local field from the code cache, use the following routines to generate the necessary code:</p>
 <div class="fragment"><div class="line"><a class="code" href="dr__ir__utils_8h.html#aab7b4392c68e53f807bba5791183f240">dr_insert_read_tls_field</a>(), <a class="code" href="dr__ir__utils_8h.html#a06b5104ef0d55577cee0f66bd9a0051f">dr_insert_write_tls_field</a>() </div>
@@ -497,5 +498,5 @@ Persisting Code</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19255 --- Fri Sep 23 2022 04:47:00 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19264 --- Fri Sep 30 2022 04:54:22 &nbsp; <img border=0 src="favicon.png">
 </small></address>

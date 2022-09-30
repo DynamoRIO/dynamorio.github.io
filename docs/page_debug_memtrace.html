@@ -78,8 +78,9 @@ Viewing post-processed files</h2>
 <li>0x0e direct call</li>
 <li>0x00 load</li>
 <li>0x01 store</li>
-<li>0x1d: non-fetched instr</li>
+<li>0x1d non-fetched instr</li>
 <li>0x1a footer</li>
+<li>0x2f instr encoding</li>
 </ul>
 <p>type_is_instr: 0xa-0x10 + 0x1e</p>
 <p>For .zip files, the data is split into the component files within the archive, in order. Each component repeats enough information (the final timestamp + cpu from the prior chunk, instruction encodings, etc.) to avoid having to examing prior chunks. Extract each component file in turn to view the data. For example: </p><div class="fragment"><div class="line">$ unzip -p drmemtrace.app.194439.1516.dir/trace/drmemtrace.app.194439.7393.trace.zip chunk.0000 | hexdump -v -e <span class="stringliteral">&#39;&quot;%010_ax | &quot; 6/2 &quot;%04x &quot; &quot;\n&quot;&#39;</span> | awk <span class="stringliteral">&#39;{printf &quot;%s %s %s %s %s%s%s%s\n&quot;, $1, $2, $3, $4, $8, $7, $6, $5}&#39;</span> | head -3</div>
@@ -96,5 +97,5 @@ Viewing instruction disassembly</h2>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19255 --- Fri Sep 23 2022 04:47:00 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19264 --- Fri Sep 30 2022 04:54:22 &nbsp; <img border=0 src="favicon.png">
 </small></address>

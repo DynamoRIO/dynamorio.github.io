@@ -41,6 +41,8 @@ Data Fields</h2></td></tr>
 <tr class="separator:aeff5a33e7ea779e3c687c5d5177ee69c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ada15e01f610a97869eb593da82e19f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__memref__instr__t.html#a6ada15e01f610a97869eb593da82e19f">size</a></td></tr>
 <tr class="separator:a6ada15e01f610a97869eb593da82e19f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a964db3c0bac88c292b95092dc3ef79d7"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__memref__instr__t.html#a964db3c0bac88c292b95092dc3ef79d7">encoding</a> [MAX_ENCODING_LENGTH]</td></tr>
+<tr class="separator:a964db3c0bac88c292b95092dc3ef79d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A trace entry representing an instruction fetch. </p>
@@ -57,6 +59,21 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>The address of the instruction (i.e., program counter). </p>
+
+</div>
+</div>
+<a id="a964db3c0bac88c292b95092dc3ef79d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a964db3c0bac88c292b95092dc3ef79d7">&#9670;&nbsp;</a></span>encoding</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char _memref_instr_t::encoding[MAX_ENCODING_LENGTH]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The instruction's raw encoding. This field is only valid when the the file type (see <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9afb92a065fc3cdb8b86e463bd2ff2fdf1">TRACE_MARKER_TYPE_FILETYPE</a>) has <a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1af02134c0a90c175125a919c3c25ba14f">OFFLINE_FILE_TYPE_ENCODINGS</a> set. DynamoRIO's <a class="el" href="dr__ir__decode_8h.html#abf858ce8d17c1221ea6121f1bb437348">decode_from_copy()</a> (or any other decoding library) can be used to decode into a higher-level instruction representation. </p>
 
 </div>
 </div>
@@ -129,5 +146,5 @@ Data Fields</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19255 --- Fri Sep 23 2022 04:47:01 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19264 --- Fri Sep 30 2022 04:54:23 &nbsp; <img border=0 src="favicon.png">
 </small></address>

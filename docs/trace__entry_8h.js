@@ -12,7 +12,8 @@
       [ "OFFLINE_FILE_TYPE_ARCH_X86_64", "trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1acdd606c172687a860e0355ceb9e9195a", null ],
       [ "OFFLINE_FILE_TYPE_ARCH_ALL", "trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a92ada41c4b35f253300e9c039feea086", null ],
       [ "OFFLINE_FILE_TYPE_IFILTERED", "trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1ac9e7a222a054229abbe7e306a0dad5f6", null ],
-      [ "OFFLINE_FILE_TYPE_DFILTERED", "trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1aa4b4ef06f1ecb20e6098a3a9d88d5691", null ]
+      [ "OFFLINE_FILE_TYPE_DFILTERED", "trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1aa4b4ef06f1ecb20e6098a3a9d88d5691", null ],
+      [ "OFFLINE_FILE_TYPE_ENCODINGS", "trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1af02134c0a90c175125a919c3c25ba14f", null ]
     ] ],
     [ "trace_marker_type_t", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9", [
       [ "TRACE_MARKER_TYPE_KERNEL_EVENT", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a3aa19ac796e054c478f0a6ec99286020", null ],
@@ -84,6 +85,8 @@
     ] ],
     [ "trace_version_t", "trace__entry_8h.html#a3a78cb9ac4c3afc1444673fb9a407d76", [
       [ "TRACE_ENTRY_VERSION_NO_KERNEL_PC", "trace__entry_8h.html#a3a78cb9ac4c3afc1444673fb9a407d76ada2123379e215cf884618dd9e954d558", null ],
+      [ "TRACE_ENTRY_VERSION_KERNEL_PC", "trace__entry_8h.html#a3a78cb9ac4c3afc1444673fb9a407d76a5d6dbae6f665d2505bd4838b28505b02", null ],
+      [ "TRACE_ENTRY_VERSION_ENCODINGS", "trace__entry_8h.html#a3a78cb9ac4c3afc1444673fb9a407d76a210217b199b5d1fecc3ca1a182ffb419", null ],
       [ "TRACE_ENTRY_VERSION", "trace__entry_8h.html#a3a78cb9ac4c3afc1444673fb9a407d76a2269f0382dd716f0831ec6ea2cdf32f2", null ]
     ] ],
     [ "type_has_address", "trace__entry_8h.html#ab4d55eef56c45ede7eee1f7daee57840", null ],
