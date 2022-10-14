@@ -334,7 +334,7 @@ Event Counts</h1>
 </div><!-- fragment --><p>The non-fetched instructions are x86 string loop instructions, where subsequent iterations do not incur a fetch. They are included in the trace as a different type of trace entry to support core simulators in addition to cache simulators.</p>
 <h1><a class="anchor" id="sec_tool_opcode_mix"></a>
 Opcode Mix</h1>
-<p>The opcode_mix tool uses the non-fetched instruction information along with the preserved libraries and binaries from the traced execution to gather more information on each executed instruction than was stored in the trace. It only supports offline traces, and the <code>modules.log</code> file created during post-processing of the trace must be preserved. The results are broken down by the opcodes used in DR's IR, where for x86 <code>mov</code> is split into a separate opcode for load and store but both have the same public string "mov":</p>
+<p>The opcode_mix tool uses the non-fetched instruction information along with the preserved libraries and binaries from the traced execution to gather more information on each executed instruction than was stored in the trace. To run on online traces, pass the <code>-instr_encodings</code> option. The results are broken down by the opcodes used in DR's IR, where for x86 <code>mov</code> is split into a separate opcode for load and store but both have the same public string "mov":</p>
 <div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -offline -- ~/test/pi_estimator</div>
 <div class="line">Estimation of pi is 3.142425985001098</div>
 <div class="line">$ bin64/drrun -t drcachesim -simulator_type opcode_mix -indir drmemtrace.*.dir</div>
@@ -368,7 +368,7 @@ Opcode Mix</h1>
 <div class="line">...</div>
 </div><!-- fragment --><h1><a class="anchor" id="sec_tool_view"></a>
 Human-Readable View</h1>
-<p>The view tool prints out the contents of the trace for human viewing, including disassembling instructions in AT&amp;T, Intel, Arm, or DR format, for offline traces. The -skip_refs and -sim_refs flags can be used to set a start point and end point for the disassembled view. Note that these flags compute the number of instructions which are skipped or displayed which is distinct from the number of trace entries.</p>
+<p>The view tool prints out the contents of the trace for human viewing, including disassembling instructions in AT&amp;T, Intel, Arm, or DR format (to see disassembly for online traces, pass the <code>-instr_encodings</code> option). The -skip_refs and -sim_refs flags can be used to set a start point and end point for the disassembled view. Note that these flags compute the number of instructions which are skipped or displayed which is distinct from the number of trace entries.</p>
 <p>The tool displays loads and stores, as well as metadata marker entries for timestamps, on which core and thread the subsequent instruction sequence was executed, and kernel and system call transfers (these correspond to signal or event handler interruptions of the regular execution flow).</p>
 <div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -simulator_type view -sim_refs 20 -indir drmemtrace.*.dir</div>
 <div class="line">T80431 &lt;marker: version 3&gt;</div>
@@ -550,5 +550,5 @@ Invariant Checker</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19272 --- Fri Oct 7 2022 04:08:04 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19278 --- Fri Oct 14 2022 04:49:58 &nbsp; <img border=0 src="favicon.png">
 </small></address>

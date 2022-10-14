@@ -64,6 +64,7 @@
     [ "drbbdup_stats_t", "structdrbbdup__stats__t.html", {% include_relative structdrbbdup__stats__t.js %} ],
     [ "drgui_options_interface_t", "classdrgui__options__interface__t.html", {% include_relative classdrgui__options__interface__t.js %} ],
     [ "drgui_tool_interface_t", "classdrgui__tool__interface__t.html", {% include_relative classdrgui__tool__interface__t.js %} ],
+    [ "drmemtrace_replace_file_ops_t", "structdrmemtrace__replace__file__ops__t.html", {% include_relative structdrmemtrace__replace__file__ops__t.js %} ],
     [ "droption_parser_t", "classdroption__parser__t.html", {% include_relative classdroption__parser__t.js %} ],
     [ "droption_t", "classdroption__t.html", {% include_relative classdroption__t.js %} ],
     [ "drstatecmp_options_t", "structdrstatecmp__options__t.html", {% include_relative structdrstatecmp__options__t.js %} ],

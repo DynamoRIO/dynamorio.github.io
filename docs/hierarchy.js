@@ -65,6 +65,7 @@
     [ "drbbdup_stats_t", "structdrbbdup__stats__t.html", null ],
     [ "drgui_options_interface_t", "classdrgui__options__interface__t.html", null ],
     [ "drgui_tool_interface_t", "classdrgui__tool__interface__t.html", null ],
+    [ "drmemtrace_replace_file_ops_t", "structdrmemtrace__replace__file__ops__t.html", null ],
     [ "droption_parser_t", "classdroption__parser__t.html", [
       [ "droption_t< T >", "classdroption__t.html", null ]
     ] ],

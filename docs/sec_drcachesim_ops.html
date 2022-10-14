@@ -59,6 +59,9 @@ Specifies a directory containing libraries referenced in -module_file for analys
 <li><b>-chunk_instr_count</b> <br  />
 <em>default value: 10000000</em> <br  />
 Specifies the size in instructions of the chunks into which a trace output file is split inside a zipfile. This is the granularity of a fast seek. This only applies when generating .zip-format traces; when built without support for writing .zip files, this option is ignored. For 32-bit this cannot exceed 4G.</li>
+<li><b>-instr_encodings</b> <br  />
+<em>default value: false</em> <br  />
+By default instruction encodings are not sent to online tools, to reduce overhead. (Offline tools have them added by default.)</li>
 <li><b>-funclist_file</b> <br  />
 <em>default value: ""</em> <br  />
 The func_view tool needs the mapping from function name to identifier that was recorded during offline tracing. This data is stored in its own separate file in the raw/ subdirectory. If the file is named funclist.log and is in the same directory as the trace file, or a raw/ subdirectory below the trace file, this parameter can be omitted.</li>
@@ -283,5 +286,5 @@ By default, offline tracing only records a userspace trace. If this option is en
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19272 --- Fri Oct 7 2022 04:08:04 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19278 --- Fri Oct 14 2022 04:49:58 &nbsp; <img border=0 src="favicon.png">
 </small></address>

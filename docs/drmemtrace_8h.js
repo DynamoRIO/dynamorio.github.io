@@ -1,9 +1,11 @@
 [
+    [ "drmemtrace_replace_file_ops_t", "structdrmemtrace__replace__file__ops__t.html", {% include_relative structdrmemtrace__replace__file__ops__t.js %} ],
     [ "DRMGR_PRIORITY_NAME_MEMTRACE", "drmemtrace_8h.html#a015a9ac79ac244f338bb44ad12d2d958", null ],
     [ "drmemtrace_close_file_func_t", "drmemtrace_8h.html#a9fd9567b547780e26ff3cbd6667c9728", null ],
     [ "drmemtrace_create_dir_func_t", "drmemtrace_8h.html#ac5540d82f676fd45849f024fe8cba0d1", null ],
     [ "drmemtrace_exit_func_t", "drmemtrace_8h.html#afcfd46ef1d6d3866dec6becf9a0d3730", null ],
     [ "drmemtrace_handoff_func_t", "drmemtrace_8h.html#a474060a7301f542953030461e2adedef", null ],
+    [ "drmemtrace_open_file_ex_func_t", "drmemtrace_8h.html#af9f1b46c26d073165f5d046b4d56d28c", null ],
     [ "drmemtrace_open_file_func_t", "drmemtrace_8h.html#aae6fa7e54f417740124583a6528a53cf", null ],
     [ "drmemtrace_read_file_func_t", "drmemtrace_8h.html#a8cd7618d895044548608c53cf4f00793", null ],
     [ "drmemtrace_write_file_func_t", "drmemtrace_8h.html#a83a2d9ed70af36dc07f442ce5aef2bb4", null ],
@@ -22,5 +24,6 @@
     [ "drmemtrace_get_modlist_path", "drmemtrace_8h.html#a8c93fd7bcda89efb7786ad0cf27f8ff2", null ],
     [ "drmemtrace_get_output_path", "drmemtrace_8h.html#a788e3e4e25b13c1f6148a8fd544b2d81", null ],
     [ "drmemtrace_get_timestamp_from_offline_trace", "drmemtrace_8h.html#a7a2178d62155d7875efef8c8def5da0b", null ],
-    [ "drmemtrace_replace_file_ops", "drmemtrace_8h.html#abb7be083ae67d4a389be1eb1c5fe1b6e", null ]
+    [ "drmemtrace_replace_file_ops", "drmemtrace_8h.html#abb7be083ae67d4a389be1eb1c5fe1b6e", null ],
+    [ "drmemtrace_replace_file_ops_ex", "drmemtrace_8h.html#afb06ed9da3971b17c63c1cbfae7aa7f5", null ]
 ],
