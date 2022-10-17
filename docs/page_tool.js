@@ -1,5 +1,4 @@
 [
-    [ "Tracing and Analysis Framework", "page_drcachesim.html", {% include_relative page_drcachesim.js %} ],
     [ "Code Coverage Tool", "page_drcov.html", [
       [ "The Code Coverage Client", "page_drcov.html#sec_drcov", null ],
       [ "Post-Processing", "page_drcov.html#sec_drcov2lcov", null ]

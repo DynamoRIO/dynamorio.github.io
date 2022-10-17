@@ -37,6 +37,7 @@ var NAVTREE =
       [ "Certain Extensions: LGPL 2.1", "page_license.html#sec_lgpl_licenses", null ],
       [ "Code Coverage genhtml: GPL 2", "page_license.html#sec_gpl_licenses", null ]
     ] ],
+    [ "Tracing and Analysis Framework", "page_drcachesim.html", {% include_relative page_drcachesim.js %} ],
 [ "API Reference", "files.html", [
     [ "Deprecated List", "deprecated.html", null ],
     [ "DynamoRIO Extension Details", "modules.html", {% include_relative modules.js %} ],
