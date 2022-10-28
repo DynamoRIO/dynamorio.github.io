@@ -224,7 +224,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Inserts instructions prior to <code>where</code> in <code>bb</code> that determine and store the memory address referred to by <code>memref</code> into the register <code>dst</code>. May clobber the register <code>scratch</code>. Supports far memory references. For far memory references via DS and ES, we assume that the segment base is 0.</p>
-<p>All registers used in <code>memref</code> must hold their original application values in order for the proper address to be computed into <code>dst</code>. The <code>dst</code> register may overlap with the registers used in <code>memref</code>. On ARM, <code>scratch</code> must be different from those used in <code>memref</code> (as well as from <code>dst</code>). On x86, <code>scratch</code> will not be used unless <code>memref</code> is a far reference that either uses <code>dst</code> or is a base-disp with both a base and an index, or <code>memref</code> is a reference in the <a class="el" href="dr__ir__opcodes__x86_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da549371e1914c0af56d1c4cf07fb3f9bb">OP_xlat</a> instruction.</p>
+<p>All registers used in <code>memref</code> must hold their original application values in order for the proper address to be computed into <code>dst</code>. The <code>dst</code> register may overlap with the registers used in <code>memref</code>. On ARM, <code>scratch</code> must be different from those used in <code>memref</code> (as well as from <code>dst</code>). On x86, <code>scratch</code> will not be used unless <code>memref</code> is a far reference that either uses <code>dst</code> or is a base-disp with both a base and an index, or <code>memref</code> is a reference in the <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a549371e1914c0af56d1c4cf07fb3f9bb">OP_xlat</a> instruction.</p>
 <p>To obtain each memory address referenced in a single-instruction string loop, use <a class="el" href="group__drutil.html#gae38961d42fc285d7f9034c4b02690cae">drutil_expand_rep_string()</a> to transform such loops into regular loops containing (non-loop) string instructions.</p>
 <dl class="section return"><dt>Returns</dt><dd>whether successful. </dd></dl>
 
@@ -359,5 +359,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19285 --- Fri Oct 21 2022 04:15:08 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19292 --- Fri Oct 28 2022 04:04:58 &nbsp; <img border=0 src="favicon.png">
 </small></address>
