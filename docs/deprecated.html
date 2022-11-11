@@ -25,6 +25,14 @@ permalink: /deprecated.html
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
+<dt>Global <a class="el" href="classanalysis__tool__t.html#af926d04a522915a32a9186297564eec2">analysis_tool_t::initialize</a>  ()</dt>
+<dd><p class="startdd"><a class="anchor" id="_deprecated000022"></a>The <a class="el" href="classanalysis__tool__t.html#a49d291af662e9c683a536a5ee6dd3dc5">initialize_stream()</a> function is called by the analyzer; this function is only called if the default implementation of <a class="el" href="classanalysis__tool__t.html#a49d291af662e9c683a536a5ee6dd3dc5">initialize_stream()</a> is left in place and it calls this version. On an error, this returns an error string. On success, it returns "". </p>
+<p class="enddd"><a class="anchor" id="_deprecated000027"></a>The <a class="el" href="classanalysis__tool__t.html#a49d291af662e9c683a536a5ee6dd3dc5">initialize_stream()</a> function is called by the analyzer; this function is only called if the default implementation of <a class="el" href="classanalysis__tool__t.html#a49d291af662e9c683a536a5ee6dd3dc5">initialize_stream()</a> is left in place and it calls this version. On an error, this returns an error string. On success, it returns "".  </p>
+</dd>
+<dt>Global <a class="el" href="classanalysis__tool__t.html#a2933c3b653540c949de39c4ba6840854">analysis_tool_t::parallel_shard_init</a>  (int shard_index, void *worker_data)</dt>
+<dd><p class="startdd"><a class="anchor" id="_deprecated000023"></a>The <a class="el" href="classanalysis__tool__t.html#a3f96fe86f758efaf923be7f2cc0d3eeb">parallel_shard_init_stream()</a> is what is called by the analyzer; this function is only called if the default implementation of <a class="el" href="classanalysis__tool__t.html#a3f96fe86f758efaf923be7f2cc0d3eeb">parallel_shard_init_stream()</a> is left in place and it calls this version. </p>
+<p class="enddd"><a class="anchor" id="_deprecated000028"></a>The <a class="el" href="classanalysis__tool__t.html#a3f96fe86f758efaf923be7f2cc0d3eeb">parallel_shard_init_stream()</a> is what is called by the analyzer; this function is only called if the default implementation of <a class="el" href="classanalysis__tool__t.html#a3f96fe86f758efaf923be7f2cc0d3eeb">parallel_shard_init_stream()</a> is left in place and it calls this version.  </p>
+</dd>
 <dt>Global <a class="el" href="dr__tools_8h.html#affc4a7a38a1fa1fe45c1a15e01a98e78">dr_get_options</a>  (client_id_t client_id)</dt>
 <dd><a class="anchor" id="_deprecated000020"></a>This routine is replaced by <a class="el" href="dr__api_8h.html#a2b938c98dd186cc94eef6880f9e3c3e9">dr_client_main()</a>'s arguments and by <a class="el" href="dr__tools_8h.html#a5f53df83b2108925fa52bd607536e25d">dr_get_option_array()</a>. The front-end <code>drrun</code> and other utilities now re-quote all tokens, providing simpler option passing without escaping or extra quote layers. This routine, for compatibility, strips those quotes off and returns a flat string without any token-delimiting quotes.  </dd>
 <dt>Global <a class="el" href="dr__api_8h.html#a819eb581527829240bf227d5a8f98e4c">dr_init</a>  (client_id_t id)</dt>
@@ -60,11 +68,11 @@ permalink: /deprecated.html
 <dt>Global <a class="el" href="dr__ir__utils_8h.html#a1d006431d6330adc66e372d99fa86e2f">instrlist_meta_fault_preinsert</a>  (instrlist_t *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="structinstr__t.html">instr_t</a> *instr)</dt>
 <dd><a class="anchor" id="_deprecated000016"></a>Essentially equivalent to <a class="el" href="dr__ir__utils_8h.html#a4c8c687663c2f51e60e564ca9626acea">instrlist_meta_preinsert()</a>  </dd>
 <dt>Global <a class="el" href="classraw2trace__t.html#ac2476351d49c4ec1902d77fccde436de">raw2trace_t::do_module_parsing</a>  ()</dt>
-<dd><a class="anchor" id="_deprecated000022"></a><a class="el" href="classmodule__mapper__t.html">module_mapper_t</a> should be used instead.  </dd>
+<dd><a class="anchor" id="_deprecated000024"></a><a class="el" href="classmodule__mapper__t.html">module_mapper_t</a> should be used instead.  </dd>
 <dt>Global <a class="el" href="classraw2trace__t.html#a3b63b0e61660418a5c1e985a64e952b4">raw2trace_t::do_module_parsing_and_mapping</a>  ()</dt>
-<dd><a class="anchor" id="_deprecated000023"></a><a class="el" href="classmodule__mapper__t.html#a1cc0d9c7f1afc3316b0c7edbc6325178">module_mapper_t::get_loaded_modules()</a> should be used instead.  </dd>
+<dd><a class="anchor" id="_deprecated000025"></a><a class="el" href="classmodule__mapper__t.html#a1cc0d9c7f1afc3316b0c7edbc6325178">module_mapper_t::get_loaded_modules()</a> should be used instead.  </dd>
 <dt>Global <a class="el" href="classraw2trace__t.html#addaa1498d372dafc8cd6efef5e6738ab">raw2trace_t::find_mapped_trace_address</a>  (app_pc trace_address, OUT app_pc *mapped_address)</dt>
-<dd><a class="anchor" id="_deprecated000024"></a><a class="el" href="classmodule__mapper__t.html#add0cc122b72c75d519971cde9eeffd87">module_mapper_t::find_mapped_trace_address()</a> should be used instead.  </dd>
+<dd><a class="anchor" id="_deprecated000026"></a><a class="el" href="classmodule__mapper__t.html#add0cc122b72c75d519971cde9eeffd87">module_mapper_t::find_mapped_trace_address()</a> should be used instead.  </dd>
 <dt>Global <a class="el" href="dr__ir__opnd_8h.html#a8e762bd30785c3eef5bf1de58362112d">reg_32_to_opsz</a>  (reg_id_t reg, opnd_size_t sz)</dt>
 <dd><a class="anchor" id="_deprecated000011"></a>Prefer <a class="el" href="dr__ir__opnd_8h.html#a8ef3aeb840262664fad8e94937ae82c2">reg_resize_to_opsz()</a> which is more general.  </dd>
 <dt>Global <a class="el" href="dr__ir__opnd_8h.html#afa3df205f31cf4fb45b04148b1b9cf4d">reg_is_xmm</a>  (reg_id_t reg)</dt>
@@ -81,5 +89,5 @@ permalink: /deprecated.html
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19299 --- Fri Nov 4 2022 04:02:51 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19306 --- Fri Nov 11 2022 03:56:22 &nbsp; <img border=0 src="favicon.png">
 </small></address>

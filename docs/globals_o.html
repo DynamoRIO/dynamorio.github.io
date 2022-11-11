@@ -5599,7 +5599,7 @@ permalink: /globals_o.html
 : <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a0e1169aebc0d59bad9c1464f41777619">dr_ir_opcodes_x86.h</a>
 </li>
 <li>OP_vpinsrq
-: <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a4ff8a8c5b1b6da86fcda73e5f85d5e77">dr_ir_opcodes_x86.h</a>
+: <a class="el" href="dr__ir__opcodes__x86_8h.html#a3f71dc6819ddb5a9192f541745caa855">dr_ir_opcodes_x86.h</a>
 </li>
 <li>OP_vpinsrw
 : <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635aeaccc08517d4af0b1cf18fe55f0330fa">dr_ir_opcodes_x86.h</a>
@@ -7309,8 +7309,8 @@ permalink: /globals_o.html
 : <a class="el" href="dr__ir__opnd_8h.html#ab73fb113359aaee37844b2592917598d">dr_ir_opnd.h</a>
 </li>
 <li>OPND_CREATE_ABSMEM
-: <a class="el" href="dr__ir__macros__x86_8h.html#a54b8bd667a8a940e94bfcc7842c958eb">dr_ir_macros_x86.h</a>
-, <a class="el" href="dr__ir__macros__aarch64_8h.html#a54b8bd667a8a940e94bfcc7842c958eb">dr_ir_macros_aarch64.h</a>
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a54b8bd667a8a940e94bfcc7842c958eb">dr_ir_macros_aarch64.h</a>
+, <a class="el" href="dr__ir__macros__x86_8h.html#a54b8bd667a8a940e94bfcc7842c958eb">dr_ir_macros_x86.h</a>
 , <a class="el" href="dr__ir__macros__arm_8h.html#a54b8bd667a8a940e94bfcc7842c958eb">dr_ir_macros_arm.h</a>
 </li>
 <li>opnd_create_base_disp()
@@ -7371,8 +7371,8 @@ permalink: /globals_o.html
 : <a class="el" href="dr__ir__opnd_8h.html#a8e631e642887228643e3c248a696e1be">dr_ir_opnd.h</a>
 </li>
 <li>OPND_CREATE_INT
-: <a class="el" href="dr__ir__macros__arm_8h.html#aaaaa7dc76fd64fbfe69faa2be5c1c909">dr_ir_macros_arm.h</a>
-, <a class="el" href="dr__ir__macros__aarch64_8h.html#aaaaa7dc76fd64fbfe69faa2be5c1c909">dr_ir_macros_aarch64.h</a>
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#aaaaa7dc76fd64fbfe69faa2be5c1c909">dr_ir_macros_aarch64.h</a>
+, <a class="el" href="dr__ir__macros__arm_8h.html#aaaaa7dc76fd64fbfe69faa2be5c1c909">dr_ir_macros_arm.h</a>
 </li>
 <li>OPND_CREATE_INT16
 : <a class="el" href="dr__ir__macros_8h.html#ac2d087cee8f6726f09d76852c156e0cc">dr_ir_macros.h</a>
@@ -7487,6 +7487,9 @@ permalink: /globals_o.html
 </li>
 <li>opnd_create_pc()
 : <a class="el" href="dr__ir__opnd_8h.html#aaa97a92df7a64fdf4ceb123ba241ddfd">dr_ir_opnd.h</a>
+</li>
+<li>opnd_create_predicate_reg()
+: <a class="el" href="dr__ir__opnd_8h.html#a3408612a2953255e7c3572cf76d296c1">dr_ir_opnd.h</a>
 </li>
 <li>opnd_create_reg()
 : <a class="el" href="dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda">dr_ir_opnd.h</a>
@@ -7661,6 +7664,15 @@ permalink: /globals_o.html
 </li>
 <li>opnd_is_pc()
 : <a class="el" href="dr__ir__opnd_8h.html#a7c09fc3cd925d0355bf5750f2078fa5f">dr_ir_opnd.h</a>
+</li>
+<li>opnd_is_predicate_merge()
+: <a class="el" href="dr__ir__opnd_8h.html#a5ea72f7ac857921c572f7a43b3453bd7">dr_ir_opnd.h</a>
+</li>
+<li>opnd_is_predicate_reg()
+: <a class="el" href="dr__ir__opnd_8h.html#ad68622036cbd7e44d7ab108ee4af2bd6">dr_ir_opnd.h</a>
+</li>
+<li>opnd_is_predicate_zero()
+: <a class="el" href="dr__ir__opnd_8h.html#ad08354e0b0d2ef847763216c14296edd">dr_ir_opnd.h</a>
 </li>
 <li>opnd_is_reg()
 : <a class="el" href="dr__ir__opnd_8h.html#aa4a4d5c6b8fd6d065b4719124f4dcafe">dr_ir_opnd.h</a>
@@ -8107,5 +8119,5 @@ permalink: /globals_o.html
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19299 --- Fri Nov 4 2022 04:02:52 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19306 --- Fri Nov 11 2022 03:56:23 &nbsp; <img border=0 src="favicon.png">
 </small></address>

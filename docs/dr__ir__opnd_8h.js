@@ -421,7 +421,8 @@
       [ "DR_OPND_EXTENDED", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca3fee8d9e50085431ee5531075493f929", null ],
       [ "DR_OPND_IS_EXTEND", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca56e1b61f1dd6c1f2f64fdd9eb77facac", null ],
       [ "DR_OPND_IS_CONDITION", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca490b34bc0a05f85577cc770755cc7bf0", null ],
-      [ "DR_OPND_IS_VECTOR", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca0d57921fa8f9aed3d404f91dded1bcfb", null ]
+      [ "DR_OPND_IS_VECTOR", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca0d57921fa8f9aed3d404f91dded1bcfb", null ],
+      [ "DR_OPND_IS_MERGE_PREDICATE", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca08cf6c248755b218ee7e8ebc19e2a175", null ]
     ] ],
     [ "_dr_shift_type_t", "dr__ir__opnd_8h.html#a69ec8bd64ab30124cb8807e1d73fdd96", [
       [ "DR_SHIFT_LSL", "dr__ir__opnd_8h.html#a69ec8bd64ab30124cb8807e1d73fdd96a35fc72df89f489af688cf31f62823d6f", null ],
@@ -454,6 +455,7 @@
     [ "opnd_create_mem_instr", "dr__ir__opnd_8h.html#a508b374d784b7f471e3f8e199e9de362", null ],
     [ "opnd_create_null", "dr__ir__opnd_8h.html#a7826b6fbbd1d061037c58ba968f4513e", null ],
     [ "opnd_create_pc", "dr__ir__opnd_8h.html#aaa97a92df7a64fdf4ceb123ba241ddfd", null ],
+    [ "opnd_create_predicate_reg", "dr__ir__opnd_8h.html#a3408612a2953255e7c3572cf76d296c1", null ],
     [ "opnd_create_reg", "dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda", null ],
     [ "opnd_create_reg_element_vector", "dr__ir__opnd_8h.html#a02af50459baa3969fb852eac4bef6d12", null ],
     [ "opnd_create_reg_ex", "dr__ir__opnd_8h.html#ab3436a44e115a3331e2000cc1d46e026", null ],
@@ -508,6 +510,9 @@
     [ "opnd_is_near_rel_addr", "dr__ir__opnd_8h.html#aa657f37af66b7b2db4232d1ce7ef5e70", null ],
     [ "opnd_is_null", "dr__ir__opnd_8h.html#a241844c26ae992012e27dbf0fd3a686d", null ],
     [ "opnd_is_pc", "dr__ir__opnd_8h.html#a7c09fc3cd925d0355bf5750f2078fa5f", null ],
+    [ "opnd_is_predicate_merge", "dr__ir__opnd_8h.html#a5ea72f7ac857921c572f7a43b3453bd7", null ],
+    [ "opnd_is_predicate_reg", "dr__ir__opnd_8h.html#ad68622036cbd7e44d7ab108ee4af2bd6", null ],
+    [ "opnd_is_predicate_zero", "dr__ir__opnd_8h.html#ad08354e0b0d2ef847763216c14296edd", null ],
     [ "opnd_is_reg", "dr__ir__opnd_8h.html#aa4a4d5c6b8fd6d065b4719124f4dcafe", null ],
     [ "opnd_is_reg_32bit", "dr__ir__opnd_8h.html#a20240e95afa6f98c880aa9eb0c71f819", null ],
     [ "opnd_is_reg_64bit", "dr__ir__opnd_8h.html#a93ae85e94af476ccf8ab5e5c2a2d0b7c", null ],

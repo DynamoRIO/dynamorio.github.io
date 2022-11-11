@@ -1,4 +1,7 @@
 [
+    [ "INSTR_CREATE_add_sve", "dr__ir__macros__aarch64_8h.html#a14d0f0b7fad176b301539c3e9254771b", null ],
+    [ "INSTR_CREATE_add_sve_pred", "dr__ir__macros__aarch64_8h.html#ae9a87935bd011a9dbef03a4138d27ba0", null ],
+    [ "INSTR_CREATE_add_sve_shift", "dr__ir__macros__aarch64_8h.html#aac75388788337d2ae6c20bb896a78da9", null ],
     [ "INSTR_CREATE_add_vector", "dr__ir__macros__aarch64_8h.html#ad6fa6d2ab7764783481efd209cf11b76", null ],
     [ "INSTR_CREATE_addhn2_vector", "dr__ir__macros__aarch64_8h.html#a8d832072c9d576d861fe75796cf3de23", null ],
     [ "INSTR_CREATE_addhn_vector", "dr__ir__macros__aarch64_8h.html#a9cc43110089ba027a90a94948a093af7", null ],
@@ -23,6 +26,7 @@
     [ "INSTR_CREATE_cmhi_vector", "dr__ir__macros__aarch64_8h.html#aac24a9b19c4d6e19a11a0b040b573611", null ],
     [ "INSTR_CREATE_cmhs_vector", "dr__ir__macros__aarch64_8h.html#aff0f7aba226622be731f871ccde1d085", null ],
     [ "INSTR_CREATE_cmtst_vector", "dr__ir__macros__aarch64_8h.html#a03476d69e68f4ad38980328b079f32f4", null ],
+    [ "INSTR_CREATE_cpy_sve_shift_pred", "dr__ir__macros__aarch64_8h.html#ab2a6be50b7bccd2b15b4b1f907f57be5", null ],
     [ "INSTR_CREATE_eor3", "dr__ir__macros__aarch64_8h.html#a2559f746a2715c76321cdf7c1a323e25", null ],
     [ "INSTR_CREATE_eor_sve_pred", "dr__ir__macros__aarch64_8h.html#a0ae3dca108909f048272cb4709ab6188", null ],
     [ "INSTR_CREATE_eor_vector", "dr__ir__macros__aarch64_8h.html#a63cd777a855e1d4f178209aae0e88f67", null ],
@@ -189,6 +193,7 @@
     [ "INSTR_CREATE_pmull2_vector", "dr__ir__macros__aarch64_8h.html#ac18388c8087434df6034478b605a5530", null ],
     [ "INSTR_CREATE_pmull_vector", "dr__ir__macros__aarch64_8h.html#a5373d9298cf49a6acb35c9939f4c322b", null ],
     [ "INSTR_CREATE_psb_csync", "dr__ir__macros__aarch64_8h.html#a42a8ba72b462af9953475812bd8c575b", null ],
+    [ "INSTR_CREATE_ptest_sve_pred", "dr__ir__macros__aarch64_8h.html#acb809d6cee4154329743236941895e42", null ],
     [ "INSTR_CREATE_raddhn2_vector", "dr__ir__macros__aarch64_8h.html#ae28d85ee19c1a5f6b6d5d2a28e8c3f25", null ],
     [ "INSTR_CREATE_raddhn_vector", "dr__ir__macros__aarch64_8h.html#ad681a875b551577de62452a47724dac7", null ],
     [ "INSTR_CREATE_rax1", "dr__ir__macros__aarch64_8h.html#a0e98dcd7e94634ff8a07b5ea2ffd2524", null ],

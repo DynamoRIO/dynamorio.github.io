@@ -75,6 +75,7 @@
     [ "instr_summary_t", "structinstr__summary__t.html", null ],
     [ "instr_t", "structinstr__t.html", null ],
     [ "instr_summary_t::memref_summary_t", "structinstr__summary__t_1_1memref__summary__t.html", null ],
+    [ "memtrace_stream_t", "classmemtrace__stream__t.html", null ],
     [ "module_mapper_t", "classmodule__mapper__t.html", null ],
     [ "opnd_t", "structopnd__t.html", null ],
     [ "pt2ir_config_t", "structpt2ir__config__t.html", null ],

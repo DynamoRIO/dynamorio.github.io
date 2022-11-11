@@ -712,6 +712,16 @@ Macros</h2></td></tr>
 <tr class="separator:a4120185f2c23ed5acee9828a922a9cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cdf8afff13b3789784f9d5b8e5c453d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a7cdf8afff13b3789784f9d5b8e5c453d">INSTR_CREATE_uqsub_sve</a>(dc,  Zd,  Zn,  Zm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_uqsub, Zd, Zn, Zm)</td></tr>
 <tr class="separator:a7cdf8afff13b3789784f9d5b8e5c453d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9a87935bd011a9dbef03a4138d27ba0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ae9a87935bd011a9dbef03a4138d27ba0">INSTR_CREATE_add_sve_pred</a>(dc,  Zdn,  Pg,  Zm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a21a776dbbf8d3e63ba27fb4854052d6a">OP_add</a>, Zdn, Pg, Zdn, Zm)</td></tr>
+<tr class="separator:ae9a87935bd011a9dbef03a4138d27ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac75388788337d2ae6c20bb896a78da9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#aac75388788337d2ae6c20bb896a78da9">INSTR_CREATE_add_sve_shift</a>(dc,  Zdn,  imm,  shift)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a21a776dbbf8d3e63ba27fb4854052d6a">OP_add</a>, Zdn, Zdn, imm, <a class="el" href="dr__ir__macros__aarch64_8h.html#abbaf6e38e7df5134310a779b97e16be1">OPND_CREATE_LSL</a>(), shift)</td></tr>
+<tr class="separator:aac75388788337d2ae6c20bb896a78da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14d0f0b7fad176b301539c3e9254771b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a14d0f0b7fad176b301539c3e9254771b">INSTR_CREATE_add_sve</a>(dc,  Zd,  Zn,  Zm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a21a776dbbf8d3e63ba27fb4854052d6a">OP_add</a>, Zd, Zn, Zm)</td></tr>
+<tr class="separator:a14d0f0b7fad176b301539c3e9254771b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2a6be50b7bccd2b15b4b1f907f57be5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ab2a6be50b7bccd2b15b4b1f907f57be5">INSTR_CREATE_cpy_sve_shift_pred</a>(dc,  Zd,  Pg,  simm,  shift)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#ac66ed756685baa72f1882773dce5e297">OP_cpy</a>, Zd, Pg, simm, <a class="el" href="dr__ir__macros__aarch64_8h.html#abbaf6e38e7df5134310a779b97e16be1">OPND_CREATE_LSL</a>(), shift)</td></tr>
+<tr class="separator:ab2a6be50b7bccd2b15b4b1f907f57be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb809d6cee4154329743236941895e42"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#acb809d6cee4154329743236941895e42">INSTR_CREATE_ptest_sve_pred</a>(dc,  Pg,  Pn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac63dd4374971e41477dc9f1dd7c7509d">instr_create_0dst_2src</a>(dc, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a6d0764b65b61ae76ca4827404660494f">OP_ptest</a>, Pg, Pn)</td></tr>
+<tr class="separator:acb809d6cee4154329743236941895e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Platform-independent macros</div></td></tr>
 <tr class="memitem:a193d2b0123b3bdf0b9200f34a54d8002"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a193d2b0123b3bdf0b9200f34a54d8002">XINST_CREATE_debug_instr</a>(dc)&#160;&#160;&#160;INSTR_CREATE_brk((dc), <a class="el" href="dr__ir__macros_8h.html#ac2d087cee8f6726f09d76852c156e0cc">OPND_CREATE_INT16</a>(0))</td></tr>
 <tr class="separator:a193d2b0123b3bdf0b9200f34a54d8002"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -781,6 +791,159 @@ Macros</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>AArch64-specific instruction creation convenience macros. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a14d0f0b7fad176b301539c3e9254771b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14d0f0b7fad176b301539c3e9254771b">&#9670;&nbsp;</a></span>INSTR_CREATE_add_sve</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_add_sve</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a21a776dbbf8d3e63ba27fb4854052d6a">OP_add</a>, Zd, Zn, Zm)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a ADD instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    ADD     &lt;Zd&gt;.&lt;Ts&gt;, &lt;Zn&gt;.&lt;Ts&gt;, &lt;Zm&gt;.&lt;Ts&gt;
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Zd</td><td>The first destination vector register, Z (Scalable) </td></tr>
+    <tr><td class="paramname">Zn</td><td>The first source vector register, Z (Scalable) </td></tr>
+    <tr><td class="paramname">Zm</td><td>The second source vector register, Z (Scalable) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae9a87935bd011a9dbef03a4138d27ba0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9a87935bd011a9dbef03a4138d27ba0">&#9670;&nbsp;</a></span>INSTR_CREATE_add_sve_pred</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_add_sve_pred</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zdn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Pg, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a21a776dbbf8d3e63ba27fb4854052d6a">OP_add</a>, Zdn, Pg, Zdn, Zm)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a ADD instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    ADD     &lt;Zdn&gt;.&lt;Ts&gt;, &lt;Pg&gt;/M, &lt;Zdn&gt;.&lt;Ts&gt;, &lt;Zm&gt;.&lt;Ts&gt;
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Zdn</td><td>The first source and first destination vector register, Z (Scalable) </td></tr>
+    <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate) </td></tr>
+    <tr><td class="paramname">Zm</td><td>The second source vector register, Z (Scalable) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aac75388788337d2ae6c20bb896a78da9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac75388788337d2ae6c20bb896a78da9">&#9670;&nbsp;</a></span>INSTR_CREATE_add_sve_shift</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_add_sve_shift</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zdn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">imm, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">shift&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a21a776dbbf8d3e63ba27fb4854052d6a">OP_add</a>, Zdn, Zdn, imm, <a class="el" href="dr__ir__macros__aarch64_8h.html#abbaf6e38e7df5134310a779b97e16be1">OPND_CREATE_LSL</a>(), shift)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a ADD instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    ADD     &lt;Zdn&gt;.&lt;Ts&gt;, &lt;Zdn&gt;.&lt;Ts&gt;, #&lt;imm&gt;, &lt;shift&gt;
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Zdn</td><td>The first source and first destination vector register, Z (Scalable) </td></tr>
+    <tr><td class="paramname">imm</td><td>The immediate imm </td></tr>
+    <tr><td class="paramname">shift</td><td>The immediate shiftOp for imm </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ad6fa6d2ab7764783481efd209cf11b76"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad6fa6d2ab7764783481efd209cf11b76">&#9670;&nbsp;</a></span>INSTR_CREATE_add_vector</h2>
 
@@ -2052,6 +2215,65 @@ Macros</h2></td></tr>
     <tr><td class="paramname">Rm</td><td>The first input register. </td></tr>
     <tr><td class="paramname">Rn</td><td>The second input register. </td></tr>
     <tr><td class="paramname">width</td><td>The vector element width. Use either <a class="el" href="dr__ir__macros__aarch64_8h.html#a9c57dfea6090119e2ef1f7b2aea4c12a">OPND_CREATE_BYTE()</a>, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF()</a>, <a class="el" href="dr__ir__macros__aarch64_8h.html#a24dca05089893aac1b7be58819fc8506">OPND_CREATE_SINGLE()</a> or <a class="el" href="dr__ir__macros__aarch64_8h.html#abc0827a4d3590c1f4dbb10e85f7326e6">OPND_CREATE_DOUBLE()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab2a6be50b7bccd2b15b4b1f907f57be5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2a6be50b7bccd2b15b4b1f907f57be5">&#9670;&nbsp;</a></span>INSTR_CREATE_cpy_sve_shift_pred</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_cpy_sve_shift_pred</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Pg, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">simm, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">shift&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#ac66ed756685baa72f1882773dce5e297">OP_cpy</a>, Zd, Pg, simm, <a class="el" href="dr__ir__macros__aarch64_8h.html#abbaf6e38e7df5134310a779b97e16be1">OPND_CREATE_LSL</a>(), shift)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a CPY instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    CPY     &lt;Zd&gt;.&lt;Ts&gt;, &lt;Pg&gt;/Z, #&lt;simm&gt;, &lt;shift&gt;
+*    CPY     &lt;Zd&gt;.&lt;Ts&gt;, &lt;Pg&gt;/M, #&lt;simm&gt;, &lt;shift&gt;
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Zd</td><td>The first destination vector register, Z (Scalable) </td></tr>
+    <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate) </td></tr>
+    <tr><td class="paramname">simm</td><td>The signed immediate imm </td></tr>
+    <tr><td class="paramname">shift</td><td>The immediate shiftOp for simm </td></tr>
   </table>
   </dd>
 </dl>
@@ -10852,6 +11074,50 @@ Macros</h2></td></tr>
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acb809d6cee4154329743236941895e42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb809d6cee4154329743236941895e42">&#9670;&nbsp;</a></span>INSTR_CREATE_ptest_sve_pred</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ptest_sve_pred</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Pg, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Pn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac63dd4374971e41477dc9f1dd7c7509d">instr_create_0dst_2src</a>(dc, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a6d0764b65b61ae76ca4827404660494f">OP_ptest</a>, Pg, Pn)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a PTEST instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    PTEST   &lt;Pg&gt;, &lt;Pn&gt;.B
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate) </td></tr>
+    <tr><td class="paramname">Pn</td><td>The first source predicate register, P (Predicate) </td></tr>
   </table>
   </dd>
 </dl>
@@ -19856,5 +20122,5 @@ Macros</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19299 --- Fri Nov 4 2022 04:02:49 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19306 --- Fri Nov 11 2022 03:56:16 &nbsp; <img border=0 src="favicon.png">
 </small></address>
