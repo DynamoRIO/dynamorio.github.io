@@ -28,17 +28,38 @@ permalink: /classmemtrace__stream__t.html
 <div class="contents">
 
 <p><code>#include &lt;memtrace_stream.h&gt;</code></p>
-
-<p>Inherited by reader_t.</p>
+<div class="dynheader">
+Inheritance diagram for memtrace_stream_t:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="/images/classmemtrace__stream__t.png" usemap="#memtrace_5Fstream_5Ft_map" alt=""/>
+  <map id="memtrace_5Fstream_5Ft_map" name="memtrace_5Fstream_5Ft_map">
+<area href="classdynamorio_1_1drmemtrace_1_1record__reader__t.html" alt="dynamorio::drmemtrace::record_reader_t" shape="rect" coords="0,56,297,80"/>
+<area href="classreader__t.html" alt="reader_t" shape="rect" coords="307,56,604,80"/>
+<area href="classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html" alt="dynamorio::drmemtrace::record_file_reader_t&lt; T &gt;" shape="rect" coords="0,112,297,136"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa5ffbecee5e50b9732e3ebd240d34bda"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmemtrace__stream__t.html#aa5ffbecee5e50b9732e3ebd240d34bda">~memtrace_stream_t</a> ()</td></tr>
 <tr class="separator:aa5ffbecee5e50b9732e3ebd240d34bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abec76c0649a58952ae425c172a29bece"><td class="memItemLeft" align="right" valign="top">virtual uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmemtrace__stream__t.html#abec76c0649a58952ae425c172a29bece">get_record_ordinal</a> ()=0</td></tr>
-<tr class="separator:abec76c0649a58952ae425c172a29bece"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adecb41d2b2244fb2d87b3e7f14e63745"><td class="memItemLeft" align="right" valign="top">virtual uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmemtrace__stream__t.html#adecb41d2b2244fb2d87b3e7f14e63745">get_instruction_ordinal</a> ()=0</td></tr>
-<tr class="separator:adecb41d2b2244fb2d87b3e7f14e63745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a532a99af366cf8cca051a57e208b3e"><td class="memItemLeft" align="right" valign="top">virtual uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmemtrace__stream__t.html#a1a532a99af366cf8cca051a57e208b3e">get_record_ordinal</a> () const =0</td></tr>
+<tr class="separator:a1a532a99af366cf8cca051a57e208b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebf60da55c5ba6a0479d3063e542b1c3"><td class="memItemLeft" align="right" valign="top">virtual uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmemtrace__stream__t.html#aebf60da55c5ba6a0479d3063e542b1c3">get_instruction_ordinal</a> () const =0</td></tr>
+<tr class="separator:aebf60da55c5ba6a0479d3063e542b1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7384e7062a1353ac301d0caf74fdd441"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmemtrace__stream__t.html#a7384e7062a1353ac301d0caf74fdd441">get_stream_name</a> () const =0</td></tr>
+<tr class="separator:a7384e7062a1353ac301d0caf74fdd441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae945fec3b04c49c4357198774c13f7ba"><td class="memItemLeft" align="right" valign="top">virtual uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmemtrace__stream__t.html#ae945fec3b04c49c4357198774c13f7ba">get_version</a> () const =0</td></tr>
+<tr class="separator:ae945fec3b04c49c4357198774c13f7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9213bfdb3467a615369897c19f355a43"><td class="memItemLeft" align="right" valign="top">virtual uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmemtrace__stream__t.html#a9213bfdb3467a615369897c19f355a43">get_filetype</a> () const =0</td></tr>
+<tr class="separator:a9213bfdb3467a615369897c19f355a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea105704fe930d9b2a1a983d0c3c3754"><td class="memItemLeft" align="right" valign="top">virtual uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmemtrace__stream__t.html#aea105704fe930d9b2a1a983d0c3c3754">get_cache_line_size</a> () const =0</td></tr>
+<tr class="separator:aea105704fe930d9b2a1a983d0c3c3754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab15d96eced87bfd1881e46ca14a83d0f"><td class="memItemLeft" align="right" valign="top">virtual uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmemtrace__stream__t.html#ab15d96eced87bfd1881e46ca14a83d0f">get_chunk_instr_count</a> () const =0</td></tr>
+<tr class="separator:ab15d96eced87bfd1881e46ca14a83d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a324added42d35a46bb9938dbe906d24e"><td class="memItemLeft" align="right" valign="top">virtual uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmemtrace__stream__t.html#a324added42d35a46bb9938dbe906d24e">get_page_size</a> () const =0</td></tr>
+<tr class="separator:a324added42d35a46bb9938dbe906d24e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This is an interface for obtaining information from analysis tools on the full stream of memory reference records. </p>
@@ -70,8 +91,92 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="adecb41d2b2244fb2d87b3e7f14e63745"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adecb41d2b2244fb2d87b3e7f14e63745">&#9670;&nbsp;</a></span>get_instruction_ordinal()</h2>
+<a id="aea105704fe930d9b2a1a983d0c3c3754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea105704fe930d9b2a1a983d0c3c3754">&#9670;&nbsp;</a></span>get_cache_line_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint64_t memtrace_stream_t::get_cache_line_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the cache line size from the <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aec6bd14b464acb7f6e6b5e0e310474fa">TRACE_MARKER_TYPE_CACHE_LINE_SIZE</a> record in the trace header. </p>
+
+<p>Implemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__reader__t.html#a47cff03024bbdbba8bf4c6e9ffacba9c">dynamorio::drmemtrace::record_reader_t</a>, and <a class="el" href="classreader__t.html#ab02ca86173f4c26aad1f5b6b89f1e1a0">reader_t</a>.</p>
+
+</div>
+</div>
+<a id="ab15d96eced87bfd1881e46ca14a83d0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab15d96eced87bfd1881e46ca14a83d0f">&#9670;&nbsp;</a></span>get_chunk_instr_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint64_t memtrace_stream_t::get_chunk_instr_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the chunk instruction count from the <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ab24290006bf319f5d18a5bba698f5d81">TRACE_MARKER_TYPE_CHUNK_INSTR_COUNT</a> record in the trace header. </p>
+
+<p>Implemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__reader__t.html#a1c926c988fe8e0c1b6cb88d6a5c9d684">dynamorio::drmemtrace::record_reader_t</a>, and <a class="el" href="classreader__t.html#a3729dd85e54fecf32b84f0e89a4850b4">reader_t</a>.</p>
+
+</div>
+</div>
+<a id="a9213bfdb3467a615369897c19f355a43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9213bfdb3467a615369897c19f355a43">&#9670;&nbsp;</a></span>get_filetype()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint64_t memtrace_stream_t::get_filetype </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the OFFLINE_FILE_TYPE_* bitfields of type <a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1">offline_file_type_t</a> identifying the architecture and other key high-level attributes of the trace from the <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9afb92a065fc3cdb8b86e463bd2ff2fdf1">TRACE_MARKER_TYPE_FILETYPE</a> record in the trace header. </p>
+
+<p>Implemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__reader__t.html#a7d37a47affdd449c2f3fceca00553eb5">dynamorio::drmemtrace::record_reader_t</a>, and <a class="el" href="classreader__t.html#a969779780e832c785006e50bfdf08e16">reader_t</a>.</p>
+
+</div>
+</div>
+<a id="aebf60da55c5ba6a0479d3063e542b1c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebf60da55c5ba6a0479d3063e542b1c3">&#9670;&nbsp;</a></span>get_instruction_ordinal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -83,7 +188,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual uint64_t memtrace_stream_t::get_instruction_ordinal </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -94,10 +199,40 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns the count of instructions from the start of the trace to this point. This includes instructions skipped over and not presented to any tool. </p>
 
+<p>Implemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__reader__t.html#ab923e77f2d921188fa74dac3725e90d1">dynamorio::drmemtrace::record_reader_t</a>, and <a class="el" href="classreader__t.html#aaebd99dcc51e9b7267440b7446acc3a1">reader_t</a>.</p>
+
 </div>
 </div>
-<a id="abec76c0649a58952ae425c172a29bece"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abec76c0649a58952ae425c172a29bece">&#9670;&nbsp;</a></span>get_record_ordinal()</h2>
+<a id="a324added42d35a46bb9938dbe906d24e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a324added42d35a46bb9938dbe906d24e">&#9670;&nbsp;</a></span>get_page_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint64_t memtrace_stream_t::get_page_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the page size from the <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a602e5f40c496455081f9a11468b6b39d">TRACE_MARKER_TYPE_PAGE_SIZE</a> record in the trace header. </p>
+
+<p>Implemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__reader__t.html#a5f662528132b32dcb20f3333e03cc24a">dynamorio::drmemtrace::record_reader_t</a>, and <a class="el" href="classreader__t.html#ae6b5b68999e8f39899d68840c777c789">reader_t</a>.</p>
+
+</div>
+</div>
+<a id="a1a532a99af366cf8cca051a57e208b3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a532a99af366cf8cca051a57e208b3e">&#9670;&nbsp;</a></span>get_record_ordinal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -109,7 +244,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual uint64_t memtrace_stream_t::get_record_ordinal </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -119,6 +254,64 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the count of <a class="el" href="memref_8h.html#a5dc7702c7dece5c18bb576bf26d724b5">memref_t</a> records from the start of the trace to this point. This includes records skipped over and not presented to any tool. </p>
+
+<p>Implemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__reader__t.html#a6165ecd233d97ce2ad63dad4539f8077">dynamorio::drmemtrace::record_reader_t</a>, and <a class="el" href="classreader__t.html#a798b86fb1247c9fc38bc70f35fe18287">reader_t</a>.</p>
+
+</div>
+</div>
+<a id="a7384e7062a1353ac301d0caf74fdd441"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7384e7062a1353ac301d0caf74fdd441">&#9670;&nbsp;</a></span>get_stream_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string memtrace_stream_t::get_stream_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a name for the memtrace stream. For stored offline traces, this is the base name of the trace on disk. For online traces, this is the name of the pipe. </p>
+
+<p>Implemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html#adca58ecd91243c2b9145653818277e07">dynamorio::drmemtrace::record_file_reader_t&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ae945fec3b04c49c4357198774c13f7ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae945fec3b04c49c4357198774c13f7ba">&#9670;&nbsp;</a></span>get_version()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint64_t memtrace_stream_t::get_version </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the <a class="el" href="trace__entry_8h.html#a3a78cb9ac4c3afc1444673fb9a407d76">trace_version_t</a> value from the <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aab9bc211e1e5f2f567a085d825e37745">TRACE_MARKER_TYPE_VERSION</a> record in the trace header. </p>
+
+<p>Implemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__reader__t.html#a1a2ec66afb3a74aa229e8c290411911a">dynamorio::drmemtrace::record_reader_t</a>, and <a class="el" href="classreader__t.html#a8f65b9a05bd0d19b1d3039369ae3379a">reader_t</a>.</p>
 
 </div>
 </div>
@@ -131,5 +324,5 @@ Public Member Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19306 --- Fri Nov 11 2022 03:56:23 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19313 --- Fri Nov 18 2022 03:43:16 &nbsp; <img border=0 src="favicon.png">
 </small></address>

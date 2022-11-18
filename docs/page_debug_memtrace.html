@@ -60,7 +60,7 @@ Viewing raw, pre-processed files</h2>
 </ul>
 <h2><a class="anchor" id="autotoc_md134"></a>
 Viewing post-processed files</h2>
-<p>trace_entry_t is 12 bytes and is turned into memref_t by reader_t and its subclasses. To view the 12-byte entries I use <code>od</code> or <code>hexdump</code> to split into 6 2-byte entries and then combine the final 4 into an 8-byte little-endian field using <code>awk</code>:</p>
+<p>trace_entry_t is 12 bytes and is turned into memref_t by <a class="el" href="classreader__t.html">reader_t</a> and its subclasses. To view the 12-byte entries I use <code>od</code> or <code>hexdump</code> to split into 6 2-byte entries and then combine the final 4 into an 8-byte little-endian field using <code>awk</code>:</p>
 <div class="fragment"><div class="line">$ zcat drmemtrace.tool.drcacheoff.burst_malloc.211917.2237.dir/trace/drmemtrace.tool.drcacheoff.burst_malloc.211917.8542.trace.gz | od -A x -t x2 -w12 | awk <span class="stringliteral">&#39;{printf &quot;%s | %s %s %s%s%s%s\n&quot;, $1, $2, $3, $7, $6, $5, $4}&#39;</span> | head</div>
 <div class="line">000000 | 0019 0000 0000000000000001</div>
 <div class="line">00000c | 0016 0004 0000000000033bcd</div>
@@ -97,5 +97,5 @@ Viewing instruction disassembly</h2>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19306 --- Fri Nov 11 2022 03:56:21 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19313 --- Fri Nov 18 2022 03:43:15 &nbsp; <img border=0 src="favicon.png">
 </small></address>

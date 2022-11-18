@@ -80,10 +80,10 @@ Debug Build</h2>
 <p>If you plan to make changes to the source code, or for debugging problems in clients, you may wish to configure DynamoRIO in debug mode. Turn on the DEBUG flag when configuring, like this on Linux:</p>
 <div class="fragment"><div class="line">$ cmake -DDEBUG=ON ..</div>
 <div class="line">$ make -j</div>
-</div><!-- fragment --><p>or on Windows: </p><div class="fragment"><div class="line">$ cmake -G<span class="stringliteral">&quot;Visual Studio 16 2019&quot;</span> .. -DDEBUG=ON</div>
+</div><!-- fragment --><p>or on Windows: </p><div class="fragment"><div class="line">$ cmake -G<span class="stringliteral">&quot;Visual Studio 16&quot;</span> -A Win32 .. -DDEBUG=ON</div>
 <div class="line">$ cmake --build . --config Debug</div>
 </div><!-- fragment --><p>Passing -DCMAKE_BUILD_TYPE=Debug to cmake does <b>not</b> produce a debug build currently.</p>
-<p>For 64-bit build on Windows: </p><div class="fragment"><div class="line">$ cmake -G<span class="stringliteral">&quot;Visual Studio 16 x64&quot;</span> .. -DDEBUG=ON</div>
+<p>For 64-bit build on Windows: </p><div class="fragment"><div class="line">$ cmake -G<span class="stringliteral">&quot;Visual Studio 16&quot;</span> -A x64 .. -DDEBUG=ON</div>
 <div class="line">$ cmake --build . --config Debug</div>
 </div><!-- fragment --><p>For 32-bit build on 64-bit Linux </p><div class="fragment"><div class="line">$ CFLAGS=-m32 CXXFLAGS=-m32 cmake -DDEBUG=ON ..</div>
 <div class="line">$ make -j</div>
@@ -494,5 +494,5 @@ Building the Qt DrGUI extension</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19306 --- Fri Nov 11 2022 03:56:21 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19313 --- Fri Nov 18 2022 03:43:15 &nbsp; <img border=0 src="favicon.png">
 </small></address>

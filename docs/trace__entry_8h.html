@@ -25,6 +25,7 @@ permalink: /trace__entry_8h.html
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
@@ -39,6 +40,11 @@ permalink: /trace__entry_8h.html
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &quot;utils.h&quot;</code><br />
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__trace__entry__t.html">_trace_entry_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a11362437617ea146f226243e4de7ce7b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace__entry_8h.html#a11362437617ea146f226243e4de7ce7b">DRMEMTRACE_MODULE_LIST_FILENAME</a>&#160;&#160;&#160;&quot;modules.log&quot;</td></tr>
@@ -56,6 +62,8 @@ Macros</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:a1ca6d6805df0fccbaf3f7920d1845168"><td class="memItemLeft" align="right" valign="top">typedef uintptr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace__entry_8h.html#a1ca6d6805df0fccbaf3f7920d1845168">addr_t</a></td></tr>
 <tr class="separator:a1ca6d6805df0fccbaf3f7920d1845168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2293547fa61d1c86efe2f1255889fea1"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__trace__entry__t.html">_trace_entry_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace__entry_8h.html#a2293547fa61d1c86efe2f1255889fea1">trace_entry_t</a></td></tr>
+<tr class="separator:a2293547fa61d1c86efe2f1255889fea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -200,7 +208,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ab24290006bf319f5d18a5bba698f5d81">TRACE_MARKER_TYPE_CHUNK_INSTR_COUNT</a>, 
 <br />
-&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a46b4254a430bf51c15d9e477c9bc6d63">TRACE_MARKER_TYPE_CHUNK_FOOTER</a>
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a46b4254a430bf51c15d9e477c9bc6d63">TRACE_MARKER_TYPE_CHUNK_FOOTER</a>, 
+<br />
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a285ac7236d2262d88924093dca53a3c2">TRACE_MARKER_TYPE_RECORD_ORDINAL</a>
 <br />
  }</td></tr>
 <tr class="separator:aa7f51b43d8f1e20dc45e3618684b15e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -333,6 +343,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a2293547fa61d1c86efe2f1255889fea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2293547fa61d1c86efe2f1255889fea1">&#9670;&nbsp;</a></span>trace_entry_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct__trace__entry__t.html">_trace_entry_t</a> <a class="el" href="trace__entry_8h.html#a2293547fa61d1c86efe2f1255889fea1">trace_entry_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>See <a class="el" href="struct__trace__entry__t.html">_trace_entry_t</a>. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a183fb25912d45f16f5dd68e7895787a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a183fb25912d45f16f5dd68e7895787a1">&#9670;&nbsp;</a></span>offline_file_type_t</h2>
@@ -425,6 +450,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9ab24290006bf319f5d18a5bba698f5d81"></a>TRACE_MARKER_TYPE_CHUNK_INSTR_COUNT&#160;</td><td class="fielddoc"><p>This top-level marker identifies the instruction count in each chunk of the output file. This is the granularity of a fast seek. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a46b4254a430bf51c15d9e477c9bc6d63"></a>TRACE_MARKER_TYPE_CHUNK_FOOTER&#160;</td><td class="fielddoc"><p>Marks the end of a chunk. The final chunk does not have such a marker but instead relies on the <a class="el" href="trace__entry_8h.html#a00405f99b069de9812b34db3a192b19da9c9cc33e3947e5c75101a13efabb84ba">TRACE_TYPE_FOOTER</a> entry. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a285ac7236d2262d88924093dca53a3c2"></a>TRACE_MARKER_TYPE_RECORD_ORDINAL&#160;</td><td class="fielddoc"><p>Indicates the record ordinal for this point in the trace. This is used to identify the visible record ordinal when skipping over chunks, and is not exposed to analysis tools. </p>
 </td></tr>
 </table>
 
@@ -673,5 +700,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19306 --- Fri Nov 11 2022 03:56:16 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19313 --- Fri Nov 18 2022 03:43:10 &nbsp; <img border=0 src="favicon.png">
 </small></address>

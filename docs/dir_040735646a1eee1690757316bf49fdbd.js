@@ -1,11 +1,6 @@
 [
-    [ "analysis_tool.h", "build__release-64_2clients_2include_2drmemtrace_2analysis__tool_8h.html", [
-      [ "analysis_tool_t", "classanalysis__tool__t.html", {% include_relative classanalysis__tool__t.js %} ]
-    ] ],
-    [ "analyzer.h", "build__release-64_2clients_2include_2drmemtrace_2analyzer_8h.html", [
-      [ "analyzer_t", "classanalyzer__t.html", {% include_relative classanalyzer__t.js %} ],
-      [ "analyzer_shard_data_t", "structanalyzer__t_1_1analyzer__shard__data__t.html", null ]
-    ] ],
+    [ "analysis_tool.h", "build__release-64_2clients_2include_2drmemtrace_2analysis__tool_8h.html", {% include_relative build__release-64_2clients_2include_2drmemtrace_2analysis__tool_8h.js %} ],
+    [ "analyzer.h", "build__release-64_2clients_2include_2drmemtrace_2analyzer_8h.html", {% include_relative build__release-64_2clients_2include_2drmemtrace_2analyzer_8h.js %} ],
     [ "basic_counts_create.h", "basic__counts__create_8h.html", {% include_relative basic__counts__create_8h.js %} ],
     [ "cache_simulator_create.h", "cache__simulator__create_8h.html", {% include_relative cache__simulator__create_8h.js %} ],
     [ "drmemtrace.h", "drmemtrace_8h.html", {% include_relative drmemtrace_8h.js %} ],

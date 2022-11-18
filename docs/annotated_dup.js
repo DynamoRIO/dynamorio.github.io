@@ -1,4 +1,10 @@
 [
+    [ "dynamorio", null, [
+      [ "drmemtrace", null, [
+        [ "record_file_reader_t", "classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1record__file__reader__t.js %} ],
+        [ "record_reader_t", "classdynamorio_1_1drmemtrace_1_1record__reader__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1record__reader__t.js %} ]
+      ] ]
+    ] ],
     [ "_dr_app_arg_t", "struct__dr__app__arg__t.html", {% include_relative struct__dr__app__arg__t.js %} ],
     [ "_dr_config_client_t", "struct__dr__config__client__t.html", {% include_relative struct__dr__config__client__t.js %} ],
     [ "_dr_exception_t", "struct__dr__exception__t.html", {% include_relative struct__dr__exception__t.js %} ],
@@ -51,12 +57,13 @@
     [ "_module_names_t", "struct__module__names__t.html", {% include_relative struct__module__names__t.js %} ],
     [ "_module_segment_data_t", "struct__module__segment__data__t.html", {% include_relative struct__module__segment__data__t.js %} ],
     [ "_pt_metadata_t", "struct__pt__metadata__t.html", {% include_relative struct__pt__metadata__t.js %} ],
+    [ "_trace_entry_t", "struct__trace__entry__t.html", null ],
     [ "_tracedump_file_header_t", "struct__tracedump__file__header__t.html", {% include_relative struct__tracedump__file__header__t.js %} ],
     [ "_tracedump_stub_data", "struct__tracedump__stub__data.html", {% include_relative struct__tracedump__stub__data.js %} ],
     [ "_tracedump_trace_header_t", "struct__tracedump__trace__header__t.html", {% include_relative struct__tracedump__trace__header__t.js %} ],
     [ "_version_number_t", "union__version__number__t.html", {% include_relative union__version__number__t.js %} ],
-    [ "analysis_tool_t", "classanalysis__tool__t.html", {% include_relative classanalysis__tool__t.js %} ],
-    [ "analyzer_t", "classanalyzer__t.html", {% include_relative classanalyzer__t.js %} ],
+    [ "analysis_tool_tmpl_t", "classanalysis__tool__tmpl__t.html", {% include_relative classanalysis__tool__tmpl__t.js %} ],
+    [ "analyzer_tmpl_t", "classanalyzer__tmpl__t.html", {% include_relative classanalyzer__tmpl__t.js %} ],
     [ "bytesize_t", "classbytesize__t.html", null ],
     [ "cache_simulator_knobs_t", "structcache__simulator__knobs__t.html", null ],
     [ "dr_time_t", "structdr__time__t.html", {% include_relative structdr__time__t.js %} ],
@@ -81,6 +88,7 @@
     [ "pt_cpu_t", "structpt__cpu__t.html", {% include_relative structpt__cpu__t.js %} ],
     [ "pt_sb_config_t", "structpt__sb__config__t.html", {% include_relative structpt__sb__config__t.js %} ],
     [ "raw2trace_t", "classraw2trace__t.html", {% include_relative classraw2trace__t.js %} ],
+    [ "reader_t", "classreader__t.html", {% include_relative classreader__t.js %} ],
     [ "reuse_distance_knobs_t", "structreuse__distance__knobs__t.html", null ],
     [ "tlb_simulator_knobs_t", "structtlb__simulator__knobs__t.html", null ],
     [ "trace_converter_t", "classtrace__converter__t.html", {% include_relative classtrace__converter__t.js %} ],

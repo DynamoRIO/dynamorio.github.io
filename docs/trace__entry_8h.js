@@ -1,10 +1,12 @@
 [
+    [ "_trace_entry_t", "struct__trace__entry__t.html", null ],
     [ "DRMEMTRACE_CPU_SCHEDULE_FILENAME", "trace__entry_8h.html#a4e4acf52d1c0d42054ba5270a54b5188", null ],
     [ "DRMEMTRACE_ENCODING_FILENAME", "trace__entry_8h.html#a6f588e2a6e442b98010f7424720d33c5", null ],
     [ "DRMEMTRACE_FUNCTION_LIST_FILENAME", "trace__entry_8h.html#a9d41aaff6406ac94cd98ee7c95cd0753", null ],
     [ "DRMEMTRACE_MODULE_LIST_FILENAME", "trace__entry_8h.html#a11362437617ea146f226243e4de7ce7b", null ],
     [ "DRMEMTRACE_SERIAL_SCHEDULE_FILENAME", "trace__entry_8h.html#a8e130e1aa80df762896518a84d8d602d", null ],
     [ "addr_t", "trace__entry_8h.html#a1ca6d6805df0fccbaf3f7920d1845168", null ],
+    [ "trace_entry_t", "trace__entry_8h.html#a2293547fa61d1c86efe2f1255889fea1", null ],
     [ "offline_file_type_t", "trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1", [
       [ "OFFLINE_FILE_TYPE_FILTERED", "trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1ab2adc5337c786c96c826052e1a227765", null ],
       [ "OFFLINE_FILE_TYPE_INSTRUCTION_ONLY", "trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a74ef5cef97b8a8fb49cc7a314126edbc", null ],
@@ -38,7 +40,8 @@
       [ "TRACE_MARKER_TYPE_PAGE_SIZE", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a602e5f40c496455081f9a11468b6b39d", null ],
       [ "TRACE_MARKER_TYPE_SYSCALL_ID", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac792d7856c0c7bcb062ec1e069317413", null ],
       [ "TRACE_MARKER_TYPE_CHUNK_INSTR_COUNT", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ab24290006bf319f5d18a5bba698f5d81", null ],
-      [ "TRACE_MARKER_TYPE_CHUNK_FOOTER", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a46b4254a430bf51c15d9e477c9bc6d63", null ]
+      [ "TRACE_MARKER_TYPE_CHUNK_FOOTER", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a46b4254a430bf51c15d9e477c9bc6d63", null ],
+      [ "TRACE_MARKER_TYPE_RECORD_ORDINAL", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a285ac7236d2262d88924093dca53a3c2", null ]
     ] ],
     [ "trace_type_t", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19d", [
       [ "TRACE_TYPE_READ", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19da2264004d45a5c8fe2b6713e2fe263c32", null ],

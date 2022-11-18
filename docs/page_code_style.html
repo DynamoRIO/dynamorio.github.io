@@ -76,6 +76,7 @@ Naming Conventions</h1>
 <li>In <code>core/</code>, short names or any global name with a chance of colliding with names from an including application linking statically should be qualified with a <code>d_r_</code> prefx: e.g., <code>d_r_dispatch</code>. This is distinct from the <code>dr_</code> prefix which is used on exported interface names.</li>
 <li>Use <code>static</code> when possible for every function or variable that is not needed outside of its own file.</li>
 <li>Do not shadow global variables (or variables in containing scopes) by using local variables of the same name: choose a distinct name for the local variable.</li>
+<li>Template parameters in C++ should have a descriptive CamelCase identifier.</li>
 </ol>
 <h1><a class="anchor" id="autotoc_md123"></a>
 Types</h1>
@@ -318,5 +319,5 @@ C++</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19306 --- Fri Nov 11 2022 03:56:21 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19313 --- Fri Nov 18 2022 03:43:15 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -51,13 +51,14 @@
     [ "_module_names_t", "struct__module__names__t.html", null ],
     [ "_module_segment_data_t", "struct__module__segment__data__t.html", null ],
     [ "_pt_metadata_t", "struct__pt__metadata__t.html", null ],
+    [ "_trace_entry_t", "struct__trace__entry__t.html", null ],
     [ "_tracedump_file_header_t", "struct__tracedump__file__header__t.html", null ],
     [ "_tracedump_stub_data", "struct__tracedump__stub__data.html", null ],
     [ "_tracedump_trace_header_t", "struct__tracedump__trace__header__t.html", null ],
     [ "_version_number_t", "union__version__number__t.html", null ],
-    [ "analysis_tool_t", "classanalysis__tool__t.html", null ],
-    [ "analyzer_t::analyzer_shard_data_t", "structanalyzer__t_1_1analyzer__shard__data__t.html", null ],
-    [ "analyzer_t", "classanalyzer__t.html", null ],
+    [ "analysis_tool_tmpl_t< RecordType >", "classanalysis__tool__tmpl__t.html", null ],
+    [ "analyzer_tmpl_t< RecordType, ReaderType >::analyzer_shard_data_t", "structanalyzer__tmpl__t_1_1analyzer__shard__data__t.html", null ],
+    [ "analyzer_tmpl_t< RecordType, ReaderType >", "classanalyzer__tmpl__t.html", null ],
     [ "bytesize_t", "classbytesize__t.html", null ],
     [ "cache_simulator_knobs_t", "structcache__simulator__knobs__t.html", null ],
     [ "dr_time_t", "structdr__time__t.html", null ],
@@ -75,7 +76,12 @@
     [ "instr_summary_t", "structinstr__summary__t.html", null ],
     [ "instr_t", "structinstr__t.html", null ],
     [ "instr_summary_t::memref_summary_t", "structinstr__summary__t_1_1memref__summary__t.html", null ],
-    [ "memtrace_stream_t", "classmemtrace__stream__t.html", null ],
+    [ "memtrace_stream_t", "classmemtrace__stream__t.html", [
+      [ "dynamorio::drmemtrace::record_reader_t", "classdynamorio_1_1drmemtrace_1_1record__reader__t.html", [
+        [ "dynamorio::drmemtrace::record_file_reader_t< T >", "classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html", null ]
+      ] ],
+      [ "reader_t", "classreader__t.html", null ]
+    ] ],
     [ "module_mapper_t", "classmodule__mapper__t.html", null ],
     [ "opnd_t", "structopnd__t.html", null ],
     [ "pt2ir_config_t", "structpt2ir__config__t.html", null ],

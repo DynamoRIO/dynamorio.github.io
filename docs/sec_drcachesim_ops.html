@@ -218,9 +218,12 @@ The full path to the tracer library for the other bitwidth, for use on child pro
 <li><b>-only_thread</b> <br  />
 <em>default value: 0</em> <br  />
 For simulator types that support it, limits analyis to the single thread with the given identifier. 0 enables all threads.</li>
+<li><b>-skip_instrs</b> <br  />
+<em>default value: 0</em> <br  />
+Specifies the number of instructions to skip in the beginning of the trace analysis. For serial iteration, this number is computed just once across the interleaving sequence of all threads; for parallel iteration, each thread skips this many insructions. When built with zipfile support, this skipping is optimized and large instruction counts can be quickly skipped; this is not the case for -skip_refs.</li>
 <li><b>-skip_refs</b> <br  />
 <em>default value: 0</em> <br  />
-Specifies the number of references to skip in the beginning of the application execution. These memory references are dropped instead of being simulated.</li>
+Specifies the number of references to skip in the beginning of the application execution. These memory references are dropped instead of being simulated. This skipping may be slow for large skip values; consider -skip_instrs for a faster method of skipping.</li>
 <li><b>-warmup_refs</b> <br  />
 <em>default value: 0</em> <br  />
 Specifies the number of memory references to warm up caches before simulation. The warmup references come after the skipped references and before the simulated references. This flag is incompatible with warmup_fraction.</li>
@@ -289,5 +292,5 @@ By default, offline tracing only records a userspace trace. If this option is en
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19306 --- Fri Nov 11 2022 03:56:22 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19313 --- Fri Nov 18 2022 03:43:16 &nbsp; <img border=0 src="favicon.png">
 </small></address>
