@@ -41,7 +41,8 @@
       [ "TRACE_MARKER_TYPE_SYSCALL_ID", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac792d7856c0c7bcb062ec1e069317413", null ],
       [ "TRACE_MARKER_TYPE_CHUNK_INSTR_COUNT", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ab24290006bf319f5d18a5bba698f5d81", null ],
       [ "TRACE_MARKER_TYPE_CHUNK_FOOTER", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a46b4254a430bf51c15d9e477c9bc6d63", null ],
-      [ "TRACE_MARKER_TYPE_RECORD_ORDINAL", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a285ac7236d2262d88924093dca53a3c2", null ]
+      [ "TRACE_MARKER_TYPE_RECORD_ORDINAL", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a285ac7236d2262d88924093dca53a3c2", null ],
+      [ "TRACE_MARKER_TYPE_FILTER_ENDPOINT", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ab70393d2fcbe2c06e221a8a21c8f9e62", null ]
     ] ],
     [ "trace_type_t", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19d", [
       [ "TRACE_TYPE_READ", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19da2264004d45a5c8fe2b6713e2fe263c32", null ],

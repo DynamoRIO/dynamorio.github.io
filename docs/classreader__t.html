@@ -44,6 +44,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a798b86fb1247c9fc38bc70f35fe18287"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaebd99dcc51e9b7267440b7446acc3a1"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreader__t.html#aaebd99dcc51e9b7267440b7446acc3a1">get_instruction_ordinal</a> () const override</td></tr>
 <tr class="separator:aaebd99dcc51e9b7267440b7446acc3a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23edabd490dad477242406dbd25b6770"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreader__t.html#a23edabd490dad477242406dbd25b6770">get_last_timestamp</a> () const override</td></tr>
+<tr class="separator:a23edabd490dad477242406dbd25b6770"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f65b9a05bd0d19b1d3039369ae3379a"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreader__t.html#a8f65b9a05bd0d19b1d3039369ae3379a">get_version</a> () const override</td></tr>
 <tr class="separator:a8f65b9a05bd0d19b1d3039369ae3379a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a969779780e832c785006e50bfdf08e16"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreader__t.html#a969779780e832c785006e50bfdf08e16">get_filetype</a> () const override</td></tr>
@@ -175,6 +177,34 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a23edabd490dad477242406dbd25b6770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23edabd490dad477242406dbd25b6770">&#9670;&nbsp;</a></span>get_last_timestamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t reader_t::get_last_timestamp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the value of the last seen <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aab2a51d7215cf0da83ec1d74f980e89f">TRACE_MARKER_TYPE_TIMESTAMP</a> marker. </p>
+
+<p>Implements <a class="el" href="classmemtrace__stream__t.html#ae293679c8de9f3e9f8930c3ebc3ff51a">memtrace_stream_t</a>.</p>
+
+</div>
+</div>
 <a id="ae6b5b68999e8f39899d68840c777c789"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae6b5b68999e8f39899d68840c777c789">&#9670;&nbsp;</a></span>get_page_size()</h2>
 
@@ -268,5 +298,5 @@ Public Member Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19313 --- Fri Nov 18 2022 03:43:16 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19320 --- Fri Nov 25 2022 03:36:02 &nbsp; <img border=0 src="favicon.png">
 </small></address>

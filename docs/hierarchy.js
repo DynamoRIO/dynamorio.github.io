@@ -80,7 +80,8 @@
       [ "dynamorio::drmemtrace::record_reader_t", "classdynamorio_1_1drmemtrace_1_1record__reader__t.html", [
         [ "dynamorio::drmemtrace::record_file_reader_t< T >", "classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html", null ]
       ] ],
-      [ "reader_t", "classreader__t.html", null ]
+      [ "reader_t", "classreader__t.html", null ],
+      [ "test_memtrace_stream_t", "classtest__memtrace__stream__t.html", null ]
     ] ],
     [ "module_mapper_t", "classmodule__mapper__t.html", null ],
     [ "opnd_t", "structopnd__t.html", null ],

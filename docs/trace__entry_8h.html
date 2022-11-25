@@ -210,7 +210,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a46b4254a430bf51c15d9e477c9bc6d63">TRACE_MARKER_TYPE_CHUNK_FOOTER</a>, 
 <br />
-&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a285ac7236d2262d88924093dca53a3c2">TRACE_MARKER_TYPE_RECORD_ORDINAL</a>
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a285ac7236d2262d88924093dca53a3c2">TRACE_MARKER_TYPE_RECORD_ORDINAL</a>, 
+<br />
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ab70393d2fcbe2c06e221a8a21c8f9e62">TRACE_MARKER_TYPE_FILTER_ENDPOINT</a>
 <br />
  }</td></tr>
 <tr class="separator:aa7f51b43d8f1e20dc45e3618684b15e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -452,6 +454,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a46b4254a430bf51c15d9e477c9bc6d63"></a>TRACE_MARKER_TYPE_CHUNK_FOOTER&#160;</td><td class="fielddoc"><p>Marks the end of a chunk. The final chunk does not have such a marker but instead relies on the <a class="el" href="trace__entry_8h.html#a00405f99b069de9812b34db3a192b19da9c9cc33e3947e5c75101a13efabb84ba">TRACE_TYPE_FOOTER</a> entry. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a285ac7236d2262d88924093dca53a3c2"></a>TRACE_MARKER_TYPE_RECORD_ORDINAL&#160;</td><td class="fielddoc"><p>Indicates the record ordinal for this point in the trace. This is used to identify the visible record ordinal when skipping over chunks, and is not exposed to analysis tools. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9ab70393d2fcbe2c06e221a8a21c8f9e62"></a>TRACE_MARKER_TYPE_FILTER_ENDPOINT&#160;</td><td class="fielddoc"><p>Indicates a point in the trace where filtering ended. This is currently added by the record_filter tool to annotate when the warmup part of the trace ends. </p>
 </td></tr>
 </table>
 
@@ -700,5 +704,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19313 --- Fri Nov 18 2022 03:43:10 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19320 --- Fri Nov 25 2022 03:36:00 &nbsp; <img border=0 src="favicon.png">
 </small></address>

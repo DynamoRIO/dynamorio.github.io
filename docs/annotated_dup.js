@@ -90,6 +90,7 @@
     [ "raw2trace_t", "classraw2trace__t.html", {% include_relative classraw2trace__t.js %} ],
     [ "reader_t", "classreader__t.html", {% include_relative classreader__t.js %} ],
     [ "reuse_distance_knobs_t", "structreuse__distance__knobs__t.html", null ],
+    [ "test_memtrace_stream_t", "classtest__memtrace__stream__t.html", {% include_relative classtest__memtrace__stream__t.js %} ],
     [ "tlb_simulator_knobs_t", "structtlb__simulator__knobs__t.html", null ],
     [ "trace_converter_t", "classtrace__converter__t.html", {% include_relative classtrace__converter__t.js %} ],
     [ "trace_header_t", "structtrace__header__t.html", null ],
