@@ -935,6 +935,8 @@ Functions</h2></td></tr>
 <tr class="separator:ad94bc6018660cfb0862171c3e9402f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65b75f4116f2c0c4dcb22c29f2b37841"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a65b75f4116f2c0c4dcb22c29f2b37841">opnd_create_immed_int64</a> (int64 i, <a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a> data_size)</td></tr>
 <tr class="separator:a65b75f4116f2c0c4dcb22c29f2b37841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09e43cc65b71e814a523b41a75449cbc"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a09e43cc65b71e814a523b41a75449cbc">opnd_invert_immed_int</a> (<a class="el" href="structopnd__t.html">opnd_t</a> opnd)</td></tr>
+<tr class="separator:a09e43cc65b71e814a523b41a75449cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ec0a20789993f08a524cbb0d30f2d39"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a9ec0a20789993f08a524cbb0d30f2d39">opnd_create_immed_float</a> (float f)</td></tr>
 <tr class="separator:a9ec0a20789993f08a524cbb0d30f2d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa97a92df7a64fdf4ceb123ba241ddfd"><td class="memItemLeft" align="right" valign="top">DR_API INSTR_INLINE <a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#aaa97a92df7a64fdf4ceb123ba241ddfd">opnd_create_pc</a> (app_pc pc)</td></tr>
@@ -4721,6 +4723,25 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a09e43cc65b71e814a523b41a75449cbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09e43cc65b71e814a523b41a75449cbc">&#9670;&nbsp;</a></span>opnd_invert_immed_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API <a class="el" href="structopnd__t.html">opnd_t</a> opnd_invert_immed_int </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td>
+          <td class="paramname"><em>opnd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Performs a bitwise NOT operation on the integer value in <code>opnd</code>, but only on the LSB bits provided by opnd_size_in_bits(opnd). <code>opnd</code> must carry an immed integer. </p>
+
+</div>
+</div>
 <a id="a49e52f166cbfc609036d3b35075725c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a49e52f166cbfc609036d3b35075725c4">&#9670;&nbsp;</a></span>opnd_is_abs_addr()</h2>
 
@@ -6694,5 +6715,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19333 --- Fri Dec 9 2022 03:17:32 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19341 --- Fri Dec 16 2022 03:14:31 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -483,6 +483,7 @@
     [ "opnd_get_shift", "dr__ir__opnd_8h.html#a73b989e5a273fa008e7c5010482358d2", null ],
     [ "opnd_get_size", "dr__ir__opnd_8h.html#a68cff151182a9204f5d3168c095211c2", null ],
     [ "opnd_get_vector_element_size", "dr__ir__opnd_8h.html#a000351328f4b989b4acd6da136651668", null ],
+    [ "opnd_invert_immed_int", "dr__ir__opnd_8h.html#a09e43cc65b71e814a523b41a75449cbc", null ],
     [ "opnd_is_abs_addr", "dr__ir__opnd_8h.html#a49e52f166cbfc609036d3b35075725c4", null ],
     [ "opnd_is_base_disp", "dr__ir__opnd_8h.html#ac3cc66fd1a43008c1faf1a6f9a9695b2", null ],
     [ "opnd_is_disp_encode_zero", "dr__ir__opnd_8h.html#ad30a9a5c2d481af1860bbb6c337ad9f4", null ],
