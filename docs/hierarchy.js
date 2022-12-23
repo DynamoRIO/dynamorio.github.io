@@ -77,11 +77,11 @@
     [ "instr_t", "structinstr__t.html", null ],
     [ "instr_summary_t::memref_summary_t", "structinstr__summary__t_1_1memref__summary__t.html", null ],
     [ "memtrace_stream_t", "classmemtrace__stream__t.html", [
+      [ "default_memtrace_stream_t", "classdefault__memtrace__stream__t.html", null ],
       [ "dynamorio::drmemtrace::record_reader_t", "classdynamorio_1_1drmemtrace_1_1record__reader__t.html", [
         [ "dynamorio::drmemtrace::record_file_reader_t< T >", "classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html", null ]
       ] ],
-      [ "reader_t", "classreader__t.html", null ],
-      [ "test_memtrace_stream_t", "classtest__memtrace__stream__t.html", null ]
+      [ "reader_t", "classreader__t.html", null ]
     ] ],
     [ "module_mapper_t", "classmodule__mapper__t.html", null ],
     [ "opnd_t", "structopnd__t.html", null ],
