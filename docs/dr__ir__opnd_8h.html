@@ -202,6 +202,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:a8731b2ac50efba7fe426127000a0bf28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ae4a65d6658a13faa3de99b4e716501"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="dr__ir__opnd_8h.html#adef5f1863dd46d4b22341f685782a695">_dr_extend_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a1ae4a65d6658a13faa3de99b4e716501">dr_extend_type_t</a></td></tr>
 <tr class="separator:a1ae4a65d6658a13faa3de99b4e716501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c3c8a31fcd71ad74132cc6484a3d6c3"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bc">_dr_pred_constr_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a4c3c8a31fcd71ad74132cc6484a3d6c3">dr_pred_constr_type_t</a></td></tr>
+<tr class="separator:a4c3c8a31fcd71ad74132cc6484a3d6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c1d6c3d6c80026bf280867f9f8cf41c"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60c">_dr_opnd_flags_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a9c1d6c3d6c80026bf280867f9f8cf41c">dr_opnd_flags_t</a></td></tr>
 <tr class="separator:a9c1d6c3d6c80026bf280867f9f8cf41c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -866,6 +868,8 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a69ec8bd64ab30124cb8807e1d73fdd96a06cb91886bcd9d14087d4be2799d0a4a">DR_SHIFT_ROR</a>, 
 <br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a69ec8bd64ab30124cb8807e1d73fdd96ae685d7324fe9e94091c276d7cd88eeaa">DR_SHIFT_MUL</a>, 
+<br />
 &#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a69ec8bd64ab30124cb8807e1d73fdd96accc43fd4db94a4f24a20b9ba424ca453">DR_SHIFT_RRX</a>, 
 <br />
 &#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a69ec8bd64ab30124cb8807e1d73fdd96ab65ba8ae148a9de364284cc8262aaef7">DR_SHIFT_NONE</a>
@@ -891,6 +895,73 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:adef5f1863dd46d4b22341f685782a695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f806c4eccb96ed60ff64ab78e529bc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bc">_dr_pred_constr_type_t</a> { <br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca67c0092c962e8e9d03872b40a2222d11">DR_PRED_CONSTR_POW2</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca23cdbfa49be5ea6bde1a412b478c90e4">DR_PRED_CONSTR_VL1</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bcae71490ec22399682dff3175c8de70bc8">DR_PRED_CONSTR_VL2</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bcab2c8d4bf057328c751fb4a7076e6ead4">DR_PRED_CONSTR_VL3</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bcac563f5d5d9bb3b1bb62158b166d01a41">DR_PRED_CONSTR_VL4</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bcab1acd0a3e38110a45d02ef7a29c8797b">DR_PRED_CONSTR_VL5</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca702b416d38f63e75eadd9c530f0ba420">DR_PRED_CONSTR_VL6</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca1a8052be85d7e9d2cd91070c7804a42a">DR_PRED_CONSTR_VL7</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca8780d590dfedc95a2be097cd97ff3fb4">DR_PRED_CONSTR_VL8</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bcad71549a07076134eccb94e41073a4510">DR_PRED_CONSTR_VL16</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bcaab64575a946ae4d8bc7e3986573c205a">DR_PRED_CONSTR_VL32</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca41263735cbbcc3fd49b6bdb1ba0773f7">DR_PRED_CONSTR_VL64</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca5db235aea0d947846fa46b8928ee7423">DR_PRED_CONSTR_VL128</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca311c220c956e9d8cab15f4f3d454a041">DR_PRED_CONSTR_VL256</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca51f6f58ecb221b56455720e931789b8b">DR_PRED_CONSTR_UIMM5_14</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bcaee5b201afc49a0987fc0e32f58271316">DR_PRED_CONSTR_UIMM5_15</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bcaaeff3c83148ad0c4f146dcd6dec15f53">DR_PRED_CONSTR_UIMM5_16</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bcaf7824bfedb82723201e07366359d03fa">DR_PRED_CONSTR_UIMM5_17</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca2b942963a4543c45832c77d28117863f">DR_PRED_CONSTR_UIMM5_18</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca0ba9ecd8c1c566bdd4086e6bb2a0c134">DR_PRED_CONSTR_UIMM5_19</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bcafbf4164a4f984ed05ffaf56eb2ee0910">DR_PRED_CONSTR_UIMM5_20</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bcad907527d349cb7c435d54a3f90ce58e6">DR_PRED_CONSTR_UIMM5_21</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bcaf442f488e591e893bb8d263a38abe3b0">DR_PRED_CONSTR_UIMM5_22</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca710d4e1c78b8279c8ed211bb5c7e8094">DR_PRED_CONSTR_UIMM5_23</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca1eb48d121fca9ab97f1e6b4f9122f285">DR_PRED_CONSTR_UIMM5_24</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca045ab8cb8acf110a88fd8a273a32b05e">DR_PRED_CONSTR_UIMM5_25</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bcab32a14b344fd3b053d273282af320b16">DR_PRED_CONSTR_UIMM5_26</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bcaebf51494c7b677deb47949b14a3e6a91">DR_PRED_CONSTR_UIMM5_27</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca3f31a39b2d82a310cf32aa2d223c7c3e">DR_PRED_CONSTR_UIMM5_28</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca24b56bc24691ec4dda83e1cf693f4688">DR_PRED_CONSTR_MUL4</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca6023739a18fb042f0c27879d1b57b209">DR_PRED_CONSTR_MUL3</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca064bb44b58e4453175171e23a53c9d65">DR_PRED_CONSTR_ALL</a>
+<br />
+ }</td></tr>
+<tr class="separator:a31f806c4eccb96ed60ff64ab78e529bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fd06e4caec9a02043d179ee25a9f60c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60c">_dr_opnd_flags_t</a> { <br />
 &#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca5aacdf5d4c4143e9b74547717ce4bb93">DR_OPND_NEGATED</a> = 0x01, 
 <br />
@@ -911,6 +982,8 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca0d57921fa8f9aed3d404f91dded1bcfb">DR_OPND_IS_VECTOR</a> = 0x100, 
 <br />
 &#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca08cf6c248755b218ee7e8ebc19e2a175">DR_OPND_IS_MERGE_PREDICATE</a> = 0x200
+, <br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca68a65b06c2a526745107a4cc43add80f">DR_OPND_IS_PREDICATE_CONSTRAINT</a> = 0x800
 <br />
  }</td></tr>
 <tr class="separator:a7fd06e4caec9a02043d179ee25a9f60c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -939,6 +1012,8 @@ Functions</h2></td></tr>
 <tr class="separator:a09e43cc65b71e814a523b41a75449cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ec0a20789993f08a524cbb0d30f2d39"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a9ec0a20789993f08a524cbb0d30f2d39">opnd_create_immed_float</a> (float f)</td></tr>
 <tr class="separator:a9ec0a20789993f08a524cbb0d30f2d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74920d8b0ed388909be2525f3add6f64"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a74920d8b0ed388909be2525f3add6f64">opnd_create_immed_pred_constr</a> (<a class="el" href="dr__ir__opnd_8h.html#a4c3c8a31fcd71ad74132cc6484a3d6c3">dr_pred_constr_type_t</a> p)</td></tr>
+<tr class="separator:a74920d8b0ed388909be2525f3add6f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa97a92df7a64fdf4ceb123ba241ddfd"><td class="memItemLeft" align="right" valign="top">DR_API INSTR_INLINE <a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#aaa97a92df7a64fdf4ceb123ba241ddfd">opnd_create_pc</a> (app_pc pc)</td></tr>
 <tr class="separator:aaa97a92df7a64fdf4ceb123ba241ddfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29e70d7608edb449bd07524a3ad33ef1"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a29e70d7608edb449bd07524a3ad33ef1">opnd_create_far_pc</a> (ushort seg_selector, app_pc pc)</td></tr>
@@ -2374,6 +2449,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a4c3c8a31fcd71ad74132cc6484a3d6c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c3c8a31fcd71ad74132cc6484a3d6c3">&#9670;&nbsp;</a></span>dr_pred_constr_type_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bc">_dr_pred_constr_type_t</a> <a class="el" href="dr__ir__opnd_8h.html#a4c3c8a31fcd71ad74132cc6484a3d6c3">dr_pred_constr_type_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>These flags describe the values for "pattern" operands for aarch64 predicate count instructions. They are always set for imms with the flag <a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca68a65b06c2a526745107a4cc43add80f">DR_OPND_IS_PREDICATE_CONSTRAINT</a> </p>
+
+</div>
+</div>
 <a id="a8731b2ac50efba7fe426127000a0bf28"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8731b2ac50efba7fe426127000a0bf28">&#9670;&nbsp;</a></span>dr_shift_type_t</h2>
 
@@ -3163,6 +3253,89 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a7fd06e4caec9a02043d179ee25a9f60ca08cf6c248755b218ee7e8ebc19e2a175"></a>DR_OPND_IS_MERGE_PREDICATE&#160;</td><td class="fielddoc"><p>Predicate registers can either be merging, zero or neither. If one of these are set then they are either a merge or zero otherwise aren't either. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a7fd06e4caec9a02043d179ee25a9f60ca68a65b06c2a526745107a4cc43add80f"></a>DR_OPND_IS_PREDICATE_CONSTRAINT&#160;</td><td class="fielddoc"><p>This immediate integer operand should be treated as an AArch64 SVE predicate constraint </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a31f806c4eccb96ed60ff64ab78e529bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31f806c4eccb96ed60ff64ab78e529bc">&#9670;&nbsp;</a></span>_dr_pred_constr_type_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bc">_dr_pred_constr_type_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>These flags describe the values for "pattern" operands for aarch64 predicate count instructions. They are always set for imms with the flag <a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca68a65b06c2a526745107a4cc43add80f">DR_OPND_IS_PREDICATE_CONSTRAINT</a> </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bca67c0092c962e8e9d03872b40a2222d11"></a>DR_PRED_CONSTR_POW2&#160;</td><td class="fielddoc"><p>POW2 pattern. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bca23cdbfa49be5ea6bde1a412b478c90e4"></a>DR_PRED_CONSTR_VL1&#160;</td><td class="fielddoc"><p>1 active elements. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bcae71490ec22399682dff3175c8de70bc8"></a>DR_PRED_CONSTR_VL2&#160;</td><td class="fielddoc"><p>2 active elements. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bcab2c8d4bf057328c751fb4a7076e6ead4"></a>DR_PRED_CONSTR_VL3&#160;</td><td class="fielddoc"><p>3 active elements. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bcac563f5d5d9bb3b1bb62158b166d01a41"></a>DR_PRED_CONSTR_VL4&#160;</td><td class="fielddoc"><p>4 active elements. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bcab1acd0a3e38110a45d02ef7a29c8797b"></a>DR_PRED_CONSTR_VL5&#160;</td><td class="fielddoc"><p>5 active elements. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bca702b416d38f63e75eadd9c530f0ba420"></a>DR_PRED_CONSTR_VL6&#160;</td><td class="fielddoc"><p>6 active elements. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bca1a8052be85d7e9d2cd91070c7804a42a"></a>DR_PRED_CONSTR_VL7&#160;</td><td class="fielddoc"><p>7 active elements. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bca8780d590dfedc95a2be097cd97ff3fb4"></a>DR_PRED_CONSTR_VL8&#160;</td><td class="fielddoc"><p>8 active elements. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bcad71549a07076134eccb94e41073a4510"></a>DR_PRED_CONSTR_VL16&#160;</td><td class="fielddoc"><p>16 active elements. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bcaab64575a946ae4d8bc7e3986573c205a"></a>DR_PRED_CONSTR_VL32&#160;</td><td class="fielddoc"><p>32 active elements. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bca41263735cbbcc3fd49b6bdb1ba0773f7"></a>DR_PRED_CONSTR_VL64&#160;</td><td class="fielddoc"><p>64 active elements. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bca5db235aea0d947846fa46b8928ee7423"></a>DR_PRED_CONSTR_VL128&#160;</td><td class="fielddoc"><p>128 active elements. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bca311c220c956e9d8cab15f4f3d454a041"></a>DR_PRED_CONSTR_VL256&#160;</td><td class="fielddoc"><p>256 active elements. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bca51f6f58ecb221b56455720e931789b8b"></a>DR_PRED_CONSTR_UIMM5_14&#160;</td><td class="fielddoc"><p>Unspecified constraint. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bcaee5b201afc49a0987fc0e32f58271316"></a>DR_PRED_CONSTR_UIMM5_15&#160;</td><td class="fielddoc"><p>Unspecified constraint. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bcaaeff3c83148ad0c4f146dcd6dec15f53"></a>DR_PRED_CONSTR_UIMM5_16&#160;</td><td class="fielddoc"><p>Unspecified constraint. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bcaf7824bfedb82723201e07366359d03fa"></a>DR_PRED_CONSTR_UIMM5_17&#160;</td><td class="fielddoc"><p>Unspecified constraint. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bca2b942963a4543c45832c77d28117863f"></a>DR_PRED_CONSTR_UIMM5_18&#160;</td><td class="fielddoc"><p>Unspecified constraint. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bca0ba9ecd8c1c566bdd4086e6bb2a0c134"></a>DR_PRED_CONSTR_UIMM5_19&#160;</td><td class="fielddoc"><p>Unspecified constraint. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bcafbf4164a4f984ed05ffaf56eb2ee0910"></a>DR_PRED_CONSTR_UIMM5_20&#160;</td><td class="fielddoc"><p>Unspecified constraint. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bcad907527d349cb7c435d54a3f90ce58e6"></a>DR_PRED_CONSTR_UIMM5_21&#160;</td><td class="fielddoc"><p>Unspecified constraint. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bcaf442f488e591e893bb8d263a38abe3b0"></a>DR_PRED_CONSTR_UIMM5_22&#160;</td><td class="fielddoc"><p>Unspecified constraint. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bca710d4e1c78b8279c8ed211bb5c7e8094"></a>DR_PRED_CONSTR_UIMM5_23&#160;</td><td class="fielddoc"><p>Unspecified constraint. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bca1eb48d121fca9ab97f1e6b4f9122f285"></a>DR_PRED_CONSTR_UIMM5_24&#160;</td><td class="fielddoc"><p>Unspecified constraint. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bca045ab8cb8acf110a88fd8a273a32b05e"></a>DR_PRED_CONSTR_UIMM5_25&#160;</td><td class="fielddoc"><p>Unspecified constraint. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bcab32a14b344fd3b053d273282af320b16"></a>DR_PRED_CONSTR_UIMM5_26&#160;</td><td class="fielddoc"><p>Unspecified constraint. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bcaebf51494c7b677deb47949b14a3e6a91"></a>DR_PRED_CONSTR_UIMM5_27&#160;</td><td class="fielddoc"><p>Unspecified constraint. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bca3f31a39b2d82a310cf32aa2d223c7c3e"></a>DR_PRED_CONSTR_UIMM5_28&#160;</td><td class="fielddoc"><p>Unspecified constraint. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bca24b56bc24691ec4dda83e1cf693f4688"></a>DR_PRED_CONSTR_MUL4&#160;</td><td class="fielddoc"><p>Largest multiple of 4 active elements. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bca6023739a18fb042f0c27879d1b57b209"></a>DR_PRED_CONSTR_MUL3&#160;</td><td class="fielddoc"><p>Largest multiple of 3 active elements. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31f806c4eccb96ed60ff64ab78e529bca064bb44b58e4453175171e23a53c9d65"></a>DR_PRED_CONSTR_ALL&#160;</td><td class="fielddoc"><p>all elements active. </p>
+</td></tr>
 </table>
 
 </div>
@@ -3187,6 +3360,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a69ec8bd64ab30124cb8807e1d73fdd96a89a09599d2909e4865284c028d2032ad"></a>DR_SHIFT_ASR&#160;</td><td class="fielddoc"><p>Arithmetic shift right. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a69ec8bd64ab30124cb8807e1d73fdd96a06cb91886bcd9d14087d4be2799d0a4a"></a>DR_SHIFT_ROR&#160;</td><td class="fielddoc"><p>Rotate right. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a69ec8bd64ab30124cb8807e1d73fdd96ae685d7324fe9e94091c276d7cd88eeaa"></a>DR_SHIFT_MUL&#160;</td><td class="fielddoc"><p>Multiply. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a69ec8bd64ab30124cb8807e1d73fdd96accc43fd4db94a4f24a20b9ba424ca453"></a>DR_SHIFT_RRX&#160;</td><td class="fielddoc"><p>The register is rotated right by 1 bit, with the carry flag (rather than bit 0) being shifted in to the most-significant bit. (For shifts of general source registers, if the instruction writes the condition codes, bit 0 is then shifted into the carry flag: but for memory references bit 0 is simply dropped.) Only valid for shifts whose amount is stored in an immediate, not a register. </p>
 </td></tr>
@@ -3925,6 +4100,25 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a74920d8b0ed388909be2525f3add6f64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74920d8b0ed388909be2525f3add6f64">&#9670;&nbsp;</a></span>opnd_create_immed_pred_constr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API <a class="el" href="structopnd__t.html">opnd_t</a> opnd_create_immed_pred_constr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a4c3c8a31fcd71ad74132cc6484a3d6c3">dr_pred_constr_type_t</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns an immediate operand for use in SVE predicate constraint operands. </p>
+
+</div>
+</div>
 <a id="ad94bc6018660cfb0862171c3e9402f9c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad94bc6018660cfb0862171c3e9402f9c">&#9670;&nbsp;</a></span>opnd_create_immed_uint()</h2>
 
@@ -4107,7 +4301,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns a register operand corresponding to a vector register that has an element size. </p>
+<p>Returns a SVE predicate register for use as a governing predicate with either "/m" merge mode set or "/z" zeroing mode set depending on /p is_merge For creating general (non-governing) predicate registers, use <a class="el" href="dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda">opnd_create_reg()</a> for scalar predicates and <a class="el" href="dr__ir__opnd_8h.html#a02af50459baa3969fb852eac4bef6d12">opnd_create_reg_element_vector()</a> for vector predicates. </p>
 
 </div>
 </div>
@@ -6715,5 +6909,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19348 --- Fri Dec 23 2022 03:16:00 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19349 --- Fri Dec 30 2022 03:14:44 &nbsp; <img border=0 src="favicon.png">
 </small></address>
