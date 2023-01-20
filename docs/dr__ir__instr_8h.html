@@ -4743,9 +4743,7 @@ We recommend using this routine during the phase of application code analysis, a
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Gets the value of the user-controlled note field in <code>instr</code>. </p><dl class="section note"><dt>Note</dt><dd>Important: is also used when emitting for targets that are other instructions. Thus it will be overwritten when calling <a class="el" href="dr__ir__encode_8h.html#a04d414952f335eaee8221c2a0e65ea46">instrlist_encode()</a> or <a class="el" href="dr__ir__encode_8h.html#a8eacc8e4f757c7d3ed0e29f464021522">instrlist_encode_to_copy()</a> with <code>has_instr_jmp_targets</code> set to true. </dd>
-<dd>
-The note field is copied (shallowly) by <a class="el" href="dr__ir__instr_8h.html#a36cfff6a0f3c66e861149b2c94940798">instr_clone()</a>. </dd></dl>
+<p>Gets the value of the user-controlled note field in <code>instr</code>. </p><dl class="section note"><dt>Note</dt><dd>The note field is copied (shallowly) by <a class="el" href="dr__ir__instr_8h.html#a36cfff6a0f3c66e861149b2c94940798">instr_clone()</a>. </dd></dl>
 
 </div>
 </div>
@@ -8296,11 +8294,11 @@ mangle" if <code>val</code> is false.</p>
 <div class="ttc" id="adr__ir__instr_8h_html_a2b0ce5e5125951e4a7dfdc5ac716282a"><div class="ttname"><a href="dr__ir__instr_8h.html#a2b0ce5e5125951e4a7dfdc5ac716282a">instr_noalloc_init</a></div><div class="ttdeci">DR_API void instr_noalloc_init(void *drcontext, instr_noalloc_t *instr)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a75a82f341d4ea6a5b5f29f2ef1263355"><div class="ttname"><a href="dr__ir__instr_8h.html#a75a82f341d4ea6a5b5f29f2ef1263355">instr_from_noalloc</a></div><div class="ttdeci">DR_API INSTR_INLINE instr_t * instr_from_noalloc(instr_noalloc_t *noalloc)</div></div>
 <div class="ttc" id="astructinstr__t_html"><div class="ttname"><a href="structinstr__t.html">instr_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:378</div></div>
-<div class="ttc" id="astructinstr__noalloc__t_html"><div class="ttname"><a href="structinstr__noalloc__t.html">instr_noalloc_t</a></div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:334</div></div>
+<div class="ttc" id="astructinstr__noalloc__t_html"><div class="ttname"><a href="structinstr__noalloc__t.html">instr_noalloc_t</a></div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:335</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19368 --- Fri Jan 13 2023 03:18:42 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19376 --- Fri Jan 20 2023 03:16:54 &nbsp; <img border=0 src="favicon.png">
 </small></address>

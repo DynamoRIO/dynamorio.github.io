@@ -97,7 +97,7 @@ Macros</h2></td></tr>
 <tr class="separator:a39cc32592e6a2b555a50cbe9e94381ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35e60e348f7cfc65f1d03904059e7830"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__defines_8h.html#a35e60e348f7cfc65f1d03904059e7830">MCXT_NUM_OPMASK_SLOTS</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:a35e60e348f7cfc65f1d03904059e7830"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae900af3cb1032e748eefc80808c43610"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__defines_8h.html#ae900af3cb1032e748eefc80808c43610">DR_NOTE_FIRST_RESERVED</a>&#160;&#160;&#160;0xfffffffffffffff0ULL</td></tr>
+<tr class="memitem:ae900af3cb1032e748eefc80808c43610"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__defines_8h.html#ae900af3cb1032e748eefc80808c43610">DR_NOTE_FIRST_RESERVED</a>&#160;&#160;&#160;0xffffffffffff0000ULL</td></tr>
 <tr class="separator:ae900af3cb1032e748eefc80808c43610"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -141,7 +141,9 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a488d94a0f79cdeb9d5445da335c75d9b">DR_NOTE_CLEAN_CALL_END</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a0a0435e4c2e2f5afb41bd54b4d0e3d10">DR_NOTE_REG_BARRIER</a>
+&#160;&#160;<a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a0a0435e4c2e2f5afb41bd54b4d0e3d10">DR_NOTE_REG_BARRIER</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7add7fe93dd9c7b175a234de1db773676d">DR_NOTE_CALL_SEQUENCE_START</a>
 <br />
  }</td></tr>
 <tr class="separator:adf764cbdea00d65edcd07bb9953ad2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -233,7 +235,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DR_NOTE_FIRST_RESERVED&#160;&#160;&#160;0xfffffffffffffff0ULL</td>
+          <td class="memname">#define DR_NOTE_FIRST_RESERVED&#160;&#160;&#160;0xffffffffffff0000ULL</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -653,6 +655,8 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7a0a0435e4c2e2f5afb41bd54b4d0e3d10"></a>DR_NOTE_REG_BARRIER&#160;</td><td class="fielddoc"><p>Identifies a point at which clients should restore all registers to their application values, as required for DR's internal block mangling. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7add7fe93dd9c7b175a234de1db773676d"></a>DR_NOTE_CALL_SEQUENCE_START&#160;</td><td class="fielddoc"><p>Used for internal translation from an instruction list. These apply not only to client-inserted clean calls but all inserted calls whether inserted by clients or DR and whether fully clean or not. This is thus distinct from <a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a488d94a0f79cdeb9d5445da335c75d9b">DR_NOTE_CLEAN_CALL_END</a>. </p>
+</td></tr>
 </table>
 
 </div>
@@ -866,5 +870,5 @@ Variables</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19368 --- Fri Jan 13 2023 03:18:42 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19376 --- Fri Jan 20 2023 03:16:54 &nbsp; <img border=0 src="favicon.png">
 </small></address>

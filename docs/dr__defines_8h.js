@@ -37,6 +37,7 @@
     [ "DR_NOTE_ANNOTATION", "dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a775cd05e3af0ab56c47dba3dabc32758", null ],
     [ "DR_NOTE_CLEAN_CALL_END", "dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a488d94a0f79cdeb9d5445da335c75d9b", null ],
     [ "DR_NOTE_REG_BARRIER", "dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a0a0435e4c2e2f5afb41bd54b4d0e3d10", null ],
+    [ "DR_NOTE_CALL_SEQUENCE_START", "dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7add7fe93dd9c7b175a234de1db773676d", null ],
     [ "dr_cleancall_save_t", "dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212", [
       [ "DR_CLEANCALL_SAVE_FLOAT", "dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212ac04fbaff072a9ec162172cdd8305080d", null ],
       [ "DR_CLEANCALL_NOSAVE_FLAGS", "dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212a2b03fe8506703bdcc4c24c49f6f16915", null ],
