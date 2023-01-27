@@ -129,7 +129,7 @@ If non-zero, this sets a maximum size on the amount of raw trace data gathered f
 <em>default value: 0</em> <br  />
 If non-zero, this sets a maximum size on the amount of trace entry references (of any type: instructions, loads, stores, markers, etc.) recorded. Once reached, instrumented execution continues, but no further data is recorded. This is similar to -exit_after_tracing but without terminating the process.The reference count is approximate.</li>
 <li><b>-align_endpoints</b> <br  />
-<em>default value: false</em> <br  />
+<em>default value: true</em> <br  />
 When using attach/detach to trace a burst, the attach and detach processes are staggered, with the set of threads producing trace data incrementally growing or shrinking. This results in uneven thread activity at the start and end of the burst. If this option is enabled, tracing is nop-ed until fully attached to all threads and is nop-ed as soon as detach starts, eliminating the unevenness. This also allows omitting threads that did nothing during the burst.</li>
 <li><b>-trace_after_instrs</b> <br  />
 <em>default value: 0</em> <br  />
@@ -292,5 +292,5 @@ By default, offline tracing only records a userspace trace. If this option is en
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19376 --- Fri Jan 20 2023 03:16:56 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19382 --- Fri Jan 27 2023 03:15:44 &nbsp; <img border=0 src="favicon.png">
 </small></address>

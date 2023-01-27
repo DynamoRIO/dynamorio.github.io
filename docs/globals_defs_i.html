@@ -732,6 +732,12 @@ permalink: /globals_defs_i.html
 <li>INSTR_CREATE_crc32w
 : <a class="el" href="dr__ir__macros__arm_8h.html#ae5d1b5384dfc1008a58fb25fdad4b75b">dr_ir_macros_arm.h</a>
 </li>
+<li>INSTR_CREATE_ctermeq
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a176db1ec752f7ee3ca7939dd60b689fd">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_ctermne
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a0df36afdd2b5017e48e4d9ca47d38f57">dr_ir_macros_aarch64.h</a>
+</li>
 <li>INSTR_CREATE_cvtdq2pd
 : <a class="el" href="dr__ir__macros__x86_8h.html#a8aa1ae0dac9c503aa2c246c79b90ab67">dr_ir_macros_x86.h</a>
 </li>
@@ -978,6 +984,9 @@ permalink: /globals_defs_i.html
 <li>INSTR_CREATE_f2xm1
 : <a class="el" href="dr__ir__macros__x86_8h.html#aa9ae5dc3056022aa5d05b55165dbbcd6">dr_ir_macros_x86.h</a>
 </li>
+<li>INSTR_CREATE_fabd_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a2b4e06651720983984dc80c1fb5a7e1c">dr_ir_macros_aarch64.h</a>
+</li>
 <li>INSTR_CREATE_fabd_vector
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a0a4c1996b35741e76dddd7b88e4a7f26">dr_ir_macros_aarch64.h</a>
 </li>
@@ -986,6 +995,9 @@ permalink: /globals_defs_i.html
 </li>
 <li>INSTR_CREATE_fabs_scalar
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a6d53ec4da62f0398caedec60f0a23259">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fabs_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#ac20dfd26b77feed0eee6ced5bd564ac6">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_facge
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a1511cd9a2e5d0cf7f7781a9312265c4a">dr_ir_macros_aarch64.h</a>
@@ -1010,6 +1022,15 @@ permalink: /globals_defs_i.html
 </li>
 <li>INSTR_CREATE_fadd_scalar
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a5176fb190588b27c36fa51ec683feb8b">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fadd_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a267bff5c2f7f5a8b5ad8953b800e3c58">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fadd_sve_pred
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#ae530288afc5d16228b6e024505caf00c">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fadd_sve_vector
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a8d7b1d504c8507d8e5f22b1082111152">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_fadd_vector
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#aa838ec9e7af5cd961cc61939c00457a7">dr_ir_macros_aarch64.h</a>
@@ -1248,6 +1269,9 @@ permalink: /globals_defs_i.html
 <li>INSTR_CREATE_fdiv_scalar
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a3556f3e267cc8468d1b0bc4d323be08c">dr_ir_macros_aarch64.h</a>
 </li>
+<li>INSTR_CREATE_fdiv_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a24a42ee173aab718e28ab0f55d90bbb5">dr_ir_macros_aarch64.h</a>
+</li>
 <li>INSTR_CREATE_fdiv_vector
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#aa6a078fadaa0781798e261df9ad83c5a">dr_ir_macros_aarch64.h</a>
 </li>
@@ -1256,6 +1280,9 @@ permalink: /globals_defs_i.html
 </li>
 <li>INSTR_CREATE_fdivr
 : <a class="el" href="dr__ir__macros__x86_8h.html#a2ecd63d6f72b2d74c78b5a60953dabc2">dr_ir_macros_x86.h</a>
+</li>
+<li>INSTR_CREATE_fdivr_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#aa587b4ea5bdd3a4737f3dc4b39081619">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_fdivrp
 : <a class="el" href="dr__ir__macros__x86_8h.html#a4cd2ed5132d1147d3d79bcef0b12631a">dr_ir_macros_x86.h</a>
@@ -1344,17 +1371,32 @@ permalink: /globals_defs_i.html
 <li>INSTR_CREATE_fldz
 : <a class="el" href="dr__ir__macros__x86_8h.html#a19e7ba515f3485bc1a13e9583392c84b">dr_ir_macros_x86.h</a>
 </li>
+<li>INSTR_CREATE_fmad_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a04b986cdc45bd938fc40f6ba9821da65">dr_ir_macros_aarch64.h</a>
+</li>
 <li>INSTR_CREATE_fmadd_scalar
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a4bd35ac280e8db547e027264be9b4e9e">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_fmax_scalar
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a15c20353b94caa8f983602dd6ca06b18">dr_ir_macros_aarch64.h</a>
 </li>
+<li>INSTR_CREATE_fmax_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#afc59dae9512fc6e2005f510d48fd5fa1">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fmax_sve_vector
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a023ce88e2d5e229a4d47e5328995b148">dr_ir_macros_aarch64.h</a>
+</li>
 <li>INSTR_CREATE_fmax_vector
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#ac2253956fc8e53174bf2c206791cdb05">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_fmaxnm_scalar
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#ac7f395654e6adc8ba7cded39f26bde37">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fmaxnm_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#adbcc7246cc08c1793cdca18c0e8d13e6">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fmaxnm_sve_vector
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a54045fb79abe2ce40e458196f0898f66">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_fmaxnm_vector
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a65b0f2a66058a0167f56ba211a3a1ba4">dr_ir_macros_aarch64.h</a>
@@ -1380,11 +1422,23 @@ permalink: /globals_defs_i.html
 <li>INSTR_CREATE_fmin_scalar
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a87ea2a10b1b79e5b7838332764802c94">dr_ir_macros_aarch64.h</a>
 </li>
+<li>INSTR_CREATE_fmin_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a5f54519f2f5b2c28ed3915ea69fe677b">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fmin_sve_vector
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#ac2d1a8a9d5e47b9827b2c88410b09e8b">dr_ir_macros_aarch64.h</a>
+</li>
 <li>INSTR_CREATE_fmin_vector
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a2ca3652cf5e827ab5379506469e31996">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_fminnm_scalar
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#ae1a682b3cc1c12a488fe991998db462a">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fminnm_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a53940478523799bfcd33f76014859a70">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fminnm_sve_vector
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a0d120a80a351d8ff1c0c116a9a3bfe31">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_fminnm_vector
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#ad12a92cc001f3f3fc336f53e02cd231b">dr_ir_macros_aarch64.h</a>
@@ -1410,6 +1464,12 @@ permalink: /globals_defs_i.html
 <li>INSTR_CREATE_fminv_sve_pred
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#aeaf88b7888b73c58ea3f6c4b6ff481b6">dr_ir_macros_aarch64.h</a>
 </li>
+<li>INSTR_CREATE_fmla_sve_idx
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a5bba365800c3d068f96822b7dac96f99">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fmla_sve_vector
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#afed3615ae484110a1447af3613e51371">dr_ir_macros_aarch64.h</a>
+</li>
 <li>INSTR_CREATE_fmla_vector
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#adaaf8d9983e1f5b07e5c8d7822999cae">dr_ir_macros_aarch64.h</a>
 </li>
@@ -1427,6 +1487,12 @@ permalink: /globals_defs_i.html
 </li>
 <li>INSTR_CREATE_fmlal_vector_idx
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a3a635b96f4f66385b73f00f4d9545b0e">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fmls_sve_idx
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#acdc95bf053ee32e009a2ba70216f1ebc">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fmls_sve_vector
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a890c5a4248837584b91f0e083bfdad30">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_fmls_vector
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#ad46b724267f74c767aa332e3d0d8330c">dr_ir_macros_aarch64.h</a>
@@ -1461,6 +1527,9 @@ permalink: /globals_defs_i.html
 <li>INSTR_CREATE_fmov_vector_imm
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a6a2de86bc1ac89b49ad589bba0d1908c">dr_ir_macros_aarch64.h</a>
 </li>
+<li>INSTR_CREATE_fmsb_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#aacf5e1e45043cbba52a0ec9c0895800f">dr_ir_macros_aarch64.h</a>
+</li>
 <li>INSTR_CREATE_fmsub_scalar
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a462fbc94f0ae8a3e6a1fa5e4d6ab022f">dr_ir_macros_aarch64.h</a>
 </li>
@@ -1470,6 +1539,18 @@ permalink: /globals_defs_i.html
 <li>INSTR_CREATE_fmul_scalar
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a6312cebc9c63e55df7c31b7183fd9b44">dr_ir_macros_aarch64.h</a>
 </li>
+<li>INSTR_CREATE_fmul_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a1609d25e1cc02d6d64976938367d182b">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fmul_sve_idx
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a5dbeb49e3297bf7b02ba47c3048a9a32">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fmul_sve_pred_vector
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a58f2f716eb6b407f90f8c697e4b7f3de">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fmul_sve_vector
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#aeda4c44e49350bd2ce4bd3de9b7eb695">dr_ir_macros_aarch64.h</a>
+</li>
 <li>INSTR_CREATE_fmul_vector
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#ab06d00ba447c53f88fc86db0bf9e046c">dr_ir_macros_aarch64.h</a>
 </li>
@@ -1478,6 +1559,9 @@ permalink: /globals_defs_i.html
 </li>
 <li>INSTR_CREATE_fmulx
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a009e1d2b323f31ce8576ef070ab56961">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fmulx_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a4fead9f0498b677351d152791a822054">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_fmulx_vector
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a3c6c988d7e0cc1a51ff5d8e79c1032ca">dr_ir_macros_aarch64.h</a>
@@ -1491,11 +1575,23 @@ permalink: /globals_defs_i.html
 <li>INSTR_CREATE_fneg_scalar
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a01d6e6e6b78ab3db9c63d5886bd168d6">dr_ir_macros_aarch64.h</a>
 </li>
+<li>INSTR_CREATE_fneg_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#aec9dea9a3d98168a2917691d80563bf0">dr_ir_macros_aarch64.h</a>
+</li>
 <li>INSTR_CREATE_fninit
 : <a class="el" href="dr__ir__macros__x86_8h.html#a0fcf58026ae11f4d83a7f0c23902b5c6">dr_ir_macros_x86.h</a>
 </li>
+<li>INSTR_CREATE_fnmad_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#ad61acddce29071913c02f7b34975895a">dr_ir_macros_aarch64.h</a>
+</li>
 <li>INSTR_CREATE_fnmadd_scalar
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a09174bd613cee2ef115837c5c549e635">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fnmla_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#aa81e0a139bc8d951884aa0a57df005a2">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fnmls_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a4f5bf6d11b07c6337139c28acd9211a5">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_fnmsub_scalar
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#afbe5d591c7ea30bd3c47b2d98b964553">dr_ir_macros_aarch64.h</a>
@@ -1533,14 +1629,23 @@ permalink: /globals_defs_i.html
 <li>INSTR_CREATE_frecpe
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a1396deaffc364683b198caae176c0172">dr_ir_macros_aarch64.h</a>
 </li>
+<li>INSTR_CREATE_frecpe_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#aca4c6a20622d1fc25d465dd0fc46a687">dr_ir_macros_aarch64.h</a>
+</li>
 <li>INSTR_CREATE_frecpe_vector
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a723b0d98faff247be8b3eec12512bc70">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_frecps
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a87e0e97583f3cd8cc6fb4b17dcb4f10d">dr_ir_macros_aarch64.h</a>
 </li>
+<li>INSTR_CREATE_frecps_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a3f9d91123e2d45bcfdb6b298d6b96f57">dr_ir_macros_aarch64.h</a>
+</li>
 <li>INSTR_CREATE_frecps_vector
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a4c8c39f96bf802e2c2f0f20391403831">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_frecpx_sve_pred
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a43d7755bc9c969e75a33d8356970aa44">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_frinta_scalar
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a84bbd8aef8b8ed5cf4d864d2932e5a84">dr_ir_macros_aarch64.h</a>
@@ -1611,11 +1716,17 @@ permalink: /globals_defs_i.html
 <li>INSTR_CREATE_frsqrte
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a9a51091f6ac338a476d9e91fdd338c76">dr_ir_macros_aarch64.h</a>
 </li>
+<li>INSTR_CREATE_frsqrte_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a43806df8cc1bfa256d0300e669387937">dr_ir_macros_aarch64.h</a>
+</li>
 <li>INSTR_CREATE_frsqrte_vector
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a994a23e59fdac90a5569cd53d17ce184">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_frsqrts
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#aa518b9c53f407477bfb91e270e05f080">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_frsqrts_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a26b025946fa9b636364ce122b393d6a3">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_frsqrts_vector
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#ab0d2d4fb2e79609058ec9bbf4f82a2f0">dr_ir_macros_aarch64.h</a>
@@ -1625,6 +1736,9 @@ permalink: /globals_defs_i.html
 </li>
 <li>INSTR_CREATE_fscale
 : <a class="el" href="dr__ir__macros__x86_8h.html#a49fa9fd2c1bda3c9ada6c55697381213">dr_ir_macros_x86.h</a>
+</li>
+<li>INSTR_CREATE_fscale_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a2c8570ae23749840147cdf44f7afcef1">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_fsin
 : <a class="el" href="dr__ir__macros__x86_8h.html#af22cac2f145ae9d9e3072003b4f9206b">dr_ir_macros_x86.h</a>
@@ -1637,6 +1751,9 @@ permalink: /globals_defs_i.html
 </li>
 <li>INSTR_CREATE_fsqrt_scalar
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#ac31f8a750776f662d8bd3d9464c2136f">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fsqrt_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a6518cfcd17d41df618282600706645dd">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_fsqrt_vector
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#ac0b97ed8bbd8aa01d3ab4cc643134d41">dr_ir_macros_aarch64.h</a>
@@ -1653,6 +1770,15 @@ permalink: /globals_defs_i.html
 <li>INSTR_CREATE_fsub_scalar
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#aae674d61c7f8eb4e104b764fd104a913">dr_ir_macros_aarch64.h</a>
 </li>
+<li>INSTR_CREATE_fsub_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a1c1444cd1673e96b7eb5cd09831cf98f">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fsub_sve_pred
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a13b313ff70eb7eb0f48af20c9146a2d0">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fsub_sve_vector
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#aa5014dfb02a99de86ef9878a83f18649">dr_ir_macros_aarch64.h</a>
+</li>
 <li>INSTR_CREATE_fsub_vector
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#ad8570e41b229b7e11b94cfe649179277">dr_ir_macros_aarch64.h</a>
 </li>
@@ -1661,6 +1787,12 @@ permalink: /globals_defs_i.html
 </li>
 <li>INSTR_CREATE_fsubr
 : <a class="el" href="dr__ir__macros__x86_8h.html#a5f71a645a706df08233d2d81a3d85080">dr_ir_macros_x86.h</a>
+</li>
+<li>INSTR_CREATE_fsubr_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#aca3e5c28c76c88aa42f8a3698a1a3139">dr_ir_macros_aarch64.h</a>
+</li>
+<li>INSTR_CREATE_fsubr_sve_vector
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a2eede4bdef7830541012915d7b95f022">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_fsubrp
 : <a class="el" href="dr__ir__macros__x86_8h.html#aabf5aff890b83248e797b029273291dc">dr_ir_macros_x86.h</a>
@@ -3296,6 +3428,9 @@ permalink: /globals_defs_i.html
 </li>
 <li>INSTR_CREATE_pmuludq
 : <a class="el" href="dr__ir__macros__x86_8h.html#acdf54364a79c67ac161f9617be1e096d">dr_ir_macros_x86.h</a>
+</li>
+<li>INSTR_CREATE_pnext_sve
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a8d02168c5d01b950bcd1f04c0d023597">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_pop
 : <a class="el" href="dr__ir__macros__arm_8h.html#adcda1541763c69b4eb4234c4745b508a">dr_ir_macros_arm.h</a>
@@ -10546,5 +10681,5 @@ permalink: /globals_defs_i.html
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19376 --- Fri Jan 20 2023 03:16:57 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19382 --- Fri Jan 27 2023 03:15:45 &nbsp; <img border=0 src="favicon.png">
 </small></address>
