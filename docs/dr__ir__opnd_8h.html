@@ -1036,6 +1036,10 @@ Functions</h2></td></tr>
 <tr class="separator:adbc524d493ba4ff48496ff781e389f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2e785e16fb6c2e6310765014c21836a"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#ab2e785e16fb6c2e6310765014c21836a">opnd_create_base_disp_arm</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> base_reg, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> index_reg, <a class="el" href="dr__ir__opnd_8h.html#a8731b2ac50efba7fe426127000a0bf28">dr_shift_type_t</a> shift_type, uint shift_amount, int disp, <a class="el" href="dr__ir__opnd_8h.html#a9c1d6c3d6c80026bf280867f9f8cf41c">dr_opnd_flags_t</a> flags, <a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a> size)</td></tr>
 <tr class="separator:ab2e785e16fb6c2e6310765014c21836a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a921ee52523b884e1cb07d41c80914fa4"><td class="memItemLeft" align="right" valign="top">DR_API uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a921ee52523b884e1cb07d41c80914fa4">opnd_size_to_shift_amount</a> (<a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a> size)</td></tr>
+<tr class="separator:a921ee52523b884e1cb07d41c80914fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41d2faccad558ba5b58dd5981fb33abf"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a41d2faccad558ba5b58dd5981fb33abf">opnd_create_base_disp_shift_aarch64</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> base_reg, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> index_reg, <a class="el" href="dr__ir__opnd_8h.html#a1ae4a65d6658a13faa3de99b4e716501">dr_extend_type_t</a> extend_type, bool scaled, int disp, <a class="el" href="dr__ir__opnd_8h.html#a9c1d6c3d6c80026bf280867f9f8cf41c">dr_opnd_flags_t</a> flags, <a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a> size, uint shift)</td></tr>
+<tr class="separator:a41d2faccad558ba5b58dd5981fb33abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca5e108b4c712fbe7adbc67ba44efc1f"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#aca5e108b4c712fbe7adbc67ba44efc1f">opnd_create_base_disp_aarch64</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> base_reg, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> index_reg, <a class="el" href="dr__ir__opnd_8h.html#a1ae4a65d6658a13faa3de99b4e716501">dr_extend_type_t</a> extend_type, bool scaled, int disp, <a class="el" href="dr__ir__opnd_8h.html#a9c1d6c3d6c80026bf280867f9f8cf41c">dr_opnd_flags_t</a> flags, <a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a> size)</td></tr>
 <tr class="separator:aca5e108b4c712fbe7adbc67ba44efc1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab73fb113359aaee37844b2592917598d"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#ab73fb113359aaee37844b2592917598d">opnd_create_abs_addr</a> (void *addr, <a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a> data_size)</td></tr>
@@ -1160,6 +1164,8 @@ Functions</h2></td></tr>
 <tr class="separator:abe70f9418f49ede0c2f06b105c003434"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e623fa4521bf14a6ab8696e73d57bc8"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__ir__opnd_8h.html#a1ae4a65d6658a13faa3de99b4e716501">dr_extend_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a4e623fa4521bf14a6ab8696e73d57bc8">opnd_get_index_extend</a> (<a class="el" href="structopnd__t.html">opnd_t</a> opnd, OUT bool *scaled, OUT uint *amount)</td></tr>
 <tr class="separator:a4e623fa4521bf14a6ab8696e73d57bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae181ddc256ccb671738111f3057ad17b"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#ae181ddc256ccb671738111f3057ad17b">opnd_set_index_extend_value</a> (<a class="el" href="structopnd__t.html">opnd_t</a> *opnd, <a class="el" href="dr__ir__opnd_8h.html#a1ae4a65d6658a13faa3de99b4e716501">dr_extend_type_t</a> extend, bool scaled, uint scaled_value)</td></tr>
+<tr class="separator:ae181ddc256ccb671738111f3057ad17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa49a3ce0725ee8c7d5386109cab7f855"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#aa49a3ce0725ee8c7d5386109cab7f855">opnd_set_index_extend</a> (<a class="el" href="structopnd__t.html">opnd_t</a> *opnd, <a class="el" href="dr__ir__opnd_8h.html#a1ae4a65d6658a13faa3de99b4e716501">dr_extend_type_t</a> extend, bool scaled)</td></tr>
 <tr class="separator:aa49a3ce0725ee8c7d5386109cab7f855"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ab6ce32e2e95004a263028e9879fc7e"><td class="memItemLeft" align="right" valign="top">DR_API void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a0ab6ce32e2e95004a263028e9879fc7e">opnd_get_addr</a> (<a class="el" href="structopnd__t.html">opnd_t</a> opnd)</td></tr>
@@ -3590,14 +3596,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns a memory reference operand that refers to either a base register with a constant displacement:</p><ul>
-<li>[base_reg, disp]</li>
-</ul>
-<p>Or a base register plus an optionally extended and shifted index register:</p><ul>
-<li>[base_reg, index_reg, extend_type, shift_amount]</li>
-</ul>
-<p>The shift_amount is zero or, if <code>scaled</code>, a value determined by the size of the operand.</p>
-<p>The resulting operand has data size <code>size</code> (must be an OPSZ_ constant). Both <code>base_reg</code> and <code>index_reg</code> must be DR_REG_ constants. Either <code>index_reg</code> must be <a class="el" href="dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600a3b7e285b0a732b7da09c0f65a66f7882">DR_REG_NULL</a> or disp must be 0.</p>
+<p>Same as opnd_create_base_disp_shift_aarch64 but if <code>scaled</code> is true then the extend amount is calculated from the operand size (otherwise it is zero).</p>
 <dl class="section note"><dt>Note</dt><dd>AArch64-only. </dd></dl>
 
 </div>
@@ -3743,6 +3742,80 @@ Functions</h2></td></tr>
 <li>If <code>disp_short_addr</code>, short (16-bit for 32-bit mode, 32-bit for 64-bit mode) addressing will be used (note that this normally only needs to be specified for an absolute address; otherwise, simply use the desired short registers for base and/or index).</li>
 </ul>
 <p>(The encoding optimization flags are all false when using <a class="el" href="dr__ir__opnd_8h.html#a13cf175bc987a24b37fbbb294fe681e0">opnd_create_base_disp()</a>). </p>
+
+</div>
+</div>
+<a id="a41d2faccad558ba5b58dd5981fb33abf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41d2faccad558ba5b58dd5981fb33abf">&#9670;&nbsp;</a></span>opnd_create_base_disp_shift_aarch64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API <a class="el" href="structopnd__t.html">opnd_t</a> opnd_create_base_disp_shift_aarch64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a>&#160;</td>
+          <td class="paramname"><em>base_reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a>&#160;</td>
+          <td class="paramname"><em>index_reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a1ae4a65d6658a13faa3de99b4e716501">dr_extend_type_t</a>&#160;</td>
+          <td class="paramname"><em>extend_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>scaled</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>disp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a9c1d6c3d6c80026bf280867f9f8cf41c">dr_opnd_flags_t</a>&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>shift</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns a memory reference operand that refers to either a base register with a constant displacement:</p><ul>
+<li>[base_reg, disp]</li>
+</ul>
+<p>Or a base register plus an optionally extended and shifted index register:</p><ul>
+<li>[base_reg, index_reg, extend_type, shift_amount]</li>
+</ul>
+<p>If <code>scaled</code> is enabled, <code>shift</code> determines the shift amount.</p>
+<p>The resulting operand has data size <code>size</code> (must be an OPSZ_ constant). Both <code>base_reg</code> and <code>index_reg</code> must be DR_REG_ constants. Either <code>index_reg</code> must be <a class="el" href="dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600a3b7e285b0a732b7da09c0f65a66f7882">DR_REG_NULL</a> or disp must be 0.</p>
+<p>TODO i#3044: WARNING this function may change during SVE development of DynamoRIO. The function will be considered stable when this warning has been removed.</p>
+<dl class="section note"><dt>Note</dt><dd>AArch64-only. </dd></dl>
 
 </div>
 </div>
@@ -5930,7 +6003,48 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Assumes <code>opnd</code> is a base+disp memory reference. Sets the index register to be extended by <code>extend</code> and optionally <code>scaled</code>. Returns whether successful. If the offset is scaled the amount it is shifted by is determined by the size of the memory operand. </p><dl class="section note"><dt>Note</dt><dd>AArch64-only. </dd></dl>
+<p>Assumes <code>opnd</code> is a base+disp memory reference. Sets the index register to be extended by <code>extend</code> and optionally <code>scaled</code>. Returns whether successful. If <code>scaled</code> is zero, the offset is not scaled; otherwise is calculated from the operand size. </p><dl class="section note"><dt>Note</dt><dd>AArch64-only. </dd></dl>
+
+</div>
+</div>
+<a id="ae181ddc256ccb671738111f3057ad17b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae181ddc256ccb671738111f3057ad17b">&#9670;&nbsp;</a></span>opnd_set_index_extend_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API bool opnd_set_index_extend_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structopnd__t.html">opnd_t</a> *&#160;</td>
+          <td class="paramname"><em>opnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a1ae4a65d6658a13faa3de99b4e716501">dr_extend_type_t</a>&#160;</td>
+          <td class="paramname"><em>extend</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>scaled</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>scaled_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assumes <code>opnd</code> is a base+disp memory reference. Sets the index register to be extended by <code>extend</code> and optionally <code>scaled</code>. Returns whether successful. If <code>scaled</code> is zero, the offset is not scaled. </p><dl class="section note"><dt>Note</dt><dd>AArch64-only. </dd></dl>
 
 </div>
 </div>
@@ -6120,6 +6234,25 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Assumes <code>size</code> is an OPSZ_ constant, typically obtained from <a class="el" href="dr__ir__opnd_8h.html#a68cff151182a9204f5d3168c095211c2">opnd_get_size()</a> or <a class="el" href="dr__ir__opnd_8h.html#a5172d0f6b951c1cc23c0465fd8315aa2">reg_get_size()</a>. Returns the number of bytes the OPSZ_ constant represents. If OPSZ_ is a variable-sized size, returns the default size, which may or may not match the actual size decided up on at encoding time (that final size depends on other operands). </p>
+
+</div>
+</div>
+<a id="a921ee52523b884e1cb07d41c80914fa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a921ee52523b884e1cb07d41c80914fa4">&#9670;&nbsp;</a></span>opnd_size_to_shift_amount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API uint opnd_size_to_shift_amount </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the left shift amount from <code>size</code>. </p>
 
 </div>
 </div>
@@ -6909,5 +7042,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19382 --- Fri Jan 27 2023 03:15:43 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19390 --- Fri Feb 3 2023 03:18:21 &nbsp; <img border=0 src="favicon.png">
 </small></address>
