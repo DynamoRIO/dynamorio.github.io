@@ -70,7 +70,7 @@ Test Organization</h2>
 </ul>
 <h2><a class="anchor" id="autotoc_md295"></a>
 Building and Running Tests</h2>
-<p>CMake is used to build the tests. They are not built by default. To enable them, turn on the BUILD_TESTS CMake variable. For example: </p><div class="fragment"><div class="line">cmake -DBUILD_TESTS=ON ../dynamorio</div>
+<p>CMake is used to build the tests. They are not built by default. To enable them, turn on the BUILD_TESTS CMake variable. For example, from a build directory next to the dynamorio source tree: </p><div class="fragment"><div class="line">cmake -DBUILD_TESTS=ON ../dynamorio</div>
 </div><!-- fragment --><p>CTest is used to run the tests with various runtime options. Each test is named to indicate the runtime options and the executable. The options are first, separate by commas, with a pipe delimiting the end of the options. The executable has a dot instead of a slash. Here are some examples:</p>
 <div class="fragment"><div class="line">code_api|security-common.decode-bad-stack</div>
 <div class="line">code_api,disable_traces|client.events</div>
@@ -174,5 +174,5 @@ Adding New Tests</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19390 --- Fri Feb 3 2023 03:18:22 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19397 --- Fri Feb 10 2023 03:22:26 &nbsp; <img border=0 src="favicon.png">
 </small></address>

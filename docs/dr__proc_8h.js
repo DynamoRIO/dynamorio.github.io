@@ -175,7 +175,9 @@
       [ "FEATURE_LOR", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa09685b77cdd25d64cbc842f03907555f", null ],
       [ "FEATURE_SPE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadd626046ce5c535fa183e30bd955511a", null ],
       [ "FEATURE_PAUTH", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadcd15b8387c9a5f27331315ef3697734", null ],
-      [ "FEATURE_LRCPC", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa52eb57e4c1d022da2bb029e9d02fc419", null ]
+      [ "FEATURE_LRCPC", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa52eb57e4c1d022da2bb029e9d02fc419", null ],
+      [ "FEATURE_BF16", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa660bcd432adba110612085d3e342d191", null ],
+      [ "FEATURE_I8MM", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa4049a1663455381e954b90bc4c82d0f9", null ]
     ] ],
     [ "feature_bit_t", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bf", [
       [ "FEATURE_FPU", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac39f532dceb337cb996ebf5a8d658668", null ],
@@ -287,7 +289,9 @@
       [ "FEATURE_LOR", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa09685b77cdd25d64cbc842f03907555f", null ],
       [ "FEATURE_SPE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadd626046ce5c535fa183e30bd955511a", null ],
       [ "FEATURE_PAUTH", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadcd15b8387c9a5f27331315ef3697734", null ],
-      [ "FEATURE_LRCPC", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa52eb57e4c1d022da2bb029e9d02fc419", null ]
+      [ "FEATURE_LRCPC", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa52eb57e4c1d022da2bb029e9d02fc419", null ],
+      [ "FEATURE_BF16", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa660bcd432adba110612085d3e342d191", null ],
+      [ "FEATURE_I8MM", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa4049a1663455381e954b90bc4c82d0f9", null ]
     ] ],
     [ "proc_avx512_enabled", "dr__proc_8h.html#aaba068462550d9b73c32c0991c5f7551", null ],
     [ "proc_avx_enabled", "dr__proc_8h.html#adfd5dadf31b9a26540978b7331701770", null ],
