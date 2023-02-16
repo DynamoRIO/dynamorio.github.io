@@ -1478,6 +1478,16 @@ Macros</h2></td></tr>
 <tr class="separator:a9a04dae0c939caa0351173e5a488124b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c48ab91d9df59e942097c189a67f181"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a1c48ab91d9df59e942097c189a67f181">INSTR_CREATE_prfw_sve_pred</a>(dc,  prfop,  Pg,  Rn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a4cee392cfee774e55a8e9f621db5688a">instr_create_0dst_3src</a>(dc, OP_prfw, prfop, Pg, Rn)</td></tr>
 <tr class="separator:a1c48ab91d9df59e942097c189a67f181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a413db0123cae4e515be61036152a081a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a413db0123cae4e515be61036152a081a">INSTR_CREATE_ld3b_sve_pred</a>(dc,  Zt,  Pg,  Rn)</td></tr>
+<tr class="separator:a413db0123cae4e515be61036152a081a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac43d74d93178f60815cfa4f1564154c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ac43d74d93178f60815cfa4f1564154c3">INSTR_CREATE_ld4b_sve_pred</a>(dc,  Zt,  Pg,  Rn)</td></tr>
+<tr class="separator:ac43d74d93178f60815cfa4f1564154c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a282947ccb31083d9d1279fd009020b53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a282947ccb31083d9d1279fd009020b53">INSTR_CREATE_st2b_sve_pred</a>(dc,  Zt,  Pg,  Rn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_st2b, Rn, Zt, <a class="el" href="dr__ir__opnd_8h.html#aaa12ec7efc16854dad9dcd7ae3c2e8a4">opnd_create_increment_reg</a>(Zt, 1), Pg)</td></tr>
+<tr class="separator:a282947ccb31083d9d1279fd009020b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a505ecf9bed02c0edf1868573f9fb2f6b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a505ecf9bed02c0edf1868573f9fb2f6b">INSTR_CREATE_st3b_sve_pred</a>(dc,  Zt,  Pg,  Rn)</td></tr>
+<tr class="separator:a505ecf9bed02c0edf1868573f9fb2f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c1589b420ba389e293d13c6419f450c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a8c1589b420ba389e293d13c6419f450c">INSTR_CREATE_st4b_sve_pred</a>(dc,  Zt,  Pg,  Rn)</td></tr>
+<tr class="separator:a8c1589b420ba389e293d13c6419f450c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Platform-independent macros</div></td></tr>
 <tr class="memitem:a193d2b0123b3bdf0b9200f34a54d8002"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a193d2b0123b3bdf0b9200f34a54d8002">XINST_CREATE_debug_instr</a>(dc)&#160;&#160;&#160;INSTR_CREATE_brk((dc), <a class="el" href="dr__ir__macros_8h.html#ac2d087cee8f6726f09d76852c156e0cc">OPND_CREATE_INT16</a>(0))</td></tr>
 <tr class="separator:a193d2b0123b3bdf0b9200f34a54d8002"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -21021,6 +21031,59 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="a413db0123cae4e515be61036152a081a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a413db0123cae4e515be61036152a081a">&#9670;&nbsp;</a></span>INSTR_CREATE_ld3b_sve_pred</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld3b_sve_pred</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Pg, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="dr__ir__instr_8h.html#a2ad1058d00bd03758ab946f4852195f7">instr_create_3dst_2src</a>(dc, OP_ld3b, Zt, <a class="code" href="dr__ir__opnd_8h.html#aaa12ec7efc16854dad9dcd7ae3c2e8a4">opnd_create_increment_reg</a>(Zt, 1), \</div>
+<div class="line">                           <a class="code" href="dr__ir__opnd_8h.html#aaa12ec7efc16854dad9dcd7ae3c2e8a4">opnd_create_increment_reg</a>(Zt, 2), Rn, Pg)</div>
+</div><!-- fragment --><p>Creates a LD3B instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    LD3B    { &lt;Zt1&gt;.B, &lt;Zt2&gt;.B, &lt;Zt3&gt;.B }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Xm&gt;]
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Zt</td><td>The destination vector register, Z (Scalable). </td></tr>
+    <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The first source base register with a register offset, constructed with the function: opnd_create_base_disp_aarch64(Rn, Rm, DR_EXTEND_UXTX, 0, 0, 0, OPSZ_1) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a3351ea7af4aad775dfc08980bd9d0e95"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3351ea7af4aad775dfc08980bd9d0e95">&#9670;&nbsp;</a></span>INSTR_CREATE_ld3r</h2>
 
@@ -21479,6 +21542,60 @@ Macros</h2></td></tr>
     <tr><td class="paramname">Xnd</td><td>The disposition of Xn </td></tr>
     <tr><td class="paramname">offset</td><td>The post-index offset. </td></tr>
     <tr><td class="paramname">elsz</td><td>The vector element size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac43d74d93178f60815cfa4f1564154c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac43d74d93178f60815cfa4f1564154c3">&#9670;&nbsp;</a></span>INSTR_CREATE_ld4b_sve_pred</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ld4b_sve_pred</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Pg, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="dr__ir__instr_8h.html#abf0defc37827c54bf1cdec7c4ce375b2">instr_create_4dst_2src</a>(dc, OP_ld4b, Zt, <a class="code" href="dr__ir__opnd_8h.html#aaa12ec7efc16854dad9dcd7ae3c2e8a4">opnd_create_increment_reg</a>(Zt, 1), \</div>
+<div class="line">                           <a class="code" href="dr__ir__opnd_8h.html#aaa12ec7efc16854dad9dcd7ae3c2e8a4">opnd_create_increment_reg</a>(Zt, 2),                  \</div>
+<div class="line">                           <a class="code" href="dr__ir__opnd_8h.html#aaa12ec7efc16854dad9dcd7ae3c2e8a4">opnd_create_increment_reg</a>(Zt, 3), Rn, Pg)</div>
+</div><!-- fragment --><p>Creates a LD4B instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    LD4B    { &lt;Zt1&gt;.B, &lt;Zt2&gt;.B, &lt;Zt3&gt;.B, &lt;Zt4&gt;.B }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Xm&gt;]
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Zt</td><td>The destination vector register, Z (Scalable). </td></tr>
+    <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The first source base register with a register offset, constructed with the function: opnd_create_base_disp_aarch64(Rn, Rm, DR_EXTEND_UXTX, 0, 0, 0, OPSZ_1) </td></tr>
   </table>
   </dd>
 </dl>
@@ -32261,6 +32378,164 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="a282947ccb31083d9d1279fd009020b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a282947ccb31083d9d1279fd009020b53">&#9670;&nbsp;</a></span>INSTR_CREATE_st2b_sve_pred</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_st2b_sve_pred</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Pg, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_st2b, Rn, Zt, <a class="el" href="dr__ir__opnd_8h.html#aaa12ec7efc16854dad9dcd7ae3c2e8a4">opnd_create_increment_reg</a>(Zt, 1), Pg)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a ST2B instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    ST2B    { &lt;Zt1&gt;.B, &lt;Zt2&gt;.B }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Xm&gt;]
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Zt</td><td>The first source vector register, Z (Scalable). </td></tr>
+    <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The second source base register with a register offset, constructed with the function: opnd_create_base_disp_aarch64(Rn, Rm, DR_EXTEND_UXTX, 0, 0, 0, OPSZ_1) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a505ecf9bed02c0edf1868573f9fb2f6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a505ecf9bed02c0edf1868573f9fb2f6b">&#9670;&nbsp;</a></span>INSTR_CREATE_st3b_sve_pred</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_st3b_sve_pred</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Pg, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, OP_st3b, Rn, Zt, <a class="code" href="dr__ir__opnd_8h.html#aaa12ec7efc16854dad9dcd7ae3c2e8a4">opnd_create_increment_reg</a>(Zt, 1), \</div>
+<div class="line">                           <a class="code" href="dr__ir__opnd_8h.html#aaa12ec7efc16854dad9dcd7ae3c2e8a4">opnd_create_increment_reg</a>(Zt, 2), Pg)</div>
+</div><!-- fragment --><p>Creates a ST3B instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    ST3B    { &lt;Zt1&gt;.B, &lt;Zt2&gt;.B, &lt;Zt3&gt;.B }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Xm&gt;]
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Zt</td><td>The first source vector register, Z (Scalable). </td></tr>
+    <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The second source base register with a register offset, constructed with the function: opnd_create_base_disp_aarch64(Rn, Rm, DR_EXTEND_UXTX, 0, 0, 0, OPSZ_1) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8c1589b420ba389e293d13c6419f450c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c1589b420ba389e293d13c6419f450c">&#9670;&nbsp;</a></span>INSTR_CREATE_st4b_sve_pred</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_st4b_sve_pred</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Pg, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="dr__ir__instr_8h.html#ac054e6a60d13039969c11f6094da4233">instr_create_1dst_5src</a>(dc, OP_st4b, Rn, Zt, <a class="code" href="dr__ir__opnd_8h.html#aaa12ec7efc16854dad9dcd7ae3c2e8a4">opnd_create_increment_reg</a>(Zt, 1), \</div>
+<div class="line">                           <a class="code" href="dr__ir__opnd_8h.html#aaa12ec7efc16854dad9dcd7ae3c2e8a4">opnd_create_increment_reg</a>(Zt, 2),                      \</div>
+<div class="line">                           <a class="code" href="dr__ir__opnd_8h.html#aaa12ec7efc16854dad9dcd7ae3c2e8a4">opnd_create_increment_reg</a>(Zt, 3), Pg)</div>
+</div><!-- fragment --><p>Creates a ST4B instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    ST4B    { &lt;Zt1&gt;.B, &lt;Zt2&gt;.B, &lt;Zt3&gt;.B, &lt;Zt4&gt;.B }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Xm&gt;]
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Zt</td><td>The first source vector register, Z (Scalable). </td></tr>
+    <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The second source base register with a register offset, constructed with the function: opnd_create_base_disp_aarch64(Rn, Rm, DR_EXTEND_UXTX, 0, 0, 0, OPSZ_1) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="abf16cf83601b7cac2bcb48a956aa40dc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abf16cf83601b7cac2bcb48a956aa40dc">&#9670;&nbsp;</a></span>INSTR_CREATE_stllr</h2>
 
@@ -40267,9 +40542,11 @@ Macros</h2></td></tr>
 <div class="ttc" id="adr__ir__opnd_8h_html_a3408612a2953255e7c3572cf76d296c1"><div class="ttname"><a href="dr__ir__opnd_8h.html#a3408612a2953255e7c3572cf76d296c1">opnd_create_predicate_reg</a></div><div class="ttdeci">DR_API INSTR_INLINE opnd_t opnd_create_predicate_reg(reg_id_t r, bool is_merge)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a68cff151182a9204f5d3168c095211c2"><div class="ttname"><a href="dr__ir__opnd_8h.html#a68cff151182a9204f5d3168c095211c2">opnd_get_size</a></div><div class="ttdeci">DR_API opnd_size_t opnd_get_size(opnd_t opnd)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a06b4d3a410d453f25bb74309ef935757"><div class="ttname"><a href="dr__ir__opnd_8h.html#a06b4d3a410d453f25bb74309ef935757">DR_REG_XSP</a></div><div class="ttdeci">#define DR_REG_XSP</div><div class="ttdef"><b>Definition:</b> dr_ir_opnd.h:1303</div></div>
+<div class="ttc" id="adr__ir__opnd_8h_html_aaa12ec7efc16854dad9dcd7ae3c2e8a4"><div class="ttname"><a href="dr__ir__opnd_8h.html#aaa12ec7efc16854dad9dcd7ae3c2e8a4">opnd_create_increment_reg</a></div><div class="ttdeci">DR_API opnd_t opnd_create_increment_reg(opnd_t opnd, uint increment)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a1165bad1ad9859d6ffdcead0da1cd51a"><div class="ttname"><a href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a></div><div class="ttdeci">DR_API instr_t * instr_create_1dst_4src(void *drcontext, int opcode, opnd_t dst, opnd_t src1, opnd_t src2, opnd_t src3, opnd_t src4)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_ac3cc66fd1a43008c1faf1a6f9a9695b2"><div class="ttname"><a href="dr__ir__opnd_8h.html#ac3cc66fd1a43008c1faf1a6f9a9695b2">opnd_is_base_disp</a></div><div class="ttdeci">DR_API bool opnd_is_base_disp(opnd_t opnd)</div></div>
 <div class="ttc" id="adr__ir__macros_8h_html_a0cf77f656e96684678c30892c0c718af"><div class="ttname"><a href="dr__ir__macros_8h.html#a0cf77f656e96684678c30892c0c718af">OPND_CREATE_INT8</a></div><div class="ttdeci">#define OPND_CREATE_INT8(val)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros.h:136</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_a2ad1058d00bd03758ab946f4852195f7"><div class="ttname"><a href="dr__ir__instr_8h.html#a2ad1058d00bd03758ab946f4852195f7">instr_create_3dst_2src</a></div><div class="ttdeci">DR_API instr_t * instr_create_3dst_2src(void *drcontext, int opcode, opnd_t dst1, opnd_t dst2, opnd_t dst3, opnd_t src1, opnd_t src2)</div></div>
 <div class="ttc" id="adr__ir__macros_8h_html_aa32fcd12a03eb97ef42ded7b68a85203"><div class="ttname"><a href="dr__ir__macros_8h.html#aa32fcd12a03eb97ef42ded7b68a85203">OPND_CREATE_INT32</a></div><div class="ttdeci">#define OPND_CREATE_INT32(val)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros.h:124</div></div>
 <div class="ttc" id="adr__ir__macros__aarch64_8h_html_abc0827a4d3590c1f4dbb10e85f7326e6"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#abc0827a4d3590c1f4dbb10e85f7326e6">OPND_CREATE_DOUBLE</a></div><div class="ttdeci">#define OPND_CREATE_DOUBLE()</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:90</div></div>
 <div class="ttc" id="adr__ir__macros__aarch64_8h_html_aaaaa7dc76fd64fbfe69faa2be5c1c909"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#aaaaa7dc76fd64fbfe69faa2be5c1c909">OPND_CREATE_INT</a></div><div class="ttdeci">#define OPND_CREATE_INT(val)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:108</div></div>
@@ -40283,6 +40560,7 @@ Macros</h2></td></tr>
 <div class="ttc" id="adr__ir__opnd_8h_html_aa4a4d5c6b8fd6d065b4719124f4dcafe"><div class="ttname"><a href="dr__ir__opnd_8h.html#aa4a4d5c6b8fd6d065b4719124f4dcafe">opnd_is_reg</a></div><div class="ttdeci">DR_API bool opnd_is_reg(opnd_t opnd)</div></div>
 <div class="ttc" id="adr__ir__macros__aarch64_8h_html_a558ba3fb3352b374652c745790db7ce0"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#a558ba3fb3352b374652c745790db7ce0">OPND_CREATE_ZR</a></div><div class="ttdeci">#define OPND_CREATE_ZR(reg)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:111</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a77688bf46d20cc59361b79cb4c55f5f4"><div class="ttname"><a href="dr__ir__opnd_8h.html#a77688bf46d20cc59361b79cb4c55f5f4">opnd_get_immed_int</a></div><div class="ttdeci">DR_API ptr_int_t opnd_get_immed_int(opnd_t opnd)</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_ac054e6a60d13039969c11f6094da4233"><div class="ttname"><a href="dr__ir__instr_8h.html#ac054e6a60d13039969c11f6094da4233">instr_create_1dst_5src</a></div><div class="ttdeci">DR_API instr_t * instr_create_1dst_5src(void *drcontext, int opcode, opnd_t dst, opnd_t src1, opnd_t src2, opnd_t src3, opnd_t src4, opnd_t src5)</div></div>
 <div class="ttc" id="adr__ir__opcodes__arm_8h_html_a61dadd085c1777f559549e05962b2c9ea1007b292a67372eaf62e130ed8fba2a7"><div class="ttname"><a href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9ea1007b292a67372eaf62e130ed8fba2a7">OP_orr</a></div><div class="ttdeci">@ OP_orr</div><div class="ttdef"><b>Definition:</b> dr_ir_opcodes_arm.h:188</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a6611c0b62af7eacca980cc887c125eab"><div class="ttname"><a href="dr__ir__opnd_8h.html#a6611c0b62af7eacca980cc887c125eab">opnd_get_disp</a></div><div class="ttdeci">DR_API int opnd_get_disp(opnd_t opnd)</div></div>
 <div class="ttc" id="adr__ir__opcodes__arm_8h_html_a61dadd085c1777f559549e05962b2c9ea22b2f9b1cc54ee8394841082b8e77b01"><div class="ttname"><a href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9ea22b2f9b1cc54ee8394841082b8e77b01">OP_and</a></div><div class="ttdeci">@ OP_and</div><div class="ttdef"><b>Definition:</b> dr_ir_opcodes_arm.h:76</div></div>
@@ -40291,6 +40569,7 @@ Macros</h2></td></tr>
 <div class="ttc" id="adr__ir__instr_8h_html_a930c98d46baab6d438dd81936c0666a4"><div class="ttname"><a href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a></div><div class="ttdeci">DR_API instr_t * instr_create_1dst_3src(void *drcontext, int opcode, opnd_t dst, opnd_t src1, opnd_t src2, opnd_t src3)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a5213b9a7ac63b871a59d95ab6fb4ec74"><div class="ttname"><a href="dr__ir__opnd_8h.html#a5213b9a7ac63b871a59d95ab6fb4ec74">opnd_is_immed</a></div><div class="ttdeci">DR_API INSTR_INLINE bool opnd_is_immed(opnd_t opnd)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_ac3ba48b3ee94afa0dde7fa025c199892"><div class="ttname"><a href="dr__ir__opnd_8h.html#ac3ba48b3ee94afa0dde7fa025c199892">opnd_get_reg</a></div><div class="ttdeci">DR_API reg_id_t opnd_get_reg(opnd_t opnd)</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_abf0defc37827c54bf1cdec7c4ce375b2"><div class="ttname"><a href="dr__ir__instr_8h.html#abf0defc37827c54bf1cdec7c4ce375b2">instr_create_4dst_2src</a></div><div class="ttdeci">DR_API instr_t * instr_create_4dst_2src(void *drcontext, int opcode, opnd_t dst1, opnd_t dst2, opnd_t dst3, opnd_t dst4, opnd_t src1, opnd_t src2)</div></div>
 <div class="ttc" id="adr__ir__macros__aarch64_8h_html_abbaf6e38e7df5134310a779b97e16be1"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#abbaf6e38e7df5134310a779b97e16be1">OPND_CREATE_LSL</a></div><div class="ttdeci">#define OPND_CREATE_LSL()</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:115</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a3eea72cb2bcbd6d414b327f0318589dc"><div class="ttname"><a href="dr__ir__opnd_8h.html#a3eea72cb2bcbd6d414b327f0318589dc">opnd_create_immed_int</a></div><div class="ttdeci">DR_API opnd_t opnd_create_immed_int(ptr_int_t i, opnd_size_t data_size)</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
@@ -40298,5 +40577,5 @@ Macros</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19397 --- Fri Feb 10 2023 03:22:24 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.90.19403 --- Thu Feb 16 2023 17:19:35 &nbsp; <img border=0 src="favicon.png">
 </small></address>

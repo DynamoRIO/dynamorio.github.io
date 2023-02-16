@@ -489,6 +489,7 @@
     [ "opnd_create_immed_int64", "dr__ir__opnd_8h.html#a65b75f4116f2c0c4dcb22c29f2b37841", null ],
     [ "opnd_create_immed_pred_constr", "dr__ir__opnd_8h.html#a74920d8b0ed388909be2525f3add6f64", null ],
     [ "opnd_create_immed_uint", "dr__ir__opnd_8h.html#ad94bc6018660cfb0862171c3e9402f9c", null ],
+    [ "opnd_create_increment_reg", "dr__ir__opnd_8h.html#aaa12ec7efc16854dad9dcd7ae3c2e8a4", null ],
     [ "opnd_create_instr", "dr__ir__opnd_8h.html#aa6e23358c282b96c7a0329f3079d2259", null ],
     [ "opnd_create_instr_ex", "dr__ir__opnd_8h.html#a8e631e642887228643e3c248a696e1be", null ],
     [ "opnd_create_mem_instr", "dr__ir__opnd_8h.html#a508b374d784b7f471e3f8e199e9de362", null ],

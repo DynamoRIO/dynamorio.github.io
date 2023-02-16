@@ -1248,6 +1248,8 @@ Functions</h2></td></tr>
 <tr class="separator:a705613f898f5976f8b0bcb510afdda21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa05a718c4e4bd8e686843b9047e34612"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#aa05a718c4e4bd8e686843b9047e34612">opnd_replace_reg</a> (<a class="el" href="structopnd__t.html">opnd_t</a> *opnd, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> old_reg, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> new_reg)</td></tr>
 <tr class="separator:aa05a718c4e4bd8e686843b9047e34612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa12ec7efc16854dad9dcd7ae3c2e8a4"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#aaa12ec7efc16854dad9dcd7ae3c2e8a4">opnd_create_increment_reg</a> (<a class="el" href="structopnd__t.html">opnd_t</a> opnd, uint increment)</td></tr>
+<tr class="separator:aaa12ec7efc16854dad9dcd7ae3c2e8a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad964c704e6bdfcb1fe0fb633cd64e44"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#aad964c704e6bdfcb1fe0fb633cd64e44">opnd_replace_reg_resize</a> (<a class="el" href="structopnd__t.html">opnd_t</a> *opnd, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> old_reg, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> new_reg)</td></tr>
 <tr class="separator:aad964c704e6bdfcb1fe0fb633cd64e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82711df2f7de7763a2d0980ee9f69fb6"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a82711df2f7de7763a2d0980ee9f69fb6">opnd_same</a> (<a class="el" href="structopnd__t.html">opnd_t</a> op1, <a class="el" href="structopnd__t.html">opnd_t</a> op2)</td></tr>
@@ -4221,6 +4223,35 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aaa12ec7efc16854dad9dcd7ae3c2e8a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa12ec7efc16854dad9dcd7ae3c2e8a4">&#9670;&nbsp;</a></span>opnd_create_increment_reg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API <a class="el" href="structopnd__t.html">opnd_t</a> opnd_create_increment_reg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td>
+          <td class="paramname"><em>opnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>increment</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a reg incremented from an existing <code>opnd</code> by the <code>increment</code> value, modulo the reg size. Returns the new reg. </p>
+
+</div>
+</div>
 <a id="aa6e23358c282b96c7a0329f3079d2259"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa6e23358c282b96c7a0329f3079d2259">&#9670;&nbsp;</a></span>opnd_create_instr()</h2>
 
@@ -7042,5 +7073,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.0.19397 --- Fri Feb 10 2023 03:22:25 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.90.19403 --- Thu Feb 16 2023 17:19:36 &nbsp; <img border=0 src="favicon.png">
 </small></address>
