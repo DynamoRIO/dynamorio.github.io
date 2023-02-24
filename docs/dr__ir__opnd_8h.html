@@ -1042,6 +1042,8 @@ Functions</h2></td></tr>
 <tr class="separator:a41d2faccad558ba5b58dd5981fb33abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca5e108b4c712fbe7adbc67ba44efc1f"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#aca5e108b4c712fbe7adbc67ba44efc1f">opnd_create_base_disp_aarch64</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> base_reg, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> index_reg, <a class="el" href="dr__ir__opnd_8h.html#a1ae4a65d6658a13faa3de99b4e716501">dr_extend_type_t</a> extend_type, bool scaled, int disp, <a class="el" href="dr__ir__opnd_8h.html#a9c1d6c3d6c80026bf280867f9f8cf41c">dr_opnd_flags_t</a> flags, <a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a> size)</td></tr>
 <tr class="separator:aca5e108b4c712fbe7adbc67ba44efc1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b6c6151a465d43559e11da933369641"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a8b6c6151a465d43559e11da933369641">opnd_create_vector_base_disp_aarch64</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> base_reg, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> index_reg, <a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a> element_size, <a class="el" href="dr__ir__opnd_8h.html#a1ae4a65d6658a13faa3de99b4e716501">dr_extend_type_t</a> extend_type, bool scaled, int disp, <a class="el" href="dr__ir__opnd_8h.html#a9c1d6c3d6c80026bf280867f9f8cf41c">dr_opnd_flags_t</a> flags, <a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a> size, uint shift)</td></tr>
+<tr class="separator:a8b6c6151a465d43559e11da933369641"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab73fb113359aaee37844b2592917598d"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#ab73fb113359aaee37844b2592917598d">opnd_create_abs_addr</a> (void *addr, <a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a> data_size)</td></tr>
 <tr class="separator:ab73fb113359aaee37844b2592917598d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0550c636f570d4797570f39ea2da45e9"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a0550c636f570d4797570f39ea2da45e9">opnd_create_far_abs_addr</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> seg, void *addr, <a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a> data_size)</td></tr>
@@ -1222,6 +1224,8 @@ Functions</h2></td></tr>
 <tr class="separator:a40d429163eebaef3aceb3ea648e2bc6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6769b1787653c1a0fb2070df83d79a73"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a6769b1787653c1a0fb2070df83d79a73">reg_is_32bit</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> reg)</td></tr>
 <tr class="separator:a6769b1787653c1a0fb2070df83d79a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad72379636157cc8390778a58109995dd"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#ad72379636157cc8390778a58109995dd">reg_is_z</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> reg)</td></tr>
+<tr class="separator:ad72379636157cc8390778a58109995dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20240e95afa6f98c880aa9eb0c71f819"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a20240e95afa6f98c880aa9eb0c71f819">opnd_is_reg_32bit</a> (<a class="el" href="structopnd__t.html">opnd_t</a> opnd)</td></tr>
 <tr class="separator:a20240e95afa6f98c880aa9eb0c71f819"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3259d4fdc82dc2318922acfe1c2a4f54"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a3259d4fdc82dc2318922acfe1c2a4f54">reg_is_64bit</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> reg)</td></tr>
@@ -4557,6 +4561,79 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a8b6c6151a465d43559e11da933369641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b6c6151a465d43559e11da933369641">&#9670;&nbsp;</a></span>opnd_create_vector_base_disp_aarch64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API <a class="el" href="structopnd__t.html">opnd_t</a> opnd_create_vector_base_disp_aarch64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a>&#160;</td>
+          <td class="paramname"><em>base_reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a>&#160;</td>
+          <td class="paramname"><em>index_reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a>&#160;</td>
+          <td class="paramname"><em>element_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a1ae4a65d6658a13faa3de99b4e716501">dr_extend_type_t</a>&#160;</td>
+          <td class="paramname"><em>extend_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>scaled</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>disp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a9c1d6c3d6c80026bf280867f9f8cf41c">dr_opnd_flags_t</a>&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>shift</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Same as opnd_create_base_disp_shift_aarch64 but creates an operand that uses vector registers for the base and/or index. At least one of <code>base_reg</code> and <code>index_reg</code> should be a vector register. <code>element_size</code> indicates the element size for any vector registers used and must be one of: OPSZ_4 (single, 32-bit) OPSZ_8 (double, 64-bit)</p>
+<p>TODO i#3044: WARNING this function may change during SVE development of DynamoRIO. The function will be considered stable when this warning has been removed.</p>
+<dl class="section note"><dt>Note</dt><dd>AArch64-only. </dd></dl>
+
+</div>
+</div>
 <a id="a2b458988a7fd602c4db1a61fa6eee65b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2b458988a7fd602c4db1a61fa6eee65b">&#9670;&nbsp;</a></span>opnd_defines_use()</h2>
 
@@ -6894,6 +6971,25 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad72379636157cc8390778a58109995dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad72379636157cc8390778a58109995dd">&#9670;&nbsp;</a></span>reg_is_z()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API bool reg_is_z </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a>&#160;</td>
+          <td class="paramname"><em>reg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assumes that <code>reg</code> is a DR_REG_ constant. Returns true iff it refers to a Z (SVE scalable vector) register. </p>
+
+</div>
+</div>
 <a id="a33cc9da937b2a41982be8dbe70624f8f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a33cc9da937b2a41982be8dbe70624f8f">&#9670;&nbsp;</a></span>reg_overlap()</h2>
 
@@ -7073,5 +7169,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.90.19403 --- Fri Feb 17 2023 03:21:42 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19411 --- Fri Feb 24 2023 03:17:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

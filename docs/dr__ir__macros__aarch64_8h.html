@@ -682,6 +682,26 @@ Macros</h2></td></tr>
 <tr class="separator:a9ce79c85b606354c09291ab6223cf644"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba779414eb8acdf1d5f5497ade5b7adc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#aba779414eb8acdf1d5f5497ade5b7adc">INSTR_CREATE_xpaci</a>(dc,  Rd)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a842dc7ac2aea828a00c51765465f5428">instr_create_0dst_1src</a>((dc), OP_xpaci, (Rd))</td></tr>
 <tr class="separator:aba779414eb8acdf1d5f5497ade5b7adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a564b47e517e1fd8dfe5b20027a511c58"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a564b47e517e1fd8dfe5b20027a511c58">INSTR_CREATE_bfcvt</a>(dc,  Rd,  Rn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_bfcvt, Rd, Rn)</td></tr>
+<tr class="separator:a564b47e517e1fd8dfe5b20027a511c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e27e5c7ba581d8c8c737465d040a9b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a4e27e5c7ba581d8c8c737465d040a9b0">INSTR_CREATE_bfcvtn2_vector</a>(dc,  Rd,  Rn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_bfcvtn2, Rd, Rn, <a class="el" href="dr__ir__macros__aarch64_8h.html#a24dca05089893aac1b7be58819fc8506">OPND_CREATE_SINGLE</a>())</td></tr>
+<tr class="separator:a4e27e5c7ba581d8c8c737465d040a9b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ba410031066dfe2cc9e2d6514054ba1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a0ba410031066dfe2cc9e2d6514054ba1">INSTR_CREATE_bfcvtn_vector</a>(dc,  Rd,  Rn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_bfcvtn, Rd, Rn, <a class="el" href="dr__ir__macros__aarch64_8h.html#a24dca05089893aac1b7be58819fc8506">OPND_CREATE_SINGLE</a>())</td></tr>
+<tr class="separator:a0ba410031066dfe2cc9e2d6514054ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a960297fc133458cf9bd3d741eaae1028"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a960297fc133458cf9bd3d741eaae1028">INSTR_CREATE_bfdot_vector</a>(dc,  Rd,  Rn,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, OP_bfdot, Rd, Rd, Rn, Rm, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF</a>())</td></tr>
+<tr class="separator:a960297fc133458cf9bd3d741eaae1028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9532995f0a8cfa50b266d293dec38d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ab9532995f0a8cfa50b266d293dec38d9">INSTR_CREATE_bfdot_vector_idx</a>(dc,  Rd,  Rn,  Rm,  index)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac054e6a60d13039969c11f6094da4233">instr_create_1dst_5src</a>(dc, OP_bfdot, Rd, Rd, Rn, Rm, index, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF</a>())</td></tr>
+<tr class="separator:ab9532995f0a8cfa50b266d293dec38d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6af37d6eb31b841733c5ffe7aca099b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#aa6af37d6eb31b841733c5ffe7aca099b">INSTR_CREATE_bfmlalb_vector</a>(dc,  Rd,  Rn,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, OP_bfmlalb, Rd, Rd, Rn, Rm, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF</a>())</td></tr>
+<tr class="separator:aa6af37d6eb31b841733c5ffe7aca099b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2e7a65ab3da5a50656e6f25cb285676"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ac2e7a65ab3da5a50656e6f25cb285676">INSTR_CREATE_bfmlalb_vector_idx</a>(dc,  Rd,  Rn,  Rm,  index)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac054e6a60d13039969c11f6094da4233">instr_create_1dst_5src</a>(dc, OP_bfmlalb, Rd, Rd, Rn, Rm, index, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF</a>())</td></tr>
+<tr class="separator:ac2e7a65ab3da5a50656e6f25cb285676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add79b4bd575b6b77d3618e348b42b2a8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#add79b4bd575b6b77d3618e348b42b2a8">INSTR_CREATE_bfmlalt_vector</a>(dc,  Rd,  Rn,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, OP_bfmlalt, Rd, Rd, Rn, Rm, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF</a>())</td></tr>
+<tr class="separator:add79b4bd575b6b77d3618e348b42b2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4629a396d91ae496ba3ce9d7462b5c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ae4629a396d91ae496ba3ce9d7462b5c6">INSTR_CREATE_bfmlalt_vector_idx</a>(dc,  Rd,  Rn,  Rm,  index)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac054e6a60d13039969c11f6094da4233">instr_create_1dst_5src</a>(dc, OP_bfmlalt, Rd, Rd, Rn, Rm, index, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF</a>())</td></tr>
+<tr class="separator:ae4629a396d91ae496ba3ce9d7462b5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5712c6024d9265a75a074ab3a6c98eb7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a5712c6024d9265a75a074ab3a6c98eb7">INSTR_CREATE_bfmmla_vector</a>(dc,  Rd,  Rn,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, OP_bfmmla, Rd, Rd, Rn, Rm, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF</a>())</td></tr>
+<tr class="separator:a5712c6024d9265a75a074ab3a6c98eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a796934c3fd47ef424a63b9bf610ebd91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a796934c3fd47ef424a63b9bf610ebd91">INSTR_CREATE_orr_sve_pred</a>(dc,  Zd,  Pg,  Zd_,  Zm,  width)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9ea1007b292a67372eaf62e130ed8fba2a7">OP_orr</a>, Zd, Pg, Zd_, Zm, width)</td></tr>
 <tr class="separator:a796934c3fd47ef424a63b9bf610ebd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ae3dca108909f048272cb4709ab6188"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a0ae3dca108909f048272cb4709ab6188">INSTR_CREATE_eor_sve_pred</a>(dc,  Zd,  Pg,  Zd_,  Zm,  width)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9ea2d4b62f28d1356c285b0b9f817827631">OP_eor</a>, Zd, Pg, Zd_, Zm, width)</td></tr>
@@ -2966,6 +2986,50 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="a564b47e517e1fd8dfe5b20027a511c58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a564b47e517e1fd8dfe5b20027a511c58">&#9670;&nbsp;</a></span>INSTR_CREATE_bfcvt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_bfcvt</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_bfcvt, Rd, Rn)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a BFCVT instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    BFCVT   &lt;Hd&gt;, &lt;Sn&gt;
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The destination register, H (halfword, 16 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The source register, S (singleword, 32 bits). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a4039f518b5e8c766ec3b20a659ddb628"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4039f518b5e8c766ec3b20a659ddb628">&#9670;&nbsp;</a></span>INSTR_CREATE_bfcvt_sve_pred</h2>
 
@@ -3011,6 +3075,94 @@ Macros</h2></td></tr>
     <tr><td class="paramname">Zd</td><td>The destination vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
     <tr><td class="paramname">Zn</td><td>The source vector register, Z (Scalable). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4e27e5c7ba581d8c8c737465d040a9b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e27e5c7ba581d8c8c737465d040a9b0">&#9670;&nbsp;</a></span>INSTR_CREATE_bfcvtn2_vector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_bfcvtn2_vector</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_bfcvtn2, Rd, Rn, <a class="el" href="dr__ir__macros__aarch64_8h.html#a24dca05089893aac1b7be58819fc8506">OPND_CREATE_SINGLE</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a BFCVTN2 instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    BFCVTN2 &lt;Vd&gt;.8H, &lt;Vn&gt;.4S
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The destination vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The source vector register, Q (quadword, 128 bits). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0ba410031066dfe2cc9e2d6514054ba1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ba410031066dfe2cc9e2d6514054ba1">&#9670;&nbsp;</a></span>INSTR_CREATE_bfcvtn_vector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_bfcvtn_vector</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_bfcvtn, Rd, Rn, <a class="el" href="dr__ir__macros__aarch64_8h.html#a24dca05089893aac1b7be58819fc8506">OPND_CREATE_SINGLE</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a BFCVTN instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    BFCVTN  &lt;Vd&gt;.4H, &lt;Vn&gt;.4S
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The destination vector register, D (doubleword, 64 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The source vector register, Q (quadword, 128 bits). </td></tr>
   </table>
   </dd>
 </dl>
@@ -3126,6 +3278,115 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="a960297fc133458cf9bd3d741eaae1028"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a960297fc133458cf9bd3d741eaae1028">&#9670;&nbsp;</a></span>INSTR_CREATE_bfdot_vector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_bfdot_vector</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, OP_bfdot, Rd, Rd, Rn, Rm, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a BFDOT instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    BFDOT   &lt;Vd&gt;.&lt;Ts&gt;, &lt;Vn&gt;.&lt;Tb&gt;, &lt;Vm&gt;.&lt;Tb&gt;
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The source and destination vector register. Can be D (doubleword, 64 bits) or Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The second source vector register. Can be D (doubleword, 64 bits) or Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rm</td><td>The third source vector register. Can be D (doubleword, 64 bits) or Q (quadword, 128 bits). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab9532995f0a8cfa50b266d293dec38d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9532995f0a8cfa50b266d293dec38d9">&#9670;&nbsp;</a></span>INSTR_CREATE_bfdot_vector_idx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_bfdot_vector_idx</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac054e6a60d13039969c11f6094da4233">instr_create_1dst_5src</a>(dc, OP_bfdot, Rd, Rd, Rn, Rm, index, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a BFDOT instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    BFDOT   &lt;Vd&gt;.&lt;Ts&gt;, &lt;Vn&gt;.&lt;Tb&gt;, &lt;Vm&gt;.2H[&lt;index&gt;]
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The source and destination vector register. Can be D (doubleword, 64 bits) or Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The second source vector register. Can be D (doubleword, 64 bits) or Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rm</td><td>The third source vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">index</td><td>The immediate index for Rm, in the range 0-3. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a883af85b13eb8f5d23892fa40c52ed01"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a883af85b13eb8f5d23892fa40c52ed01">&#9670;&nbsp;</a></span>INSTR_CREATE_bfmlalb_sve</h2>
 
@@ -3229,6 +3490,115 @@ Macros</h2></td></tr>
     <tr><td class="paramname">Zn</td><td>The second source vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Zm</td><td>The third source vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">index</td><td>The immediate index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa6af37d6eb31b841733c5ffe7aca099b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6af37d6eb31b841733c5ffe7aca099b">&#9670;&nbsp;</a></span>INSTR_CREATE_bfmlalb_vector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_bfmlalb_vector</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, OP_bfmlalb, Rd, Rd, Rn, Rm, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a BFMLALB instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    BFMLALB &lt;Vd&gt;.4S, &lt;Vn&gt;.8H, &lt;Vm&gt;.8H
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The source and destination vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The second source vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rm</td><td>The third source vector register, Q (quadword, 128 bits). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac2e7a65ab3da5a50656e6f25cb285676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2e7a65ab3da5a50656e6f25cb285676">&#9670;&nbsp;</a></span>INSTR_CREATE_bfmlalb_vector_idx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_bfmlalb_vector_idx</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac054e6a60d13039969c11f6094da4233">instr_create_1dst_5src</a>(dc, OP_bfmlalb, Rd, Rd, Rn, Rm, index, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a BFMLALB instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    BFMLALB &lt;Vd&gt;.4S, &lt;Vn&gt;.8H, &lt;Vm&gt;.H[&lt;index&gt;]
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The source and destination vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The second source vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rm</td><td>The third source vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">index</td><td>The immediate index for Rm, in the range 0-7. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3344,6 +3714,115 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="add79b4bd575b6b77d3618e348b42b2a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add79b4bd575b6b77d3618e348b42b2a8">&#9670;&nbsp;</a></span>INSTR_CREATE_bfmlalt_vector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_bfmlalt_vector</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, OP_bfmlalt, Rd, Rd, Rn, Rm, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a BFMLALT instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    BFMLALT &lt;Vd&gt;.4S, &lt;Vn&gt;.8H, &lt;Vm&gt;.8H
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The source and destination vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The second source vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rm</td><td>The third source vector register, Q (quadword, 128 bits). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae4629a396d91ae496ba3ce9d7462b5c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4629a396d91ae496ba3ce9d7462b5c6">&#9670;&nbsp;</a></span>INSTR_CREATE_bfmlalt_vector_idx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_bfmlalt_vector_idx</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac054e6a60d13039969c11f6094da4233">instr_create_1dst_5src</a>(dc, OP_bfmlalt, Rd, Rd, Rn, Rm, index, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a BFMLALT instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    BFMLALT &lt;Vd&gt;.4S, &lt;Vn&gt;.8H, &lt;Vm&gt;.H[&lt;index&gt;]
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The source and destination vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The second source vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rm</td><td>The third source vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">index</td><td>The immediate index for Rm, in the range 0-7. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aa8f3ac616badc12f25f01eb226010c01"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8f3ac616badc12f25f01eb226010c01">&#9670;&nbsp;</a></span>INSTR_CREATE_bfmmla_sve</h2>
 
@@ -3389,6 +3868,57 @@ Macros</h2></td></tr>
     <tr><td class="paramname">Zda</td><td>The source and destination vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Zn</td><td>The second source vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Zm</td><td>The third source vector register, Z (Scalable). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5712c6024d9265a75a074ab3a6c98eb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5712c6024d9265a75a074ab3a6c98eb7">&#9670;&nbsp;</a></span>INSTR_CREATE_bfmmla_vector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_bfmmla_vector</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, OP_bfmmla, Rd, Rd, Rn, Rm, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a BFMMLA instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    BFMMLA  &lt;Vd&gt;.4S, &lt;Vn&gt;.8H, &lt;Vm&gt;.8H
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The source and destination vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The second source vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rm</td><td>The third source vector register, Q (quadword, 128 bits). </td></tr>
   </table>
   </dd>
 </dl>
@@ -40541,7 +41071,7 @@ Macros</h2></td></tr>
 <div class="ttc" id="adr__ir__macros__aarch64_8h_html_afe62aa83b4e18021c3c4880dc573f78c"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#afe62aa83b4e18021c3c4880dc573f78c">OPND_CREATE_MUL</a></div><div class="ttdeci">#define OPND_CREATE_MUL()</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:118</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a3408612a2953255e7c3572cf76d296c1"><div class="ttname"><a href="dr__ir__opnd_8h.html#a3408612a2953255e7c3572cf76d296c1">opnd_create_predicate_reg</a></div><div class="ttdeci">DR_API INSTR_INLINE opnd_t opnd_create_predicate_reg(reg_id_t r, bool is_merge)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a68cff151182a9204f5d3168c095211c2"><div class="ttname"><a href="dr__ir__opnd_8h.html#a68cff151182a9204f5d3168c095211c2">opnd_get_size</a></div><div class="ttdeci">DR_API opnd_size_t opnd_get_size(opnd_t opnd)</div></div>
-<div class="ttc" id="adr__ir__opnd_8h_html_a06b4d3a410d453f25bb74309ef935757"><div class="ttname"><a href="dr__ir__opnd_8h.html#a06b4d3a410d453f25bb74309ef935757">DR_REG_XSP</a></div><div class="ttdeci">#define DR_REG_XSP</div><div class="ttdef"><b>Definition:</b> dr_ir_opnd.h:1303</div></div>
+<div class="ttc" id="adr__ir__opnd_8h_html_a06b4d3a410d453f25bb74309ef935757"><div class="ttname"><a href="dr__ir__opnd_8h.html#a06b4d3a410d453f25bb74309ef935757">DR_REG_XSP</a></div><div class="ttdeci">#define DR_REG_XSP</div><div class="ttdef"><b>Definition:</b> dr_ir_opnd.h:1317</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_aaa12ec7efc16854dad9dcd7ae3c2e8a4"><div class="ttname"><a href="dr__ir__opnd_8h.html#aaa12ec7efc16854dad9dcd7ae3c2e8a4">opnd_create_increment_reg</a></div><div class="ttdeci">DR_API opnd_t opnd_create_increment_reg(opnd_t opnd, uint increment)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a1165bad1ad9859d6ffdcead0da1cd51a"><div class="ttname"><a href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a></div><div class="ttdeci">DR_API instr_t * instr_create_1dst_4src(void *drcontext, int opcode, opnd_t dst, opnd_t src1, opnd_t src2, opnd_t src3, opnd_t src4)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_ac3cc66fd1a43008c1faf1a6f9a9695b2"><div class="ttname"><a href="dr__ir__opnd_8h.html#ac3cc66fd1a43008c1faf1a6f9a9695b2">opnd_is_base_disp</a></div><div class="ttdeci">DR_API bool opnd_is_base_disp(opnd_t opnd)</div></div>
@@ -40577,5 +41107,5 @@ Macros</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.90.19403 --- Fri Feb 17 2023 03:21:40 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19411 --- Fri Feb 24 2023 03:17:47 &nbsp; <img border=0 src="favicon.png">
 </small></address>
