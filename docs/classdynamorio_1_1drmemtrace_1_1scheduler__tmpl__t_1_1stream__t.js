@@ -1,0 +1,17 @@
+[
+    [ "get_cache_line_size", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a026b9e604a2d9681f9943931789fac85", null ],
+    [ "get_chunk_instr_count", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a9d35d11a82bc130f7e0b3ecade8b9023", null ],
+    [ "get_filetype", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#acd2cb76686b11cd99757ca215340001e", null ],
+    [ "get_input_stream_ordinal", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a40fad92f80d41eb157b04763c97f275d", null ],
+    [ "get_instruction_ordinal", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a3a83dd98176ac3c13de12ab60d478252", null ],
+    [ "get_last_timestamp", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a3ea475b2b4f9dc3d440b4dc504c81d2b", null ],
+    [ "get_page_size", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a32a519e6d59f331e7006179570823926", null ],
+    [ "get_record_ordinal", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a92f2930a8d82b87898edf1b774c7e757", null ],
+    [ "get_stream_name", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ad648abe0b17d471550e514f3e852b31c", null ],
+    [ "get_version", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a04ba6c08ee2b58c2008d5765988c4a4b", null ],
+    [ "is_record_synthetic", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ab276351adf53d50aecba8954f7f839d4", null ],
+    [ "next_record", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a0c957be2387f2a2ca6ed00117d2378d6", null ],
+    [ "report_time", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a5e92bd240f80d04b7073481dc856bb8a", null ],
+    [ "start_speculation", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a00779430772121b270ad835008d7ba92", null ],
+    [ "stop_speculation", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#abd2352ca7b195e33fcf4aa1876daf925", null ]
+],

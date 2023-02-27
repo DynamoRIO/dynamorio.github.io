@@ -56,6 +56,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3729dd85e54fecf32b84f0e89a4850b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6b5b68999e8f39899d68840c777c789"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreader__t.html#ae6b5b68999e8f39899d68840c777c789">get_page_size</a> () const override</td></tr>
 <tr class="separator:ae6b5b68999e8f39899d68840c777c789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8d3d553b92f786823499e630cc43975"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classreader__t.html#ae8d3d553b92f786823499e630cc43975">is_record_synthetic</a> () const override</td></tr>
+<tr class="separator:ae8d3d553b92f786823499e630cc43975"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmemtrace__stream__t"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmemtrace__stream__t')"><img src="/images/closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmemtrace__stream__t.html">memtrace_stream_t</a></td></tr>
 <tr class="memitem:aa5ffbecee5e50b9732e3ebd240d34bda inherit pub_methods_classmemtrace__stream__t"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmemtrace__stream__t.html#aa5ffbecee5e50b9732e3ebd240d34bda">~memtrace_stream_t</a> ()</td></tr>
 <tr class="separator:aa5ffbecee5e50b9732e3ebd240d34bda inherit pub_methods_classmemtrace__stream__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -255,7 +257,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the count of <a class="el" href="memref_8h.html#a5dc7702c7dece5c18bb576bf26d724b5">memref_t</a> records from the start of the trace to this point. This includes records skipped over and not presented to any tool. </p>
+<p>Returns the count of <a class="el" href="memref_8h.html#a5dc7702c7dece5c18bb576bf26d724b5">memref_t</a> records from the start of the trace to this point. This includes records skipped over and not presented to any tool. It does not include synthetic records (see <a class="el" href="classreader__t.html#ae8d3d553b92f786823499e630cc43975">is_record_synthetic()</a>). </p>
 
 <p>Implements <a class="el" href="classmemtrace__stream__t.html#a1a532a99af366cf8cca051a57e208b3e">memtrace_stream_t</a>.</p>
 
@@ -289,6 +291,34 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ae8d3d553b92f786823499e630cc43975"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8d3d553b92f786823499e630cc43975">&#9670;&nbsp;</a></span>is_record_synthetic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool reader_t::is_record_synthetic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns whether the current record was synthesized and inserted into the record stream and was not present in the original stream. This is true for timestamp and cpuid headers duplicated after skipping ahead, as well as cpuid markers inserted for synthetic schedules. Such records do not count toward the record count and <a class="el" href="classreader__t.html#a798b86fb1247c9fc38bc70f35fe18287">get_record_ordinal()</a> will return the value of the prior record. </p>
+
+<p>Reimplemented from <a class="el" href="classmemtrace__stream__t.html#a3fbf77c21def49223f414ee91d6f61fe">memtrace_stream_t</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/runner/work/dynamorio/dynamorio/build_release-64/clients/include/drmemtrace/reader.h</li>
 </ul>
@@ -298,5 +328,5 @@ Public Member Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19411 --- Fri Feb 24 2023 03:17:49 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19412 --- Mon Feb 27 2023 15:32:14 &nbsp; <img border=0 src="favicon.png">
 </small></address>

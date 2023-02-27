@@ -702,6 +702,18 @@ Macros</h2></td></tr>
 <tr class="separator:ae4629a396d91ae496ba3ce9d7462b5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5712c6024d9265a75a074ab3a6c98eb7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a5712c6024d9265a75a074ab3a6c98eb7">INSTR_CREATE_bfmmla_vector</a>(dc,  Rd,  Rn,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, OP_bfmmla, Rd, Rd, Rn, Rm, <a class="el" href="dr__ir__macros__aarch64_8h.html#a87515dc76fae3be0e92a171f81cbb65d">OPND_CREATE_HALF</a>())</td></tr>
 <tr class="separator:a5712c6024d9265a75a074ab3a6c98eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec0e426e21d8704cc093d526f0f2cc20"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#aec0e426e21d8704cc093d526f0f2cc20">INSTR_CREATE_smmla_vector</a>(dc,  Rd,  Rn,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9eaff4b6740c17dd5e092fe3138e0d433ff">OP_smmla</a>, Rd, Rd, Rn, Rm, <a class="el" href="dr__ir__macros__aarch64_8h.html#a9c57dfea6090119e2ef1f7b2aea4c12a">OPND_CREATE_BYTE</a>())</td></tr>
+<tr class="separator:aec0e426e21d8704cc093d526f0f2cc20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c47e71f8a62949638cf00238746985"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a70c47e71f8a62949638cf00238746985">INSTR_CREATE_sudot_vector_idx</a>(dc,  Rd,  Rn,  Rm,  index)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac054e6a60d13039969c11f6094da4233">instr_create_1dst_5src</a>(dc, OP_sudot, Rd, Rd, Rn, Rm, index, <a class="el" href="dr__ir__macros__aarch64_8h.html#a9c57dfea6090119e2ef1f7b2aea4c12a">OPND_CREATE_BYTE</a>())</td></tr>
+<tr class="separator:a70c47e71f8a62949638cf00238746985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31beb397e40a457499428f8223630132"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a31beb397e40a457499428f8223630132">INSTR_CREATE_ummla_vector</a>(dc,  Rd,  Rn,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, OP_ummla, Rd, Rd, Rn, Rm, <a class="el" href="dr__ir__macros__aarch64_8h.html#a9c57dfea6090119e2ef1f7b2aea4c12a">OPND_CREATE_BYTE</a>())</td></tr>
+<tr class="separator:a31beb397e40a457499428f8223630132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab56e3878240d507116b10bafb2dac33"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#aab56e3878240d507116b10bafb2dac33">INSTR_CREATE_usmmla_vector</a>(dc,  Rd,  Rn,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, OP_usmmla, Rd, Rd, Rn, Rm, <a class="el" href="dr__ir__macros__aarch64_8h.html#a9c57dfea6090119e2ef1f7b2aea4c12a">OPND_CREATE_BYTE</a>())</td></tr>
+<tr class="separator:aab56e3878240d507116b10bafb2dac33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2646f64dde5d295f025adfce4e2e18e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a2646f64dde5d295f025adfce4e2e18e3">INSTR_CREATE_usdot_vector</a>(dc,  Rd,  Rn,  Rm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, OP_usdot, Rd, Rd, Rn, Rm, <a class="el" href="dr__ir__macros__aarch64_8h.html#a9c57dfea6090119e2ef1f7b2aea4c12a">OPND_CREATE_BYTE</a>())</td></tr>
+<tr class="separator:a2646f64dde5d295f025adfce4e2e18e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4afd6a2650e9c9d4d753fc2bf53e0eaf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a4afd6a2650e9c9d4d753fc2bf53e0eaf">INSTR_CREATE_usdot_vector_idx</a>(dc,  Rd,  Rn,  Rm,  index)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac054e6a60d13039969c11f6094da4233">instr_create_1dst_5src</a>(dc, OP_usdot, Rd, Rd, Rn, Rm, index, <a class="el" href="dr__ir__macros__aarch64_8h.html#a9c57dfea6090119e2ef1f7b2aea4c12a">OPND_CREATE_BYTE</a>())</td></tr>
+<tr class="separator:a4afd6a2650e9c9d4d753fc2bf53e0eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a796934c3fd47ef424a63b9bf610ebd91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a796934c3fd47ef424a63b9bf610ebd91">INSTR_CREATE_orr_sve_pred</a>(dc,  Zd,  Pg,  Zd_,  Zm,  width)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9ea1007b292a67372eaf62e130ed8fba2a7">OP_orr</a>, Zd, Pg, Zd_, Zm, width)</td></tr>
 <tr class="separator:a796934c3fd47ef424a63b9bf610ebd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ae3dca108909f048272cb4709ab6188"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a0ae3dca108909f048272cb4709ab6188">INSTR_CREATE_eor_sve_pred</a>(dc,  Zd,  Pg,  Zd_,  Zm,  width)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9ea2d4b62f28d1356c285b0b9f817827631">OP_eor</a>, Zd, Pg, Zd_, Zm, width)</td></tr>
@@ -29681,6 +29693,57 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="aec0e426e21d8704cc093d526f0f2cc20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec0e426e21d8704cc093d526f0f2cc20">&#9670;&nbsp;</a></span>INSTR_CREATE_smmla_vector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_smmla_vector</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9eaff4b6740c17dd5e092fe3138e0d433ff">OP_smmla</a>, Rd, Rd, Rn, Rm, <a class="el" href="dr__ir__macros__aarch64_8h.html#a9c57dfea6090119e2ef1f7b2aea4c12a">OPND_CREATE_BYTE</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a SMMLA instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    SMMLA   &lt;Vd&gt;.4S, &lt;Vn&gt;.16B, &lt;Vm&gt;.16B
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The third source and destination vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The first source vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rm</td><td>The second source vector register, Q (quadword, 128 bits). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="af382d23c3a417a5fb93e63bfd7517ab5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af382d23c3a417a5fb93e63bfd7517ab5">&#9670;&nbsp;</a></span>INSTR_CREATE_smulh_sve_pred</h2>
 
@@ -33787,6 +33850,64 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="a70c47e71f8a62949638cf00238746985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70c47e71f8a62949638cf00238746985">&#9670;&nbsp;</a></span>INSTR_CREATE_sudot_vector_idx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_sudot_vector_idx</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac054e6a60d13039969c11f6094da4233">instr_create_1dst_5src</a>(dc, OP_sudot, Rd, Rd, Rn, Rm, index, <a class="el" href="dr__ir__macros__aarch64_8h.html#a9c57dfea6090119e2ef1f7b2aea4c12a">OPND_CREATE_BYTE</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a SUDOT instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    SUDOT   &lt;Vd&gt;.&lt;Ts&gt;, &lt;Vn&gt;.&lt;Tb&gt;, &lt;Vm&gt;.4B[&lt;index&gt;]
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The third source and destination vector register. Can be Q (quadword, 128 bits) or D (doubleword, 64 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The first source vector register. Can be Q (quadword, 128 bits) or D (doubleword, 64 bits). </td></tr>
+    <tr><td class="paramname">Rm</td><td>The second source vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">index</td><td>The immediate index for Rm, in the range 0-3. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="add7dd3e2d5ddc64877456fb2187bd328"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#add7dd3e2d5ddc64877456fb2187bd328">&#9670;&nbsp;</a></span>INSTR_CREATE_sunpkhi_sve</h2>
 
@@ -36361,6 +36482,57 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="a31beb397e40a457499428f8223630132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31beb397e40a457499428f8223630132">&#9670;&nbsp;</a></span>INSTR_CREATE_ummla_vector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ummla_vector</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, OP_ummla, Rd, Rd, Rn, Rm, <a class="el" href="dr__ir__macros__aarch64_8h.html#a9c57dfea6090119e2ef1f7b2aea4c12a">OPND_CREATE_BYTE</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an UMMLA instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    UMMLA   &lt;Vd&gt;.4S, &lt;Vn&gt;.16B, &lt;Vm&gt;.16B
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The third source and destination vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The first source vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rm</td><td>The second source vector register, Q (quadword, 128 bits). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aa10e1c6868acb5aa00be9a8d2ca6ac9e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa10e1c6868acb5aa00be9a8d2ca6ac9e">&#9670;&nbsp;</a></span>INSTR_CREATE_umulh_sve_pred</h2>
 
@@ -38129,6 +38301,115 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="a2646f64dde5d295f025adfce4e2e18e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2646f64dde5d295f025adfce4e2e18e3">&#9670;&nbsp;</a></span>INSTR_CREATE_usdot_vector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_usdot_vector</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, OP_usdot, Rd, Rd, Rn, Rm, <a class="el" href="dr__ir__macros__aarch64_8h.html#a9c57dfea6090119e2ef1f7b2aea4c12a">OPND_CREATE_BYTE</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an USDOT instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    USDOT   &lt;Vd&gt;.&lt;Ts&gt;, &lt;Vn&gt;.&lt;Tb&gt;, &lt;Vm&gt;.&lt;Tb&gt;
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The third source and destination vector register. Can be D (doubleword, 64 bits) or Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The first source vector register. Can be D (doubleword, 64 bits) or Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rm</td><td>The second source vector register. Can be D (doubleword, 64 bits) or Q (quadword, 128 bits). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4afd6a2650e9c9d4d753fc2bf53e0eaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4afd6a2650e9c9d4d753fc2bf53e0eaf">&#9670;&nbsp;</a></span>INSTR_CREATE_usdot_vector_idx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_usdot_vector_idx</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac054e6a60d13039969c11f6094da4233">instr_create_1dst_5src</a>(dc, OP_usdot, Rd, Rd, Rn, Rm, index, <a class="el" href="dr__ir__macros__aarch64_8h.html#a9c57dfea6090119e2ef1f7b2aea4c12a">OPND_CREATE_BYTE</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an USDOT instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    USDOT   &lt;Vd&gt;.&lt;Ts&gt;, &lt;Vn&gt;.&lt;Tb&gt;, &lt;Vm&gt;.4B[&lt;index&gt;]
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The third source and destination vector register. Can be D (doubleword, 64 bits) or Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The first source vector register. Can be D (doubleword, 64 bits) or Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rm</td><td>The second source vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">index</td><td>The immediate index for Rm, in the range 0-3. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aa1d3d954ef40230f4ab26e02396e38a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa1d3d954ef40230f4ab26e02396e38a1">&#9670;&nbsp;</a></span>INSTR_CREATE_ushl_vector</h2>
 
@@ -38230,6 +38511,57 @@ Macros</h2></td></tr>
     <tr><td class="paramname">Zda</td><td>The source and destination vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Zn</td><td>The second source vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Zm</td><td>The third source vector register, Z (Scalable). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aab56e3878240d507116b10bafb2dac33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab56e3878240d507116b10bafb2dac33">&#9670;&nbsp;</a></span>INSTR_CREATE_usmmla_vector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_usmmla_vector</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, OP_usmmla, Rd, Rd, Rn, Rm, <a class="el" href="dr__ir__macros__aarch64_8h.html#a9c57dfea6090119e2ef1f7b2aea4c12a">OPND_CREATE_BYTE</a>())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an USMMLA instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    USMMLA  &lt;Vd&gt;.4S, &lt;Vn&gt;.16B, &lt;Vm&gt;.16B
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The third source and destination vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The first source vector register, Q (quadword, 128 bits). </td></tr>
+    <tr><td class="paramname">Rm</td><td>The second source vector register, Q (quadword, 128 bits). </td></tr>
   </table>
   </dd>
 </dl>
@@ -41107,5 +41439,5 @@ Macros</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19411 --- Fri Feb 24 2023 03:17:47 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19412 --- Mon Feb 27 2023 15:32:10 &nbsp; <img border=0 src="favicon.png">
 </small></address>

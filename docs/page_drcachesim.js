@@ -34,7 +34,9 @@
     [ "Extending the Simulator", "sec_drcachesim_extend.html", null ],
     [ "Customizing the Tracer", "sec_drcachesim_tracer.html", null ],
     [ "Tracing Function Calls", "sec_drcachesim_funcs.html", null ],
-    [ "Creating New Analysis Tools", "sec_drcachesim_newtool.html", null ],
+    [ "Creating New Analysis Tools", "sec_drcachesim_newtool.html", [
+      [ "Scheduler", "sec_drcachesim_newtool.html#sec_drcachesim_sched", null ]
+    ] ],
     [ "Simulator Parameters", "sec_drcachesim_ops.html", null ],
     [ "Current Limitations", "sec_drcachesim_limit.html", null ],
     [ "Comparison to Other Simulators", "sec_drcachesim_cmp.html", null ]

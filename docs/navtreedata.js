@@ -47,7 +47,9 @@ var NAVTREE =
       [ "Data Fields", "functions.html", [
         [ "All", "functions.html", {% include_relative functions_dup.js %} ],
         [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", {% include_relative functions_vars.js %} ]
+        [ "Variables", "functions_vars.html", {% include_relative functions_vars.js %} ],
+        [ "Enumerations", "functions_enum.html", null ],
+        [ "Enumerator", "functions_eval.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [

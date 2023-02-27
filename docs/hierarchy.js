@@ -57,7 +57,6 @@
     [ "_tracedump_trace_header_t", "struct__tracedump__trace__header__t.html", null ],
     [ "_version_number_t", "union__version__number__t.html", null ],
     [ "analysis_tool_tmpl_t< RecordType >", "classanalysis__tool__tmpl__t.html", null ],
-    [ "analyzer_tmpl_t< RecordType, ReaderType >::analyzer_shard_data_t", "structanalyzer__tmpl__t_1_1analyzer__shard__data__t.html", null ],
     [ "analyzer_tmpl_t< RecordType, ReaderType >", "classanalyzer__tmpl__t.html", null ],
     [ "bytesize_t", "classbytesize__t.html", null ],
     [ "cache_simulator_knobs_t", "structcache__simulator__knobs__t.html", null ],
@@ -72,6 +71,9 @@
     ] ],
     [ "drstatecmp_options_t", "structdrstatecmp__options__t.html", null ],
     [ "features_t", "structfeatures__t.html", null ],
+    [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::input_reader_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__reader__t.html", null ],
+    [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::input_thread_info_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html", null ],
+    [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::input_workload_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__workload__t.html", null ],
     [ "instr_noalloc_t", "structinstr__noalloc__t.html", null ],
     [ "instr_summary_t", "structinstr__summary__t.html", null ],
     [ "instr_t", "structinstr__t.html", null ],
@@ -81,6 +83,7 @@
       [ "dynamorio::drmemtrace::record_reader_t", "classdynamorio_1_1drmemtrace_1_1record__reader__t.html", [
         [ "dynamorio::drmemtrace::record_file_reader_t< T >", "classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html", null ]
       ] ],
+      [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::stream_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html", null ],
       [ "reader_t", "classreader__t.html", null ]
     ] ],
     [ "module_mapper_t", "classmodule__mapper__t.html", null ],
@@ -90,7 +93,10 @@
     [ "pt_config_t", "structpt__config__t.html", null ],
     [ "pt_cpu_t", "structpt__cpu__t.html", null ],
     [ "pt_sb_config_t", "structpt__sb__config__t.html", null ],
+    [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::range_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html", null ],
     [ "reuse_distance_knobs_t", "structreuse__distance__knobs__t.html", null ],
+    [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::scheduler_options_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html", null ],
+    [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html", null ],
     [ "tlb_simulator_knobs_t", "structtlb__simulator__knobs__t.html", null ],
     [ "trace_converter_t< T >", "classtrace__converter__t.html", null ],
     [ "trace_converter_t< raw2trace_t >", "classtrace__converter__t.html", [
