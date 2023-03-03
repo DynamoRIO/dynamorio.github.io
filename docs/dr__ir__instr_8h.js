@@ -142,6 +142,7 @@
     [ "instr_create_1dst_3src", "dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4", null ],
     [ "instr_create_1dst_4src", "dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a", null ],
     [ "instr_create_1dst_5src", "dr__ir__instr_8h.html#ac054e6a60d13039969c11f6094da4233", null ],
+    [ "instr_create_1dst_6src", "dr__ir__instr_8h.html#a0f959753ac522488db7436168624ed5b", null ],
     [ "instr_create_2dst_0src", "dr__ir__instr_8h.html#a128bc8795fb17c48963d5c3d2808ebae", null ],
     [ "instr_create_2dst_1src", "dr__ir__instr_8h.html#a2a59f597dc596760981fdc1ea2ea296c", null ],
     [ "instr_create_2dst_2src", "dr__ir__instr_8h.html#a5d8f8a71494683ce0fe5ba1995246906", null ],

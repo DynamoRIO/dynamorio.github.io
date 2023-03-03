@@ -652,6 +652,8 @@ Functions</h2></td></tr>
 <tr class="separator:a1165bad1ad9859d6ffdcead0da1cd51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac054e6a60d13039969c11f6094da4233"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#ac054e6a60d13039969c11f6094da4233">instr_create_1dst_5src</a> (void *drcontext, int opcode, <a class="el" href="structopnd__t.html">opnd_t</a> dst, <a class="el" href="structopnd__t.html">opnd_t</a> src1, <a class="el" href="structopnd__t.html">opnd_t</a> src2, <a class="el" href="structopnd__t.html">opnd_t</a> src3, <a class="el" href="structopnd__t.html">opnd_t</a> src4, <a class="el" href="structopnd__t.html">opnd_t</a> src5)</td></tr>
 <tr class="separator:ac054e6a60d13039969c11f6094da4233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f959753ac522488db7436168624ed5b"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a0f959753ac522488db7436168624ed5b">instr_create_1dst_6src</a> (void *drcontext, int opcode, <a class="el" href="structopnd__t.html">opnd_t</a> dst, <a class="el" href="structopnd__t.html">opnd_t</a> src1, <a class="el" href="structopnd__t.html">opnd_t</a> src2, <a class="el" href="structopnd__t.html">opnd_t</a> src3, <a class="el" href="structopnd__t.html">opnd_t</a> src4, <a class="el" href="structopnd__t.html">opnd_t</a> src5, <a class="el" href="structopnd__t.html">opnd_t</a> src6)</td></tr>
+<tr class="separator:a0f959753ac522488db7436168624ed5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a128bc8795fb17c48963d5c3d2808ebae"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a128bc8795fb17c48963d5c3d2808ebae">instr_create_2dst_0src</a> (void *drcontext, int opcode, <a class="el" href="structopnd__t.html">opnd_t</a> dst1, <a class="el" href="structopnd__t.html">opnd_t</a> dst2)</td></tr>
 <tr class="separator:a128bc8795fb17c48963d5c3d2808ebae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a59f597dc596760981fdc1ea2ea296c"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a2a59f597dc596760981fdc1ea2ea296c">instr_create_2dst_1src</a> (void *drcontext, int opcode, <a class="el" href="structopnd__t.html">opnd_t</a> dst1, <a class="el" href="structopnd__t.html">opnd_t</a> dst2, <a class="el" href="structopnd__t.html">opnd_t</a> src)</td></tr>
@@ -2551,6 +2553,77 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Convenience routine that returns an initialized <a class="el" href="structinstr__t.html">instr_t</a> allocated on the thread-local heap with opcode <code>opcode</code>, one destination (<code>dst</code>), and five sources (<code>src1</code>, <code>src2</code>, <code>src3</code>, <code>src4</code>, <code>src5</code>). </p>
+
+</div>
+</div>
+<a id="a0f959753ac522488db7436168624ed5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f959753ac522488db7436168624ed5b">&#9670;&nbsp;</a></span>instr_create_1dst_6src()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API <a class="el" href="structinstr__t.html">instr_t</a>* instr_create_1dst_6src </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>drcontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>opcode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td>
+          <td class="paramname"><em>src1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td>
+          <td class="paramname"><em>src2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td>
+          <td class="paramname"><em>src3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td>
+          <td class="paramname"><em>src4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td>
+          <td class="paramname"><em>src5</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td>
+          <td class="paramname"><em>src6</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Convenience routine that returns an initialized <a class="el" href="structinstr__t.html">instr_t</a> allocated on the thread-local heap with opcode <code>opcode</code>, one destination (<code>dst</code>), and six sources (<code>src1</code>, <code>src2</code>, <code>src3</code>, <code>src4</code>, <code>src5</code>, <code>src6</code>). </p>
 
 </div>
 </div>
@@ -8300,5 +8373,5 @@ mangle" if <code>val</code> is false.</p>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19412 --- Mon Feb 27 2023 15:32:09 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19417 --- Fri Mar 3 2023 04:31:07 &nbsp; <img border=0 src="favicon.png">
 </small></address>
