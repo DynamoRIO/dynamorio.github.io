@@ -20685,12 +20685,16 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a LD1D instruction.</p>
 <p>This macro is used to encode the forms: </p><pre class="fragment">*    LD1D    { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.D{, #&lt;imm&gt;}]
+*    LD1D    { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #3]
+*    LD1D    { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D]
+*    LD1D    { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #3]
+*    LD1D    { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;]
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Zt</td><td>The destination vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
-    <tr><td class="paramname">Zn</td><td>The first source vector base register with an immediate offset, constructed with the function: For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 8), 0) </td></tr>
+    <tr><td class="paramname">Zn</td><td>The first source vector base register with an immediate offset, constructed with the function: For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 8), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #3] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 3) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #3] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 3) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) </td></tr>
   </table>
   </dd>
 </dl>
@@ -20737,12 +20741,18 @@ Macros</h2></td></tr>
 <p>Creates a LD1H instruction.</p>
 <p>This macro is used to encode the forms: </p><pre class="fragment">*    LD1H    { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.S{, #&lt;imm&gt;}]
 *    LD1H    { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.D{, #&lt;imm&gt;}]
+*    LD1H    { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #1]
+*    LD1H    { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D]
+*    LD1H    { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #1]
+*    LD1H    { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;]
+*    LD1H    { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #1]
+*    LD1H    { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;]
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Zt</td><td>The destination vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
-    <tr><td class="paramname">Zn</td><td>The first source vector base register with an immediate offset, constructed with the function: For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) </td></tr>
+    <tr><td class="paramname">Zn</td><td>The first source vector base register with an immediate offset, constructed with the function: For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #1] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 1) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #1] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 1) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #1] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 1) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) </td></tr>
   </table>
   </dd>
 </dl>
@@ -21260,12 +21270,15 @@ Macros</h2></td></tr>
 *    LD1SB   { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Xm&gt;]
 *    LD1SB   { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.S{, #&lt;imm&gt;}]
 *    LD1SB   { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.D{, #&lt;imm&gt;}]
+*    LD1SB   { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D]
+*    LD1SB   { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;]
+*    LD1SB   { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;]
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Zt</td><td>The destination vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
-    <tr><td class="paramname">Rn</td><td>The first source base register with a register offset, constructed with the function: For the [&lt;Xn|SP&gt;, &lt;Xm&gt;] variant: opnd_create_base_disp_aarch64(Rn, Rm, DR_EXTEND_UXTX, 0, 0, 0, OPSZ_1) For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 64), 0) </td></tr>
+    <tr><td class="paramname">Rn</td><td>The first source base register with a register offset, constructed with the function: For the [&lt;Xn|SP&gt;, &lt;Xm&gt;] variant: opnd_create_base_disp_aarch64(Rn, Rm, DR_EXTEND_UXTX, 0, 0, 0, OPSZ_1) For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 64), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 64), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 64), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) </td></tr>
   </table>
   </dd>
 </dl>
@@ -21312,12 +21325,18 @@ Macros</h2></td></tr>
 <p>Creates a LD1SH instruction.</p>
 <p>This macro is used to encode the forms: </p><pre class="fragment">*    LD1SH   { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.S{, #&lt;imm&gt;}]
 *    LD1SH   { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.D{, #&lt;imm&gt;}]
+*    LD1SH   { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #1]
+*    LD1SH   { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D]
+*    LD1SH   { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #1]
+*    LD1SH   { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;]
+*    LD1SH   { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #1]
+*    LD1SH   { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;]
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Zt</td><td>The destination vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
-    <tr><td class="paramname">Zn</td><td>The first source vector base register with an immediate offset, constructed with the function: For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) </td></tr>
+    <tr><td class="paramname">Zn</td><td>The first source vector base register with an immediate offset, constructed with the function: For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #1] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 1) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #1] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 1) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #1] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 1) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) </td></tr>
   </table>
   </dd>
 </dl>
@@ -21415,12 +21434,18 @@ Macros</h2></td></tr>
 <p>Creates a LD1W instruction.</p>
 <p>This macro is used to encode the forms: </p><pre class="fragment">*    LD1W    { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.S{, #&lt;imm&gt;}]
 *    LD1W    { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.D{, #&lt;imm&gt;}]
+*    LD1W    { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #2]
+*    LD1W    { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D]
+*    LD1W    { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #2]
+*    LD1W    { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;]
+*    LD1W    { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #2]
+*    LD1W    { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;]
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Zt</td><td>The destination vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
-    <tr><td class="paramname">Zn</td><td>The first source vector base register with an immediate offset, constructed with the function: For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 8), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) </td></tr>
+    <tr><td class="paramname">Zn</td><td>The first source vector base register with an immediate offset, constructed with the function: For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 8), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #2] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 2) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #2] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 2) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #2] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 8), 2) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 8), 0) </td></tr>
   </table>
   </dd>
 </dl>
@@ -22959,12 +22984,15 @@ Macros</h2></td></tr>
 *    LDFF1B  { &lt;Zt&gt;.B }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;{, &lt;Xm&gt;}]
 *    LDFF1B  { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.S{, #&lt;imm&gt;}]
 *    LDFF1B  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.D{, #&lt;imm&gt;}]
+*    LDFF1B  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D]
+*    LDFF1B  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;]
+*    LDFF1B  { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;]
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Zt</td><td>The destination vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
-    <tr><td class="paramname">Rn</td><td>The first source base register with a register offset, constructed with the function: For the [&lt;Xn|SP&gt;{, &lt;Xm&gt;}] variant: opnd_create_base_disp_aarch64(Rn, Rm, DR_EXTEND_UXTX, 0, 0, 0, OPSZ_1) For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 64), 0) </td></tr>
+    <tr><td class="paramname">Rn</td><td>The first source base register with a register offset, constructed with the function: For the [&lt;Xn|SP&gt;{, &lt;Xm&gt;}] variant: opnd_create_base_disp_aarch64(Rn, Rm, DR_EXTEND_UXTX, 0, 0, 0, OPSZ_1) For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 64), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 64), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 64), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) </td></tr>
   </table>
   </dd>
 </dl>
@@ -23011,12 +23039,16 @@ Macros</h2></td></tr>
 <p>Creates a LDFF1D instruction.</p>
 <p>This macro is used to encode the forms: </p><pre class="fragment">*    LDFF1D  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;{, &lt;Xm&gt;, LSL #3}]
 *    LDFF1D  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.D{, #&lt;imm&gt;}]
+*    LDFF1D  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #3]
+*    LDFF1D  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D]
+*    LDFF1D  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #3]
+*    LDFF1D  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;]
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Zt</td><td>The destination vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
-    <tr><td class="paramname">Rn</td><td>The first source base register with a register offset, constructed with the function: For the [&lt;Xn|SP&gt;{, &lt;Xm&gt;, LSL #3}] viriant: opnd_create_base_disp_shift_aarch64(Rn, Rm, DR_EXTEND_UXTX, 1, 0, 0, OPSZ_32, 3) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) </td></tr>
+    <tr><td class="paramname">Rn</td><td>The first source base register with a register offset, constructed with the function: For the [&lt;Xn|SP&gt;{, &lt;Xm&gt;, LSL #3}] viriant: opnd_create_base_disp_shift_aarch64(Rn, Rm, DR_EXTEND_UXTX, 1, 0, 0, OPSZ_32, 3) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #3] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 3) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #3] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 3) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) </td></tr>
   </table>
   </dd>
 </dl>
@@ -23066,12 +23098,18 @@ Macros</h2></td></tr>
 *    LDFF1H  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;{, &lt;Xm&gt;, LSL #1}]
 *    LDFF1H  { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.S{, #&lt;imm&gt;}]
 *    LDFF1H  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.D{, #&lt;imm&gt;}]
+*    LDFF1H  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #1]
+*    LDFF1H  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D]
+*    LDFF1H  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #1]
+*    LDFF1H  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;]
+*    LDFF1H  { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #1]
+*    LDFF1H  { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;]
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Zt</td><td>The destination vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
-    <tr><td class="paramname">Rn</td><td>The first source base register with a register offset, constructed with the function: For the [&lt;Xn|SP&gt;{, &lt;Xm&gt;, LSL #1}] variant: opnd_create_base_disp_shift_aarch64(Rn, Rm, DR_EXTEND_UXTX, 1, 0, 0, OPSZ_32, 1) For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) </td></tr>
+    <tr><td class="paramname">Rn</td><td>The first source base register with a register offset, constructed with the function: For the [&lt;Xn|SP&gt;{, &lt;Xm&gt;, LSL #1}] variant: opnd_create_base_disp_shift_aarch64(Rn, Rm, DR_EXTEND_UXTX, 1, 0, 0, OPSZ_32, 1) For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #1] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 1) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #1] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 1) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #1] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 1) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) </td></tr>
   </table>
   </dd>
 </dl>
@@ -23121,12 +23159,15 @@ Macros</h2></td></tr>
 *    LDFF1SB { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;{, &lt;Xm&gt;}]
 *    LDFF1SB { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.S{, #&lt;imm&gt;}]
 *    LDFF1SB { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.D{, #&lt;imm&gt;}]
+*    LDFF1SB { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D]
+*    LDFF1SB { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;]
+*    LDFF1SB { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;]
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Zt</td><td>The destination vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
-    <tr><td class="paramname">Rn</td><td>The first source base register with a register offset, constructed with the function: For the [&lt;Xn|SP&gt;{, &lt;Xm&gt;}] variant: opnd_create_base_disp_aarch64(Rn, Rm, DR_EXTEND_UXTX, false, 0, 0, OPSZ_1) opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 64), 0) </td></tr>
+    <tr><td class="paramname">Rn</td><td>The first source base register with a register offset, constructed with the function: For the [&lt;Xn|SP&gt;{, &lt;Xm&gt;}] variant: opnd_create_base_disp_aarch64(Rn, Rm, DR_EXTEND_UXTX, false, 0, 0, OPSZ_1) opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 64), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 64), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 64), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) </td></tr>
   </table>
   </dd>
 </dl>
@@ -23175,12 +23216,18 @@ Macros</h2></td></tr>
 *    LDFF1SH { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;{, &lt;Xm&gt;, LSL #1}]
 *    LDFF1SH { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.S{, #&lt;imm&gt;}]
 *    LDFF1SH { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.D{, #&lt;imm&gt;}]
+*    LDFF1SH { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #1]
+*    LDFF1SH { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D]
+*    LDFF1SH { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #1]
+*    LDFF1SH { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;]
+*    LDFF1SH { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #1]
+*    LDFF1SH { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;]
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Zt</td><td>The destination vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
-    <tr><td class="paramname">Rn</td><td>The first source base register with a register offset, constructed with the function: For the [&lt;Xn|SP&gt;{, &lt;Xm&gt;, LSL #1}] variant: opnd_create_base_disp_shift_aarch64(Rn, Rm, DR_EXTEND_UXTX, 1, 0, 0, OPSZ_16, 1) For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) </td></tr>
+    <tr><td class="paramname">Rn</td><td>The first source base register with a register offset, constructed with the function: For the [&lt;Xn|SP&gt;{, &lt;Xm&gt;, LSL #1}] variant: opnd_create_base_disp_shift_aarch64(Rn, Rm, DR_EXTEND_UXTX, 1, 0, 0, OPSZ_16, 1) For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #1] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 1) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #1] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 1) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #1] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 1) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) </td></tr>
   </table>
   </dd>
 </dl>
@@ -23227,12 +23274,18 @@ Macros</h2></td></tr>
 <p>Creates a LDFF1SW instruction.</p>
 <p>This macro is used to encode the forms: </p><pre class="fragment">*    LDFF1SW { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;{, &lt;Xm&gt;, LSL #2}]
 *    LDFF1SW { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Zn&gt;.D{, #&lt;imm&gt;}]
+*    LDFF1W  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #2]
+*    LDFF1W  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D]
+*    LDFF1W  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #2]
+*    LDFF1W  { &lt;Zt&gt;.D }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;]
+*    LDFF1W  { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #2]
+*    LDFF1W  { &lt;Zt&gt;.S }, &lt;Pg&gt;/Z, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;]
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Zt</td><td>The destination vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
-    <tr><td class="paramname">Rn</td><td>The first source base register with a register offset, constructed with the function: For the [&lt;Xn|SP&gt;{, &lt;Xm&gt;, LSL #2}] variant: opnd_create_base_disp_shift_aarch64(Rn, Rm, DR_EXTEND_UXTX, 1, 0, 0, OPSZ_16, 2) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) </td></tr>
+    <tr><td class="paramname">Rn</td><td>The first source base register with a register offset, constructed with the function: For the [&lt;Xn|SP&gt;{, &lt;Xm&gt;, LSL #2}] variant: opnd_create_base_disp_shift_aarch64(Rn, Rm, DR_EXTEND_UXTX, 1, 0, 0, OPSZ_16, 2) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #2] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 2) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #2] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 2) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #2] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 8), 2) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 8), 0) </td></tr>
   </table>
   </dd>
 </dl>
@@ -26093,12 +26146,15 @@ Macros</h2></td></tr>
 <p>This macro is used to encode the forms: </p><pre class="fragment">*    PRFD    &lt;prfop&gt;, &lt;Pg&gt;, [&lt;Xn|SP&gt;{, #&lt;imm&gt;, MUL VL}]
 *    PRFD    &lt;prfop&gt;, &lt;Pg&gt;, [&lt;Zn&gt;.D{, #&lt;imm&gt;}]
 *    PRFD    &lt;prfop&gt;, &lt;Pg&gt;, [&lt;Zn&gt;.S{, #&lt;imm&gt;}]
+*    PRFD    &lt;prfop&gt;, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #3]
+*    PRFD    &lt;prfop&gt;, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #3]
+*    PRFD    &lt;prfop&gt;, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #3]
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">prfop</td><td>The prefetch operation. </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
-    <tr><td class="paramname">Rn</td><td>The second source base register with an immediate offset, constructed with the function: For the [&lt;Xn|SP&gt;{, #&lt;imm&gt;, MUL VL}] variant: opnd_create_base_disp(Rn, DR_REG_NULL, 0, imm6, OPSZ_0) For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, OPSZ_0, 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, OPSZ_0, 0) </td></tr>
+    <tr><td class="paramname">Rn</td><td>The second source base register with an immediate offset, constructed with the function: For the [&lt;Xn|SP&gt;{, #&lt;imm&gt;, MUL VL}] variant: opnd_create_base_disp(Rn, DR_REG_NULL, 0, imm6, OPSZ_0) For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, OPSZ_0, 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, OPSZ_0, 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, true, 0, OPSZ_0, 3) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, true, 0, OPSZ_0, 3) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, true, 0, OPSZ_0, 3) </td></tr>
   </table>
   </dd>
 </dl>
@@ -26146,12 +26202,15 @@ Macros</h2></td></tr>
 <p>This macro is used to encode the forms: </p><pre class="fragment">*    PRFH    &lt;prfop&gt;, &lt;Pg&gt;, [&lt;Xn|SP&gt;{, #&lt;imm&gt;, MUL VL}]
 *    PRFH    &lt;prfop&gt;, &lt;Pg&gt;, [&lt;Zn&gt;.D{, #&lt;imm&gt;}]
 *    PRFH    &lt;prfop&gt;, &lt;Pg&gt;, [&lt;Zn&gt;.S{, #&lt;imm&gt;}]
+*    PRFH    &lt;prfop&gt;, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #1]
+*    PRFH    &lt;prfop&gt;, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #1]
+*    PRFH    &lt;prfop&gt;, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #1]
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">prfop</td><td>The prefetch operation. </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
-    <tr><td class="paramname">Rn</td><td>The second source base register with an immediate offset, constructed with the function: For the [&lt;Xn|SP&gt;{, #&lt;imm&gt;, MUL VL}] variant: opnd_create_base_disp(Rn, DR_REG_NULL, 0, imm6, OPSZ_0) For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, OPSZ_0, 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, OPSZ_0, 0) </td></tr>
+    <tr><td class="paramname">Rn</td><td>The second source base register with an immediate offset, constructed with the function: For the [&lt;Xn|SP&gt;{, #&lt;imm&gt;, MUL VL}] variant: opnd_create_base_disp(Rn, DR_REG_NULL, 0, imm6, OPSZ_0) For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, OPSZ_0, 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, OPSZ_0, 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, true, 0, OPSZ_0, 1) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, true, 0, OPSZ_0, 1) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, true, 0, OPSZ_0, 1) </td></tr>
   </table>
   </dd>
 </dl>
@@ -26199,12 +26258,15 @@ Macros</h2></td></tr>
 <p>This macro is used to encode the forms: </p><pre class="fragment">*    PRFW    &lt;prfop&gt;, &lt;Pg&gt;, [&lt;Xn|SP&gt;{, #&lt;imm&gt;, MUL VL}]
 *    PRFW    &lt;prfop&gt;, &lt;Pg&gt;, [&lt;Zn&gt;.D{, #&lt;imm&gt;}]
 *    PRFW    &lt;prfop&gt;, &lt;Pg&gt;, [&lt;Zn&gt;.S{, #&lt;imm&gt;}]
+*    PRFW    &lt;prfop&gt;, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #2]
+*    PRFW    &lt;prfop&gt;, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #2]
+*    PRFW    &lt;prfop&gt;, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #2]
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">prfop</td><td>The prefetch operation. </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
-    <tr><td class="paramname">Rn</td><td>The second source base register with an immediate offset, constructed with the function: For the [&lt;Xn|SP&gt;{, #&lt;imm&gt;, MUL VL}] variant: opnd_create_base_disp(Rn, DR_REG_NULL, 0, imm6, OPSZ_0) For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, OPSZ_0, 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, OPSZ_0, 0) </td></tr>
+    <tr><td class="paramname">Rn</td><td>The second source base register with an immediate offset, constructed with the function: For the [&lt;Xn|SP&gt;{, #&lt;imm&gt;, MUL VL}] variant: opnd_create_base_disp(Rn, DR_REG_NULL, 0, imm6, OPSZ_0) For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, OPSZ_0, 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, OPSZ_0, 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, true, 0, OPSZ_0, 2) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, true, 0, OPSZ_0, 2) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, true, 0, OPSZ_0, 2) </td></tr>
   </table>
   </dd>
 </dl>
@@ -33463,12 +33525,15 @@ Macros</h2></td></tr>
 <p>This macro is used to encode the forms: </p><pre class="fragment">*    ST1B    { &lt;Zt&gt;.&lt;Ts&gt; }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Xm&gt;]
 *    ST1B    { &lt;Zt&gt;.S }, &lt;Pg&gt;, [&lt;Zn&gt;.S{, #&lt;imm&gt;}]
 *    ST1B    { &lt;Zt&gt;.D }, &lt;Pg&gt;, [&lt;Zn&gt;.D{, #&lt;imm&gt;}]
+*    ST1B    { &lt;Zt&gt;.D }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D]
+*    ST1B    { &lt;Zt&gt;.D }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;]
+*    ST1B    { &lt;Zt&gt;.S }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;]
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Zt</td><td>The first source vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
-    <tr><td class="paramname">Rn</td><td>The second source base register with a register offset, constructed with the function: opnd_create_base_disp_aarch64(Rn, Rm, For the [&lt;Xn|SP&gt;, &lt;Xm&gt;] variant: DR_EXTEND_UXTX, 0, 0, 0, OPSZ_1) For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 64), 0) </td></tr>
+    <tr><td class="paramname">Rn</td><td>The second source base register with a register offset, constructed with the function: opnd_create_base_disp_aarch64(Rn, Rm, For the [&lt;Xn|SP&gt;, &lt;Xm&gt;] variant: DR_EXTEND_UXTX, 0, 0, 0, OPSZ_1) For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 64), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 64), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 64), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) </td></tr>
   </table>
   </dd>
 </dl>
@@ -33514,12 +33579,16 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a ST1D instruction.</p>
 <p>This macro is used to encode the forms: </p><pre class="fragment">*    ST1D    { &lt;Zt&gt;.D }, &lt;Pg&gt;, [&lt;Zn&gt;.D{, #&lt;imm&gt;}]
+*    ST1D    { &lt;Zt&gt;.D }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #3]
+*    ST1D    { &lt;Zt&gt;.D }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D]
+*    ST1D    { &lt;Zt&gt;.D }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #3]
+*    ST1D    { &lt;Zt&gt;.D }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;]
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Zt</td><td>The first source vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
-    <tr><td class="paramname">Zn</td><td>The second source vector base register with an immediate offset, constructed with the function: For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 8), 0) </td></tr>
+    <tr><td class="paramname">Zn</td><td>The second source vector base register with an immediate offset, constructed with the function: For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 8), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #3] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 3) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #3] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 3) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) </td></tr>
   </table>
   </dd>
 </dl>
@@ -33566,12 +33635,18 @@ Macros</h2></td></tr>
 <p>Creates a ST1H instruction.</p>
 <p>This macro is used to encode the forms: </p><pre class="fragment">*    ST1H    { &lt;Zt&gt;.S }, &lt;Pg&gt;, [&lt;Zn&gt;.S{, #&lt;imm&gt;}]
 *    ST1H    { &lt;Zt&gt;.D }, &lt;Pg&gt;, [&lt;Zn&gt;.D{, #&lt;imm&gt;}]
+*    ST1H    { &lt;Zt&gt;.D }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #1]
+*    ST1H    { &lt;Zt&gt;.D }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D]
+*    ST1H    { &lt;Zt&gt;.D }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #1]
+*    ST1H    { &lt;Zt&gt;.D }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;]
+*    ST1H    { &lt;Zt&gt;.S }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #1]
+*    ST1H    { &lt;Zt&gt;.S }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;]
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Zt</td><td>The first source vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
-    <tr><td class="paramname">Zn</td><td>The second source vector base register with an immediate offset, constructed with the function: For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) </td></tr>
+    <tr><td class="paramname">Zn</td><td>The second source vector base register with an immediate offset, constructed with the function: For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #1] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 1) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #1] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 1) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 32), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #1] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 1) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) </td></tr>
   </table>
   </dd>
 </dl>
@@ -33618,12 +33693,18 @@ Macros</h2></td></tr>
 <p>Creates a ST1W instruction.</p>
 <p>This macro is used to encode the forms: </p><pre class="fragment">*    ST1W    { &lt;Zt&gt;.S }, &lt;Pg&gt;, [&lt;Zn&gt;.S{, #&lt;imm&gt;}]
 *    ST1W    { &lt;Zt&gt;.D }, &lt;Pg&gt;, [&lt;Zn&gt;.D{, #&lt;imm&gt;}]
+*    ST1W    { &lt;Zt&gt;.D }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #2]
+*    ST1W    { &lt;Zt&gt;.D }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D]
+*    ST1W    { &lt;Zt&gt;.D }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #2]
+*    ST1W    { &lt;Zt&gt;.D }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;]
+*    ST1W    { &lt;Zt&gt;.S }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #2]
+*    ST1W    { &lt;Zt&gt;.S }, &lt;Pg&gt;, [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;]
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Zt</td><td>The first source vector register, Z (Scalable). </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
-    <tr><td class="paramname">Zn</td><td>The second source vector base register with an immediate offset, constructed with the function: For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 8), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) </td></tr>
+    <tr><td class="paramname">Zn</td><td>The second source vector base register with an immediate offset, constructed with the function: For the [&lt;Zn&gt;.S{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_4, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 8), 0) For the [&lt;Zn&gt;.D{, #&lt;imm&gt;}] variant: opnd_create_vector_base_disp_aarch64(Zn, DR_REG_NULL, OPSZ_8, 0, 0, imm5, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, LSL #2] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 2) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, DR_EXTEND_UXTX, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt; #2] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 2) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.D, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_8, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 16), 0) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt; #2] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, true, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 8), 2) For the [&lt;Xn|SP&gt;, &lt;Zm&gt;.S, &lt;extend&gt;] variant: opnd_create_vector_base_disp_aarch64(Xn, Zm, OPSZ_4, extend, 0, 0, opnd_size_from_bytes(<a class="el" href="dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de">dr_get_sve_vl()</a> / 8), 0) </td></tr>
   </table>
   </dd>
 </dl>
@@ -42098,5 +42179,5 @@ Macros</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19417 --- Fri Mar 3 2023 04:31:08 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19424 --- Fri Mar 10 2023 03:25:29 &nbsp; <img border=0 src="favicon.png">
 </small></address>

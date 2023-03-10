@@ -181,6 +181,8 @@ Functions</h2></td></tr>
 <tr class="separator:ga16fc2d260f5ebead724d5eb98bf13ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaff958909001824afeeaee334dc612e51"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#gaff958909001824afeeaee334dc612e51">drwrap_get_stats</a> (INOUT <a class="el" href="group__drwrap.html#ga6f6dc4aedef59ad64117973f081fd903">drwrap_stats_t</a> *stats)</td></tr>
 <tr class="separator:gaff958909001824afeeaee334dc612e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga96dd87016481cbe04b285297557ef633"><td class="memItemLeft" align="right" valign="top">DR_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga96dd87016481cbe04b285297557ef633">drwrap_get_retaddr_if_sentinel</a> (void *drcontext, INOUT app_pc *possibly_sentinel)</td></tr>
+<tr class="separator:ga96dd87016481cbe04b285297557ef633"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -378,7 +380,7 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="gga16cc419209fcb0024d010599bb82aa76a92308b97214b3a3f575e6901a1b13871"></a>DRWRAP_NO_DYNAMIC_RETADDRS&#160;</td><td class="fielddoc"><p>If this flag is set, then post-call callbacks are only invoked from return sites that can be identified statically. Static identification happens in two ways: from observing a CALL instruction, and from <a class="el" href="group__drwrap.html#ga61b97c33203c704dd8ff1b9d31b3d2a9">drwrap_mark_as_post_call()</a>. Dynamically observing return addresses from inside callees incurs overhead due to synchronization costs, with further overhead to replace existing code with instrumented code. When this flag is set, some post-call callbacks may be missed. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga16cc419209fcb0024d010599bb82aa76acec7da205cbb9dab0291d66254e47c88"></a>DRWRAP_REPLACE_RETADDR&#160;</td><td class="fielddoc"><p>If this flag is set, then post-call points are identified by changing the application return address upon entering the callee. This is more efficient than the default method, which requires shared storage and locks and flushing. However, this does violate transparency, and may cause some applications to fail. In particular, detaching on AArchXX requires scanning the stack to find where the return address was stored, which could conceivably replace an integer or non-pointer value that happens to match the sentinel used. Use this at your own risk. </p>
+<tr><td class="fieldname"><a id="gga16cc419209fcb0024d010599bb82aa76acec7da205cbb9dab0291d66254e47c88"></a>DRWRAP_REPLACE_RETADDR&#160;</td><td class="fielddoc"><p>If this flag is set, then post-call points are identified by changing the application return address upon entering the callee. This is more efficient than the default method, which requires shared storage and locks and flushing. However, this does violate transparency, and may cause some applications to fail. In particular, detaching on AArchXX requires scanning the stack to find where the return address was stored, which could conceivably replace an integer or non-pointer value that happens to match the sentinel used. Also, the transparency violation may be exposed to the client's <a class="el" href="dr__events_8h.html#ac433abf2a9b5ec9a5571e39d7d069df2">dr_register_kernel_xfer_event()</a> callback if it inspects the mcontext PC on the stack; <a class="el" href="group__drwrap.html#ga96dd87016481cbe04b285297557ef633">drwrap_get_retaddr_if_sentinel()</a> may be used to mitigate such cases. Use <a class="el" href="group__drwrap.html#gga16cc419209fcb0024d010599bb82aa76acec7da205cbb9dab0291d66254e47c88">DRWRAP_REPLACE_RETADDR</a> at your own risk. </p>
 </td></tr>
 </table>
 
@@ -538,6 +540,35 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns the return address of the wrapped function represented by <code>wrapcxt</code>.</p>
 <p>This routine may de-reference application memory directly, so the caller should wrap in DR_TRY_EXCEPT if crashes must be avoided. </p>
+
+</div>
+</div>
+<a id="ga96dd87016481cbe04b285297557ef633"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga96dd87016481cbe04b285297557ef633">&#9670;&nbsp;</a></span>drwrap_get_retaddr_if_sentinel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT void drwrap_get_retaddr_if_sentinel </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>drcontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">INOUT app_pc *&#160;</td>
+          <td class="paramname"><em>possibly_sentinel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>If the provided app_pc (<code>possibly_sentinel</code>) is indeed the return address sentinel used to implement <a class="el" href="group__drwrap.html#gga16cc419209fcb0024d010599bb82aa76acec7da205cbb9dab0291d66254e47c88">DRWRAP_REPLACE_RETADDR</a>, this routine replaces it with the actual return address of the inner-most nested wrapped function. Otherwise, it is a no-op. This allows mitigation of a transparency violation under the <a class="el" href="group__drwrap.html#gga16cc419209fcb0024d010599bb82aa76acec7da205cbb9dab0291d66254e47c88">DRWRAP_REPLACE_RETADDR</a> strategy where the actual app return address on the stack is replaced with a return address sentinel. </p>
 
 </div>
 </div>
@@ -1343,5 +1374,5 @@ Not supported if <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19417 --- Fri Mar 3 2023 04:31:10 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19424 --- Fri Mar 10 2023 03:25:31 &nbsp; <img border=0 src="favicon.png">
 </small></address>

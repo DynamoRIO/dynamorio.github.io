@@ -46,6 +46,7 @@
     [ "drwrap_get_mcontext", "group__drwrap.html#ga9a33b1049986dd8975e94827f5c0e759", null ],
     [ "drwrap_get_mcontext_ex", "group__drwrap.html#gac3a79cf043d8c21dc190721d9fb105de", null ],
     [ "drwrap_get_retaddr", "group__drwrap.html#ga2da9c1f9ef091b6856a98c6ce5e2a3f5", null ],
+    [ "drwrap_get_retaddr_if_sentinel", "group__drwrap.html#ga96dd87016481cbe04b285297557ef633", null ],
     [ "drwrap_get_retval", "group__drwrap.html#gae993f55e025cf80ae67ed398b35a1b61", null ],
     [ "drwrap_get_stats", "group__drwrap.html#gaff958909001824afeeaee334dc612e51", null ],
     [ "drwrap_init", "group__drwrap.html#ga23837833101ebc340ac7de6e8340bb4a", null ],
