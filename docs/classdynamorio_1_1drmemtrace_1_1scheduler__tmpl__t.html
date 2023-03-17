@@ -126,6 +126,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7d51e5baa505e36110a502f46c676d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91999614a34e081ce5ac1449589f4b61"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html">stream_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a91999614a34e081ce5ac1449589f4b61">get_stream</a> (int ordinal)</td></tr>
 <tr class="separator:a91999614a34e081ce5ac1449589f4b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2d645ab70b5b7a977b56da8ffacbd21"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#ac2d645ab70b5b7a977b56da8ffacbd21">get_input_stream_count</a> ()</td></tr>
+<tr class="separator:ac2d645ab70b5b7a977b56da8ffacbd21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d79806586b1a836a8252d49cde9755"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a98d79806586b1a836a8252d49cde9755">get_input_stream_name</a> (int ordinal)</td></tr>
+<tr class="separator:a98d79806586b1a836a8252d49cde9755"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48e72b2d8a865a664becd6d6a5624204"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a48e72b2d8a865a664becd6d6a5624204">get_error_string</a> ()</td></tr>
 <tr class="separator:a48e72b2d8a865a664becd6d6a5624204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -361,6 +365,63 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 
 </div>
 </div>
+<a id="ac2d645ab70b5b7a977b56da8ffacbd21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2d645ab70b5b7a977b56da8ffacbd21">&#9670;&nbsp;</a></span>get_input_stream_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::get_input_stream_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the number of input streams. </p>
+
+</div>
+</div>
+<a id="a98d79806586b1a836a8252d49cde9755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d79806586b1a836a8252d49cde9755">&#9670;&nbsp;</a></span>get_input_stream_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::get_input_stream_name </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ordinal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the name (from get_stream_name()) of the 'ordinal'-th input stream. </p>
+
+</div>
+</div>
 <a id="a91999614a34e081ce5ac1449589f4b61"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a91999614a34e081ce5ac1449589f4b61">&#9670;&nbsp;</a></span>get_stream()</h2>
 
@@ -502,5 +563,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19424 --- Fri Mar 10 2023 03:25:32 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19432 --- Fri Mar 17 2023 03:14:20 &nbsp; <img border=0 src="favicon.png">
 </small></address>

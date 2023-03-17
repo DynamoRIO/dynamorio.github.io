@@ -98,5 +98,7 @@
     [ "type_has_address", "trace__entry_8h.html#ab4d55eef56c45ede7eee1f7daee57840", null ],
     [ "type_is_instr", "trace__entry_8h.html#ad9435e2fc94c587d4af59441c0de9d3c", null ],
     [ "type_is_instr_branch", "trace__entry_8h.html#a507c56307a93f25c501b6cd72c18c269", null ],
+    [ "type_is_instr_conditional_branch", "trace__entry_8h.html#a79506a7f266de23647dd23b667a159ff", null ],
+    [ "type_is_instr_direct_branch", "trace__entry_8h.html#ac7b5dba6340019ec5e1f8d9c23982f1a", null ],
     [ "type_is_prefetch", "trace__entry_8h.html#a7d7697dab762a2fdd95c790e554ba171", null ]
 ],

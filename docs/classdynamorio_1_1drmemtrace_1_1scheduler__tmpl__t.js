@@ -42,6 +42,8 @@
     ] ],
     [ "scheduler_tmpl_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a2f9418f2aad7ebca6ccc9bef08ed1cac", null ],
     [ "get_error_string", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a48e72b2d8a865a664becd6d6a5624204", null ],
+    [ "get_input_stream_count", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#ac2d645ab70b5b7a977b56da8ffacbd21", null ],
+    [ "get_input_stream_name", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a98d79806586b1a836a8252d49cde9755", null ],
     [ "get_stream", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a91999614a34e081ce5ac1449589f4b61", null ],
     [ "init", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a7d51e5baa505e36110a502f46c676d07", null ],
     [ "make_scheduler_parallel_options", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a9b4920e65f3dd2894db0e815b90b86a2", null ],

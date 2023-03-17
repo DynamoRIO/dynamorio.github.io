@@ -251,9 +251,15 @@ By default only the mean, median, and standard deviation of the reuse distances 
 <li><b>-reuse_skip_dist</b> <br  />
 <em>default value: 500</em> <br  />
 Specifies the distance between nodes in the skip list. For optimal performance, set this to a value close to the estimated average reuse distance of the dataset.</li>
+<li><b>-reuse_distance_limit</b> <br  />
+<em>default value: 0</em> <br  />
+Specifies the maximum length of the access history list used for distance calculation. Setting this limit can significantly improve performance and reduce memory consumption for very long traces.</li>
 <li><b>-reuse_verify_skip</b> <br  />
 <em>default value: false</em> <br  />
 Verifies every skip list-calculated reuse distance with a full list walk. This incurs significant additional overhead. This option is only available in debug builds.</li>
+<li><b>-reuse_histogram_bin_multiplier</b> <br  />
+<em>default value: 1</em> <br  />
+The first histogram bin has a size of 1, meaning it contains the count for one distance. Each subsequent bin size is increased by this multiplier. For multipliers &gt;1.0, this results in geometric growth of bin sizes, with multiple distance values being reported for each bin. For large traces, a value of 1.05 works well to limit the output to a reasonable number of bins. Note that this option only affects the printing of histograms via the -reuse_distance_histogram option; the raw histogram data is always collected at full precision.</li>
 <li><b>-record_function</b> <br  />
 <em>default value: ""</em> <br  />
 Record invocations trace for the specified function(s) in the option value. Default value is empty. The value should fit this format: function_name|func_args_num (e.g., -record_function "memset|3") with an optional suffix "|noret" (e.g., -record_function "free|1|noret"). The trace would contain information for each function invocation's return address, function argument value(s), and (unless "|noret" is specified) function return value. (If multiple requested functions map to the same address and differ in whether "noret" was specified, the attribute from the first one requested will be used. If they differ in the number of args, the minimum value will be used.) We only record pointer-sized arguments and return values. The trace identifies which function is involved via a numeric ID entry prior to each set of value entries. The mapping from numeric ID to library-qualified symbolic name is recorded during tracing in a file "funclist.log" whose format is described by the <a class="el" href="drmemtrace_8h.html#abc71b61ef30155adbc03800ce7597261">drmemtrace_get_funclist_path()</a> function's documentation. If the target function is in the dynamic symbol table, then the function_name should be a mangled name (e.g. "_Znwm" for "operator new", "_ZdlPv" for "operator delete"). Otherwise, the function_name should be a demangled name. Recording multiple functions can be achieved by using the separator "&amp;" (e.g., -record_function "memset|3&amp;memcpy|3"), or specifying multiple -record_function options (e.g., -record_function "memset|3" -record_function "memcpy|3"). Note that the provided function name should be unique, and not collide with existing heap functions (see -record_heap_value) if -record_heap option is enabled.</li>
@@ -292,5 +298,5 @@ By default, offline tracing only records a userspace trace. If this option is en
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19424 --- Fri Mar 10 2023 03:25:31 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19432 --- Fri Mar 17 2023 03:14:20 &nbsp; <img border=0 src="favicon.png">
 </small></address>
