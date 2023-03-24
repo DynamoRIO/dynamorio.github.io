@@ -113,7 +113,11 @@ Public Types</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8aa05b6df67b7c4a8d5d1c26f80a86c0d6">SCHEDULER_PROVIDE_PHYSICAL_ADDRESSES</a> = 0x1, 
 <br />
-&#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a7324d6edbeee31f42044b10022033cab">SCHEDULER_SPECULATE_NOPS</a> = 0x2
+&#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a7324d6edbeee31f42044b10022033cab">SCHEDULER_SPECULATE_NOPS</a> = 0x2, 
+<br />
+&#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a1e290a29bdceade505c252246646d97b">SCHEDULER_USE_INPUT_ORDINALS</a> = 0x4, 
+<br />
+&#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a3416a380689b155e43aa091da75a0e6a">SCHEDULER_USE_SINGLE_INPUT_ORDINALS</a> = 0x8
 <br />
  }</td></tr>
 <tr class="separator:a30edfde737fa568af6c815715e32e2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,6 +132,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a91999614a34e081ce5ac1449589f4b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2d645ab70b5b7a977b56da8ffacbd21"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#ac2d645ab70b5b7a977b56da8ffacbd21">get_input_stream_count</a> ()</td></tr>
 <tr class="separator:ac2d645ab70b5b7a977b56da8ffacbd21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80767b1494f169c78daf8e0053b38479"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classmemtrace__stream__t.html">memtrace_stream_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a80767b1494f169c78daf8e0053b38479">get_input_stream_interface</a> (int input_ordinal)</td></tr>
+<tr class="separator:a80767b1494f169c78daf8e0053b38479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98d79806586b1a836a8252d49cde9755"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a98d79806586b1a836a8252d49cde9755">get_input_stream_name</a> (int ordinal)</td></tr>
 <tr class="separator:a98d79806586b1a836a8252d49cde9755"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48e72b2d8a865a664becd6d6a5624204"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a48e72b2d8a865a664becd6d6a5624204">get_error_string</a> ()</td></tr>
@@ -238,6 +244,10 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <tr><td class="fieldname"><a id="a30edfde737fa568af6c815715e32e2b8aa05b6df67b7c4a8d5d1c26f80a86c0d6"></a>SCHEDULER_PROVIDE_PHYSICAL_ADDRESSES&#160;</td><td class="fielddoc"><p>Whether physical addresses should be provided in addition to virtual addresses. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a30edfde737fa568af6c815715e32e2b8a7324d6edbeee31f42044b10022033cab"></a>SCHEDULER_SPECULATE_NOPS&#160;</td><td class="fielddoc"><p>Specifies that speculation should supply just NOP instructions. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a30edfde737fa568af6c815715e32e2b8a1e290a29bdceade505c252246646d97b"></a>SCHEDULER_USE_INPUT_ORDINALS&#160;</td><td class="fielddoc"><p>Causes the get_record_ordinal() and get_instruction_ordinal() results for an output stream to equal those values for the current input stream for that output, rather than accumulating across inputs. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a30edfde737fa568af6c815715e32e2b8a3416a380689b155e43aa091da75a0e6a"></a>SCHEDULER_USE_SINGLE_INPUT_ORDINALS&#160;</td><td class="fielddoc"><p>If there is just one input and just one output stream, this sets <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a1e290a29bdceade505c252246646d97b">dynamorio::drmemtrace::scheduler_tmpl_t::SCHEDULER_USE_INPUT_ORDINALS</a>; otherwise, it has no effect. </p>
 </td></tr>
 </table>
 
@@ -393,6 +403,35 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 
 </div>
 </div>
+<a id="a80767b1494f169c78daf8e0053b38479"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80767b1494f169c78daf8e0053b38479">&#9670;&nbsp;</a></span>get_input_stream_interface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classmemtrace__stream__t.html">memtrace_stream_t</a>* <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::get_input_stream_interface </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>input_ordinal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the <a class="el" href="classmemtrace__stream__t.html">memtrace_stream_t</a> interface for the 'ordinal'-th input stream. </p>
+
+</div>
+</div>
 <a id="a98d79806586b1a836a8252d49cde9755"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a98d79806586b1a836a8252d49cde9755">&#9670;&nbsp;</a></span>get_input_stream_name()</h2>
 
@@ -521,7 +560,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Constructs options for a parallel no-inter-input-dependencies schedule. </p>
+<p>Constructs options for a parallel no-inter-input-dependencies schedule where the output stream's get_record_ordinal() and get_instruction_ordinal() reflect just the current input rather than all past inputs on that output. </p>
 
 </div>
 </div>
@@ -550,7 +589,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Constructs options for a serial as-recorded schedule. </p>
+<p>Constructs options for a serial as-recorded schedule where the output stream's get_record_ordinal() and get_instruction_ordinal() honor skipped records in the input if, and only if, there is a single input and a single output. </p>
 
 </div>
 </div>
@@ -563,5 +602,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19432 --- Fri Mar 17 2023 03:14:20 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19440 --- Fri Mar 24 2023 03:13:59 &nbsp; <img border=0 src="favicon.png">
 </small></address>

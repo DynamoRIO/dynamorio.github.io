@@ -21,7 +21,9 @@
     [ "scheduler_flags_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8", [
       [ "SCHEDULER_DEFAULTS", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8ad602678474ddeba790605499c3c01c24", null ],
       [ "SCHEDULER_PROVIDE_PHYSICAL_ADDRESSES", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8aa05b6df67b7c4a8d5d1c26f80a86c0d6", null ],
-      [ "SCHEDULER_SPECULATE_NOPS", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a7324d6edbeee31f42044b10022033cab", null ]
+      [ "SCHEDULER_SPECULATE_NOPS", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a7324d6edbeee31f42044b10022033cab", null ],
+      [ "SCHEDULER_USE_INPUT_ORDINALS", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a1e290a29bdceade505c252246646d97b", null ],
+      [ "SCHEDULER_USE_SINGLE_INPUT_ORDINALS", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a3416a380689b155e43aa091da75a0e6a", null ]
     ] ],
     [ "scheduler_status_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a0592e3ade99a43962b74dde29c4ab66c", [
       [ "STATUS_SUCCESS", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a0592e3ade99a43962b74dde29c4ab66ca28609e98574276bdd514688f37e93bb0", null ],
@@ -43,6 +45,7 @@
     [ "scheduler_tmpl_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a2f9418f2aad7ebca6ccc9bef08ed1cac", null ],
     [ "get_error_string", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a48e72b2d8a865a664becd6d6a5624204", null ],
     [ "get_input_stream_count", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#ac2d645ab70b5b7a977b56da8ffacbd21", null ],
+    [ "get_input_stream_interface", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a80767b1494f169c78daf8e0053b38479", null ],
     [ "get_input_stream_name", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a98d79806586b1a836a8252d49cde9755", null ],
     [ "get_stream", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a91999614a34e081ce5ac1449589f4b61", null ],
     [ "init", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a7d51e5baa505e36110a502f46c676d07", null ],

@@ -198,7 +198,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns a name for the current input stream feeding this output stream. For stored offline traces, this is the base name of the trace on disk. For online traces, this is the name of the pipe. </p>
+<p>Returns the ordinal for the current input stream feeding this output stream. </p>
 
 </div>
 </div>
@@ -226,7 +226,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the count of instructions from the start of the trace to this point. This includes instructions skipped over and not presented to any tool. </p>
+<p>Returns the count of instructions from the start of the trace to this point. If <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a1e290a29bdceade505c252246646d97b">dynamorio::drmemtrace::scheduler_tmpl_t::SCHEDULER_USE_INPUT_ORDINALS</a> is set, then this value matches the instruction ordinal for the current input stream (and thus might decrease or not change across records if the input changed). Otherwise, if multiple input streams fed into this output stream, this includes the records from all those streams that were presented here: thus, this may be larger than what the current input stream reports (see <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a80767b1494f169c78daf8e0053b38479">get_input_stream_interface()</a> and <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a40fad92f80d41eb157b04763c97f275d">get_input_stream_ordinal()</a>). This does not advance across skipped records in an input stream from a region of interest (see <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::range_t</a>), but it does advance if the output stream skipped ahead. </p>
 
 <p>Implements <a class="el" href="classmemtrace__stream__t.html#aebf60da55c5ba6a0479d3063e542b1c3">memtrace_stream_t</a>.</p>
 
@@ -316,7 +316,8 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the count of <a class="el" href="memref_8h.html#a5dc7702c7dece5c18bb576bf26d724b5">memref_t</a> records from the start of the trace to this point. This includes records skipped over and not presented to any tool. It does not include synthetic records (see <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ab276351adf53d50aecba8954f7f839d4">is_record_synthetic()</a>). </p>
+<p>Returns the count of <a class="el" href="memref_8h.html#a5dc7702c7dece5c18bb576bf26d724b5">memref_t</a> records from the start of the trace to this point. It does not include synthetic records (see <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ab276351adf53d50aecba8954f7f839d4">is_record_synthetic()</a>).</p>
+<p>If <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a1e290a29bdceade505c252246646d97b">dynamorio::drmemtrace::scheduler_tmpl_t::SCHEDULER_USE_INPUT_ORDINALS</a> is set, then this value matches the record ordinal for the current input stream (and thus might decrease or not change across records if the input changed). Otherwise, if multiple input streams fed into this output stream, this includes the records from all those streams that were presented here: thus, this may be larger than what the current input stream reports (see <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a80767b1494f169c78daf8e0053b38479">get_input_stream_interface()</a> and <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a40fad92f80d41eb157b04763c97f275d">get_input_stream_ordinal()</a>). This does not advance across skipped records in an input stream from a region of interest (see <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::range_t</a>), but it does advance if the output stream skipped ahead. </p>
 
 <p>Implements <a class="el" href="classmemtrace__stream__t.html#a1a532a99af366cf8cca051a57e208b3e">memtrace_stream_t</a>.</p>
 
@@ -536,5 +537,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19432 --- Fri Mar 17 2023 03:14:20 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19440 --- Fri Mar 24 2023 03:13:59 &nbsp; <img border=0 src="favicon.png">
 </small></address>
