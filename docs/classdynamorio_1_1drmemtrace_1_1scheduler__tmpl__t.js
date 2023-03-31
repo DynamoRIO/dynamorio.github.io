@@ -5,6 +5,8 @@
     [ "range_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html", {% include_relative structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.js %} ],
     [ "scheduler_options_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html", {% include_relative structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.js %} ],
     [ "stream_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.js %} ],
+    [ "input_ordinal_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aba6242678835329015e0fc77404a1865", null ],
+    [ "output_ordinal_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#abbf00e5453f5498c1fa32d7e00c760db", null ],
     [ "inter_input_dependency_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9", [
       [ "DEPENDENCY_IGNORE", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9af3b4cadcd03eac1003ccd1aced5e2823", null ],
       [ "DEPENDENCY_TIMESTAMPS", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9afa1e39bbc41fe11cc3bbbd36b2a13e6e", null ]
@@ -45,10 +47,12 @@
     [ "scheduler_tmpl_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a2f9418f2aad7ebca6ccc9bef08ed1cac", null ],
     [ "get_error_string", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a48e72b2d8a865a664becd6d6a5624204", null ],
     [ "get_input_stream_count", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#ac2d645ab70b5b7a977b56da8ffacbd21", null ],
-    [ "get_input_stream_interface", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a80767b1494f169c78daf8e0053b38479", null ],
-    [ "get_input_stream_name", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a98d79806586b1a836a8252d49cde9755", null ],
-    [ "get_stream", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a91999614a34e081ce5ac1449589f4b61", null ],
+    [ "get_input_stream_interface", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a9919b0813788b88cb62cb1e00f502823", null ],
+    [ "get_input_stream_name", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#accf392f36d5d43785b5d7393da924df7", null ],
+    [ "get_stream", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#ab2c178ab7a3601b6118ae097125929bd", null ],
     [ "init", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a7d51e5baa505e36110a502f46c676d07", null ],
     [ "make_scheduler_parallel_options", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a9b4920e65f3dd2894db0e815b90b86a2", null ],
-    [ "make_scheduler_serial_options", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a0113e22f99b0567bb696e7acbd2fa772", null ]
+    [ "make_scheduler_serial_options", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a0113e22f99b0567bb696e7acbd2fa772", null ],
+    [ "INVALID_INPUT_ORDINAL", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a398cc507d2536ab133db95b54712ed50", null ],
+    [ "INVALID_OUTPUT_ORDINAL", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a56ee6d0a122e5d754c7d834b2e4dd4aa", null ]
 ],
