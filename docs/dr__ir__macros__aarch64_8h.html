@@ -680,8 +680,6 @@ Macros</h2></td></tr>
 <tr class="separator:aa46859f566dab04b5c4af6c0e27fa08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ce79c85b606354c09291ab6223cf644"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a9ce79c85b606354c09291ab6223cf644">INSTR_CREATE_udot_vector_indexed</a>(dc,  Rd,  Rn,  Rm,  index)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac054e6a60d13039969c11f6094da4233">instr_create_1dst_5src</a>(dc, OP_udot, Rd, Rd, Rn, Rm, index, <a class="el" href="dr__ir__macros__aarch64_8h.html#a9c57dfea6090119e2ef1f7b2aea4c12a">OPND_CREATE_BYTE</a>())</td></tr>
 <tr class="separator:a9ce79c85b606354c09291ab6223cf644"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba779414eb8acdf1d5f5497ade5b7adc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#aba779414eb8acdf1d5f5497ade5b7adc">INSTR_CREATE_xpaci</a>(dc,  Rd)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a842dc7ac2aea828a00c51765465f5428">instr_create_0dst_1src</a>((dc), OP_xpaci, (Rd))</td></tr>
-<tr class="separator:aba779414eb8acdf1d5f5497ade5b7adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a564b47e517e1fd8dfe5b20027a511c58"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a564b47e517e1fd8dfe5b20027a511c58">INSTR_CREATE_bfcvt</a>(dc,  Rd,  Rn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_bfcvt, Rd, Rn)</td></tr>
 <tr class="separator:a564b47e517e1fd8dfe5b20027a511c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e27e5c7ba581d8c8c737465d040a9b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a4e27e5c7ba581d8c8c737465d040a9b0">INSTR_CREATE_bfcvtn2_vector</a>(dc,  Rd,  Rn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_bfcvtn2, Rd, Rn, <a class="el" href="dr__ir__macros__aarch64_8h.html#a24dca05089893aac1b7be58819fc8506">OPND_CREATE_SINGLE</a>())</td></tr>
@@ -1712,6 +1710,34 @@ Macros</h2></td></tr>
 <tr class="separator:a8d42243f03ec5037f5780f0077513037"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b6e8b5a18267efe6a6dd5b2afd66cc8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a0b6e8b5a18267efe6a6dd5b2afd66cc8">INSTR_CREATE_pacizb</a>(dc,  Rd)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_pacizb, Rd, Rd)</td></tr>
 <tr class="separator:a0b6e8b5a18267efe6a6dd5b2afd66cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a1e1ebb0404a57d2ff24f25bf16232"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a06a1e1ebb0404a57d2ff24f25bf16232">INSTR_CREATE_ldraa</a>(dc,  Rt,  Rn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_ldraa, Rt, Rn)</td></tr>
+<tr class="separator:a06a1e1ebb0404a57d2ff24f25bf16232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a396b707fd01ad83bfaecc62edcd8d8d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a396b707fd01ad83bfaecc62edcd8d8d5">INSTR_CREATE_ldraa_imm</a>(dc,  Rt,  Xn,  Rn,  simm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ad325ffad9f6165c311be190f6eaa9edc">instr_create_2dst_3src</a>(dc, OP_ldraa, Rt, Xn, Rn, Xn, simm)</td></tr>
+<tr class="separator:a396b707fd01ad83bfaecc62edcd8d8d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a654cdd23463dce2bfc3898905107e53e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a654cdd23463dce2bfc3898905107e53e">INSTR_CREATE_ldrab</a>(dc,  Rt,  Rn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_ldrab, Rt, Rn)</td></tr>
+<tr class="separator:a654cdd23463dce2bfc3898905107e53e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a588ac3f29e335b4fa1083879ad404dde"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a588ac3f29e335b4fa1083879ad404dde">INSTR_CREATE_ldrab_imm</a>(dc,  Rt,  Xn,  Rn,  simm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ad325ffad9f6165c311be190f6eaa9edc">instr_create_2dst_3src</a>(dc, OP_ldrab, Rt, Xn, Rn, Xn, simm)</td></tr>
+<tr class="separator:a588ac3f29e335b4fa1083879ad404dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab624d1dda2fe64879d64e6aa19a90267"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ab624d1dda2fe64879d64e6aa19a90267">INSTR_CREATE_xpacd</a>(dc,  Rd)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_xpacd, Rd, Rd)</td></tr>
+<tr class="separator:ab624d1dda2fe64879d64e6aa19a90267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba779414eb8acdf1d5f5497ade5b7adc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#aba779414eb8acdf1d5f5497ade5b7adc">INSTR_CREATE_xpaci</a>(dc,  Rd)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_xpaci, Rd, Rd)</td></tr>
+<tr class="separator:aba779414eb8acdf1d5f5497ade5b7adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb0ab0c4af3e65793809de7a767e48e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#afeb0ab0c4af3e65793809de7a767e48e">INSTR_CREATE_xpaclri</a>(dc)</td></tr>
+<tr class="separator:afeb0ab0c4af3e65793809de7a767e48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab16eb6cc2804e528628a3bba398f05d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ab16eb6cc2804e528628a3bba398f05d1">INSTR_CREATE_eretaa</a>(dc)</td></tr>
+<tr class="separator:ab16eb6cc2804e528628a3bba398f05d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5fbc04167cee081bbf89de0f687dc6e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ae5fbc04167cee081bbf89de0f687dc6e">INSTR_CREATE_eretab</a>(dc)</td></tr>
+<tr class="separator:ae5fbc04167cee081bbf89de0f687dc6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f151071d2bda05983d9b7c2fe3edaea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a3f151071d2bda05983d9b7c2fe3edaea">INSTR_CREATE_retaa</a>(dc)</td></tr>
+<tr class="separator:a3f151071d2bda05983d9b7c2fe3edaea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a701c67891387246ad72779507d32b8b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a701c67891387246ad72779507d32b8b6">INSTR_CREATE_retab</a>(dc)</td></tr>
+<tr class="separator:a701c67891387246ad72779507d32b8b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfded896b75073fbbcc9c9aea84615bb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#abfded896b75073fbbcc9c9aea84615bb">INSTR_CREATE_fjcvtzs</a>(dc,  Rd,  Rn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_fjcvtzs, Rd, Rn)</td></tr>
+<tr class="separator:abfded896b75073fbbcc9c9aea84615bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5d92e16b7d45d0cbfab667c714f4368"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#aa5d92e16b7d45d0cbfab667c714f4368">INSTR_CREATE_dc_cvap</a>(dc,  Rn)</td></tr>
+<tr class="separator:aa5d92e16b7d45d0cbfab667c714f4368"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4388ea4e70337ba5e062d13b58e1064"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#af4388ea4e70337ba5e062d13b58e1064">INSTR_CREATE_dc_cvadp</a>(dc,  Rn)</td></tr>
+<tr class="separator:af4388ea4e70337ba5e062d13b58e1064"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Platform-independent macros</div></td></tr>
 <tr class="memitem:a193d2b0123b3bdf0b9200f34a54d8002"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a193d2b0123b3bdf0b9200f34a54d8002">XINST_CREATE_debug_instr</a>(dc)&#160;&#160;&#160;INSTR_CREATE_brk((dc), <a class="el" href="dr__ir__macros_8h.html#ac2d087cee8f6726f09d76852c156e0cc">OPND_CREATE_INT16</a>(0))</td></tr>
 <tr class="separator:a193d2b0123b3bdf0b9200f34a54d8002"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -8740,6 +8766,84 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="af4388ea4e70337ba5e062d13b58e1064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4388ea4e70337ba5e062d13b58e1064">&#9670;&nbsp;</a></span>INSTR_CREATE_dc_cvadp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_dc_cvadp</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="dr__ir__instr_8h.html#a842dc7ac2aea828a00c51765465f5428">instr_create_0dst_1src</a>(dc, OP_dc_cvadp,                                             \</div>
+<div class="line">                           <a class="code" href="dr__ir__opnd_8h.html#aca5e108b4c712fbe7adbc67ba44efc1f">opnd_create_base_disp_aarch64</a>(<a class="code" href="dr__ir__opnd_8h.html#ac3ba48b3ee94afa0dde7fa025c199892">opnd_get_reg</a>(Rn), <a class="code" href="dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600a3b7e285b0a732b7da09c0f65a66f7882">DR_REG_NULL</a>, \</div>
+<div class="line">                                                         0, <span class="keyword">false</span>, 0, 0, <a class="code" href="dr__ir__opnd_8h.html#a0d7061649ceb8fa7af5b7aceeb8465ef">OPSZ_sys</a>))</div>
+</div><!-- fragment --><p>Creates a DC CVADP instruction.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rn</td><td>The input register containing the virtual address to use. No alignment restrictions apply to this VA. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa5d92e16b7d45d0cbfab667c714f4368"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5d92e16b7d45d0cbfab667c714f4368">&#9670;&nbsp;</a></span>INSTR_CREATE_dc_cvap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_dc_cvap</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="dr__ir__instr_8h.html#a842dc7ac2aea828a00c51765465f5428">instr_create_0dst_1src</a>(dc, OP_dc_cvap,                                              \</div>
+<div class="line">                           <a class="code" href="dr__ir__opnd_8h.html#aca5e108b4c712fbe7adbc67ba44efc1f">opnd_create_base_disp_aarch64</a>(<a class="code" href="dr__ir__opnd_8h.html#ac3ba48b3ee94afa0dde7fa025c199892">opnd_get_reg</a>(Rn), <a class="code" href="dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600a3b7e285b0a732b7da09c0f65a66f7882">DR_REG_NULL</a>, \</div>
+<div class="line">                                                         0, <span class="keyword">false</span>, 0, 0, <a class="code" href="dr__ir__opnd_8h.html#a0d7061649ceb8fa7af5b7aceeb8465ef">OPSZ_sys</a>))</div>
+</div><!-- fragment --><p>Creates a DC CVAP instruction.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rn</td><td>The input register containing the virtual address to use. No alignment restrictions apply to this VA. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a5728174a291e62ebb5da2b7af11097da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5728174a291e62ebb5da2b7af11097da">&#9670;&nbsp;</a></span>INSTR_CREATE_decb</h2>
 
@@ -9845,6 +9949,62 @@ Macros</h2></td></tr>
     <tr><td class="paramname">Vd</td><td>The destination register. Can be H (halfword, 16 bits), S (singleword, 32 bits), B (byte, 8 bits) or D (doubleword, 64 bits). </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
     <tr><td class="paramname">Zn</td><td>The source vector register, Z (Scalable). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab16eb6cc2804e528628a3bba398f05d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab16eb6cc2804e528628a3bba398f05d1">&#9670;&nbsp;</a></span>INSTR_CREATE_eretaa</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_eretaa</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="dr__ir__instr_8h.html#ac63dd4374971e41477dc9f1dd7c7509d">instr_create_0dst_2src</a>(dc, OP_eretaa, <a class="code" href="dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda">opnd_create_reg</a>(DR_REG_X30), \</div>
+<div class="line">                           <a class="code" href="dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda">opnd_create_reg</a>(<a class="code" href="dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600acc56139692ee246f01acdbcac55f3ad8">DR_REG_SP</a>))</div>
+</div><!-- fragment --><p>Creates an ERETAA instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    ERETAA
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae5fbc04167cee081bbf89de0f687dc6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5fbc04167cee081bbf89de0f687dc6e">&#9670;&nbsp;</a></span>INSTR_CREATE_eretab</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_eretab</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="dr__ir__instr_8h.html#ac63dd4374971e41477dc9f1dd7c7509d">instr_create_0dst_2src</a>(dc, OP_eretab, <a class="code" href="dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda">opnd_create_reg</a>(DR_REG_X30), \</div>
+<div class="line">                           <a class="code" href="dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda">opnd_create_reg</a>(<a class="code" href="dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600acc56139692ee246f01acdbcac55f3ad8">DR_REG_SP</a>))</div>
+</div><!-- fragment --><p>Creates an ERETAB instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    ERETAB
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -14621,6 +14781,50 @@ Macros</h2></td></tr>
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Zd</td><td>The destination vector register, Z (Scalable) </td></tr>
     <tr><td class="paramname">Zn</td><td>The source vector register, Z (Scalable) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abfded896b75073fbbcc9c9aea84615bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfded896b75073fbbcc9c9aea84615bb">&#9670;&nbsp;</a></span>INSTR_CREATE_fjcvtzs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_fjcvtzs</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_fjcvtzs, Rd, Rn)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a FJCVTZS instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    FJCVTZS &lt;Wd&gt;, &lt;Dn&gt;
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The destination register, W (Word, 32 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The source register, D (doubleword, 64 bits). </td></tr>
   </table>
   </dd>
 </dl>
@@ -26167,6 +26371,210 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="a06a1e1ebb0404a57d2ff24f25bf16232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06a1e1ebb0404a57d2ff24f25bf16232">&#9670;&nbsp;</a></span>INSTR_CREATE_ldraa</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ldraa</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_ldraa, Rt, Rn)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a LDRAA instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    LDRAA   &lt;Xt&gt;, [&lt;Xn|SP&gt;, #&lt;simm&gt;]
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rt</td><td>The destination register, X (Extended, 64 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The first source base register with an immediate offset, constructed with the function: opnd_create_base_disp(Rn, DR_REG_NULL, 0, simm, OPSZ_8) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a396b707fd01ad83bfaecc62edcd8d8d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a396b707fd01ad83bfaecc62edcd8d8d5">&#9670;&nbsp;</a></span>INSTR_CREATE_ldraa_imm</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ldraa_imm</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">simm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ad325ffad9f6165c311be190f6eaa9edc">instr_create_2dst_3src</a>(dc, OP_ldraa, Rt, Xn, Rn, Xn, simm)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a LDRAA instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    LDRAA   &lt;Xt&gt;, [&lt;Xn|SP&gt;, #&lt;simm&gt;]!
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rt</td><td>The destination register, X (Extended, 64 bits). </td></tr>
+    <tr><td class="paramname">Xn</td><td>The base register. </td></tr>
+    <tr><td class="paramname">Rn</td><td>The base register with an immediate offset, constructed with the function: opnd_create_base_disp(Xn, DR_REG_NULL, 0, simm, OPSZ_8) </td></tr>
+    <tr><td class="paramname">simm</td><td>The immediate offset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a654cdd23463dce2bfc3898905107e53e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a654cdd23463dce2bfc3898905107e53e">&#9670;&nbsp;</a></span>INSTR_CREATE_ldrab</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ldrab</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_ldrab, Rt, Rn)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a LDRAB instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    LDRAB   &lt;Xt&gt;, [&lt;Xn|SP&gt;, #&lt;simm&gt;]
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rt</td><td>The destination register, X (Extended, 64 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The first source base register with an immediate offset, constructed with the function: opnd_create_base_disp(Rn, DR_REG_NULL, 0, simm, OPSZ_8) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a588ac3f29e335b4fa1083879ad404dde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a588ac3f29e335b4fa1083879ad404dde">&#9670;&nbsp;</a></span>INSTR_CREATE_ldrab_imm</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ldrab_imm</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Xn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">simm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ad325ffad9f6165c311be190f6eaa9edc">instr_create_2dst_3src</a>(dc, OP_ldrab, Rt, Xn, Rn, Xn, simm)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a LDRAB instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    LDRAB   &lt;Xt&gt;, [&lt;Xn|SP&gt;, #&lt;simm&gt;]!
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rt</td><td>The destination register, X (Extended, 64 bits). </td></tr>
+    <tr><td class="paramname">Xn</td><td>The base register. </td></tr>
+    <tr><td class="paramname">Rn</td><td>The base register with an immediate offset, constructed with the function: opnd_create_base_disp(Xn, DR_REG_NULL, 0, simm, OPSZ_8) </td></tr>
+    <tr><td class="paramname">simm</td><td>The immediate offset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a0b5057671e3df51cec382a66e4ec77dc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0b5057671e3df51cec382a66e4ec77dc">&#9670;&nbsp;</a></span>INSTR_CREATE_lsl_sve</h2>
 
@@ -29964,6 +30372,62 @@ Macros</h2></td></tr>
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Rd</td><td>The destination register, X (Extended, 64 bits). </td></tr>
     <tr><td class="paramname">simm</td><td>The signed immediate imm. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3f151071d2bda05983d9b7c2fe3edaea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f151071d2bda05983d9b7c2fe3edaea">&#9670;&nbsp;</a></span>INSTR_CREATE_retaa</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_retaa</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="dr__ir__instr_8h.html#ac63dd4374971e41477dc9f1dd7c7509d">instr_create_0dst_2src</a>(dc, OP_retaa, <a class="code" href="dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda">opnd_create_reg</a>(DR_REG_X30), \</div>
+<div class="line">                           <a class="code" href="dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda">opnd_create_reg</a>(<a class="code" href="dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600acc56139692ee246f01acdbcac55f3ad8">DR_REG_SP</a>))</div>
+</div><!-- fragment --><p>Creates a RETAA instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    RETAA
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a701c67891387246ad72779507d32b8b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a701c67891387246ad72779507d32b8b6">&#9670;&nbsp;</a></span>INSTR_CREATE_retab</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_retab</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="dr__ir__instr_8h.html#ac63dd4374971e41477dc9f1dd7c7509d">instr_create_0dst_2src</a>(dc, OP_retab, <a class="code" href="dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda">opnd_create_reg</a>(DR_REG_X30), \</div>
+<div class="line">                           <a class="code" href="dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda">opnd_create_reg</a>(<a class="code" href="dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600acc56139692ee246f01acdbcac55f3ad8">DR_REG_SP</a>))</div>
+</div><!-- fragment --><p>Creates a RETAB instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    RETAB
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -44252,6 +44716,43 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="ab624d1dda2fe64879d64e6aa19a90267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab624d1dda2fe64879d64e6aa19a90267">&#9670;&nbsp;</a></span>INSTR_CREATE_xpacd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_xpacd</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rd&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_xpacd, Rd, Rd)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a XPACD instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    XPACD   &lt;Xd&gt;
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The source and destination register, X (Extended, 64 bits). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aba779414eb8acdf1d5f5497ade5b7adc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba779414eb8acdf1d5f5497ade5b7adc">&#9670;&nbsp;</a></span>INSTR_CREATE_xpaci</h2>
 
@@ -44273,14 +44774,44 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a842dc7ac2aea828a00c51765465f5428">instr_create_0dst_1src</a>((dc), OP_xpaci, (Rd))</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_xpaci, Rd, Rd)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates an XPACI instruction. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Creates a XPACI instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    XPACI   &lt;Xd&gt;
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
-    <tr><td class="paramname">Rd</td><td>Register with PAC bits to remove. </td></tr>
+    <tr><td class="paramname">Rd</td><td>The source and destination register, X (Extended, 64 bits). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afeb0ab0c4af3e65793809de7a767e48e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeb0ab0c4af3e65793809de7a767e48e">&#9670;&nbsp;</a></span>INSTR_CREATE_xpaclri</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_xpaclri</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_xpaclri, <a class="code" href="dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda">opnd_create_reg</a>(DR_REG_X30), \</div>
+<div class="line">                           <a class="code" href="dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda">opnd_create_reg</a>(DR_REG_X30))</div>
+</div><!-- fragment --><p>Creates a XPACLRI instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    XPACLRI
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -46113,9 +46644,11 @@ Macros</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="adr__ir__opnd_8h_html_a0d7061649ceb8fa7af5b7aceeb8465ef"><div class="ttname"><a href="dr__ir__opnd_8h.html#a0d7061649ceb8fa7af5b7aceeb8465ef">OPSZ_sys</a></div><div class="ttdeci">#define OPSZ_sys</div><div class="ttdef"><b>Definition:</b> dr_ir_opnd.h:273</div></div>
 <div class="ttc" id="adr__ir__macros__arm_8h_html_a6f30cf38f185da77631098a78a0ceebc"><div class="ttname"><a href="dr__ir__macros__arm_8h.html#a6f30cf38f185da77631098a78a0ceebc">INSTR_CREATE_ldr</a></div><div class="ttdeci">#define INSTR_CREATE_ldr(dc, Rd, mem)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_arm.h:1821</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a5d8f8a71494683ce0fe5ba1995246906"><div class="ttname"><a href="dr__ir__instr_8h.html#a5d8f8a71494683ce0fe5ba1995246906">instr_create_2dst_2src</a></div><div class="ttdeci">DR_API instr_t * instr_create_2dst_2src(void *drcontext, int opcode, opnd_t dst1, opnd_t dst2, opnd_t src1, opnd_t src2)</div></div>
 <div class="ttc" id="adr__ir__macros__arm_8h_html_a8f83f8223e55cc0f4204ee06a827e565"><div class="ttname"><a href="dr__ir__macros__arm_8h.html#a8f83f8223e55cc0f4204ee06a827e565">INSTR_CREATE_str</a></div><div class="ttdeci">#define INSTR_CREATE_str(dc, mem, Rt)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_arm.h:1874</div></div>
+<div class="ttc" id="adr__ir__opnd_8h_html_aca5e108b4c712fbe7adbc67ba44efc1f"><div class="ttname"><a href="dr__ir__opnd_8h.html#aca5e108b4c712fbe7adbc67ba44efc1f">opnd_create_base_disp_aarch64</a></div><div class="ttdeci">DR_API opnd_t opnd_create_base_disp_aarch64(reg_id_t base_reg, reg_id_t index_reg, dr_extend_type_t extend_type, bool scaled, int disp, dr_opnd_flags_t flags, opnd_size_t size)</div></div>
 <div class="ttc" id="adr__ir__macros__aarch64_8h_html_afe62aa83b4e18021c3c4880dc573f78c"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#afe62aa83b4e18021c3c4880dc573f78c">OPND_CREATE_MUL</a></div><div class="ttdeci">#define OPND_CREATE_MUL()</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:118</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a3408612a2953255e7c3572cf76d296c1"><div class="ttname"><a href="dr__ir__opnd_8h.html#a3408612a2953255e7c3572cf76d296c1">opnd_create_predicate_reg</a></div><div class="ttdeci">DR_API INSTR_INLINE opnd_t opnd_create_predicate_reg(reg_id_t r, bool is_merge)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a048d3f53da2ae3bbce71c91ceaa95f79"><div class="ttname"><a href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a></div><div class="ttdeci">DR_API instr_t * instr_create_1dst_1src(void *drcontext, int opcode, opnd_t dst, opnd_t src)</div></div>
@@ -46123,8 +46656,10 @@ Macros</h2></td></tr>
 <div class="ttc" id="adr__ir__opnd_8h_html_a06b4d3a410d453f25bb74309ef935757"><div class="ttname"><a href="dr__ir__opnd_8h.html#a06b4d3a410d453f25bb74309ef935757">DR_REG_XSP</a></div><div class="ttdeci">#define DR_REG_XSP</div><div class="ttdef"><b>Definition:</b> dr_ir_opnd.h:1317</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_aaa12ec7efc16854dad9dcd7ae3c2e8a4"><div class="ttname"><a href="dr__ir__opnd_8h.html#aaa12ec7efc16854dad9dcd7ae3c2e8a4">opnd_create_increment_reg</a></div><div class="ttdeci">DR_API opnd_t opnd_create_increment_reg(opnd_t opnd, uint increment)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a1165bad1ad9859d6ffdcead0da1cd51a"><div class="ttname"><a href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a></div><div class="ttdeci">DR_API instr_t * instr_create_1dst_4src(void *drcontext, int opcode, opnd_t dst, opnd_t src1, opnd_t src2, opnd_t src3, opnd_t src4)</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_a842dc7ac2aea828a00c51765465f5428"><div class="ttname"><a href="dr__ir__instr_8h.html#a842dc7ac2aea828a00c51765465f5428">instr_create_0dst_1src</a></div><div class="ttdeci">DR_API instr_t * instr_create_0dst_1src(void *drcontext, int opcode, opnd_t src)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_ac3cc66fd1a43008c1faf1a6f9a9695b2"><div class="ttname"><a href="dr__ir__opnd_8h.html#ac3cc66fd1a43008c1faf1a6f9a9695b2">opnd_is_base_disp</a></div><div class="ttdeci">DR_API bool opnd_is_base_disp(opnd_t opnd)</div></div>
 <div class="ttc" id="adr__ir__macros_8h_html_a0cf77f656e96684678c30892c0c718af"><div class="ttname"><a href="dr__ir__macros_8h.html#a0cf77f656e96684678c30892c0c718af">OPND_CREATE_INT8</a></div><div class="ttdeci">#define OPND_CREATE_INT8(val)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros.h:136</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_ac63dd4374971e41477dc9f1dd7c7509d"><div class="ttname"><a href="dr__ir__instr_8h.html#ac63dd4374971e41477dc9f1dd7c7509d">instr_create_0dst_2src</a></div><div class="ttdeci">DR_API instr_t * instr_create_0dst_2src(void *drcontext, int opcode, opnd_t src1, opnd_t src2)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a2ad1058d00bd03758ab946f4852195f7"><div class="ttname"><a href="dr__ir__instr_8h.html#a2ad1058d00bd03758ab946f4852195f7">instr_create_3dst_2src</a></div><div class="ttdeci">DR_API instr_t * instr_create_3dst_2src(void *drcontext, int opcode, opnd_t dst1, opnd_t dst2, opnd_t dst3, opnd_t src1, opnd_t src2)</div></div>
 <div class="ttc" id="adr__ir__macros_8h_html_aa32fcd12a03eb97ef42ded7b68a85203"><div class="ttname"><a href="dr__ir__macros_8h.html#aa32fcd12a03eb97ef42ded7b68a85203">OPND_CREATE_INT32</a></div><div class="ttdeci">#define OPND_CREATE_INT32(val)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros.h:124</div></div>
 <div class="ttc" id="adr__ir__macros__aarch64_8h_html_abc0827a4d3590c1f4dbb10e85f7326e6"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#abc0827a4d3590c1f4dbb10e85f7326e6">OPND_CREATE_DOUBLE</a></div><div class="ttdeci">#define OPND_CREATE_DOUBLE()</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:90</div></div>
@@ -46136,6 +46671,7 @@ Macros</h2></td></tr>
 <div class="ttc" id="adr__ir__instr_8h_html_a4e7a3b0fe8aba75d1d25081422a6063c"><div class="ttname"><a href="dr__ir__instr_8h.html#a4e7a3b0fe8aba75d1d25081422a6063c">instr_create_5dst_5src</a></div><div class="ttdeci">DR_API instr_t * instr_create_5dst_5src(void *drcontext, int opcode, opnd_t dst1, opnd_t dst2, opnd_t dst3, opnd_t dst4, opnd_t dst5, opnd_t src1, opnd_t src2, opnd_t src3, opnd_t src4, opnd_t src5)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_afae7934b382c9878b415a3fdd8a55204"><div class="ttname"><a href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a></div><div class="ttdeci">DR_API instr_t * instr_create_1dst_2src(void *drcontext, int opcode, opnd_t dst, opnd_t src1, opnd_t src2)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a40b831f95abf3ee22f584a63e86a96c3"><div class="ttname"><a href="dr__ir__opnd_8h.html#a40b831f95abf3ee22f584a63e86a96c3">opnd_size_in_bytes</a></div><div class="ttdeci">DR_API uint opnd_size_in_bytes(opnd_size_t size)</div></div>
+<div class="ttc" id="adr__ir__opnd_8h_html_abed82baf7f470b522273a3e37c24c600a3b7e285b0a732b7da09c0f65a66f7882"><div class="ttname"><a href="dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600a3b7e285b0a732b7da09c0f65a66f7882">DR_REG_NULL</a></div><div class="ttdeci">@ DR_REG_NULL</div><div class="ttdef"><b>Definition:</b> dr_ir_opnd.h:296</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_aa4a4d5c6b8fd6d065b4719124f4dcafe"><div class="ttname"><a href="dr__ir__opnd_8h.html#aa4a4d5c6b8fd6d065b4719124f4dcafe">opnd_is_reg</a></div><div class="ttdeci">DR_API bool opnd_is_reg(opnd_t opnd)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_abed82baf7f470b522273a3e37c24c600acc56139692ee246f01acdbcac55f3ad8"><div class="ttname"><a href="dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600acc56139692ee246f01acdbcac55f3ad8">DR_REG_SP</a></div><div class="ttdeci">@ DR_REG_SP</div><div class="ttdef"><b>Definition:</b> dr_ir_opnd.h:337</div></div>
 <div class="ttc" id="adr__ir__macros__aarch64_8h_html_a558ba3fb3352b374652c745790db7ce0"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#a558ba3fb3352b374652c745790db7ce0">OPND_CREATE_ZR</a></div><div class="ttdeci">#define OPND_CREATE_ZR(reg)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:111</div></div>
@@ -46157,5 +46693,5 @@ Macros</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.91.19446 --- Fri Mar 31 2023 03:15:10 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.92.19454 --- Fri Apr 7 2023 03:14:21 &nbsp; <img border=0 src="favicon.png">
 </small></address>

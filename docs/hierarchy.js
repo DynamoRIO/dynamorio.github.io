@@ -94,14 +94,11 @@
     [ "pt_cpu_t", "structpt__cpu__t.html", null ],
     [ "pt_sb_config_t", "structpt__sb__config__t.html", null ],
     [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::range_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html", null ],
+    [ "raw2trace_t", "classraw2trace__t.html", null ],
     [ "reuse_distance_knobs_t", "structreuse__distance__knobs__t.html", null ],
     [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::scheduler_options_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html", null ],
     [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html", null ],
     [ "tlb_simulator_knobs_t", "structtlb__simulator__knobs__t.html", null ],
-    [ "trace_converter_t< T >", "classtrace__converter__t.html", null ],
-    [ "trace_converter_t< raw2trace_t >", "classtrace__converter__t.html", [
-      [ "raw2trace_t", "classraw2trace__t.html", null ]
-    ] ],
     [ "trace_header_t", "structtrace__header__t.html", null ],
     [ "trace_metadata_reader_t", "structtrace__metadata__reader__t.html", null ],
     [ "trace_metadata_writer_t", "structtrace__metadata__writer__t.html", null ]

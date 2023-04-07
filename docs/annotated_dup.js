@@ -93,7 +93,6 @@
     [ "reader_t", "classreader__t.html", {% include_relative classreader__t.js %} ],
     [ "reuse_distance_knobs_t", "structreuse__distance__knobs__t.html", null ],
     [ "tlb_simulator_knobs_t", "structtlb__simulator__knobs__t.html", null ],
-    [ "trace_converter_t", "classtrace__converter__t.html", {% include_relative classtrace__converter__t.js %} ],
     [ "trace_header_t", "structtrace__header__t.html", null ],
     [ "trace_metadata_reader_t", "structtrace__metadata__reader__t.html", null ],
     [ "trace_metadata_writer_t", "structtrace__metadata__writer__t.html", null ]
