@@ -86,7 +86,9 @@
       [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::stream_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html", null ],
       [ "reader_t", "classreader__t.html", null ]
     ] ],
-    [ "module_mapper_t", "classmodule__mapper__t.html", null ],
+    [ "module_mapper_t", "classmodule__mapper__t.html", [
+      [ "test_module_mapper_t", "classtest__module__mapper__t.html", null ]
+    ] ],
     [ "opnd_t", "structopnd__t.html", null ],
     [ "pt2ir_config_t", "structpt2ir__config__t.html", null ],
     [ "pt2ir_t", "classpt2ir__t.html", null ],

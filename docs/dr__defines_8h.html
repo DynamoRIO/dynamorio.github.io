@@ -144,6 +144,8 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a0a0435e4c2e2f5afb41bd54b4d0e3d10">DR_NOTE_REG_BARRIER</a>, 
 <br />
 &#160;&#160;<a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7add7fe93dd9c7b175a234de1db773676d">DR_NOTE_CALL_SEQUENCE_START</a>
+, <br />
+&#160;&#160;<a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a217ca0bfff6b13fc74018b26084764fe">DR_NOTE_RSEQ_ENTRY</a>
 <br />
  }</td></tr>
 <tr class="separator:adf764cbdea00d65edcd07bb9953ad2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -657,6 +659,8 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7add7fe93dd9c7b175a234de1db773676d"></a>DR_NOTE_CALL_SEQUENCE_START&#160;</td><td class="fielddoc"><p>Used for internal translation from an instruction list. These apply not only to client-inserted clean calls but all inserted calls whether inserted by clients or DR and whether fully clean or not. This is thus distinct from <a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a488d94a0f79cdeb9d5445da335c75d9b">DR_NOTE_CLEAN_CALL_END</a>. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7a217ca0bfff6b13fc74018b26084764fe"></a>DR_NOTE_RSEQ_ENTRY&#160;</td><td class="fielddoc"><p>Placed at the top of a basic block, this identifies the entry to an "rseq" (Linux restartable sequence) region. The first two label data fields (see <a class="el" href="dr__ir__instr_8h.html#a946303e1c9c3d1102603dc9842479b0c">instr_get_label_data_area()</a>) are filled in with this rseq region's end PC and its abort handler PC, in that order. </p>
+</td></tr>
 </table>
 
 </div>
@@ -870,5 +874,5 @@ Variables</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.92.19454 --- Fri Apr 7 2023 03:14:20 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.92.19460 --- Fri Apr 14 2023 03:13:47 &nbsp; <img border=0 src="favicon.png">
 </small></address>

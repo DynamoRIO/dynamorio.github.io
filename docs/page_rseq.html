@@ -237,9 +237,7 @@ Testing</h3>
 <p>We want to test both running to completion and a restart, so I have our tests use a parameter specifying whether to raise the SIGILL. In the test, the code runs each rseq sequence twice, once with and once without the parameter set, to test both completion and restart.</p>
 <h1><a class="anchor" id="autotoc_md273"></a>
 Future Work</h1>
-<p>Adding AArchxx support is future work: the patch_mov_immed_ptrsz(), the writes to the rseq struct in TLS, and the rseq tests are currently x86-only.</p>
 <p>We do not yet perfectly handle a midpoint exit during the instrumentation execution: we need to invoke the native version as well, for sequences where state changes prior to the exit are examined post-exit. We may want to leverage the <code>__rseq_exit_point_array</code> section for this.</p>
-<p>We do not yet handle indirect branch exits out of a sequence.</p>
 <p>We are currently ignoring the flags which indicate which triggers (out of preempt, signal, and migrate) should cause the abort handler to be called. We blindly run a second time even if the preempt and migrate bits are not set, which the application may not expect without a signal arriving or may expect to only happen in a fatal error condition.</p>
 <h1><a class="anchor" id="autotoc_md274"></a>
 Limitations</h1>
@@ -258,5 +256,5 @@ Citations</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.92.19454 --- Fri Apr 7 2023 03:14:23 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.92.19460 --- Fri Apr 14 2023 03:13:50 &nbsp; <img border=0 src="favicon.png">
 </small></address>

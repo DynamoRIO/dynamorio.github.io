@@ -431,7 +431,7 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a05b0d8543956536b9938ccb6fdd89570a6c0fd8f40391fdefbd35230af52fc80a"></a>DR_XFER_CLIENT_REDIRECT&#160;</td><td class="fielddoc"><p><a class="el" href="dr__ir__utils_8h.html#ac3aa7797e4e3ce2f741f99712bb704f5">dr_redirect_execution()</a> or <a class="el" href="dr__events_8h.html#af86ce68b89c76d46c92d36e58ddb7a33a866dcc1af9f9076edcbed9c8afb17e93">DR_SIGNAL_REDIRECT</a>. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a05b0d8543956536b9938ccb6fdd89570a338c2b996b143517f0378c60e1429206"></a>DR_XFER_RSEQ_ABORT&#160;</td><td class="fielddoc"><p>A Linux restartable sequence was aborted. </p>
+<tr><td class="fieldname"><a id="a05b0d8543956536b9938ccb6fdd89570a338c2b996b143517f0378c60e1429206"></a>DR_XFER_RSEQ_ABORT&#160;</td><td class="fielddoc"><p>A Linux restartable sequence was aborted. The interrupted PC for a signal in the execution instrumentation points to the precise interrupted instruction; but for an abort in the native exeuction, the PC always points to the abort handler, rather than the precise instruction that was aborted. This aligns with kernel behavior: the interrupted PC is not saved anywhere. </p>
 </td></tr>
 </table>
 
@@ -2026,5 +2026,5 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.92.19454 --- Fri Apr 7 2023 03:14:20 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.92.19460 --- Fri Apr 14 2023 03:13:47 &nbsp; <img border=0 src="favicon.png">
 </small></address>

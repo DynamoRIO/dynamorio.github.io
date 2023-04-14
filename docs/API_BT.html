@@ -415,7 +415,7 @@ Restartable Sequence Instrumentation Constraints</h1>
 <li>No system calls are allowed inside rseq regions.</li>
 <li>No call instructions are allowed inside rseq regions.</li>
 <li>The only register inputs to an rseq region, or registers written inside an rseq region whose values are then read afterward, must be general-purpose registers.</li>
-<li>The instrumented execution of the rseq region may not perfectly reflect the native behavior of the application. The instrumentation will never see an abort anywhere but just prior to the committing store. Additionally, memory addresses may be wrong if they are based on the live (as opposed to cached at the rseq region entrance) underlying cpuid and a migration occurred mid-region. These are minor and acceptable for most tools (especially given that there is no better alternative).</li>
+<li>The instrumented execution of the rseq region may not perfectly reflect the native behavior of the application. The instrumentation will never see an abort anywhere but just prior to the committing store. The native execution might take a different conditional branch direction than the instrumented execution, leading to discrepancies in recorded instruction sequences (drmemtrace does try to fix these up in post-processing using the <a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a217ca0bfff6b13fc74018b26084764fe">DR_NOTE_RSEQ_ENTRY</a> label). Additionally, memory addresses may be wrong if they are based on the live (as opposed to cached at the rseq region entrance) underlying cpuid and a migration occurred mid-region. These are minor and acceptable for most tools (especially given that there is no better alternative).</li>
 </ul>
 <p>Some of these limitations are explicitly checked, and DR will exit with an error message if they are not met. However, not all are efficiently verifiable. If an application does not satisfy these limitations, the <a class="el" href="page_deploy.html#op_disable_rseq">disable_rseq</a> runtime option may be used to return ENOSYS, which can provide a workaround for applications which have fallback code for kernels where rseq is not supported.</p>
 <p> 
@@ -498,5 +498,5 @@ Persisting Code</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.92.19454 --- Fri Apr 7 2023 03:14:23 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.92.19460 --- Fri Apr 14 2023 03:13:49 &nbsp; <img border=0 src="favicon.png">
 </small></address>

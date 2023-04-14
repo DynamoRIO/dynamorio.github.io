@@ -92,6 +92,7 @@
     [ "raw2trace_t", "classraw2trace__t.html", {% include_relative classraw2trace__t.js %} ],
     [ "reader_t", "classreader__t.html", {% include_relative classreader__t.js %} ],
     [ "reuse_distance_knobs_t", "structreuse__distance__knobs__t.html", null ],
+    [ "test_module_mapper_t", "classtest__module__mapper__t.html", null ],
     [ "tlb_simulator_knobs_t", "structtlb__simulator__knobs__t.html", null ],
     [ "trace_header_t", "structtrace__header__t.html", null ],
     [ "trace_metadata_reader_t", "structtrace__metadata__reader__t.html", null ],

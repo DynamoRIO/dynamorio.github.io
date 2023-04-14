@@ -212,7 +212,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a285ac7236d2262d88924093dca53a3c2">TRACE_MARKER_TYPE_RECORD_ORDINAL</a>, 
 <br />
-&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ab70393d2fcbe2c06e221a8a21c8f9e62">TRACE_MARKER_TYPE_FILTER_ENDPOINT</a>
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ab70393d2fcbe2c06e221a8a21c8f9e62">TRACE_MARKER_TYPE_FILTER_ENDPOINT</a>, 
+<br />
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9abbbb3dacc450cd6b02e2b03fbb40a52d">TRACE_MARKER_TYPE_RSEQ_ENTRY</a>
 <br />
  }</td></tr>
 <tr class="separator:aa7f51b43d8f1e20dc45e3618684b15e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,6 +256,8 @@ Functions</h2></td></tr>
 <tr class="separator:a7d7697dab762a2fdd95c790e554ba171"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4d55eef56c45ede7eee1f7daee57840"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace__entry_8h.html#ab4d55eef56c45ede7eee1f7daee57840">type_has_address</a> (const <a class="el" href="trace__entry_8h.html#a00405f99b069de9812b34db3a192b19d">trace_type_t</a> type)</td></tr>
 <tr class="separator:ab4d55eef56c45ede7eee1f7daee57840"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a677c708bdd69faf0953f35eb9b55800a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace__entry_8h.html#a677c708bdd69faf0953f35eb9b55800a">type_is_data</a> (const <a class="el" href="trace__entry_8h.html#a00405f99b069de9812b34db3a192b19d">trace_type_t</a> type)</td></tr>
+<tr class="separator:a677c708bdd69faf0953f35eb9b55800a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>DrMemtrace trace entry enum types and definitions. </p>
@@ -439,7 +443,7 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9aab9bc211e1e5f2f567a085d825e37745"></a>TRACE_MARKER_TYPE_VERSION&#160;</td><td class="fielddoc"><p>The marker value contains the version of the trace format: a value of type <a class="el" href="trace__entry_8h.html#a3a78cb9ac4c3afc1444673fb9a407d76">trace_version_t</a>. The marker is present in the first few entries of a trace file. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a3a011c218cb80ceeb9e3105d449e3280"></a>TRACE_MARKER_TYPE_RSEQ_ABORT&#160;</td><td class="fielddoc"><p>Serves to further identify <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a3aa19ac796e054c478f0a6ec99286020">TRACE_MARKER_TYPE_KERNEL_EVENT</a> as a restartable sequence abort handler. This will always be immediately followed by <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a3aa19ac796e054c478f0a6ec99286020">TRACE_MARKER_TYPE_KERNEL_EVENT</a>. </p>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a3a011c218cb80ceeb9e3105d449e3280"></a>TRACE_MARKER_TYPE_RSEQ_ABORT&#160;</td><td class="fielddoc"><p>Serves to further identify <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a3aa19ac796e054c478f0a6ec99286020">TRACE_MARKER_TYPE_KERNEL_EVENT</a> as a restartable sequence abort handler. This will always be immediately followed by <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a3aa19ac796e054c478f0a6ec99286020">TRACE_MARKER_TYPE_KERNEL_EVENT</a>. The marker value for a signal that interrupted the instrumented execution is the precise interrupted PC, but for all other cases the value holds the continuation program counter, which is the restartable sequence abort handler. (The precise interrupted point inside the sequence is not provided by the kernel.) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9aeb50b9e4d2eb64f29778af21501c197a"></a>TRACE_MARKER_TYPE_WINDOW_ID&#160;</td><td class="fielddoc"><p>Identifies in the marker value the ordinal of a window during a multi-window tracing run (see the options -trace_for_instrs and -retrace_every_instrs). When a marker with an ordinal value different from the last-seen marker appears, a time gap may exist immediately before this new marker. </p>
 </td></tr>
@@ -460,6 +464,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a285ac7236d2262d88924093dca53a3c2"></a>TRACE_MARKER_TYPE_RECORD_ORDINAL&#160;</td><td class="fielddoc"><p>Indicates the record ordinal for this point in the trace. This is used to identify the visible record ordinal when skipping over chunks, and is not exposed to analysis tools. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9ab70393d2fcbe2c06e221a8a21c8f9e62"></a>TRACE_MARKER_TYPE_FILTER_ENDPOINT&#160;</td><td class="fielddoc"><p>Indicates a point in the trace where filtering ended. This is currently added by the record_filter tool to annotate when the warmup part of the trace ends. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9abbbb3dacc450cd6b02e2b03fbb40a52d"></a>TRACE_MARKER_TYPE_RSEQ_ENTRY&#160;</td><td class="fielddoc"><p>Indicates the start of an "rseq" (Linux restartable sequence) region. The marker value holds the end PC of the region (this is the PC after the committing store). </p>
 </td></tr>
 </table>
 
@@ -617,7 +623,34 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns whether the type contains an address. </p>
+<p>Returns whether the type contains an address. This includes both instruction fetches and instruction operands. </p>
+
+</div>
+</div>
+<a id="a677c708bdd69faf0953f35eb9b55800a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a677c708bdd69faf0953f35eb9b55800a">&#9670;&nbsp;</a></span>type_is_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool type_is_data </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="trace__entry_8h.html#a00405f99b069de9812b34db3a192b19d">trace_type_t</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns whether the type represents an address operand of an instruction. This is a subset of <a class="el" href="trace__entry_8h.html#ab4d55eef56c45ede7eee1f7daee57840">type_has_address()</a> as <a class="el" href="trace__entry_8h.html#ab4d55eef56c45ede7eee1f7daee57840">type_has_address()</a> includes instruction fetches. </p>
 
 </div>
 </div>
@@ -762,5 +795,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.92.19454 --- Fri Apr 7 2023 03:14:20 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.92.19460 --- Fri Apr 14 2023 03:13:47 &nbsp; <img border=0 src="favicon.png">
 </small></address>
