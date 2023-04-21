@@ -1738,6 +1738,10 @@ Macros</h2></td></tr>
 <tr class="separator:aa5d92e16b7d45d0cbfab667c714f4368"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4388ea4e70337ba5e062d13b58e1064"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#af4388ea4e70337ba5e062d13b58e1064">INSTR_CREATE_dc_cvadp</a>(dc,  Rn)</td></tr>
 <tr class="separator:af4388ea4e70337ba5e062d13b58e1064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22811f722d62125d56cecf6bc2047dd0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a22811f722d62125d56cecf6bc2047dd0">INSTR_CREATE_trn1_sve</a>(dc,  Zd,  Zn,  Zm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_trn1, Zd, Zn, Zm)</td></tr>
+<tr class="separator:a22811f722d62125d56cecf6bc2047dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82e1d9a7b4ec27da543b9265734a2961"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a82e1d9a7b4ec27da543b9265734a2961">INSTR_CREATE_trn2_sve</a>(dc,  Zd,  Zn,  Zm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_trn2, Zd, Zn, Zm)</td></tr>
+<tr class="separator:a82e1d9a7b4ec27da543b9265734a2961"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Platform-independent macros</div></td></tr>
 <tr class="memitem:a193d2b0123b3bdf0b9200f34a54d8002"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a193d2b0123b3bdf0b9200f34a54d8002">XINST_CREATE_debug_instr</a>(dc)&#160;&#160;&#160;INSTR_CREATE_brk((dc), <a class="el" href="dr__ir__macros_8h.html#ac2d087cee8f6726f09d76852c156e0cc">OPND_CREATE_INT16</a>(0))</td></tr>
 <tr class="separator:a193d2b0123b3bdf0b9200f34a54d8002"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -39429,6 +39433,57 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="a22811f722d62125d56cecf6bc2047dd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22811f722d62125d56cecf6bc2047dd0">&#9670;&nbsp;</a></span>INSTR_CREATE_trn1_sve</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_trn1_sve</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_trn1, Zd, Zn, Zm)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a TRN1 instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    TRN1    &lt;Zd&gt;.Q, &lt;Zn&gt;.Q, &lt;Zm&gt;.Q
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Zd</td><td>The destination vector register, Z (Scalable). </td></tr>
+    <tr><td class="paramname">Zn</td><td>The first source vector register, Z (Scalable). </td></tr>
+    <tr><td class="paramname">Zm</td><td>The second source vector register, Z (Scalable). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a7289e4b71fd8ce4e31dc5c6f024fa7cd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7289e4b71fd8ce4e31dc5c6f024fa7cd">&#9670;&nbsp;</a></span>INSTR_CREATE_trn1_sve_pred</h2>
 
@@ -39519,6 +39574,57 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates a TRN1 instruction.</p>
 <p>This macro is used to encode the forms: </p><pre class="fragment">*    TRN1    &lt;Zd&gt;.&lt;Ts&gt;, &lt;Zn&gt;.&lt;Ts&gt;, &lt;Zm&gt;.&lt;Ts&gt;
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Zd</td><td>The destination vector register, Z (Scalable). </td></tr>
+    <tr><td class="paramname">Zn</td><td>The first source vector register, Z (Scalable). </td></tr>
+    <tr><td class="paramname">Zm</td><td>The second source vector register, Z (Scalable). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a82e1d9a7b4ec27da543b9265734a2961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82e1d9a7b4ec27da543b9265734a2961">&#9670;&nbsp;</a></span>INSTR_CREATE_trn2_sve</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_trn2_sve</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zm&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_trn2, Zd, Zn, Zm)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a TRN2 instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    TRN2    &lt;Zd&gt;.Q, &lt;Zn&gt;.Q, &lt;Zm&gt;.Q
 * </pre> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
@@ -46693,5 +46799,5 @@ Macros</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.92.19460 --- Fri Apr 14 2023 03:13:48 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.92.19468 --- Fri Apr 21 2023 03:13:47 &nbsp; <img border=0 src="favicon.png">
 </small></address>

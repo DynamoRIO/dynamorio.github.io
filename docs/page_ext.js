@@ -75,7 +75,9 @@
       [ "Comparison with DrBBDup", "page_drstatecmp.html#sec_drstatecmp_vs_drbbdup", null ]
     ] ],
     [ "Symbol Access Library", "page_drsyms.html", [
-      [ "Setup", "page_drsyms.html#sec_drsyms_setup", null ],
+      [ "Setup", "page_drsyms.html#sec_drsyms_setup", [
+        [ "DWARFv5 not supported yet", "page_drsyms.html#sec_drsyms_unsupported_dwarfv5", null ]
+      ] ],
       [ "Search Paths", "page_drsyms.html#sec_drsyms_paths", null ],
       [ "Exported Functions", "page_drsyms.html#sec_drsyms_exports", null ],
       [ "API", "page_drsyms.html#sec_drsyms_api", [

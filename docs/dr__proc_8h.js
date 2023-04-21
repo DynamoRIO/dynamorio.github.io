@@ -179,7 +179,8 @@
       [ "FEATURE_LRCPC", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa52eb57e4c1d022da2bb029e9d02fc419", null ],
       [ "FEATURE_LRCPC2", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaf6bacb38c5902a00705faabb4038e49a", null ],
       [ "FEATURE_BF16", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa660bcd432adba110612085d3e342d191", null ],
-      [ "FEATURE_I8MM", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa4049a1663455381e954b90bc4c82d0f9", null ]
+      [ "FEATURE_I8MM", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa4049a1663455381e954b90bc4c82d0f9", null ],
+      [ "FEATURE_F64MM", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa00e265fb54ebf4536d256cc6f9e91598", null ]
     ] ],
     [ "feature_bit_t", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bf", [
       [ "FEATURE_FPU", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac39f532dceb337cb996ebf5a8d658668", null ],
@@ -295,7 +296,8 @@
       [ "FEATURE_LRCPC", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa52eb57e4c1d022da2bb029e9d02fc419", null ],
       [ "FEATURE_LRCPC2", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaf6bacb38c5902a00705faabb4038e49a", null ],
       [ "FEATURE_BF16", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa660bcd432adba110612085d3e342d191", null ],
-      [ "FEATURE_I8MM", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa4049a1663455381e954b90bc4c82d0f9", null ]
+      [ "FEATURE_I8MM", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa4049a1663455381e954b90bc4c82d0f9", null ],
+      [ "FEATURE_F64MM", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa00e265fb54ebf4536d256cc6f9e91598", null ]
     ] ],
     [ "proc_avx512_enabled", "dr__proc_8h.html#aaba068462550d9b73c32c0991c5f7551", null ],
     [ "proc_avx_enabled", "dr__proc_8h.html#adfd5dadf31b9a26540978b7331701770", null ],
