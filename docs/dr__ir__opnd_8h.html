@@ -877,6 +877,8 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="separator:a69ec8bd64ab30124cb8807e1d73fdd96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adef5f1863dd46d4b22341f685782a695"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#adef5f1863dd46d4b22341f685782a695">_dr_extend_type_t</a> { <br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#adef5f1863dd46d4b22341f685782a695a27a6543009cc4794ce66ef71883c51ea">DR_EXTEND_DEFAULT</a> = 0, 
+<br />
 &#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#adef5f1863dd46d4b22341f685782a695ad80fa67fd24b28eb289d0096e08c4af8">DR_EXTEND_UXTB</a> = 0, 
 <br />
 &#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#adef5f1863dd46d4b22341f685782a695a8a9fef78c219c8bdc12dd30b6e8ea47f">DR_EXTEND_UXTH</a>, 
@@ -963,6 +965,8 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="separator:a31f806c4eccb96ed60ff64ab78e529bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fd06e4caec9a02043d179ee25a9f60c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60c">_dr_opnd_flags_t</a> { <br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca35f99b597762c4cd772e5f0917900a5d">DR_OPND_DEFAULT</a> = 0x00, 
+<br />
 &#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca5aacdf5d4c4143e9b74547717ce4bb93">DR_OPND_NEGATED</a> = 0x01, 
 <br />
 &#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60cacbcb703c2c8f0abb590ad0329967b5ad">DR_OPND_SHIFTED</a> = 0x02, 
@@ -3212,7 +3216,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>These flags describe how the index register in a memory reference is extended before being optionally shifted and added to the base register. They also describe how a general source register is extended before being used in its containing instruction. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adef5f1863dd46d4b22341f685782a695ad80fa67fd24b28eb289d0096e08c4af8"></a>DR_EXTEND_UXTB&#160;</td><td class="fielddoc"><p>Unsigned extend byte. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adef5f1863dd46d4b22341f685782a695a27a6543009cc4794ce66ef71883c51ea"></a>DR_EXTEND_DEFAULT&#160;</td><td class="fielddoc"><p>Default value. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adef5f1863dd46d4b22341f685782a695ad80fa67fd24b28eb289d0096e08c4af8"></a>DR_EXTEND_UXTB&#160;</td><td class="fielddoc"><p>Unsigned extend byte. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="adef5f1863dd46d4b22341f685782a695a8a9fef78c219c8bdc12dd30b6e8ea47f"></a>DR_EXTEND_UXTH&#160;</td><td class="fielddoc"><p>Unsigned extend halfword. </p>
 </td></tr>
@@ -3245,7 +3251,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>These flags describe operations performed on the value of a source register before it is combined with other sources as part of the behavior of the containing instruction, or operations performed on an index register or displacement before it is added to or subtracted from the base register. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7fd06e4caec9a02043d179ee25a9f60ca5aacdf5d4c4143e9b74547717ce4bb93"></a>DR_OPND_NEGATED&#160;</td><td class="fielddoc"><p>This register's value is negated prior to use in the containing instruction. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7fd06e4caec9a02043d179ee25a9f60ca35f99b597762c4cd772e5f0917900a5d"></a>DR_OPND_DEFAULT&#160;</td><td class="fielddoc"><p>Default (no additional flags). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7fd06e4caec9a02043d179ee25a9f60ca5aacdf5d4c4143e9b74547717ce4bb93"></a>DR_OPND_NEGATED&#160;</td><td class="fielddoc"><p>This register's value is negated prior to use in the containing instruction. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a7fd06e4caec9a02043d179ee25a9f60cacbcb703c2c8f0abb590ad0329967b5ad"></a>DR_OPND_SHIFTED&#160;</td><td class="fielddoc"><p>This register's value is shifted prior to use in the containing instruction. This flag is for informational purposes only and is not guaranteed to be consistent with the shift type of an index register or displacement if the latter are set without using <a class="el" href="dr__ir__opnd_8h.html#abe70f9418f49ede0c2f06b105c003434">opnd_set_index_shift()</a> or if an instruction is created without using high-level API routines. This flag is also ignored for encoding and will not apply a shift on its own. </p>
 </td></tr>
@@ -7169,5 +7177,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.92.19468 --- Fri Apr 21 2023 03:13:48 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.92.19474 --- Fri Apr 28 2023 03:13:49 &nbsp; <img border=0 src="favicon.png">
 </small></address>

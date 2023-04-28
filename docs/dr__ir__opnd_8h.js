@@ -404,6 +404,7 @@
     [ "DR_REG_BND2", "dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600a1961b22196640b984b21603624bce109", null ],
     [ "DR_REG_BND3", "dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600ac6d47b2a536cbc23f3e82806dbd75f44", null ],
     [ "_dr_extend_type_t", "dr__ir__opnd_8h.html#adef5f1863dd46d4b22341f685782a695", [
+      [ "DR_EXTEND_DEFAULT", "dr__ir__opnd_8h.html#adef5f1863dd46d4b22341f685782a695a27a6543009cc4794ce66ef71883c51ea", null ],
       [ "DR_EXTEND_UXTB", "dr__ir__opnd_8h.html#adef5f1863dd46d4b22341f685782a695ad80fa67fd24b28eb289d0096e08c4af8", null ],
       [ "DR_EXTEND_UXTH", "dr__ir__opnd_8h.html#adef5f1863dd46d4b22341f685782a695a8a9fef78c219c8bdc12dd30b6e8ea47f", null ],
       [ "DR_EXTEND_UXTW", "dr__ir__opnd_8h.html#adef5f1863dd46d4b22341f685782a695a03a63b380dc519309e34039ac4791ff9", null ],
@@ -414,6 +415,7 @@
       [ "DR_EXTEND_SXTX", "dr__ir__opnd_8h.html#adef5f1863dd46d4b22341f685782a695adcad505f4bc4de325912e45944b66411", null ]
     ] ],
     [ "_dr_opnd_flags_t", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60c", [
+      [ "DR_OPND_DEFAULT", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca35f99b597762c4cd772e5f0917900a5d", null ],
       [ "DR_OPND_NEGATED", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca5aacdf5d4c4143e9b74547717ce4bb93", null ],
       [ "DR_OPND_SHIFTED", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60cacbcb703c2c8f0abb590ad0329967b5ad", null ],
       [ "DR_OPND_MULTI_PART", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60cabadbddd8982b4e274c9c08bf134d42d3", null ],
