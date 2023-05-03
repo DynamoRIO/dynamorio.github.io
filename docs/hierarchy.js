@@ -100,6 +100,7 @@
     [ "reuse_distance_knobs_t", "structreuse__distance__knobs__t.html", null ],
     [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::scheduler_options_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html", null ],
     [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html", null ],
+    [ "dynamorio::drmemtrace::speculator_tmpl_t< RecordType >", "classdynamorio_1_1drmemtrace_1_1speculator__tmpl__t.html", null ],
     [ "tlb_simulator_knobs_t", "structtlb__simulator__knobs__t.html", null ],
     [ "trace_header_t", "structtrace__header__t.html", null ],
     [ "trace_metadata_reader_t", "structtrace__metadata__reader__t.html", null ],

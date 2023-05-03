@@ -12,6 +12,6 @@
     [ "is_record_synthetic", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ab276351adf53d50aecba8954f7f839d4", null ],
     [ "next_record", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a0c957be2387f2a2ca6ed00117d2378d6", null ],
     [ "report_time", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a5e92bd240f80d04b7073481dc856bb8a", null ],
-    [ "start_speculation", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a00779430772121b270ad835008d7ba92", null ],
+    [ "start_speculation", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a7b96943e9bf118caf2e3ba0f12588352", null ],
     [ "stop_speculation", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#abd2352ca7b195e33fcf4aa1876daf925", null ]
 ],

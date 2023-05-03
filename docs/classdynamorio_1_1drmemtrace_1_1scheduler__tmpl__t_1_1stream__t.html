@@ -48,8 +48,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0c957be2387f2a2ca6ed00117d2378d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e92bd240f80d04b7073481dc856bb8a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5">stream_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a5e92bd240f80d04b7073481dc856bb8a">report_time</a> (uint64_t cur_time)</td></tr>
 <tr class="separator:a5e92bd240f80d04b7073481dc856bb8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00779430772121b270ad835008d7ba92"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5">stream_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a00779430772121b270ad835008d7ba92">start_speculation</a> (<a class="el" href="trace__entry_8h.html#a1ca6d6805df0fccbaf3f7920d1845168">addr_t</a> start_address)</td></tr>
-<tr class="separator:a00779430772121b270ad835008d7ba92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b96943e9bf118caf2e3ba0f12588352"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5">stream_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a7b96943e9bf118caf2e3ba0f12588352">start_speculation</a> (<a class="el" href="trace__entry_8h.html#a1ca6d6805df0fccbaf3f7920d1845168">addr_t</a> start_address, bool queue_current_record)</td></tr>
+<tr class="separator:a7b96943e9bf118caf2e3ba0f12588352"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd2352ca7b195e33fcf4aa1876daf925"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5">stream_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#abd2352ca7b195e33fcf4aa1876daf925">stop_speculation</a> ()</td></tr>
 <tr class="separator:abd2352ca7b195e33fcf4aa1876daf925"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92f2930a8d82b87898edf1b774c7e757"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a92f2930a8d82b87898edf1b774c7e757">get_record_ordinal</a> () const override</td></tr>
@@ -471,8 +471,8 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 
 </div>
 </div>
-<a id="a00779430772121b270ad835008d7ba92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00779430772121b270ad835008d7ba92">&#9670;&nbsp;</a></span>start_speculation()</h2>
+<a id="a7b96943e9bf118caf2e3ba0f12588352"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b96943e9bf118caf2e3ba0f12588352">&#9670;&nbsp;</a></span>start_speculation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -486,8 +486,18 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
           <td class="memname">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5">stream_status_t</a> <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::stream_t::start_speculation </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="trace__entry_8h.html#a1ca6d6805df0fccbaf3f7920d1845168">addr_t</a>&#160;</td>
-          <td class="paramname"><em>start_address</em></td><td>)</td>
+          <td class="paramname"><em>start_address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>queue_current_record</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -496,7 +506,9 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Begins a diversion from the regular inputs to a side stream of records representing speculative execution starting at 'start_address'. This call can be "nested" but only one stop_speculation call is needed to resume the paused stream. </p>
+<p>Begins a diversion from the regular inputs to a side stream of records representing speculative execution starting at 'start_address'.</p>
+<p>Because the instruction record after a branch typically needs to be read before knowing whether a simulator is on the wrong path or not, this routine supports putting back the current record so that it will be re-provided as the first record after <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#abd2352ca7b195e33fcf4aa1876daf925">stop_speculation()</a>, if "queue_current_record" is true. The "queue_current_record" parameter is ignored if speculation is already in effect.</p>
+<p>This call can be "nested" but only one stop_speculation call is needed to resume the paused stream. </p>
 
 </div>
 </div>
@@ -524,7 +536,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Stops speculative execution and resumes the regular stream of records from the point at which the prior start_speculation call was made. Returns STATUS_INVALID if there was no prior <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a00779430772121b270ad835008d7ba92">start_speculation()</a> call. </p>
+<p>Stops speculative execution and resumes the regular stream of records from the point at which the most distant prior <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a7b96943e9bf118caf2e3ba0f12588352">start_speculation()</a> call without an intervening <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#abd2352ca7b195e33fcf4aa1876daf925">stop_speculation()</a> call was made (either repeating the current record at that time, if "true" was passed for "queue_current_record" to <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a7b96943e9bf118caf2e3ba0f12588352">start_speculation()</a>, or continuing on the subsequent record if "false" was passed). Returns <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5ab3ca72357837c9a033eff8516263ed46">dynamorio::drmemtrace::scheduler_tmpl_t::STATUS_INVALID</a> if there was no prior <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a7b96943e9bf118caf2e3ba0f12588352">start_speculation()</a> call or if <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#abd2352ca7b195e33fcf4aa1876daf925">stop_speculation()</a> was already called since the last start. </p>
 
 </div>
 </div>
@@ -537,5 +549,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.92.19474 --- Fri Apr 28 2023 03:13:52 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19480 --- Wed May 3 2023 00:07:32 &nbsp; <img border=0 src="favicon.png">
 </small></address>

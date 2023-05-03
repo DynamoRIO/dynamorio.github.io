@@ -71,7 +71,7 @@ perf</h3>
 <p>The patch to get good symbols with perf is available here: <a href="https://github.com/rnk/linux/compare/perf-p_vaddr.diff">https://github.com/rnk/linux/compare/perf-p_vaddr.diff</a></p>
 <p>You can clone the entire branch, or you can apply the patch to some other copy of the Linux kernel source. Either way, cd into tools/perf and run 'make' to build just perf. It will warn you about each library or header that it can't find, and you can install the appropriate package.</p>
 <p>Running 'make install' as a normal user will install to $HOME/bin and $HOME/libexec.</p>
-<p>To do a run and get a report, it's quite simple: </p><div class="fragment"><div class="line">perf record your_command  # Stores result in cwd/perf.data</div>
+<p>To do a run and get a report, it's quite simple: </p><div class="fragment"><div class="line">perf record your_command  # Stores result in cwd/perf.<a class="code" href="union__memref__t.html#ac89d01f93fa09fd4c75ea5bef5187d0c">data</a></div>
 <div class="line">perf report</div>
 </div><!-- fragment --><p>Example output: </p><div class="fragment"><div class="line">[src](rnk@wittenberg)$ perf report | head</div>
 <div class="line"># Overhead         Command        Shared Object                                                                       Symbol</div>
@@ -127,11 +127,12 @@ Cross-platform -prof_pcs</h1>
 <p>There are many open issues for cleaning this up, such as <a href="https://github.com/DynamoRIO/dynamorio/issues#issue/140">issue 140</a>, <a href="https://github.com/DynamoRIO/dynamorio/issues#issue/359">issue 359</a>, <a href="https://github.com/DynamoRIO/dynamorio/issues#issue/767">issue 767</a>. On Linux the <a class="el" href="dr__tools_8h.html#ac74de1da117d9c807b986aeda2523dd9">dr_set_itimer()</a> solution above provides programmatic support. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
+<div class="ttc" id="aunion__memref__t_html_ac89d01f93fa09fd4c75ea5bef5187d0c"><div class="ttname"><a href="union__memref__t.html#ac89d01f93fa09fd4c75ea5bef5187d0c">_memref_t::data</a></div><div class="ttdeci">struct _memref_data_t data</div><div class="ttdef"><b>Definition:</b> memref.h:136</div></div>
 <div class="ttc" id="adr__ir__decode_8h_html_af4a2c830c95757037eaa1a192a22aa3a"><div class="ttname"><a href="dr__ir__decode_8h.html#af4a2c830c95757037eaa1a192a22aa3a">decode_sizeof</a></div><div class="ttdeci">DR_API int decode_sizeof(void *drcontext, byte *pc, int *num_prefixes _IF_X86_64(uint *rip_rel_pos))</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.92.19474 --- Fri Apr 28 2023 03:13:51 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19480 --- Wed May 3 2023 00:07:32 &nbsp; <img border=0 src="favicon.png">
 </small></address>

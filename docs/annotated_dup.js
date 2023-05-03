@@ -3,7 +3,8 @@
       [ "drmemtrace", null, [
         [ "record_file_reader_t", "classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1record__file__reader__t.js %} ],
         [ "record_reader_t", "classdynamorio_1_1drmemtrace_1_1record__reader__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1record__reader__t.js %} ],
-        [ "scheduler_tmpl_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.js %} ]
+        [ "scheduler_tmpl_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.js %} ],
+        [ "speculator_tmpl_t", "classdynamorio_1_1drmemtrace_1_1speculator__tmpl__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1speculator__tmpl__t.js %} ]
       ] ]
     ] ],
     [ "_dr_app_arg_t", "struct__dr__app__arg__t.html", {% include_relative struct__dr__app__arg__t.js %} ],
