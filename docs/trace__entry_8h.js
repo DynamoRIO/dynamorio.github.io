@@ -38,7 +38,7 @@
       [ "TRACE_MARKER_TYPE_PHYSICAL_ADDRESS_NOT_AVAILABLE", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac138a2d29f017ea18a3bb3e1d243c593", null ],
       [ "TRACE_MARKER_TYPE_VIRTUAL_ADDRESS", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a31b1b641e653a465b97433137330b737", null ],
       [ "TRACE_MARKER_TYPE_PAGE_SIZE", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a602e5f40c496455081f9a11468b6b39d", null ],
-      [ "TRACE_MARKER_TYPE_SYSCALL_ID", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac792d7856c0c7bcb062ec1e069317413", null ],
+      [ "TRACE_MARKER_TYPE_SYSCALL_IDX", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a16dd25f1eb65062499aa3c0b0fbb3d3e", null ],
       [ "TRACE_MARKER_TYPE_CHUNK_INSTR_COUNT", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ab24290006bf319f5d18a5bba698f5d81", null ],
       [ "TRACE_MARKER_TYPE_CHUNK_FOOTER", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a46b4254a430bf51c15d9e477c9bc6d63", null ],
       [ "TRACE_MARKER_TYPE_RECORD_ORDINAL", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a285ac7236d2262d88924093dca53a3c2", null ],

@@ -54,19 +54,19 @@ Usage</h1>
 <dd>
 For one thread, only one tracing can execute at the same time. So the client needs to ensure one thread only owns one pttracer handle.</dd></dl>
 <p>The client must ensure that the PT trace's ring buffer and the sideband data's ring buffer is large enough to hold the PT data. Insufficient buffer size will lead to lost data, which may cause issues in <a class="el" href="classpt2ir__t.html">pt2ir_t</a> decoding.</p>
-<p>After creating a pttracer handle successfully, the client can start or stop a tracing session by calling <a class="el" href="drpttracer_8h.html#afb2c6fe798b7b3125647d647fb8e7835">drpttracer_start_tracing()</a> and <a class="el" href="drpttracer_8h.html#a75d42188aac044aef56517160b355433">drpttracer_stop_tracing()</a>.</p>
+<p>After creating a pttracer handle successfully, the client can start or stop a tracing session by calling <a class="el" href="drpttracer_8h.html#afb2c6fe798b7b3125647d647fb8e7835">drpttracer_start_tracing()</a> and <a class="el" href="drpttracer_8h.html#a17c201ee9f0a8d5835193b2c0ec66ab3">drpttracer_stop_tracing()</a>.</p>
 <ul>
 <li><a class="el" href="drpttracer_8h.html#afb2c6fe798b7b3125647d647fb8e7835">drpttracer_start_tracing()</a></li>
-<li><a class="el" href="drpttracer_8h.html#a75d42188aac044aef56517160b355433">drpttracer_stop_tracing()</a></li>
+<li><a class="el" href="drpttracer_8h.html#a17c201ee9f0a8d5835193b2c0ec66ab3">drpttracer_stop_tracing()</a></li>
 </ul>
-<p>The client must pass a valid trace handle to the start and stop function. And the client can use one handle for multiple tracing sessions. When the tracing is stopped, the stop function will allocate an instance of <a class="el" href="drpttracer_8h.html#a2a039aa7d15f79edcbae537289181000">drpttracer_output_t</a>, and copy the PT data, sideband data, and metadata to a <a class="el" href="drpttracer_8h.html#a2a039aa7d15f79edcbae537289181000">drpttracer_output_t</a> instance which is returned to the client. If drpttracer_end_tracing() detects an overflow, it will return an error status code:</p>
+<p>The client must pass a valid trace handle to the start and stop function. And the client can use one handle for multiple tracing sessions. When the tracing is stopped, the stop function will allocate an instance of <a class="el" href="drpttracer_8h.html#a2a039aa7d15f79edcbae537289181000">drpttracer_output_t</a>, and copy the PT data, sideband data, and metadata to a <a class="el" href="drpttracer_8h.html#a2a039aa7d15f79edcbae537289181000">drpttracer_output_t</a> instance which is returned to the client. If <a class="el" href="drpttracer_8h.html#a17c201ee9f0a8d5835193b2c0ec66ab3">drpttracer_stop_tracing()</a> detects an overflow, it will return an error status code:</p>
 <ul>
 <li>Return <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45dac3626cf9c2740a80ca15c99e6fba493a">DRPTTRACER_ERROR_OVERWRITTEN_PT_TRACE</a> if the PT trace is overwritten.</li>
 <li>Return <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45da3beefda8ad4ea9aa597f6a07053c56af">DRPTTRACER_ERROR_OVERWRITTEN_SIDEBAND_DATA</a> if the sideband data is overwritten.</li>
 </ul>
 <p>After all the tracing sessions are stopped, the client needs to call the following function to free the pttracer handle:</p>
 <ul>
-<li><a class="el" href="drpttracer_8h.html#ad80d0c63dadc4dac1d21d0caf662f2f9">drpttracer_destroy_handle()</a></li>
+<li><a class="el" href="drpttracer_8h.html#ae11b0af963319d6d7a6c97e5256be9b2">drpttracer_destroy_handle()</a></li>
 </ul>
 <p>Additionally, to avoid memory leak, the client must call the following function to destroy the output instances after using them:</p>
 <ul>
@@ -90,5 +90,5 @@ Tracing Mode</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19480 --- Wed May 3 2023 00:07:32 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19481 --- Fri May 5 2023 03:13:37 &nbsp; <img border=0 src="favicon.png">
 </small></address>

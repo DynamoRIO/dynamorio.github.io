@@ -4,6 +4,7 @@
     [ "basic_counts_create.h", "basic__counts__create_8h.html", {% include_relative basic__counts__create_8h.js %} ],
     [ "cache_simulator_create.h", "cache__simulator__create_8h.html", {% include_relative cache__simulator__create_8h.js %} ],
     [ "drmemtrace.h", "drmemtrace_8h.html", {% include_relative drmemtrace_8h.js %} ],
+    [ "elf_loader.h", "build__release-64_2clients_2include_2drmemtrace_2elf__loader_8h.html", null ],
     [ "func_view_create.h", "func__view__create_8h.html", {% include_relative func__view__create_8h.js %} ],
     [ "histogram_create.h", "histogram__create_8h.html", {% include_relative histogram__create_8h.js %} ],
     [ "memref.h", "memref_8h.html", {% include_relative memref_8h.js %} ],
