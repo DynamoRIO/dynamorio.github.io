@@ -1758,6 +1758,8 @@ Macros</h2></td></tr>
 <tr class="separator:a01af2ca2065b64648706e5e0c2a6fb79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a080a74b4c76d867d369583f8e7d8a475"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a080a74b4c76d867d369583f8e7d8a475">INSTR_CREATE_udot_sve_idx</a>(dc,  Zda,  Zn,  Zm,  index)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a1165bad1ad9859d6ffdcead0da1cd51a">instr_create_1dst_4src</a>(dc, OP_udot, Zda, Zda, Zn, Zm, index)</td></tr>
 <tr class="separator:a080a74b4c76d867d369583f8e7d8a475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae00b4e798430542583a9667db6b37536"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ae00b4e798430542583a9667db6b37536">INSTR_CREATE_bfcvtnt_sve_pred</a>(dc,  Zd,  Pg,  Zn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_bfcvtnt, Zd, Zd, Pg, Zn)</td></tr>
+<tr class="separator:ae00b4e798430542583a9667db6b37536"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Platform-independent macros</div></td></tr>
 <tr class="memitem:a193d2b0123b3bdf0b9200f34a54d8002"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a193d2b0123b3bdf0b9200f34a54d8002">XINST_CREATE_debug_instr</a>(dc)&#160;&#160;&#160;INSTR_CREATE_brk((dc), <a class="el" href="dr__ir__macros_8h.html#ac2d087cee8f6726f09d76852c156e0cc">OPND_CREATE_INT16</a>(0))</td></tr>
 <tr class="separator:a193d2b0123b3bdf0b9200f34a54d8002"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3939,6 +3941,57 @@ Macros</h2></td></tr>
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Rd</td><td>The destination vector register, D (doubleword, 64 bits). </td></tr>
     <tr><td class="paramname">Rn</td><td>The source vector register, Q (quadword, 128 bits). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae00b4e798430542583a9667db6b37536"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae00b4e798430542583a9667db6b37536">&#9670;&nbsp;</a></span>INSTR_CREATE_bfcvtnt_sve_pred</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_bfcvtnt_sve_pred</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Pg, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Zn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_bfcvtnt, Zd, Zd, Pg, Zn)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a BFCVTNT instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    BFCVTNT &lt;Zd&gt;.H, &lt;Pg&gt;/M, &lt;Zn&gt;.S
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Zd</td><td>The source and destination vector register, Z (Scalable). </td></tr>
+    <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
+    <tr><td class="paramname">Zn</td><td>The second source vector register, Z (Scalable). </td></tr>
   </table>
   </dd>
 </dl>
@@ -47205,5 +47258,5 @@ Macros</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19481 --- Fri May 5 2023 03:13:35 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19488 --- Fri May 12 2023 03:13:49 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -364,6 +364,8 @@ Functions</h2></td></tr>
 <tr class="separator:a090b27b5334c6be542c4fcfed7b97ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99682422e3f2060e3b85a61ef7e4fbbb"><td class="memItemLeft" align="right" valign="top">DR_API int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a99682422e3f2060e3b85a61ef7e4fbbb">instr_get_opcode</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
 <tr class="separator:a99682422e3f2060e3b85a61ef7e4fbbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa2009a9051554c5805094bd1ba7fdf9"><td class="memItemLeft" align="right" valign="top">DR_API size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#aaa2009a9051554c5805094bd1ba7fdf9">instr_get_offset</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
+<tr class="separator:aaa2009a9051554c5805094bd1ba7fdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc1a1b2c972ea65f7d51c026180d4fd5"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#acc1a1b2c972ea65f7d51c026180d4fd5">instr_set_opcode</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, int opcode)</td></tr>
 <tr class="separator:acc1a1b2c972ea65f7d51c026180d4fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab264f741f5a1edea068dbabb90b4e4c6"><td class="memItemLeft" align="right" valign="top">DR_API INSTR_INLINE int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#ab264f741f5a1edea068dbabb90b4e4c6">instr_num_srcs</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
@@ -4820,6 +4822,26 @@ We recommend using this routine during the phase of application code analysis, a
 
 </div>
 </div>
+<a id="aaa2009a9051554c5805094bd1ba7fdf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa2009a9051554c5805094bd1ba7fdf9">&#9670;&nbsp;</a></span>instr_get_offset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API size_t instr_get_offset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
+          <td class="paramname"><em>instr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the relative offset of <code>instr</code> in an encoded instruction list.</p>
+<dl class="section note"><dt>Note</dt><dd>instrlist_encode* sets the offset field in each <a class="el" href="structinstr__t.html">instr_t</a> in the encoded instruction list. Therefore, this API must be called only after calling instrlist_encode*. </dd></dl>
+
+</div>
+</div>
 <a id="a99682422e3f2060e3b85a61ef7e4fbbb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a99682422e3f2060e3b85a61ef7e4fbbb">&#9670;&nbsp;</a></span>instr_get_opcode()</h2>
 
@@ -8373,5 +8395,5 @@ mangle" if <code>val</code> is false.</p>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19481 --- Fri May 5 2023 03:13:35 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19488 --- Fri May 12 2023 03:13:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -186,6 +186,7 @@
     [ "instr_get_next", "dr__ir__instr_8h.html#ac897243e24d71890e196586b8373b821", null ],
     [ "instr_get_next_app", "dr__ir__instr_8h.html#a4582a4fd2729419bfc1d0c5dfeb86ab9", null ],
     [ "instr_get_note", "dr__ir__instr_8h.html#adc6f2cf9a377cc58a3e0c37b078f5738", null ],
+    [ "instr_get_offset", "dr__ir__instr_8h.html#aaa2009a9051554c5805094bd1ba7fdf9", null ],
     [ "instr_get_opcode", "dr__ir__instr_8h.html#a99682422e3f2060e3b85a61ef7e4fbbb", null ],
     [ "instr_get_opcode_eflags", "dr__ir__instr_8h.html#adfdf69ae26fa0da74fc7fef90e3798be", null ],
     [ "instr_get_predicate", "dr__ir__instr_8h.html#a19932f4d78cd67b02b3b4c657fba329f", null ],

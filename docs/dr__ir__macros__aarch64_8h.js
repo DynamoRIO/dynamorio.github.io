@@ -45,6 +45,7 @@
     [ "INSTR_CREATE_bfcvt_sve_pred", "dr__ir__macros__aarch64_8h.html#a4039f518b5e8c766ec3b20a659ddb628", null ],
     [ "INSTR_CREATE_bfcvtn2_vector", "dr__ir__macros__aarch64_8h.html#a4e27e5c7ba581d8c8c737465d040a9b0", null ],
     [ "INSTR_CREATE_bfcvtn_vector", "dr__ir__macros__aarch64_8h.html#a0ba410031066dfe2cc9e2d6514054ba1", null ],
+    [ "INSTR_CREATE_bfcvtnt_sve_pred", "dr__ir__macros__aarch64_8h.html#ae00b4e798430542583a9667db6b37536", null ],
     [ "INSTR_CREATE_bfdot_sve", "dr__ir__macros__aarch64_8h.html#a0c2a5fd4ab1150272af45e94961bca4e", null ],
     [ "INSTR_CREATE_bfdot_sve_idx", "dr__ir__macros__aarch64_8h.html#aed89cd7b01a7b5e578be7e1973e15f76", null ],
     [ "INSTR_CREATE_bfdot_vector", "dr__ir__macros__aarch64_8h.html#a960297fc133458cf9bd3d741eaae1028", null ],

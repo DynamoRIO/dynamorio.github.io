@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 9.93.19481"
+title: "Release Notes for Version 9.93.19488"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 9.93.19481 </div>  </div>
+<div class="title">Release Notes for Version 9.93.19488 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,8 +63,8 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 9.93.19481. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 9.93.19481 and 9.0.1 include the following compatibility changes:</p><ul>
+<p>The current version is 9.93.19488. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 9.93.19488 and 9.0.1 include the following compatibility changes:</p><ul>
 <li>Eliminated the -skip_syscall option to drrun and drinject, which is now always on by default.</li>
 <li>Changed the drcachesim -use_physical option to not modify the regular trace entry virtual addresses but to instead insert metadata containing translation information for converting virtual to physical addresses.</li>
 <li>Changed the layout of the DR_FAST_IR struct to add an element size property that supports more information about vectors. This changes the method of accessing the register in the structure from struct.value.reg to struct.value.reg_and_element_size.reg. The element size can be accessed directly via struct.value.reg_and_element_size.element_size.</li>
@@ -108,6 +108,7 @@ Changes Since Prior Releases</h1>
 <li>Added a <a class="el" href="classmemtrace__stream__t.html">memtrace_stream_t</a> interface for drmemtrace analysis tools to query key attributes of each input trace.</li>
 <li>Added <a class="el" href="dr__ir__instr_8h.html#a0f959753ac522488db7436168624ed5b">instr_create_1dst_6src()</a> convenience function that returns an <a class="el" href="structinstr__t.html">instr_t</a> with one destination and six sources.</li>
 <li>Added a new label to help in handling "rseq" (Linux restartable sequence) regions: <a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a217ca0bfff6b13fc74018b26084764fe">DR_NOTE_RSEQ_ENTRY</a>.</li>
+<li>Added <a class="el" href="dr__ir__instr_8h.html#aaa2009a9051554c5805094bd1ba7fdf9">instr_get_offset()</a> API for getting the offset of an instr in an instrlist that has been encoded with instrlist_encode* set of APIs.</li>
 </ul>
 <hr  />
 <p>The changes between version 9.0.1 and 9.0.0 include the following compatibility changes:</p><ul>
@@ -129,7 +130,7 @@ Changes Since Prior Releases</h1>
 <li>A source compatibilty change in drcachesim analysis tools for users who have created derived classes from existing analysis tools: member fields of classes are now following a consistent style with an underscore suffix. References to renamed fields will need to be updated.</li>
 <li>A change in the load callbacks used with <a class="el" href="group__drcovlib.html#ga9c2889006a80254645521f81a1a486f5">drmodtrack_add_custom_data()</a> and <a class="el" href="drmemtrace_8h.html#a8644981035cdedfafb000d03cd223399">drmemtrace_custom_module_data()</a>: they each take an additional parameter, the segment index. The custom data field is now per-segment and not per-module, and all callbacks are invoked separately for each segment.</li>
 </ul>
-<p>The changes between version 9.93.19481 and 8.0.0 include the following minor compatibility changes:</p>
+<p>The changes between version 9.93.19488 and 8.0.0 include the following minor compatibility changes:</p>
 <ul>
 <li>drconfiglib (and thus drrun and drconfig) now sets only the new client path options which are added in this release to support other-bitwidth child processes. This means that a drconfiglib from this version will not properly configure for a DynamoRIO core library from a prior version.</li>
 <li>A new option -ldstex2cas is on by default on ARM and AArch64. This converts load-exclusive store-exclusive sequences to use compare-and-swap instead, which enables normal instrumentation of such sequences without clearing the exclusive monitor and causing infinite loops. However, the compare- and-swap's semantics are not identical: it does not detect "ABA" changes and could cause errors in lock-free data structures or other application constructs. See <a class="el" href="API_BT.html#sec_ldrex">Exclusive Monitor Instrumentation</a> for more information.</li>
@@ -1120,5 +1121,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19481 --- Fri May 5 2023 03:13:37 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19488 --- Fri May 12 2023 03:13:50 &nbsp; <img border=0 src="favicon.png">
 </small></address>
