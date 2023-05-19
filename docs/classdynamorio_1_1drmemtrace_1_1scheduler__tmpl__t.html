@@ -74,8 +74,6 @@ Public Types</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a784f8b3fe92773f567c14646994ee745">STATUS_EOF</a>, 
 <br />
-&#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a12d188836f862a7a68b558460b725f72">STATUS_IDLE</a>, 
-<br />
 &#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a67fb8abc3aef15a51ed6ab4b4e75e720">STATUS_WAIT</a>, 
 <br />
 &#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5ab3ca72357837c9a033eff8516263ed46">STATUS_INVALID</a>, 
@@ -248,7 +246,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afb65a4beaa27ae26649738d2e565c0cca602664d2be030cd44e5347816d4a0675"></a>MAP_TO_CONSISTENT_OUTPUT&#160;</td><td class="fielddoc"><p>Each input stream is mapped to a single output stream (i.e., no input will appear on more than one output), supporting lock-free parallel analysis when combined with <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9af3b4cadcd03eac1003ccd1aced5e2823">dynamorio::drmemtrace::scheduler_tmpl_t::DEPENDENCY_IGNORE</a>. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="afb65a4beaa27ae26649738d2e565c0cca62587c4b17b1c7e6f3ad49bb3747b2be"></a>MAP_TO_RECORDED_OUTPUT&#160;</td><td class="fielddoc"><p>Each input stream is assumed to contain markers indicating how it was originally scheduled. Those markers are honored with respect to which core number (considered to correspond to output stream ordinal) an input is scheduled into. This requires an output stream count equal to the number of cores occupied by the input stream set. When combined with <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9afa1e39bbc41fe11cc3bbbd36b2a13e6e">dynamorio::drmemtrace::scheduler_tmpl_t::DEPENDENCY_TIMESTAMPS</a>, this will precisely replay the recorded schedule. </p>
+<tr><td class="fieldname"><a id="afb65a4beaa27ae26649738d2e565c0cca62587c4b17b1c7e6f3ad49bb3747b2be"></a>MAP_TO_RECORDED_OUTPUT&#160;</td><td class="fielddoc"><p>Each input stream is assumed to contain markers indicating how it was originally scheduled. Those markers are honored with respect to which core number (considered to correspond to output stream ordinal) an input is scheduled into. This requires an output stream count equal to the number of cores occupied by the input stream set. When combined with <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9afa1e39bbc41fe11cc3bbbd36b2a13e6e">dynamorio::drmemtrace::scheduler_tmpl_t::DEPENDENCY_TIMESTAMPS</a>, this will precisely replay the recorded schedule; for this mode, <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>:: <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a5367da0081dd5caed8d3d0c02fb9b6f2">scheduler_options_t.replay_as_traced_istream</a> must be specified. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="afb65a4beaa27ae26649738d2e565c0ccaba192b7d617035b922db1f3960154406"></a>MAP_TO_ANY_OUTPUT&#160;</td><td class="fielddoc"><p>The input streams are scheduling using a new synthetic schedule onto the output streams. Any input markers indicating how the software threads were originally mapped to cores during tracing are ignored. </p>
 </td></tr>
@@ -360,9 +358,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 </td></tr>
 <tr><td class="fieldname"><a id="a23d5caa35aed595282c65964326860d5a784f8b3fe92773f567c14646994ee745"></a>STATUS_EOF&#160;</td><td class="fielddoc"><p>Stream is at its end. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a23d5caa35aed595282c65964326860d5a12d188836f862a7a68b558460b725f72"></a>STATUS_IDLE&#160;</td><td class="fielddoc"><p>Indicates that there is no activity on this stream at this time. This happens for <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#afb65a4beaa27ae26649738d2e565c0cca62587c4b17b1c7e6f3ad49bb3747b2be">dynamorio::drmemtrace::scheduler_tmpl_t::MAP_TO_RECORDED_OUTPUT</a> when the original recorded trace contains idle periods on some cores. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a23d5caa35aed595282c65964326860d5a67fb8abc3aef15a51ed6ab4b4e75e720"></a>STATUS_WAIT&#160;</td><td class="fielddoc"><p>For dynamic scheduling with cross-stream dependencies, the scheduler may pause a stream if it gets ahead of another stream it should have a dependence on. This value is also used for schedules following the recorded timestamps (<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9afa1e39bbc41fe11cc3bbbd36b2a13e6e">dynamorio::drmemtrace::scheduler_tmpl_t::DEPENDENCY_TIMESTAMPS</a>) to avoid one stream getting ahead of another. </p>
+<tr><td class="fieldname"><a id="a23d5caa35aed595282c65964326860d5a67fb8abc3aef15a51ed6ab4b4e75e720"></a>STATUS_WAIT&#160;</td><td class="fielddoc"><p>For dynamic scheduling with cross-stream dependencies, the scheduler may pause a stream if it gets ahead of another stream it should have a dependence on. This value is also used for schedules following the recorded timestamps (<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9afa1e39bbc41fe11cc3bbbd36b2a13e6e">dynamorio::drmemtrace::scheduler_tmpl_t::DEPENDENCY_TIMESTAMPS</a>) to avoid one stream getting ahead of another. For replaying a schedule as it was traced with <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#afb65a4beaa27ae26649738d2e565c0cca62587c4b17b1c7e6f3ad49bb3747b2be">dynamorio::drmemtrace::scheduler_tmpl_t::MAP_TO_RECORDED_OUTPUT</a> this can indicate an idle period on a core where the traced workload was not currently scheduled. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a23d5caa35aed595282c65964326860d5ab3ca72357837c9a033eff8516263ed46"></a>STATUS_INVALID&#160;</td><td class="fielddoc"><p>Error condition. </p>
 </td></tr>
@@ -734,5 +730,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19488 --- Fri May 12 2023 03:13:51 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19495 --- Fri May 19 2023 03:13:52 &nbsp; <img border=0 src="favicon.png">
 </small></address>

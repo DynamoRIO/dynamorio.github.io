@@ -21,6 +21,7 @@ permalink: /classanalysis__tool__tmpl__t.html
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">analysis_tool_tmpl_t&lt; RecordType &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -29,6 +30,11 @@ permalink: /classanalysis__tool__tmpl__t.html
 
 <p><code>#include &lt;analysis_tool.h&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1f64a19d0a00cae73fcc9d3cdd4e6150"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#a1f64a19d0a00cae73fcc9d3cdd4e6150">analysis_tool_tmpl_t</a> ()</td></tr>
@@ -45,6 +51,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3f10585ae44b476e23055868314e9ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39cdd10557e22df6844f0bb93e44b868"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#a39cdd10557e22df6844f0bb93e44b868">print_results</a> ()=0</td></tr>
 <tr class="separator:a39cdd10557e22df6844f0bb93e44b868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97a9bfa73defd4e53a7b66a8d39d57dd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#a97a9bfa73defd4e53a7b66a8d39d57dd">generate_interval_snapshot</a> (uint64_t interval_id)</td></tr>
+<tr class="separator:a97a9bfa73defd4e53a7b66a8d39d57dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a957b868c1a976e067a583a3fcf431b6f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#a957b868c1a976e067a583a3fcf431b6f">combine_interval_snapshots</a> (const std::vector&lt; const <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a> * &gt; latest_shard_snapshots, uint64_t interval_end_timestamp)</td></tr>
+<tr class="separator:a957b868c1a976e067a583a3fcf431b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea30f4050fd4d252466d3079db28e56a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#aea30f4050fd4d252466d3079db28e56a">print_interval_results</a> (const std::vector&lt; <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a> * &gt; &amp;interval_snapshots)</td></tr>
+<tr class="separator:aea30f4050fd4d252466d3079db28e56a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb26a7ba40d46e27d3559cccf493fe3f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#aeb26a7ba40d46e27d3559cccf493fe3f">release_interval_snapshot</a> (<a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a> *interval_snapshot)</td></tr>
+<tr class="separator:aeb26a7ba40d46e27d3559cccf493fe3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a776cc2ff239d49d12e7a7c3c6ea59643"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#a776cc2ff239d49d12e7a7c3c6ea59643">parallel_shard_supported</a> ()</td></tr>
 <tr class="separator:a776cc2ff239d49d12e7a7c3c6ea59643"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e8303a5fe30ec0ccb16953cef19529f"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#a2e8303a5fe30ec0ccb16953cef19529f">parallel_worker_init</a> (int worker_index)</td></tr>
@@ -61,6 +75,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2eddfed706a733c748e04f9a99eb7787"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad164e039d96bdbfedb53256b35985643"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#ad164e039d96bdbfedb53256b35985643">parallel_shard_error</a> (void *shard_data)</td></tr>
 <tr class="separator:ad164e039d96bdbfedb53256b35985643"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a33504b07af30bf4b2b34829972350"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#a45a33504b07af30bf4b2b34829972350">generate_shard_interval_snapshot</a> (void *shard_data, uint64_t interval_id)</td></tr>
+<tr class="separator:a45a33504b07af30bf4b2b34829972350"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f64a19d0a00cae73fcc9d3cdd4e6150"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#a1f64a19d0a00cae73fcc9d3cdd4e6150">analysis_tool_tmpl_t</a> ()</td></tr>
 <tr class="separator:a1f64a19d0a00cae73fcc9d3cdd4e6150"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a5b2ad073a0d3533670f821fe564470"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#a2a5b2ad073a0d3533670f821fe564470">initialize</a> ()</td></tr>
@@ -75,6 +91,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3f10585ae44b476e23055868314e9ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39cdd10557e22df6844f0bb93e44b868"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#a39cdd10557e22df6844f0bb93e44b868">print_results</a> ()=0</td></tr>
 <tr class="separator:a39cdd10557e22df6844f0bb93e44b868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97a9bfa73defd4e53a7b66a8d39d57dd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#a97a9bfa73defd4e53a7b66a8d39d57dd">generate_interval_snapshot</a> (uint64_t interval_id)</td></tr>
+<tr class="separator:a97a9bfa73defd4e53a7b66a8d39d57dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a957b868c1a976e067a583a3fcf431b6f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#a957b868c1a976e067a583a3fcf431b6f">combine_interval_snapshots</a> (const std::vector&lt; const <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a> * &gt; latest_shard_snapshots, uint64_t interval_end_timestamp)</td></tr>
+<tr class="separator:a957b868c1a976e067a583a3fcf431b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea30f4050fd4d252466d3079db28e56a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#aea30f4050fd4d252466d3079db28e56a">print_interval_results</a> (const std::vector&lt; <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a> * &gt; &amp;interval_snapshots)</td></tr>
+<tr class="separator:aea30f4050fd4d252466d3079db28e56a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb26a7ba40d46e27d3559cccf493fe3f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#aeb26a7ba40d46e27d3559cccf493fe3f">release_interval_snapshot</a> (<a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a> *interval_snapshot)</td></tr>
+<tr class="separator:aeb26a7ba40d46e27d3559cccf493fe3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a776cc2ff239d49d12e7a7c3c6ea59643"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#a776cc2ff239d49d12e7a7c3c6ea59643">parallel_shard_supported</a> ()</td></tr>
 <tr class="separator:a776cc2ff239d49d12e7a7c3c6ea59643"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e8303a5fe30ec0ccb16953cef19529f"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#a2e8303a5fe30ec0ccb16953cef19529f">parallel_worker_init</a> (int worker_index)</td></tr>
@@ -91,6 +115,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2eddfed706a733c748e04f9a99eb7787"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad164e039d96bdbfedb53256b35985643"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#ad164e039d96bdbfedb53256b35985643">parallel_shard_error</a> (void *shard_data)</td></tr>
 <tr class="separator:ad164e039d96bdbfedb53256b35985643"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a33504b07af30bf4b2b34829972350"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanalysis__tool__tmpl__t.html#a45a33504b07af30bf4b2b34829972350">generate_shard_interval_snapshot</a> (void *shard_data, uint64_t interval_id)</td></tr>
+<tr class="separator:a45a33504b07af30bf4b2b34829972350"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename RecordType&gt;<br />
@@ -161,6 +187,252 @@ template&lt;typename RecordType &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a957b868c1a976e067a583a3fcf431b6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a957b868c1a976e067a583a3fcf431b6f">&#9670;&nbsp;</a></span>combine_interval_snapshots() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a>* <a class="el" href="classanalysis__tool__tmpl__t.html">analysis_tool_tmpl_t</a>&lt; RecordType &gt;::combine_interval_snapshots </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; const <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a> * &gt;&#160;</td>
+          <td class="paramname"><em>latest_shard_snapshots</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>interval_end_timestamp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Invoked by the framework to combine the shard-local <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code> objects pointed at by <code>latest_shard_snapshots</code>, to create the combined <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code> for the whole-trace interval that ends at <code>interval_end_timestamp</code>. This is useful in the parallel mode of the analyzer, where each trace shard is processed in parallel. In this mode, the framework creates the <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code> for each whole-trace interval, one by one. For each interval, it invokes <a class="el" href="classanalysis__tool__tmpl__t.html#a957b868c1a976e067a583a3fcf431b6f">combine_interval_snapshots()</a> with the latest seen interval snapshots from each shard (in <code>latest_shard_snapshots</code>) as of the interval ending at <code>interval_end_timestamp</code>. <code>latest_shard_snapshots</code> will contain at least one non-null element, and at least one of them will have its <code>interval_state_snapshot_t::interval_end_timestamp</code> set to <code>interval_end_timestamp</code>. Tools must not return a nullptr. Tools must not modify the provided snapshots.</p>
+<p><code>interval_end_timestamp</code> helps the tool to determine which of the provided <code>latest_shard_snapshots</code> are relevant to it.</p><ul>
+<li>for cumulative metrics (e.g. total instructions till an interval), the tool may want to combine latest interval snapshots from all shards to get the accurate cumulative count.</li>
+<li>for delta metrics (e.g. incremental instructions in an interval), the tool may want to combine interval snapshots from only the shards that were observed in the current interval (with <code>latest_shard_snapshots</code> [i]-&gt;interval_end_timestamp == <code>interval_end_timestamp</code>)</li>
+<li>or if the tool mixes cumulative and delta metrics: some field-specific logic that combines the above two strategies. </li>
+</ul>
+
+</div>
+</div>
+<a id="a957b868c1a976e067a583a3fcf431b6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a957b868c1a976e067a583a3fcf431b6f">&#9670;&nbsp;</a></span>combine_interval_snapshots() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a>* <a class="el" href="classanalysis__tool__tmpl__t.html">analysis_tool_tmpl_t</a>&lt; RecordType &gt;::combine_interval_snapshots </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; const <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a> * &gt;&#160;</td>
+          <td class="paramname"><em>latest_shard_snapshots</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>interval_end_timestamp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Invoked by the framework to combine the shard-local <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code> objects pointed at by <code>latest_shard_snapshots</code>, to create the combined <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code> for the whole-trace interval that ends at <code>interval_end_timestamp</code>. This is useful in the parallel mode of the analyzer, where each trace shard is processed in parallel. In this mode, the framework creates the <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code> for each whole-trace interval, one by one. For each interval, it invokes <a class="el" href="classanalysis__tool__tmpl__t.html#a957b868c1a976e067a583a3fcf431b6f">combine_interval_snapshots()</a> with the latest seen interval snapshots from each shard (in <code>latest_shard_snapshots</code>) as of the interval ending at <code>interval_end_timestamp</code>. <code>latest_shard_snapshots</code> will contain at least one non-null element, and at least one of them will have its <code>interval_state_snapshot_t::interval_end_timestamp</code> set to <code>interval_end_timestamp</code>. Tools must not return a nullptr. Tools must not modify the provided snapshots.</p>
+<p><code>interval_end_timestamp</code> helps the tool to determine which of the provided <code>latest_shard_snapshots</code> are relevant to it.</p><ul>
+<li>for cumulative metrics (e.g. total instructions till an interval), the tool may want to combine latest interval snapshots from all shards to get the accurate cumulative count.</li>
+<li>for delta metrics (e.g. incremental instructions in an interval), the tool may want to combine interval snapshots from only the shards that were observed in the current interval (with <code>latest_shard_snapshots</code> [i]-&gt;interval_end_timestamp == <code>interval_end_timestamp</code>)</li>
+<li>or if the tool mixes cumulative and delta metrics: some field-specific logic that combines the above two strategies. </li>
+</ul>
+
+</div>
+</div>
+<a id="a97a9bfa73defd4e53a7b66a8d39d57dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97a9bfa73defd4e53a7b66a8d39d57dd">&#9670;&nbsp;</a></span>generate_interval_snapshot() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a>* <a class="el" href="classanalysis__tool__tmpl__t.html">analysis_tool_tmpl_t</a>&lt; RecordType &gt;::generate_interval_snapshot </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>interval_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Notifies the analysis tool that the given trace <code>interval_id</code> has ended so that it can generate a snapshot of its internal state in a struct derived from <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code>, and return a pointer to it. The returned pointer will be provided to the tool in later <a class="el" href="classanalysis__tool__tmpl__t.html#a957b868c1a976e067a583a3fcf431b6f">combine_interval_snapshots()</a> and print_interval_result() calls.</p>
+<p><code>interval_id</code> is the ordinal of the trace interval that just ended. Trace intervals have a length equal to the <code>-interval_microseconds</code> specified to the framework. Trace intervals are measured using the value of the <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aab2a51d7215cf0da83ec1d74f980e89f">TRACE_MARKER_TYPE_TIMESTAMP</a> markers. The provided <code>interval_id</code> values will be monotonically increasing but may not be continuous, i.e. the tool may not see some <code>interval_id</code> if the trace did not have any activity in that interval.</p>
+<p>The returned <code>interval_state_snapshot_t*</code> will be passed to the <a class="el" href="classanalysis__tool__tmpl__t.html#a957b868c1a976e067a583a3fcf431b6f">combine_interval_snapshots()</a> API which is invoked by the framework to merge multiple <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code> from different shards in the parallel mode of the analyzer.</p>
+<p>Finally, the print_interval_result() API is invoked with a list of <code>interval_state_snapshot_t*</code> representing interval snapshots for the whole trace.</p>
+<p>The tool must not de-allocate the state snapshot until <a class="el" href="classanalysis__tool__tmpl__t.html#aeb26a7ba40d46e27d3559cccf493fe3f">release_interval_snapshot()</a> is invoked by the framework.</p>
+<p>An example use case of this API is to create a time series of some output metric over the whole trace. </p>
+
+</div>
+</div>
+<a id="a97a9bfa73defd4e53a7b66a8d39d57dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97a9bfa73defd4e53a7b66a8d39d57dd">&#9670;&nbsp;</a></span>generate_interval_snapshot() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a>* <a class="el" href="classanalysis__tool__tmpl__t.html">analysis_tool_tmpl_t</a>&lt; RecordType &gt;::generate_interval_snapshot </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>interval_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Notifies the analysis tool that the given trace <code>interval_id</code> has ended so that it can generate a snapshot of its internal state in a struct derived from <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code>, and return a pointer to it. The returned pointer will be provided to the tool in later <a class="el" href="classanalysis__tool__tmpl__t.html#a957b868c1a976e067a583a3fcf431b6f">combine_interval_snapshots()</a> and print_interval_result() calls.</p>
+<p><code>interval_id</code> is the ordinal of the trace interval that just ended. Trace intervals have a length equal to the <code>-interval_microseconds</code> specified to the framework. Trace intervals are measured using the value of the <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aab2a51d7215cf0da83ec1d74f980e89f">TRACE_MARKER_TYPE_TIMESTAMP</a> markers. The provided <code>interval_id</code> values will be monotonically increasing but may not be continuous, i.e. the tool may not see some <code>interval_id</code> if the trace did not have any activity in that interval.</p>
+<p>The returned <code>interval_state_snapshot_t*</code> will be passed to the <a class="el" href="classanalysis__tool__tmpl__t.html#a957b868c1a976e067a583a3fcf431b6f">combine_interval_snapshots()</a> API which is invoked by the framework to merge multiple <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code> from different shards in the parallel mode of the analyzer.</p>
+<p>Finally, the print_interval_result() API is invoked with a list of <code>interval_state_snapshot_t*</code> representing interval snapshots for the whole trace.</p>
+<p>The tool must not de-allocate the state snapshot until <a class="el" href="classanalysis__tool__tmpl__t.html#aeb26a7ba40d46e27d3559cccf493fe3f">release_interval_snapshot()</a> is invoked by the framework.</p>
+<p>An example use case of this API is to create a time series of some output metric over the whole trace. </p>
+
+</div>
+</div>
+<a id="a45a33504b07af30bf4b2b34829972350"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45a33504b07af30bf4b2b34829972350">&#9670;&nbsp;</a></span>generate_shard_interval_snapshot() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a>* <a class="el" href="classanalysis__tool__tmpl__t.html">analysis_tool_tmpl_t</a>&lt; RecordType &gt;::generate_shard_interval_snapshot </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>shard_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>interval_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Notifies the analysis tool that the given trace <code>interval_id</code> in the shard represented by the given <code>shard_data</code> has ended, so that it can generate a snapshot of its internal state in a struct derived from <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code>, and return a pointer to it. The returned pointer will be provided to the tool in later <a class="el" href="classanalysis__tool__tmpl__t.html#a957b868c1a976e067a583a3fcf431b6f">combine_interval_snapshots()</a> and print_interval_result() calls.</p>
+<p>Note that the provided <code>interval_id</code> is local to the shard that is represented by the given <code>shard_data</code>, and not the whole-trace interval. The framework will automatically create an <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code> for each whole-trace interval by using <a class="el" href="classanalysis__tool__tmpl__t.html#a957b868c1a976e067a583a3fcf431b6f">combine_interval_snapshots()</a> to combine one or more shard-local <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code> corresponding to that whole-trace interval.</p>
+<p><code>interval_id</code> is the ordinal of the trace interval that just ended. Trace intervals have a length equal to the <code>-interval_microseconds</code> specified to the framework. Trace intervals are measured using the value of the <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aab2a51d7215cf0da83ec1d74f980e89f">TRACE_MARKER_TYPE_TIMESTAMP</a> markers. The provided <code>interval_id</code> values will be monotonically increasing but may not be continuous, i.e. the tool may not see some <code>interval_id</code> if the trace shard did not have any activity in that interval.</p>
+<p>The returned <code>interval_state_snapshot_t*</code> will be passed to the combine_interval_snapshot() API which is invoked by the framework to merge multiple <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code> from different shards in the parallel mode of the analyzer.</p>
+<p>Finally, the print_interval_result() API is invoked with a list of <code>interval_state_snapshot_t*</code> representing interval snapshots for the whole trace. In the parallel mode of the analyzer, this list is computed by combining the shard-local <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code> using the tool's combine_interval_snapshot() API.</p>
+<p>The tool must not de-allocate the state snapshot until <a class="el" href="classanalysis__tool__tmpl__t.html#aeb26a7ba40d46e27d3559cccf493fe3f">release_interval_snapshot()</a> is invoked by the framework.</p>
+<p>An example use case of this API is to create a time series of some output metric over the whole trace. </p>
+
+</div>
+</div>
+<a id="a45a33504b07af30bf4b2b34829972350"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45a33504b07af30bf4b2b34829972350">&#9670;&nbsp;</a></span>generate_shard_interval_snapshot() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a>* <a class="el" href="classanalysis__tool__tmpl__t.html">analysis_tool_tmpl_t</a>&lt; RecordType &gt;::generate_shard_interval_snapshot </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>shard_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>interval_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Notifies the analysis tool that the given trace <code>interval_id</code> in the shard represented by the given <code>shard_data</code> has ended, so that it can generate a snapshot of its internal state in a struct derived from <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code>, and return a pointer to it. The returned pointer will be provided to the tool in later <a class="el" href="classanalysis__tool__tmpl__t.html#a957b868c1a976e067a583a3fcf431b6f">combine_interval_snapshots()</a> and print_interval_result() calls.</p>
+<p>Note that the provided <code>interval_id</code> is local to the shard that is represented by the given <code>shard_data</code>, and not the whole-trace interval. The framework will automatically create an <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code> for each whole-trace interval by using <a class="el" href="classanalysis__tool__tmpl__t.html#a957b868c1a976e067a583a3fcf431b6f">combine_interval_snapshots()</a> to combine one or more shard-local <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code> corresponding to that whole-trace interval.</p>
+<p><code>interval_id</code> is the ordinal of the trace interval that just ended. Trace intervals have a length equal to the <code>-interval_microseconds</code> specified to the framework. Trace intervals are measured using the value of the <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aab2a51d7215cf0da83ec1d74f980e89f">TRACE_MARKER_TYPE_TIMESTAMP</a> markers. The provided <code>interval_id</code> values will be monotonically increasing but may not be continuous, i.e. the tool may not see some <code>interval_id</code> if the trace shard did not have any activity in that interval.</p>
+<p>The returned <code>interval_state_snapshot_t*</code> will be passed to the combine_interval_snapshot() API which is invoked by the framework to merge multiple <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code> from different shards in the parallel mode of the analyzer.</p>
+<p>Finally, the print_interval_result() API is invoked with a list of <code>interval_state_snapshot_t*</code> representing interval snapshots for the whole trace. In the parallel mode of the analyzer, this list is computed by combining the shard-local <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code> using the tool's combine_interval_snapshot() API.</p>
+<p>The tool must not de-allocate the state snapshot until <a class="el" href="classanalysis__tool__tmpl__t.html#aeb26a7ba40d46e27d3559cccf493fe3f">release_interval_snapshot()</a> is invoked by the framework.</p>
+<p>An example use case of this API is to create a time series of some output metric over the whole trace. </p>
+
+</div>
+</div>
 <a id="abee68fe7b8c1d3a69f95e9af87c7c032"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abee68fe7b8c1d3a69f95e9af87c7c032">&#9670;&nbsp;</a></span>get_error_string() <span class="overload">[1/2]</span></h2>
 
@@ -538,7 +810,7 @@ template&lt;typename RecordType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated:</a></b></dt><dd>The <a class="el" href="classanalysis__tool__tmpl__t.html#a2be5a1d59ff06ef788c1e3a80bde7259">parallel_shard_init_stream()</a> is what is called by the analyzer; this function is only called if the default implementation of <a class="el" href="classanalysis__tool__tmpl__t.html#a2be5a1d59ff06ef788c1e3a80bde7259">parallel_shard_init_stream()</a> is left in place and it calls this version. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>The <a class="el" href="classanalysis__tool__tmpl__t.html#a2be5a1d59ff06ef788c1e3a80bde7259">parallel_shard_init_stream()</a> is what is called by the analyzer; this function is only called if the default implementation of <a class="el" href="classanalysis__tool__tmpl__t.html#a2be5a1d59ff06ef788c1e3a80bde7259">parallel_shard_init_stream()</a> is left in place and it calls this version. </dd></dl>
 
 </div>
 </div>
@@ -577,7 +849,7 @@ template&lt;typename RecordType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>The <a class="el" href="classanalysis__tool__tmpl__t.html#a2be5a1d59ff06ef788c1e3a80bde7259">parallel_shard_init_stream()</a> is what is called by the analyzer; this function is only called if the default implementation of <a class="el" href="classanalysis__tool__tmpl__t.html#a2be5a1d59ff06ef788c1e3a80bde7259">parallel_shard_init_stream()</a> is left in place and it calls this version. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated:</a></b></dt><dd>The <a class="el" href="classanalysis__tool__tmpl__t.html#a2be5a1d59ff06ef788c1e3a80bde7259">parallel_shard_init_stream()</a> is what is called by the analyzer; this function is only called if the default implementation of <a class="el" href="classanalysis__tool__tmpl__t.html#a2be5a1d59ff06ef788c1e3a80bde7259">parallel_shard_init_stream()</a> is left in place and it calls this version. </dd></dl>
 
 </div>
 </div>
@@ -921,6 +1193,64 @@ template&lt;typename RecordType &gt; </div>
 
 </div>
 </div>
+<a id="aea30f4050fd4d252466d3079db28e56a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea30f4050fd4d252466d3079db28e56a">&#9670;&nbsp;</a></span>print_interval_results() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool <a class="el" href="classanalysis__tool__tmpl__t.html">analysis_tool_tmpl_t</a>&lt; RecordType &gt;::print_interval_results </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>interval_snapshots</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prints the interval results for the whole trace. The state snapshots for intervals can be found in the given <code>interval_snapshots</code>. </p>
+
+</div>
+</div>
+<a id="aea30f4050fd4d252466d3079db28e56a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea30f4050fd4d252466d3079db28e56a">&#9670;&nbsp;</a></span>print_interval_results() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool <a class="el" href="classanalysis__tool__tmpl__t.html">analysis_tool_tmpl_t</a>&lt; RecordType &gt;::print_interval_results </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>interval_snapshots</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prints the interval results for the whole trace. The state snapshots for intervals can be found in the given <code>interval_snapshots</code>. </p>
+
+</div>
+</div>
 <a id="a39cdd10557e22df6844f0bb93e44b868"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a39cdd10557e22df6844f0bb93e44b868">&#9670;&nbsp;</a></span>print_results() <span class="overload">[1/2]</span></h2>
 
@@ -1035,6 +1365,64 @@ template&lt;typename RecordType &gt; </div>
 
 </div>
 </div>
+<a id="aeb26a7ba40d46e27d3559cccf493fe3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb26a7ba40d46e27d3559cccf493fe3f">&#9670;&nbsp;</a></span>release_interval_snapshot() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool <a class="el" href="classanalysis__tool__tmpl__t.html">analysis_tool_tmpl_t</a>&lt; RecordType &gt;::release_interval_snapshot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a> *&#160;</td>
+          <td class="paramname"><em>interval_snapshot</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Notifies the tool that the <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code> object pointed to by <code>interval_snapshot</code> is no longer needed by the framework. The tool may de-allocate it right away or later, as it needs. Returns whether it was successful. </p>
+
+</div>
+</div>
+<a id="aeb26a7ba40d46e27d3559cccf493fe3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb26a7ba40d46e27d3559cccf493fe3f">&#9670;&nbsp;</a></span>release_interval_snapshot() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool <a class="el" href="classanalysis__tool__tmpl__t.html">analysis_tool_tmpl_t</a>&lt; RecordType &gt;::release_interval_snapshot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a> *&#160;</td>
+          <td class="paramname"><em>interval_snapshot</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Notifies the tool that the <code><a class="el" href="structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">interval_state_snapshot_t</a></code> object pointed to by <code>interval_snapshot</code> is no longer needed by the framework. The tool may de-allocate it right away or later, as it needs. Returns whether it was successful. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/runner/work/dynamorio/dynamorio/build_release-64/clients/include/drmemtrace/<a class="el" href="build__release-64_2clients_2include_2drmemtrace_2analysis__tool_8h.html">analysis_tool.h</a></li>
 </ul>
@@ -1044,5 +1432,5 @@ template&lt;typename RecordType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19488 --- Fri May 12 2023 03:13:51 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19495 --- Fri May 19 2023 03:13:52 &nbsp; <img border=0 src="favicon.png">
 </small></address>

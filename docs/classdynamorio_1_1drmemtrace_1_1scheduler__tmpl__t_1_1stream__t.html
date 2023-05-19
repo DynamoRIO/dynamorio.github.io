@@ -58,10 +58,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3a83dd98176ac3c13de12ab60d478252"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad648abe0b17d471550e514f3e852b31c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ad648abe0b17d471550e514f3e852b31c">get_stream_name</a> () const override</td></tr>
 <tr class="separator:ad648abe0b17d471550e514f3e852b31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7b842aa0b9ae01ab2546d1e5ec0f6ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aba6242678835329015e0fc77404a1865">input_ordinal_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#aa7b842aa0b9ae01ab2546d1e5ec0f6ff">get_input_stream_ordinal</a> ()</td></tr>
-<tr class="separator:aa7b842aa0b9ae01ab2546d1e5ec0f6ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c4659c7d60bd4b1ae5ebaec87c28b4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aba6242678835329015e0fc77404a1865">input_ordinal_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a76c4659c7d60bd4b1ae5ebaec87c28b4">get_input_stream_ordinal</a> ()</td></tr>
+<tr class="separator:a76c4659c7d60bd4b1ae5ebaec87c28b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ea475b2b4f9dc3d440b4dc504c81d2b"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a3ea475b2b4f9dc3d440b4dc504c81d2b">get_last_timestamp</a> () const override</td></tr>
 <tr class="separator:a3ea475b2b4f9dc3d440b4dc504c81d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6ab7b95a0ef459d80e19c917510fb92"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#aa6ab7b95a0ef459d80e19c917510fb92">get_first_timestamp</a> () const override</td></tr>
+<tr class="separator:aa6ab7b95a0ef459d80e19c917510fb92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04ba6c08ee2b58c2008d5765988c4a4b"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a04ba6c08ee2b58c2008d5765988c4a4b">get_version</a> () const override</td></tr>
 <tr class="separator:a04ba6c08ee2b58c2008d5765988c4a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd2cb76686b11cd99757ca215340001e"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#acd2cb76686b11cd99757ca215340001e">get_filetype</a> () const override</td></tr>
@@ -174,8 +176,8 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 
 </div>
 </div>
-<a id="aa7b842aa0b9ae01ab2546d1e5ec0f6ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7b842aa0b9ae01ab2546d1e5ec0f6ff">&#9670;&nbsp;</a></span>get_input_stream_ordinal()</h2>
+<a id="aa6ab7b95a0ef459d80e19c917510fb92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6ab7b95a0ef459d80e19c917510fb92">&#9670;&nbsp;</a></span>get_first_timestamp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -186,7 +188,37 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aba6242678835329015e0fc77404a1865">input_ordinal_t</a> <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::stream_t::get_input_stream_ordinal </td>
+          <td class="memname">uint64_t <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::stream_t::get_first_timestamp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the value of the first seen <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aab2a51d7215cf0da83ec1d74f980e89f">TRACE_MARKER_TYPE_TIMESTAMP</a> marker. </p>
+
+<p>Implements <a class="el" href="classmemtrace__stream__t.html#abab3bc3f43a719f49778bb417ec58cfa">memtrace_stream_t</a>.</p>
+
+</div>
+</div>
+<a id="a76c4659c7d60bd4b1ae5ebaec87c28b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76c4659c7d60bd4b1ae5ebaec87c28b4">&#9670;&nbsp;</a></span>get_input_stream_ordinal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aba6242678835329015e0fc77404a1865">input_ordinal_t</a> <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::stream_t::get_input_stream_ordinal </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -194,7 +226,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -226,7 +258,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the count of instructions from the start of the trace to this point. If <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a1e290a29bdceade505c252246646d97b">dynamorio::drmemtrace::scheduler_tmpl_t::SCHEDULER_USE_INPUT_ORDINALS</a> is set, then this value matches the instruction ordinal for the current input stream (and thus might decrease or not change across records if the input changed). Otherwise, if multiple input streams fed into this output stream, this includes the records from all those streams that were presented here: thus, this may be larger than what the current input stream reports (see <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a5aff5fd94bfae5486b0d557c6ac87d57">get_input_stream_interface()</a> and <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#aa7b842aa0b9ae01ab2546d1e5ec0f6ff">get_input_stream_ordinal()</a>). This does not advance across skipped records in an input stream from a region of interest (see <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::range_t</a>), but it does advance if the output stream skipped ahead. </p>
+<p>Returns the count of instructions from the start of the trace to this point. If <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a1e290a29bdceade505c252246646d97b">dynamorio::drmemtrace::scheduler_tmpl_t::SCHEDULER_USE_INPUT_ORDINALS</a> is set, then this value matches the instruction ordinal for the current input stream (and thus might decrease or not change across records if the input changed). Otherwise, if multiple input streams fed into this output stream, this includes the records from all those streams that were presented here: thus, this may be larger than what the current input stream reports (see <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a5aff5fd94bfae5486b0d557c6ac87d57">get_input_stream_interface()</a> and <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a76c4659c7d60bd4b1ae5ebaec87c28b4">get_input_stream_ordinal()</a>). This does not advance across skipped records in an input stream from a region of interest (see <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::range_t</a>), but it does advance if the output stream skipped ahead. </p>
 
 <p>Implements <a class="el" href="classmemtrace__stream__t.html#aebf60da55c5ba6a0479d3063e542b1c3">memtrace_stream_t</a>.</p>
 
@@ -256,7 +288,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the value of the last seen <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aab2a51d7215cf0da83ec1d74f980e89f">TRACE_MARKER_TYPE_TIMESTAMP</a> marker. </p>
+<p>Returns the value of the most recently seen <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aab2a51d7215cf0da83ec1d74f980e89f">TRACE_MARKER_TYPE_TIMESTAMP</a> marker. </p>
 
 <p>Implements <a class="el" href="classmemtrace__stream__t.html#ae293679c8de9f3e9f8930c3ebc3ff51a">memtrace_stream_t</a>.</p>
 
@@ -317,7 +349,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Returns the count of <a class="el" href="memref_8h.html#a5dc7702c7dece5c18bb576bf26d724b5">memref_t</a> records from the start of the trace to this point. It does not include synthetic records (see <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ab276351adf53d50aecba8954f7f839d4">is_record_synthetic()</a>).</p>
-<p>If <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a1e290a29bdceade505c252246646d97b">dynamorio::drmemtrace::scheduler_tmpl_t::SCHEDULER_USE_INPUT_ORDINALS</a> is set, then this value matches the record ordinal for the current input stream (and thus might decrease or not change across records if the input changed). Otherwise, if multiple input streams fed into this output stream, this includes the records from all those streams that were presented here: thus, this may be larger than what the current input stream reports (see <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a5aff5fd94bfae5486b0d557c6ac87d57">get_input_stream_interface()</a> and <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#aa7b842aa0b9ae01ab2546d1e5ec0f6ff">get_input_stream_ordinal()</a>). This does not advance across skipped records in an input stream from a region of interest (see <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::range_t</a>), but it does advance if the output stream skipped ahead. </p>
+<p>If <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a1e290a29bdceade505c252246646d97b">dynamorio::drmemtrace::scheduler_tmpl_t::SCHEDULER_USE_INPUT_ORDINALS</a> is set, then this value matches the record ordinal for the current input stream (and thus might decrease or not change across records if the input changed). Otherwise, if multiple input streams fed into this output stream, this includes the records from all those streams that were presented here: thus, this may be larger than what the current input stream reports (see <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a5aff5fd94bfae5486b0d557c6ac87d57">get_input_stream_interface()</a> and <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a76c4659c7d60bd4b1ae5ebaec87c28b4">get_input_stream_ordinal()</a>). This does not advance across skipped records in an input stream from a region of interest (see <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::range_t</a>), but it does advance if the output stream skipped ahead. </p>
 
 <p>Implements <a class="el" href="classmemtrace__stream__t.html#a1a532a99af366cf8cca051a57e208b3e">memtrace_stream_t</a>.</p>
 
@@ -549,5 +581,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19488 --- Fri May 12 2023 03:13:51 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19495 --- Fri May 19 2023 03:13:52 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -7,6 +7,7 @@
     [ "elf_loader.h", "build__release-64_2clients_2include_2drmemtrace_2elf__loader_8h.html", null ],
     [ "func_view_create.h", "func__view__create_8h.html", {% include_relative func__view__create_8h.js %} ],
     [ "histogram_create.h", "histogram__create_8h.html", {% include_relative histogram__create_8h.js %} ],
+    [ "ir2trace.h", "build__release-64_2clients_2include_2drmemtrace_2ir2trace_8h.html", {% include_relative build__release-64_2clients_2include_2drmemtrace_2ir2trace_8h.js %} ],
     [ "memref.h", "memref_8h.html", {% include_relative memref_8h.js %} ],
     [ "memtrace_stream.h", "memtrace__stream_8h.html", [
       [ "memtrace_stream_t", "classmemtrace__stream__t.html", {% include_relative classmemtrace__stream__t.js %} ],

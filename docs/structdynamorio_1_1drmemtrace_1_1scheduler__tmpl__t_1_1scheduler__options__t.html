@@ -61,6 +61,8 @@ Data Fields</h2></td></tr>
 <tr class="separator:a0d951e6e51647de93dc52083157dab81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebd6e85c8a7b37a2cbdfc64efc60537e"><td class="memItemLeft" align="right" valign="top">archive_istream_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#aebd6e85c8a7b37a2cbdfc64efc60537e">schedule_replay_istream</a> = nullptr</td></tr>
 <tr class="separator:aebd6e85c8a7b37a2cbdfc64efc60537e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5367da0081dd5caed8d3d0c02fb9b6f2"><td class="memItemLeft" align="right" valign="top">archive_istream_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a5367da0081dd5caed8d3d0c02fb9b6f2">replay_as_traced_istream</a> = nullptr</td></tr>
+<tr class="separator:a5367da0081dd5caed8d3d0c02fb9b6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename RecordType, typename ReaderType&gt;<br />
@@ -233,6 +235,23 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 
 </div>
 </div>
+<a id="a5367da0081dd5caed8d3d0c02fb9b6f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5367da0081dd5caed8d3d0c02fb9b6f2">&#9670;&nbsp;</a></span>replay_as_traced_istream</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">archive_istream_t* <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::scheduler_options_t::replay_as_traced_istream = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Input stream for replaying the traced schedule when <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#afb65a4beaa27ae26649738d2e565c0cca62587c4b17b1c7e6f3ad49bb3747b2be">dynamorio::drmemtrace::scheduler_tmpl_t::MAP_TO_RECORDED_OUTPUT</a> is specified for more than one output stream (whose count must match the number of traced cores). </p>
+
+</div>
+</div>
 <a id="a0d951e6e51647de93dc52083157dab81"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0d951e6e51647de93dc52083157dab81">&#9670;&nbsp;</a></span>schedule_record_ostream</h2>
 
@@ -310,5 +329,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19488 --- Fri May 12 2023 03:13:51 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19495 --- Fri May 19 2023 03:13:52 &nbsp; <img border=0 src="favicon.png">
 </small></address>

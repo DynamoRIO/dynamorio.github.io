@@ -4,6 +4,7 @@
     [ "e", "globals_eval_e.html", null ],
     [ "f", "globals_eval_f.html", null ],
     [ "h", "globals_eval_h.html", null ],
+    [ "i", "globals_eval_i.html", null ],
     [ "o", "globals_eval_o.html", null ],
     [ "p", "globals_eval_p.html", null ],
     [ "s", "globals_eval_s.html", null ],

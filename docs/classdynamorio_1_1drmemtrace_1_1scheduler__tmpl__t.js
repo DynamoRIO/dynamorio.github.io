@@ -39,7 +39,6 @@
     [ "stream_status_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5", [
       [ "STATUS_OK", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a4a9f07bc3714da2a39e0c60500da6492", null ],
       [ "STATUS_EOF", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a784f8b3fe92773f567c14646994ee745", null ],
-      [ "STATUS_IDLE", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a12d188836f862a7a68b558460b725f72", null ],
       [ "STATUS_WAIT", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a67fb8abc3aef15a51ed6ab4b4e75e720", null ],
       [ "STATUS_INVALID", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5ab3ca72357837c9a033eff8516263ed46", null ],
       [ "STATUS_REGION_INVALID", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a665161d3ec22cbe06e12ffbf53e8d78a", null ],

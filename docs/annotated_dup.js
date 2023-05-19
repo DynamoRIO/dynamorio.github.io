@@ -82,6 +82,7 @@
     [ "instr_noalloc_t", "structinstr__noalloc__t.html", {% include_relative structinstr__noalloc__t.js %} ],
     [ "instr_summary_t", "structinstr__summary__t.html", {% include_relative structinstr__summary__t.js %} ],
     [ "instr_t", "structinstr__t.html", null ],
+    [ "ir2trace_t", "classir2trace__t.html", {% include_relative classir2trace__t.js %} ],
     [ "memtrace_stream_t", "classmemtrace__stream__t.html", {% include_relative classmemtrace__stream__t.js %} ],
     [ "module_mapper_t", "classmodule__mapper__t.html", {% include_relative classmodule__mapper__t.js %} ],
     [ "opnd_t", "structopnd__t.html", null ],

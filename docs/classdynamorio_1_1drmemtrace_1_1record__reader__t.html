@@ -51,6 +51,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab923e77f2d921188fa74dac3725e90d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b843e57bf9e457a4fc545315125d018"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1record__reader__t.html#a2b843e57bf9e457a4fc545315125d018">get_last_timestamp</a> () const override</td></tr>
 <tr class="separator:a2b843e57bf9e457a4fc545315125d018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66a2f73f2d2f43647eac0f1b0183d787"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1record__reader__t.html#a66a2f73f2d2f43647eac0f1b0183d787">get_first_timestamp</a> () const override</td></tr>
+<tr class="separator:a66a2f73f2d2f43647eac0f1b0183d787"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a2ec66afb3a74aa229e8c290411911a"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1record__reader__t.html#a1a2ec66afb3a74aa229e8c290411911a">get_version</a> () const override</td></tr>
 <tr class="separator:a1a2ec66afb3a74aa229e8c290411911a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d37a47affdd449c2f3fceca00553eb5"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1record__reader__t.html#a7d37a47affdd449c2f3fceca00553eb5">get_filetype</a> () const override</td></tr>
@@ -164,6 +166,34 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a66a2f73f2d2f43647eac0f1b0183d787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66a2f73f2d2f43647eac0f1b0183d787">&#9670;&nbsp;</a></span>get_first_timestamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t dynamorio::drmemtrace::record_reader_t::get_first_timestamp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the value of the first seen <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aab2a51d7215cf0da83ec1d74f980e89f">TRACE_MARKER_TYPE_TIMESTAMP</a> marker. </p>
+
+<p>Implements <a class="el" href="classmemtrace__stream__t.html#abab3bc3f43a719f49778bb417ec58cfa">memtrace_stream_t</a>.</p>
+
+</div>
+</div>
 <a id="ab923e77f2d921188fa74dac3725e90d1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab923e77f2d921188fa74dac3725e90d1">&#9670;&nbsp;</a></span>get_instruction_ordinal()</h2>
 
@@ -214,7 +244,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the value of the last seen <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aab2a51d7215cf0da83ec1d74f980e89f">TRACE_MARKER_TYPE_TIMESTAMP</a> marker. </p>
+<p>Returns the value of the most recently seen <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aab2a51d7215cf0da83ec1d74f980e89f">TRACE_MARKER_TYPE_TIMESTAMP</a> marker. </p>
 
 <p>Implements <a class="el" href="classmemtrace__stream__t.html#ae293679c8de9f3e9f8930c3ebc3ff51a">memtrace_stream_t</a>.</p>
 
@@ -313,5 +343,5 @@ Public Member Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19488 --- Fri May 12 2023 03:13:51 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19495 --- Fri May 19 2023 03:13:52 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -16,6 +16,7 @@
     [ "DR_REG_START_MMX", "dr__ir__opnd_8h.html#a21a965a72948bf1366a0d9edef188582", null ],
     [ "DR_REG_START_OPMASK", "dr__ir__opnd_8h.html#a39ac08747ad50f9675e082f4f3e8b0f0", null ],
     [ "DR_REG_START_SEGMENT", "dr__ir__opnd_8h.html#ad9862f4e8a6daa34ace92c2f75b7727a", null ],
+    [ "DR_REG_START_SEGMENT_x64", "dr__ir__opnd_8h.html#acd2661666b506753ef285d927d2cb4de", null ],
     [ "DR_REG_START_x64_8", "dr__ir__opnd_8h.html#abb2c26e333e07198d5bd98bf414fdb4d", null ],
     [ "DR_REG_START_x86_8", "dr__ir__opnd_8h.html#a56f14976648218d6d48ce423f16760c4", null ],
     [ "DR_REG_START_XMM", "dr__ir__opnd_8h.html#a9e70a6b298f9a1be8816b62f145fae61", null ],

@@ -215,6 +215,9 @@ The full path to the tracer library.</li>
 <li><b>-tracer_alt</b> <br  />
 <em>default value: ""</em> <br  />
 The full path to the tracer library for the other bitwidth, for use on child processes with a different bitwidth from their parent. If empty, such child processes will die with fatal errors.</li>
+<li><b>-interval_microseconds</b> <br  />
+<em>default value: 0</em> <br  />
+Desired length of each trace interval, defined in microseconds of trace time. Trace intervals are measured using the TRACE_MARKER_TYPE_TIMESTAMP marker values. If set, analysis tools receive a callback at the end of each interval.</li>
 <li><b>-only_thread</b> <br  />
 <em>default value: 0</em> <br  />
 Limits analyis to the single thread with the given identifier. 0 enables all threads.</li>
@@ -298,5 +301,5 @@ By default, offline tracing only records a userspace trace. If this option is en
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19488 --- Fri May 12 2023 03:13:51 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19495 --- Fri May 19 2023 03:13:51 &nbsp; <img border=0 src="favicon.png">
 </small></address>

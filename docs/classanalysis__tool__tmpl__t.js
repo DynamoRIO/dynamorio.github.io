@@ -1,6 +1,13 @@
 [
+    [ "interval_state_snapshot_t", "structanalysis__tool__tmpl__t_1_1interval__state__snapshot__t.html", null ],
     [ "analysis_tool_tmpl_t", "classanalysis__tool__tmpl__t.html#a1f64a19d0a00cae73fcc9d3cdd4e6150", null ],
     [ "analysis_tool_tmpl_t", "classanalysis__tool__tmpl__t.html#a1f64a19d0a00cae73fcc9d3cdd4e6150", null ],
+    [ "combine_interval_snapshots", "classanalysis__tool__tmpl__t.html#a957b868c1a976e067a583a3fcf431b6f", null ],
+    [ "combine_interval_snapshots", "classanalysis__tool__tmpl__t.html#a957b868c1a976e067a583a3fcf431b6f", null ],
+    [ "generate_interval_snapshot", "classanalysis__tool__tmpl__t.html#a97a9bfa73defd4e53a7b66a8d39d57dd", null ],
+    [ "generate_interval_snapshot", "classanalysis__tool__tmpl__t.html#a97a9bfa73defd4e53a7b66a8d39d57dd", null ],
+    [ "generate_shard_interval_snapshot", "classanalysis__tool__tmpl__t.html#a45a33504b07af30bf4b2b34829972350", null ],
+    [ "generate_shard_interval_snapshot", "classanalysis__tool__tmpl__t.html#a45a33504b07af30bf4b2b34829972350", null ],
     [ "get_error_string", "classanalysis__tool__tmpl__t.html#abee68fe7b8c1d3a69f95e9af87c7c032", null ],
     [ "get_error_string", "classanalysis__tool__tmpl__t.html#abee68fe7b8c1d3a69f95e9af87c7c032", null ],
     [ "initialize", "classanalysis__tool__tmpl__t.html#a2a5b2ad073a0d3533670f821fe564470", null ],
@@ -25,8 +32,12 @@
     [ "parallel_worker_exit", "classanalysis__tool__tmpl__t.html#a929b42258390614d03cf0575e394af87", null ],
     [ "parallel_worker_init", "classanalysis__tool__tmpl__t.html#a2e8303a5fe30ec0ccb16953cef19529f", null ],
     [ "parallel_worker_init", "classanalysis__tool__tmpl__t.html#a2e8303a5fe30ec0ccb16953cef19529f", null ],
+    [ "print_interval_results", "classanalysis__tool__tmpl__t.html#aea30f4050fd4d252466d3079db28e56a", null ],
+    [ "print_interval_results", "classanalysis__tool__tmpl__t.html#aea30f4050fd4d252466d3079db28e56a", null ],
     [ "print_results", "classanalysis__tool__tmpl__t.html#a39cdd10557e22df6844f0bb93e44b868", null ],
     [ "print_results", "classanalysis__tool__tmpl__t.html#a39cdd10557e22df6844f0bb93e44b868", null ],
     [ "process_memref", "classanalysis__tool__tmpl__t.html#a3f10585ae44b476e23055868314e9ede", null ],
-    [ "process_memref", "classanalysis__tool__tmpl__t.html#a3f10585ae44b476e23055868314e9ede", null ]
+    [ "process_memref", "classanalysis__tool__tmpl__t.html#a3f10585ae44b476e23055868314e9ede", null ],
+    [ "release_interval_snapshot", "classanalysis__tool__tmpl__t.html#aeb26a7ba40d46e27d3559cccf493fe3f", null ],
+    [ "release_interval_snapshot", "classanalysis__tool__tmpl__t.html#aeb26a7ba40d46e27d3559cccf493fe3f", null ]
 ],
