@@ -38,6 +38,8 @@ permalink: /structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a63261a3aee4ad0db0fc1c82d1d6511d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#a63261a3aee4ad0db0fc1c82d1d6511d2">input_thread_info_t</a> (std::vector&lt; <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html">range_t</a> &gt; regions)</td></tr>
 <tr class="separator:a63261a3aee4ad0db0fc1c82d1d6511d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e954a3f0df40e05f4cb0556fb154c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#ac9e954a3f0df40e05f4cb0556fb154c2">input_thread_info_t</a> (<a class="el" href="memref_8h.html#a407114fa9a573f0de55d8593d3c5482a">memref_tid_t</a> tid, int <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#a290e5c7299ecca9d28a489c297bb5747">priority</a>)</td></tr>
+<tr class="separator:ac9e954a3f0df40e05f4cb0556fb154c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -59,7 +61,7 @@ struct dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::
 <p>Specifies details about one set of input trace files from one workload, each input file representing a single software thread. It is assumed that there is no thread id duplication within one workload. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a63261a3aee4ad0db0fc1c82d1d6511d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63261a3aee4ad0db0fc1c82d1d6511d2">&#9670;&nbsp;</a></span>input_thread_info_t()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a63261a3aee4ad0db0fc1c82d1d6511d2">&#9670;&nbsp;</a></span>input_thread_info_t() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -80,6 +82,45 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Convenience constructor for common usage. </p>
+
+</div>
+</div>
+<a id="ac9e954a3f0df40e05f4cb0556fb154c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9e954a3f0df40e05f4cb0556fb154c2">&#9670;&nbsp;</a></span>input_thread_info_t() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::input_thread_info_t::input_thread_info_t </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="memref_8h.html#a407114fa9a573f0de55d8593d3c5482a">memref_tid_t</a>&#160;</td>
+          <td class="paramname"><em>tid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>priority</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -118,7 +159,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Relative priority for scheduling. The default is 0. </p>
+<p>Relative priority for scheduling. The default is 0. Higher values have higher priorities and will starve lower-priority inputs. Higher priorities out-weigh dependencies such as <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9afa1e39bbc41fe11cc3bbbd36b2a13e6e">dynamorio::drmemtrace::scheduler_tmpl_t::DEPENDENCY_TIMESTAMPS</a>. </p>
 
 </div>
 </div>
@@ -182,5 +223,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19495 --- Fri May 19 2023 03:13:52 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19502 --- Fri May 26 2023 03:13:26 &nbsp; <img border=0 src="favicon.png">
 </small></address>
