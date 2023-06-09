@@ -415,7 +415,6 @@ Using Ninja For Better Error Messages, Faster Builds, and Proper Incremental Bui
 <p>Ninja is a new build system designed to work with automated build system generators like CMake:</p>
 <p><a href="https://github.com/martine/ninja">https://github.com/martine/ninja</a></p>
 <p>Ninja has much more readable build output, resulting in better error messages. It builds faster, and it automatically re-runs CMake when necessary, resulting in proper incremental builds. It's all-around a superior build experience from the command line.</p>
-<p>There is a Windows build of Ninja checked in to make/ninja.exe. Simply put this on your PATH. Ninja has no dependencies and the executable can be placed anywhere.</p>
 <p>In addition to having ninja.exe on your PATH, you need to set the environment variable ASM to "ml" for a 32-bit build and to "ml64" for a 64-bit build (otherwise Ninja tries to assemble using cl). If you have other compilers installed (such as Cygwin or MinGW), you should also set the CC and CXX environment variables. Here are sample bash functions:</p>
 <div class="fragment"><div class="line"><span class="keyword">function</span> ninja_x86 {</div>
 <div class="line">    export CC=cl</div>
@@ -467,15 +466,15 @@ Using MSBuild For Slightly Better Error Messages And Faster Builds</h2>
 <div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md104"></a>
 Using Unix Makefiles On Windows For Parallel Builds</h2>
-<p>On Windows you can target <b>Unix Makefiles</b> in order to use GNU make and build in parallel (NMake does not support parallel builds; see also issue 71). However, note that Visual Studio generators support parallel builds and are faster than using Cygwin make.</p>
+<p>On Windows you can target <b>Unix Makefiles</b> in order to use GNU make and build in parallel (NMake does not support parallel builds; see also issue 71). However, note that Visual Studio generators support parallel builds and are faster than using Cygwin make. The instructions here are relatively old and are kept just for completeness.</p>
 <p>If you have gcc installed you will have to explicitly tell the CMake generator to prefer cl:</p>
 <div class="fragment"><div class="line">cmake -G<span class="stringliteral">&quot;Unix Makefiles&quot;</span> -DCMAKE_GENERATOR_CC=cl -DCMAKE_GENERATOR_CXX=cl ..</div>
 </div><!-- fragment --><p>If you see this error from cygwin make: </p><div class="fragment"><div class="line">target pattern contains no `%<span class="stringliteral">&#39;.</span></div>
 </div><!-- fragment --><p>Or during cmake configuration: </p><div class="fragment"><div class="line">Detecting C compiler ABI info - failed</div>
 </div><!-- fragment --><p>That may not fail the configuration and you may see a later fatal failure: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> had incorrect arguments: ${sizeof_void} EQUAL 8 (Unknown arguments specified).</div>
-</div><!-- fragment --><p>Then you need to switch to a version of make that supports colons in paths. One such version is 3.80, a copy of which (compiled for cygwin) is available in the make/ directory. I recommend copying it into your /usr/local/bin directory and either putting /usr/local/bin ahead of /usr/bin on your <code>PATH</code> or passing it to CMake explicitly:</p>
+</div><!-- fragment --><p>Then you need to switch to a version of make that supports colons in paths. One such version is 3.80. I recommend copying it into your /usr/local/bin directory and either putting /usr/local/bin ahead of /usr/bin on your <code>PATH</code> or passing it to CMake explicitly:</p>
 <div class="fragment"><div class="line">cmake -DCMAKE_MAKE_PROGRAM=$SYSTEMDRIVE/cygwin/usr/local/bin/make.exe</div>
-</div><!-- fragment --><p>If you have a very recent cygwin installation you may need to put cygintl-2.dll from the make/ directory into /usr/local/bin as well.</p>
+</div><!-- fragment --><p>If you have a very recent cygwin installation you may need to put cygintl-2.dll directory into /usr/local/bin as well.</p>
 <p>Now you can build in parallel, which reduces build time:</p>
 <div class="fragment"><div class="line">make -j6 install</div>
 </div><!-- fragment --><p>Build time on Windows can be further improved by disabling progress and status messages (see <a href="https://github.com/DynamoRIO/dynamorio/issues#issue/71">issue 71</a>). To do so, use <code>-DCMAKE_RULE_MESSAGES=OFF</code>.</p>
@@ -494,5 +493,5 @@ Building the Qt DrGUI extension</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19509 --- Fri Jun 2 2023 03:14:15 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19517 --- Fri Jun 9 2023 03:20:23 &nbsp; <img border=0 src="favicon.png">
 </small></address>
