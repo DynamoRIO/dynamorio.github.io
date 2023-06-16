@@ -20,6 +20,7 @@
     [ "reuse_time_create.h", "reuse__time__create_8h.html", {% include_relative reuse__time__create_8h.js %} ],
     [ "scheduler.h", "scheduler_8h.html", {% include_relative scheduler_8h.js %} ],
     [ "speculator.h", "speculator_8h.html", {% include_relative speculator_8h.js %} ],
+    [ "syscall_mix_create.h", "syscall__mix__create_8h.html", {% include_relative syscall__mix__create_8h.js %} ],
     [ "tlb_simulator_create.h", "tlb__simulator__create_8h.html", {% include_relative tlb__simulator__create_8h.js %} ],
     [ "trace_entry.h", "trace__entry_8h.html", {% include_relative trace__entry_8h.js %} ],
     [ "view_create.h", "view__create_8h.html", {% include_relative view__create_8h.js %} ]

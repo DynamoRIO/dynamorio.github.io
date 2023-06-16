@@ -216,10 +216,15 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9abbbb3dacc450cd6b02e2b03fbb40a52d">TRACE_MARKER_TYPE_RSEQ_ENTRY</a>, 
 <br />
-&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a91aabe4134cee00140e5ee4dad200b4e">TRACE_MARKER_TYPE_SYSCALL</a>
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a91aabe4134cee00140e5ee4dad200b4e">TRACE_MARKER_TYPE_SYSCALL</a>, 
+<br />
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac2eb5a42b3e415a34fb793c877f7be7d">TRACE_MARKER_TYPE_MAYBE_BLOCKING_SYSCALL</a>
 <br />
  }</td></tr>
 <tr class="separator:aa7f51b43d8f1e20dc45e3618684b15e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16dd38f05d0a1da7f73a7429ac234b00"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace__entry_8h.html#a16dd38f05d0a1da7f73a7429ac234b00">func_trace_t</a> : uint64_t { <a class="el" href="trace__entry_8h.html#a16dd38f05d0a1da7f73a7429ac234b00a80c4ee4c838a408d1e4c158386007362">func_trace_t::TRACE_FUNC_ID_SYSCALL_BASE</a> = 0x100000000ULL
+ }</td></tr>
+<tr class="separator:a16dd38f05d0a1da7f73a7429ac234b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a183fb25912d45f16f5dd68e7895787a1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1">offline_file_type_t</a> { , <br />
 &#160;&#160;<a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1ab2adc5337c786c96c826052e1a227765">OFFLINE_FILE_TYPE_FILTERED</a> = 0x01
 , <br />
@@ -241,7 +246,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1af02134c0a90c175125a919c3c25ba14f">OFFLINE_FILE_TYPE_ENCODINGS</a> = 0x200, 
 <br />
-&#160;&#160;<a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a4ebaf06d1987e124a069919ad65394f1">OFFLINE_FILE_TYPE_SYSCALL_NUMBERS</a> = 0x400
+&#160;&#160;<a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a4ebaf06d1987e124a069919ad65394f1">OFFLINE_FILE_TYPE_SYSCALL_NUMBERS</a> = 0x400, 
+<br />
+&#160;&#160;<a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a4a27cb0f438eee4473fb8668a01bd61c">OFFLINE_FILE_TYPE_BLOCKING_SYSCALLS</a> = 0x800
 <br />
  }</td></tr>
 <tr class="separator:a183fb25912d45f16f5dd68e7895787a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -373,6 +380,33 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a16dd38f05d0a1da7f73a7429ac234b00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16dd38f05d0a1da7f73a7429ac234b00">&#9670;&nbsp;</a></span>func_trace_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="trace__entry_8h.html#a16dd38f05d0a1da7f73a7429ac234b00">func_trace_t</a> : uint64_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constants related to function or system call parameter tracing. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a16dd38f05d0a1da7f73a7429ac234b00a80c4ee4c838a408d1e4c158386007362"></a>TRACE_FUNC_ID_SYSCALL_BASE&#160;</td><td class="fielddoc"><p>When system call parameter and return values are provided, they use the function tracing markers <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aec6125caa15377556194a5b170f05fda">TRACE_MARKER_TYPE_FUNC_ID</a>, <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ae7a8478d8c5731b6e54d609b53867f9e">TRACE_MARKER_TYPE_FUNC_ARG</a>, and <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a7752ed00ff040eb90f807e1745fdda67">TRACE_MARKER_TYPE_FUNC_RETVAL</a>. The identifier used for <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aec6125caa15377556194a5b170f05fda">TRACE_MARKER_TYPE_FUNC_ID</a> is equal to this base value plus the 32-bit system call number for 64-bit marker values or this base value plus the lower 16 bits of the system call number for 32-bit marker values. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="a183fb25912d45f16f5dd68e7895787a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a183fb25912d45f16f5dd68e7895787a1">&#9670;&nbsp;</a></span>offline_file_type_t</h2>
 
@@ -406,7 +440,10 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a183fb25912d45f16f5dd68e7895787a1af02134c0a90c175125a919c3c25ba14f"></a>OFFLINE_FILE_TYPE_ENCODINGS&#160;</td><td class="fielddoc"><p>Instruction encodings are included. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a183fb25912d45f16f5dd68e7895787a1a4ebaf06d1987e124a069919ad65394f1"></a>OFFLINE_FILE_TYPE_SYSCALL_NUMBERS&#160;</td><td class="fielddoc"><p>System call number markers are included. </p>
+<tr><td class="fieldname"><a id="a183fb25912d45f16f5dd68e7895787a1a4ebaf06d1987e124a069919ad65394f1"></a>OFFLINE_FILE_TYPE_SYSCALL_NUMBERS&#160;</td><td class="fielddoc"><p>System call number markers (<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a91aabe4134cee00140e5ee4dad200b4e">TRACE_MARKER_TYPE_SYSCALL</a>) are included. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a183fb25912d45f16f5dd68e7895787a1a4a27cb0f438eee4473fb8668a01bd61c"></a>OFFLINE_FILE_TYPE_BLOCKING_SYSCALLS&#160;</td><td class="fielddoc"><p>Kernel scheduling information is included: <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac2eb5a42b3e415a34fb793c877f7be7d">TRACE_MARKER_TYPE_MAYBE_BLOCKING_SYSCALL</a> markers and system call parameters and return values for kernel locks (SYS_futex on Linux) using the function tracing markers <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aec6125caa15377556194a5b170f05fda">TRACE_MARKER_TYPE_FUNC_ID</a>, <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ae7a8478d8c5731b6e54d609b53867f9e">TRACE_MARKER_TYPE_FUNC_ARG</a>, and <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a7752ed00ff040eb90f807e1745fdda67">TRACE_MARKER_TYPE_FUNC_RETVAL</a> with an identifier equal to <a class="el" href="trace__entry_8h.html#a16dd38f05d0a1da7f73a7429ac234b00a80c4ee4c838a408d1e4c158386007362">func_trace_t::TRACE_FUNC_ID_SYSCALL_BASE</a> plus the system call number (or its bottom 16 bits for 32-bit marker values). These identifiers are not stored in the function list file (<a class="el" href="drmemtrace_8h.html#abc71b61ef30155adbc03800ce7597261">drmemtrace_get_funclist_path()</a>).</p>
+<p>The <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a7752ed00ff040eb90f807e1745fdda67">TRACE_MARKER_TYPE_FUNC_RETVAL</a> for system calls is either 0 (failure) or 1 (success). </p>
 </td></tr>
 </table>
 
@@ -433,13 +470,15 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9ac2f102f83bb096ff30ccf7f504a931b7"></a>TRACE_MARKER_TYPE_CPU_ID&#160;</td><td class="fielddoc"><p>The marker value contains the cpu identifier of the cpu this thread was running on at this point in the trace. A value of (uintptr_t)-1 indicates that the cpu could not be determined. This value contains what the operating system set up. For Linux, the bottom 12 bits hold the cpu identifier and the upper bits hold the socket/node number. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9aec6125caa15377556194a5b170f05fda"></a>TRACE_MARKER_TYPE_FUNC_ID&#160;</td><td class="fielddoc"><p>The marker value contains the function id defined by the user in the -record_function (and -record_heap_value if -record_heap is specified) option. </p>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9aec6125caa15377556194a5b170f05fda"></a>TRACE_MARKER_TYPE_FUNC_ID&#160;</td><td class="fielddoc"><p>The marker value contains the function id for functions traced by the user via the -record_function (and -record_heap_value if -record_heap is specified) option. The mapping from this numeric ID to a library-qualified symbolic name is recorded during tracing in a file "funclist.log" whose format is described by the <a class="el" href="drmemtrace_8h.html#abc71b61ef30155adbc03800ce7597261">drmemtrace_get_funclist_path()</a> function's documentation.</p>
+<p>This marker is also used to record parameter values for certain system calls such as for <a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a4a27cb0f438eee4473fb8668a01bd61c">OFFLINE_FILE_TYPE_BLOCKING_SYSCALLS</a>. These use large identifiers equal to <a class="el" href="trace__entry_8h.html#a16dd38f05d0a1da7f73a7429ac234b00a80c4ee4c838a408d1e4c158386007362">func_trace_t::TRACE_FUNC_ID_SYSCALL_BASE</a> plus the system call number (for 32-bit marker values just the bottom 16 bits of the system call number are added to the base). These identifiers are not stored in the function list file (<a class="el" href="drmemtrace_8h.html#abc71b61ef30155adbc03800ce7597261">drmemtrace_get_funclist_path()</a>). The system call number used is the value passed to DynamoRIO's <a class="el" href="dr__events_8h.html#a80d0f026def74d903a83fb6122816ae2">dr_register_pre_syscall_event()</a> which is normalized to match SYS_ constants (see the <a class="el" href="dr__events_8h.html#a80d0f026def74d903a83fb6122816ae2">dr_register_pre_syscall_event()</a> documentation regarding MacOS). </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9aa091a097a1d8e401874821ef62026b69"></a>TRACE_MARKER_TYPE_FUNC_RETADDR&#160;</td><td class="fielddoc"><p>The marker value contains the return address of the just-entered function, whose id is specified by the closest previous <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aec6125caa15377556194a5b170f05fda">TRACE_MARKER_TYPE_FUNC_ID</a> marker entry. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9ae7a8478d8c5731b6e54d609b53867f9e"></a>TRACE_MARKER_TYPE_FUNC_ARG&#160;</td><td class="fielddoc"><p>The marker value contains one argument value of the just-entered function, whose id is specified by the closest previous <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aec6125caa15377556194a5b170f05fda">TRACE_MARKER_TYPE_FUNC_ID</a> marker entry. The number of such entries for one function invocation is equal to the specified argument in -record_function (or pre-defined functions in -record_heap_value if -record_heap is specified). </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a7752ed00ff040eb90f807e1745fdda67"></a>TRACE_MARKER_TYPE_FUNC_RETVAL&#160;</td><td class="fielddoc"><p>The marker value contains the return value of the just-entered function, whose id is specified by the closest previous <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aec6125caa15377556194a5b170f05fda">TRACE_MARKER_TYPE_FUNC_ID</a> marker entry </p>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a7752ed00ff040eb90f807e1745fdda67"></a>TRACE_MARKER_TYPE_FUNC_RETVAL&#160;</td><td class="fielddoc"><p>The marker value contains the return value of the just-entered function, whose id is specified by the closest previous <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aec6125caa15377556194a5b170f05fda">TRACE_MARKER_TYPE_FUNC_ID</a> marker entry</p>
+<p>The marker value for system calls (see <a class="el" href="trace__entry_8h.html#a16dd38f05d0a1da7f73a7429ac234b00a80c4ee4c838a408d1e4c158386007362">func_trace_t::TRACE_FUNC_ID_SYSCALL_BASE</a>) is either 0 (failure) or 1 (success), as obtained from <a class="el" href="dr__tools_8h.html#ad2906dcd1979be92605bdf3c58c9f373">dr_syscall_get_result_ex()</a> via the "succeeded" field of <a class="el" href="dr__tools_8h.html#afc574aa98b0e727a9b75059c4966eb10">dr_syscall_result_info_t</a>. See the corresponding documentation for caveats about the accuracy of this value. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9afb92a065fc3cdb8b86e463bd2ff2fdf1"></a>TRACE_MARKER_TYPE_FILETYPE&#160;</td><td class="fielddoc"><p>The marker value contains the OFFLINE_FILE_TYPE_* bitfields of type <a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1">offline_file_type_t</a> identifying the architecture and other key high-level attributes of the trace. </p>
 </td></tr>
@@ -474,6 +513,9 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9abbbb3dacc450cd6b02e2b03fbb40a52d"></a>TRACE_MARKER_TYPE_RSEQ_ENTRY&#160;</td><td class="fielddoc"><p>Indicates the start of an "rseq" (Linux restartable sequence) region. The marker value holds the end PC of the region (this is the PC after the committing store). </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a91aabe4134cee00140e5ee4dad200b4e"></a>TRACE_MARKER_TYPE_SYSCALL&#160;</td><td class="fielddoc"><p>This marker is emitted prior to each system call invocation, after the instruction fetch entry for the system call gateway instruction from user mode. The marker value contains the system call number. If these markers are present, the file type <a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a4ebaf06d1987e124a069919ad65394f1">OFFLINE_FILE_TYPE_SYSCALL_NUMBERS</a> is set. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9ac2eb5a42b3e415a34fb793c877f7be7d"></a>TRACE_MARKER_TYPE_MAYBE_BLOCKING_SYSCALL&#160;</td><td class="fielddoc"><p>This marker is emitted prior to a system call which is known to block under some circumstances. Whether it blocks may depend on the values of parameters or the state of options set in prior system calls. Additionally, it is not guaranteed that every system call that might block is identified in the initial implementation, and it may be limited only to certain operating systems (Linux only for now).</p>
+<p>If these markers are present, the file type <a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a4a27cb0f438eee4473fb8668a01bd61c">OFFLINE_FILE_TYPE_BLOCKING_SYSCALLS</a> is set. The marker value is 0. </p>
 </td></tr>
 </table>
 
@@ -803,5 +845,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19517 --- Fri Jun 9 2023 03:20:19 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19523 --- Fri Jun 16 2023 03:14:15 &nbsp; <img border=0 src="favicon.png">
 </small></address>
