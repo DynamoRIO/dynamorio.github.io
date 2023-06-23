@@ -96,6 +96,7 @@
     [ "pt2ir_t", "classpt2ir__t.html", null ],
     [ "pt_config_t", "structpt__config__t.html", null ],
     [ "pt_cpu_t", "structpt__cpu__t.html", null ],
+    [ "pt_iscache_autoclean_t", "structpt__iscache__autoclean__t.html", null ],
     [ "pt_sb_config_t", "structpt__sb__config__t.html", null ],
     [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::range_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html", null ],
     [ "raw2trace_t", "classraw2trace__t.html", null ],

@@ -90,6 +90,7 @@
     [ "pt2ir_t", "classpt2ir__t.html", {% include_relative classpt2ir__t.js %} ],
     [ "pt_config_t", "structpt__config__t.html", {% include_relative structpt__config__t.js %} ],
     [ "pt_cpu_t", "structpt__cpu__t.html", {% include_relative structpt__cpu__t.js %} ],
+    [ "pt_iscache_autoclean_t", "structpt__iscache__autoclean__t.html", null ],
     [ "pt_sb_config_t", "structpt__sb__config__t.html", {% include_relative structpt__sb__config__t.js %} ],
     [ "raw2trace_t", "classraw2trace__t.html", {% include_relative classraw2trace__t.js %} ],
     [ "reader_t", "classreader__t.html", {% include_relative classreader__t.js %} ],

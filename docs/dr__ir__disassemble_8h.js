@@ -5,7 +5,8 @@
       [ "DR_DISASM_ATT", "dr__ir__disassemble_8h.html#a4c1e2fa2049719870ad0c1007b00d4e3a83d3ece1134b8dabc7f0fd2f84185f11", null ],
       [ "DR_DISASM_STRICT_INVALID", "dr__ir__disassemble_8h.html#a4c1e2fa2049719870ad0c1007b00d4e3aa9e5caa6773c8f8a4ff13b77231dbdaf", null ],
       [ "DR_DISASM_NO_OPND_SIZE", "dr__ir__disassemble_8h.html#a4c1e2fa2049719870ad0c1007b00d4e3a4371407d86fde325673f7d3967037708", null ],
-      [ "DR_DISASM_ARM", "dr__ir__disassemble_8h.html#a4c1e2fa2049719870ad0c1007b00d4e3a1a761e1b6bc9c0c416ea0053a593879c", null ]
+      [ "DR_DISASM_ARM", "dr__ir__disassemble_8h.html#a4c1e2fa2049719870ad0c1007b00d4e3a1a761e1b6bc9c0c416ea0053a593879c", null ],
+      [ "DR_DISASM_RISCV", "dr__ir__disassemble_8h.html#a4c1e2fa2049719870ad0c1007b00d4e3a4645f6570eae87c710821bf635121bf0", null ]
     ] ],
     [ "disassemble", "dr__ir__disassemble_8h.html#a4f2549391d161b1cee7d620efef7b9ff", null ],
     [ "disassemble_from_copy", "dr__ir__disassemble_8h.html#a0d650d53ee0c47b24b74703bb62a2c87", null ],

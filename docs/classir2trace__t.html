@@ -31,16 +31,16 @@ permalink: /classir2trace__t.html
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad7b162d6228de60d7926c8391e0e8865"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="build__release-64_2clients_2include_2drmemtrace_2ir2trace_8h.html#a92e3dd6b760f2382d6708ba906271ae8">ir2trace_convert_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classir2trace__t.html#ad7b162d6228de60d7926c8391e0e8865">convert</a> (IN drir_t &amp;drir, OUT std::vector&lt; <a class="el" href="trace__entry_8h.html#a2293547fa61d1c86efe2f1255889fea1">trace_entry_t</a> &gt; &amp;trace)</td></tr>
-<tr class="separator:ad7b162d6228de60d7926c8391e0e8865"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7b162d6228de60d7926c8391e0e8865"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="build__release-64_2clients_2include_2drmemtrace_2ir2trace_8h.html#a92e3dd6b760f2382d6708ba906271ae8">ir2trace_convert_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classir2trace__t.html#ad7b162d6228de60d7926c8391e0e8865">convert</a> (IN drir_t &amp;drir, OUT std::vector&lt; <a class="el" href="trace__entry_8h.html#a2293547fa61d1c86efe2f1255889fea1">trace_entry_t</a> &gt; &amp;trace)</td></tr>
-<tr class="separator:ad7b162d6228de60d7926c8391e0e8865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab518919ce47cb6a4153d0cb339367839"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="build__release-64_2clients_2include_2drmemtrace_2ir2trace_8h.html#a92e3dd6b760f2382d6708ba906271ae8">ir2trace_convert_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classir2trace__t.html#ab518919ce47cb6a4153d0cb339367839">convert</a> (IN drir_t &amp;drir, INOUT std::vector&lt; <a class="el" href="trace__entry_8h.html#a2293547fa61d1c86efe2f1255889fea1">trace_entry_t</a> &gt; &amp;trace, IN int verbosity=0)</td></tr>
+<tr class="separator:ab518919ce47cb6a4153d0cb339367839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab518919ce47cb6a4153d0cb339367839"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="build__release-64_2clients_2include_2drmemtrace_2ir2trace_8h.html#a92e3dd6b760f2382d6708ba906271ae8">ir2trace_convert_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classir2trace__t.html#ab518919ce47cb6a4153d0cb339367839">convert</a> (IN drir_t &amp;drir, INOUT std::vector&lt; <a class="el" href="trace__entry_8h.html#a2293547fa61d1c86efe2f1255889fea1">trace_entry_t</a> &gt; &amp;trace, IN int verbosity=0)</td></tr>
+<tr class="separator:ab518919ce47cb6a4153d0cb339367839"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classir2trace__t.html">ir2trace_t</a> is a class that can convert DynamoRIO's IR format to trace entries. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad7b162d6228de60d7926c8391e0e8865"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7b162d6228de60d7926c8391e0e8865">&#9670;&nbsp;</a></span>convert() <span class="overload">[1/2]</span></h2>
+<a id="ab518919ce47cb6a4153d0cb339367839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab518919ce47cb6a4153d0cb339367839">&#9670;&nbsp;</a></span>convert() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -57,8 +57,14 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT std::vector&lt; <a class="el" href="trace__entry_8h.html#a2293547fa61d1c86efe2f1255889fea1">trace_entry_t</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>trace</em>&#160;</td>
+          <td class="paramtype">INOUT std::vector&lt; <a class="el" href="trace__entry_8h.html#a2293547fa61d1c86efe2f1255889fea1">trace_entry_t</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>trace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IN int&#160;</td>
+          <td class="paramname"><em>verbosity</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -74,8 +80,9 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Converts DynamoRIO's IR format to trace entries. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">drir</td><td>DynamoRIO's IR format. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">trace</td><td>The converted trace entries. </td></tr>
+    <tr><td class="paramname">drir</td><td>DynamoRIO's IR format. </td></tr>
+    <tr><td class="paramname">trace</td><td>The converted trace entries. </td></tr>
+    <tr><td class="paramname">verbosity</td><td>The verbosity level for notifications. If set to 0, only error logs are printed. If set to 1, all logs are printed. Default value is 0. </td></tr>
   </table>
   </dd>
 </dl>
@@ -83,8 +90,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad7b162d6228de60d7926c8391e0e8865"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7b162d6228de60d7926c8391e0e8865">&#9670;&nbsp;</a></span>convert() <span class="overload">[2/2]</span></h2>
+<a id="ab518919ce47cb6a4153d0cb339367839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab518919ce47cb6a4153d0cb339367839">&#9670;&nbsp;</a></span>convert() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -101,8 +108,14 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT std::vector&lt; <a class="el" href="trace__entry_8h.html#a2293547fa61d1c86efe2f1255889fea1">trace_entry_t</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>trace</em>&#160;</td>
+          <td class="paramtype">INOUT std::vector&lt; <a class="el" href="trace__entry_8h.html#a2293547fa61d1c86efe2f1255889fea1">trace_entry_t</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>trace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IN int&#160;</td>
+          <td class="paramname"><em>verbosity</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -118,8 +131,9 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Converts DynamoRIO's IR format to trace entries. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">drir</td><td>DynamoRIO's IR format. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">trace</td><td>The converted trace entries. </td></tr>
+    <tr><td class="paramname">drir</td><td>DynamoRIO's IR format. </td></tr>
+    <tr><td class="paramname">trace</td><td>The converted trace entries. </td></tr>
+    <tr><td class="paramname">verbosity</td><td>The verbosity level for notifications. If set to 0, only error logs are printed. If set to 1, all logs are printed. Default value is 0. </td></tr>
   </table>
   </dd>
 </dl>
@@ -136,5 +150,5 @@ Static Public Member Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19523 --- Fri Jun 16 2023 03:14:18 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19530 --- Fri Jun 23 2023 03:29:41 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -1419,6 +1419,8 @@
     [ "INSTR_CREATE_vpmullw_mask", "dr__ir__macros__x86_8h.html#ae190f3d5afd238cc9c8e91b3e540f45f", null ],
     [ "INSTR_CREATE_vpmuludq", "dr__ir__macros__x86_8h.html#a41ddf6c3ef6d7b07f9a56b5b102453c9", null ],
     [ "INSTR_CREATE_vpmuludq_mask", "dr__ir__macros__x86_8h.html#a91f5bea28ca2cfbf726a77a2fec1f50a", null ],
+    [ "INSTR_CREATE_vpopcntd_mask", "dr__ir__macros__x86_8h.html#a57e91214ef71ff2dcd09f2c42b4f1cbd", null ],
+    [ "INSTR_CREATE_vpopcntq_mask", "dr__ir__macros__x86_8h.html#acfb033bce4fb936be2ec4bc72c844409", null ],
     [ "INSTR_CREATE_vpor", "dr__ir__macros__x86_8h.html#ae4adcf9caa6a6aad1610405ec613d2f3", null ],
     [ "INSTR_CREATE_vpord_mask", "dr__ir__macros__x86_8h.html#aff3b3a0f029a04e9c0d2a82bedcb3e76", null ],
     [ "INSTR_CREATE_vporq_mask", "dr__ir__macros__x86_8h.html#a676629921172defd84703514d4428be7", null ],

@@ -57,6 +57,12 @@ Macros</h2></td></tr>
 <tr class="separator:a8e130e1aa80df762896518a84d8d602d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e4acf52d1c0d42054ba5270a54b5188"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace__entry_8h.html#a4e4acf52d1c0d42054ba5270a54b5188">DRMEMTRACE_CPU_SCHEDULE_FILENAME</a>&#160;&#160;&#160;&quot;cpu_schedule.bin.zip&quot;</td></tr>
 <tr class="separator:a4e4acf52d1c0d42054ba5270a54b5188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ce4faccf3e6557e5eebb2b4b37d3f8b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace__entry_8h.html#a8ce4faccf3e6557e5eebb2b4b37d3f8b">DRMEMTRACE_KERNEL_PT_SUBDIR</a>&#160;&#160;&#160;&quot;kernel.raw&quot;</td></tr>
+<tr class="separator:a8ce4faccf3e6557e5eebb2b4b37d3f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03e85b36b895240ba8e1c07d7dce79c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace__entry_8h.html#a03e85b36b895240ba8e1c07d7dce79c1">DRMEMTRACE_KCORE_FILENAME</a>&#160;&#160;&#160;&quot;kcore&quot;</td></tr>
+<tr class="separator:a03e85b36b895240ba8e1c07d7dce79c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a031bea2e649fa10b492cb7721edb1f3d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace__entry_8h.html#a031bea2e649fa10b492cb7721edb1f3d">DRMEMTRACE_KALLSYMS_FILENAME</a>&#160;&#160;&#160;&quot;kallsyms&quot;</td></tr>
+<tr class="separator:a031bea2e649fa10b492cb7721edb1f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -218,7 +224,11 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a91aabe4134cee00140e5ee4dad200b4e">TRACE_MARKER_TYPE_SYSCALL</a>, 
 <br />
-&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac2eb5a42b3e415a34fb793c877f7be7d">TRACE_MARKER_TYPE_MAYBE_BLOCKING_SYSCALL</a>
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac2eb5a42b3e415a34fb793c877f7be7d">TRACE_MARKER_TYPE_MAYBE_BLOCKING_SYSCALL</a>, 
+<br />
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a6870563c86672cc616dbc02b8c3dac0c">TRACE_MARKER_TYPE_SYSCALL_TRACE_START</a>, 
+<br />
+&#160;&#160;<a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ace65338ee7e665a641061f487dd7de28">TRACE_MARKER_TYPE_SYSCALL_TRACE_END</a>
 <br />
  }</td></tr>
 <tr class="separator:aa7f51b43d8f1e20dc45e3618684b15e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -248,7 +258,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a4ebaf06d1987e124a069919ad65394f1">OFFLINE_FILE_TYPE_SYSCALL_NUMBERS</a> = 0x400, 
 <br />
-&#160;&#160;<a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a4a27cb0f438eee4473fb8668a01bd61c">OFFLINE_FILE_TYPE_BLOCKING_SYSCALLS</a> = 0x800
+&#160;&#160;<a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a4a27cb0f438eee4473fb8668a01bd61c">OFFLINE_FILE_TYPE_BLOCKING_SYSCALLS</a> = 0x800, 
+<br />
+&#160;&#160;<a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a1b642a8880799f281280240cfeb01e2a">OFFLINE_FILE_TYPE_KERNEL_SYSCALLS</a> = 0x1000
 <br />
  }</td></tr>
 <tr class="separator:a183fb25912d45f16f5dd68e7895787a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -315,6 +327,51 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>The name of the file in -offline mode where function tracing names are written. Use <a class="el" href="drmemtrace_8h.html#abc71b61ef30155adbc03800ce7597261">drmemtrace_get_funclist_path()</a> to obtain the full path. </p>
+
+</div>
+</div>
+<a id="a031bea2e649fa10b492cb7721edb1f3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a031bea2e649fa10b492cb7721edb1f3d">&#9670;&nbsp;</a></span>DRMEMTRACE_KALLSYMS_FILENAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRMEMTRACE_KALLSYMS_FILENAME&#160;&#160;&#160;&quot;kallsyms&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The name of the file in -offline mode where kallsyms is stored. This file is copied from '/proc/kallsyms' during tracing. </p>
+
+</div>
+</div>
+<a id="a03e85b36b895240ba8e1c07d7dce79c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03e85b36b895240ba8e1c07d7dce79c1">&#9670;&nbsp;</a></span>DRMEMTRACE_KCORE_FILENAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRMEMTRACE_KCORE_FILENAME&#160;&#160;&#160;&quot;kcore&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The name of the file in -offline mode where the kernel code segments are stored. This file is copied from '/proc/kcore' during tracing. </p>
+
+</div>
+</div>
+<a id="a8ce4faccf3e6557e5eebb2b4b37d3f8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ce4faccf3e6557e5eebb2b4b37d3f8b">&#9670;&nbsp;</a></span>DRMEMTRACE_KERNEL_PT_SUBDIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRMEMTRACE_KERNEL_PT_SUBDIR&#160;&#160;&#160;&quot;kernel.raw&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The name of the folder in -offline mode where the kernel's per thread PT data is stored. This data is captured during online tracing. </p>
 
 </div>
 </div>
@@ -445,6 +502,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a183fb25912d45f16f5dd68e7895787a1a4a27cb0f438eee4473fb8668a01bd61c"></a>OFFLINE_FILE_TYPE_BLOCKING_SYSCALLS&#160;</td><td class="fielddoc"><p>Kernel scheduling information is included: <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac2eb5a42b3e415a34fb793c877f7be7d">TRACE_MARKER_TYPE_MAYBE_BLOCKING_SYSCALL</a> markers and system call parameters and return values for kernel locks (SYS_futex on Linux) using the function tracing markers <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9aec6125caa15377556194a5b170f05fda">TRACE_MARKER_TYPE_FUNC_ID</a>, <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ae7a8478d8c5731b6e54d609b53867f9e">TRACE_MARKER_TYPE_FUNC_ARG</a>, and <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a7752ed00ff040eb90f807e1745fdda67">TRACE_MARKER_TYPE_FUNC_RETVAL</a> with an identifier equal to <a class="el" href="trace__entry_8h.html#a16dd38f05d0a1da7f73a7429ac234b00a80c4ee4c838a408d1e4c158386007362">func_trace_t::TRACE_FUNC_ID_SYSCALL_BASE</a> plus the system call number (or its bottom 16 bits for 32-bit marker values). These identifiers are not stored in the function list file (<a class="el" href="drmemtrace_8h.html#abc71b61ef30155adbc03800ce7597261">drmemtrace_get_funclist_path()</a>).</p>
 <p>The <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a7752ed00ff040eb90f807e1745fdda67">TRACE_MARKER_TYPE_FUNC_RETVAL</a> for system calls is either 0 (failure) or 1 (success). </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a183fb25912d45f16f5dd68e7895787a1a1b642a8880799f281280240cfeb01e2a"></a>OFFLINE_FILE_TYPE_KERNEL_SYSCALLS&#160;</td><td class="fielddoc"><p>Kernel traces of syscalls are included. The included kernel traces are in the Intel® Processor Trace format. </p>
+</td></tr>
 </table>
 
 </div>
@@ -500,7 +559,7 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a602e5f40c496455081f9a11468b6b39d"></a>TRACE_MARKER_TYPE_PAGE_SIZE&#160;</td><td class="fielddoc"><p>The marker value contains the traced process's page size in bytes. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a16dd25f1eb65062499aa3c0b0fbb3d3e"></a>TRACE_MARKER_TYPE_SYSCALL_IDX&#160;</td><td class="fielddoc"><p>This marker is emitted prior to each system call when -enable_kernel_tracing is specified. The marker value contains a unique system call identifier. </p>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a16dd25f1eb65062499aa3c0b0fbb3d3e"></a>TRACE_MARKER_TYPE_SYSCALL_IDX&#160;</td><td class="fielddoc"><p>This marker is emitted prior to each system call when -enable_kernel_tracing is specified. The marker value contains a unique identifier for the system call within a specific thread. </p><dl class="section note"><dt>Note</dt><dd>This marker serves solely to indicate when to decode the syscall's PT trace and will not be included in the final complete trace. Instead, we utilize <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a6870563c86672cc616dbc02b8c3dac0c">TRACE_MARKER_TYPE_SYSCALL_TRACE_START</a> and <a class="el" href="trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ace65338ee7e665a641061f487dd7de28">TRACE_MARKER_TYPE_SYSCALL_TRACE_END</a> to signify the beginning and end of a syscall's PT trace in the final trace. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9ab24290006bf319f5d18a5bba698f5d81"></a>TRACE_MARKER_TYPE_CHUNK_INSTR_COUNT&#160;</td><td class="fielddoc"><p>This top-level marker identifies the instruction count in each chunk of the output file. This is the granularity of a fast seek. </p>
 </td></tr>
@@ -516,6 +575,10 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9ac2eb5a42b3e415a34fb793c877f7be7d"></a>TRACE_MARKER_TYPE_MAYBE_BLOCKING_SYSCALL&#160;</td><td class="fielddoc"><p>This marker is emitted prior to a system call which is known to block under some circumstances. Whether it blocks may depend on the values of parameters or the state of options set in prior system calls. Additionally, it is not guaranteed that every system call that might block is identified in the initial implementation, and it may be limited only to certain operating systems (Linux only for now).</p>
 <p>If these markers are present, the file type <a class="el" href="trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a4a27cb0f438eee4473fb8668a01bd61c">OFFLINE_FILE_TYPE_BLOCKING_SYSCALLS</a> is set. The marker value is 0. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9a6870563c86672cc616dbc02b8c3dac0c"></a>TRACE_MARKER_TYPE_SYSCALL_TRACE_START&#160;</td><td class="fielddoc"><p>Indicates a point in the trace where a syscall's kernel trace starts. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa7f51b43d8f1e20dc45e3618684b15e9ace65338ee7e665a641061f487dd7de28"></a>TRACE_MARKER_TYPE_SYSCALL_TRACE_END&#160;</td><td class="fielddoc"><p>Indicates a point in the trace where a syscall's trace end. </p>
 </td></tr>
 </table>
 
@@ -845,5 +908,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19523 --- Fri Jun 16 2023 03:14:15 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19530 --- Fri Jun 23 2023 03:29:39 &nbsp; <img border=0 src="favicon.png">
 </small></address>

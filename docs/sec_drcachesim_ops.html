@@ -237,8 +237,8 @@ Specifies the fraction of last level cache blocks to be loaded such that the cac
 <em>default value: 8589934592G</em> <br  />
 Specifies the number of memory references to simulate. The simulated references come after the skipped and warmup references, and the references following the simulated ones are dropped.</li>
 <li><b>-view_syntax</b> <br  />
-<em>default value: att/arm/dr</em> <br  />
-Specifies the syntax to use when viewing disassembled offline traces. The option can be set to one of "att" (AT&amp;T style), "intel" (Intel style), "dr" (DynamoRIO's native style with all implicit operands listed), and "arm" (32-bit ARM style). An invalid specification falls back to the default, which is "att" for x86, "arm" for ARM (32-bit), and "dr" for AArch64.</li>
+<em>default value: att/arm/dr/riscv</em> <br  />
+Specifies the syntax to use when viewing disassembled offline traces. The option can be set to one of "att" (AT&amp;T style), "intel" (Intel style), "dr" (DynamoRIO's native style with all implicit operands listed), "arm" (32-bit ARM style), and "riscv" (RISC-V style). An invalid specification falls back to the default, which is "att" for x86, "arm" for ARM (32-bit), "dr" for AArch64, and "riscv" for RISC-V.</li>
 <li><b>-config_file</b> <br  />
 <em>default value: ""</em> <br  />
 The full path to the cache hierarchy configuration file.</li>
@@ -301,5 +301,5 @@ By default, offline tracing only records a userspace trace. If this option is en
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19523 --- Fri Jun 16 2023 03:14:18 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19530 --- Fri Jun 23 2023 03:29:41 &nbsp; <img border=0 src="favicon.png">
 </small></address>

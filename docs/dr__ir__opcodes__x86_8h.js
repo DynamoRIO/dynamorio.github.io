@@ -1484,6 +1484,8 @@
     [ "OP_vcvtne2ps2bf16", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a5ca63032fc4212dd3f443b0faae7f7b0", null ],
     [ "OP_vcvtneps2bf16", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a7c8142ae8fd8b0941b4fae362618f610", null ],
     [ "OP_vdpbf16ps", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a7861be92ef5e046646463005b2623694", null ],
+    [ "OP_vpopcntd", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a5c144e695a71cb133776b83c1b014669", null ],
+    [ "OP_vpopcntq", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635aacd414934d8eeedaa3ca8c7136119a69", null ],
     [ "OP_FIRST", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a7b616dfe8fecf0a3f45179a237d71c93", null ],
     [ "OP_LAST", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635ad4831564a9a3e47fd23c8b4498215ead", null ]
 ],

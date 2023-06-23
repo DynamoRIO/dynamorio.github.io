@@ -1,7 +1,7 @@
 ---
-title: "instr_t Struct Reference"
+title: "pt_iscache_autoclean_t Struct Reference"
 layout: default
-permalink: /structinstr__t.html
+permalink: /structpt__iscache__autoclean__t.html
 ---
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
@@ -21,15 +21,15 @@ permalink: /structinstr__t.html
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">instr_t Struct Reference</div>  </div>
+<div class="title">pt_iscache_autoclean_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;dr_defines.h&gt;</code></p>
+<p><code>#include &lt;pt2ir.h&gt;</code></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Internal structure of <a class="el" href="structinstr__t.html">instr_t</a> is below abstraction layer, but we provide its size so that it can be used in stack variables instead of always allocated on the heap. </p>
+<div class="textblock"><p>The auto cleanup wrapper of struct pt_image_section_cache. </p><dl class="section note"><dt>Note</dt><dd>This can ensure the instance of pt_image_section_cache is cleaned up when it is out of scope. </dd></dl>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/runner/work/dynamorio/dynamorio/build_release-64/include/<a class="el" href="dr__defines_8h.html">dr_defines.h</a></li>
+<li>/home/runner/work/dynamorio/dynamorio/build_release-64/clients/include/drmemtrace/<a class="el" href="build__release-64_2clients_2include_2drmemtrace_2pt2ir_8h.html">pt2ir.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.17-->

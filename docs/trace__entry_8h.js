@@ -3,6 +3,9 @@
     [ "DRMEMTRACE_CPU_SCHEDULE_FILENAME", "trace__entry_8h.html#a4e4acf52d1c0d42054ba5270a54b5188", null ],
     [ "DRMEMTRACE_ENCODING_FILENAME", "trace__entry_8h.html#a6f588e2a6e442b98010f7424720d33c5", null ],
     [ "DRMEMTRACE_FUNCTION_LIST_FILENAME", "trace__entry_8h.html#a9d41aaff6406ac94cd98ee7c95cd0753", null ],
+    [ "DRMEMTRACE_KALLSYMS_FILENAME", "trace__entry_8h.html#a031bea2e649fa10b492cb7721edb1f3d", null ],
+    [ "DRMEMTRACE_KCORE_FILENAME", "trace__entry_8h.html#a03e85b36b895240ba8e1c07d7dce79c1", null ],
+    [ "DRMEMTRACE_KERNEL_PT_SUBDIR", "trace__entry_8h.html#a8ce4faccf3e6557e5eebb2b4b37d3f8b", null ],
     [ "DRMEMTRACE_MODULE_LIST_FILENAME", "trace__entry_8h.html#a11362437617ea146f226243e4de7ce7b", null ],
     [ "DRMEMTRACE_SERIAL_SCHEDULE_FILENAME", "trace__entry_8h.html#a8e130e1aa80df762896518a84d8d602d", null ],
     [ "addr_t", "trace__entry_8h.html#a1ca6d6805df0fccbaf3f7920d1845168", null ],
@@ -22,7 +25,8 @@
       [ "OFFLINE_FILE_TYPE_DFILTERED", "trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1aa4b4ef06f1ecb20e6098a3a9d88d5691", null ],
       [ "OFFLINE_FILE_TYPE_ENCODINGS", "trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1af02134c0a90c175125a919c3c25ba14f", null ],
       [ "OFFLINE_FILE_TYPE_SYSCALL_NUMBERS", "trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a4ebaf06d1987e124a069919ad65394f1", null ],
-      [ "OFFLINE_FILE_TYPE_BLOCKING_SYSCALLS", "trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a4a27cb0f438eee4473fb8668a01bd61c", null ]
+      [ "OFFLINE_FILE_TYPE_BLOCKING_SYSCALLS", "trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a4a27cb0f438eee4473fb8668a01bd61c", null ],
+      [ "OFFLINE_FILE_TYPE_KERNEL_SYSCALLS", "trace__entry_8h.html#a183fb25912d45f16f5dd68e7895787a1a1b642a8880799f281280240cfeb01e2a", null ]
     ] ],
     [ "trace_marker_type_t", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9", [
       [ "TRACE_MARKER_TYPE_KERNEL_EVENT", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a3aa19ac796e054c478f0a6ec99286020", null ],
@@ -50,7 +54,9 @@
       [ "TRACE_MARKER_TYPE_FILTER_ENDPOINT", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ab70393d2fcbe2c06e221a8a21c8f9e62", null ],
       [ "TRACE_MARKER_TYPE_RSEQ_ENTRY", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9abbbb3dacc450cd6b02e2b03fbb40a52d", null ],
       [ "TRACE_MARKER_TYPE_SYSCALL", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a91aabe4134cee00140e5ee4dad200b4e", null ],
-      [ "TRACE_MARKER_TYPE_MAYBE_BLOCKING_SYSCALL", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac2eb5a42b3e415a34fb793c877f7be7d", null ]
+      [ "TRACE_MARKER_TYPE_MAYBE_BLOCKING_SYSCALL", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ac2eb5a42b3e415a34fb793c877f7be7d", null ],
+      [ "TRACE_MARKER_TYPE_SYSCALL_TRACE_START", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9a6870563c86672cc616dbc02b8c3dac0c", null ],
+      [ "TRACE_MARKER_TYPE_SYSCALL_TRACE_END", "trace__entry_8h.html#aa7f51b43d8f1e20dc45e3618684b15e9ace65338ee7e665a641061f487dd7de28", null ]
     ] ],
     [ "trace_type_t", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19d", [
       [ "TRACE_TYPE_READ", "trace__entry_8h.html#a00405f99b069de9812b34db3a192b19da2264004d45a5c8fe2b6713e2fe263c32", null ],

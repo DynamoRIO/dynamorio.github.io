@@ -48,7 +48,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="dr__ir__disassemble_8h.html#a4c1e2fa2049719870ad0c1007b00d4e3a4371407d86fde325673f7d3967037708">DR_DISASM_NO_OPND_SIZE</a> = 0x8, 
 <br />
-&#160;&#160;<a class="el" href="dr__ir__disassemble_8h.html#a4c1e2fa2049719870ad0c1007b00d4e3a1a761e1b6bc9c0c416ea0053a593879c">DR_DISASM_ARM</a> = 0x10
+&#160;&#160;<a class="el" href="dr__ir__disassemble_8h.html#a4c1e2fa2049719870ad0c1007b00d4e3a1a761e1b6bc9c0c416ea0053a593879c">DR_DISASM_ARM</a> = 0x10, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__disassemble_8h.html#a4c1e2fa2049719870ad0c1007b00d4e3a4645f6570eae87c710821bf635121bf0">DR_DISASM_RISCV</a> = 0x20
 <br />
  }</td></tr>
 <tr class="separator:a4c1e2fa2049719870ad0c1007b00d4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,6 +105,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a4c1e2fa2049719870ad0c1007b00d4e3a4371407d86fde325673f7d3967037708"></a>DR_DISASM_NO_OPND_SIZE&#160;</td><td class="fielddoc"><p>This flag only applies to the default DR style (i.e., it does not apply when DR_DISASM_INTEL or DR_DISASM_ATT is selected). That style by default displays the size of memory or sub-register operands via a suffix "[Nbytes]". Setting this flag removes that suffix. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a4c1e2fa2049719870ad0c1007b00d4e3a1a761e1b6bc9c0c416ea0053a593879c"></a>DR_DISASM_ARM&#160;</td><td class="fielddoc"><p>Requests standard ARM (32-bit) assembler syntax for disassembly. This sets the same option that is controlled by the runtime option <code>-syntax_arm</code>. Implicit operands are not displayed. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4c1e2fa2049719870ad0c1007b00d4e3a4645f6570eae87c710821bf635121bf0"></a>DR_DISASM_RISCV&#160;</td><td class="fielddoc"><p>Requests RISC-V assembler syntax for disassembly. This set the same option that is controlled by the runtime option <code>-syntax_riscv</code>. Implicit oprands are not displayed. </p>
 </td></tr>
 </table>
 
@@ -212,7 +216,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the disassembly style and decoding options. The default is to use DR's custom syntax, unless one of the <a class="el" href="page_deploy.html#op_syntax_intel">-syntax_intel</a>, <a class="el" href="page_deploy.html#op_syntax_att">-syntax_att</a>, or <a class="el" href="page_deploy.html#op_syntax_arm">-syntax_arm</a> runtime options is specified. </p>
+<p>Sets the disassembly style and decoding options. The default is to use DR's custom syntax, unless one of the <a class="el" href="page_deploy.html#op_syntax_intel">-syntax_intel</a>, <a class="el" href="page_deploy.html#op_syntax_att">-syntax_att</a>, <a class="el" href="page_deploy.html#op_syntax_arm">-syntax_arm</a>, or <a class="el" href="page_deploy.html#op_syntax_riscv">-syntax_riscv</a> runtime options is specified. </p>
 
 </div>
 </div>
@@ -552,5 +556,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19523 --- Fri Jun 16 2023 03:14:15 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19530 --- Fri Jun 23 2023 03:29:39 &nbsp; <img border=0 src="favicon.png">
 </small></address>

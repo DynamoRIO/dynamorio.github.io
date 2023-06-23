@@ -31,12 +31,12 @@ permalink: /classpt2ir__t.html
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad776b04bd9dc1273ac60434a02508088"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpt2ir__t.html#ad776b04bd9dc1273ac60434a02508088">init</a> (IN <a class="el" href="structpt2ir__config__t.html">pt2ir_config_t</a> &amp;pt2ir_config, IN struct pt_image_section_cache *shared_iscache)</td></tr>
-<tr class="separator:ad776b04bd9dc1273ac60434a02508088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adee91f1241316b7614c06a3f3b457be3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpt2ir__t.html#adee91f1241316b7614c06a3f3b457be3">init</a> (IN <a class="el" href="structpt2ir__config__t.html">pt2ir_config_t</a> &amp;pt2ir_config, IN int verbosity=0)</td></tr>
+<tr class="separator:adee91f1241316b7614c06a3f3b457be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae00a1aa167adbc4d170588738b472282"><td class="memItemLeft" align="right" valign="top"><a class="el" href="build__release-64_2clients_2include_2drmemtrace_2pt2ir_8h.html#a5b41f57890a32a5448434a726bb6c7d9">pt2ir_convert_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpt2ir__t.html#ae00a1aa167adbc4d170588738b472282">convert</a> (IN const uint8_t *pt_data, IN size_t pt_data_size, INOUT drir_t &amp;drir)</td></tr>
 <tr class="separator:ae00a1aa167adbc4d170588738b472282"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad776b04bd9dc1273ac60434a02508088"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpt2ir__t.html#ad776b04bd9dc1273ac60434a02508088">init</a> (IN <a class="el" href="structpt2ir__config__t.html">pt2ir_config_t</a> &amp;pt2ir_config, IN struct pt_image_section_cache *shared_iscache)</td></tr>
-<tr class="separator:ad776b04bd9dc1273ac60434a02508088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adee91f1241316b7614c06a3f3b457be3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpt2ir__t.html#adee91f1241316b7614c06a3f3b457be3">init</a> (IN <a class="el" href="structpt2ir__config__t.html">pt2ir_config_t</a> &amp;pt2ir_config, IN int verbosity=0)</td></tr>
+<tr class="separator:adee91f1241316b7614c06a3f3b457be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae00a1aa167adbc4d170588738b472282"><td class="memItemLeft" align="right" valign="top"><a class="el" href="build__release-64_2clients_2include_2drmemtrace_2pt2ir_8h.html#a5b41f57890a32a5448434a726bb6c7d9">pt2ir_convert_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpt2ir__t.html#ae00a1aa167adbc4d170588738b472282">convert</a> (IN const uint8_t *pt_data, IN size_t pt_data_size, INOUT drir_t &amp;drir)</td></tr>
 <tr class="separator:ae00a1aa167adbc4d170588738b472282"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -129,8 +129,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad776b04bd9dc1273ac60434a02508088"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad776b04bd9dc1273ac60434a02508088">&#9670;&nbsp;</a></span>init() <span class="overload">[1/2]</span></h2>
+<a id="adee91f1241316b7614c06a3f3b457be3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adee91f1241316b7614c06a3f3b457be3">&#9670;&nbsp;</a></span>init() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -144,8 +144,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN struct pt_image_section_cache *&#160;</td>
-          <td class="paramname"><em>shared_iscache</em>&#160;</td>
+          <td class="paramtype">IN int&#160;</td>
+          <td class="paramname"><em>verbosity</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -157,17 +157,16 @@ Public Member Functions</h2></td></tr>
 <p>Initialize the PT instruction decoder and the sideband session. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pt2ir_config</td><td>The configuration of PT raw trace. </td></tr>
-    <tr><td class="paramname">shared_iscache</td><td>The shared image section cache. </td></tr>
+    <tr><td class="paramname">verbosity</td><td>The verbosity level for notifications. If set to 0, only error logs are printed. If set to 1, all logs are printed. Default value is 0. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classpt2ir__t.html">pt2ir_t</a> instance is designed to work with a single thread, while the image is shared among all threads. Therefore, a shared image section cache must be provided. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the instance is successfully initialized. </dd></dl>
 
 </div>
 </div>
-<a id="ad776b04bd9dc1273ac60434a02508088"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad776b04bd9dc1273ac60434a02508088">&#9670;&nbsp;</a></span>init() <span class="overload">[2/2]</span></h2>
+<a id="adee91f1241316b7614c06a3f3b457be3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adee91f1241316b7614c06a3f3b457be3">&#9670;&nbsp;</a></span>init() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,8 +180,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN struct pt_image_section_cache *&#160;</td>
-          <td class="paramname"><em>shared_iscache</em>&#160;</td>
+          <td class="paramtype">IN int&#160;</td>
+          <td class="paramname"><em>verbosity</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -194,11 +193,10 @@ Public Member Functions</h2></td></tr>
 <p>Initialize the PT instruction decoder and the sideband session. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pt2ir_config</td><td>The configuration of PT raw trace. </td></tr>
-    <tr><td class="paramname">shared_iscache</td><td>The shared image section cache. </td></tr>
+    <tr><td class="paramname">verbosity</td><td>The verbosity level for notifications. If set to 0, only error logs are printed. If set to 1, all logs are printed. Default value is 0. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classpt2ir__t.html">pt2ir_t</a> instance is designed to work with a single thread, while the image is shared among all threads. Therefore, a shared image section cache must be provided. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the instance is successfully initialized. </dd></dl>
 
 </div>
@@ -212,5 +210,5 @@ Public Member Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19523 --- Fri Jun 16 2023 03:14:18 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19530 --- Fri Jun 23 2023 03:29:41 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -1,4 +1,5 @@
 [
+    [ "pt_iscache_autoclean_t", "structpt__iscache__autoclean__t.html", null ],
     [ "pt_cpu_t", "structpt__cpu__t.html", {% include_relative structpt__cpu__t.js %} ],
     [ "pt_config_t", "structpt__config__t.html", {% include_relative structpt__config__t.js %} ],
     [ "pt_sb_config_t", "structpt__sb__config__t.html", {% include_relative structpt__sb__config__t.js %} ],
