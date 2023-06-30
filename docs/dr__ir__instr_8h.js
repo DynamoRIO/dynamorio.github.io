@@ -111,7 +111,16 @@
       [ "DR_PRED_NV", "dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a048818da71575e1f01f5b0bc50c698af", null ],
       [ "DR_PRED_OP", "dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ae6ed5c6e0b7b1f6c814ce9bae7de7cc3", null ],
       [ "DR_PRED_HS", "dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71af38dfaa64a16c41e4228544713623f49", null ],
-      [ "DR_PRED_LO", "dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71aa1d2962fff33ef9f59e5371d0d4b99ae", null ]
+      [ "DR_PRED_LO", "dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71aa1d2962fff33ef9f59e5371d0d4b99ae", null ],
+      [ "DR_PRED_SVE_NONE", "dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71af4da027a9e819976aa7eea004e365801", null ],
+      [ "DR_PRED_SVE_ANY", "dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71af324a06c4e9c50dc46d288e153400c1c", null ],
+      [ "DR_PRED_SVE_NLAST", "dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a5b1d7bd81b38ff5e2f7ce503af9b33c5", null ],
+      [ "DR_PRED_SVE_LAST", "dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ae12ea504e862e82489de696e721ed1fc", null ],
+      [ "DR_PRED_SVE_FIRST", "dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71af81c30e1097893545bc6a4e6ff6c59d8", null ],
+      [ "DR_PRED_SVE_NFRST", "dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ac0883231162ebaaf9026b17479059ac4", null ],
+      [ "DR_PRED_SVE_PLAST", "dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a56819690e7c1dc6588541b76deda5fe0", null ],
+      [ "DR_PRED_SVE_TCONT", "dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71abf01224885e4245b54e4e01c532b32ae", null ],
+      [ "DR_PRED_SVE_TSTOP", "dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a9a3ad843e3ee0113a9d897ed1b92ffb2", null ]
     ] ],
     [ "dr_fp_type_t", "dr__ir__instr_8h.html#a192e9ddf90889e6de003d95ebdaa7beb", [
       [ "DR_FP_STATE", "dr__ir__instr_8h.html#a192e9ddf90889e6de003d95ebdaa7beba47d09b15b2ec78db7ce84ae6ddf333b0", null ],

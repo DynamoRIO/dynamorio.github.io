@@ -222,7 +222,25 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71af38dfaa64a16c41e4228544713623f49">DR_PRED_HS</a> = DR_PRED_CS, 
 <br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71aa1d2962fff33ef9f59e5371d0d4b99ae">DR_PRED_LO</a> = DR_PRED_CC
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71aa1d2962fff33ef9f59e5371d0d4b99ae">DR_PRED_LO</a> = DR_PRED_CC, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71af4da027a9e819976aa7eea004e365801">DR_PRED_SVE_NONE</a> = DR_PRED_EQ, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71af324a06c4e9c50dc46d288e153400c1c">DR_PRED_SVE_ANY</a> = DR_PRED_NE, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a5b1d7bd81b38ff5e2f7ce503af9b33c5">DR_PRED_SVE_NLAST</a> = DR_PRED_CS, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ae12ea504e862e82489de696e721ed1fc">DR_PRED_SVE_LAST</a> = DR_PRED_CC, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71af81c30e1097893545bc6a4e6ff6c59d8">DR_PRED_SVE_FIRST</a> = DR_PRED_MI, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ac0883231162ebaaf9026b17479059ac4">DR_PRED_SVE_NFRST</a> = DR_PRED_PL, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a56819690e7c1dc6588541b76deda5fe0">DR_PRED_SVE_PLAST</a> = DR_PRED_LS, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71abf01224885e4245b54e4e01c532b32ae">DR_PRED_SVE_TCONT</a> = DR_PRED_GE, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a9a3ad843e3ee0113a9d897ed1b92ffb2">DR_PRED_SVE_TSTOP</a> = DR_PRED_LT
 <br />
  }</td></tr>
 <tr class="separator:ac55eea34836068d8d66196c3f1556d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1591,7 +1609,7 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a9dcda87aba73a765233147ddca5223b1"></a>DR_PRED_HI&#160;</td><td class="fielddoc"><p>ARM condition: 1000 Unsigned higher (C == 1 and Z == 0) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a6bb89a0bace06c82c6be73dedf25c4f3"></a>DR_PRED_LS&#160;</td><td class="fielddoc"><p>ARM condition: 1001 Unsigned lower or same (C == 0 or Z == 1) </p>
+<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a6bb89a0bace06c82c6be73dedf25c4f3"></a>DR_PRED_LS&#160;</td><td class="fielddoc"><p>ARM condition: 1001 Unsigned lower or same (C == 1 or Z == 0) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a1e66b16a0cae287a95bb778e59211176"></a>DR_PRED_GE&#160;</td><td class="fielddoc"><p>Condition code: signed greater than or equal.</p>
 <p>ARM condition: 1010 Signed &gt;= (N == V) <br  />
@@ -1619,6 +1637,24 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71af38dfaa64a16c41e4228544713623f49"></a>DR_PRED_HS&#160;</td><td class="fielddoc"><p>ARM condition: alias for DR_PRED_CS. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71aa1d2962fff33ef9f59e5371d0d4b99ae"></a>DR_PRED_LO&#160;</td><td class="fielddoc"><p>ARM condition: alias for DR_PRED_CC. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71af4da027a9e819976aa7eea004e365801"></a>DR_PRED_SVE_NONE&#160;</td><td class="fielddoc"><p>0000 All active elements were false or no active elements (Z == 1) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71af324a06c4e9c50dc46d288e153400c1c"></a>DR_PRED_SVE_ANY&#160;</td><td class="fielddoc"><p>0001 An active element was true (Z == 0) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a5b1d7bd81b38ff5e2f7ce503af9b33c5"></a>DR_PRED_SVE_NLAST&#160;</td><td class="fielddoc"><p>0010 Last active element was false or no active elements (C == 1) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71ae12ea504e862e82489de696e721ed1fc"></a>DR_PRED_SVE_LAST&#160;</td><td class="fielddoc"><p>0011 Last active element was true (C == 0) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71af81c30e1097893545bc6a4e6ff6c59d8"></a>DR_PRED_SVE_FIRST&#160;</td><td class="fielddoc"><p>0100 First active element was true (N == 1) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71ac0883231162ebaaf9026b17479059ac4"></a>DR_PRED_SVE_NFRST&#160;</td><td class="fielddoc"><p>0101 First active element was false or no active elements (N == 0) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a56819690e7c1dc6588541b76deda5fe0"></a>DR_PRED_SVE_PLAST&#160;</td><td class="fielddoc"><p>1001 Last active element was true, all active elements were false, or no active elements (C == 1 or Z == 0) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71abf01224885e4245b54e4e01c532b32ae"></a>DR_PRED_SVE_TCONT&#160;</td><td class="fielddoc"><p>1010 CTERM termination condition not detected, continue loop (N == V) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a9a3ad843e3ee0113a9d897ed1b92ffb2"></a>DR_PRED_SVE_TSTOP&#160;</td><td class="fielddoc"><p>1011 CTERM termination condition detected, terminate loop (N != V) </p>
 </td></tr>
 </table>
 
@@ -8389,11 +8425,11 @@ mangle" if <code>val</code> is false.</p>
 <div class="ttc" id="adr__ir__instr_8h_html_a2b0ce5e5125951e4a7dfdc5ac716282a"><div class="ttname"><a href="dr__ir__instr_8h.html#a2b0ce5e5125951e4a7dfdc5ac716282a">instr_noalloc_init</a></div><div class="ttdeci">DR_API void instr_noalloc_init(void *drcontext, instr_noalloc_t *instr)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a75a82f341d4ea6a5b5f29f2ef1263355"><div class="ttname"><a href="dr__ir__instr_8h.html#a75a82f341d4ea6a5b5f29f2ef1263355">instr_from_noalloc</a></div><div class="ttdeci">DR_API INSTR_INLINE instr_t * instr_from_noalloc(instr_noalloc_t *noalloc)</div></div>
 <div class="ttc" id="astructinstr__t_html"><div class="ttname"><a href="structinstr__t.html">instr_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:378</div></div>
-<div class="ttc" id="astructinstr__noalloc__t_html"><div class="ttname"><a href="structinstr__noalloc__t.html">instr_noalloc_t</a></div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:335</div></div>
+<div class="ttc" id="astructinstr__noalloc__t_html"><div class="ttname"><a href="structinstr__noalloc__t.html">instr_noalloc_t</a></div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:365</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19530 --- Fri Jun 23 2023 03:29:39 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19537 --- Fri Jun 30 2023 03:19:51 &nbsp; <img border=0 src="favicon.png">
 </small></address>

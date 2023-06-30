@@ -40,6 +40,16 @@ var NAVTREE =
 [ "API Reference", "files.html", [
     [ "Deprecated List", "deprecated.html", null ],
     [ "DynamoRIO Extension Details", "modules.html", {% include_relative modules.js %} ],
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", {% include_relative namespaces_dup.js %} ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Typedefs", "namespacemembers_type.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ],
+        [ "Enumerator", "namespacemembers_eval.html", null ]
+      ] ]
+    ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", {% include_relative annotated_dup.js %} ],
       [ "Class Hierarchy", "hierarchy.html", {% include_relative hierarchy.js %} ],

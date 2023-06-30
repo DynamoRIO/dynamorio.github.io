@@ -45,7 +45,7 @@ Data Fields</h2></td></tr>
 <tr class="separator:a4df2eefa4cc98030fbf780358bf0238f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The storage container type of drpttracer's output. This data struct is used by drpttracer to store PT trace, and sideband data. These data can be dumped into different files by the client. These files can be the inputs of <a class="el" href="classpt2ir__t.html">pt2ir_t</a>, which decodes the PT data into Dynamorio's IR. </p><dl class="section note"><dt>Note</dt><dd>This buffer can be shared across different tracing sessions. Thus, we allocate a buffer with the maximum trace size. The pt_size and sideband_size variables indicate the valid data size within the buffer. </dd></dl>
+<div class="textblock"><p>The storage container type of drpttracer's output. This data struct is used by drpttracer to store PT trace, and sideband data. These data can be dumped into different files by the client. These files can be the inputs of pt2ir_t, which decodes the PT data into Dynamorio's IR. </p><dl class="section note"><dt>Note</dt><dd>This buffer can be shared across different tracing sessions. Thus, we allocate a buffer with the maximum trace size. The pt_size and sideband_size variables indicate the valid data size within the buffer. </dd></dl>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a1621b1c3e6221177dcf5b36947ed9c5b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1621b1c3e6221177dcf5b36947ed9c5b">&#9670;&nbsp;</a></span>pt_buffer</h2>
@@ -146,5 +146,5 @@ Data Fields</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19530 --- Fri Jun 23 2023 03:29:41 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19537 --- Fri Jun 30 2023 03:19:54 &nbsp; <img border=0 src="favicon.png">
 </small></address>

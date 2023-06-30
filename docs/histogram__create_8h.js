@@ -1,3 +1,3 @@
 [
-    [ "histogram_tool_create", "histogram__create_8h.html#ad7362677ef5655e034fdc1ce994842cb", null ]
+    [ "histogram_tool_create", "histogram__create_8h.html#a8df3e41912b8fec26518cb824505722c", null ]
 ],

@@ -128,7 +128,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The storage container type of drpttracer's output. This data struct is used by drpttracer to store PT trace, and sideband data. These data can be dumped into different files by the client. These files can be the inputs of <a class="el" href="classpt2ir__t.html">pt2ir_t</a>, which decodes the PT data into Dynamorio's IR. </p><dl class="section note"><dt>Note</dt><dd>This buffer can be shared across different tracing sessions. Thus, we allocate a buffer with the maximum trace size. The pt_size and sideband_size variables indicate the valid data size within the buffer. </dd></dl>
+<p>The storage container type of drpttracer's output. This data struct is used by drpttracer to store PT trace, and sideband data. These data can be dumped into different files by the client. These files can be the inputs of pt2ir_t, which decodes the PT data into Dynamorio's IR. </p><dl class="section note"><dt>Note</dt><dd>This buffer can be shared across different tracing sessions. Thus, we allocate a buffer with the maximum trace size. The pt_size and sideband_size variables indicate the valid data size within the buffer. </dd></dl>
 
 </div>
 </div>
@@ -144,9 +144,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>The type of PT trace's metadata.</p>
-<dl class="section note"><dt>Note</dt><dd>drpttracer uses the cpuid instruction to get the cpu_family, cpu_model and cpu_stepping. The cpu_family, cpu_model and cpu_stepping are used to initialize the PT config of <a class="el" href="classpt2ir__t.html">pt2ir_t</a> when decoding a PT trace.</dd>
+<dl class="section note"><dt>Note</dt><dd>drpttracer uses the cpuid instruction to get the cpu_family, cpu_model and cpu_stepping. The cpu_family, cpu_model and cpu_stepping are used to initialize the PT config of pt2ir_t when decoding a PT trace.</dd>
 <dd>
-drpttracer gets the time_shift, time_mult and time_zero from the opened perf event file's head. The time_shift, time_mult and time_zero are used to initialize the PT sideband config of <a class="el" href="classpt2ir__t.html">pt2ir_t</a> when decoding a PT trace. </dd></dl>
+drpttracer gets the time_shift, time_mult and time_zero from the opened perf event file's head. The time_shift, time_mult and time_zero are used to initialize the PT sideband config of pt2ir_t when decoding a PT trace. </dd></dl>
 
 </div>
 </div>
@@ -206,7 +206,7 @@ drpttracer gets the time_shift, time_mult and time_zero from the opened perf eve
       </table>
 </div><div class="memdoc">
 <p>The tracing modes for <a class="el" href="drpttracer_8h.html#afb2c6fe798b7b3125647d647fb8e7835">drpttracer_start_tracing()</a>.</p>
-<p>XXX: The <a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5a2a5a1e4a865cb2c334cf8419b2ec56fa">DRPTTRACER_TRACING_ONLY_USER</a> and <a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5a9d97d6e409ada6de57b31fe55aa0e4db">DRPTTRACER_TRACING_USER_AND_KERNEL</a> modes are not completely supported yet. The sideband data collected in these two modes do not include the initial mmap2 event recording. Therefore, if the user uses <a class="el" href="classpt2ir__t.html">pt2ir_t</a> in sideband converter mode, <a class="el" href="classpt2ir__t.html">pt2ir_t</a> cannot find the image and cannot decode the PT trace. </p>
+<p>XXX: The <a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5a2a5a1e4a865cb2c334cf8419b2ec56fa">DRPTTRACER_TRACING_ONLY_USER</a> and <a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5a9d97d6e409ada6de57b31fe55aa0e4db">DRPTTRACER_TRACING_USER_AND_KERNEL</a> modes are not completely supported yet. The sideband data collected in these two modes do not include the initial mmap2 event recording. Therefore, if the user uses pt2ir_t in sideband converter mode, pt2ir_t cannot find the image and cannot decode the PT trace. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab099a83052a5a8b244083b57ddffcbc5a2a5a1e4a865cb2c334cf8419b2ec56fa"></a>DRPTTRACER_TRACING_ONLY_USER&#160;</td><td class="fielddoc"><p>Trace only userspace instructions. </p>
 </td></tr>
@@ -275,7 +275,7 @@ drpttracer gets the time_shift, time_mult and time_zero from the opened perf eve
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The size offset is used to control the size of the buffer allocated by the perf: sizeof(PT trace's buffer) = 2 ^ pt_size_shift * PAGE_SIZE. sizeof(Sideband data's buffer) = 2 ^ sideband_size_shift * PAGE_SIZE. Additionally, perf sets the buffer size to 4MiB by default. Therefore, when the client uses drpttracer to trace, it is best to set the trace and sideband buffer larger than 4Mib.</dd>
 <dd>
-The client must ensure that the buffer is large enough to hold the PT data. Insufficient buffer size will lead to lost data, which may cause issues in <a class="el" href="classpt2ir__t.html">pt2ir_t</a> decoding. If we detect an overflow, <a class="el" href="drpttracer_8h.html#a17c201ee9f0a8d5835193b2c0ec66ab3">drpttracer_stop_tracing()</a> will return an error code <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45dac3626cf9c2740a80ca15c99e6fba493a">DRPTTRACER_ERROR_OVERWRITTEN_PT_TRACE</a> or <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45da3beefda8ad4ea9aa597f6a07053c56af">DRPTTRACER_ERROR_OVERWRITTEN_SIDEBAND_DATA</a>.</dd>
+The client must ensure that the buffer is large enough to hold the PT data. Insufficient buffer size will lead to lost data, which may cause issues in pt2ir_t decoding. If we detect an overflow, <a class="el" href="drpttracer_8h.html#a17c201ee9f0a8d5835193b2c0ec66ab3">drpttracer_stop_tracing()</a> will return an error code <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45dac3626cf9c2740a80ca15c99e6fba493a">DRPTTRACER_ERROR_OVERWRITTEN_PT_TRACE</a> or <a class="el" href="drpttracer_8h.html#a7846187879de367e706edaed0293e45da3beefda8ad4ea9aa597f6a07053c56af">DRPTTRACER_ERROR_OVERWRITTEN_SIDEBAND_DATA</a>.</dd>
 <dd>
 Each thread corresponds to a trace handle. When calling <a class="el" href="drpttracer_8h.html#a0df98e25ae870fddf34da980f1801f3a">drpttracer_create_handle()</a>, the client will get a tracer_handle. The client can start and stop tracing by passing it to <a class="el" href="drpttracer_8h.html#afb2c6fe798b7b3125647d647fb8e7835">drpttracer_start_tracing()</a> and <a class="el" href="drpttracer_8h.html#a17c201ee9f0a8d5835193b2c0ec66ab3">drpttracer_stop_tracing()</a>. And if the thread hold a tracer_handle, the client needs to call <a class="el" href="drpttracer_8h.html#ae11b0af963319d6d7a6c97e5256be9b2">drpttracer_destroy_handle()</a> to destroy the corresponding tracer_handle and release the resources before the thread end.</dd>
 <dd>
@@ -568,7 +568,7 @@ For one thread, only one tracing can execute at the same time. So the client nee
 </ul>
 </dd>
 <dd>
-The client can dump the output data to files. After online tracing is done, <a class="el" href="classpt2ir__t.html">pt2ir_t</a> can use these files to decode the online PT trace.</dd>
+The client can dump the output data to files. After online tracing is done, pt2ir_t can use these files to decode the online PT trace.</dd>
 <dd>
 The client doesn't need to allocate the output object, but it needs to free the output object using <a class="el" href="drpttracer_8h.html#a6722673d8102754af9c4284f76bc2acf">drpttracer_destroy_output()</a>.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the status code. </dd></dl>
@@ -581,5 +581,5 @@ The client doesn't need to allocate the output object, but it needs to free the 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19530 --- Fri Jun 23 2023 03:29:40 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19537 --- Fri Jun 30 2023 03:19:53 &nbsp; <img border=0 src="favicon.png">
 </small></address>

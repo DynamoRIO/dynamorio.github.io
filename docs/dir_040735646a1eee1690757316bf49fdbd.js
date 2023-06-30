@@ -10,8 +10,8 @@
     [ "ir2trace.h", "build__release-64_2clients_2include_2drmemtrace_2ir2trace_8h.html", {% include_relative build__release-64_2clients_2include_2drmemtrace_2ir2trace_8h.js %} ],
     [ "memref.h", "memref_8h.html", {% include_relative memref_8h.js %} ],
     [ "memtrace_stream.h", "memtrace__stream_8h.html", [
-      [ "memtrace_stream_t", "classmemtrace__stream__t.html", {% include_relative classmemtrace__stream__t.js %} ],
-      [ "default_memtrace_stream_t", "classdefault__memtrace__stream__t.html", {% include_relative classdefault__memtrace__stream__t.js %} ]
+      [ "memtrace_stream_t", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.js %} ],
+      [ "default_memtrace_stream_t", "classdynamorio_1_1drmemtrace_1_1default__memtrace__stream__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1default__memtrace__stream__t.js %} ]
     ] ],
     [ "opcode_mix_create.h", "opcode__mix__create_8h.html", {% include_relative opcode__mix__create_8h.js %} ],
     [ "pt2ir.h", "build__release-64_2clients_2include_2drmemtrace_2pt2ir_8h.html", {% include_relative build__release-64_2clients_2include_2drmemtrace_2pt2ir_8h.js %} ],

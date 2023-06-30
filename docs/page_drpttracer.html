@@ -53,7 +53,7 @@ Usage</h1>
 <dl class="section note"><dt>Note</dt><dd>Linux perf sets the buffer size to 4MiB by default. Therefore, it is best for clients to set trace and sideband buffers larger than 4Mib.</dd>
 <dd>
 For one thread, only one tracing can execute at the same time. So the client needs to ensure one thread only owns one pttracer handle.</dd></dl>
-<p>The client must ensure that the PT trace's ring buffer and the sideband data's ring buffer is large enough to hold the PT data. Insufficient buffer size will lead to lost data, which may cause issues in <a class="el" href="classpt2ir__t.html">pt2ir_t</a> decoding.</p>
+<p>The client must ensure that the PT trace's ring buffer and the sideband data's ring buffer is large enough to hold the PT data. Insufficient buffer size will lead to lost data, which may cause issues in <a class="el" href="classdynamorio_1_1drmemtrace_1_1pt2ir__t.html">dynamorio::drmemtrace::pt2ir_t</a> decoding.</p>
 <p>After creating a pttracer handle successfully, the client can start or stop a tracing session by calling <a class="el" href="drpttracer_8h.html#afb2c6fe798b7b3125647d647fb8e7835">drpttracer_start_tracing()</a> and <a class="el" href="drpttracer_8h.html#a17c201ee9f0a8d5835193b2c0ec66ab3">drpttracer_stop_tracing()</a>.</p>
 <ul>
 <li><a class="el" href="drpttracer_8h.html#afb2c6fe798b7b3125647d647fb8e7835">drpttracer_start_tracing()</a></li>
@@ -72,7 +72,7 @@ For one thread, only one tracing can execute at the same time. So the client nee
 <ul>
 <li><a class="el" href="drpttracer_8h.html#a6722673d8102754af9c4284f76bc2acf">drpttracer_destroy_output()</a></li>
 </ul>
-<p>Also, the client can dump the data in the output to different files for offline post-processing. The user can use the library <a class="el" href="classpt2ir__t.html">pt2ir_t</a> in drcachesim to convert the PT trace to DynamoRIO's IR.</p>
+<p>Also, the client can dump the data in the output to different files for offline post-processing. The user can use the library <a class="el" href="classdynamorio_1_1drmemtrace_1_1pt2ir__t.html">dynamorio::drmemtrace::pt2ir_t</a> in drcachesim to convert the PT trace to DynamoRIO's IR.</p>
 <h1><a class="anchor" id="sec_drpttracer_tracing_mode"></a>
 Tracing Mode</h1>
 <p><code>drpttracer</code> provides three types of tracing modes:</p>
@@ -90,5 +90,5 @@ Tracing Mode</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19530 --- Fri Jun 23 2023 03:29:41 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19537 --- Fri Jun 30 2023 03:19:53 &nbsp; <img border=0 src="favicon.png">
 </small></address>
