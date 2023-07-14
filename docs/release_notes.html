@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 9.93.19543"
+title: "Release Notes for Version 9.93.19552"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 9.93.19543 </div>  </div>
+<div class="title">Release Notes for Version 9.93.19552 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,8 +63,8 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 9.93.19543. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 9.93.19543 and 9.0.1 include the following compatibility changes:</p><ul>
+<p>The current version is 9.93.19552. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 9.93.19552 and 9.0.1 include the following compatibility changes:</p><ul>
 <li>Eliminated the -skip_syscall option to drrun and drinject, which is now always on by default.</li>
 <li>Changed the drcachesim -use_physical option to not modify the regular trace entry virtual addresses but to instead insert metadata containing translation information for converting virtual to physical addresses.</li>
 <li>Changed the layout of the DR_FAST_IR struct to add an element size property that supports more information about vectors. This changes the method of accessing the register in the structure from struct.value.reg to struct.value.reg_and_element_size.reg. The element size can be accessed directly via struct.value.reg_and_element_size.element_size.</li>
@@ -79,6 +79,7 @@ Changes Since Prior Releases</h1>
 <li>Changed the arguments and decode behavior of the <a class="el" href="dr__ir__macros__aarch64_8h.html#a7bb9dd63d2b89c90bbde7f7d95abda76">INSTR_CREATE_orr_sve_pred()</a>, <a class="el" href="dr__ir__macros__aarch64_8h.html#a954c30a5ec27d898752b81fcf01b2ee3">INSTR_CREATE_eor_sve_pred()</a>, <a class="el" href="dr__ir__macros__aarch64_8h.html#ad12bfc508a00d4fef5f52182abbaf737">INSTR_CREATE_and_sve_pred()</a> and <a class="el" href="dr__ir__macros__aarch64_8h.html#aadf85a0646ebcf551c2016eb63ca2128">INSTR_CREATE_bic_sve_pred()</a> to use the new vector element registers and to correctly encode the predicate mode.</li>
 <li>ud2a and ud2b have been renamed to ud2 and ud1, respectively. The old constants <a class="el" href="dr__ir__opcodes__x86_8h.html#a47f791ab3cdc6fa7040b6e6b11a9387a">OP_ud2a</a> and <a class="el" href="dr__ir__opcodes__x86_8h.html#aa630b5e5da7b78e8366a782412d8488b">OP_ud2b</a>, as well as the <a class="el" href="dr__ir__macros__x86_8h.html#a9ea566ab66324441d569fa47df4e07bf">INSTR_CREATE_ud2a()</a>/<a class="el" href="dr__ir__macros__x86_8h.html#a76214a29d9b40f55fb7f90ecdb3d4c0e">INSTR_CREATE_ud2b()</a> macros, are #defined to the new names, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635adbd0a13aea4004f863aa1bcc2cb60ccb">OP_ud2</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a4952cff307e0393ac882be069fcf061d">OP_ud1</a>, <a class="el" href="dr__ir__macros__x86_8h.html#a7924a3259017d955302351430203528d">INSTR_CREATE_ud2()</a>, and <a class="el" href="dr__ir__macros__x86_8h.html#a37d5f8cc5118f8866a82c9dae08a2e73">INSTR_CREATE_ud1()</a> respectively. ud1 now correctly accounts for its operands so manipulation of ud1 is not backwards compatible.</li>
 <li>All drcachesim/ code was changed to use the <a class="el" href="namespacedynamorio_1_1drmemtrace.html">dynamorio::drmemtrace</a> namespace. External code using any drcachesim or drmemtrace library will need to be recompiled.</li>
+<li>The droption header library is now inside the <a class="el" href="namespacedynamorio_1_1droption.html">dynamorio::droption</a> namespace.</li>
 </ul>
 <p>Further non-compatibility-affecting changes include:</p><ul>
 <li>Added AArchXX support for attaching to a running process.</li>
@@ -122,7 +123,7 @@ Changes Since Prior Releases</h1>
 <li>Fixed a significant performance regression between 8.0.0 and 9.0.0 (between 8.0.18740 and 8.0.18747) affecting Windows programs with varying indirect branches on hot code paths.</li>
 <li>Added alias support to droption.</li>
 <li>The drcpusim option -blacklist was renamed to -blocklist but the old name is still accepted.</li>
-<li>Added <a class="el" href="classdroption__parser__t.html#aeee4e7eee1281e71464fb1ffc5d1a743">droption_parser_t::clear_values()</a> for re-setting accumulating option values on re-attach for statically linked clients.</li>
+<li>Added droption_parser_t::clear_values() for re-setting accumulating option values on re-attach for statically linked clients.</li>
 <li>Added the count of cache exits to <a class="el" href="dr__defines_8h.html#a213f155f07a830b79111449062545352">dr_stats_t</a>.</li>
 <li>Added <a class="el" href="dr__config_8h.html#a2b83006602812a9d0310636bb9ba5c28">dr_register_inject_paths()</a> and a corresponding -use_alt_dll drrun/drconfig parameter for control over DynamoRIO library paths, in particular the other bitwidth path, when configuring target processes.</li>
 <li>Added -tool_dir drrun/drconfig parameter to control where to look for tool config files.</li>
@@ -134,7 +135,7 @@ Changes Since Prior Releases</h1>
 <li>A source compatibilty change in drcachesim analysis tools for users who have created derived classes from existing analysis tools: member fields of classes are now following a consistent style with an underscore suffix. References to renamed fields will need to be updated.</li>
 <li>A change in the load callbacks used with <a class="el" href="group__drcovlib.html#ga9c2889006a80254645521f81a1a486f5">drmodtrack_add_custom_data()</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae928b4aceb19475c965eb8de4d7ca07a">drmemtrace_custom_module_data()</a>: they each take an additional parameter, the segment index. The custom data field is now per-segment and not per-module, and all callbacks are invoked separately for each segment.</li>
 </ul>
-<p>The changes between version 9.93.19543 and 8.0.0 include the following minor compatibility changes:</p>
+<p>The changes between version 9.93.19552 and 8.0.0 include the following minor compatibility changes:</p>
 <ul>
 <li>drconfiglib (and thus drrun and drconfig) now sets only the new client path options which are added in this release to support other-bitwidth child processes. This means that a drconfiglib from this version will not properly configure for a DynamoRIO core library from a prior version.</li>
 <li>A new option -ldstex2cas is on by default on ARM and AArch64. This converts load-exclusive store-exclusive sequences to use compare-and-swap instead, which enables normal instrumentation of such sequences without clearing the exclusive monitor and causing infinite loops. However, the compare- and-swap's semantics are not identical: it does not detect "ABA" changes and could cause errors in lock-free data structures or other application constructs. See <a class="el" href="API_BT.html#sec_ldrex">Exclusive Monitor Instrumentation</a> for more information.</li>
@@ -432,7 +433,7 @@ Changes Since Prior Releases</h1>
 <li>Added experimental Android support. C clients are supported, but C++ clients are not yet supported.</li>
 <li>Added Windows 10 support.</li>
 <li>Added a new scratch register coordination Extension, <code>drreg</code>. The <code>drreg</code> Extension is still considered experimental and its interface is subject to change in the next release.</li>
-<li>Added easy-to-use option declaration and parsing for C++ clients and standalone applications via a new Extension, the <a class="el" href="page_droption.html">DynamoRIO Option Parser</a> and the <a class="el" href="classdroption__t.html">droption_t</a> class.</li>
+<li>Added easy-to-use option declaration and parsing for C++ clients and standalone applications via a new Extension, the <a class="el" href="page_droption.html">DynamoRIO Option Parser</a> and the <a class="el" href="classdynamorio_1_1droption_1_1droption__t.html">dynamorio::droption::droption_t</a> class.</li>
 <li>Added a new tool: <a class="el" href="page_drcachesim.html">Tracing and Analysis Framework</a>, a multi-process cache simulator.</li>
 <li>Added a new tool: <a class="el" href="page_drcpusim.html">CPU Simulator</a>, a CPU simulator for illegal instructions on legacy processors.</li>
 <li>Added distinctions between reasons for <a class="el" href="dr__os__utils_8h.html#a64bc438e6114c0e6137d65e4c9a8beb6">dr_query_memory_ex()</a> to fail</li>
@@ -1125,5 +1126,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19543 --- Fri Jul 7 2023 03:27:22 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19552 --- Fri Jul 14 2023 03:27:41 &nbsp; <img border=0 src="favicon.png">
 </small></address>

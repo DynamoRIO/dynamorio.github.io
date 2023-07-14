@@ -60,7 +60,7 @@
     [ "dynamorio::drmemtrace::analyzer_tmpl_t< RecordType, ReaderType >", "classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html", null ],
     [ "dynamorio::drmemtrace::bitset_hash_table_t< T >", "classdynamorio_1_1drmemtrace_1_1bitset__hash__table__t.html", null ],
     [ "dynamorio::drmemtrace::bitset_hash_table_t< app_pc >", "classdynamorio_1_1drmemtrace_1_1bitset__hash__table__t.html", null ],
-    [ "bytesize_t", "classbytesize__t.html", null ],
+    [ "dynamorio::droption::bytesize_t", "classdynamorio_1_1droption_1_1bytesize__t.html", null ],
     [ "dynamorio::drmemtrace::cache_simulator_knobs_t", "structdynamorio_1_1drmemtrace_1_1cache__simulator__knobs__t.html", null ],
     [ "dr_time_t", "structdr__time__t.html", null ],
     [ "drbbdup_options_t", "structdrbbdup__options__t.html", null ],
@@ -68,8 +68,8 @@
     [ "dynamorio::drgui::drgui_options_interface_t", "classdynamorio_1_1drgui_1_1drgui__options__interface__t.html", null ],
     [ "dynamorio::drgui::drgui_tool_interface_t", "classdynamorio_1_1drgui_1_1drgui__tool__interface__t.html", null ],
     [ "dynamorio::drmemtrace::drmemtrace_replace_file_ops_t", "structdynamorio_1_1drmemtrace_1_1drmemtrace__replace__file__ops__t.html", null ],
-    [ "droption_parser_t", "classdroption__parser__t.html", [
-      [ "droption_t< T >", "classdroption__t.html", null ]
+    [ "dynamorio::droption::droption_parser_t", "classdynamorio_1_1droption_1_1droption__parser__t.html", [
+      [ "dynamorio::droption::droption_t< T >", "classdynamorio_1_1droption_1_1droption__t.html", null ]
     ] ],
     [ "drstatecmp_options_t", "structdrstatecmp__options__t.html", null ],
     [ "features_t", "structfeatures__t.html", null ],

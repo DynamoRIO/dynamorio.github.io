@@ -4,7 +4,8 @@
         [ "drgui_options_interface_t", "classdynamorio_1_1drgui_1_1drgui__options__interface__t.html", {% include_relative classdynamorio_1_1drgui_1_1drgui__options__interface__t.js %} ],
         [ "drgui_tool_interface_t", "classdynamorio_1_1drgui_1_1drgui__tool__interface__t.html", {% include_relative classdynamorio_1_1drgui_1_1drgui__tool__interface__t.js %} ]
       ] ],
-      [ "drmemtrace", "namespacedynamorio_1_1drmemtrace.html", {% include_relative namespacedynamorio_1_1drmemtrace.js %} ]
+      [ "drmemtrace", "namespacedynamorio_1_1drmemtrace.html", {% include_relative namespacedynamorio_1_1drmemtrace.js %} ],
+      [ "droption", "namespacedynamorio_1_1droption.html", {% include_relative namespacedynamorio_1_1droption.js %} ]
     ] ],
     [ "_dr_app_arg_t", "struct__dr__app__arg__t.html", {% include_relative struct__dr__app__arg__t.js %} ],
     [ "_dr_config_client_t", "struct__dr__config__client__t.html", {% include_relative struct__dr__config__client__t.js %} ],
@@ -56,12 +57,9 @@
     [ "_tracedump_stub_data", "struct__tracedump__stub__data.html", {% include_relative struct__tracedump__stub__data.js %} ],
     [ "_tracedump_trace_header_t", "struct__tracedump__trace__header__t.html", {% include_relative struct__tracedump__trace__header__t.js %} ],
     [ "_version_number_t", "union__version__number__t.html", {% include_relative union__version__number__t.js %} ],
-    [ "bytesize_t", "classbytesize__t.html", null ],
     [ "dr_time_t", "structdr__time__t.html", {% include_relative structdr__time__t.js %} ],
     [ "drbbdup_options_t", "structdrbbdup__options__t.html", {% include_relative structdrbbdup__options__t.js %} ],
     [ "drbbdup_stats_t", "structdrbbdup__stats__t.html", {% include_relative structdrbbdup__stats__t.js %} ],
-    [ "droption_parser_t", "classdroption__parser__t.html", {% include_relative classdroption__parser__t.js %} ],
-    [ "droption_t", "classdroption__t.html", {% include_relative classdroption__t.js %} ],
     [ "drstatecmp_options_t", "structdrstatecmp__options__t.html", {% include_relative structdrstatecmp__options__t.js %} ],
     [ "features_t", "structfeatures__t.html", {% include_relative structfeatures__t.js %} ],
     [ "instr_noalloc_t", "structinstr__noalloc__t.html", {% include_relative structinstr__noalloc__t.js %} ],
