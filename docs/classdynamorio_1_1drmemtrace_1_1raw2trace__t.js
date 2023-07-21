@@ -12,7 +12,7 @@
     [ "modvec_", "classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a7b23bb0d332c07aaa0cc15b6cdfc16c1", null ],
     [ "on_thread_end", "classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#aaf70112b055f61c8dcedc4458bfa0e18", null ],
     [ "process_next_thread_buffer", "classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a902fa15ca683f63c5027cfc1919aa563", null ],
-    [ "process_offline_entry", "classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#adcb76b4b5efcacc6909d9407caecf1a9", null ],
+    [ "process_offline_entry", "classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ae4544e5fbada823eaa8702cef94f2ff3", null ],
     [ "read_header", "classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#aca2cb7f505f3ee69d2d768778f93a52f", null ],
     [ "set_modmap_", "classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#af39a7bfc8954256a2d913050bc8f4e7a", null ],
     [ "set_modvec_", "classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ad54f20f0cb2c70e538f4a551ad76ed59", null ],

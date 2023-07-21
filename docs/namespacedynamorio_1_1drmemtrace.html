@@ -1064,7 +1064,7 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaac9118269c36e185fe2a9b0b6895e0d07"></a>OFFLINE_FILE_TYPE_ARCH_ALL&#160;</td><td class="fielddoc"><p>All possible architecture types. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaab5c970fa5c78548056a2b3d90c2512b2"></a>OFFLINE_FILE_TYPE_IFILTERED&#160;</td><td class="fielddoc"><p>Instruction addresses filtered online. </p>
+<tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaab5c970fa5c78548056a2b3d90c2512b2"></a>OFFLINE_FILE_TYPE_IFILTERED&#160;</td><td class="fielddoc"><p>Instruction addresses filtered online. Note: this file type may transition to non-filtered. This transition is indicated by the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca2fa8ca3d28b2bd7b5b8c63ade7c6a26e">dynamorio::drmemtrace::TRACE_MARKER_TYPE_FILTER_ENDPOINT</a> marker. Each window (which is indicated by the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca02845c6ba33cc5038f8a7bfe38c25f57">dynamorio::drmemtrace::TRACE_MARKER_TYPE_WINDOW_ID</a> marker) starts out filtered. This applies to <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa2bde173fab00e1eb6b226453b70b5410">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_DFILTERED</a> also. Note that threads that were created after the transition will also have this marker - right at the beginning. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaa2bde173fab00e1eb6b226453b70b5410"></a>OFFLINE_FILE_TYPE_DFILTERED&#160;</td><td class="fielddoc"><p>Data addresses filtered online. </p>
 </td></tr>
@@ -2307,5 +2307,5 @@ For additional file open parameters with the thread and window identifiers, use 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19552 --- Fri Jul 14 2023 03:27:42 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19557 --- Fri Jul 21 2023 03:13:59 &nbsp; <img border=0 src="favicon.png">
 </small></address>

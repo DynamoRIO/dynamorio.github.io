@@ -27,6 +27,7 @@
     ] ],
     [ "Configuration File", "sec_drcachesim_config_file.html", null ],
     [ "Offline Traces and Analysis", "sec_drcachesim_offline.html", null ],
+    [ "Filtered Traces", "sec_drcachesim_filter.html", null ],
     [ "Tracing a Subset of Execution", "sec_drcachesim_partial.html", null ],
     [ "Simulator Details", "sec_drcachesim_sim.html", null ],
     [ "Cache Miss Analyzer", "sec_drcachesim_analyzer.html", null ],

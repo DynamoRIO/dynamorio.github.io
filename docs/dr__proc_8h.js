@@ -185,7 +185,8 @@
       [ "FEATURE_SVEAES", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa7fd8a85f404439f0388a4f3c65ef2903", null ],
       [ "FEATURE_SVESHA3", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa58ec93eb89212051693c560fc62c41fc", null ],
       [ "FEATURE_SVESM4", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0d4978ec608d1c4fc7716e0da34755ca", null ],
-      [ "FEATURE_SVEBitPerm", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0c250c34a2e3b943c03c42f533bbd9d8", null ]
+      [ "FEATURE_SVEBitPerm", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0c250c34a2e3b943c03c42f533bbd9d8", null ],
+      [ "FEATURE_MTE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaeb5e0a83139abb46700248d34fcad6d3", null ]
     ] ],
     [ "feature_bit_t", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bf", [
       [ "FEATURE_FPU", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac39f532dceb337cb996ebf5a8d658668", null ],
@@ -307,7 +308,8 @@
       [ "FEATURE_SVEAES", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa7fd8a85f404439f0388a4f3c65ef2903", null ],
       [ "FEATURE_SVESHA3", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa58ec93eb89212051693c560fc62c41fc", null ],
       [ "FEATURE_SVESM4", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0d4978ec608d1c4fc7716e0da34755ca", null ],
-      [ "FEATURE_SVEBitPerm", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0c250c34a2e3b943c03c42f533bbd9d8", null ]
+      [ "FEATURE_SVEBitPerm", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0c250c34a2e3b943c03c42f533bbd9d8", null ],
+      [ "FEATURE_MTE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaeb5e0a83139abb46700248d34fcad6d3", null ]
     ] ],
     [ "proc_avx512_enabled", "dr__proc_8h.html#aaba068462550d9b73c32c0991c5f7551", null ],
     [ "proc_avx_enabled", "dr__proc_8h.html#adfd5dadf31b9a26540978b7331701770", null ],

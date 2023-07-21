@@ -51,8 +51,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:adcb76b4b5efcacc6909d9407caecf1a9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#adcb76b4b5efcacc6909d9407caecf1a9">process_offline_entry</a> (raw2trace_thread_data_t *tdata, const offline_entry_t *in_entry, thread_id_t tid, OUT bool *end_of_record, OUT bool *last_bb_handled)</td></tr>
-<tr class="separator:adcb76b4b5efcacc6909d9407caecf1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4544e5fbada823eaa8702cef94f2ff3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ae4544e5fbada823eaa8702cef94f2ff3">process_offline_entry</a> (raw2trace_thread_data_t *tdata, const offline_entry_t *in_entry, thread_id_t tid, OUT bool *end_of_record, OUT bool *last_bb_handled, OUT bool *flush_decode_cache)</td></tr>
+<tr class="separator:ae4544e5fbada823eaa8702cef94f2ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca2cb7f505f3ee69d2d768778f93a52f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#aca2cb7f505f3ee69d2d768778f93a52f">read_header</a> (raw2trace_thread_data_t *tdata, OUT <a class="el" href="structdynamorio_1_1drmemtrace_1_1trace__header__t.html">trace_header_t</a> *header)</td></tr>
 <tr class="separator:aca2cb7f505f3ee69d2d768778f93a52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5d746b7e5b7a6199a800f09966c7658"><td class="memItemLeft" align="right" valign="top">virtual const offline_entry_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ab5d746b7e5b7a6199a800f09966c7658">get_next_entry</a> (raw2trace_thread_data_t *tdata)</td></tr>
@@ -484,8 +484,8 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="adcb76b4b5efcacc6909d9407caecf1a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcb76b4b5efcacc6909d9407caecf1a9">&#9670;&nbsp;</a></span>process_offline_entry()</h2>
+<a id="ae4544e5fbada823eaa8702cef94f2ff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4544e5fbada823eaa8702cef94f2ff3">&#9670;&nbsp;</a></span>process_offline_entry()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -521,7 +521,13 @@ Static Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">OUT bool *&#160;</td>
-          <td class="paramname"><em>last_bb_handled</em>&#160;</td>
+          <td class="paramname"><em>last_bb_handled</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OUT bool *&#160;</td>
+          <td class="paramname"><em>flush_decode_cache</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -599,7 +605,7 @@ Static Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set the module mapper. Must be called before <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#adcb76b4b5efcacc6909d9407caecf1a9">process_offline_entry()</a> is called. </p>
+<p>Set the module mapper. Must be called before <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ae4544e5fbada823eaa8702cef94f2ff3">process_offline_entry()</a> is called. </p>
 
 </div>
 </div>
@@ -626,7 +632,7 @@ Static Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set the module map. Must be called before <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#adcb76b4b5efcacc6909d9407caecf1a9">process_offline_entry()</a> is called. </p>
+<p>Set the module map. Must be called before <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ae4544e5fbada823eaa8702cef94f2ff3">process_offline_entry()</a> is called. </p>
 
 </div>
 </div>
@@ -709,5 +715,5 @@ Static Protected Attributes</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19552 --- Fri Jul 14 2023 03:27:42 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19557 --- Fri Jul 21 2023 03:13:59 &nbsp; <img border=0 src="favicon.png">
 </small></address>
