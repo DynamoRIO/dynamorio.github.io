@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 9.93.19557"
+title: "Release Notes for Version 9.93.19565"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 9.93.19557 </div>  </div>
+<div class="title">Release Notes for Version 9.93.19565 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,8 +63,8 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 9.93.19557. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 9.93.19557 and 9.0.1 include the following compatibility changes:</p><ul>
+<p>The current version is 9.93.19565. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 9.93.19565 and 9.0.1 include the following compatibility changes:</p><ul>
 <li>Eliminated the -skip_syscall option to drrun and drinject, which is now always on by default.</li>
 <li>Changed the drcachesim -use_physical option to not modify the regular trace entry virtual addresses but to instead insert metadata containing translation information for converting virtual to physical addresses.</li>
 <li>Changed the layout of the DR_FAST_IR struct to add an element size property that supports more information about vectors. This changes the method of accessing the register in the structure from struct.value.reg to struct.value.reg_and_element_size.reg. The element size can be accessed directly via struct.value.reg_and_element_size.element_size.</li>
@@ -80,9 +80,10 @@ Changes Since Prior Releases</h1>
 <li>ud2a and ud2b have been renamed to ud2 and ud1, respectively. The old constants <a class="el" href="dr__ir__opcodes__x86_8h.html#a47f791ab3cdc6fa7040b6e6b11a9387a">OP_ud2a</a> and <a class="el" href="dr__ir__opcodes__x86_8h.html#aa630b5e5da7b78e8366a782412d8488b">OP_ud2b</a>, as well as the <a class="el" href="dr__ir__macros__x86_8h.html#a9ea566ab66324441d569fa47df4e07bf">INSTR_CREATE_ud2a()</a>/<a class="el" href="dr__ir__macros__x86_8h.html#a76214a29d9b40f55fb7f90ecdb3d4c0e">INSTR_CREATE_ud2b()</a> macros, are #defined to the new names, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635adbd0a13aea4004f863aa1bcc2cb60ccb">OP_ud2</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a4952cff307e0393ac882be069fcf061d">OP_ud1</a>, <a class="el" href="dr__ir__macros__x86_8h.html#a7924a3259017d955302351430203528d">INSTR_CREATE_ud2()</a>, and <a class="el" href="dr__ir__macros__x86_8h.html#a37d5f8cc5118f8866a82c9dae08a2e73">INSTR_CREATE_ud1()</a> respectively. ud1 now correctly accounts for its operands so manipulation of ud1 is not backwards compatible.</li>
 <li>All drcachesim/ code was changed to use the <a class="el" href="namespacedynamorio_1_1drmemtrace.html">dynamorio::drmemtrace</a> namespace. External code using any drcachesim or drmemtrace library will need to be recompiled.</li>
 <li>The droption header library is now inside the <a class="el" href="namespacedynamorio_1_1droption.html">dynamorio::droption</a> namespace.</li>
+<li>The drmemtrace record type <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca72c321d21ca2dd83400223fb5fff58ad">dynamorio::drmemtrace::TRACE_TYPE_INSTR_CONDITIONAL_JUMP</a> is deprecated in offline traces where it is replaced by <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca9c9d51773f51a184dbe43b9382cc305c">dynamorio::drmemtrace::TRACE_TYPE_INSTR_TAKEN_JUMP</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca93a6bfcd5d3af5e73765fe053fff98ae">dynamorio::drmemtrace::TRACE_TYPE_INSTR_UNTAKEN_JUMP</a>.</li>
 </ul>
 <p>Further non-compatibility-affecting changes include:</p><ul>
-<li>Added new drmemtrace option -L0_filter_until_instrs which enables filtering for the specified instruction count before switching to full instruction tracing.</li>
+<li>Added new drmemtrace option -L0_filter_until_instrs which enables filtering for the specified instruction count before switching to full instruction tracing. Such bimodal filtered traces have <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa7b6a185cde6ae20ece63f7bbfd0e5b26">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_BIMODAL_FILTERED_WARMUP</a> in their file type, and a <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca2fa8ca3d28b2bd7b5b8c63ade7c6a26e">dynamorio::drmemtrace::TRACE_MARKER_TYPE_FILTER_ENDPOINT</a> marker at the point in the trace when filtering ended.</li>
 <li>Added AArchXX support for attaching to a running process.</li>
 <li>Added new fields analyze_case_ex and instrument_instr_ex to <a class="el" href="structdrbbdup__options__t.html">drbbdup_options_t</a>.</li>
 <li>Added drbbdup support to drwrap via <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962383818b9c92a4d963b27379bab4b820edeb0165aace6">DRWRAP_INVERT_CONTROL</a>, <a class="el" href="group__drwrap.html#gad76d806076ebd9ec79305dbdd50d6253">drwrap_invoke_insert()</a>, and <a class="el" href="group__drwrap.html#gad82b70d1b36030cbeec5894e0f9a9ff8">drwrap_invoke_insert_cleanup_only()</a>.</li>
@@ -115,6 +116,7 @@ Changes Since Prior Releases</h1>
 <li>Added <a class="el" href="dr__ir__instr_8h.html#aaa2009a9051554c5805094bd1ba7fdf9">instr_get_offset()</a> API for getting the offset of an instr in an instrlist that has been encoded with instrlist_encode* set of APIs.</li>
 <li>Added a new drmemtrace analyzer option <code>-interval_microseconds</code> and various new <a class="el" href="namespacedynamorio_1_1drmemtrace.html#aa072932d15fbef2163f1b3704b33abf7">dynamorio::drmemtrace::analysis_tool_t</a> APIs for producing per-interval results. The analyzer framework invokes the generate_interval_snapshot() and generate_shard_interval_snapshot() analysis tool APIs periodically every <code>-interval_microseconds</code> of the trace as measured by the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca5935654bf36c3cb4e813ff0d8397e2ad">dynamorio::drmemtrace::TRACE_MARKER_TYPE_TIMESTAMP</a> marker values. In these callbacks, the tool creates and returns a snapshot of their internal state that is required to produce and print per-interval results in a later print_interval_results() call. The tool's internal state is a struct derived from the <a class="el" href="structdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">dynamorio::drmemtrace::analysis_tool_tmpl_t::interval_state_snapshot_t</a> base struct. Additionally, the tool implements combine_interval_snapshot() to combine two interval snapshot structs, which is required for producing whole-trace results in the parallel mode of analyzer operation, and also release_interval_snapshot() which is used to release the analyzer framework's claim to the interval snapshot objects.</li>
 <li>Added a new drmemtrace analysis tool: syscall_mix, to count frequency of system calls in a trace. This tool works in both the online and offline modes of drmemtrace.</li>
+<li>Indirect branches in drmemtrace traces now contain a marker holding the actual target (<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca9ccf81370a91222945dc5d3e44fb718d">dynamorio::drmemtrace::TRACE_MARKER_TYPE_BRANCH_TARGET</a>), which immediately precedes the branch record.</li>
 </ul>
 <hr  />
 <p>The changes between version 9.0.1 and 9.0.0 include the following compatibility changes:</p><ul>
@@ -136,7 +138,7 @@ Changes Since Prior Releases</h1>
 <li>A source compatibilty change in drcachesim analysis tools for users who have created derived classes from existing analysis tools: member fields of classes are now following a consistent style with an underscore suffix. References to renamed fields will need to be updated.</li>
 <li>A change in the load callbacks used with <a class="el" href="group__drcovlib.html#ga9c2889006a80254645521f81a1a486f5">drmodtrack_add_custom_data()</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae928b4aceb19475c965eb8de4d7ca07a">drmemtrace_custom_module_data()</a>: they each take an additional parameter, the segment index. The custom data field is now per-segment and not per-module, and all callbacks are invoked separately for each segment.</li>
 </ul>
-<p>The changes between version 9.93.19557 and 8.0.0 include the following minor compatibility changes:</p>
+<p>The changes between version 9.93.19565 and 8.0.0 include the following minor compatibility changes:</p>
 <ul>
 <li>drconfiglib (and thus drrun and drconfig) now sets only the new client path options which are added in this release to support other-bitwidth child processes. This means that a drconfiglib from this version will not properly configure for a DynamoRIO core library from a prior version.</li>
 <li>A new option -ldstex2cas is on by default on ARM and AArch64. This converts load-exclusive store-exclusive sequences to use compare-and-swap instead, which enables normal instrumentation of such sequences without clearing the exclusive monitor and causing infinite loops. However, the compare- and-swap's semantics are not identical: it does not detect "ABA" changes and could cause errors in lock-free data structures or other application constructs. See <a class="el" href="API_BT.html#sec_ldrex">Exclusive Monitor Instrumentation</a> for more information.</li>
@@ -1127,5 +1129,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19557 --- Fri Jul 21 2023 03:13:58 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19565 --- Fri Jul 28 2023 03:13:38 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -34,6 +34,7 @@ Windows Deployment</h1>
 <p>Configurations are per-process, with the basename of the process used for identification (e.g., <code>notepad.exe</code>). One-time configuration also uses the process id to specify that the configuration is for that process instance only.</p>
 <p>As an example, assume you have unpacked the DynamoRIO distribution and your current directory is its base directory. Run <code>notepad.exe</code> with the bbsize sample client using the following configure-and-run command: </p><div class="fragment"><div class="line">bin32/drrun.exe -c samples/bin32/bbsize.dll -- notepad</div>
 </div><!-- fragment --><p>Alternatively, you can first run <code>notepad.exe</code>, and then use <code>drrun</code> to attach to it, but please note that attaching is an experimental feature and is not yet as well-supported as launching a new process: </p><div class="fragment"><div class="line">bin32/drrun.exe -attach &lt;notepad_pid&gt; -c samples/bin32/bbsize.dll</div>
+</div><!-- fragment --><p>Then, you can also detach DynamoRIO from the process of <code>notepad.exe</code> without affecting the normal execution of <code>notepad.exe</code>. </p><div class="fragment"><div class="line">bin32/drconfig.exe -detach &lt;notepad_pid&gt;</div>
 </div><!-- fragment --><p>To use system-wide injection, allowing for an application to be run under DynamoRIO regardless of how it is invoked, configure the application first (-syswide_on requires administrative privileges): </p><div class="fragment"><div class="line">bin32/drconfig.exe -reg notepad.exe -syswide_on -c samples/bin32/bbsize.dll</div>
 </div><!-- fragment --><p>The next time <code>notepad.exe</code> is started by the current user, it will run under DynamoRIO with the bbsize client.</p>
 <p>To unregister <code>notepad.exe</code>, issue the following command: </p><div class="fragment"><div class="line">bin32/drconfig.exe -unreg notepad.exe</div>
@@ -248,5 +249,5 @@ DynamoRIO Runtime Options</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19557 --- Fri Jul 21 2023 03:13:58 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19565 --- Fri Jul 28 2023 03:13:38 &nbsp; <img border=0 src="favicon.png">
 </small></address>

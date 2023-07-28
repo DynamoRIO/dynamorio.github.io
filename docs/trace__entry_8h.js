@@ -26,7 +26,8 @@
       [ "OFFLINE_FILE_TYPE_ENCODINGS", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa1bc66b6cb976d3bb7f93af0ce5d2ec53", null ],
       [ "OFFLINE_FILE_TYPE_SYSCALL_NUMBERS", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa2bbf303be87f5709ada421f2b68f9898", null ],
       [ "OFFLINE_FILE_TYPE_BLOCKING_SYSCALLS", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa0ada28582819d0a5287f47716a35239e", null ],
-      [ "OFFLINE_FILE_TYPE_KERNEL_SYSCALLS", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa8122186112a3ca356479e0b8bd08e9be", null ]
+      [ "OFFLINE_FILE_TYPE_KERNEL_SYSCALLS", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa8122186112a3ca356479e0b8bd08e9be", null ],
+      [ "OFFLINE_FILE_TYPE_BIMODAL_FILTERED_WARMUP", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa7b6a185cde6ae20ece63f7bbfd0e5b26", null ]
     ] ],
     [ "trace_marker_type_t", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295c", [
       [ "TRACE_MARKER_TYPE_KERNEL_EVENT", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca3b75f9115bb4146ed5540412e36bdd5a", null ],
@@ -56,7 +57,8 @@
       [ "TRACE_MARKER_TYPE_SYSCALL", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca9c6c0b467a729d1d4c4298bef1892c74", null ],
       [ "TRACE_MARKER_TYPE_MAYBE_BLOCKING_SYSCALL", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295caa6544f9f8c54496a7befa481c81577b7", null ],
       [ "TRACE_MARKER_TYPE_SYSCALL_TRACE_START", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca13fffec3c874dcd5cc84aa25387b76d3", null ],
-      [ "TRACE_MARKER_TYPE_SYSCALL_TRACE_END", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295caef6df6ddbdffd994f91edba51c850cde", null ]
+      [ "TRACE_MARKER_TYPE_SYSCALL_TRACE_END", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295caef6df6ddbdffd994f91edba51c850cde", null ],
+      [ "TRACE_MARKER_TYPE_BRANCH_TARGET", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca9ccf81370a91222945dc5d3e44fb718d", null ]
     ] ],
     [ "trace_type_t", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59c", [
       [ "TRACE_TYPE_READ", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59ca018585565e72f9ebe6723e089f3d343d", null ],
@@ -101,12 +103,15 @@
       [ "TRACE_TYPE_PREFETCH_WRITE_L2", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59caaa7e1d17c2e5477af51331cc7e884a6b", null ],
       [ "TRACE_TYPE_PREFETCH_WRITE_L2_NT", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59ca1017b85e200c03b9647b5c1831263c52", null ],
       [ "TRACE_TYPE_PREFETCH_WRITE_L3", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59cad1fce8d9d7b5a1283aa628ca755ed780", null ],
-      [ "TRACE_TYPE_PREFETCH_WRITE_L3_NT", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59caa6100a7e6394bb5c1b5f6f1c56a49639", null ]
+      [ "TRACE_TYPE_PREFETCH_WRITE_L3_NT", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59caa6100a7e6394bb5c1b5f6f1c56a49639", null ],
+      [ "TRACE_TYPE_INSTR_TAKEN_JUMP", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59ca9c9d51773f51a184dbe43b9382cc305c", null ],
+      [ "TRACE_TYPE_INSTR_UNTAKEN_JUMP", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59ca93a6bfcd5d3af5e73765fe053fff98ae", null ]
     ] ],
     [ "trace_version_t", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5da", [
       [ "TRACE_ENTRY_VERSION_NO_KERNEL_PC", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daa51a5fc9f55436b5c610058a01825779a", null ],
       [ "TRACE_ENTRY_VERSION_KERNEL_PC", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daad5a6abcd4c5eb8db6cf1396460bb0ac5", null ],
       [ "TRACE_ENTRY_VERSION_ENCODINGS", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daa00ea9310b6ca682075c2bdc469a1778c", null ],
+      [ "TRACE_ENTRY_VERSION_BRANCH_INFO", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daa15c44ecec7fe8199d013bac8b759909e", null ],
       [ "TRACE_ENTRY_VERSION", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e", null ]
     ] ],
     [ "type_has_address", "trace__entry_8h.html#a9ca0b3aaffc906b809a2ba3fb9dd730e", null ],

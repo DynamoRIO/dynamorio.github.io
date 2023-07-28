@@ -86,7 +86,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa00ea9310b6ca682075c2bdc469a1778c">dynamorio::drmemtrace::TRACE_ENTRY_VERSION_ENCODINGS</a> = 4, 
 <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e">dynamorio::drmemtrace::TRACE_ENTRY_VERSION</a> = TRACE_ENTRY_VERSION_ENCODINGS
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa15c44ecec7fe8199d013bac8b759909e">dynamorio::drmemtrace::TRACE_ENTRY_VERSION_BRANCH_INFO</a> = 5, 
+<br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e">dynamorio::drmemtrace::TRACE_ENTRY_VERSION</a> = TRACE_ENTRY_VERSION_BRANCH_INFO
 <br />
  }</td></tr>
 <tr class="separator:ad84239da3ba299ee4ebcf24134e6b5da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,6 +178,10 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59cad1fce8d9d7b5a1283aa628ca755ed780">dynamorio::drmemtrace::TRACE_TYPE_PREFETCH_WRITE_L3</a>, 
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59caa6100a7e6394bb5c1b5f6f1c56a49639">dynamorio::drmemtrace::TRACE_TYPE_PREFETCH_WRITE_L3_NT</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca9c9d51773f51a184dbe43b9382cc305c">dynamorio::drmemtrace::TRACE_TYPE_INSTR_TAKEN_JUMP</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca93a6bfcd5d3af5e73765fe053fff98ae">dynamorio::drmemtrace::TRACE_TYPE_INSTR_UNTAKEN_JUMP</a>
 <br />
  }</td></tr>
 <tr class="separator:a00e926de2230d3f712dcae422e6cb59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -234,7 +240,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca13fffec3c874dcd5cc84aa25387b76d3">dynamorio::drmemtrace::TRACE_MARKER_TYPE_SYSCALL_TRACE_START</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caef6df6ddbdffd994f91edba51c850cde">dynamorio::drmemtrace::TRACE_MARKER_TYPE_SYSCALL_TRACE_END</a>
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caef6df6ddbdffd994f91edba51c850cde">dynamorio::drmemtrace::TRACE_MARKER_TYPE_SYSCALL_TRACE_END</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca9ccf81370a91222945dc5d3e44fb718d">dynamorio::drmemtrace::TRACE_MARKER_TYPE_BRANCH_TARGET</a>
 <br />
  }</td></tr>
 <tr class="separator:ab8531c7f66ccc0d7fe59f436844a295c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -266,7 +274,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa0ada28582819d0a5287f47716a35239e">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_BLOCKING_SYSCALLS</a> = 0x800, 
 <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa8122186112a3ca356479e0b8bd08e9be">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_KERNEL_SYSCALLS</a> = 0x1000
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa8122186112a3ca356479e0b8bd08e9be">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_KERNEL_SYSCALLS</a> = 0x1000, 
+<br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa7b6a185cde6ae20ece63f7bbfd0e5b26">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_BIMODAL_FILTERED_WARMUP</a> = 0x2000
 <br />
  }</td></tr>
 <tr class="separator:a017717a4b9ef5ae1f6d1fef1df834baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -417,5 +427,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19557 --- Fri Jul 21 2023 03:13:56 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19565 --- Fri Jul 28 2023 03:13:36 &nbsp; <img border=0 src="favicon.png">
 </small></address>

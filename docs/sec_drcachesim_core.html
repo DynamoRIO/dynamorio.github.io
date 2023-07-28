@@ -27,8 +27,14 @@ permalink: /sec_drcachesim_core.html
 <div class="textblock"><p>The <code>drcachesim</code> trace format includes information intended for use by core simulators as well as pure cache simulators. For traces that are not filtered by an online first-level cache, each data reference is preceded by the instruction fetch entry for the instruction that issued the data request, which includes the instruction encoding with the opcode and operands. Additionally, on x86, string loop instructions involve a single insruction fetch followed by a loop of loads and/or stores. A <code>drcachesim</code> trace includes a special "no-fetch" instruction entry per iteration so that core simulators have the instruction information to go along with each load and store, while cache simulators can ignore these "no-fetch" entries and avoid incorrectly inflating instruction fetch statistics.</p>
 <p>Traces include scheduling markers providing the timestamp and hardware thread identifier on each thread transition, allowing a simulator to more closely match the actual hardware if so desired.</p>
 <p>Traces also include markers indicating disruptions in user mode control flow such as signal handler entry and exit.</p>
-<p>Offline traces guarantee that a branch target instruction entry in a trace must immediately follow the branch instruction with no intervening thread switch. This allows a core simulator to identify the target of a branch by looking at the subsequent trace entry. This guarantee does not hold when a kernel event such as a signal is delivered immediately after a branch; however, each marker indicating such a kernel transfer includes the interrupted PC, explicitly providing the branch target.</p>
-<p>Filtered traces (filtered via -L0_filter) include the dynamic (pre-filtered) per-thread instruction count in a <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca733229fc49ba6154769dba79b6f20943">dynamorio::drmemtrace::TRACE_MARKER_TYPE_INSTRUCTION_COUNT</a> marker at each thread buffer boundary and at thread exit. </p>
+<p>Offline traces explicitly identify whether each conditional branch was taken or not, and include a marker showing the target of unconditional branches, for convenience to avoid having to read either the subsequent entry or the kernel transfer event marker (or infer branch behavior for rseq aborts):</p>
+<div class="fragment"><div class="line">2212815     1648444:     1249326 ifetch       6 byte(s) @ 0x00007f3406720707 48 3d 01 f0 ff ff    cmp    %rax, $0xfffff001</div>
+<div class="line">2212816     1648445:     1249326 ifetch       2 byte(s) @ 0x00007f340672070d 73 01                jnb    $0x00007f3406720710 (untaken)</div>
+<div class="line">2212817     1648445:     1249326 &lt;marker: indirect branch target 0x7f34066a8b37&gt;</div>
+<div class="line">2212818     1648446:     1249326 ifetch       1 <span class="keywordtype">byte</span>(s) @ 0x00007f340672070f c3                   ret</div>
+<div class="line">2212819     1648446:     1249326 read         8 byte(s) @ 0x00007ffd91e24fa8 by PC 0x00007f340672070f</div>
+<div class="line">2212820     1648447:     1249326 ifetch       5 byte(s) @ 0x00007f34066a8b37 4c 8b 54 24 48       mov    0x48(%rsp), %r10</div>
+</div><!-- fragment --><p>Filtered traces (filtered via -L0_filter) include the dynamic (pre-filtered) per-thread instruction count in a <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca733229fc49ba6154769dba79b6f20943">dynamorio::drmemtrace::TRACE_MARKER_TYPE_INSTRUCTION_COUNT</a> marker at each thread buffer boundary and at thread exit. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.17-->
@@ -36,5 +42,5 @@ permalink: /sec_drcachesim_core.html
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19557 --- Fri Jul 21 2023 03:13:58 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19565 --- Fri Jul 28 2023 03:13:38 &nbsp; <img border=0 src="favicon.png">
 </small></address>

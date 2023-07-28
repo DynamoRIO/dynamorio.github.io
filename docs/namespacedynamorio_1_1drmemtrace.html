@@ -237,7 +237,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa00ea9310b6ca682075c2bdc469a1778c">TRACE_ENTRY_VERSION_ENCODINGS</a> = 4, 
 <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e">TRACE_ENTRY_VERSION</a> = TRACE_ENTRY_VERSION_ENCODINGS
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa15c44ecec7fe8199d013bac8b759909e">TRACE_ENTRY_VERSION_BRANCH_INFO</a> = 5, 
+<br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e">TRACE_ENTRY_VERSION</a> = TRACE_ENTRY_VERSION_BRANCH_INFO
 <br />
  }</td></tr>
 <tr class="separator:ad84239da3ba299ee4ebcf24134e6b5da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -327,6 +329,10 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59cad1fce8d9d7b5a1283aa628ca755ed780">TRACE_TYPE_PREFETCH_WRITE_L3</a>, 
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59caa6100a7e6394bb5c1b5f6f1c56a49639">TRACE_TYPE_PREFETCH_WRITE_L3_NT</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca9c9d51773f51a184dbe43b9382cc305c">TRACE_TYPE_INSTR_TAKEN_JUMP</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca93a6bfcd5d3af5e73765fe053fff98ae">TRACE_TYPE_INSTR_UNTAKEN_JUMP</a>
 <br />
  }</td></tr>
 <tr class="separator:a00e926de2230d3f712dcae422e6cb59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -385,7 +391,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca13fffec3c874dcd5cc84aa25387b76d3">TRACE_MARKER_TYPE_SYSCALL_TRACE_START</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caef6df6ddbdffd994f91edba51c850cde">TRACE_MARKER_TYPE_SYSCALL_TRACE_END</a>
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caef6df6ddbdffd994f91edba51c850cde">TRACE_MARKER_TYPE_SYSCALL_TRACE_END</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca9ccf81370a91222945dc5d3e44fb718d">TRACE_MARKER_TYPE_BRANCH_TARGET</a>
 <br />
  }</td></tr>
 <tr class="separator:ab8531c7f66ccc0d7fe59f436844a295c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -417,7 +425,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa0ada28582819d0a5287f47716a35239e">OFFLINE_FILE_TYPE_BLOCKING_SYSCALLS</a> = 0x800, 
 <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa8122186112a3ca356479e0b8bd08e9be">OFFLINE_FILE_TYPE_KERNEL_SYSCALLS</a> = 0x1000
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa8122186112a3ca356479e0b8bd08e9be">OFFLINE_FILE_TYPE_KERNEL_SYSCALLS</a> = 0x1000, 
+<br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa7b6a185cde6ae20ece63f7bbfd0e5b26">OFFLINE_FILE_TYPE_BIMODAL_FILTERED_WARMUP</a> = 0x2000
 <br />
  }</td></tr>
 <tr class="separator:a017717a4b9ef5ae1f6d1fef1df834baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1064,7 +1074,7 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaac9118269c36e185fe2a9b0b6895e0d07"></a>OFFLINE_FILE_TYPE_ARCH_ALL&#160;</td><td class="fielddoc"><p>All possible architecture types. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaab5c970fa5c78548056a2b3d90c2512b2"></a>OFFLINE_FILE_TYPE_IFILTERED&#160;</td><td class="fielddoc"><p>Instruction addresses filtered online. Note: this file type may transition to non-filtered. This transition is indicated by the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca2fa8ca3d28b2bd7b5b8c63ade7c6a26e">dynamorio::drmemtrace::TRACE_MARKER_TYPE_FILTER_ENDPOINT</a> marker. Each window (which is indicated by the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca02845c6ba33cc5038f8a7bfe38c25f57">dynamorio::drmemtrace::TRACE_MARKER_TYPE_WINDOW_ID</a> marker) starts out filtered. This applies to <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa2bde173fab00e1eb6b226453b70b5410">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_DFILTERED</a> also. Note that threads that were created after the transition will also have this marker - right at the beginning. </p>
+<tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaab5c970fa5c78548056a2b3d90c2512b2"></a>OFFLINE_FILE_TYPE_IFILTERED&#160;</td><td class="fielddoc"><p>Instruction addresses filtered online. Note: this file type may transition to non-filtered. If so, the transition is indicated by the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca2fa8ca3d28b2bd7b5b8c63ade7c6a26e">dynamorio::drmemtrace::TRACE_MARKER_TYPE_FILTER_ENDPOINT</a> marker and the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa7b6a185cde6ae20ece63f7bbfd0e5b26">OFFLINE_FILE_TYPE_BIMODAL_FILTERED_WARMUP</a> file type. Each window (which is indicated by the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca02845c6ba33cc5038f8a7bfe38c25f57">dynamorio::drmemtrace::TRACE_MARKER_TYPE_WINDOW_ID</a> marker) starts out filtered. This applies to <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa2bde173fab00e1eb6b226453b70b5410">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_DFILTERED</a> also. Note that threads that were created after the transition will also have this marker - right at the beginning. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaa2bde173fab00e1eb6b226453b70b5410"></a>OFFLINE_FILE_TYPE_DFILTERED&#160;</td><td class="fielddoc"><p>Data addresses filtered online. </p>
 </td></tr>
@@ -1076,6 +1086,8 @@ Functions</h2></td></tr>
 <p>The <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca58ff903618a785cb45ba4c57900db24f">TRACE_MARKER_TYPE_FUNC_RETVAL</a> for system calls is either 0 (failure) or 1 (success). </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaa8122186112a3ca356479e0b8bd08e9be"></a>OFFLINE_FILE_TYPE_KERNEL_SYSCALLS&#160;</td><td class="fielddoc"><p>Kernel traces of syscalls are included. The included kernel traces are in the Intel® Processor Trace format. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaa7b6a185cde6ae20ece63f7bbfd0e5b26"></a>OFFLINE_FILE_TYPE_BIMODAL_FILTERED_WARMUP&#160;</td><td class="fielddoc"><p>Partially filtered trace. The initial part up to the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca2fa8ca3d28b2bd7b5b8c63ade7c6a26e">TRACE_MARKER_TYPE_FILTER_ENDPOINT</a> marker is filtered, and the later part is not. Look for other filtering-related file types (<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaab5c970fa5c78548056a2b3d90c2512b2">OFFLINE_FILE_TYPE_IFILTERED</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa2bde173fab00e1eb6b226453b70b5410">OFFLINE_FILE_TYPE_DFILTERED</a>) to determine how the initial part was filtered. The initial part can be used by a simulator for warmup. </p>
 </td></tr>
 </table>
 
@@ -1304,7 +1316,7 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca1e6e13d683b0844b065f9a91ee4684ec"></a>TRACE_MARKER_TYPE_RECORD_ORDINAL&#160;</td><td class="fielddoc"><p>Indicates the record ordinal for this point in the trace. This is used to identify the visible record ordinal when skipping over chunks, and is not exposed to analysis tools. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca2fa8ca3d28b2bd7b5b8c63ade7c6a26e"></a>TRACE_MARKER_TYPE_FILTER_ENDPOINT&#160;</td><td class="fielddoc"><p>Indicates a point in the trace where filtering ended. This is currently added by the record_filter tool to annotate when the warmup part of the trace ends. </p>
+<tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca2fa8ca3d28b2bd7b5b8c63ade7c6a26e"></a>TRACE_MARKER_TYPE_FILTER_ENDPOINT&#160;</td><td class="fielddoc"><p>Indicates the point in the trace where filtering ended. It is accompanied by <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa7b6a185cde6ae20ece63f7bbfd0e5b26">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_BIMODAL_FILTERED_WARMUP</a> in the file type. This is added by the record_filter tool and also by the drmemtrace tracer (with -L0_filter_until_instrs) to annotate when the warmup part of the trace ended. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295cabbb79810b00712f990e74ee9fb6c48e0"></a>TRACE_MARKER_TYPE_RSEQ_ENTRY&#160;</td><td class="fielddoc"><p>Indicates the start of an "rseq" (Linux restartable sequence) region. The marker value holds the end PC of the region (this is the PC after the committing store). </p>
 </td></tr>
@@ -1316,6 +1328,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca13fffec3c874dcd5cc84aa25387b76d3"></a>TRACE_MARKER_TYPE_SYSCALL_TRACE_START&#160;</td><td class="fielddoc"><p>Indicates a point in the trace where a syscall's kernel trace starts. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295caef6df6ddbdffd994f91edba51c850cde"></a>TRACE_MARKER_TYPE_SYSCALL_TRACE_END&#160;</td><td class="fielddoc"><p>Indicates a point in the trace where a syscall's trace end. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca9ccf81370a91222945dc5d3e44fb718d"></a>TRACE_MARKER_TYPE_BRANCH_TARGET&#160;</td><td class="fielddoc"><p>This marker is present just before each indirect branch instruction in offline non-i-filtered traces. The marker value holds the actual target of the branch. </p>
 </td></tr>
 </table>
 
@@ -1366,7 +1380,7 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59cae403104b32f80172d1de44fa2be68308"></a>TRACE_TYPE_INSTR_INDIRECT_JUMP&#160;</td><td class="fielddoc"><p>An indirect jump instruction. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59ca72c321d21ca2dd83400223fb5fff58ad"></a>TRACE_TYPE_INSTR_CONDITIONAL_JUMP&#160;</td><td class="fielddoc"><p>A conditional jump instruction. </p>
+<tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59ca72c321d21ca2dd83400223fb5fff58ad"></a>TRACE_TYPE_INSTR_CONDITIONAL_JUMP&#160;</td><td class="fielddoc"><p>A direct conditional jump instruction. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>For offline non-i-filtered traces, this is deprecated and is only present in versions below <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa15c44ecec7fe8199d013bac8b759909e">TRACE_ENTRY_VERSION_BRANCH_INFO</a>. Newer version used <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca9c9d51773f51a184dbe43b9382cc305c">TRACE_TYPE_INSTR_TAKEN_JUMP</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca93a6bfcd5d3af5e73765fe053fff98ae">TRACE_TYPE_INSTR_UNTAKEN_JUMP</a> instead. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59cad94ed682d4df255b3f18fac4e82dca1f"></a>TRACE_TYPE_INSTR_DIRECT_CALL&#160;</td><td class="fielddoc"><p>A direct call instruction. </p>
 </td></tr>
@@ -1420,6 +1434,10 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59caa6100a7e6394bb5c1b5f6f1c56a49639"></a>TRACE_TYPE_PREFETCH_WRITE_L3_NT&#160;</td><td class="fielddoc"><p>Non-temporal store prefetch to L3 cache. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59ca9c9d51773f51a184dbe43b9382cc305c"></a>TRACE_TYPE_INSTR_TAKEN_JUMP&#160;</td><td class="fielddoc"><p>A direct conditional jump instruction which was taken. This is only used in offline non-i-filtered traces. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59ca93a6bfcd5d3af5e73765fe053fff98ae"></a>TRACE_TYPE_INSTR_UNTAKEN_JUMP&#160;</td><td class="fielddoc"><p>A direct conditional jump instruction which was not taken. This is only used in offline non-i-filtered traces. </p>
+</td></tr>
 </table>
 
 </div>
@@ -1442,6 +1460,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daad5a6abcd4c5eb8db6cf1396460bb0ac5"></a>TRACE_ENTRY_VERSION_KERNEL_PC&#160;</td><td class="fielddoc"><p><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca3b75f9115bb4146ed5540412e36bdd5a">TRACE_MARKER_TYPE_KERNEL_EVENT</a> records provide the absolute PC of the interruption point. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daa00ea9310b6ca682075c2bdc469a1778c"></a>TRACE_ENTRY_VERSION_ENCODINGS&#160;</td><td class="fielddoc"><p>The trace supports embedded instruction encodings, but they are only present if <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa1bc66b6cb976d3bb7f93af0ce5d2ec53">OFFLINE_FILE_TYPE_ENCODINGS</a> is set. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daa15c44ecec7fe8199d013bac8b759909e"></a>TRACE_ENTRY_VERSION_BRANCH_INFO&#160;</td><td class="fielddoc"><p>The trace includes branch taken and target information up front. This means that conditional branches use either <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca9c9d51773f51a184dbe43b9382cc305c">TRACE_TYPE_INSTR_TAKEN_JUMP</a> or <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca93a6bfcd5d3af5e73765fe053fff98ae">TRACE_TYPE_INSTR_UNTAKEN_JUMP</a> and that the target of indirect branches is in a marker of type <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca9ccf81370a91222945dc5d3e44fb718d">TRACE_MARKER_TYPE_BRANCH_TARGET</a> prior to the indirect branch instruction entry itself. This only applies to offline traces whose instructions are not filtered; online traces, and i-filtered offline traces, even at this version, do not contain this information. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e"></a>TRACE_ENTRY_VERSION&#160;</td><td class="fielddoc"><p>The latest version of the trace format. </p>
 </td></tr>
@@ -2307,5 +2327,5 @@ For additional file open parameters with the thread and window identifiers, use 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19557 --- Fri Jul 21 2023 03:13:59 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19565 --- Fri Jul 28 2023 03:13:38 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -376,7 +376,7 @@ Human-Readable View</h1>
 <div class="line">Output format:</div>
 <div class="line">&lt;--record#-&gt; &lt;--instr#-&gt;: &lt;---tid---&gt; &lt;record details&gt;</div>
 <div class="line">------------------------------------------------------------</div>
-<div class="line">           1           0:     3256418 &lt;marker: version 4&gt;</div>
+<div class="line">           1           0:     3256418 &lt;marker: version 5&gt;</div>
 <div class="line">           2           0:     3256418 &lt;marker: filetype 0x240&gt;</div>
 <div class="line">           3           0:     3256418 &lt;marker: cache line size 64&gt;</div>
 <div class="line">           4           0:     3256418 &lt;marker: chunk instruction count 1024&gt;</div>
@@ -414,41 +414,46 @@ Human-Readable View</h1>
 <div class="line">  2854547  2149667:  3264760 ifetch       3 byte(s) @ 0x00007f4ea7d0b099 48 85 c0             test   %rax, %rax</div>
 <div class="line">  2854548  2149668:  3264760 ifetch       2 byte(s) @ 0x00007f4ea7d0b09c 7c 18                jl     $0x00007f4ea7d0b0b6</div>
 <div class="line">...</div>
-</div><!-- fragment --><p>Here is an example of a signal handler interrupting the regular flow, with metadata showing that the signal was delivered just after a non-taken conditional branch:</p>
-<div class="fragment"><div class="line">2851502  2147588:  3264758 ifetch       2 byte(s) @ 0x00007f4ea7c87a54 eb 14                jmp    $0x00007f4ea7c87a6a</div>
-<div class="line">2851503  2147588:  3264758 &lt;marker: kernel xfer from 0x7f4ea7c87a6a to handler&gt;</div>
-<div class="line">2851504  2147588:  3264758 &lt;marker: timestamp 13312413438786440&gt;</div>
-<div class="line">2851505  2147588:  3264758 &lt;marker: tid 3264758 on core 8&gt;</div>
-<div class="line">2851506  2147589:  3264758 ifetch       1 byte(s) @ 0x00007f4ea47fbdba 55                   push   %rbp</div>
-<div class="line">2851507  2147589:  3264758 write        8 byte(s) @ 0x00007ffd93a0be30 by PC 0x00007f4ea47fbdba</div>
-<div class="line">2851508  2147590:  3264758 ifetch       3 byte(s) @ 0x00007f4ea47fbdbb 48 89 e5             mov    %rsp, %rbp</div>
-<div class="line">2851509  2147591:  3264758 ifetch       3 byte(s) @ 0x00007f4ea47fbdbe 89 7d fc             mov    %edi, -0x04(%rbp)</div>
-<div class="line">2851510  2147591:  3264758 write        4 <span class="keywordtype">byte</span>(s) @ 0x00007ffd93a0be2c by PC 0x00007f4ea47fbdbe</div>
-<div class="line">2851511  2147592:  3264758 ifetch       4 byte(s) @ 0x00007f4ea47fbdc1 48 89 75 f0          mov    %rsi, -0x10(%rbp)</div>
-<div class="line">2851512  2147592:  3264758 write        8 <span class="keywordtype">byte</span>(s) @ 0x00007ffd93a0be20 by PC 0x00007f4ea47fbdc1</div>
-<div class="line">2851513  2147593:  3264758 ifetch       4 byte(s) @ 0x00007f4ea47fbdc5 48 89 55 e8          mov    %rdx, -0x18(%rbp)</div>
-<div class="line">2851514  2147593:  3264758 write        8 <span class="keywordtype">byte</span>(s) @ 0x00007ffd93a0be18 by PC 0x00007f4ea47fbdc5</div>
-<div class="line">2851515  2147594:  3264758 ifetch       4 byte(s) @ 0x00007f4ea47fbdc9 83 7d fc 1a          cmp    -0x04(%rbp), $0x1a</div>
-<div class="line">2851516  2147594:  3264758 read         4 <span class="keywordtype">byte</span>(s) @ 0x00007ffd93a0be2c by PC 0x00007f4ea47fbdc9</div>
-<div class="line">2851517  2147595:  3264758 ifetch       2 byte(s) @ 0x00007f4ea47fbdcd 75 0f                jnz    $0x00007f4ea47fbdde</div>
-<div class="line">2851518  2147596:  3264758 ifetch       6 byte(s) @ 0x00007f4ea47fbdcf 8b 05 7f 23 20 00    mov    &lt;rel&gt; 0x00007f4ea49fe154, %eax</div>
-<div class="line">2851519  2147596:  3264758 read         4 byte(s) @ 0x00007f4ea49fe154 by PC 0x00007f4ea47fbdcf</div>
-<div class="line">2851520  2147597:  3264758 ifetch       3 byte(s) @ 0x00007f4ea47fbdd5 83 c0 01             add    $0x01, %eax</div>
-<div class="line">2851521  2147598:  3264758 ifetch       6 byte(s) @ 0x00007f4ea47fbdd8 89 05 76 23 20 00    mov    %eax, &lt;rel&gt; 0x00007f4ea49fe154</div>
-<div class="line">2851522  2147598:  3264758 write        4 byte(s) @ 0x00007f4ea49fe154 by PC 0x00007f4ea47fbdd8</div>
-<div class="line">2851523  2147599:  3264758 ifetch       1 byte(s) @ 0x00007f4ea47fbdde 90                   nop</div>
-<div class="line">2851524  2147600:  3264758 ifetch       1 byte(s) @ 0x00007f4ea47fbddf 5d                   pop    %rbp</div>
-<div class="line">2851525  2147600:  3264758 read         8 byte(s) @ 0x00007ffd93a0be30 by PC 0x00007f4ea47fbddf</div>
-<div class="line">2851526  2147601:  3264758 ifetch       1 byte(s) @ 0x00007f4ea47fbde0 c3                   ret</div>
-<div class="line">2851527  2147601:  3264758 read         8 byte(s) @ 0x00007ffd93a0be38 by PC 0x00007f4ea47fbde0</div>
-<div class="line">2851528  2147602:  3264758 ifetch       7 byte(s) @ 0x00007f4ea7c3daa0 48 c7 c0 0f 00 00 00 mov    $0x0000000f, %rax</div>
-<div class="line">2851529  2147603:  3264758 ifetch       2 byte(s) @ 0x00007f4ea7c3daa7 0f 05                syscall</div>
-<div class="line">2851530  2147603:  3264758 &lt;marker: timestamp 13312413438787645&gt;</div>
-<div class="line">2851531  2147603:  3264758 &lt;marker: tid 3264758 on core 8&gt;</div>
-<div class="line">2851532  2147603:  3264758 &lt;marker: syscall xfer from 0x7f4ea7c3daa9&gt;</div>
-<div class="line">2851533  2147603:  3264758 &lt;marker: timestamp 13312413438787652&gt;</div>
-<div class="line">2851534  2147603:  3264758 &lt;marker: tid 3264758 on core 8&gt;</div>
-<div class="line">2851535  2147604:  3264758 ifetch       5 byte(s) @ 0x00007f4ea7c87a6a e8 11 8b 07 00       call   $0x00007f4ea7d00580</div>
+</div><!-- fragment --><p>Here is an example of a signal handler interrupting the regular flow, with metadata showing that the signal was delivered just after a taken conditional branch:</p>
+<div class="fragment"><div class="line">2214424     1649600:     1249326 ifetch       4 byte(s) @ 0x00007f34066b86c5 48 83 fa 17          cmp    %rdx, $0x17</div>
+<div class="line">2214425     1649601:     1249326 ifetch       6 byte(s) @ 0x00007f34066b86c9 0f 86 4f 01 00 00    jbe    $0x00007f34066b881e (untaken)</div>
+<div class="line">2214426     1649602:     1249326 ifetch       4 <span class="keywordtype">byte</span>(s) @ 0x00007f34066b86cf 48 83 fa 4f          cmp    %rdx, $0x4f</div>
+<div class="line">2214427     1649603:     1249326 ifetch       6 byte(s) @ 0x00007f34066b86d3 0f 87 b7 00 00 00    jnbe   $0x00007f34066b8790 (taken)</div>
+<div class="line">2214428     1649603:     1249326 &lt;marker: kernel xfer from 0x7f34066b8790 to handler&gt;</div>
+<div class="line">2214429     1649603:     1249326 &lt;marker: timestamp 13334353561241197&gt;</div>
+<div class="line">2214430     1649603:     1249326 &lt;marker: tid 1249326 on core 1&gt;</div>
+<div class="line">2214431     1649604:     1249326 ifetch       1 <span class="keywordtype">byte</span>(s) @ 0x00007f3402ffa259 55                   push   %rbp</div>
+<div class="line">2214432     1649604:     1249326 write        8 byte(s) @ 0x00007ffd91e24230 by PC 0x00007f3402ffa259</div>
+<div class="line">2214433     1649605:     1249326 ifetch       3 byte(s) @ 0x00007f3402ffa25a 48 89 e5             mov    %rsp, %rbp</div>
+<div class="line">2214434     1649606:     1249326 ifetch       3 byte(s) @ 0x00007f3402ffa25d 89 7d fc             mov    %edi, -0x04(%rbp)</div>
+<div class="line">2214435     1649606:     1249326 write        4 <span class="keywordtype">byte</span>(s) @ 0x00007ffd91e2422c by PC 0x00007f3402ffa25d</div>
+<div class="line">2214436     1649607:     1249326 ifetch       4 byte(s) @ 0x00007f3402ffa260 48 89 75 f0          mov    %rsi, -0x10(%rbp)</div>
+<div class="line">2214437     1649607:     1249326 write        8 <span class="keywordtype">byte</span>(s) @ 0x00007ffd91e24220 by PC 0x00007f3402ffa260</div>
+<div class="line">2214438     1649608:     1249326 ifetch       4 byte(s) @ 0x00007f3402ffa264 48 89 55 e8          mov    %rdx, -0x18(%rbp)</div>
+<div class="line">2214439     1649608:     1249326 write        8 <span class="keywordtype">byte</span>(s) @ 0x00007ffd91e24218 by PC 0x00007f3402ffa264</div>
+<div class="line">2214440     1649609:     1249326 ifetch       4 byte(s) @ 0x00007f3402ffa268 83 7d fc 1a          cmp    -0x04(%rbp), $0x1a</div>
+<div class="line">2214441     1649609:     1249326 read         4 <span class="keywordtype">byte</span>(s) @ 0x00007ffd91e2422c by PC 0x00007f3402ffa268</div>
+<div class="line">2214442     1649610:     1249326 ifetch       2 byte(s) @ 0x00007f3402ffa26c 75 0f                jnz    $0x00007f3402ffa27d (untaken)</div>
+<div class="line">2214443     1649611:     1249326 ifetch       6 <span class="keywordtype">byte</span>(s) @ 0x00007f3402ffa26e 8b 05 c0 3e 00 00    mov    &lt;rel&gt; 0x00007f3402ffe134, %eax</div>
+<div class="line">2214444     1649611:     1249326 read         4 byte(s) @ 0x00007f3402ffe134 by PC 0x00007f3402ffa26e</div>
+<div class="line">2214445     1649612:     1249326 ifetch       3 byte(s) @ 0x00007f3402ffa274 83 c0 01             add    $0x01, %eax</div>
+<div class="line">2214446     1649613:     1249326 ifetch       6 byte(s) @ 0x00007f3402ffa277 89 05 b7 3e 00 00    mov    %eax, &lt;rel&gt; 0x00007f3402ffe134</div>
+<div class="line">2214447     1649613:     1249326 write        4 byte(s) @ 0x00007f3402ffe134 by PC 0x00007f3402ffa277</div>
+<div class="line">2214448     1649614:     1249326 ifetch       1 byte(s) @ 0x00007f3402ffa27d 90                   nop</div>
+<div class="line">2214449     1649615:     1249326 ifetch       1 byte(s) @ 0x00007f3402ffa27e 5d                   pop    %rbp</div>
+<div class="line">2214450     1649615:     1249326 read         8 byte(s) @ 0x00007ffd91e24230 by PC 0x00007f3402ffa27e</div>
+<div class="line">2214451     1649615:     1249326 &lt;marker: indirect branch target 0x7f340665af90&gt;</div>
+<div class="line">2214452     1649616:     1249326 ifetch       1 byte(s) @ 0x00007f3402ffa27f c3                   ret</div>
+<div class="line">2214453     1649616:     1249326 read         8 byte(s) @ 0x00007ffd91e24238 by PC 0x00007f3402ffa27f</div>
+<div class="line">2214454     1649617:     1249326 ifetch       7 byte(s) @ 0x00007f340665af90 48 c7 c0 0f 00 00 00 mov    $0x0000000f, %rax</div>
+<div class="line">2214455     1649618:     1249326 ifetch       2 byte(s) @ 0x00007f340665af97 0f 05                syscall</div>
+<div class="line">2214456     1649618:     1249326 &lt;marker: system call 15&gt;</div>
+<div class="line">2214457     1649618:     1249326 &lt;marker: timestamp 13334353561241207&gt;</div>
+<div class="line">2214458     1649618:     1249326 &lt;marker: tid 1249326 on core 1&gt;</div>
+<div class="line">2214459     1649618:     1249326 &lt;marker: syscall xfer from 0x7f340665af99&gt;</div>
+<div class="line">2214460     1649618:     1249326 &lt;marker: timestamp 13334353561241213&gt;</div>
+<div class="line">2214461     1649618:     1249326 &lt;marker: tid 1249326 on core 1&gt;</div>
+<div class="line">2214462     1649619:     1249326 ifetch       4 byte(s) @ 0x00007f34066b8790 48 83 c4 18          add    $0x18, %rsp</div>
 </div><!-- fragment --><h1><a class="anchor" id="sec_tool_func_view"></a>
 View Function Calls</h1>
 <p>The func_view tool records function argument and return values for function names specified at tracing time. See <a class="el" href="sec_drcachesim_funcs.html">Tracing Function Calls</a> for more information.</p>
@@ -549,5 +554,5 @@ System Call Mix</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19557 --- Fri Jul 21 2023 03:13:58 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19565 --- Fri Jul 28 2023 03:13:38 &nbsp; <img border=0 src="favicon.png">
 </small></address>
