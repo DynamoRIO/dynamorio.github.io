@@ -49,6 +49,8 @@ Data Fields</h2></td></tr>
 <tr class="separator:adbc263afbf62c0a086f876c7b936be03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa533c31e6527a9b841a0dd54c41bc128"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1__memref__instr__t.html#aa533c31e6527a9b841a0dd54c41bc128">encoding_is_new</a></td></tr>
 <tr class="separator:aa533c31e6527a9b841a0dd54c41bc128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a979ae4e781b922a680a0309ed2ade4b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a55b7fcd36826c1ba1b6c06daddfcb777">addr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1__memref__instr__t.html#a979ae4e781b922a680a0309ed2ade4b5">indirect_branch_target</a></td></tr>
+<tr class="separator:a979ae4e781b922a680a0309ed2ade4b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A trace entry representing an instruction fetch. </p>
@@ -95,6 +97,21 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Indicates whether the encoding field is the first instance of its kind for this address. This can be used to determine when to invalidate cached decoding information. This field may be set to true on internal file divisions and not only when application code actually changed. </p>
+
+</div>
+</div>
+<a id="a979ae4e781b922a680a0309ed2ade4b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a979ae4e781b922a680a0309ed2ade4b5">&#9670;&nbsp;</a></span>indirect_branch_target</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a55b7fcd36826c1ba1b6c06daddfcb777">addr_t</a> dynamorio::drmemtrace::_memref_instr_t::indirect_branch_target</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Valid only for an indirect branch instruction (types <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59cae403104b32f80172d1de44fa2be68308">TRACE_TYPE_INSTR_INDIRECT_JUMP</a>, <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59cacc3080616dae8fc7acd5442e32f281b4">TRACE_TYPE_INSTR_INDIRECT_CALL</a>, and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59caad76afa3331b194dce2c0743bf33c993">TRACE_TYPE_INSTR_RETURN</a>). Holds the actual target of that branch. This is only present in trace version <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa15c44ecec7fe8199d013bac8b759909e">TRACE_ENTRY_VERSION_BRANCH_INFO</a> and higher. </p>
 
 </div>
 </div>
@@ -167,5 +184,5 @@ Data Fields</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19572 --- Fri Aug 4 2023 03:08:16 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19578 --- Fri Aug 11 2023 03:06:28 &nbsp; <img border=0 src="favicon.png">
 </small></address>

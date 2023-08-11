@@ -391,9 +391,7 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca13fffec3c874dcd5cc84aa25387b76d3">TRACE_MARKER_TYPE_SYSCALL_TRACE_START</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caef6df6ddbdffd994f91edba51c850cde">TRACE_MARKER_TYPE_SYSCALL_TRACE_END</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca9ccf81370a91222945dc5d3e44fb718d">TRACE_MARKER_TYPE_BRANCH_TARGET</a>
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caef6df6ddbdffd994f91edba51c850cde">TRACE_MARKER_TYPE_SYSCALL_TRACE_END</a>
 <br />
  }</td></tr>
 <tr class="separator:ab8531c7f66ccc0d7fe59f436844a295c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1329,8 +1327,6 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295caef6df6ddbdffd994f91edba51c850cde"></a>TRACE_MARKER_TYPE_SYSCALL_TRACE_END&#160;</td><td class="fielddoc"><p>Indicates a point in the trace where a syscall's trace end. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca9ccf81370a91222945dc5d3e44fb718d"></a>TRACE_MARKER_TYPE_BRANCH_TARGET&#160;</td><td class="fielddoc"><p>This marker is present just before each indirect branch instruction in offline non-i-filtered traces. The marker value holds the actual target of the branch. </p>
-</td></tr>
 </table>
 
 </div>
@@ -1461,7 +1457,7 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daa00ea9310b6ca682075c2bdc469a1778c"></a>TRACE_ENTRY_VERSION_ENCODINGS&#160;</td><td class="fielddoc"><p>The trace supports embedded instruction encodings, but they are only present if <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa1bc66b6cb976d3bb7f93af0ce5d2ec53">OFFLINE_FILE_TYPE_ENCODINGS</a> is set. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daa15c44ecec7fe8199d013bac8b759909e"></a>TRACE_ENTRY_VERSION_BRANCH_INFO&#160;</td><td class="fielddoc"><p>The trace includes branch taken and target information up front. This means that conditional branches use either <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca9c9d51773f51a184dbe43b9382cc305c">TRACE_TYPE_INSTR_TAKEN_JUMP</a> or <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca93a6bfcd5d3af5e73765fe053fff98ae">TRACE_TYPE_INSTR_UNTAKEN_JUMP</a> and that the target of indirect branches is in a marker of type <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca9ccf81370a91222945dc5d3e44fb718d">TRACE_MARKER_TYPE_BRANCH_TARGET</a> prior to the indirect branch instruction entry itself. This only applies to offline traces whose instructions are not filtered; online traces, and i-filtered offline traces, even at this version, do not contain this information. </p>
+<tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daa15c44ecec7fe8199d013bac8b759909e"></a>TRACE_ENTRY_VERSION_BRANCH_INFO&#160;</td><td class="fielddoc"><p>The trace includes branch taken and target information up front. This means that conditional branches use either <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca9c9d51773f51a184dbe43b9382cc305c">TRACE_TYPE_INSTR_TAKEN_JUMP</a> or <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca93a6bfcd5d3af5e73765fe053fff98ae">TRACE_TYPE_INSTR_UNTAKEN_JUMP</a> and that the target of indirect branches is in a new field "indirect_branch_target" in <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae4a471ed806967b2b6f911b6ef770704">memref_t</a>. This only applies to offline traces whose instructions are not filtered; online traces, and i-filtered offline traces, even at this version, do not contain this information. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e"></a>TRACE_ENTRY_VERSION&#160;</td><td class="fielddoc"><p>The latest version of the trace format. </p>
 </td></tr>
@@ -2327,5 +2323,5 @@ For additional file open parameters with the thread and window identifiers, use 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19572 --- Fri Aug 4 2023 03:08:16 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19578 --- Fri Aug 11 2023 03:06:28 &nbsp; <img border=0 src="favicon.png">
 </small></address>

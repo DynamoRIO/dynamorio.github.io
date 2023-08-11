@@ -27,13 +27,14 @@ permalink: /sec_drcachesim_core.html
 <div class="textblock"><p>The <code>drcachesim</code> trace format includes information intended for use by core simulators as well as pure cache simulators. For traces that are not filtered by an online first-level cache, each data reference is preceded by the instruction fetch entry for the instruction that issued the data request, which includes the instruction encoding with the opcode and operands. Additionally, on x86, string loop instructions involve a single insruction fetch followed by a loop of loads and/or stores. A <code>drcachesim</code> trace includes a special "no-fetch" instruction entry per iteration so that core simulators have the instruction information to go along with each load and store, while cache simulators can ignore these "no-fetch" entries and avoid incorrectly inflating instruction fetch statistics.</p>
 <p>Traces include scheduling markers providing the timestamp and hardware thread identifier on each thread transition, allowing a simulator to more closely match the actual hardware if so desired.</p>
 <p>Traces also include markers indicating disruptions in user mode control flow such as signal handler entry and exit.</p>
-<p>Offline traces explicitly identify whether each conditional branch was taken or not, and include a marker showing the target of unconditional branches, for convenience to avoid having to read either the subsequent entry or the kernel transfer event marker (or infer branch behavior for rseq aborts):</p>
-<div class="fragment"><div class="line">2212815     1648444:     1249326 ifetch       6 byte(s) @ 0x00007f3406720707 48 3d 01 f0 ff ff    cmp    %rax, $0xfffff001</div>
-<div class="line">2212816     1648445:     1249326 ifetch       2 byte(s) @ 0x00007f340672070d 73 01                jnb    $0x00007f3406720710 (untaken)</div>
-<div class="line">2212817     1648445:     1249326 &lt;marker: indirect branch target 0x7f34066a8b37&gt;</div>
-<div class="line">2212818     1648446:     1249326 ifetch       1 <span class="keywordtype">byte</span>(s) @ 0x00007f340672070f c3                   ret</div>
-<div class="line">2212819     1648446:     1249326 read         8 byte(s) @ 0x00007ffd91e24fa8 by PC 0x00007f340672070f</div>
-<div class="line">2212820     1648447:     1249326 ifetch       5 byte(s) @ 0x00007f34066a8b37 4c 8b 54 24 48       mov    0x48(%rsp), %r10</div>
+<p>Offline traces explicitly identify whether each conditional branch was taken or not, and include the actual target of indirect branches, for convenience to avoid having to read either the subsequent entry or the kernel transfer event marker (or infer branch behavior for rseq aborts):</p>
+<div class="fragment"><div class="line">801394      601853:     1159769 ifetch       2 byte(s) @ 0x00007fc2c3aa91e3 7f 1b                jnle   $0x00007fc2c3aa9200 (untaken)</div>
+<div class="line">801395      601854:     1159769 ifetch       4 <span class="keywordtype">byte</span>(s) @ 0x00007fc2c3aa91e5 48 83 c4 10          add    $0x10, %rsp</div>
+<div class="line">801396      601855:     1159769 ifetch       1 byte(s) @ 0x00007fc2c3aa91e9 5b                   pop    %rbx</div>
+<div class="line">801397      601855:     1159769 read         8 byte(s) @ 0x00007fff8044f6c0 by PC 0x00007fc2c3aa91e9</div>
+<div class="line">801398      601856:     1159769 ifetch       1 byte(s) @ 0x00007fc2c3aa91ea c3                   ret (target 0x7fc2c3aa81c1)</div>
+<div class="line">801399      601856:     1159769 read         8 byte(s) @ 0x00007fff8044f6c8 by PC 0x00007fc2c3aa91ea</div>
+<div class="line">801400      601857:     1159769 ifetch       2 byte(s) @ 0x00007fc2c3aa81c1 89 c5                mov    %eax, %ebp</div>
 </div><!-- fragment --><p>Filtered traces (filtered via -L0_filter) include the dynamic (pre-filtered) per-thread instruction count in a <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca733229fc49ba6154769dba79b6f20943">dynamorio::drmemtrace::TRACE_MARKER_TYPE_INSTRUCTION_COUNT</a> marker at each thread buffer boundary and at thread exit. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -42,5 +43,5 @@ permalink: /sec_drcachesim_core.html
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19572 --- Fri Aug 4 2023 03:08:16 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19578 --- Fri Aug 11 2023 03:06:28 &nbsp; <img border=0 src="favicon.png">
 </small></address>
