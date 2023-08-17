@@ -207,7 +207,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>If non-empty, all input records outside of these ranges are skipped: it is as though the input were constructed by concatenating these ranges together. A <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca02845c6ba33cc5038f8a7bfe38c25f57">TRACE_MARKER_TYPE_WINDOW_ID</a> marker is inserted between ranges (with a value equal to the range ordinal) to notify the client of the discontinuity (but not before the first range), with a <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca2311f914a9e8e190d219e162c5e5afae">dynamorio::drmemtrace::TRACE_TYPE_THREAD_EXIT</a> record inserted after the final range. These ranges must be non-overlapping and in increasing order. </p>
+<p>If non-empty, all input records outside of these ranges are skipped: it is as though the input were constructed by concatenating these ranges together. A <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca02845c6ba33cc5038f8a7bfe38c25f57">TRACE_MARKER_TYPE_WINDOW_ID</a> marker is inserted between ranges (with a value equal to the range ordinal) to notify the client of the discontinuity (but not before the first range nor between back-to-back regions with no separation), with a <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca2311f914a9e8e190d219e162c5e5afae">dynamorio::drmemtrace::TRACE_TYPE_THREAD_EXIT</a> record inserted after the final range. These ranges must be non-overlapping and in increasing order. </p>
 
 </div>
 </div>
@@ -254,5 +254,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19578 --- Fri Aug 11 2023 03:06:28 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.0 --- Thu Aug 17 2023 21:35:33 &nbsp; <img border=0 src="favicon.png">
 </small></address>

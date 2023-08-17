@@ -327,6 +327,7 @@
     [ "proc_get_model", "dr__proc_8h.html#a55b1b3c0d92b61c663e9f66615dad5c1", null ],
     [ "proc_get_stepping", "dr__proc_8h.html#ae52575c27b6b8a6ac85755b1be7843b2", null ],
     [ "proc_get_type", "dr__proc_8h.html#aec523488190208f147041fb4b966913c", null ],
+    [ "proc_get_vector_length_bytes", "dr__proc_8h.html#a89abd1cbde7365ee89a22f27c0f26bdc", null ],
     [ "proc_get_vendor", "dr__proc_8h.html#acaf9dc20920b5acd63b9e7d91032991a", null ],
     [ "proc_has_feature", "dr__proc_8h.html#ae5c3196adf3717ba1969084c2d7c7734", null ],
     [ "proc_is_cache_aligned", "dr__proc_8h.html#ae0513a8d8e906e6bcd8293515a91a164", null ],

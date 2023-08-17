@@ -128,6 +128,16 @@
       [ "DR_FP_CONVERT", "dr__ir__instr_8h.html#a192e9ddf90889e6de003d95ebdaa7beba24a7a4e2a7b4558a1e2a26b690c5b6c7", null ],
       [ "DR_FP_MATH", "dr__ir__instr_8h.html#a192e9ddf90889e6de003d95ebdaa7beba20c0efa9e59f5424338edcbae638c6d3", null ]
     ] ],
+    [ "dr_instr_category_t", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893", [
+      [ "DR_INSTR_CATEGORY_UNCATEGORIZED", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a9a832083c102b2a094b2e9aa0b46b94f", null ],
+      [ "DR_INSTR_CATEGORY_INT_MATH", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893ab45ab8a3d0feb715ef29d9db3c5326db", null ],
+      [ "DR_INSTR_CATEGORY_FP_MATH", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893aee2b6be415c2fac735dd87331a436b20", null ],
+      [ "DR_INSTR_CATEGORY_LOAD", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893ac53c786bbe05cee55f08a1f5344ab709", null ],
+      [ "DR_INSTR_CATEGORY_STORE", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a9ae67c8d050a46baa809d6c885ecca6e", null ],
+      [ "DR_INSTR_CATEGORY_BRANCH", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a5ce79c52e9846031190e55a67ed84475", null ],
+      [ "DR_INSTR_CATEGORY_SIMD", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a9993a4b24a996398a4f7a0120adc3249", null ],
+      [ "DR_INSTR_CATEGORY_OTHER", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a3496c252e35b26ce7efb080d6ed82ffa", null ]
+    ] ],
     [ "instr_allocate_raw_bits", "dr__ir__instr_8h.html#a6d9dae99989a20372ecd82a0a441a19d", null ],
     [ "instr_build", "dr__ir__instr_8h.html#af99a6ac4a5752279561386c9b9de30c5", null ],
     [ "instr_build_bits", "dr__ir__instr_8h.html#a107b301e505c0dde72d4ce8e187a5d8f", null ],
@@ -187,6 +197,7 @@
     [ "instr_get_app_pc", "dr__ir__instr_8h.html#a090b27b5334c6be542c4fcfed7b97ffb", null ],
     [ "instr_get_arith_flags", "dr__ir__instr_8h.html#a08af81c9de9f4f78c309ca59016398e4", null ],
     [ "instr_get_branch_target_pc", "dr__ir__instr_8h.html#a6d7f7844c363765a6a0e5e374f804d47", null ],
+    [ "instr_get_category", "dr__ir__instr_8h.html#a2bb8455e57af9ec7f3e60c04aa5723bc", null ],
     [ "instr_get_dst", "dr__ir__instr_8h.html#a82807d01f70f547181c3b09e09548f6b", null ],
     [ "instr_get_eflags", "dr__ir__instr_8h.html#a35d5a7d70a380ef810267fa62d0a0d60", null ],
     [ "instr_get_interrupt_number", "dr__ir__instr_8h.html#ab5ebe3165e4385bb813e50e92eb23269", null ],
@@ -304,6 +315,7 @@
     [ "instr_same", "dr__ir__instr_8h.html#a2fb87e2981aaba5335b0d90b688cc5b7", null ],
     [ "instr_set_app", "dr__ir__instr_8h.html#a2da69830f468c9a25f82c0561f44cfd7", null ],
     [ "instr_set_branch_target_pc", "dr__ir__instr_8h.html#ae47a320564ebe64220aacc26b159dfa0", null ],
+    [ "instr_set_category", "dr__ir__instr_8h.html#a4fbe82f65104466e177389a00800ab5a", null ],
     [ "instr_set_dst", "dr__ir__instr_8h.html#aa32ec5e76a43312c51b85dc26fb1b3bf", null ],
     [ "instr_set_encoding_hint", "dr__ir__instr_8h.html#a8649a932914daaf6985ae37f25a1e813", null ],
     [ "instr_set_isa_mode", "dr__ir__instr_8h.html#aa61dd047ca3e81daf2ff7b38835cd446", null ],

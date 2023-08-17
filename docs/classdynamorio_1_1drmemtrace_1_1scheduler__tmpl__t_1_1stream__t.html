@@ -46,8 +46,8 @@ Inheritance diagram for dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, 
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0c957be2387f2a2ca6ed00117d2378d6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5">stream_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a0c957be2387f2a2ca6ed00117d2378d6">next_record</a> (RecordType &amp;record)</td></tr>
 <tr class="separator:a0c957be2387f2a2ca6ed00117d2378d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e92bd240f80d04b7073481dc856bb8a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5">stream_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a5e92bd240f80d04b7073481dc856bb8a">report_time</a> (uint64_t cur_time)</td></tr>
-<tr class="separator:a5e92bd240f80d04b7073481dc856bb8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf906b3602844039ebba9b1fe9d14580"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5">stream_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#abf906b3602844039ebba9b1fe9d14580">next_record</a> (RecordType &amp;record, uint64_t cur_time)</td></tr>
+<tr class="separator:abf906b3602844039ebba9b1fe9d14580"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b96943e9bf118caf2e3ba0f12588352"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5">stream_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a7b96943e9bf118caf2e3ba0f12588352">start_speculation</a> (<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a55b7fcd36826c1ba1b6c06daddfcb777">addr_t</a> start_address, bool queue_current_record)</td></tr>
 <tr class="separator:a7b96943e9bf118caf2e3ba0f12588352"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd2352ca7b195e33fcf4aa1876daf925"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5">stream_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#abd2352ca7b195e33fcf4aa1876daf925">stop_speculation</a> ()</td></tr>
@@ -478,7 +478,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 </div>
 </div>
 <a id="a0c957be2387f2a2ca6ed00117d2378d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c957be2387f2a2ca6ed00117d2378d6">&#9670;&nbsp;</a></span>next_record()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c957be2387f2a2ca6ed00117d2378d6">&#9670;&nbsp;</a></span>next_record() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -506,8 +506,8 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 
 </div>
 </div>
-<a id="a5e92bd240f80d04b7073481dc856bb8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e92bd240f80d04b7073481dc856bb8a">&#9670;&nbsp;</a></span>report_time()</h2>
+<a id="abf906b3602844039ebba9b1fe9d14580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf906b3602844039ebba9b1fe9d14580">&#9670;&nbsp;</a></span>next_record() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -518,11 +518,21 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5">stream_status_t</a> <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::stream_t::report_time </td>
+          <td class="memname">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5">stream_status_t</a> <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::stream_t::next_record </td>
           <td>(</td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>cur_time</em></td><td>)</td>
+          <td class="paramtype">RecordType &amp;&#160;</td>
+          <td class="paramname"><em>record</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>cur_time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -531,7 +541,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Reports the current time to the scheduler. This is unitless: it just needs to be called regularly and consistently. This is used for <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a66d6f6bbc9213a887758d14d32a31199a731ead7ea1ca4e3248a56b7aefac9ed3">QUANTUM_TIME</a>. </p>
+<p>Advances to the next record in the stream. Returns a status code on whether and how to continue. Supplies the current time for <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a66d6f6bbc9213a887758d14d32a31199a731ead7ea1ca4e3248a56b7aefac9ed3">QUANTUM_TIME</a>. The time should be considered to be the time prior to processing the returned record. The time is unitless but needs to be a globally consistent increasing value across all output streams. A 0 value for "cur_time" is not allowed. <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5ab3ca72357837c9a033eff8516263ed46">STATUS_INVALID</a> is returned if 0 or a value smaller than the start time of the current input's quantum is passed in. </p>
 
 </div>
 </div>
@@ -642,5 +652,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19578 --- Fri Aug 11 2023 03:06:28 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.0 --- Thu Aug 17 2023 21:35:33 &nbsp; <img border=0 src="favicon.png">
 </small></address>

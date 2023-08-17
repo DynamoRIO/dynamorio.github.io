@@ -275,6 +275,25 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a8c0ff6068a163a5cd113771ef5ee7772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a293267f240f04a49586895b3b67893"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893">dr_instr_category_t</a> { <br />
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a9a832083c102b2a094b2e9aa0b46b94f">DR_INSTR_CATEGORY_UNCATEGORIZED</a> = 0x0, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893ab45ab8a3d0feb715ef29d9db3c5326db">DR_INSTR_CATEGORY_INT_MATH</a> = 0x1, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893aee2b6be415c2fac735dd87331a436b20">DR_INSTR_CATEGORY_FP_MATH</a> = 0x2, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893ac53c786bbe05cee55f08a1f5344ab709">DR_INSTR_CATEGORY_LOAD</a> = 0x4, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a9ae67c8d050a46baa809d6c885ecca6e">DR_INSTR_CATEGORY_STORE</a> = 0x8, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a5ce79c52e9846031190e55a67ed84475">DR_INSTR_CATEGORY_BRANCH</a> = 0x10, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a9993a4b24a996398a4f7a0120adc3249">DR_INSTR_CATEGORY_SIMD</a> = 0x20, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a3496c252e35b26ce7efb080d6ed82ffa">DR_INSTR_CATEGORY_OTHER</a> = 0x40
+<br />
+ }</td></tr>
+<tr class="separator:a6a293267f240f04a49586895b3b67893"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a192e9ddf90889e6de003d95ebdaa7beb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a192e9ddf90889e6de003d95ebdaa7beb">dr_fp_type_t</a> { <br />
 &#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a192e9ddf90889e6de003d95ebdaa7beba47d09b15b2ec78db7ce84ae6ddf333b0">DR_FP_STATE</a>, 
 <br />
@@ -382,10 +401,14 @@ Functions</h2></td></tr>
 <tr class="separator:a090b27b5334c6be542c4fcfed7b97ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99682422e3f2060e3b85a61ef7e4fbbb"><td class="memItemLeft" align="right" valign="top">DR_API int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a99682422e3f2060e3b85a61ef7e4fbbb">instr_get_opcode</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
 <tr class="separator:a99682422e3f2060e3b85a61ef7e4fbbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bb8455e57af9ec7f3e60c04aa5723bc"><td class="memItemLeft" align="right" valign="top">DR_API uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a2bb8455e57af9ec7f3e60c04aa5723bc">instr_get_category</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
+<tr class="separator:a2bb8455e57af9ec7f3e60c04aa5723bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa2009a9051554c5805094bd1ba7fdf9"><td class="memItemLeft" align="right" valign="top">DR_API size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#aaa2009a9051554c5805094bd1ba7fdf9">instr_get_offset</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
 <tr class="separator:aaa2009a9051554c5805094bd1ba7fdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc1a1b2c972ea65f7d51c026180d4fd5"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#acc1a1b2c972ea65f7d51c026180d4fd5">instr_set_opcode</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, int opcode)</td></tr>
 <tr class="separator:acc1a1b2c972ea65f7d51c026180d4fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fbe82f65104466e177389a00800ab5a"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a4fbe82f65104466e177389a00800ab5a">instr_set_category</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, uint category)</td></tr>
+<tr class="separator:a4fbe82f65104466e177389a00800ab5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab264f741f5a1edea068dbabb90b4e4c6"><td class="memItemLeft" align="right" valign="top">DR_API INSTR_INLINE int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#ab264f741f5a1edea068dbabb90b4e4c6">instr_num_srcs</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
 <tr class="separator:ab264f741f5a1edea068dbabb90b4e4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3574118088b6a3a5a9b3b7308da90ed7"><td class="memItemLeft" align="right" valign="top">DR_API INSTR_INLINE int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a3574118088b6a3a5a9b3b7308da90ed7">instr_num_dsts</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
@@ -1680,6 +1703,39 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a192e9ddf90889e6de003d95ebdaa7beba24a7a4e2a7b4558a1e2a26b690c5b6c7"></a>DR_FP_CONVERT&#160;</td><td class="fielddoc"><p>Converts to or from floating point values. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a192e9ddf90889e6de003d95ebdaa7beba20c0efa9e59f5424338edcbae638c6d3"></a>DR_FP_MATH&#160;</td><td class="fielddoc"><p>Performs arithmetic or conditional operations. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a6a293267f240f04a49586895b3b67893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a293267f240f04a49586895b3b67893">&#9670;&nbsp;</a></span>dr_instr_category_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893">dr_instr_category_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Indicates which category the instruction corresponds to. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6a293267f240f04a49586895b3b67893a9a832083c102b2a094b2e9aa0b46b94f"></a>DR_INSTR_CATEGORY_UNCATEGORIZED&#160;</td><td class="fielddoc"><p>Uncategorized. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6a293267f240f04a49586895b3b67893ab45ab8a3d0feb715ef29d9db3c5326db"></a>DR_INSTR_CATEGORY_INT_MATH&#160;</td><td class="fielddoc"><p>Integer arithmetic operations. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6a293267f240f04a49586895b3b67893aee2b6be415c2fac735dd87331a436b20"></a>DR_INSTR_CATEGORY_FP_MATH&#160;</td><td class="fielddoc"><p>Floating-Point arithmetic operations. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6a293267f240f04a49586895b3b67893ac53c786bbe05cee55f08a1f5344ab709"></a>DR_INSTR_CATEGORY_LOAD&#160;</td><td class="fielddoc"><p>Loads. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6a293267f240f04a49586895b3b67893a9ae67c8d050a46baa809d6c885ecca6e"></a>DR_INSTR_CATEGORY_STORE&#160;</td><td class="fielddoc"><p>Stores. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6a293267f240f04a49586895b3b67893a5ce79c52e9846031190e55a67ed84475"></a>DR_INSTR_CATEGORY_BRANCH&#160;</td><td class="fielddoc"><p>Branches. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6a293267f240f04a49586895b3b67893a9993a4b24a996398a4f7a0120adc3249"></a>DR_INSTR_CATEGORY_SIMD&#160;</td><td class="fielddoc"><p>Operations with vector registers (SIMD). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6a293267f240f04a49586895b3b67893a3496c252e35b26ce7efb080d6ed82ffa"></a>DR_INSTR_CATEGORY_OTHER&#160;</td><td class="fielddoc"><p>Other types of instructions. </p>
 </td></tr>
 </table>
 
@@ -4682,6 +4738,25 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a2bb8455e57af9ec7f3e60c04aa5723bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bb8455e57af9ec7f3e60c04aa5723bc">&#9670;&nbsp;</a></span>instr_get_category()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API uint instr_get_category </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
+          <td class="paramname"><em>instr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns <code>instr's</code> set of categories (set of DR_INSTR_CATEGORY_ constants). See <a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893">dr_instr_category_t</a>. This API is only supported for decoded instructions, not for synthetic ones. Currently this is only supported for AArch64. </p>
+
+</div>
+</div>
 <a id="a82807d01f70f547181c3b09e09548f6b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82807d01f70f547181c3b09e09548f6b">&#9670;&nbsp;</a></span>instr_get_dst()</h2>
 
@@ -7400,6 +7475,35 @@ We recommend using this routine during the phase of application code analysis, a
 
 </div>
 </div>
+<a id="a4fbe82f65104466e177389a00800ab5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fbe82f65104466e177389a00800ab5a">&#9670;&nbsp;</a></span>instr_set_category()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API void instr_set_category </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
+          <td class="paramname"><em>instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>category</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assumes <code>category</code> is a set of DR_INSTR_CATEGORY_ constants and sets it to be instr's category. See <a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893">dr_instr_category_t</a>. </p>
+
+</div>
+</div>
 <a id="aa32ec5e76a43312c51b85dc26fb1b3bf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa32ec5e76a43312c51b85dc26fb1b3bf">&#9670;&nbsp;</a></span>instr_set_dst()</h2>
 
@@ -8425,11 +8529,11 @@ mangle" if <code>val</code> is false.</p>
 <div class="ttc" id="adr__ir__instr_8h_html_a2b0ce5e5125951e4a7dfdc5ac716282a"><div class="ttname"><a href="dr__ir__instr_8h.html#a2b0ce5e5125951e4a7dfdc5ac716282a">instr_noalloc_init</a></div><div class="ttdeci">DR_API void instr_noalloc_init(void *drcontext, instr_noalloc_t *instr)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a75a82f341d4ea6a5b5f29f2ef1263355"><div class="ttname"><a href="dr__ir__instr_8h.html#a75a82f341d4ea6a5b5f29f2ef1263355">instr_from_noalloc</a></div><div class="ttdeci">DR_API INSTR_INLINE instr_t * instr_from_noalloc(instr_noalloc_t *noalloc)</div></div>
 <div class="ttc" id="astructinstr__t_html"><div class="ttname"><a href="structinstr__t.html">instr_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:378</div></div>
-<div class="ttc" id="astructinstr__noalloc__t_html"><div class="ttname"><a href="structinstr__noalloc__t.html">instr_noalloc_t</a></div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:365</div></div>
+<div class="ttc" id="astructinstr__noalloc__t_html"><div class="ttname"><a href="structinstr__noalloc__t.html">instr_noalloc_t</a></div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:371</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 9.93.19578 --- Fri Aug 11 2023 03:06:25 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.0 --- Thu Aug 17 2023 21:35:26 &nbsp; <img border=0 src="favicon.png">
 </small></address>

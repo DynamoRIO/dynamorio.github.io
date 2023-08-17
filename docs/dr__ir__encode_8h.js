@@ -10,9 +10,9 @@
       [ "DR_ISA_RV64IMAFDC", "dr__ir__encode_8h.html#a00e03b2e5e75a83eacf9a0ee1674074aac4d8aa6ef84f5be693a9dd65b4fb6d3a", null ]
     ] ],
     [ "dr_get_isa_mode", "dr__ir__encode_8h.html#ae8f9b08f90490fbeae26d12a461af084", null ],
-    [ "dr_get_sve_vl", "dr__ir__encode_8h.html#ac7f2e79a29d99b9ded6524cc26f055de", null ],
+    [ "dr_get_sve_vector_length", "dr__ir__encode_8h.html#ac91a4885ba762cd73ef41650b931ed56", null ],
     [ "dr_set_isa_mode", "dr__ir__encode_8h.html#ae796d2ff6eabe43904b17742deafd637", null ],
-    [ "dr_set_sve_vl", "dr__ir__encode_8h.html#a6eb7830dd7e5ef1ce3b49a0dff0abfd0", null ],
+    [ "dr_set_sve_vector_length", "dr__ir__encode_8h.html#a87277ea85fedf5c9b948037ec33b1fc2", null ],
     [ "instr_encode", "dr__ir__encode_8h.html#a3d194e7ce235e330a28686db29ee5480", null ],
     [ "instr_encode_to_copy", "dr__ir__encode_8h.html#a285a9fb1eaa589b9bb143c8c85861b2b", null ],
     [ "instr_is_encoding_possible", "dr__ir__encode_8h.html#af7f1d03e4c63cece35113e6cc04fb2cc", null ],
