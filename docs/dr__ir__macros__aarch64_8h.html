@@ -972,6 +972,8 @@ Macros</h2></td></tr>
 <tr class="separator:a68266048f24b3afd11c467260af1b33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a5fa20afd157e3a42b1d54f6f9eff17"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a3a5fa20afd157e3a42b1d54f6f9eff17">INSTR_CREATE_eor_sve_pred_b</a>(dc,  Pd,  Pg,  Pn,  Pm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9ea2d4b62f28d1356c285b0b9f817827631">OP_eor</a>, Pd, Pg, Pn, Pm)</td></tr>
 <tr class="separator:a3a5fa20afd157e3a42b1d54f6f9eff17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1ffa86bbaecfeb63d9632841f876e01"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ac1ffa86bbaecfeb63d9632841f876e01">INSTR_CREATE_not_sve_pred_b</a>(dc,  Pd,  Pg,  Pn)</td></tr>
+<tr class="separator:ac1ffa86bbaecfeb63d9632841f876e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b5ba4e679204e9850c9278b95667c4c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a8b5ba4e679204e9850c9278b95667c4c">INSTR_CREATE_eor_sve</a>(dc,  Zd,  Zn,  Zm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9ea2d4b62f28d1356c285b0b9f817827631">OP_eor</a>, Zd, Zn, Zm)</td></tr>
 <tr class="separator:a8b5ba4e679204e9850c9278b95667c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4a333109e49ee10c12fa3a20ba6414d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#af4a333109e49ee10c12fa3a20ba6414d">INSTR_CREATE_eors_sve_pred</a>(dc,  Pd,  Pg,  Pn,  Pm)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9eaf4f43a5e5642d16bd44d5792b197aafc">OP_eors</a>, Pd, Pg, Pn, Pm)</td></tr>
@@ -31544,6 +31546,59 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="ac1ffa86bbaecfeb63d9632841f876e01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1ffa86bbaecfeb63d9632841f876e01">&#9670;&nbsp;</a></span>INSTR_CREATE_not_sve_pred_b</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_not_sve_pred_b</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Pd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Pg, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Pn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="dr__ir__macros__aarch64_8h.html#a3a5fa20afd157e3a42b1d54f6f9eff17">INSTR_CREATE_eor_sve_pred_b</a>(                    \</div>
+<div class="line">        dc, Pd, Pg, Pn, <a class="code" href="dr__ir__opnd_8h.html#a02af50459baa3969fb852eac4bef6d12">opnd_create_reg_element_vector</a>(<a class="code" href="dr__ir__opnd_8h.html#ac3ba48b3ee94afa0dde7fa025c199892">opnd_get_reg</a>(Pg), <a class="code" href="dr__ir__opnd_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da1ae7577a8e73d4a38aa18598de9ba8a6">OPSZ_1</a>))</div>
+</div><!-- fragment --><p>Creates a NOT instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    NOT     &lt;Pd&gt;.B, &lt;Pg&gt;/Z, &lt;Pn&gt;.B
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Pd</td><td>The destination predicate register, P (Predicate). </td></tr>
+    <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
+    <tr><td class="paramname">Pn</td><td>The first source predicate register, P (Predicate). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aa7d10a1be5cc9fbdd356d1552c93b6e6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa7d10a1be5cc9fbdd356d1552c93b6e6">&#9670;&nbsp;</a></span>INSTR_CREATE_not_sve_pred_vec</h2>
 
@@ -59919,6 +59974,7 @@ Macros</h2></td></tr>
 <div class="ttc" id="adr__ir__macros__arm_8h_html_a8f83f8223e55cc0f4204ee06a827e565"><div class="ttname"><a href="dr__ir__macros__arm_8h.html#a8f83f8223e55cc0f4204ee06a827e565">INSTR_CREATE_str</a></div><div class="ttdeci">#define INSTR_CREATE_str(dc, mem, Rt)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_arm.h:1874</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a49e73cb4bc542e1b20aae716a3437fbe"><div class="ttname"><a href="dr__ir__instr_8h.html#a49e73cb4bc542e1b20aae716a3437fbe">instr_create_1dst_0src</a></div><div class="ttdeci">DR_API instr_t * instr_create_1dst_0src(void *drcontext, int opcode, opnd_t dst)</div></div>
 <div class="ttc" id="adr__ir__macros__aarch64_8h_html_afe62aa83b4e18021c3c4880dc573f78c"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#afe62aa83b4e18021c3c4880dc573f78c">OPND_CREATE_MUL</a></div><div class="ttdeci">#define OPND_CREATE_MUL()</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:118</div></div>
+<div class="ttc" id="adr__ir__macros__aarch64_8h_html_a3a5fa20afd157e3a42b1d54f6f9eff17"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#a3a5fa20afd157e3a42b1d54f6f9eff17">INSTR_CREATE_eor_sve_pred_b</a></div><div class="ttdeci">#define INSTR_CREATE_eor_sve_pred_b(dc, Pd, Pg, Pn, Pm)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:7188</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a3408612a2953255e7c3572cf76d296c1"><div class="ttname"><a href="dr__ir__opnd_8h.html#a3408612a2953255e7c3572cf76d296c1">opnd_create_predicate_reg</a></div><div class="ttdeci">DR_API INSTR_INLINE opnd_t opnd_create_predicate_reg(reg_id_t r, bool is_merge)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a048d3f53da2ae3bbce71c91ceaa95f79"><div class="ttname"><a href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a></div><div class="ttdeci">DR_API instr_t * instr_create_1dst_1src(void *drcontext, int opcode, opnd_t dst, opnd_t src)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a68cff151182a9204f5d3168c095211c2"><div class="ttname"><a href="dr__ir__opnd_8h.html#a68cff151182a9204f5d3168c095211c2">opnd_get_size</a></div><div class="ttdeci">DR_API opnd_size_t opnd_get_size(opnd_t opnd)</div></div>
@@ -59936,8 +59992,10 @@ Macros</h2></td></tr>
 <div class="ttc" id="adr__ir__macros__aarch64_8h_html_aaaaa7dc76fd64fbfe69faa2be5c1c909"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#aaaaa7dc76fd64fbfe69faa2be5c1c909">OPND_CREATE_INT</a></div><div class="ttdeci">#define OPND_CREATE_INT(val)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:108</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a0411cd49bb5b71852cecd93bcbf0ca2da4459927426a03d9d7ee499f43cbf7a95"><div class="ttname"><a href="dr__ir__opnd_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da4459927426a03d9d7ee499f43cbf7a95">OPSZ_2b</a></div><div class="ttdeci">@ OPSZ_2b</div><div class="ttdef"><b>Definition:</b> dr_ir_opnd.h:169</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a8ef3aeb840262664fad8e94937ae82c2"><div class="ttname"><a href="dr__ir__opnd_8h.html#a8ef3aeb840262664fad8e94937ae82c2">reg_resize_to_opsz</a></div><div class="ttdeci">DR_API reg_id_t reg_resize_to_opsz(reg_id_t reg, opnd_size_t sz)</div></div>
+<div class="ttc" id="adr__ir__opnd_8h_html_a0411cd49bb5b71852cecd93bcbf0ca2da1ae7577a8e73d4a38aa18598de9ba8a6"><div class="ttname"><a href="dr__ir__opnd_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da1ae7577a8e73d4a38aa18598de9ba8a6">OPSZ_1</a></div><div class="ttdeci">@ OPSZ_1</div><div class="ttdef"><b>Definition:</b> dr_ir_opnd.h:83</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_ae6cf2a1e25144a7c81b3b3a4a89f8dda"><div class="ttname"><a href="dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda">opnd_create_reg</a></div><div class="ttdeci">DR_API INSTR_INLINE opnd_t opnd_create_reg(reg_id_t r)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_ac731854c126d48461401bf1108e4be69"><div class="ttname"><a href="dr__ir__opnd_8h.html#ac731854c126d48461401bf1108e4be69">opnd_get_base</a></div><div class="ttdeci">DR_API reg_id_t opnd_get_base(opnd_t opnd)</div></div>
+<div class="ttc" id="adr__ir__opnd_8h_html_a02af50459baa3969fb852eac4bef6d12"><div class="ttname"><a href="dr__ir__opnd_8h.html#a02af50459baa3969fb852eac4bef6d12">opnd_create_reg_element_vector</a></div><div class="ttdeci">DR_API INSTR_INLINE opnd_t opnd_create_reg_element_vector(reg_id_t r, opnd_size_t element_size)</div></div>
 <div class="ttc" id="adr__ir__opcodes__arm_8h_html_a61dadd085c1777f559549e05962b2c9eac96c42b4e0362fd9d7f86d59aaa44746"><div class="ttname"><a href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9eac96c42b4e0362fd9d7f86d59aaa44746">OP_ands</a></div><div class="ttdeci">@ OP_ands</div><div class="ttdef"><b>Definition:</b> dr_ir_opcodes_arm.h:77</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a4e7a3b0fe8aba75d1d25081422a6063c"><div class="ttname"><a href="dr__ir__instr_8h.html#a4e7a3b0fe8aba75d1d25081422a6063c">instr_create_5dst_5src</a></div><div class="ttdeci">DR_API instr_t * instr_create_5dst_5src(void *drcontext, int opcode, opnd_t dst1, opnd_t dst2, opnd_t dst3, opnd_t dst4, opnd_t dst5, opnd_t src1, opnd_t src2, opnd_t src3, opnd_t src4, opnd_t src5)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_afae7934b382c9878b415a3fdd8a55204"><div class="ttname"><a href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a></div><div class="ttdeci">DR_API instr_t * instr_create_1dst_2src(void *drcontext, int opcode, opnd_t dst, opnd_t src1, opnd_t src2)</div></div>
@@ -59966,5 +60024,5 @@ Macros</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19586 --- Fri Aug 18 2023 03:14:20 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19593 --- Fri Aug 25 2023 03:13:19 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -563,6 +563,7 @@
     [ "INSTR_CREATE_nmatch_sve_pred", "dr__ir__macros__aarch64_8h.html#ae7c715f48028ab98026500651f230438", null ],
     [ "INSTR_CREATE_nor_sve_pred", "dr__ir__macros__aarch64_8h.html#adab389589bdd2f3bcde0c7bbc5e05ff4", null ],
     [ "INSTR_CREATE_nors_sve_pred", "dr__ir__macros__aarch64_8h.html#a477e9fd8953e7b173008dcacbfa98960", null ],
+    [ "INSTR_CREATE_not_sve_pred_b", "dr__ir__macros__aarch64_8h.html#ac1ffa86bbaecfeb63d9632841f876e01", null ],
     [ "INSTR_CREATE_not_sve_pred_vec", "dr__ir__macros__aarch64_8h.html#aa7d10a1be5cc9fbdd356d1552c93b6e6", null ],
     [ "INSTR_CREATE_orn_sve_imm", "dr__ir__macros__aarch64_8h.html#acb7f50a05460ac68cfeda5f2a546bcb2", null ],
     [ "INSTR_CREATE_orn_sve_pred", "dr__ir__macros__aarch64_8h.html#ad43aa3fb824de8ebafbcd6577f52d5ff", null ],

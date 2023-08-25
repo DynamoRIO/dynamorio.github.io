@@ -56,15 +56,15 @@
       [ "Steps for Publishing a New Release", "page_new_release.html#autotoc_md229", [
         [ "Sanity Testing", "page_new_release.html#autotoc_md230", null ],
         [ "Commit the Version and Changelist Changes", "page_new_release.html#autotoc_md231", null ],
-        [ "Trigger a Package Build", "page_new_release.html#autotoc_md232", null ],
-        [ "Update the Release Description", "page_new_release.html#autotoc_md233", null ],
-        [ "Update api/docs/download.dox", "page_new_release.html#autotoc_md234", null ],
+        [ "Update api/docs/download.dox", "page_new_release.html#autotoc_md232", null ],
+        [ "Trigger a Package Build", "page_new_release.html#autotoc_md233", null ],
+        [ "Update the Release Description", "page_new_release.html#autotoc_md234", null ],
         [ "Trigger a Docs Update", "page_new_release.html#autotoc_md235", null ],
         [ "Verify Package and Documentation Uploads", "page_new_release.html#autotoc_md236", null ],
         [ "Announce the Release", "page_new_release.html#autotoc_md237", null ],
         [ "Add a New Changelist Section", "page_new_release.html#autotoc_md238", null ]
       ] ],
-      [ "Per-Platform Testing", "page_new_release.html#autotoc_md239", null ],
+      [ "Manual Per-Platform Testing", "page_new_release.html#autotoc_md239", null ],
       [ "Old Instructions for Locally Building Packages", "page_new_release.html#autotoc_md240", null ]
     ] ],
     [ "Triager Rotation", "page_triager.html", null ]
