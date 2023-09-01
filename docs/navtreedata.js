@@ -55,7 +55,7 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", {% include_relative hierarchy.js %} ],
       [ "Data Fields", "functions.html", [
         [ "All", "functions.html", {% include_relative functions_dup.js %} ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", {% include_relative functions_func.js %} ],
         [ "Variables", "functions_vars.html", {% include_relative functions_vars.js %} ],
         [ "Typedefs", "functions_type.html", null ],
         [ "Enumerations", "functions_enum.html", null ],

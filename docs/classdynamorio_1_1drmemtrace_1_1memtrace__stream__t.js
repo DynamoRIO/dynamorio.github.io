@@ -6,6 +6,7 @@
     [ "get_first_timestamp", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a97cc80f3ac9381e03b82c961841e6f9f", null ],
     [ "get_instruction_ordinal", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#ad4bd0ddaf428bb679f940f58f9a4e532", null ],
     [ "get_last_timestamp", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#af538bcfbd6d8fef5612dac7228c6cb83", null ],
+    [ "get_output_cpuid", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a067c7ee96ecc1ea714b75fb9b82c3cd1", null ],
     [ "get_page_size", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a252e37074e0721049aa753cfa17a9ccc", null ],
     [ "get_record_ordinal", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a319e4bec8180d58bb05e02299dbbb884", null ],
     [ "get_stream_name", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#ad97a175c6a42c2c397d379e784b57fea", null ],

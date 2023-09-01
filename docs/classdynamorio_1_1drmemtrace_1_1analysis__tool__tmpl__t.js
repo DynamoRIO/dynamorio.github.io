@@ -12,6 +12,8 @@
     [ "get_error_string", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ab9cb5947ef8a6de50dce906bf17bb580", null ],
     [ "initialize", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a16ba77b9899dde9627e9383ca587af79", null ],
     [ "initialize", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a16ba77b9899dde9627e9383ca587af79", null ],
+    [ "initialize_shard_type", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a220194108882407ba03f59dd4810d859", null ],
+    [ "initialize_shard_type", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a220194108882407ba03f59dd4810d859", null ],
     [ "initialize_stream", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a71607218331f15e9882ed527a9654d69", null ],
     [ "initialize_stream", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a71607218331f15e9882ed527a9654d69", null ],
     [ "operator!", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a2db6939f56118427cba732a4cd9ea69b", null ],

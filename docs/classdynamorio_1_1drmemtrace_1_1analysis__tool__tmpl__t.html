@@ -47,6 +47,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a16ba77b9899dde9627e9383ca587af79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71607218331f15e9882ed527a9654d69"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a71607218331f15e9882ed527a9654d69">initialize_stream</a> (<a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html">memtrace_stream_t</a> *serial_stream)</td></tr>
 <tr class="separator:a71607218331f15e9882ed527a9654d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a220194108882407ba03f59dd4810d859"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a220194108882407ba03f59dd4810d859">initialize_shard_type</a> (<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a107f5120f8556cdf7bed8add898915ba">shard_type_t</a> shard_type)</td></tr>
+<tr class="separator:a220194108882407ba03f59dd4810d859"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2db6939f56118427cba732a4cd9ea69b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a2db6939f56118427cba732a4cd9ea69b">operator!</a> ()</td></tr>
 <tr class="separator:a2db6939f56118427cba732a4cd9ea69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9cb5947ef8a6de50dce906bf17bb580"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ab9cb5947ef8a6de50dce906bf17bb580">get_error_string</a> ()</td></tr>
@@ -87,6 +89,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a16ba77b9899dde9627e9383ca587af79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71607218331f15e9882ed527a9654d69"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a71607218331f15e9882ed527a9654d69">initialize_stream</a> (<a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html">memtrace_stream_t</a> *serial_stream)</td></tr>
 <tr class="separator:a71607218331f15e9882ed527a9654d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a220194108882407ba03f59dd4810d859"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a220194108882407ba03f59dd4810d859">initialize_shard_type</a> (<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a107f5120f8556cdf7bed8add898915ba">shard_type_t</a> shard_type)</td></tr>
+<tr class="separator:a220194108882407ba03f59dd4810d859"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2db6939f56118427cba732a4cd9ea69b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a2db6939f56118427cba732a4cd9ea69b">operator!</a> ()</td></tr>
 <tr class="separator:a2db6939f56118427cba732a4cd9ea69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9cb5947ef8a6de50dce906bf17bb580"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ab9cb5947ef8a6de50dce906bf17bb580">get_error_string</a> ()</td></tr>
@@ -546,6 +550,64 @@ template&lt;typename RecordType &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Destructor. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>The <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a71607218331f15e9882ed527a9654d69">initialize_stream()</a> function is called by the analyzer; this function is only called if the default implementation of <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a71607218331f15e9882ed527a9654d69">initialize_stream()</a> is left in place and it calls this version. On an error, this returns an error string. On success, it returns "". </dd></dl>
+
+</div>
+</div>
+<a id="a220194108882407ba03f59dd4810d859"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a220194108882407ba03f59dd4810d859">&#9670;&nbsp;</a></span>initialize_shard_type() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html">dynamorio::drmemtrace::analysis_tool_tmpl_t</a>&lt; RecordType &gt;::initialize_shard_type </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a107f5120f8556cdf7bed8add898915ba">shard_type_t</a>&#160;</td>
+          <td class="paramname"><em>shard_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Identifies the shard type for this analysis. The return value indicates whether the tool supports this shard type, with failure (a non-empty string) being treated as a fatal error for the analysis. </p>
+
+</div>
+</div>
+<a id="a220194108882407ba03f59dd4810d859"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a220194108882407ba03f59dd4810d859">&#9670;&nbsp;</a></span>initialize_shard_type() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html">dynamorio::drmemtrace::analysis_tool_tmpl_t</a>&lt; RecordType &gt;::initialize_shard_type </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a107f5120f8556cdf7bed8add898915ba">shard_type_t</a>&#160;</td>
+          <td class="paramname"><em>shard_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Identifies the shard type for this analysis. The return value indicates whether the tool supports this shard type, with failure (a non-empty string) being treated as a fatal error for the analysis. </p>
 
 </div>
 </div>
@@ -1440,5 +1502,5 @@ template&lt;typename RecordType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19593 --- Fri Aug 25 2023 03:13:21 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19600 --- Fri Sep 1 2023 03:14:30 &nbsp; <img border=0 src="favicon.png">
 </small></address>
