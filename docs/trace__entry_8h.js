@@ -104,13 +104,15 @@
       [ "TRACE_TYPE_PREFETCH_WRITE_L3", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59cad1fce8d9d7b5a1283aa628ca755ed780", null ],
       [ "TRACE_TYPE_PREFETCH_WRITE_L3_NT", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59caa6100a7e6394bb5c1b5f6f1c56a49639", null ],
       [ "TRACE_TYPE_INSTR_TAKEN_JUMP", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59ca9c9d51773f51a184dbe43b9382cc305c", null ],
-      [ "TRACE_TYPE_INSTR_UNTAKEN_JUMP", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59ca93a6bfcd5d3af5e73765fe053fff98ae", null ]
+      [ "TRACE_TYPE_INSTR_UNTAKEN_JUMP", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59ca93a6bfcd5d3af5e73765fe053fff98ae", null ],
+      [ "TRACE_TYPE_INVALID", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59ca06211f6221b1a91d18eb4dafa6d8aede", null ]
     ] ],
     [ "trace_version_t", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5da", [
       [ "TRACE_ENTRY_VERSION_NO_KERNEL_PC", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daa51a5fc9f55436b5c610058a01825779a", null ],
       [ "TRACE_ENTRY_VERSION_KERNEL_PC", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daad5a6abcd4c5eb8db6cf1396460bb0ac5", null ],
       [ "TRACE_ENTRY_VERSION_ENCODINGS", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daa00ea9310b6ca682075c2bdc469a1778c", null ],
       [ "TRACE_ENTRY_VERSION_BRANCH_INFO", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daa15c44ecec7fe8199d013bac8b759909e", null ],
+      [ "TRACE_ENTRY_VERSION_FREQUENT_TIMESTAMPS", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daaf97ac42c62a634e8c33ffad2c4953f39", null ],
       [ "TRACE_ENTRY_VERSION", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e", null ]
     ] ],
     [ "type_has_address", "trace__entry_8h.html#a9ca0b3aaffc906b809a2ba3fb9dd730e", null ],
@@ -119,5 +121,6 @@
     [ "type_is_instr_branch", "trace__entry_8h.html#ae1d5a845b343a489ec61ceb2021bd1fc", null ],
     [ "type_is_instr_conditional_branch", "trace__entry_8h.html#a18cba5b1d90a1ef689078acbf787331b", null ],
     [ "type_is_instr_direct_branch", "trace__entry_8h.html#af1a319424f45ebf473c8263fe37590cf", null ],
-    [ "type_is_prefetch", "trace__entry_8h.html#a1ba3d847cac01db253754e37a4833d63", null ]
+    [ "type_is_prefetch", "trace__entry_8h.html#a1ba3d847cac01db253754e37a4833d63", null ],
+    [ "type_is_read", "trace__entry_8h.html#a73a3b41d08fe1a6ff4f002ae7b643507", null ]
 ],

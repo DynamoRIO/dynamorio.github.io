@@ -292,6 +292,8 @@
     [ "instr_needs_encoding", "dr__ir__instr_8h.html#a47ab2ccdb4b2433665c5197b890e7434", null ],
     [ "instr_noalloc_init", "dr__ir__instr_8h.html#a2b0ce5e5125951e4a7dfdc5ac716282a", null ],
     [ "instr_num_dsts", "dr__ir__instr_8h.html#a3574118088b6a3a5a9b3b7308da90ed7", null ],
+    [ "instr_num_memory_read_access", "dr__ir__instr_8h.html#abe35e7c108f27fd776a2294c584e19ee", null ],
+    [ "instr_num_memory_write_access", "dr__ir__instr_8h.html#ada87c019b0a91d04f966bf73ffdac404", null ],
     [ "instr_num_srcs", "dr__ir__instr_8h.html#ab264f741f5a1edea068dbabb90b4e4c6", null ],
     [ "instr_ok_to_emit", "dr__ir__instr_8h.html#a83be5beb6052d093f61be7f1bdc7e202", null ],
     [ "instr_ok_to_mangle", "dr__ir__instr_8h.html#a18eb5de05cc4b9e11dc455db930c8032", null ],

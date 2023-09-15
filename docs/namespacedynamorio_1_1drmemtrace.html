@@ -254,7 +254,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa15c44ecec7fe8199d013bac8b759909e">TRACE_ENTRY_VERSION_BRANCH_INFO</a> = 5, 
 <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e">TRACE_ENTRY_VERSION</a> = TRACE_ENTRY_VERSION_BRANCH_INFO
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daaf97ac42c62a634e8c33ffad2c4953f39">TRACE_ENTRY_VERSION_FREQUENT_TIMESTAMPS</a> = 6, 
+<br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e">TRACE_ENTRY_VERSION</a> = TRACE_ENTRY_VERSION_FREQUENT_TIMESTAMPS
 <br />
  }</td></tr>
 <tr class="separator:ad84239da3ba299ee4ebcf24134e6b5da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -347,7 +349,9 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca9c9d51773f51a184dbe43b9382cc305c">TRACE_TYPE_INSTR_TAKEN_JUMP</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca93a6bfcd5d3af5e73765fe053fff98ae">TRACE_TYPE_INSTR_UNTAKEN_JUMP</a>
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca93a6bfcd5d3af5e73765fe053fff98ae">TRACE_TYPE_INSTR_UNTAKEN_JUMP</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca06211f6221b1a91d18eb4dafa6d8aede">TRACE_TYPE_INVALID</a>
 <br />
  }</td></tr>
 <tr class="separator:a00e926de2230d3f712dcae422e6cb59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -585,6 +589,8 @@ Functions</h2></td></tr>
 <tr class="separator:a9ca0b3aaffc906b809a2ba3fb9dd730e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8106f9507d394eb55d3be82b193733aa"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a8106f9507d394eb55d3be82b193733aa">type_is_data</a> (const <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59c">trace_type_t</a> type)</td></tr>
 <tr class="separator:a8106f9507d394eb55d3be82b193733aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73a3b41d08fe1a6ff4f002ae7b643507"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a73a3b41d08fe1a6ff4f002ae7b643507">type_is_read</a> (const <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59c">trace_type_t</a> type)</td></tr>
+<tr class="separator:a73a3b41d08fe1a6ff4f002ae7b643507"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade00c5d94b488ef28af05c948631ba04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#aa072932d15fbef2163f1b3704b33abf7">analysis_tool_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ade00c5d94b488ef28af05c948631ba04">view_tool_create</a> (const std::string &amp;module_file_path, uint64_t skip_refs, uint64_t sim_refs, const std::string &amp;syntax, unsigned int verbose=0, const std::string &amp;alt_module_dir=&quot;&quot;)</td></tr>
 <tr class="separator:ade00c5d94b488ef28af05c948631ba04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -1522,6 +1528,8 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59ca93a6bfcd5d3af5e73765fe053fff98ae"></a>TRACE_TYPE_INSTR_UNTAKEN_JUMP&#160;</td><td class="fielddoc"><p>A direct conditional jump instruction which was not taken. This is only used in offline non-i-filtered traces. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59ca06211f6221b1a91d18eb4dafa6d8aede"></a>TRACE_TYPE_INVALID&#160;</td><td class="fielddoc"><p>An invalid record, meant for use as a sentinel value. </p>
+</td></tr>
 </table>
 
 </div>
@@ -1546,6 +1554,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daa00ea9310b6ca682075c2bdc469a1778c"></a>TRACE_ENTRY_VERSION_ENCODINGS&#160;</td><td class="fielddoc"><p>The trace supports embedded instruction encodings, but they are only present if <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa1bc66b6cb976d3bb7f93af0ce5d2ec53">OFFLINE_FILE_TYPE_ENCODINGS</a> is set. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daa15c44ecec7fe8199d013bac8b759909e"></a>TRACE_ENTRY_VERSION_BRANCH_INFO&#160;</td><td class="fielddoc"><p>The trace includes branch taken and target information up front. This means that conditional branches use either <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca9c9d51773f51a184dbe43b9382cc305c">TRACE_TYPE_INSTR_TAKEN_JUMP</a> or <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca93a6bfcd5d3af5e73765fe053fff98ae">TRACE_TYPE_INSTR_UNTAKEN_JUMP</a> and that the target of indirect branches is in a new field "indirect_branch_target" in <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae4a471ed806967b2b6f911b6ef770704">memref_t</a>. This only applies to offline traces whose instructions are not filtered; online traces, and i-filtered offline traces, even at this version, do not contain this information. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daaf97ac42c62a634e8c33ffad2c4953f39"></a>TRACE_ENTRY_VERSION_FREQUENT_TIMESTAMPS&#160;</td><td class="fielddoc"><p>The trace contains additional timestamps to identify and distinguish application instruction execution, application syscall invocation, and trace i/o. The pre-syscall and post-syscall timestamps are as expected. Prior versions have the post-syscall timestamp actually containing the pre-syscall time. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e"></a>TRACE_ENTRY_VERSION&#160;</td><td class="fielddoc"><p>The latest version of the trace format. </p>
 </td></tr>
@@ -2352,6 +2362,33 @@ For additional file open parameters with the thread and window identifiers, use 
 
 </div>
 </div>
+<a id="a73a3b41d08fe1a6ff4f002ae7b643507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73a3b41d08fe1a6ff4f002ae7b643507">&#9670;&nbsp;</a></span>type_is_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool dynamorio::drmemtrace::type_is_read </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59c">trace_type_t</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns whether the type represents a memory read access. </p>
+
+</div>
+</div>
 <a id="ade00c5d94b488ef28af05c948631ba04"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ade00c5d94b488ef28af05c948631ba04">&#9670;&nbsp;</a></span>view_tool_create()</h2>
 
@@ -2411,5 +2448,5 @@ For additional file open parameters with the thread and window identifiers, use 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19607 --- Fri Sep 8 2023 03:13:35 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19613 --- Fri Sep 15 2023 03:14:46 &nbsp; <img border=0 src="favicon.png">
 </small></address>

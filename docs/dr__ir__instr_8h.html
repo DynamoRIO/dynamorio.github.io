@@ -577,6 +577,10 @@ Functions</h2></td></tr>
 <tr class="separator:a119b505069a5608525bafb89ba0a2b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05eec4b2764a81b13af3fc1197fca98f"><td class="memItemLeft" align="right" valign="top">DR_API uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a05eec4b2764a81b13af3fc1197fca98f">instr_memory_reference_size</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
 <tr class="separator:a05eec4b2764a81b13af3fc1197fca98f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe35e7c108f27fd776a2294c584e19ee"><td class="memItemLeft" align="right" valign="top">DR_API uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#abe35e7c108f27fd776a2294c584e19ee">instr_num_memory_read_access</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
+<tr class="separator:abe35e7c108f27fd776a2294c584e19ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada87c019b0a91d04f966bf73ffdac404"><td class="memItemLeft" align="right" valign="top">DR_API uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#ada87c019b0a91d04f966bf73ffdac404">instr_num_memory_write_access</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
+<tr class="separator:ada87c019b0a91d04f966bf73ffdac404"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a946303e1c9c3d1102603dc9842479b0c"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__ir__instr_8h.html#a2aaa6ff57b03331c92e84525a5f3a56f">dr_instr_label_data_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a946303e1c9c3d1102603dc9842479b0c">instr_get_label_data_area</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
 <tr class="separator:a946303e1c9c3d1102603dc9842479b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d9cebf36b6c0d225dcc6f3a801876a7"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a6d9cebf36b6c0d225dcc6f3a801876a7">instr_set_label_callback</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, <a class="el" href="dr__ir__instr_8h.html#ae8b5942bc78904306cad446010dc1976">instr_label_callback_t</a> func)</td></tr>
@@ -6848,6 +6852,44 @@ We recommend using this routine during the phase of application code analysis, a
 
 </div>
 </div>
+<a id="abe35e7c108f27fd776a2294c584e19ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe35e7c108f27fd776a2294c584e19ee">&#9670;&nbsp;</a></span>instr_num_memory_read_access()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API uint instr_num_memory_read_access </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
+          <td class="paramname"><em>instr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the number of memory read accesses of the instruction. </p>
+
+</div>
+</div>
+<a id="ada87c019b0a91d04f966bf73ffdac404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada87c019b0a91d04f966bf73ffdac404">&#9670;&nbsp;</a></span>instr_num_memory_write_access()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API uint instr_num_memory_write_access </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
+          <td class="paramname"><em>instr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the number of memory write accesses of the instruction. </p>
+
+</div>
+</div>
 <a id="ab264f741f5a1edea068dbabb90b4e4c6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab264f741f5a1edea068dbabb90b4e4c6">&#9670;&nbsp;</a></span>instr_num_srcs()</h2>
 
@@ -8535,5 +8577,5 @@ mangle" if <code>val</code> is false.</p>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19607 --- Fri Sep 8 2023 03:13:32 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19613 --- Fri Sep 15 2023 03:14:43 &nbsp; <img border=0 src="favicon.png">
 </small></address>

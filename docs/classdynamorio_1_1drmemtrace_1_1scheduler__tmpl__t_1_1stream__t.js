@@ -17,5 +17,6 @@
     [ "next_record", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#abf906b3602844039ebba9b1fe9d14580", null ],
     [ "set_active", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ae98f622acca7b8f682c08443861fbc87", null ],
     [ "start_speculation", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a7b96943e9bf118caf2e3ba0f12588352", null ],
-    [ "stop_speculation", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#abd2352ca7b195e33fcf4aa1876daf925", null ]
+    [ "stop_speculation", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#abd2352ca7b195e33fcf4aa1876daf925", null ],
+    [ "unread_last_record", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a3d85bbc2dd5c93378cccaf25e55f35c4", null ]
 ],
