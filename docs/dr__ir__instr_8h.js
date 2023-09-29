@@ -130,12 +130,15 @@
     ] ],
     [ "dr_instr_category_t", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893", [
       [ "DR_INSTR_CATEGORY_UNCATEGORIZED", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a9a832083c102b2a094b2e9aa0b46b94f", null ],
-      [ "DR_INSTR_CATEGORY_INT_MATH", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893ab45ab8a3d0feb715ef29d9db3c5326db", null ],
-      [ "DR_INSTR_CATEGORY_FP_MATH", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893aee2b6be415c2fac735dd87331a436b20", null ],
+      [ "DR_INSTR_CATEGORY_FP", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a86b9dff2cbdefda4ef347f4867b2ab19", null ],
       [ "DR_INSTR_CATEGORY_LOAD", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893ac53c786bbe05cee55f08a1f5344ab709", null ],
       [ "DR_INSTR_CATEGORY_STORE", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a9ae67c8d050a46baa809d6c885ecca6e", null ],
       [ "DR_INSTR_CATEGORY_BRANCH", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a5ce79c52e9846031190e55a67ed84475", null ],
       [ "DR_INSTR_CATEGORY_SIMD", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a9993a4b24a996398a4f7a0120adc3249", null ],
+      [ "DR_INSTR_CATEGORY_STATE", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a503a1fcd3abf44c2c83b502732c1e53d", null ],
+      [ "DR_INSTR_CATEGORY_MOVE", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a8596ec80cfce08f56ee0b8955bb13653", null ],
+      [ "DR_INSTR_CATEGORY_CONVERT", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a40f926b8b5d0230c72b9b3b3d16324f8", null ],
+      [ "DR_INSTR_CATEGORY_MATH", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893ac2095a1c89b422b2841d8cb9db01c657", null ],
       [ "DR_INSTR_CATEGORY_OTHER", "dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893a3496c252e35b26ce7efb080d6ed82ffa", null ]
     ] ],
     [ "instr_allocate_raw_bits", "dr__ir__instr_8h.html#a6d9dae99989a20372ecd82a0a441a19d", null ],
