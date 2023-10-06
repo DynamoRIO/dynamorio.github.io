@@ -249,6 +249,7 @@
     [ "instr_is_far_cti", "dr__ir__instr_8h.html#a6b0c0e7a1e0532871cc8ddc97a5aae2c", null ],
     [ "instr_is_floating", "dr__ir__instr_8h.html#a968e5edd33d2c624b8c1ddf1e2e2f9e2", null ],
     [ "instr_is_floating_ex", "dr__ir__instr_8h.html#a6a279ef5b19e7c4f82f8804d9490da54", null ],
+    [ "instr_is_floating_type", "dr__ir__instr_8h.html#a8cc622d4583d47001014683fe6e5dfb2", null ],
     [ "instr_is_gather", "dr__ir__instr_8h.html#ab99dd3460f2fd5abc2d59a9ddb26a6b5", null ],
     [ "instr_is_interrupt", "dr__ir__instr_8h.html#aad211b18a68b1233bc332a370463c87f", null ],
     [ "instr_is_label", "dr__ir__instr_8h.html#a7b43eac9f31ca4f7d297f983d4f684c0", null ],

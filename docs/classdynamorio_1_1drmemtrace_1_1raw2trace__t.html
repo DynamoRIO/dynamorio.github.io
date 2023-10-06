@@ -132,7 +132,7 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Performs the first step of <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a4d2da19abbafbb382f11dd0a7790749f">do_conversion()</a> without further action: parses and iterates over the list of modules. This is provided to give the user a method for iterating modules in the presence of the custom field used by drmemtrace that prevents direct use of <a class="el" href="group__drcovlib.html#ga56c631d77cd329a831116424204a2011">drmodtrack_offline_read()</a>. On success, calls the <code>process_cb</code> function passed to <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a61939f09b84ea109bf51c1a0148de56e">handle_custom_data()</a> for every module in the list, and returns an empty string at the end. Returns a non-empty error message on failure.</p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated:</a></b></dt><dd><a class="el" href="classdynamorio_1_1drmemtrace_1_1module__mapper__t.html">dynamorio::drmemtrace::module_mapper_t</a> should be used instead. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd><a class="el" href="classdynamorio_1_1drmemtrace_1_1module__mapper__t.html">dynamorio::drmemtrace::module_mapper_t</a> should be used instead. </dd></dl>
 
 </div>
 </div>
@@ -151,7 +151,7 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This interface is meant to be used with a final trace rather than a raw trace, using the module log file saved from the raw2trace conversion. This routine first calls <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#af3f874404ab4775be97a51499dd1d55e">do_module_parsing()</a> and then maps each module into the current address space, allowing the user to augment the instruction information in the trace with additional information by decoding the instruction bytes. The routine <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ab281b88f9fcd49b3aae8fdc8138a4fd7">find_mapped_trace_address()</a> should be used to convert from memref_t.instr.addr to the corresponding mapped address in the current process. Returns a non-empty error message on failure.</p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated:</a></b></dt><dd><a class="el" href="classdynamorio_1_1drmemtrace_1_1module__mapper__t.html#a2f354f5e63bb425d729ef5b1a34d13a8">dynamorio::drmemtrace::module_mapper_t::get_loaded_modules()</a> should be used instead. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd><a class="el" href="classdynamorio_1_1drmemtrace_1_1module__mapper__t.html#a2f354f5e63bb425d729ef5b1a34d13a8">dynamorio::drmemtrace::module_mapper_t::get_loaded_modules()</a> should be used instead. </dd></dl>
 
 </div>
 </div>
@@ -181,7 +181,7 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This interface is meant to be used with a final trace rather than a raw trace, using the module log file saved from the raw2trace conversion. When <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#adf37e4a9abaaaec9361b50cb90507323">do_module_parsing_and_mapping()</a> has been called, this routine can be used to convert an instruction program counter in a trace into an address in the current process where the instruction bytes for that instruction are mapped, allowing decoding for obtaining further information than is stored in the trace. Returns a non-empty error message on failure.</p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd><a class="el" href="classdynamorio_1_1drmemtrace_1_1module__mapper__t.html#a4377f440ae23d7ac420f022a7faedee6">dynamorio::drmemtrace::module_mapper_t::find_mapped_trace_address()</a> should be used instead. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd><a class="el" href="classdynamorio_1_1drmemtrace_1_1module__mapper__t.html#a4377f440ae23d7ac420f022a7faedee6">dynamorio::drmemtrace::module_mapper_t::find_mapped_trace_address()</a> should be used instead. </dd></dl>
 
 </div>
 </div>
@@ -715,5 +715,5 @@ Static Protected Attributes</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19627 --- Fri Sep 29 2023 03:13:26 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19635 --- Fri Oct 6 2023 03:08:01 &nbsp; <img border=0 src="favicon.png">
 </small></address>

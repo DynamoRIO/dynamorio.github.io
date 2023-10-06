@@ -74,6 +74,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a978a48e6a9af3edce4d14b099abcdd9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a067c7ee96ecc1ea714b75fb9b82c3cd1"><td class="memItemLeft" align="right" valign="top">virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a067c7ee96ecc1ea714b75fb9b82c3cd1">get_output_cpuid</a> () const</td></tr>
 <tr class="separator:a067c7ee96ecc1ea714b75fb9b82c3cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f34384b44bf30646c470928d61919fb"><td class="memItemLeft" align="right" valign="top">virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a5f34384b44bf30646c470928d61919fb">get_workload_id</a> () const</td></tr>
+<tr class="separator:a5f34384b44bf30646c470928d61919fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97057e9e7a7f417b1841a0a2e37503d2"><td class="memItemLeft" align="right" valign="top">virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a97057e9e7a7f417b1841a0a2e37503d2">get_input_id</a> () const</td></tr>
+<tr class="separator:a97057e9e7a7f417b1841a0a2e37503d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee4fe624edfe4e8d9b8416ab2114c1d0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html">memtrace_stream_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#aee4fe624edfe4e8d9b8416ab2114c1d0">get_input_interface</a> () const</td></tr>
+<tr class="separator:aee4fe624edfe4e8d9b8416ab2114c1d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>&lt; DrMemtrace tracing + simulation infrastructure namespace. This is an interface for obtaining information from analysis tools on the full stream of memory reference records. </p>
@@ -214,6 +220,62 @@ Public Member Functions</h2></td></tr>
 <p>Returns the value of the first seen <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca5935654bf36c3cb4e813ff0d8397e2ad">TRACE_MARKER_TYPE_TIMESTAMP</a> marker. </p>
 
 <p>Implemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#aa6ab7b95a0ef459d80e19c917510fb92">dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::stream_t</a>, <a class="el" href="classdynamorio_1_1drmemtrace_1_1default__memtrace__stream__t.html#a7f503b027a408a1c3f64ebf7c5b01f00">dynamorio::drmemtrace::default_memtrace_stream_t</a>, <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__reader__t.html#a66a2f73f2d2f43647eac0f1b0183d787">dynamorio::drmemtrace::record_reader_t</a>, and <a class="el" href="classdynamorio_1_1drmemtrace_1_1reader__t.html#a4002068c662e282af8b8c0fe1ac5c042">dynamorio::drmemtrace::reader_t</a>.</p>
+
+</div>
+</div>
+<a id="a97057e9e7a7f417b1841a0a2e37503d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97057e9e7a7f417b1841a0a2e37503d2">&#9670;&nbsp;</a></span>get_input_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int64_t dynamorio::drmemtrace::memtrace_stream_t::get_input_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a unique identifier for the current input trace. This might be an ordinal from the list of active inputs, or some other identifier. This is guaranteed to be unique among all inputs, unlike the process and thread identifiers in <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae4a471ed806967b2b6f911b6ef770704">memref_t</a>. If not implemented for the current mode, -1 is returned. </p>
+
+<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a6ef53eeeb2adb92de55343420202d5b5">dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::stream_t</a>.</p>
+
+</div>
+</div>
+<a id="aee4fe624edfe4e8d9b8416ab2114c1d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee4fe624edfe4e8d9b8416ab2114c1d0">&#9670;&nbsp;</a></span>get_input_interface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html">memtrace_stream_t</a>* dynamorio::drmemtrace::memtrace_stream_t::get_input_interface </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the stream interface for the current input trace. This differs from "this" for <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a107f5120f8556cdf7bed8add898915baaa7bd23daf15197f85b315f00d1ba5654">SHARD_BY_CORE</a> where multiple inputs are interleaved on one output stream ("this"). If not implemented for the current mode, nullptr is returned. </p>
+
+<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ad5bc9f1031c0a17e9f79cfd3a0cbaace">dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::stream_t</a>.</p>
 
 </div>
 </div>
@@ -413,6 +475,34 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5f34384b44bf30646c470928d61919fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f34384b44bf30646c470928d61919fb">&#9670;&nbsp;</a></span>get_workload_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int64_t dynamorio::drmemtrace::memtrace_stream_t::get_workload_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a unique identifier for the current workload. This might be an ordinal from the list of active workloads, or some other identifier. This is guaranteed to be unique among all inputs, unlike the process and thread identifiers in <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae4a471ed806967b2b6f911b6ef770704">memref_t</a>. If not implemented for the current mode, -1 is returned. </p>
+
+<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#abeb50e52709334f72a2e887ef27483f6">dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::stream_t</a>.</p>
+
+</div>
+</div>
 <a id="a978a48e6a9af3edce4d14b099abcdd9a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a978a48e6a9af3edce4d14b099abcdd9a">&#9670;&nbsp;</a></span>is_record_synthetic()</h2>
 
@@ -450,5 +540,5 @@ Public Member Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19627 --- Fri Sep 29 2023 03:13:26 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19635 --- Fri Oct 6 2023 03:08:01 &nbsp; <img border=0 src="favicon.png">
 </small></address>

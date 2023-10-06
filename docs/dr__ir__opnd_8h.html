@@ -6506,7 +6506,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Assumes that <code>reg</code> is a DR_REG_ 32-bit register constant. If <code>sz</code> == OPSZ_2, returns the 16-bit version of <code>reg</code>. For 64-bit versions of this library, if <code>sz</code> == OPSZ_8, returns the 64-bit version of <code>reg</code>. Returns <code>DR_REG_NULL</code> when trying to get the 8-bit subregister of <code>DR_REG_ESI</code>, <code>DR_REG_EDI</code>, <code>DR_REG_EBP</code>, or <code>DR_REG_ESP</code> in 32-bit mode.</p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>Prefer <a class="el" href="dr__ir__opnd_8h.html#a8ef3aeb840262664fad8e94937ae82c2">reg_resize_to_opsz()</a> which is more general. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated:</a></b></dt><dd>Prefer <a class="el" href="dr__ir__opnd_8h.html#a8ef3aeb840262664fad8e94937ae82c2">reg_resize_to_opsz()</a> which is more general. </dd></dl>
 
 </div>
 </div>
@@ -6977,7 +6977,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Assumes that <code>reg</code> is a DR_REG_ constant. Returns true iff it refers to an xmm (128-bit SSE/SSE2) x86 register or a ymm (256-bit multimedia) register. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated:</a></b></dt><dd>Prefer <a class="el" href="dr__ir__opnd_8h.html#a94dfd3331d69e734d6b458e7ffa4b113">reg_is_strictly_xmm()</a> || <a class="el" href="dr__ir__opnd_8h.html#a58520a434a0c8453532096862b78f86e">reg_is_strictly_ymm()</a>. </dd></dl>
+<p>Assumes that <code>reg</code> is a DR_REG_ constant. Returns true iff it refers to an xmm (128-bit SSE/SSE2) x86 register or a ymm (256-bit multimedia) register. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated:</a></b></dt><dd>Prefer <a class="el" href="dr__ir__opnd_8h.html#a94dfd3331d69e734d6b458e7ffa4b113">reg_is_strictly_xmm()</a> || <a class="el" href="dr__ir__opnd_8h.html#a58520a434a0c8453532096862b78f86e">reg_is_strictly_ymm()</a>. </dd></dl>
 
 </div>
 </div>
@@ -6996,7 +6996,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Assumes that <code>reg</code> is a DR_REG_ constant. Returns true iff it refers to a ymm (256-bit multimedia) x86 register. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated:</a></b></dt><dd>Prefer <a class="el" href="dr__ir__opnd_8h.html#a58520a434a0c8453532096862b78f86e">reg_is_strictly_ymm()</a>. </dd></dl>
+<p>Assumes that <code>reg</code> is a DR_REG_ constant. Returns true iff it refers to a ymm (256-bit multimedia) x86 register. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated:</a></b></dt><dd>Prefer <a class="el" href="dr__ir__opnd_8h.html#a58520a434a0c8453532096862b78f86e">reg_is_strictly_ymm()</a>. </dd></dl>
 
 </div>
 </div>
@@ -7198,5 +7198,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19627 --- Fri Sep 29 2023 03:13:24 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19635 --- Fri Oct 6 2023 03:08:00 &nbsp; <img border=0 src="favicon.png">
 </small></address>
