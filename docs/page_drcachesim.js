@@ -37,6 +37,9 @@
     [ "Customizing the Tracer", "sec_drcachesim_tracer.html", null ],
     [ "Tracing Function Calls", "sec_drcachesim_funcs.html", null ],
     [ "Creating New Analysis Tools", "sec_drcachesim_newtool.html", [
+      [ "Separately-Built Tools", "sec_drcachesim_newtool.html#external_tools", [
+        [ "External tool package", "sec_drcachesim_newtool.html#autotoc_md339", null ]
+      ] ],
       [ "Scheduler", "sec_drcachesim_newtool.html#sec_drcachesim_sched", null ]
     ] ],
     [ "Simulator Parameters", "sec_drcachesim_ops.html", null ],
