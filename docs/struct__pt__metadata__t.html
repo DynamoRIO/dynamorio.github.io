@@ -27,7 +27,7 @@ permalink: /struct__pt__metadata__t.html
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;drpttracer.h&gt;</code></p>
+<p><code>#include &lt;drpttracer_shared.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -48,7 +48,8 @@ Data Fields</h2></td></tr>
 <div class="textblock"><p>The type of PT trace's metadata.</p>
 <dl class="section note"><dt>Note</dt><dd>drpttracer uses the cpuid instruction to get the cpu_family, cpu_model and cpu_stepping. The cpu_family, cpu_model and cpu_stepping are used to initialize the PT config of pt2ir_t when decoding a PT trace.</dd>
 <dd>
-drpttracer gets the time_shift, time_mult and time_zero from the opened perf event file's head. The time_shift, time_mult and time_zero are used to initialize the PT sideband config of pt2ir_t when decoding a PT trace. </dd></dl>
+drpttracer gets the time_shift, time_mult and time_zero from the opened perf event file's head. The time_shift, time_mult and time_zero are used to initialize the PT sideband config of pt2ir_t when decoding a PT trace.</dd></dl>
+<p>All fields are little-endian. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a9e654dd993641bd294856dfc3567962e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e654dd993641bd294856dfc3567962e">&#9670;&nbsp;</a></span>cpu_family</h2>
@@ -141,7 +142,7 @@ drpttracer gets the time_shift, time_mult and time_zero from the opened perf eve
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/runner/work/dynamorio/dynamorio/ext/drpttracer/<a class="el" href="drpttracer_8h.html">drpttracer.h</a></li>
+<li>/home/runner/work/dynamorio/dynamorio/ext/drpttracer/<a class="el" href="drpttracer__shared_8h.html">drpttracer_shared.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.17-->
@@ -149,5 +150,5 @@ drpttracer gets the time_shift, time_mult and time_zero from the opened perf eve
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19655 --- Fri Oct 27 2023 03:14:42 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19663 --- Fri Nov 3 2023 03:12:19 &nbsp; <img border=0 src="favicon.png">
 </small></address>

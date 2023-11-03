@@ -53,6 +53,8 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:af9e1574ba3d8ac1bb65e16df7a23b8cf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#af9e1574ba3d8ac1bb65e16df7a23b8cf">process_offline_entry</a> (raw2trace_thread_data_t *tdata, const offline_entry_t *in_entry, thread_id_t tid, OUT bool *end_of_record, OUT bool *last_bb_handled, OUT bool *flush_decode_cache)</td></tr>
 <tr class="separator:af9e1574ba3d8ac1bb65e16df7a23b8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a099d21e75bb9899d8374c8bf1cf0e1f9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a099d21e75bb9899d8374c8bf1cf0e1f9">process_marker_additionally</a> (raw2trace_thread_data_t *tdata, <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295c">trace_marker_type_t</a> marker_type, uintptr_t marker_val, byte *&amp;buf, OUT bool *flush_decode_cache)</td></tr>
+<tr class="separator:a099d21e75bb9899d8374c8bf1cf0e1f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26f53db80f97ca24e7e8d09edff95b9b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a26f53db80f97ca24e7e8d09edff95b9b">read_header</a> (raw2trace_thread_data_t *tdata, OUT <a class="el" href="structdynamorio_1_1drmemtrace_1_1trace__header__t.html">trace_header_t</a> *header)</td></tr>
 <tr class="separator:a26f53db80f97ca24e7e8d09edff95b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5d746b7e5b7a6199a800f09966c7658"><td class="memItemLeft" align="right" valign="top">virtual const offline_entry_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ab5d746b7e5b7a6199a800f09966c7658">get_next_entry</a> (raw2trace_thread_data_t *tdata)</td></tr>
@@ -75,6 +77,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a32eb97dd9b8bfab23e1ffc18f1eab760"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af39a7bfc8954256a2d913050bc8f4e7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#af39a7bfc8954256a2d913050bc8f4e7a">set_modmap_</a> (const <a class="el" href="classdynamorio_1_1drmemtrace_1_1module__mapper__t.html">module_mapper_t</a> *modmap)</td></tr>
 <tr class="separator:af39a7bfc8954256a2d913050bc8f4e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb2b0392de28b8cef6c9edc3971bb8e2"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#adb2b0392de28b8cef6c9edc3971bb8e2">is_maybe_blocking_syscall</a> (uintptr_t number)</td></tr>
+<tr class="separator:adb2b0392de28b8cef6c9edc3971bb8e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -282,6 +286,33 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="adb2b0392de28b8cef6c9edc3971bb8e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb2b0392de28b8cef6c9edc3971bb8e2">&#9670;&nbsp;</a></span>is_maybe_blocking_syscall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool dynamorio::drmemtrace::raw2trace_t::is_maybe_blocking_syscall </td>
+          <td>(</td>
+          <td class="paramtype">uintptr_t&#160;</td>
+          <td class="paramname"><em>number</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns whether this system number <em>might</em> block. </p>
+
+</div>
+</div>
 <a id="a984ec1b674ac2f398600ab0a8ce918d1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a984ec1b674ac2f398600ab0a8ce918d1">&#9670;&nbsp;</a></span>log()</h2>
 
@@ -444,6 +475,61 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Callback notifying the currently-processed thread has exited. Subclasses are expected to track record metadata themselves. APIs for extracting that metadata are exposed. </p>
+
+</div>
+</div>
+<a id="a099d21e75bb9899d8374c8bf1cf0e1f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a099d21e75bb9899d8374c8bf1cf0e1f9">&#9670;&nbsp;</a></span>process_marker_additionally()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool dynamorio::drmemtrace::raw2trace_t::process_marker_additionally </td>
+          <td>(</td>
+          <td class="paramtype">raw2trace_thread_data_t *&#160;</td>
+          <td class="paramname"><em>tdata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295c">trace_marker_type_t</a>&#160;</td>
+          <td class="paramname"><em>marker_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uintptr_t&#160;</td>
+          <td class="paramname"><em>marker_val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte *&amp;&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OUT bool *&#160;</td>
+          <td class="paramname"><em>flush_decode_cache</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Performs any additional actions for the marker "marker_type" with value "marker_val", beyond writing out a marker record. New records can be written to "buf". Returns whether successful. </p>
 
 </div>
 </div>
@@ -715,5 +801,5 @@ Static Protected Attributes</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19655 --- Fri Oct 27 2023 03:14:42 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19663 --- Fri Nov 3 2023 03:12:19 &nbsp; <img border=0 src="favicon.png">
 </small></address>

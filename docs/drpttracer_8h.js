@@ -1,8 +1,6 @@
 [
-    [ "_pt_metadata_t", "struct__pt__metadata__t.html", {% include_relative struct__pt__metadata__t.js %} ],
     [ "_drpttracer_output_t", "struct__drpttracer__output__t.html", {% include_relative struct__drpttracer__output__t.js %} ],
     [ "drpttracer_output_t", "drpttracer_8h.html#a2a039aa7d15f79edcbae537289181000", null ],
-    [ "pt_metadata_t", "drpttracer_8h.html#adf5b364ce02f7edc31dad432b6a7d59b", null ],
     [ "drpttracer_status_t", "drpttracer_8h.html#a7846187879de367e706edaed0293e45d", [
       [ "DRPTTRACER_SUCCESS", "drpttracer_8h.html#a7846187879de367e706edaed0293e45daa8ba0cc1895bd5e2fbfa143c0c109bf2", null ],
       [ "DRPTTRACER_ERROR", "drpttracer_8h.html#a7846187879de367e706edaed0293e45dab4d57a690dd5247bd71b0d0adfa67ecb", null ],

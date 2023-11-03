@@ -38,7 +38,8 @@ permalink: /trace__entry_8h.html
 
 <p>DrMemtrace trace entry enum types and definitions.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stddef.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &quot;utils.h&quot;</code><br />
 </div><table class="memberdecls">
@@ -64,8 +65,8 @@ Macros</h2></td></tr>
 <tr class="separator:a8e130e1aa80df762896518a84d8d602d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e4acf52d1c0d42054ba5270a54b5188"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace__entry_8h.html#a4e4acf52d1c0d42054ba5270a54b5188">DRMEMTRACE_CPU_SCHEDULE_FILENAME</a>&#160;&#160;&#160;&quot;cpu_schedule.bin.zip&quot;</td></tr>
 <tr class="separator:a4e4acf52d1c0d42054ba5270a54b5188"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ce4faccf3e6557e5eebb2b4b37d3f8b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace__entry_8h.html#a8ce4faccf3e6557e5eebb2b4b37d3f8b">DRMEMTRACE_KERNEL_PT_SUBDIR</a>&#160;&#160;&#160;&quot;kernel.raw&quot;</td></tr>
-<tr class="separator:a8ce4faccf3e6557e5eebb2b4b37d3f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5cbfdf344722df8d76c1750d8eaee0f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace__entry_8h.html#ae5cbfdf344722df8d76c1750d8eaee0f">DRMEMTRACE_KERNEL_TRACE_SUBDIR</a>&#160;&#160;&#160;&quot;kernel.raw&quot;</td></tr>
+<tr class="separator:ae5cbfdf344722df8d76c1750d8eaee0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03e85b36b895240ba8e1c07d7dce79c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace__entry_8h.html#a03e85b36b895240ba8e1c07d7dce79c1">DRMEMTRACE_KCORE_FILENAME</a>&#160;&#160;&#160;&quot;kcore&quot;</td></tr>
 <tr class="separator:a03e85b36b895240ba8e1c07d7dce79c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a031bea2e649fa10b492cb7721edb1f3d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trace__entry_8h.html#a031bea2e649fa10b492cb7721edb1f3d">DRMEMTRACE_KALLSYMS_FILENAME</a>&#160;&#160;&#160;&quot;kallsyms&quot;</td></tr>
@@ -247,7 +248,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caef6df6ddbdffd994f91edba51c850cde">dynamorio::drmemtrace::TRACE_MARKER_TYPE_SYSCALL_TRACE_END</a>
 , <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295cac4123c88a189fe7b52ceee6b7cab48ce">dynamorio::drmemtrace::TRACE_MARKER_TYPE_SYSCALL_FAILED</a>
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295cac4123c88a189fe7b52ceee6b7cab48ce">dynamorio::drmemtrace::TRACE_MARKER_TYPE_SYSCALL_FAILED</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295cae7bcf6a915571421473532017fc86d24">dynamorio::drmemtrace::TRACE_MARKER_TYPE_DIRECT_THREAD_SWITCH</a>
 <br />
  }</td></tr>
 <tr class="separator:ab8531c7f66ccc0d7fe59f436844a295c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -383,18 +386,18 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8ce4faccf3e6557e5eebb2b4b37d3f8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ce4faccf3e6557e5eebb2b4b37d3f8b">&#9670;&nbsp;</a></span>DRMEMTRACE_KERNEL_PT_SUBDIR</h2>
+<a id="ae5cbfdf344722df8d76c1750d8eaee0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5cbfdf344722df8d76c1750d8eaee0f">&#9670;&nbsp;</a></span>DRMEMTRACE_KERNEL_TRACE_SUBDIR</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DRMEMTRACE_KERNEL_PT_SUBDIR&#160;&#160;&#160;&quot;kernel.raw&quot;</td>
+          <td class="memname">#define DRMEMTRACE_KERNEL_TRACE_SUBDIR&#160;&#160;&#160;&quot;kernel.raw&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The name of the folder in -offline mode where the kernel's per thread PT data is stored. This data is captured during online tracing. </p>
+<p>The name of the folder in -offline mode where the kernel's per thread trace data is stored. </p>
 
 </div>
 </div>
@@ -434,5 +437,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19655 --- Fri Oct 27 2023 03:14:38 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19663 --- Fri Nov 3 2023 03:12:17 &nbsp; <img border=0 src="favicon.png">
 </small></address>
