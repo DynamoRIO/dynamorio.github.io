@@ -264,6 +264,7 @@
     [ "instr_is_near_ubr", "dr__ir__instr_8h.html#ae69609a072ec66fe105208cceca8a338", null ],
     [ "instr_is_nop", "dr__ir__instr_8h.html#a6799fe42380933b83bb0c04f9d7b16d4", null ],
     [ "instr_is_opmask", "dr__ir__instr_8h.html#ae29b1470af83f8f73d587d08ea6dbbbd", null ],
+    [ "instr_is_opnd_store_source", "dr__ir__instr_8h.html#acac48a6bb4b82e88218450ac05ac4ed8", null ],
     [ "instr_is_predicated", "dr__ir__instr_8h.html#aa0dda1bdd960e675b6b65a4093b44896", null ],
     [ "instr_is_prefetch", "dr__ir__instr_8h.html#a49b3c44f4f60069b0af81382aa2bf47d", null ],
     [ "instr_is_reg_spill_or_restore", "dr__ir__instr_8h.html#af80b7eb4b4e4f9c42fede8bfc375dd4e", null ],

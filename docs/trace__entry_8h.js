@@ -59,7 +59,8 @@
       [ "TRACE_MARKER_TYPE_SYSCALL_TRACE_START", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca13fffec3c874dcd5cc84aa25387b76d3", null ],
       [ "TRACE_MARKER_TYPE_SYSCALL_TRACE_END", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295caef6df6ddbdffd994f91edba51c850cde", null ],
       [ "TRACE_MARKER_TYPE_SYSCALL_FAILED", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295cac4123c88a189fe7b52ceee6b7cab48ce", null ],
-      [ "TRACE_MARKER_TYPE_DIRECT_THREAD_SWITCH", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295cae7bcf6a915571421473532017fc86d24", null ]
+      [ "TRACE_MARKER_TYPE_DIRECT_THREAD_SWITCH", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295cae7bcf6a915571421473532017fc86d24", null ],
+      [ "TRACE_MARKER_TYPE_CORE_WAIT", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca8d688aeae7d50e45269dbb8b494cbac1", null ]
     ] ],
     [ "trace_type_t", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59c", [
       [ "TRACE_TYPE_READ", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59ca018585565e72f9ebe6723e089f3d343d", null ],

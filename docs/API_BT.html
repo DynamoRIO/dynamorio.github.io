@@ -81,7 +81,7 @@ Transformation Versus Execution Time</h2>
 <p>The code manipulation API is highly efficient in that fragment creation comprises a small part of DynamoRIO's overhead. A client's instrumentation time actions rarely add substantial overhead for most target applications. Instead, it is extra actions taken by added instrumentation code acting at execution time that affects efficiency.</p>
 <h2><a class="anchor" id="sec_events_bb"></a>
 Basic Block Creation</h2>
-<p>Through the basic block creation event, registered via <a class="el" href="dr__events_8h.html#acbfe1ece2c520d409ffd59076507a710">dr_register_bb_event()</a>, the client has the ability to inspect and transform any piece of code prior to its execution. The client's hook receives three parameters:</p>
+<p>Through the basic block creation event, registered via <a class="el" href="dr__events_8h.html#acbfe1ece2c520d409ffd59076507a710">dr_register_bb_event()</a>, the client has the ability to inspect and transform any piece of code prior to its execution. The client's hook receives five parameters:</p>
 <div class="fragment"><div class="line"><a class="code" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a> new_block(<span class="keywordtype">void</span> *drcontext, <span class="keywordtype">void</span> *tag, <a class="code" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb,</div>
 <div class="line">                          <span class="keywordtype">bool</span> for_trace, <span class="keywordtype">bool</span> translating);</div>
 </div><!-- fragment --><ul>
@@ -138,7 +138,7 @@ Trace Creation</h2>
 </div><!-- fragment --><ul>
 <li><code>drcontext</code> is a pointer to the input program's machine context. Clients should not inspect or modify the context; it is provided as an opaque pointer (i.e., <code>void *</code>) to be passed to API routines that require access to this internal data.</li>
 <li><code>tag</code> is a unique identifier for the trace fragment.</li>
-<li><code>bb</code> is a pointer to the list of instructions that comprise the trace. Clients can examine, manipulate, or completely replace the instructions in the list.</li>
+<li><code>trace</code> is a pointer to the list of instructions that comprise the trace. Clients can examine, manipulate, or completely replace the instructions in the list.</li>
 <li><code>translating</code> indicates whether this callback is for trace creation (false) or is for address translation (true). This is further explained in <a class="el" href="API_BT.html#sec_translation">State Translation</a>.</li>
 </ul>
 <p>The return value of the trace callback should generally be DR_EMIT_DEFAULT; however, time-varying instrumentation or complex code transformations may need to return DR_EMIT_STORE_TRANSLATIONS. See <a class="el" href="API_BT.html#sec_translation">State Translation</a> for further details.</p>
@@ -498,5 +498,5 @@ Persisting Code</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19663 --- Fri Nov 3 2023 03:12:18 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19671 --- Fri Nov 10 2023 03:15:14 &nbsp; <img border=0 src="favicon.png">
 </small></address>

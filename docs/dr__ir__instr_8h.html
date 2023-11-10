@@ -437,6 +437,8 @@ Functions</h2></td></tr>
 <tr class="separator:a48b62c86bcffcd715ec554697089d1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00d9840c2be792a60c4b39db8837a6c1"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a00d9840c2be792a60c4b39db8837a6c1">instr_set_target</a> (<a class="el" href="structinstr__t.html">instr_t</a> *cti_instr, <a class="el" href="structopnd__t.html">opnd_t</a> target)</td></tr>
 <tr class="separator:a00d9840c2be792a60c4b39db8837a6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acac48a6bb4b82e88218450ac05ac4ed8"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#acac48a6bb4b82e88218450ac05ac4ed8">instr_is_opnd_store_source</a> (<a class="el" href="structinstr__t.html">instr_t</a> *store_instr, int source_ordinal)</td></tr>
+<tr class="separator:acac48a6bb4b82e88218450ac05ac4ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7836ae06a338763b74b83a497ba491b7"><td class="memItemLeft" align="right" valign="top">INSTR_INLINE_INTERNALLY DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a7836ae06a338763b74b83a497ba491b7">instr_operands_valid</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
 <tr class="separator:a7836ae06a338763b74b83a497ba491b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d22c1af43eed0feaf2350776287792"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a46d22c1af43eed0feaf2350776287792">instr_set_operands_valid</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, bool valid)</td></tr>
@@ -6147,6 +6149,35 @@ We recommend using this routine during the phase of application code analysis, a
 
 </div>
 </div>
+<a id="acac48a6bb4b82e88218450ac05ac4ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acac48a6bb4b82e88218450ac05ac4ed8">&#9670;&nbsp;</a></span>instr_is_opnd_store_source()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API bool instr_is_opnd_store_source </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
+          <td class="paramname"><em>store_instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>source_ordinal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>If <code>store_instr</code> is not a store (<a class="el" href="dr__ir__instr_8h.html#a61b348667a4fc288e84e3f053033c075">instr_writes_memory()</a> returns false), returns false. If <code>store_instr</code> is a store (<a class="el" href="dr__ir__instr_8h.html#a61b348667a4fc288e84e3f053033c075">instr_writes_memory()</a> returns true), returns whether its source operand with index <code>source_ordinal</code> (as passed to <a class="el" href="dr__ir__instr_8h.html#a38157d3c73c39d022efd47ddba1f666d">instr_get_src()</a>) is a source for the value that is stored. (If not, it may be an address register that is updated for pre-index or post-index writeback forms, or some other source that does not directly affect the value written to memory.) </p>
+
+</div>
+</div>
 <a id="aa0dda1bdd960e675b6b65a4093b44896"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa0dda1bdd960e675b6b65a4093b44896">&#9670;&nbsp;</a></span>instr_is_predicated()</h2>
 
@@ -8627,5 +8658,5 @@ mangle" if <code>val</code> is false.</p>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19663 --- Fri Nov 3 2023 03:12:17 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19671 --- Fri Nov 10 2023 03:15:10 &nbsp; <img border=0 src="favicon.png">
 </small></address>

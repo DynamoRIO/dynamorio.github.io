@@ -12,6 +12,7 @@
     [ "cache_simulator_knobs_t", "structdynamorio_1_1drmemtrace_1_1cache__simulator__knobs__t.html", null ],
     [ "default_memtrace_stream_t", "classdynamorio_1_1drmemtrace_1_1default__memtrace__stream__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1default__memtrace__stream__t.js %} ],
     [ "drmemtrace_replace_file_ops_t", "structdynamorio_1_1drmemtrace_1_1drmemtrace__replace__file__ops__t.html", {% include_relative structdynamorio_1_1drmemtrace_1_1drmemtrace__replace__file__ops__t.js %} ],
+    [ "flexible_queue_t", "classdynamorio_1_1drmemtrace_1_1flexible__queue__t.html", null ],
     [ "instr_summary_t", "structdynamorio_1_1drmemtrace_1_1instr__summary__t.html", {% include_relative structdynamorio_1_1drmemtrace_1_1instr__summary__t.js %} ],
     [ "ir2trace_t", "classdynamorio_1_1drmemtrace_1_1ir2trace__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1ir2trace__t.js %} ],
     [ "memtrace_stream_t", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.js %} ],

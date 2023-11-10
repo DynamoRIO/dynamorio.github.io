@@ -73,6 +73,8 @@
     ] ],
     [ "drstatecmp_options_t", "structdrstatecmp__options__t.html", null ],
     [ "features_t", "structfeatures__t.html", null ],
+    [ "dynamorio::drmemtrace::flexible_queue_t< T, comparator_t, hash_t >", "classdynamorio_1_1drmemtrace_1_1flexible__queue__t.html", null ],
+    [ "dynamorio::drmemtrace::flexible_queue_t< input_info_t *, InputTimestampComparator >", "classdynamorio_1_1drmemtrace_1_1flexible__queue__t.html", null ],
     [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::input_reader_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__reader__t.html", null ],
     [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::input_thread_info_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html", null ],
     [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::input_workload_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__workload__t.html", null ],
