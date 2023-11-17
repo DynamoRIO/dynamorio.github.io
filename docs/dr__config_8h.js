@@ -48,7 +48,7 @@
     [ "dr_num_registered_clients", "dr__config_8h.html#aee3f7b1d9fb8b7e99e91877b692f39a5", null ],
     [ "dr_process_is_registered", "dr__config_8h.html#aa97d41a6af959ad7022f8a9f44063c6d", null ],
     [ "dr_register_client", "dr__config_8h.html#ae9e35bfc0682dd3bee71eb8992d9eca3", null ],
-    [ "dr_register_client_ex", "dr__config_8h.html#ac3571e9ba325cc9cc8919734c725459e", null ],
+    [ "dr_register_client_ex", "dr__config_8h.html#a4fa44a3ce824ebafe15bd23c19d88fbf", null ],
     [ "dr_register_inject_paths", "dr__config_8h.html#a2b83006602812a9d0310636bb9ba5c28", null ],
     [ "dr_register_process", "dr__config_8h.html#a10d7c5dbc9a055fa6c18bf3f2a6eea46", null ],
     [ "dr_register_syswide", "dr__config_8h.html#a285ae07edfcba05d92510fb38e8057d1", null ],

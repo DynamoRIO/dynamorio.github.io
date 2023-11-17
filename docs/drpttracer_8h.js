@@ -21,13 +21,13 @@
       [ "DRPTTRACER_TRACING_ONLY_KERNEL", "drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5a567592a17aff204f5a4b194f66eaed0a", null ],
       [ "DRPTTRACER_TRACING_USER_AND_KERNEL", "drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5a9d97d6e409ada6de57b31fe55aa0e4db", null ]
     ] ],
-    [ "drpttracer_create_handle", "drpttracer_8h.html#a0df98e25ae870fddf34da980f1801f3a", null ],
-    [ "drpttracer_create_output", "drpttracer_8h.html#a6b3ae7416f37ca9f7234b5292c17ab4b", null ],
-    [ "drpttracer_destroy_handle", "drpttracer_8h.html#ae11b0af963319d6d7a6c97e5256be9b2", null ],
-    [ "drpttracer_destroy_output", "drpttracer_8h.html#a6722673d8102754af9c4284f76bc2acf", null ],
+    [ "drpttracer_create_handle", "drpttracer_8h.html#a7196fef42417d7f0e3cad98d5e2f0d92", null ],
+    [ "drpttracer_create_output", "drpttracer_8h.html#ab2e814afddf6936cbaeabc5fab19874d", null ],
+    [ "drpttracer_destroy_handle", "drpttracer_8h.html#a5c7040bb9ca8052e6e7831aa35d86019", null ],
+    [ "drpttracer_destroy_output", "drpttracer_8h.html#a61a0ef58b2c557ff5cf3ab54b2409b77", null ],
     [ "drpttracer_exit", "drpttracer_8h.html#a85f7b141497601e4205789e490ca3535", null ],
-    [ "drpttracer_get_pt_metadata", "drpttracer_8h.html#a2d0041b58c756da639312536731ff9d5", null ],
+    [ "drpttracer_get_pt_metadata", "drpttracer_8h.html#abd4f5ed755f68564cd4dab896798d853", null ],
     [ "drpttracer_init", "drpttracer_8h.html#a2ce2d81e3de5e6969eb2742f1eab15d2", null ],
-    [ "drpttracer_start_tracing", "drpttracer_8h.html#afb2c6fe798b7b3125647d647fb8e7835", null ],
-    [ "drpttracer_stop_tracing", "drpttracer_8h.html#a17c201ee9f0a8d5835193b2c0ec66ab3", null ]
+    [ "drpttracer_start_tracing", "drpttracer_8h.html#a745f2eac2cda74e6dbdf3ec6aa9d1a53", null ],
+    [ "drpttracer_stop_tracing", "drpttracer_8h.html#ae3cdd5968e06b8f54a61c4a5bd2523db", null ]
 ],

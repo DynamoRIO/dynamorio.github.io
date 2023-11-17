@@ -20,6 +20,6 @@
     [ "drcallstack_cleanup_walk", "group__drcallstack.html#ga4e2f81293edac4fac055e6f05049a8ef", null ],
     [ "drcallstack_exit", "group__drcallstack.html#ga038658586e669f77edcaa00e909ca4a2", null ],
     [ "drcallstack_init", "group__drcallstack.html#ga31c32040f286785f9664f6c62ae08556", null ],
-    [ "drcallstack_init_walk", "group__drcallstack.html#ga9a2346358eb956377884f73c4b5a5ba7", null ],
-    [ "drcallstack_next_frame", "group__drcallstack.html#ga5b274ad73bbffb2eee937352ec858b60", null ]
+    [ "drcallstack_init_walk", "group__drcallstack.html#ga715edbe49fe81870abee4c42301fccce", null ],
+    [ "drcallstack_next_frame", "group__drcallstack.html#gaa947f08b59a97893691302d9d0773fa3", null ]
 ],

@@ -172,12 +172,12 @@ Functions</h2></td></tr>
 <tr class="separator:a3f08638719a695bcb95d101a03cfd8f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b649488383757de1237c8caeb5f1c9b"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#a8b649488383757de1237c8caeb5f1c9b">dr_switch_to_dr_state_ex</a> (void *drcontext, <a class="el" href="dr__os__utils_8h.html#ad051d9da5ddb2100eb450587e7551a70">dr_state_flags_t</a> flags)</td></tr>
 <tr class="separator:a8b649488383757de1237c8caeb5f1c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5af582761c71e103475166b24181bb4c"><td class="memItemLeft" align="right" valign="top">DR_API int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#a5af582761c71e103475166b24181bb4c">dr_get_app_args</a> (OUT <a class="el" href="dr__os__utils_8h.html#adfdd1e3337ce543e3031abb445aaacb1">dr_app_arg_t</a> *args_array, int args_count)</td></tr>
-<tr class="separator:a5af582761c71e103475166b24181bb4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf92b27aafaa8ee5d8959790a2735edb"><td class="memItemLeft" align="right" valign="top">DR_API int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#adf92b27aafaa8ee5d8959790a2735edb">dr_get_app_args</a> (DR_PARAM_OUT <a class="el" href="dr__os__utils_8h.html#adfdd1e3337ce543e3031abb445aaacb1">dr_app_arg_t</a> *args_array, int args_count)</td></tr>
+<tr class="separator:adf92b27aafaa8ee5d8959790a2735edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0f7565b305ddec7732dc8014e5cc152"><td class="memItemLeft" align="right" valign="top">DR_API int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#af0f7565b305ddec7732dc8014e5cc152">dr_num_app_args</a> (void)</td></tr>
 <tr class="separator:af0f7565b305ddec7732dc8014e5cc152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a4bcecff5d7b6cb97c8e381468ca99c"><td class="memItemLeft" align="right" valign="top">const DR_API char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#a5a4bcecff5d7b6cb97c8e381468ca99c">dr_app_arg_as_cstring</a> (IN <a class="el" href="dr__os__utils_8h.html#adfdd1e3337ce543e3031abb445aaacb1">dr_app_arg_t</a> *app_arg, char *buf, int buf_size)</td></tr>
-<tr class="separator:a5a4bcecff5d7b6cb97c8e381468ca99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a801a082e50fb24e923316de6bb851821"><td class="memItemLeft" align="right" valign="top">const DR_API char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#a801a082e50fb24e923316de6bb851821">dr_app_arg_as_cstring</a> (DR_PARAM_IN <a class="el" href="dr__os__utils_8h.html#adfdd1e3337ce543e3031abb445aaacb1">dr_app_arg_t</a> *app_arg, char *buf, int buf_size)</td></tr>
+<tr class="separator:a801a082e50fb24e923316de6bb851821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef60db347b52f1344c23b63bcb020ff6"><td class="memItemLeft" align="right" valign="top">const DR_API char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#aef60db347b52f1344c23b63bcb020ff6">dr_get_application_name</a> (void)</td></tr>
 <tr class="separator:aef60db347b52f1344c23b63bcb020ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af99715c7ad2497ad86f4769da0f19699"><td class="memItemLeft" align="right" valign="top">DR_API process_id_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#af99715c7ad2497ad86f4769da0f19699">dr_get_process_id</a> (void)</td></tr>
@@ -208,8 +208,8 @@ Functions</h2></td></tr>
 <tr class="separator:a168a1ed2722d1c2565a1b7dafd7f71c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82f81fc8e9e98890159586260d6f346f"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#a82f81fc8e9e98890159586260d6f346f">dr_query_memory</a> (const byte *pc, byte **base_pc, size_t *size, uint *prot)</td></tr>
 <tr class="separator:a82f81fc8e9e98890159586260d6f346f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64bc438e6114c0e6137d65e4c9a8beb6"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#a64bc438e6114c0e6137d65e4c9a8beb6">dr_query_memory_ex</a> (const byte *pc, OUT <a class="el" href="dr__os__utils_8h.html#a24463a9c32e3efac726c6fc9e97a77d6">dr_mem_info_t</a> *info)</td></tr>
-<tr class="separator:a64bc438e6114c0e6137d65e4c9a8beb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeaf2769862971f1611da30d8d39684a"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#aaeaf2769862971f1611da30d8d39684a">dr_query_memory_ex</a> (const byte *pc, DR_PARAM_OUT <a class="el" href="dr__os__utils_8h.html#a24463a9c32e3efac726c6fc9e97a77d6">dr_mem_info_t</a> *info)</td></tr>
+<tr class="separator:aaeaf2769862971f1611da30d8d39684a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51f56e0bb6afba732c92cff9855287c0"><td class="memItemLeft" align="right" valign="top">DR_API size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#a51f56e0bb6afba732c92cff9855287c0">dr_virtual_query</a> (const byte *pc, MEMORY_BASIC_INFORMATION *mbi, size_t mbi_size)</td></tr>
 <tr class="separator:a51f56e0bb6afba732c92cff9855287c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ceaf9328041825217ef55d2795cc177"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#a7ceaf9328041825217ef55d2795cc177">dr_safe_read</a> (const void *base, size_t size, void *out_buf, size_t *bytes_read)</td></tr>
@@ -488,7 +488,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Describes a memory region. Used by <a class="el" href="dr__os__utils_8h.html#a64bc438e6114c0e6137d65e4c9a8beb6">dr_query_memory_ex()</a>. </p>
+<p>Describes a memory region. Used by <a class="el" href="dr__os__utils_8h.html#aaeaf2769862971f1611da30d8d39684a">dr_query_memory_ex()</a>. </p>
 
 </div>
 </div>
@@ -540,7 +540,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Flags describing memory used by <a class="el" href="dr__os__utils_8h.html#a64bc438e6114c0e6137d65e4c9a8beb6">dr_query_memory_ex()</a>. </p>
+<p>Flags describing memory used by <a class="el" href="dr__os__utils_8h.html#aaeaf2769862971f1611da30d8d39684a">dr_query_memory_ex()</a>. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aff97be516bbb1aecdb6bd043841aaa10a60e91c7b948d92d08b74ee0cd50dee3d"></a>DR_MEMTYPE_FREE&#160;</td><td class="fielddoc"><p>No memory is allocated here </p>
 </td></tr>
@@ -639,8 +639,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a5a4bcecff5d7b6cb97c8e381468ca99c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a4bcecff5d7b6cb97c8e381468ca99c">&#9670;&nbsp;</a></span>dr_app_arg_as_cstring()</h2>
+<a id="a801a082e50fb24e923316de6bb851821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a801a082e50fb24e923316de6bb851821">&#9670;&nbsp;</a></span>dr_app_arg_as_cstring()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -648,7 +648,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">const DR_API char* dr_app_arg_as_cstring </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="dr__os__utils_8h.html#adfdd1e3337ce543e3031abb445aaacb1">dr_app_arg_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="dr__os__utils_8h.html#adfdd1e3337ce543e3031abb445aaacb1">dr_app_arg_t</a> *&#160;</td>
           <td class="paramname"><em>app_arg</em>, </td>
         </tr>
         <tr>
@@ -671,7 +671,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns the passed argument <code>app_arg</code> as a string. <code>buf</code> is used only if needed, and therefore the caller should not assume that the string is in the <code>buf</code>. In other words, always use the returned value to refer to the string. Returns NULL on error such as when <code>buf</code> is needed as storage and the size of the buffer <code>buf_size</code> is not sufficient.</p>
-<p>To obtain a suitable upper-bound size of the string buffer, get the size of the argument from the <a class="el" href="dr__os__utils_8h.html#adfdd1e3337ce543e3031abb445aaacb1">dr_app_arg_t</a> value retrieved via <a class="el" href="dr__os__utils_8h.html#a5af582761c71e103475166b24181bb4c">dr_get_app_args()</a>.</p>
+<p>To obtain a suitable upper-bound size of the string buffer, get the size of the argument from the <a class="el" href="dr__os__utils_8h.html#adfdd1e3337ce543e3031abb445aaacb1">dr_app_arg_t</a> value retrieved via <a class="el" href="dr__os__utils_8h.html#adf92b27aafaa8ee5d8959790a2735edb">dr_get_app_args()</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>Currently, this function is only available on Unix with early injection.</dd>
 <dd>
 An error code may be obtained via <a class="el" href="dr__tools_8h.html#a908074540820a8140bbc46cb3c020778">dr_get_error_code()</a> when this routine fails. </dd></dl>
@@ -718,8 +718,8 @@ An error code may be obtained via <a class="el" href="dr__tools_8h.html#a9080745
 
 </div>
 </div>
-<a id="a5af582761c71e103475166b24181bb4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5af582761c71e103475166b24181bb4c">&#9670;&nbsp;</a></span>dr_get_app_args()</h2>
+<a id="adf92b27aafaa8ee5d8959790a2735edb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf92b27aafaa8ee5d8959790a2735edb">&#9670;&nbsp;</a></span>dr_get_app_args()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -727,7 +727,7 @@ An error code may be obtained via <a class="el" href="dr__tools_8h.html#a9080745
         <tr>
           <td class="memname">DR_API int dr_get_app_args </td>
           <td>(</td>
-          <td class="paramtype">OUT <a class="el" href="dr__os__utils_8h.html#adfdd1e3337ce543e3031abb445aaacb1">dr_app_arg_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT <a class="el" href="dr__os__utils_8h.html#adfdd1e3337ce543e3031abb445aaacb1">dr_app_arg_t</a> *&#160;</td>
           <td class="paramname"><em>args_array</em>, </td>
         </tr>
         <tr>
@@ -744,7 +744,7 @@ An error code may be obtained via <a class="el" href="dr__tools_8h.html#a9080745
       </table>
 </div><div class="memdoc">
 <p>Provides information about the app's arguments by setting <code>args_array</code> up to the count denoted by <code>args_count</code>. Therefore, <code>args_count</code> is not the size of the buffer in bytes but the number of <a class="el" href="dr__os__utils_8h.html#adfdd1e3337ce543e3031abb445aaacb1">dr_app_arg_t</a> values that <code>args_array</code> can store. Returns the number of args set or -1 on error.</p>
-<p>Use <a class="el" href="dr__os__utils_8h.html#a5a4bcecff5d7b6cb97c8e381468ca99c">dr_app_arg_as_cstring()</a> to get the argument as a string.</p>
+<p>Use <a class="el" href="dr__os__utils_8h.html#a801a082e50fb24e923316de6bb851821">dr_app_arg_as_cstring()</a> to get the argument as a string.</p>
 <p>Use <a class="el" href="dr__os__utils_8h.html#af0f7565b305ddec7732dc8014e5cc152">dr_num_app_args()</a> to query the total number of command-line arguments passed to the application.</p>
 <dl class="section note"><dt>Note</dt><dd>Currently, this function is only available on Unix with early injection.</dd>
 <dd>
@@ -1141,8 +1141,8 @@ DR may mark writable code pages as read-only but pretend they're writable. When 
 
 </div>
 </div>
-<a id="a64bc438e6114c0e6137d65e4c9a8beb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64bc438e6114c0e6137d65e4c9a8beb6">&#9670;&nbsp;</a></span>dr_query_memory_ex()</h2>
+<a id="aaeaf2769862971f1611da30d8d39684a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeaf2769862971f1611da30d8d39684a">&#9670;&nbsp;</a></span>dr_query_memory_ex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1156,7 +1156,7 @@ DR may mark writable code pages as read-only but pretend they're writable. When 
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT <a class="el" href="dr__os__utils_8h.html#a24463a9c32e3efac726c6fc9e97a77d6">dr_mem_info_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT <a class="el" href="dr__os__utils_8h.html#a24463a9c32e3efac726c6fc9e97a77d6">dr_mem_info_t</a> *&#160;</td>
           <td class="paramname"><em>info</em>&#160;</td>
         </tr>
         <tr>
@@ -1507,7 +1507,7 @@ DR may mark writable code pages as read-only but pretend they're writable. When 
 </div><div class="memdoc">
 <p>Equivalent to the win32 API function VirtualQuery(). See that routine for a description of arguments and return values. </p><dl class="section note"><dt>Note</dt><dd>Windows only.</dd>
 <dd>
-DR may mark writable code pages as read-only but pretend they're writable. When this happens, this routine will indicate that the memory is writable. Call <a class="el" href="dr__os__utils_8h.html#a82f81fc8e9e98890159586260d6f346f">dr_query_memory()</a> or <a class="el" href="dr__os__utils_8h.html#a64bc438e6114c0e6137d65e4c9a8beb6">dr_query_memory_ex()</a> before attempting to write to application memory to ensure it's not read-only underneath. </dd></dl>
+DR may mark writable code pages as read-only but pretend they're writable. When this happens, this routine will indicate that the memory is writable. Call <a class="el" href="dr__os__utils_8h.html#a82f81fc8e9e98890159586260d6f346f">dr_query_memory()</a> or <a class="el" href="dr__os__utils_8h.html#aaeaf2769862971f1611da30d8d39684a">dr_query_memory_ex()</a> before attempting to write to application memory to ensure it's not read-only underneath. </dd></dl>
 
 </div>
 </div>
@@ -1519,5 +1519,5 @@ DR may mark writable code pages as read-only but pretend they're writable. When 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19671 --- Fri Nov 10 2023 03:15:13 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19678 --- Fri Nov 17 2023 03:12:58 &nbsp; <img border=0 src="favicon.png">
 </small></address>

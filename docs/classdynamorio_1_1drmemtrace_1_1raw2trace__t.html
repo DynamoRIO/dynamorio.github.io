@@ -38,25 +38,25 @@ permalink: /classdynamorio_1_1drmemtrace_1_1raw2trace__t.html
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a61939f09b84ea109bf51c1a0148de56e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a61939f09b84ea109bf51c1a0148de56e">handle_custom_data</a> (const char *(*parse_cb)(const char *src, OUT void **data), std::string(*process_cb)(<a class="el" href="group__drcovlib.html#ga70dd4ae0fcab1e7c8c090977eeeefa02">drmodtrack_info_t</a> *info, void *data, void *user_data), void *process_cb_user_data, void(*free_cb)(void *data))</td></tr>
-<tr class="separator:a61939f09b84ea109bf51c1a0148de56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5150d6f82583b9188c856d49e147b087"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a5150d6f82583b9188c856d49e147b087">handle_custom_data</a> (const char *(*parse_cb)(const char *src, DR_PARAM_OUT void **data), std::string(*process_cb)(<a class="el" href="group__drcovlib.html#ga70dd4ae0fcab1e7c8c090977eeeefa02">drmodtrack_info_t</a> *info, void *data, void *user_data), void *process_cb_user_data, void(*free_cb)(void *data))</td></tr>
+<tr class="separator:a5150d6f82583b9188c856d49e147b087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3f874404ab4775be97a51499dd1d55e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#af3f874404ab4775be97a51499dd1d55e">do_module_parsing</a> ()</td></tr>
 <tr class="separator:af3f874404ab4775be97a51499dd1d55e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf37e4a9abaaaec9361b50cb90507323"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#adf37e4a9abaaaec9361b50cb90507323">do_module_parsing_and_mapping</a> ()</td></tr>
 <tr class="separator:adf37e4a9abaaaec9361b50cb90507323"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab281b88f9fcd49b3aae8fdc8138a4fd7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ab281b88f9fcd49b3aae8fdc8138a4fd7">find_mapped_trace_address</a> (app_pc trace_address, OUT app_pc *mapped_address)</td></tr>
-<tr class="separator:ab281b88f9fcd49b3aae8fdc8138a4fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13cb114025e727b1580ebe238a794eae"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a13cb114025e727b1580ebe238a794eae">find_mapped_trace_address</a> (app_pc trace_address, DR_PARAM_OUT app_pc *mapped_address)</td></tr>
+<tr class="separator:a13cb114025e727b1580ebe238a794eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d2da19abbafbb382f11dd0a7790749f"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a4d2da19abbafbb382f11dd0a7790749f">do_conversion</a> ()</td></tr>
 <tr class="separator:a4d2da19abbafbb382f11dd0a7790749f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:af9e1574ba3d8ac1bb65e16df7a23b8cf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#af9e1574ba3d8ac1bb65e16df7a23b8cf">process_offline_entry</a> (raw2trace_thread_data_t *tdata, const offline_entry_t *in_entry, thread_id_t tid, OUT bool *end_of_record, OUT bool *last_bb_handled, OUT bool *flush_decode_cache)</td></tr>
-<tr class="separator:af9e1574ba3d8ac1bb65e16df7a23b8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a099d21e75bb9899d8374c8bf1cf0e1f9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a099d21e75bb9899d8374c8bf1cf0e1f9">process_marker_additionally</a> (raw2trace_thread_data_t *tdata, <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295c">trace_marker_type_t</a> marker_type, uintptr_t marker_val, byte *&amp;buf, OUT bool *flush_decode_cache)</td></tr>
-<tr class="separator:a099d21e75bb9899d8374c8bf1cf0e1f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26f53db80f97ca24e7e8d09edff95b9b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a26f53db80f97ca24e7e8d09edff95b9b">read_header</a> (raw2trace_thread_data_t *tdata, OUT <a class="el" href="structdynamorio_1_1drmemtrace_1_1trace__header__t.html">trace_header_t</a> *header)</td></tr>
-<tr class="separator:a26f53db80f97ca24e7e8d09edff95b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4f6f6f247a72c0e1a1cd27196381a6a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ac4f6f6f247a72c0e1a1cd27196381a6a">process_offline_entry</a> (raw2trace_thread_data_t *tdata, const offline_entry_t *in_entry, thread_id_t tid, DR_PARAM_OUT bool *end_of_record, DR_PARAM_OUT bool *last_bb_handled, DR_PARAM_OUT bool *flush_decode_cache)</td></tr>
+<tr class="separator:ac4f6f6f247a72c0e1a1cd27196381a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ff89209c8224d4de764fbe92ee86143"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a3ff89209c8224d4de764fbe92ee86143">process_marker_additionally</a> (raw2trace_thread_data_t *tdata, <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295c">trace_marker_type_t</a> marker_type, uintptr_t marker_val, byte *&amp;buf, DR_PARAM_OUT bool *flush_decode_cache)</td></tr>
+<tr class="separator:a3ff89209c8224d4de764fbe92ee86143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a296eb19535563da011525fdde5d22369"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a296eb19535563da011525fdde5d22369">read_header</a> (raw2trace_thread_data_t *tdata, DR_PARAM_OUT <a class="el" href="structdynamorio_1_1drmemtrace_1_1trace__header__t.html">trace_header_t</a> *header)</td></tr>
+<tr class="separator:a296eb19535563da011525fdde5d22369"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5d746b7e5b7a6199a800f09966c7658"><td class="memItemLeft" align="right" valign="top">virtual const offline_entry_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ab5d746b7e5b7a6199a800f09966c7658">get_next_entry</a> (raw2trace_thread_data_t *tdata)</td></tr>
 <tr class="separator:ab5d746b7e5b7a6199a800f09966c7658"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a948c0f69e1b899be24ff096ea26de881"><td class="memItemLeft" align="right" valign="top">virtual const offline_entry_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a948c0f69e1b899be24ff096ea26de881">get_next_entry_keep_prior</a> (raw2trace_thread_data_t *tdata)</td></tr>
@@ -67,8 +67,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a984ec1b674ac2f398600ab0a8ce918d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7aa5005defa3e5e815e1d092ef4a2bf0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a7aa5005defa3e5e815e1d092ef4a2bf0">log_instruction</a> (uint level, app_pc decode_pc, app_pc orig_pc)</td></tr>
 <tr class="separator:a7aa5005defa3e5e815e1d092ef4a2bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25faffa88666768f4974f3bc2637a96a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a25faffa88666768f4974f3bc2637a96a">process_next_thread_buffer</a> (raw2trace_thread_data_t *tdata, OUT bool *end_of_record)</td></tr>
-<tr class="separator:a25faffa88666768f4974f3bc2637a96a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f00d9f03c626c96f9ff32678164b92"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a99f00d9f03c626c96f9ff32678164b92">process_next_thread_buffer</a> (raw2trace_thread_data_t *tdata, DR_PARAM_OUT bool *end_of_record)</td></tr>
+<tr class="separator:a99f00d9f03c626c96f9ff32678164b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b23bb0d332c07aaa0cc15b6cdfc16c1"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; module_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a7b23bb0d332c07aaa0cc15b6cdfc16c1">modvec_</a> () const</td></tr>
 <tr class="separator:a7b23bb0d332c07aaa0cc15b6cdfc16c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad54f20f0cb2c70e538f4a551ad76ed59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ad54f20f0cb2c70e538f4a551ad76ed59">set_modvec_</a> (const std::vector&lt; module_t &gt; *modvec)</td></tr>
@@ -135,7 +135,7 @@ Static Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Performs the first step of <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a4d2da19abbafbb382f11dd0a7790749f">do_conversion()</a> without further action: parses and iterates over the list of modules. This is provided to give the user a method for iterating modules in the presence of the custom field used by drmemtrace that prevents direct use of <a class="el" href="group__drcovlib.html#ga56c631d77cd329a831116424204a2011">drmodtrack_offline_read()</a>. On success, calls the <code>process_cb</code> function passed to <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a61939f09b84ea109bf51c1a0148de56e">handle_custom_data()</a> for every module in the list, and returns an empty string at the end. Returns a non-empty error message on failure.</p>
+<p>Performs the first step of <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a4d2da19abbafbb382f11dd0a7790749f">do_conversion()</a> without further action: parses and iterates over the list of modules. This is provided to give the user a method for iterating modules in the presence of the custom field used by drmemtrace that prevents direct use of <a class="el" href="group__drcovlib.html#ga9185bf2631bd142ad91220a5e0f49dfe">drmodtrack_offline_read()</a>. On success, calls the <code>process_cb</code> function passed to <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a5150d6f82583b9188c856d49e147b087">handle_custom_data()</a> for every module in the list, and returns an empty string at the end. Returns a non-empty error message on failure.</p>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd><a class="el" href="classdynamorio_1_1drmemtrace_1_1module__mapper__t.html">dynamorio::drmemtrace::module_mapper_t</a> should be used instead. </dd></dl>
 
 </div>
@@ -154,13 +154,13 @@ Static Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This interface is meant to be used with a final trace rather than a raw trace, using the module log file saved from the raw2trace conversion. This routine first calls <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#af3f874404ab4775be97a51499dd1d55e">do_module_parsing()</a> and then maps each module into the current address space, allowing the user to augment the instruction information in the trace with additional information by decoding the instruction bytes. The routine <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ab281b88f9fcd49b3aae8fdc8138a4fd7">find_mapped_trace_address()</a> should be used to convert from memref_t.instr.addr to the corresponding mapped address in the current process. Returns a non-empty error message on failure.</p>
+<p>This interface is meant to be used with a final trace rather than a raw trace, using the module log file saved from the raw2trace conversion. This routine first calls <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#af3f874404ab4775be97a51499dd1d55e">do_module_parsing()</a> and then maps each module into the current address space, allowing the user to augment the instruction information in the trace with additional information by decoding the instruction bytes. The routine <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a13cb114025e727b1580ebe238a794eae">find_mapped_trace_address()</a> should be used to convert from memref_t.instr.addr to the corresponding mapped address in the current process. Returns a non-empty error message on failure.</p>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd><a class="el" href="classdynamorio_1_1drmemtrace_1_1module__mapper__t.html#a2f354f5e63bb425d729ef5b1a34d13a8">dynamorio::drmemtrace::module_mapper_t::get_loaded_modules()</a> should be used instead. </dd></dl>
 
 </div>
 </div>
-<a id="ab281b88f9fcd49b3aae8fdc8138a4fd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab281b88f9fcd49b3aae8fdc8138a4fd7">&#9670;&nbsp;</a></span>find_mapped_trace_address()</h2>
+<a id="a13cb114025e727b1580ebe238a794eae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13cb114025e727b1580ebe238a794eae">&#9670;&nbsp;</a></span>find_mapped_trace_address()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,7 +174,7 @@ Static Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT app_pc *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT app_pc *&#160;</td>
           <td class="paramname"><em>mapped_address</em>&#160;</td>
         </tr>
         <tr>
@@ -243,8 +243,8 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a61939f09b84ea109bf51c1a0148de56e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61939f09b84ea109bf51c1a0148de56e">&#9670;&nbsp;</a></span>handle_custom_data()</h2>
+<a id="a5150d6f82583b9188c856d49e147b087"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5150d6f82583b9188c856d49e147b087">&#9670;&nbsp;</a></span>handle_custom_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -252,7 +252,7 @@ Static Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">std::string dynamorio::drmemtrace::raw2trace_t::handle_custom_data </td>
           <td>(</td>
-          <td class="paramtype">const char *(*)(const char *src, OUT void **data)&#160;</td>
+          <td class="paramtype">const char *(*)(const char *src, DR_PARAM_OUT void **data)&#160;</td>
           <td class="paramname"><em>parse_cb</em>, </td>
         </tr>
         <tr>
@@ -281,7 +281,7 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Adds handling for custom data fields that were stored with each module via <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae928b4aceb19475c965eb8de4d7ca07a">drmemtrace_custom_module_data()</a> during trace generation. When <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a4d2da19abbafbb382f11dd0a7790749f">do_conversion()</a> or <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#af3f874404ab4775be97a51499dd1d55e">do_module_parsing()</a> is subsequently called, its parsing of the module data will invoke <code>parse_cb</code>, which should advance the module data pointer passed in <code>src</code> and return it as its return value (or nullptr on error), returning the resulting parsed data in <code>data</code>. The <code>data</code> pointer will later be passed to both <code>process_cb</code>, which can update the module path inside <code>info</code> (and return a non-empty string on error), and <b>free_cb</b>, which can perform cleanup.</p>
-<p>A custom callback value <code>process_cb_user_data</code> can be passed to <code>process_cb</code>. The same is not provided for the other callbacks as they end up using the <a class="el" href="group__drcovlib.html#ga9c2889006a80254645521f81a1a486f5">drmodtrack_add_custom_data()</a> framework where there is no support for custom callback parameters.</p>
+<p>A custom callback value <code>process_cb_user_data</code> can be passed to <code>process_cb</code>. The same is not provided for the other callbacks as they end up using the <a class="el" href="group__drcovlib.html#ga33bf1c08f5e69e18e8450652928e0c66">drmodtrack_add_custom_data()</a> framework where there is no support for custom callback parameters.</p>
 <p>Returns a non-empty error message on failure. </p>
 
 </div>
@@ -478,8 +478,8 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a099d21e75bb9899d8374c8bf1cf0e1f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a099d21e75bb9899d8374c8bf1cf0e1f9">&#9670;&nbsp;</a></span>process_marker_additionally()</h2>
+<a id="a3ff89209c8224d4de764fbe92ee86143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ff89209c8224d4de764fbe92ee86143">&#9670;&nbsp;</a></span>process_marker_additionally()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -514,7 +514,7 @@ Static Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT bool *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT bool *&#160;</td>
           <td class="paramname"><em>flush_decode_cache</em>&#160;</td>
         </tr>
         <tr>
@@ -533,8 +533,8 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a25faffa88666768f4974f3bc2637a96a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25faffa88666768f4974f3bc2637a96a">&#9670;&nbsp;</a></span>process_next_thread_buffer()</h2>
+<a id="a99f00d9f03c626c96f9ff32678164b92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99f00d9f03c626c96f9ff32678164b92">&#9670;&nbsp;</a></span>process_next_thread_buffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -551,7 +551,7 @@ Static Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT bool *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT bool *&#160;</td>
           <td class="paramname"><em>end_of_record</em>&#160;</td>
         </tr>
         <tr>
@@ -570,8 +570,8 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af9e1574ba3d8ac1bb65e16df7a23b8cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9e1574ba3d8ac1bb65e16df7a23b8cf">&#9670;&nbsp;</a></span>process_offline_entry()</h2>
+<a id="ac4f6f6f247a72c0e1a1cd27196381a6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4f6f6f247a72c0e1a1cd27196381a6a">&#9670;&nbsp;</a></span>process_offline_entry()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -600,19 +600,19 @@ Static Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT bool *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT bool *&#160;</td>
           <td class="paramname"><em>end_of_record</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT bool *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT bool *&#160;</td>
           <td class="paramname"><em>last_bb_handled</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT bool *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT bool *&#160;</td>
           <td class="paramname"><em>flush_decode_cache</em>&#160;</td>
         </tr>
         <tr>
@@ -631,8 +631,8 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a26f53db80f97ca24e7e8d09edff95b9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26f53db80f97ca24e7e8d09edff95b9b">&#9670;&nbsp;</a></span>read_header()</h2>
+<a id="a296eb19535563da011525fdde5d22369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a296eb19535563da011525fdde5d22369">&#9670;&nbsp;</a></span>read_header()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -649,7 +649,7 @@ Static Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT <a class="el" href="structdynamorio_1_1drmemtrace_1_1trace__header__t.html">trace_header_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT <a class="el" href="structdynamorio_1_1drmemtrace_1_1trace__header__t.html">trace_header_t</a> *&#160;</td>
           <td class="paramname"><em>header</em>&#160;</td>
         </tr>
         <tr>
@@ -691,7 +691,7 @@ Static Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set the module mapper. Must be called before <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#af9e1574ba3d8ac1bb65e16df7a23b8cf">process_offline_entry()</a> is called. </p>
+<p>Set the module mapper. Must be called before <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ac4f6f6f247a72c0e1a1cd27196381a6a">process_offline_entry()</a> is called. </p>
 
 </div>
 </div>
@@ -718,7 +718,7 @@ Static Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set the module map. Must be called before <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#af9e1574ba3d8ac1bb65e16df7a23b8cf">process_offline_entry()</a> is called. </p>
+<p>Set the module map. Must be called before <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ac4f6f6f247a72c0e1a1cd27196381a6a">process_offline_entry()</a> is called. </p>
 
 </div>
 </div>
@@ -801,5 +801,5 @@ Static Protected Attributes</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19671 --- Fri Nov 10 2023 03:15:14 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19678 --- Fri Nov 17 2023 03:12:59 &nbsp; <img border=0 src="favicon.png">
 </small></address>

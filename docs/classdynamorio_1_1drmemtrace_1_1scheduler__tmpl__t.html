@@ -100,7 +100,11 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr class="separator:afb65a4beaa27ae26649738d2e565c0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a820df460b5bb4bf9f9972ddb7d21f5d9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9">inter_input_dependency_t</a> { <br />
-&#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9af3b4cadcd03eac1003ccd1aced5e2823">DEPENDENCY_IGNORE</a>, 
+&#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9af3b4cadcd03eac1003ccd1aced5e2823">DEPENDENCY_IGNORE</a> = 0x00, 
+<br />
+&#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9a0e69c8a9019491dec9ae148b78530458">DEPENDENCY_TIMESTAMPS_BITFIELD</a> = 0x01, 
+<br />
+&#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9ab9576e2720f95250d9a35fee2e177aeb">DEPENDENCY_DIRECT_SWITCH_BITFIELD</a> = 0x02, 
 <br />
 &#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9afa1e39bbc41fe11cc3bbbd36b2a13e6e">DEPENDENCY_TIMESTAMPS</a>
 <br />
@@ -219,11 +223,15 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Flags specifying how inter-input-stream dependencies are handled. </p>
+<p>Flags specifying how inter-input-stream dependencies are handled. The _BITFIELD values can be combined. Typical combinations are provided so the enum type can be used directly. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a820df460b5bb4bf9f9972ddb7d21f5d9af3b4cadcd03eac1003ccd1aced5e2823"></a>DEPENDENCY_IGNORE&#160;</td><td class="fielddoc"><p>Ignores all inter-input dependencies. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a820df460b5bb4bf9f9972ddb7d21f5d9afa1e39bbc41fe11cc3bbbd36b2a13e6e"></a>DEPENDENCY_TIMESTAMPS&#160;</td><td class="fielddoc"><p>Ensures timestamps in the inputs arrive at the outputs in timestamp order. For <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#afb65a4beaa27ae26649738d2e565c0ccaba192b7d617035b922db1f3960154406">MAP_TO_ANY_OUTPUT</a>, enforcing asked-for context switch rates is more important that honoring precise trace-buffer-based timestamp inter-input dependencies: thus, timestamp ordering will be followed at context switch points for picking the next input, but timestamps will not preempt an input. To precisely follow the recorded timestamps, use <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#afb65a4beaa27ae26649738d2e565c0cca62587c4b17b1c7e6f3ad49bb3747b2be">MAP_TO_RECORDED_OUTPUT</a>. </p>
+<tr><td class="fieldname"><a id="a820df460b5bb4bf9f9972ddb7d21f5d9a0e69c8a9019491dec9ae148b78530458"></a>DEPENDENCY_TIMESTAMPS_BITFIELD&#160;</td><td class="fielddoc"><p>Ensures timestamps in the inputs arrive at the outputs in timestamp order. For <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#afb65a4beaa27ae26649738d2e565c0ccaba192b7d617035b922db1f3960154406">MAP_TO_ANY_OUTPUT</a>, enforcing asked-for context switch rates is more important that honoring precise trace-buffer-based timestamp inter-input dependencies: thus, timestamp ordering will be followed at context switch points for picking the next input, but timestamps will not preempt an input. To precisely follow the recorded timestamps, use <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#afb65a4beaa27ae26649738d2e565c0cca62587c4b17b1c7e6f3ad49bb3747b2be">MAP_TO_RECORDED_OUTPUT</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a820df460b5bb4bf9f9972ddb7d21f5d9ab9576e2720f95250d9a35fee2e177aeb"></a>DEPENDENCY_DIRECT_SWITCH_BITFIELD&#160;</td><td class="fielddoc"><p>Ensures timestamps in the inputs arrive at the outputs in timestamp order. For <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#afb65a4beaa27ae26649738d2e565c0ccaba192b7d617035b922db1f3960154406">MAP_TO_ANY_OUTPUT</a>, enforcing asked-for context switch rates is more important that honoring precise trace-buffer-based timestamp inter-input dependencies: thus, timestamp ordering will be followed at context switch points for picking the next input, but timestamps will not preempt an input. To precisely follow the recorded timestamps, use <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#afb65a4beaa27ae26649738d2e565c0cca62587c4b17b1c7e6f3ad49bb3747b2be">MAP_TO_RECORDED_OUTPUT</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a820df460b5bb4bf9f9972ddb7d21f5d9afa1e39bbc41fe11cc3bbbd36b2a13e6e"></a>DEPENDENCY_TIMESTAMPS&#160;</td><td class="fielddoc"><p>Combines <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9a0e69c8a9019491dec9ae148b78530458">DEPENDENCY_TIMESTAMPS_BITFIELD</a> and <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9ab9576e2720f95250d9a35fee2e177aeb">DEPENDENCY_DIRECT_SWITCH_BITFIELD</a>. This is the recommended setting for most schedules. </p>
 </td></tr>
 </table>
 
@@ -730,5 +738,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19671 --- Fri Nov 10 2023 03:15:15 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19678 --- Fri Nov 17 2023 03:12:59 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -130,8 +130,8 @@ Functions</h2></td></tr>
 <tr class="separator:a34911adad5e409df66fe151149bfc344"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb571b80307fd90538cb006725ab6183"><td class="memItemLeft" align="right" valign="top">DR_API generic_func_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__modules_8h.html#acb571b80307fd90538cb006725ab6183">dr_get_proc_address</a> (module_handle_t lib, const char *name)</td></tr>
 <tr class="separator:acb571b80307fd90538cb006725ab6183"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc5a9cbb5954c2e7159c8a3b25dbf110"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__modules_8h.html#acc5a9cbb5954c2e7159c8a3b25dbf110">dr_get_proc_address_ex</a> (module_handle_t lib, const char *name, <a class="el" href="dr__modules_8h.html#a94621cb1df98261b4ae717b22c19023e">dr_export_info_t</a> *info OUT, size_t info_len)</td></tr>
-<tr class="separator:acc5a9cbb5954c2e7159c8a3b25dbf110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d6cd432835bd1de840fc02806f0b522"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__modules_8h.html#a0d6cd432835bd1de840fc02806f0b522">dr_get_proc_address_ex</a> (module_handle_t lib, const char *name, <a class="el" href="dr__modules_8h.html#a94621cb1df98261b4ae717b22c19023e">dr_export_info_t</a> *info DR_PARAM_OUT, size_t info_len)</td></tr>
+<tr class="separator:a0d6cd432835bd1de840fc02806f0b522"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Application module (library) querying routines. </p>
@@ -147,7 +147,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Data structure used by <a class="el" href="dr__modules_8h.html#acc5a9cbb5954c2e7159c8a3b25dbf110">dr_get_proc_address_ex()</a> to retrieve information about an exported symbol. </p>
+<p>Data structure used by <a class="el" href="dr__modules_8h.html#a0d6cd432835bd1de840fc02806f0b522">dr_get_proc_address_ex()</a> to retrieve information about an exported symbol. </p>
 
 </div>
 </div>
@@ -348,12 +348,12 @@ Functions</h2></td></tr>
 <p>On Linux, when we say "exported" we mean present in the dynamic symbol table (.dynsym). Global functions and variables in an executable (as opposed to a library) are not exported by default. If an executable is built with the <code>-rdynamic</code> flag to <code>gcc</code>, its global symbols will be present in .dynsym and <a class="el" href="dr__modules_8h.html#acb571b80307fd90538cb006725ab6183">dr_get_proc_address()</a> will locate them. Otherwise, the drsyms Extension (see <a class="el" href="page_drsyms.html">Symbol Access Library</a>) must be used to locate the symbols. drsyms searches the debug symbol table (.symtab) in addition to .dynsym.</p>
 <dl class="section note"><dt>Note</dt><dd>On Linux this ignores symbol preemption by other modules and only examines the specified module. </dd>
 <dd>
-On Linux, in order to handle indirect code objects, use <a class="el" href="dr__modules_8h.html#acc5a9cbb5954c2e7159c8a3b25dbf110">dr_get_proc_address_ex()</a>. </dd></dl>
+On Linux, in order to handle indirect code objects, use <a class="el" href="dr__modules_8h.html#a0d6cd432835bd1de840fc02806f0b522">dr_get_proc_address_ex()</a>. </dd></dl>
 
 </div>
 </div>
-<a id="acc5a9cbb5954c2e7159c8a3b25dbf110"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc5a9cbb5954c2e7159c8a3b25dbf110">&#9670;&nbsp;</a></span>dr_get_proc_address_ex()</h2>
+<a id="a0d6cd432835bd1de840fc02806f0b522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d6cd432835bd1de840fc02806f0b522">&#9670;&nbsp;</a></span>dr_get_proc_address_ex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -374,7 +374,7 @@ On Linux, in order to handle indirect code objects, use <a class="el" href="dr__
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="dr__modules_8h.html#a94621cb1df98261b4ae717b22c19023e">dr_export_info_t</a> *info&#160;</td>
-          <td class="paramname"><em>OUT</em>, </td>
+          <td class="paramname"><em>DR_PARAM_OUT</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -893,5 +893,5 @@ On Linux, in order to handle indirect code objects, use <a class="el" href="dr__
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19671 --- Fri Nov 10 2023 03:15:13 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19678 --- Fri Nov 17 2023 03:12:58 &nbsp; <img border=0 src="favicon.png">
 </small></address>

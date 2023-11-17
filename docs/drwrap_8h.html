@@ -143,12 +143,12 @@ Functions</h2></td></tr>
 <tr class="separator:ga87ab96ab2d3c5cc33480693266b33249"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadadab62f67c3e8198762776012a66fce"><td class="memItemLeft" align="right" valign="top">DR_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#gadadab62f67c3e8198762776012a66fce">drwrap_replace_native_fini</a> (void *drcontext)</td></tr>
 <tr class="separator:gadadab62f67c3e8198762776012a66fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4c004987daae07af15f2146c2d7d4b09"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga4c004987daae07af15f2146c2d7d4b09">drwrap_wrap</a> (app_pc func, void(*pre_func_cb)(void *wrapcxt, OUT void **user_data), void(*post_func_cb)(void *wrapcxt, void *user_data))</td></tr>
-<tr class="separator:ga4c004987daae07af15f2146c2d7d4b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga14db611e4346e695e930ca0b710b598a"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga14db611e4346e695e930ca0b710b598a">drwrap_wrap_ex</a> (app_pc func, void(*pre_func_cb)(void *wrapcxt, INOUT void **user_data), void(*post_func_cb)(void *wrapcxt, void *user_data), void *user_data, uint flags)</td></tr>
-<tr class="separator:ga14db611e4346e695e930ca0b710b598a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga27894370f3da794ff3f31cb8d7ec079b"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga27894370f3da794ff3f31cb8d7ec079b">drwrap_unwrap</a> (app_pc func, void(*pre_func_cb)(void *wrapcxt, OUT void **user_data), void(*post_func_cb)(void *wrapcxt, void *user_data))</td></tr>
-<tr class="separator:ga27894370f3da794ff3f31cb8d7ec079b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11d9a64732099e298a35dd414c400667"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga11d9a64732099e298a35dd414c400667">drwrap_wrap</a> (app_pc func, void(*pre_func_cb)(void *wrapcxt, DR_PARAM_OUT void **user_data), void(*post_func_cb)(void *wrapcxt, void *user_data))</td></tr>
+<tr class="separator:ga11d9a64732099e298a35dd414c400667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4fd091d92ccf71458315940e8da90c9"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#gad4fd091d92ccf71458315940e8da90c9">drwrap_wrap_ex</a> (app_pc func, void(*pre_func_cb)(void *wrapcxt, DR_PARAM_INOUT void **user_data), void(*post_func_cb)(void *wrapcxt, void *user_data), void *user_data, uint flags)</td></tr>
+<tr class="separator:gad4fd091d92ccf71458315940e8da90c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga849a1f3998fdbf79da7ac21be1d7d397"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga849a1f3998fdbf79da7ac21be1d7d397">drwrap_unwrap</a> (app_pc func, void(*pre_func_cb)(void *wrapcxt, DR_PARAM_OUT void **user_data), void(*post_func_cb)(void *wrapcxt, void *user_data))</td></tr>
+<tr class="separator:ga849a1f3998fdbf79da7ac21be1d7d397"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga92584c3e1980ac0c467de7d14d2bc2a2"><td class="memItemLeft" align="right" valign="top">DR_EXPORT app_pc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga92584c3e1980ac0c467de7d14d2bc2a2">drwrap_get_drcontext</a> (void *wrapcxt)</td></tr>
 <tr class="separator:ga92584c3e1980ac0c467de7d14d2bc2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga106eb283e97c560a0118b8da211b7f1a"><td class="memItemLeft" align="right" valign="top">DR_EXPORT app_pc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga106eb283e97c560a0118b8da211b7f1a">drwrap_get_func</a> (void *wrapcxt)</td></tr>
@@ -183,14 +183,14 @@ Functions</h2></td></tr>
 <tr class="separator:ga61b97c33203c704dd8ff1b9d31b3d2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae2cc2affaf879182ba4d92299704c65f"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#gae2cc2affaf879182ba4d92299704c65f">drwrap_set_global_flags</a> (<a class="el" href="group__drwrap.html#gab82c71baab4fe0c5f9962383818b9c92">drwrap_global_flags_t</a> flags)</td></tr>
 <tr class="separator:gae2cc2affaf879182ba4d92299704c65f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga01e56e9bac8f584fe25e806a24769d50"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga01e56e9bac8f584fe25e806a24769d50">drwrap_is_wrapped</a> (app_pc func, void(*pre_func_cb)(void *wrapcxt, OUT void **user_data), void(*post_func_cb)(void *wrapcxt, void *user_data))</td></tr>
-<tr class="separator:ga01e56e9bac8f584fe25e806a24769d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7bb4a7984ff3b79a5ddf61612dc7d7e7"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga7bb4a7984ff3b79a5ddf61612dc7d7e7">drwrap_is_wrapped</a> (app_pc func, void(*pre_func_cb)(void *wrapcxt, DR_PARAM_OUT void **user_data), void(*post_func_cb)(void *wrapcxt, void *user_data))</td></tr>
+<tr class="separator:ga7bb4a7984ff3b79a5ddf61612dc7d7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga16fc2d260f5ebead724d5eb98bf13ac2"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga16fc2d260f5ebead724d5eb98bf13ac2">drwrap_is_post_wrap</a> (app_pc pc)</td></tr>
 <tr class="separator:ga16fc2d260f5ebead724d5eb98bf13ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaff958909001824afeeaee334dc612e51"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#gaff958909001824afeeaee334dc612e51">drwrap_get_stats</a> (INOUT <a class="el" href="group__drwrap.html#ga6f6dc4aedef59ad64117973f081fd903">drwrap_stats_t</a> *stats)</td></tr>
-<tr class="separator:gaff958909001824afeeaee334dc612e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga96dd87016481cbe04b285297557ef633"><td class="memItemLeft" align="right" valign="top">DR_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga96dd87016481cbe04b285297557ef633">drwrap_get_retaddr_if_sentinel</a> (void *drcontext, INOUT app_pc *possibly_sentinel)</td></tr>
-<tr class="separator:ga96dd87016481cbe04b285297557ef633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad10811a375941191e1f6aee228fd3583"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#gad10811a375941191e1f6aee228fd3583">drwrap_get_stats</a> (DR_PARAM_OUT <a class="el" href="group__drwrap.html#ga6f6dc4aedef59ad64117973f081fd903">drwrap_stats_t</a> *stats)</td></tr>
+<tr class="separator:gad10811a375941191e1f6aee228fd3583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae6844dde3b4d364fbeefa9cb5a5f490e"><td class="memItemLeft" align="right" valign="top">DR_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#gae6844dde3b4d364fbeefa9cb5a5f490e">drwrap_get_retaddr_if_sentinel</a> (void *drcontext, DR_PARAM_INOUT app_pc *possibly_sentinel)</td></tr>
+<tr class="separator:gae6844dde3b4d364fbeefa9cb5a5f490e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header for DynamoRIO Function Wrapping and Replacing Extension. </p>
@@ -200,5 +200,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19671 --- Fri Nov 10 2023 03:15:13 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19678 --- Fri Nov 17 2023 03:12:58 &nbsp; <img border=0 src="favicon.png">
 </small></address>

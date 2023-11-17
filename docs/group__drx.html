@@ -91,12 +91,12 @@ Functions</h2></td></tr>
 <tr class="separator:ga2f2b2e6468760cdee7c55975e8cdce5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4ced61bc9752b42236f79929a3daf830"><td class="memItemLeft" align="right" valign="top">DR_EXPORT size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga4ced61bc9752b42236f79929a3daf830">drx_instrlist_app_size</a> (<a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist)</td></tr>
 <tr class="separator:ga4ced61bc9752b42236f79929a3daf830"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa0a5fcca247de11374c3555a5326cba8"><td class="memItemLeft" align="right" valign="top">DR_EXPORT file_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#gaa0a5fcca247de11374c3555a5326cba8">drx_open_unique_file</a> (const char *dir, const char *prefix, const char *suffix, uint extra_flags, char *result OUT, size_t result_len)</td></tr>
-<tr class="separator:gaa0a5fcca247de11374c3555a5326cba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa85537dd6726928bbd43a21dc8211a53"><td class="memItemLeft" align="right" valign="top">DR_EXPORT file_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#gaa85537dd6726928bbd43a21dc8211a53">drx_open_unique_appid_file</a> (const char *dir, ptr_int_t id, const char *prefix, const char *suffix, uint extra_flags, char *result OUT, size_t result_len)</td></tr>
-<tr class="separator:gaa85537dd6726928bbd43a21dc8211a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafdcaedde814b3ff345686c6a3abf879c"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#gafdcaedde814b3ff345686c6a3abf879c">drx_open_unique_appid_dir</a> (const char *dir, ptr_int_t id, const char *prefix, const char *suffix, char *result OUT, size_t result_len)</td></tr>
-<tr class="separator:gafdcaedde814b3ff345686c6a3abf879c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga45ee420dff6928ec73e00de41d9b506e"><td class="memItemLeft" align="right" valign="top">DR_EXPORT file_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga45ee420dff6928ec73e00de41d9b506e">drx_open_unique_file</a> (const char *dir, const char *prefix, const char *suffix, uint extra_flags, char *result DR_PARAM_OUT, size_t result_len)</td></tr>
+<tr class="separator:ga45ee420dff6928ec73e00de41d9b506e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8e4967eff12630001938ef282ec5a5e3"><td class="memItemLeft" align="right" valign="top">DR_EXPORT file_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga8e4967eff12630001938ef282ec5a5e3">drx_open_unique_appid_file</a> (const char *dir, ptr_int_t id, const char *prefix, const char *suffix, uint extra_flags, char *result DR_PARAM_OUT, size_t result_len)</td></tr>
+<tr class="separator:ga8e4967eff12630001938ef282ec5a5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3fc62c5bd08de0b65cbcc26f5f391889"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga3fc62c5bd08de0b65cbcc26f5f391889">drx_open_unique_appid_dir</a> (const char *dir, ptr_int_t id, const char *prefix, const char *suffix, char *result DR_PARAM_OUT, size_t result_len)</td></tr>
+<tr class="separator:ga3fc62c5bd08de0b65cbcc26f5f391889"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4caa3e50a3cfb5ecb5c08e65fc44ada3"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf">drx_buf_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga4caa3e50a3cfb5ecb5c08e65fc44ada3">drx_buf_create_circular_buffer</a> (size_t buf_size)</td></tr>
 <tr class="separator:ga4caa3e50a3cfb5ecb5c08e65fc44ada3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga26d48f2339de13a75bfe21b5fd04a6c7"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf">drx_buf_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga26d48f2339de13a75bfe21b5fd04a6c7">drx_buf_create_trace_buffer</a> (size_t buffer_size, <a class="el" href="group__drx.html#ga8006198d0e3f3f85df687e9286de597c">drx_buf_full_cb_t</a> full_cb)</td></tr>
@@ -121,8 +121,8 @@ Functions</h2></td></tr>
 <tr class="separator:ga8f9c7628a63632568aaeb62beeb3a89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad71e3315ee11f3f51fd16e9488c79051"><td class="memItemLeft" align="right" valign="top">DR_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#gad71e3315ee11f3f51fd16e9488c79051">drx_buf_insert_buf_memcpy</a> (void *drcontext, <a class="el" href="group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf">drx_buf_t</a> *buf, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> dst, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> src, ushort len)</td></tr>
 <tr class="separator:gad71e3315ee11f3f51fd16e9488c79051"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga30c372c0385d8584660f5c449a18ec36"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga30c372c0385d8584660f5c449a18ec36">drx_expand_scatter_gather</a> (void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, OUT bool *expanded)</td></tr>
-<tr class="separator:ga30c372c0385d8584660f5c449a18ec36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadef64ded5369dbe2fe6f5831205530e7"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#gadef64ded5369dbe2fe6f5831205530e7">drx_expand_scatter_gather</a> (void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, DR_PARAM_OUT bool *expanded)</td></tr>
+<tr class="separator:gadef64ded5369dbe2fe6f5831205530e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -182,7 +182,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Flag for use with <a class="el" href="group__drx.html#gaa0a5fcca247de11374c3555a5326cba8">drx_open_unique_file()</a> or <a class="el" href="group__drx.html#gaa85537dd6726928bbd43a21dc8211a53">drx_open_unique_appid_file()</a> in <code>extra_flags</code> to skip the file open and get the path string only.</p>
+<p>Flag for use with <a class="el" href="group__drx.html#ga45ee420dff6928ec73e00de41d9b506e">drx_open_unique_file()</a> or <a class="el" href="group__drx.html#ga8e4967eff12630001938ef282ec5a5e3">drx_open_unique_appid_file()</a> in <code>extra_flags</code> to skip the file open and get the path string only.</p>
 <dl class="section note"><dt>Note</dt><dd>This flag value must not conflict with any DR_FILE_* flag value used by <a class="el" href="dr__tools_8h.html#a8c1399687e4cbc3c0b9bddab3e7619d3">dr_open_file()</a>. </dd></dl>
 
 </div>
@@ -775,8 +775,8 @@ This method simply wraps a store that also sets an app translation. Make sure th
 
 </div>
 </div>
-<a id="ga30c372c0385d8584660f5c449a18ec36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga30c372c0385d8584660f5c449a18ec36">&#9670;&nbsp;</a></span>drx_expand_scatter_gather()</h2>
+<a id="gadef64ded5369dbe2fe6f5831205530e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadef64ded5369dbe2fe6f5831205530e7">&#9670;&nbsp;</a></span>drx_expand_scatter_gather()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -796,7 +796,7 @@ This method simply wraps a store that also sets an app translation. Make sure th
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT bool *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT bool *&#160;</td>
           <td class="paramname"><em>expanded</em>&#160;</td>
         </tr>
         <tr>
@@ -949,8 +949,8 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
 
 </div>
 </div>
-<a id="gafdcaedde814b3ff345686c6a3abf879c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafdcaedde814b3ff345686c6a3abf879c">&#9670;&nbsp;</a></span>drx_open_unique_appid_dir()</h2>
+<a id="ga3fc62c5bd08de0b65cbcc26f5f391889"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3fc62c5bd08de0b65cbcc26f5f391889">&#9670;&nbsp;</a></span>drx_open_unique_appid_dir()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -983,7 +983,7 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char *result&#160;</td>
-          <td class="paramname"><em>OUT</em>, </td>
+          <td class="paramname"><em>DR_PARAM_OUT</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1004,8 +1004,8 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
 
 </div>
 </div>
-<a id="gaa85537dd6726928bbd43a21dc8211a53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa85537dd6726928bbd43a21dc8211a53">&#9670;&nbsp;</a></span>drx_open_unique_appid_file()</h2>
+<a id="ga8e4967eff12630001938ef282ec5a5e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8e4967eff12630001938ef282ec5a5e3">&#9670;&nbsp;</a></span>drx_open_unique_appid_file()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1044,7 +1044,7 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char *result&#160;</td>
-          <td class="paramname"><em>OUT</em>, </td>
+          <td class="paramname"><em>DR_PARAM_OUT</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1067,8 +1067,8 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
 
 </div>
 </div>
-<a id="gaa0a5fcca247de11374c3555a5326cba8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa0a5fcca247de11374c3555a5326cba8">&#9670;&nbsp;</a></span>drx_open_unique_file()</h2>
+<a id="ga45ee420dff6928ec73e00de41d9b506e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga45ee420dff6928ec73e00de41d9b506e">&#9670;&nbsp;</a></span>drx_open_unique_file()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1101,7 +1101,7 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char *result&#160;</td>
-          <td class="paramname"><em>OUT</em>, </td>
+          <td class="paramname"><em>DR_PARAM_OUT</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1207,5 +1207,5 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19671 --- Fri Nov 10 2023 03:15:14 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19678 --- Fri Nov 17 2023 03:12:59 &nbsp; <img border=0 src="favicon.png">
 </small></address>

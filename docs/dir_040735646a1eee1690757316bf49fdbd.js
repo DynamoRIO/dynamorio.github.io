@@ -20,6 +20,7 @@
     [ "raw2trace_shared.h", "raw2trace__shared_8h.html", {% include_relative raw2trace__shared_8h.js %} ],
     [ "reuse_distance_create.h", "reuse__distance__create_8h.html", {% include_relative reuse__distance__create_8h.js %} ],
     [ "reuse_time_create.h", "reuse__time__create_8h.html", {% include_relative reuse__time__create_8h.js %} ],
+    [ "schedule_stats_create.h", "schedule__stats__create_8h.html", {% include_relative schedule__stats__create_8h.js %} ],
     [ "scheduler.h", "scheduler_8h.html", {% include_relative scheduler_8h.js %} ],
     [ "speculator.h", "speculator_8h.html", {% include_relative speculator_8h.js %} ],
     [ "syscall_mix_create.h", "syscall__mix__create_8h.html", {% include_relative syscall__mix__create_8h.js %} ],

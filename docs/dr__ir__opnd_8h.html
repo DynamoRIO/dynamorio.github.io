@@ -1168,12 +1168,12 @@ Functions</h2></td></tr>
 <tr class="separator:ab61b45c6fe7b997916a09402e8048f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2525b4b334e761171f119db9fc623db5"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a2525b4b334e761171f119db9fc623db5">opnd_get_segment</a> (<a class="el" href="structopnd__t.html">opnd_t</a> opnd)</td></tr>
 <tr class="separator:a2525b4b334e761171f119db9fc623db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab79df5be4b61bf4f260415046eb61a40"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__ir__opnd_8h.html#a8731b2ac50efba7fe426127000a0bf28">dr_shift_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#ab79df5be4b61bf4f260415046eb61a40">opnd_get_index_shift</a> (<a class="el" href="structopnd__t.html">opnd_t</a> opnd, uint *amount OUT)</td></tr>
-<tr class="separator:ab79df5be4b61bf4f260415046eb61a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a228821769fea3edc0b6cf44bef0df868"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__ir__opnd_8h.html#a8731b2ac50efba7fe426127000a0bf28">dr_shift_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a228821769fea3edc0b6cf44bef0df868">opnd_get_index_shift</a> (<a class="el" href="structopnd__t.html">opnd_t</a> opnd, uint *amount DR_PARAM_OUT)</td></tr>
+<tr class="separator:a228821769fea3edc0b6cf44bef0df868"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe70f9418f49ede0c2f06b105c003434"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#abe70f9418f49ede0c2f06b105c003434">opnd_set_index_shift</a> (<a class="el" href="structopnd__t.html">opnd_t</a> *opnd, <a class="el" href="dr__ir__opnd_8h.html#a8731b2ac50efba7fe426127000a0bf28">dr_shift_type_t</a> shift, uint amount)</td></tr>
 <tr class="separator:abe70f9418f49ede0c2f06b105c003434"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e623fa4521bf14a6ab8696e73d57bc8"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__ir__opnd_8h.html#a1ae4a65d6658a13faa3de99b4e716501">dr_extend_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a4e623fa4521bf14a6ab8696e73d57bc8">opnd_get_index_extend</a> (<a class="el" href="structopnd__t.html">opnd_t</a> opnd, OUT bool *scaled, OUT uint *amount)</td></tr>
-<tr class="separator:a4e623fa4521bf14a6ab8696e73d57bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2d53dadbfd1bc7fabca9d1952a1b2a8"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__ir__opnd_8h.html#a1ae4a65d6658a13faa3de99b4e716501">dr_extend_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#ab2d53dadbfd1bc7fabca9d1952a1b2a8">opnd_get_index_extend</a> (<a class="el" href="structopnd__t.html">opnd_t</a> opnd, DR_PARAM_OUT bool *scaled, DR_PARAM_OUT uint *amount)</td></tr>
+<tr class="separator:ab2d53dadbfd1bc7fabca9d1952a1b2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae181ddc256ccb671738111f3057ad17b"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#ae181ddc256ccb671738111f3057ad17b">opnd_set_index_extend_value</a> (<a class="el" href="structopnd__t.html">opnd_t</a> *opnd, <a class="el" href="dr__ir__opnd_8h.html#a1ae4a65d6658a13faa3de99b4e716501">dr_extend_type_t</a> extend, bool scaled, uint scaled_value)</td></tr>
 <tr class="separator:ae181ddc256ccb671738111f3057ad17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa49a3ce0725ee8c7d5386109cab7f855"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#aa49a3ce0725ee8c7d5386109cab7f855">opnd_set_index_extend</a> (<a class="el" href="structopnd__t.html">opnd_t</a> *opnd, <a class="el" href="dr__ir__opnd_8h.html#a1ae4a65d6658a13faa3de99b4e716501">dr_extend_type_t</a> extend, bool scaled)</td></tr>
@@ -1284,12 +1284,12 @@ Functions</h2></td></tr>
 <tr class="separator:a6ebc4b51257e5fedb5af5a75e4324856"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5e9b41a02ac51f822f0801a1e9884fa"><td class="memItemLeft" align="right" valign="top">DR_API reg_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#ad5e9b41a02ac51f822f0801a1e9884fa">reg_get_value</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> reg, <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> *mc)</td></tr>
 <tr class="separator:ad5e9b41a02ac51f822f0801a1e9884fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e4f2b305b3d6536d27bad42b57cad84"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a3e4f2b305b3d6536d27bad42b57cad84">reg_get_value_ex</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> reg, <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> *mc, OUT byte *val)</td></tr>
-<tr class="separator:a3e4f2b305b3d6536d27bad42b57cad84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a1e9af9b33791b59a5903bdeef9415"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a91a1e9af9b33791b59a5903bdeef9415">reg_get_value_ex</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> reg, <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> *mc, DR_PARAM_OUT byte *val)</td></tr>
+<tr class="separator:a91a1e9af9b33791b59a5903bdeef9415"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6be0561c1b4cd52c96ba189065f78f53"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a6be0561c1b4cd52c96ba189065f78f53">reg_set_value</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> reg, <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> *mc, reg_t value)</td></tr>
 <tr class="separator:a6be0561c1b4cd52c96ba189065f78f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b349189fdae90733f1abcd87d45ea93"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a8b349189fdae90733f1abcd87d45ea93">reg_set_value_ex</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> reg, <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> *mc, IN byte *val_buf)</td></tr>
-<tr class="separator:a8b349189fdae90733f1abcd87d45ea93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea5fd0a3c02ece1559262d7d56ffeea"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#afea5fd0a3c02ece1559262d7d56ffeea">reg_set_value_ex</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> reg, <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> *mc, DR_PARAM_IN byte *val_buf)</td></tr>
+<tr class="separator:afea5fd0a3c02ece1559262d7d56ffeea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac98cf54b70db5fadcd308aa2701b4c7d"><td class="memItemLeft" align="right" valign="top">DR_API app_pc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#ac98cf54b70db5fadcd308aa2701b4c7d">opnd_compute_address</a> (<a class="el" href="structopnd__t.html">opnd_t</a> opnd, <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> *mc)</td></tr>
 <tr class="separator:ac98cf54b70db5fadcd308aa2701b4c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff8f178ccfbc5b12bf3813656ba5da71"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#aff8f178ccfbc5b12bf3813656ba5da71">reg_is_stolen</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> reg)</td></tr>
@@ -3487,7 +3487,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns the effective address of <code>opnd</code>, computed using the passed-in register values. If <code>opnd</code> is a far address, ignores that aspect except for TLS references on Windows (fs: for 32-bit, gs: for 64-bit) or typical fs: or gs: references on Linux. For far addresses the calling thread's segment selector is used. <code>mc-&gt;flags</code> must include DR_MC_CONTROL and DR_MC_INTEGER.</p>
-<dl class="section note"><dt>Note</dt><dd>This routine does not support vector addressing (via VSIB, introduced in AVX2). Use <a class="el" href="dr__ir__instr_8h.html#a28829816cc8178aab86a55173599c477">instr_compute_address()</a>, <a class="el" href="dr__ir__instr_8h.html#ad78a69d6d54664001ebfee25847a3983">instr_compute_address_ex()</a>, or <a class="el" href="dr__ir__instr_8h.html#a119b505069a5608525bafb89ba0a2b8b">instr_compute_address_ex_pos()</a> instead. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This routine does not support vector addressing (via VSIB, introduced in AVX2). Use <a class="el" href="dr__ir__instr_8h.html#a28829816cc8178aab86a55173599c477">instr_compute_address()</a>, <a class="el" href="dr__ir__instr_8h.html#a263a142a2599777f1c33c6991346cbaa">instr_compute_address_ex()</a>, or <a class="el" href="dr__ir__instr_8h.html#a29c9b98f9a0998bd33eef4b294b6ac70">instr_compute_address_ex_pos()</a> instead. </dd></dl>
 
 </div>
 </div>
@@ -4844,8 +4844,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4e623fa4521bf14a6ab8696e73d57bc8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e623fa4521bf14a6ab8696e73d57bc8">&#9670;&nbsp;</a></span>opnd_get_index_extend()</h2>
+<a id="ab2d53dadbfd1bc7fabca9d1952a1b2a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2d53dadbfd1bc7fabca9d1952a1b2a8">&#9670;&nbsp;</a></span>opnd_get_index_extend()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4859,13 +4859,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT bool *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT bool *&#160;</td>
           <td class="paramname"><em>scaled</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT uint *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT uint *&#160;</td>
           <td class="paramname"><em>amount</em>&#160;</td>
         </tr>
         <tr>
@@ -4879,8 +4879,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab79df5be4b61bf4f260415046eb61a40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab79df5be4b61bf4f260415046eb61a40">&#9670;&nbsp;</a></span>opnd_get_index_shift()</h2>
+<a id="a228821769fea3edc0b6cf44bef0df868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a228821769fea3edc0b6cf44bef0df868">&#9670;&nbsp;</a></span>opnd_get_index_shift()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4895,7 +4895,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint *amount&#160;</td>
-          <td class="paramname"><em>OUT</em>&#160;</td>
+          <td class="paramname"><em>DR_PARAM_OUT</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -5028,7 +5028,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Assumes <code>opnd</code> is a (near or far) base+disp memory reference. Returns the scale. </p><dl class="section note"><dt>Note</dt><dd>x86-only. On ARM use <a class="el" href="dr__ir__opnd_8h.html#ab79df5be4b61bf4f260415046eb61a40">opnd_get_index_shift()</a>. </dd></dl>
+<p>Assumes <code>opnd</code> is a (near or far) base+disp memory reference. Returns the scale. </p><dl class="section note"><dt>Note</dt><dd>x86-only. On ARM use <a class="el" href="dr__ir__opnd_8h.html#a228821769fea3edc0b6cf44bef0df868">opnd_get_index_shift()</a>. </dd></dl>
 
 </div>
 </div>
@@ -6597,8 +6597,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3e4f2b305b3d6536d27bad42b57cad84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e4f2b305b3d6536d27bad42b57cad84">&#9670;&nbsp;</a></span>reg_get_value_ex()</h2>
+<a id="a91a1e9af9b33791b59a5903bdeef9415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91a1e9af9b33791b59a5903bdeef9415">&#9670;&nbsp;</a></span>reg_get_value_ex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6618,7 +6618,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT byte *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT byte *&#160;</td>
           <td class="paramname"><em>val</em>&#160;</td>
         </tr>
         <tr>
@@ -7134,8 +7134,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8b349189fdae90733f1abcd87d45ea93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b349189fdae90733f1abcd87d45ea93">&#9670;&nbsp;</a></span>reg_set_value_ex()</h2>
+<a id="afea5fd0a3c02ece1559262d7d56ffeea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afea5fd0a3c02ece1559262d7d56ffeea">&#9670;&nbsp;</a></span>reg_set_value_ex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7155,7 +7155,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN byte *&#160;</td>
+          <td class="paramtype">DR_PARAM_IN byte *&#160;</td>
           <td class="paramname"><em>val_buf</em>&#160;</td>
         </tr>
         <tr>
@@ -7198,5 +7198,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19671 --- Fri Nov 10 2023 03:15:13 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19678 --- Fri Nov 17 2023 03:12:58 &nbsp; <img border=0 src="favicon.png">
 </small></address>

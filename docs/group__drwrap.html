@@ -135,12 +135,12 @@ Functions</h2></td></tr>
 <tr class="separator:ga87ab96ab2d3c5cc33480693266b33249"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadadab62f67c3e8198762776012a66fce"><td class="memItemLeft" align="right" valign="top">DR_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#gadadab62f67c3e8198762776012a66fce">drwrap_replace_native_fini</a> (void *drcontext)</td></tr>
 <tr class="separator:gadadab62f67c3e8198762776012a66fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4c004987daae07af15f2146c2d7d4b09"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga4c004987daae07af15f2146c2d7d4b09">drwrap_wrap</a> (app_pc func, void(*pre_func_cb)(void *wrapcxt, OUT void **user_data), void(*post_func_cb)(void *wrapcxt, void *user_data))</td></tr>
-<tr class="separator:ga4c004987daae07af15f2146c2d7d4b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga14db611e4346e695e930ca0b710b598a"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga14db611e4346e695e930ca0b710b598a">drwrap_wrap_ex</a> (app_pc func, void(*pre_func_cb)(void *wrapcxt, INOUT void **user_data), void(*post_func_cb)(void *wrapcxt, void *user_data), void *user_data, uint flags)</td></tr>
-<tr class="separator:ga14db611e4346e695e930ca0b710b598a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga27894370f3da794ff3f31cb8d7ec079b"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga27894370f3da794ff3f31cb8d7ec079b">drwrap_unwrap</a> (app_pc func, void(*pre_func_cb)(void *wrapcxt, OUT void **user_data), void(*post_func_cb)(void *wrapcxt, void *user_data))</td></tr>
-<tr class="separator:ga27894370f3da794ff3f31cb8d7ec079b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11d9a64732099e298a35dd414c400667"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga11d9a64732099e298a35dd414c400667">drwrap_wrap</a> (app_pc func, void(*pre_func_cb)(void *wrapcxt, DR_PARAM_OUT void **user_data), void(*post_func_cb)(void *wrapcxt, void *user_data))</td></tr>
+<tr class="separator:ga11d9a64732099e298a35dd414c400667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4fd091d92ccf71458315940e8da90c9"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#gad4fd091d92ccf71458315940e8da90c9">drwrap_wrap_ex</a> (app_pc func, void(*pre_func_cb)(void *wrapcxt, DR_PARAM_INOUT void **user_data), void(*post_func_cb)(void *wrapcxt, void *user_data), void *user_data, uint flags)</td></tr>
+<tr class="separator:gad4fd091d92ccf71458315940e8da90c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga849a1f3998fdbf79da7ac21be1d7d397"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga849a1f3998fdbf79da7ac21be1d7d397">drwrap_unwrap</a> (app_pc func, void(*pre_func_cb)(void *wrapcxt, DR_PARAM_OUT void **user_data), void(*post_func_cb)(void *wrapcxt, void *user_data))</td></tr>
+<tr class="separator:ga849a1f3998fdbf79da7ac21be1d7d397"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga92584c3e1980ac0c467de7d14d2bc2a2"><td class="memItemLeft" align="right" valign="top">DR_EXPORT app_pc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga92584c3e1980ac0c467de7d14d2bc2a2">drwrap_get_drcontext</a> (void *wrapcxt)</td></tr>
 <tr class="separator:ga92584c3e1980ac0c467de7d14d2bc2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga106eb283e97c560a0118b8da211b7f1a"><td class="memItemLeft" align="right" valign="top">DR_EXPORT app_pc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga106eb283e97c560a0118b8da211b7f1a">drwrap_get_func</a> (void *wrapcxt)</td></tr>
@@ -175,14 +175,14 @@ Functions</h2></td></tr>
 <tr class="separator:ga61b97c33203c704dd8ff1b9d31b3d2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae2cc2affaf879182ba4d92299704c65f"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#gae2cc2affaf879182ba4d92299704c65f">drwrap_set_global_flags</a> (<a class="el" href="group__drwrap.html#gab82c71baab4fe0c5f9962383818b9c92">drwrap_global_flags_t</a> flags)</td></tr>
 <tr class="separator:gae2cc2affaf879182ba4d92299704c65f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga01e56e9bac8f584fe25e806a24769d50"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga01e56e9bac8f584fe25e806a24769d50">drwrap_is_wrapped</a> (app_pc func, void(*pre_func_cb)(void *wrapcxt, OUT void **user_data), void(*post_func_cb)(void *wrapcxt, void *user_data))</td></tr>
-<tr class="separator:ga01e56e9bac8f584fe25e806a24769d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7bb4a7984ff3b79a5ddf61612dc7d7e7"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga7bb4a7984ff3b79a5ddf61612dc7d7e7">drwrap_is_wrapped</a> (app_pc func, void(*pre_func_cb)(void *wrapcxt, DR_PARAM_OUT void **user_data), void(*post_func_cb)(void *wrapcxt, void *user_data))</td></tr>
+<tr class="separator:ga7bb4a7984ff3b79a5ddf61612dc7d7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga16fc2d260f5ebead724d5eb98bf13ac2"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga16fc2d260f5ebead724d5eb98bf13ac2">drwrap_is_post_wrap</a> (app_pc pc)</td></tr>
 <tr class="separator:ga16fc2d260f5ebead724d5eb98bf13ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaff958909001824afeeaee334dc612e51"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#gaff958909001824afeeaee334dc612e51">drwrap_get_stats</a> (INOUT <a class="el" href="group__drwrap.html#ga6f6dc4aedef59ad64117973f081fd903">drwrap_stats_t</a> *stats)</td></tr>
-<tr class="separator:gaff958909001824afeeaee334dc612e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga96dd87016481cbe04b285297557ef633"><td class="memItemLeft" align="right" valign="top">DR_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#ga96dd87016481cbe04b285297557ef633">drwrap_get_retaddr_if_sentinel</a> (void *drcontext, INOUT app_pc *possibly_sentinel)</td></tr>
-<tr class="separator:ga96dd87016481cbe04b285297557ef633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad10811a375941191e1f6aee228fd3583"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#gad10811a375941191e1f6aee228fd3583">drwrap_get_stats</a> (DR_PARAM_OUT <a class="el" href="group__drwrap.html#ga6f6dc4aedef59ad64117973f081fd903">drwrap_stats_t</a> *stats)</td></tr>
+<tr class="separator:gad10811a375941191e1f6aee228fd3583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae6844dde3b4d364fbeefa9cb5a5f490e"><td class="memItemLeft" align="right" valign="top">DR_EXPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drwrap.html#gae6844dde3b4d364fbeefa9cb5a5f490e">drwrap_get_retaddr_if_sentinel</a> (void *drcontext, DR_PARAM_INOUT app_pc *possibly_sentinel)</td></tr>
+<tr class="separator:gae6844dde3b4d364fbeefa9cb5a5f490e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -258,7 +258,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Contains statistics retrievable by <a class="el" href="group__drwrap.html#gaff958909001824afeeaee334dc612e51">drwrap_get_stats()</a>. </p>
+<p>Contains statistics retrievable by <a class="el" href="group__drwrap.html#gad10811a375941191e1f6aee228fd3583">drwrap_get_stats()</a>. </p>
 
 </div>
 </div>
@@ -278,7 +278,7 @@ Functions</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaac34dfe6c6b73b43a4656c9dce041034a556c6bce97b9c415e089261848536c14"></a>DRMGR_PRIORITY_APP2APP_DRWRAP&#160;</td><td class="fielddoc"><p>Priority of <a class="el" href="group__drwrap.html#ga488a6566cd760a3919bdd2f49a6d672f">drwrap_replace()</a> </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggaac34dfe6c6b73b43a4656c9dce041034ada17e11e67b93129fede7890e032bbbd"></a>DRMGR_PRIORITY_INSERT_DRWRAP&#160;</td><td class="fielddoc"><p>Priority of <a class="el" href="group__drwrap.html#ga4c004987daae07af15f2146c2d7d4b09">drwrap_wrap()</a> </p>
+<tr><td class="fieldname"><a id="ggaac34dfe6c6b73b43a4656c9dce041034ada17e11e67b93129fede7890e032bbbd"></a>DRMGR_PRIORITY_INSERT_DRWRAP&#160;</td><td class="fielddoc"><p>Priority of <a class="el" href="group__drwrap.html#ga11d9a64732099e298a35dd414c400667">drwrap_wrap()</a> </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ggaac34dfe6c6b73b43a4656c9dce041034af45be46f89c86ce07739c8243fde7f5d"></a>DRMGR_PRIORITY_FAULT_DRWRAP&#160;</td><td class="fielddoc"><p>Priority of fault handling event </p>
 </td></tr>
@@ -297,7 +297,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Values to specify the calling convention of the wrapped function. Pass one of these values to <a class="el" href="group__drwrap.html#ga14db611e4346e695e930ca0b710b598a">drwrap_wrap_ex()</a> in the flags parameter using bitwise OR, e.g.: DRWRAP_UNWIND_ON_EXCEPTION | DRWRAP_CALLCONV_DEFAULT (see <a class="el" href="group__drwrap.html#ga16cc419209fcb0024d010599bb82aa76">drwrap_wrap_flags_t</a>). </p>
+<p>Values to specify the calling convention of the wrapped function. Pass one of these values to <a class="el" href="group__drwrap.html#gad4fd091d92ccf71458315940e8da90c9">drwrap_wrap_ex()</a> in the flags parameter using bitwise OR, e.g.: DRWRAP_UNWIND_ON_EXCEPTION | DRWRAP_CALLCONV_DEFAULT (see <a class="el" href="group__drwrap.html#ga16cc419209fcb0024d010599bb82aa76">drwrap_wrap_flags_t</a>). </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggae5c8c610a356f2dd2eaf27380a1645a0aea459bcd58f48f7412609258f9d82482"></a>DRWRAP_CALLCONV_AMD64&#160;</td><td class="fielddoc"><p>The AMD64 ABI calling convention. </p>
 </td></tr>
@@ -372,15 +372,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Values for the flags parameter to <a class="el" href="group__drwrap.html#ga14db611e4346e695e930ca0b710b598a">drwrap_wrap_ex()</a>, which may also be combined with at most one value from <a class="el" href="group__drwrap.html#gae5c8c610a356f2dd2eaf27380a1645a0">drwrap_callconv_t</a> (using bitwise OR). </p>
+<p>Values for the flags parameter to <a class="el" href="group__drwrap.html#gad4fd091d92ccf71458315940e8da90c9">drwrap_wrap_ex()</a>, which may also be combined with at most one value from <a class="el" href="group__drwrap.html#gae5c8c610a356f2dd2eaf27380a1645a0">drwrap_callconv_t</a> (using bitwise OR). </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga16cc419209fcb0024d010599bb82aa76a99c61e65b5338309f7588e464f706072"></a>DRWRAP_FLAGS_NONE&#160;</td><td class="fielddoc"><p>Provided for convenience when calling <a class="el" href="group__drwrap.html#ga14db611e4346e695e930ca0b710b598a">drwrap_wrap_ex()</a> with no flags. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga16cc419209fcb0024d010599bb82aa76a99c61e65b5338309f7588e464f706072"></a>DRWRAP_FLAGS_NONE&#160;</td><td class="fielddoc"><p>Provided for convenience when calling <a class="el" href="group__drwrap.html#gad4fd091d92ccf71458315940e8da90c9">drwrap_wrap_ex()</a> with no flags. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga16cc419209fcb0024d010599bb82aa76aaee35c5aabcb42793293b905c448e1c6"></a>DRWRAP_UNWIND_ON_EXCEPTION&#160;</td><td class="fielddoc"><p>When a Windows exception occurs, all post-call callbacks for all live wrapped functions on the wrap stack for which this flag is set are called. If this flag is not set (the default), each post-call callback will still be called if drwrap's heuristics later detect that that particular callback has been bypassed, but those heuristics are not guaranteed. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga16cc419209fcb0024d010599bb82aa76a92308b97214b3a3f575e6901a1b13871"></a>DRWRAP_NO_DYNAMIC_RETADDRS&#160;</td><td class="fielddoc"><p>If this flag is set, then post-call callbacks are only invoked from return sites that can be identified statically. Static identification happens in two ways: from observing a CALL instruction, and from <a class="el" href="group__drwrap.html#ga61b97c33203c704dd8ff1b9d31b3d2a9">drwrap_mark_as_post_call()</a>. Dynamically observing return addresses from inside callees incurs overhead due to synchronization costs, with further overhead to replace existing code with instrumented code. When this flag is set, some post-call callbacks may be missed. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga16cc419209fcb0024d010599bb82aa76acec7da205cbb9dab0291d66254e47c88"></a>DRWRAP_REPLACE_RETADDR&#160;</td><td class="fielddoc"><p>If this flag is set, then post-call points are identified by changing the application return address upon entering the callee. This is more efficient than the default method, which requires shared storage and locks and flushing. However, this does violate transparency, and may cause some applications to fail. In particular, detaching on AArchXX requires scanning the stack to find where the return address was stored, which could conceivably replace an integer or non-pointer value that happens to match the sentinel used. Also, the transparency violation may be exposed to the client's <a class="el" href="dr__events_8h.html#ac433abf2a9b5ec9a5571e39d7d069df2">dr_register_kernel_xfer_event()</a> callback if it inspects the mcontext PC on the stack; <a class="el" href="group__drwrap.html#ga96dd87016481cbe04b285297557ef633">drwrap_get_retaddr_if_sentinel()</a> may be used to mitigate such cases. Use <a class="el" href="group__drwrap.html#gga16cc419209fcb0024d010599bb82aa76acec7da205cbb9dab0291d66254e47c88">DRWRAP_REPLACE_RETADDR</a> at your own risk. </p>
+<tr><td class="fieldname"><a id="gga16cc419209fcb0024d010599bb82aa76acec7da205cbb9dab0291d66254e47c88"></a>DRWRAP_REPLACE_RETADDR&#160;</td><td class="fielddoc"><p>If this flag is set, then post-call points are identified by changing the application return address upon entering the callee. This is more efficient than the default method, which requires shared storage and locks and flushing. However, this does violate transparency, and may cause some applications to fail. In particular, detaching on AArchXX requires scanning the stack to find where the return address was stored, which could conceivably replace an integer or non-pointer value that happens to match the sentinel used. Also, the transparency violation may be exposed to the client's <a class="el" href="dr__events_8h.html#ac433abf2a9b5ec9a5571e39d7d069df2">dr_register_kernel_xfer_event()</a> callback if it inspects the mcontext PC on the stack; <a class="el" href="group__drwrap.html#gae6844dde3b4d364fbeefa9cb5a5f490e">drwrap_get_retaddr_if_sentinel()</a> may be used to mitigate such cases. Use <a class="el" href="group__drwrap.html#gga16cc419209fcb0024d010599bb82aa76acec7da205cbb9dab0291d66254e47c88">DRWRAP_REPLACE_RETADDR</a> at your own risk. </p>
 </td></tr>
 </table>
 
@@ -431,7 +431,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the value of the <code>arg-th</code> argument (0-based) to the wrapped function represented by <code>wrapcxt</code>. Uses the calling convention set by <a class="el" href="group__drwrap.html#ga14db611e4346e695e930ca0b710b598a">drwrap_wrap_ex()</a>, or for <a class="el" href="group__drwrap.html#ga4c004987daae07af15f2146c2d7d4b09">drwrap_wrap()</a> assumes the regular C calling convention. May only be called from a <code>drwrap_wrap</code> pre-function callback. To access argument values in a post-function callback, store them in the <code>user_data</code> parameter passed between the pre and post functions.</p>
+<p>Returns the value of the <code>arg-th</code> argument (0-based) to the wrapped function represented by <code>wrapcxt</code>. Uses the calling convention set by <a class="el" href="group__drwrap.html#gad4fd091d92ccf71458315940e8da90c9">drwrap_wrap_ex()</a>, or for <a class="el" href="group__drwrap.html#ga11d9a64732099e298a35dd414c400667">drwrap_wrap()</a> assumes the regular C calling convention. May only be called from a <code>drwrap_wrap</code> pre-function callback. To access argument values in a post-function callback, store them in the <code>user_data</code> parameter passed between the pre and post functions.</p>
 <p>This routine may de-reference application memory directly, so the caller should wrap in DR_TRY_EXCEPT if crashes must be avoided. </p>
 
 </div>
@@ -543,8 +543,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga96dd87016481cbe04b285297557ef633"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga96dd87016481cbe04b285297557ef633">&#9670;&nbsp;</a></span>drwrap_get_retaddr_if_sentinel()</h2>
+<a id="gae6844dde3b4d364fbeefa9cb5a5f490e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae6844dde3b4d364fbeefa9cb5a5f490e">&#9670;&nbsp;</a></span>drwrap_get_retaddr_if_sentinel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -558,7 +558,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">INOUT app_pc *&#160;</td>
+          <td class="paramtype">DR_PARAM_INOUT app_pc *&#160;</td>
           <td class="paramname"><em>possibly_sentinel</em>&#160;</td>
         </tr>
         <tr>
@@ -591,8 +591,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaff958909001824afeeaee334dc612e51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaff958909001824afeeaee334dc612e51">&#9670;&nbsp;</a></span>drwrap_get_stats()</h2>
+<a id="gad10811a375941191e1f6aee228fd3583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad10811a375941191e1f6aee228fd3583">&#9670;&nbsp;</a></span>drwrap_get_stats()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -600,7 +600,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT bool drwrap_get_stats </td>
           <td>(</td>
-          <td class="paramtype">INOUT <a class="el" href="group__drwrap.html#ga6f6dc4aedef59ad64117973f081fd903">drwrap_stats_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT <a class="el" href="group__drwrap.html#ga6f6dc4aedef59ad64117973f081fd903">drwrap_stats_t</a> *&#160;</td>
           <td class="paramname"><em>stats</em></td><td>)</td>
           <td></td>
         </tr>
@@ -838,8 +838,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga01e56e9bac8f584fe25e806a24769d50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga01e56e9bac8f584fe25e806a24769d50">&#9670;&nbsp;</a></span>drwrap_is_wrapped()</h2>
+<a id="ga7bb4a7984ff3b79a5ddf61612dc7d7e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7bb4a7984ff3b79a5ddf61612dc7d7e7">&#9670;&nbsp;</a></span>drwrap_is_wrapped()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -853,7 +853,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void(*)(void *wrapcxt, OUT void **user_data)&#160;</td>
+          <td class="paramtype">void(*)(void *wrapcxt, DR_PARAM_OUT void **user_data)&#160;</td>
           <td class="paramname"><em>pre_func_cb</em>, </td>
         </tr>
         <tr>
@@ -909,7 +909,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>May only be called from a <a class="el" href="group__drwrap.html#ga4c004987daae07af15f2146c2d7d4b09">drwrap_wrap()</a> post-function callback. Redirects execution to the <code>pc</code> specified in the <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> of the <code>wrapcxt</code> after executing all remaining post-function callbacks. Automatically calls <code>drwrap_set_mcontext</code> to make the redirection to <code>pc</code> effective; calls to <a class="el" href="group__drwrap.html#gae4a50709cf98fca89860c09543176fa6">drwrap_set_mcontext()</a> from subsequent post-function callbacks will be denied to prevent clobbering the redirection mcontext. Redirecting execution from nested invocations of a recursive function is not supported.</p>
+<p>May only be called from a <a class="el" href="group__drwrap.html#ga11d9a64732099e298a35dd414c400667">drwrap_wrap()</a> post-function callback. Redirects execution to the <code>pc</code> specified in the <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> of the <code>wrapcxt</code> after executing all remaining post-function callbacks. Automatically calls <code>drwrap_set_mcontext</code> to make the redirection to <code>pc</code> effective; calls to <a class="el" href="group__drwrap.html#gae4a50709cf98fca89860c09543176fa6">drwrap_set_mcontext()</a> from subsequent post-function callbacks will be denied to prevent clobbering the redirection mcontext. Redirecting execution from nested invocations of a recursive function is not supported.</p>
 <dl class="section note"><dt>Note</dt><dd>It is the client's responsibility to adjust the register state and/or memory to accommodate the redirection target; otherwise the application may behave in unexpected ways. If the client intends to repeat execution of the wrapped function, the stack pointer must be adjusted accordingly during the post-function callback so that the correct return address is in the conventional location before execution enters the wrapped function. This is necessary because the pre-function callback occurs at the beginning of the wrapped function (i.e., after the call instruction has executed), while the post-function callback occurs after the return instruction has executed (as if inserted following the call instruction).</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>DREXT_SUCCESS if the redirect request is accepted; DREXT_ERROR_STATE_INCOMPATIBLE if this function was called outside of a post-function callback, or DREXT_ERROR if the redirect could not be fulfilled for any other reason. </dd></dl>
 
@@ -1111,7 +1111,7 @@ Not supported if <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the the <code>arg-th</code> argument (0-based) to the wrapped function represented by <code>wrapcxt</code> to <code>val</code>. Uses the calling convention set by <a class="el" href="group__drwrap.html#ga14db611e4346e695e930ca0b710b598a">drwrap_wrap_ex()</a>, or for <a class="el" href="group__drwrap.html#ga4c004987daae07af15f2146c2d7d4b09">drwrap_wrap()</a> assumes the regular C calling convention. May only be called from a <code>drwrap_wrap</code> pre-function callback. To access argument values in a post-function callback, store them in the <code>user_data</code> parameter passed between the pre and post functions.</p>
+<p>Sets the the <code>arg-th</code> argument (0-based) to the wrapped function represented by <code>wrapcxt</code> to <code>val</code>. Uses the calling convention set by <a class="el" href="group__drwrap.html#gad4fd091d92ccf71458315940e8da90c9">drwrap_wrap_ex()</a>, or for <a class="el" href="group__drwrap.html#ga11d9a64732099e298a35dd414c400667">drwrap_wrap()</a> assumes the regular C calling convention. May only be called from a <code>drwrap_wrap</code> pre-function callback. To access argument values in a post-function callback, store them in the <code>user_data</code> parameter passed between the pre and post functions.</p>
 <p>This routine may write to application memory directly, so the caller should wrap in DR_TRY_EXCEPT if crashes must be avoided. </p><dl class="section return"><dt>Returns</dt><dd>whether successful. </dd></dl>
 
 </div>
@@ -1240,8 +1240,8 @@ Not supported if <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962
 
 </div>
 </div>
-<a id="ga27894370f3da794ff3f31cb8d7ec079b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga27894370f3da794ff3f31cb8d7ec079b">&#9670;&nbsp;</a></span>drwrap_unwrap()</h2>
+<a id="ga849a1f3998fdbf79da7ac21be1d7d397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga849a1f3998fdbf79da7ac21be1d7d397">&#9670;&nbsp;</a></span>drwrap_unwrap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1255,7 +1255,7 @@ Not supported if <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void(*)(void *wrapcxt, OUT void **user_data)&#160;</td>
+          <td class="paramtype">void(*)(void *wrapcxt, DR_PARAM_OUT void **user_data)&#160;</td>
           <td class="paramname"><em>pre_func_cb</em>, </td>
         </tr>
         <tr>
@@ -1277,8 +1277,8 @@ Not supported if <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962
 
 </div>
 </div>
-<a id="ga4c004987daae07af15f2146c2d7d4b09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4c004987daae07af15f2146c2d7d4b09">&#9670;&nbsp;</a></span>drwrap_wrap()</h2>
+<a id="ga11d9a64732099e298a35dd414c400667"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga11d9a64732099e298a35dd414c400667">&#9670;&nbsp;</a></span>drwrap_wrap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1292,7 +1292,7 @@ Not supported if <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void(*)(void *wrapcxt, OUT void **user_data)&#160;</td>
+          <td class="paramtype">void(*)(void *wrapcxt, DR_PARAM_OUT void **user_data)&#160;</td>
           <td class="paramname"><em>pre_func_cb</em>, </td>
         </tr>
         <tr>
@@ -1312,15 +1312,15 @@ Not supported if <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962
 <p>Wrap requests should normally be made up front during process initialization or module load (see <a class="el" href="dr__events_8h.html#a004acbc467ec57cd62be8c49d57a6928">dr_register_module_load_event()</a>). If a wrap request is made after the target code may have already been executed by the application, the caller should flush the target code from the cache using the desired flush method after issuing the wrap request.</p>
 <p>Multiple wrap requests are allowed for one <code>original</code> function (unless <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962383818b9c92aeb299993e17993cb86912f93391f6b86">DRWRAP_NO_FRILLS</a> is set). Their callbacks are called sequentially in the reverse order of registration.</p>
 <p>The <code>pre_func_cb</code> can examine (<a class="el" href="group__drwrap.html#ga3d0864daf1ec37a91640a739f8928b83">drwrap_get_arg()</a>) and set (<a class="el" href="group__drwrap.html#ga17937b1d8ff7e391814e4e6e6df5c807">drwrap_set_arg()</a>) the arguments to <code>original</code> and can skip the call to <code>original</code> (<a class="el" href="group__drwrap.html#gae539b1092ba0c1a3e86172964a671805">drwrap_skip_call()</a>). The <code>post_func_cb</code> can examine (<a class="el" href="group__drwrap.html#gae993f55e025cf80ae67ed398b35a1b61">drwrap_get_retval()</a>) and set (<a class="el" href="group__drwrap.html#gafd31e6725143df904e766dbfa508db05">drwrap_set_retval()</a>) <code>original's</code> return value. The opaque pointer <code>wrapcxt</code> passed to each callback should be passed to these routines.</p>
-<p>When an abnormal stack unwind, such as longjmp or a Windows exception, occurs, drwrap does its best to detect it. All post-calls that would be missed will still be invoked, but with <code>wrapcxt</code> set to NULL. Since there is no post-call environment, it does not make sense to query the return value or arguments. The call is invoked to allow for cleanup of state allocated in <code>pre_func_cb</code>. However, detection of a stack unwind is not guaranteed. When wrapping a series of functions that do not themselves contain exception handlers, pass the DRWRAP_UNWIND_ON_EXCEPTION flag to <a class="el" href="group__drwrap.html#ga14db611e4346e695e930ca0b710b598a">drwrap_wrap_ex()</a> to ensure that all post-call callbacks will be called on an exception.</p>
+<p>When an abnormal stack unwind, such as longjmp or a Windows exception, occurs, drwrap does its best to detect it. All post-calls that would be missed will still be invoked, but with <code>wrapcxt</code> set to NULL. Since there is no post-call environment, it does not make sense to query the return value or arguments. The call is invoked to allow for cleanup of state allocated in <code>pre_func_cb</code>. However, detection of a stack unwind is not guaranteed. When wrapping a series of functions that do not themselves contain exception handlers, pass the DRWRAP_UNWIND_ON_EXCEPTION flag to <a class="el" href="group__drwrap.html#gad4fd091d92ccf71458315940e8da90c9">drwrap_wrap_ex()</a> to ensure that all post-call callbacks will be called on an exception.</p>
 <p>This routine may call <a class="el" href="dr__tools_8h.html#a57669d0e147191660153b928eca7f09b">dr_unlink_flush_region()</a>, which means that it cannot be called while any locks are held that could block a thread processing a registered event callback or cache callout.</p>
 <dl class="section note"><dt>Note</dt><dd>The priority of the app2app pass used here is DRMGR_PRIORITY_INSERT_DRWRAP and its name is DRMGR_PRIORITY_NAME_DRWRAP.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>whether successful. </dd></dl>
 
 </div>
 </div>
-<a id="ga14db611e4346e695e930ca0b710b598a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga14db611e4346e695e930ca0b710b598a">&#9670;&nbsp;</a></span>drwrap_wrap_ex()</h2>
+<a id="gad4fd091d92ccf71458315940e8da90c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad4fd091d92ccf71458315940e8da90c9">&#9670;&nbsp;</a></span>drwrap_wrap_ex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1334,7 +1334,7 @@ Not supported if <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void(*)(void *wrapcxt, INOUT void **user_data)&#160;</td>
+          <td class="paramtype">void(*)(void *wrapcxt, DR_PARAM_INOUT void **user_data)&#160;</td>
           <td class="paramname"><em>pre_func_cb</em>, </td>
         </tr>
         <tr>
@@ -1362,7 +1362,7 @@ Not supported if <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Identical to <a class="el" href="group__drwrap.html#ga4c004987daae07af15f2146c2d7d4b09">drwrap_wrap()</a> except for two additional parameters: <code>user_data</code>, which is passed as the initial value of *user_data to <code>pre_func_cb</code>, and <code>flags</code>, which are the bitwise combination of the <a class="el" href="group__drwrap.html#ga16cc419209fcb0024d010599bb82aa76">drwrap_wrap_flags_t</a> and at most one <a class="el" href="group__drwrap.html#gae5c8c610a356f2dd2eaf27380a1645a0">drwrap_callconv_t</a>.</p>
+<p>Identical to <a class="el" href="group__drwrap.html#ga11d9a64732099e298a35dd414c400667">drwrap_wrap()</a> except for two additional parameters: <code>user_data</code>, which is passed as the initial value of *user_data to <code>pre_func_cb</code>, and <code>flags</code>, which are the bitwise combination of the <a class="el" href="group__drwrap.html#ga16cc419209fcb0024d010599bb82aa76">drwrap_wrap_flags_t</a> and at most one <a class="el" href="group__drwrap.html#gae5c8c610a356f2dd2eaf27380a1645a0">drwrap_callconv_t</a>.</p>
 <p>Specify the calling convention by combining one of the DRWRAP_CALLCONV_* values (of <a class="el" href="group__drwrap.html#gae5c8c610a356f2dd2eaf27380a1645a0">drwrap_callconv_t</a>) with the flags. It is not allowed to specify multiple calling conventions. If the specified calling convention is incorrect for <code>func</code>, the wrap will succeed, but calls to <a class="el" href="group__drwrap.html#ga17937b1d8ff7e391814e4e6e6df5c807">drwrap_set_arg()</a> and <a class="el" href="group__drwrap.html#ga3d0864daf1ec37a91640a739f8928b83">drwrap_get_arg()</a> for <code>func</code> will either access the wrong argument value, or will access a register or stack slot that does not contain any argument value. If no calling convention is specified, defaults to <a class="el" href="group__drwrap.html#ggae5c8c610a356f2dd2eaf27380a1645a0aba1f5ae2095604d1e1fb31715cbf75c5">DRWRAP_CALLCONV_DEFAULT</a>.</p>
 <p>This routine may call <a class="el" href="dr__tools_8h.html#a57669d0e147191660153b928eca7f09b">dr_unlink_flush_region()</a>, which means that it cannot be called while any locks are held that could block a thread processing a registered event callback or cache callout. </p>
 
@@ -1374,5 +1374,5 @@ Not supported if <a class="el" href="group__drwrap.html#ggab82c71baab4fe0c5f9962
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19671 --- Fri Nov 10 2023 03:15:14 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19678 --- Fri Nov 17 2023 03:12:59 &nbsp; <img border=0 src="favicon.png">
 </small></address>

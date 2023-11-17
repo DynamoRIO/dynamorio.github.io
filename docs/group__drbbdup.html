@@ -49,18 +49,18 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:gafc69f147f9c66259b8890b0d5aef38d8"><td class="memItemLeft" align="right" valign="top">typedef uintptr_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#gafc69f147f9c66259b8890b0d5aef38d8">drbbdup_set_up_bb_dups_t</a>) (void *drbbdup_ctx, void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, IN bool *enable_dups, IN bool *enable_dynamic_handling, void *user_data)</td></tr>
-<tr class="separator:gafc69f147f9c66259b8890b0d5aef38d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a6bf9a298bc4585ce660a6ad75a1049"><td class="memItemLeft" align="right" valign="top">typedef uintptr_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga9a6bf9a298bc4585ce660a6ad75a1049">drbbdup_set_up_bb_dups_t</a>) (void *drbbdup_ctx, void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, DR_PARAM_IN bool *enable_dups, DR_PARAM_IN bool *enable_dynamic_handling, void *user_data)</td></tr>
+<tr class="separator:ga9a6bf9a298bc4585ce660a6ad75a1049"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga793b9eacde5c3bd10f43336079d8b53a"><td class="memItemLeft" align="right" valign="top">typedef bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga793b9eacde5c3bd10f43336079d8b53a">drbbdup_allow_gen_t</a>) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, uintptr_t new_case, bool *enable_dynamic_handling, void *user_data)</td></tr>
 <tr class="separator:ga793b9eacde5c3bd10f43336079d8b53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9ad6ccdf892113423001b6559e4ee8e8"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga9ad6ccdf892113423001b6559e4ee8e8">drbbdup_analyze_orig_t</a>) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, void *user_data, IN void **orig_analysis_data)</td></tr>
-<tr class="separator:ga9ad6ccdf892113423001b6559e4ee8e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae19c32f94b0deaa5140107d504422bef"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#gae19c32f94b0deaa5140107d504422bef">drbbdup_analyze_orig_t</a>) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, void *user_data, DR_PARAM_IN void **orig_analysis_data)</td></tr>
+<tr class="separator:gae19c32f94b0deaa5140107d504422bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafa4a35ea9eab76f19c533b7944ee3ff8"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#gafa4a35ea9eab76f19c533b7944ee3ff8">drbbdup_destroy_orig_analysis_t</a>) (void *drcontext, void *user_data, void *orig_analysis_data)</td></tr>
 <tr class="separator:gafa4a35ea9eab76f19c533b7944ee3ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1635c9540f9b8de24bfc0e37a5ba60da"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga1635c9540f9b8de24bfc0e37a5ba60da">drbbdup_analyze_case_t</a>) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, uintptr_t encoding, void *user_data, void *orig_analysis_data, IN void **case_analysis_data)</td></tr>
-<tr class="separator:ga1635c9540f9b8de24bfc0e37a5ba60da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0b38993499a9e19643c9f247b327b14b"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga0b38993499a9e19643c9f247b327b14b">drbbdup_analyze_case_ex_t</a>) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, bool for_trace, bool translating, uintptr_t encoding, void *user_data, void *orig_analysis_data, IN void **case_analysis_data)</td></tr>
-<tr class="separator:ga0b38993499a9e19643c9f247b327b14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga769208834becf7cf4590797eaa33d6e6"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga769208834becf7cf4590797eaa33d6e6">drbbdup_analyze_case_t</a>) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, uintptr_t encoding, void *user_data, void *orig_analysis_data, DR_PARAM_IN void **case_analysis_data)</td></tr>
+<tr class="separator:ga769208834becf7cf4590797eaa33d6e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7bd883b2b0c22f7c82151e2d14ad79ea"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga7bd883b2b0c22f7c82151e2d14ad79ea">drbbdup_analyze_case_ex_t</a>) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, bool for_trace, bool translating, uintptr_t encoding, void *user_data, void *orig_analysis_data, DR_PARAM_IN void **case_analysis_data)</td></tr>
+<tr class="separator:ga7bd883b2b0c22f7c82151e2d14ad79ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacfdd196f0a774cc7086fff7a2fed0ce1"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#gacfdd196f0a774cc7086fff7a2fed0ce1">drbbdup_destroy_case_analysis_t</a>) (void *drcontext, uintptr_t encoding, void *user_data, void *orig_analysis_data, void *case_analysis_data)</td></tr>
 <tr class="separator:gacfdd196f0a774cc7086fff7a2fed0ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae2bf28a5b20a165d4d07325a49c12c4a"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#gae2bf28a5b20a165d4d07325a49c12c4a">drbbdup_insert_encode_t</a>) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, <a class="el" href="structinstr__t.html">instr_t</a> *where, void *user_data, void *orig_analysis_data)</td></tr>
@@ -111,14 +111,14 @@ Functions</h2></td></tr>
 <tr class="separator:gaa16de47f2a1fb155cfc503e783a89454"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8f8164a0d83acbd0340cfd470775c27e"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="group__drbbdup.html#ga29389438e052068540ac1fdcfc77f799">drbbdup_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga8f8164a0d83acbd0340cfd470775c27e">drbbdup_register_case_encoding</a> (void *drbbdup_ctx, uintptr_t encoding)</td></tr>
 <tr class="separator:ga8f8164a0d83acbd0340cfd470775c27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga033b7015cc84c05542d96e886a11e588"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="group__drbbdup.html#ga29389438e052068540ac1fdcfc77f799">drbbdup_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga033b7015cc84c05542d96e886a11e588">drbbdup_is_first_instr</a> (void *drcontext, <a class="el" href="structinstr__t.html">instr_t</a> *instr, OUT bool *is_start)</td></tr>
-<tr class="separator:ga033b7015cc84c05542d96e886a11e588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca232781dbd0609f9ce701e88c5f6a46"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="group__drbbdup.html#ga29389438e052068540ac1fdcfc77f799">drbbdup_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#gaca232781dbd0609f9ce701e88c5f6a46">drbbdup_is_first_instr</a> (void *drcontext, <a class="el" href="structinstr__t.html">instr_t</a> *instr, DR_PARAM_OUT bool *is_start)</td></tr>
+<tr class="separator:gaca232781dbd0609f9ce701e88c5f6a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4bd1d3123285d7da1c3f8a4cc53d6633"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="group__drbbdup.html#ga29389438e052068540ac1fdcfc77f799">drbbdup_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga4bd1d3123285d7da1c3f8a4cc53d6633">drbbdup_is_first_nonlabel_instr</a> (void *drcontext, <a class="el" href="structinstr__t.html">instr_t</a> *instr, bool *is_nonlabel)</td></tr>
 <tr class="separator:ga4bd1d3123285d7da1c3f8a4cc53d6633"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8b714ca5a27b1a31cf945391e98d2e4c"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="group__drbbdup.html#ga29389438e052068540ac1fdcfc77f799">drbbdup_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga8b714ca5a27b1a31cf945391e98d2e4c">drbbdup_is_last_instr</a> (void *drcontext, <a class="el" href="structinstr__t.html">instr_t</a> *instr, OUT bool *is_last)</td></tr>
-<tr class="separator:ga8b714ca5a27b1a31cf945391e98d2e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4743c5b48f29c25dcf7ea08329dc96a8"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="group__drbbdup.html#ga29389438e052068540ac1fdcfc77f799">drbbdup_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga4743c5b48f29c25dcf7ea08329dc96a8">drbbdup_get_stats</a> (OUT <a class="el" href="structdrbbdup__stats__t.html">drbbdup_stats_t</a> *stats)</td></tr>
-<tr class="separator:ga4743c5b48f29c25dcf7ea08329dc96a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga192ff54dde84c0e670bcc1f9ae2310c6"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="group__drbbdup.html#ga29389438e052068540ac1fdcfc77f799">drbbdup_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga192ff54dde84c0e670bcc1f9ae2310c6">drbbdup_is_last_instr</a> (void *drcontext, <a class="el" href="structinstr__t.html">instr_t</a> *instr, DR_PARAM_OUT bool *is_last)</td></tr>
+<tr class="separator:ga192ff54dde84c0e670bcc1f9ae2310c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga040f2e861191c2dd06c5c6bf7f8c6db7"><td class="memItemLeft" align="right" valign="top">DR_EXPORT <a class="el" href="group__drbbdup.html#ga29389438e052068540ac1fdcfc77f799">drbbdup_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drbbdup.html#ga040f2e861191c2dd06c5c6bf7f8c6db7">drbbdup_get_stats</a> (DR_PARAM_OUT <a class="el" href="structdrbbdup__stats__t.html">drbbdup_stats_t</a> *stats)</td></tr>
+<tr class="separator:ga040f2e861191c2dd06c5c6bf7f8c6db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -183,52 +183,52 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga0b38993499a9e19643c9f247b327b14b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0b38993499a9e19643c9f247b327b14b">&#9670;&nbsp;</a></span>drbbdup_analyze_case_ex_t</h2>
+<a id="ga7bd883b2b0c22f7c82151e2d14ad79ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7bd883b2b0c22f7c82151e2d14ad79ea">&#9670;&nbsp;</a></span>drbbdup_analyze_case_ex_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a>(* drbbdup_analyze_case_ex_t) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, bool for_trace, bool translating, uintptr_t encoding, void *user_data, void *orig_analysis_data, IN void **case_analysis_data)</td>
+          <td class="memname">typedef <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a>(* drbbdup_analyze_case_ex_t) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, bool for_trace, bool translating, uintptr_t encoding, void *user_data, void *orig_analysis_data, DR_PARAM_IN void **case_analysis_data)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Identical to <a class="el" href="group__drbbdup.html#ga1635c9540f9b8de24bfc0e37a5ba60da">drbbdup_analyze_case_t</a> except for two extra parameters, "for_trace" and "translating", and the return value. These all match the same parameters and return values used with <a class="el" href="group__drmgr.html#ga0c312b9deefda685e85620ed0c7c78d5">drmgr_analysis_cb_t</a> and <a class="el" href="dr__events_8h.html#acbfe1ece2c520d409ffd59076507a710">dr_register_bb_event()</a>. The returned flags will be merged in the same manner as for <a class="el" href="group__drmgr.html#ga0c312b9deefda685e85620ed0c7c78d5">drmgr_analysis_cb_t</a>. </p>
+<p>Identical to <a class="el" href="group__drbbdup.html#ga769208834becf7cf4590797eaa33d6e6">drbbdup_analyze_case_t</a> except for two extra parameters, "for_trace" and "translating", and the return value. These all match the same parameters and return values used with <a class="el" href="group__drmgr.html#ga7584a1c96b24f5fd306fa44e00548c53">drmgr_analysis_cb_t</a> and <a class="el" href="dr__events_8h.html#acbfe1ece2c520d409ffd59076507a710">dr_register_bb_event()</a>. The returned flags will be merged in the same manner as for <a class="el" href="group__drmgr.html#ga7584a1c96b24f5fd306fa44e00548c53">drmgr_analysis_cb_t</a>. </p>
 
 </div>
 </div>
-<a id="ga1635c9540f9b8de24bfc0e37a5ba60da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1635c9540f9b8de24bfc0e37a5ba60da">&#9670;&nbsp;</a></span>drbbdup_analyze_case_t</h2>
+<a id="ga769208834becf7cf4590797eaa33d6e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga769208834becf7cf4590797eaa33d6e6">&#9670;&nbsp;</a></span>drbbdup_analyze_case_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* drbbdup_analyze_case_t) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, uintptr_t encoding, void *user_data, void *orig_analysis_data, IN void **case_analysis_data)</td>
+          <td class="memname">typedef void(* drbbdup_analyze_case_t) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, uintptr_t encoding, void *user_data, void *orig_analysis_data, DR_PARAM_IN void **case_analysis_data)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Conducts an analysis on a basic block with respect to a case with encoding <code>encoding</code>. The result of the analysis needs to be stored in <code>case_analysis_data</code>.</p>
 <p>The user data <code>user_data</code> is that supplied to <a class="el" href="group__drbbdup.html#ga70e7a3c219a3a1d1492af8d626e9832e">drbbdup_init()</a>. Analysis data <code>orig_analysis_data</code> that was conducted on the original bb is also provided.</p>
 <p>The user can use thread allocation for storing the analysis result.</p>
-<p>The analysis data is destroyed via a <a class="el" href="group__drbbdup.html#ga1635c9540f9b8de24bfc0e37a5ba60da">drbbdup_analyze_case_t</a> function. </p>
+<p>The analysis data is destroyed via a <a class="el" href="group__drbbdup.html#ga769208834becf7cf4590797eaa33d6e6">drbbdup_analyze_case_t</a> function. </p>
 
 </div>
 </div>
-<a id="ga9ad6ccdf892113423001b6559e4ee8e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9ad6ccdf892113423001b6559e4ee8e8">&#9670;&nbsp;</a></span>drbbdup_analyze_orig_t</h2>
+<a id="gae19c32f94b0deaa5140107d504422bef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae19c32f94b0deaa5140107d504422bef">&#9670;&nbsp;</a></span>drbbdup_analyze_orig_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* drbbdup_analyze_orig_t) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, void *user_data, IN void **orig_analysis_data)</td>
+          <td class="memname">typedef void(* drbbdup_analyze_orig_t) (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, void *user_data, DR_PARAM_IN void **orig_analysis_data)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Conducts an analysis of the original basic block. The call-back is not called for each case, but once for the overall fragment. Therefore, computationally expensive analysis that only needs to be done once per fragment can be implemented by this call-back and made available to all cases of the basic block. The function should store the analysis result in <code>orig_analysis_data</code>. The user data <code>user_data</code> is that supplied to <a class="el" href="group__drbbdup.html#ga70e7a3c219a3a1d1492af8d626e9832e">drbbdup_init()</a>.</p>
-<p>It is not possible to insert note labels via this analysis call-back function. Any labels inserted will not persist. Such functionality is only possible via a <a class="el" href="group__drbbdup.html#ga1635c9540f9b8de24bfc0e37a5ba60da">drbbdup_analyze_case_t</a> call-back.</p>
+<p>It is not possible to insert note labels via this analysis call-back function. Any labels inserted will not persist. Such functionality is only possible via a <a class="el" href="group__drbbdup.html#ga769208834becf7cf4590797eaa33d6e6">drbbdup_analyze_case_t</a> call-back.</p>
 <p>The user can use thread allocation for storing the analysis result.</p>
 <p>The analysis data is destroyed via a <a class="el" href="group__drbbdup.html#gafa4a35ea9eab76f19c533b7944ee3ff8">drbbdup_destroy_orig_analysis_t</a> function.</p>
 <dl class="section return"><dt>Returns</dt><dd>whether successful or an error code on failure. </dd></dl>
@@ -247,7 +247,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Destroys analysis data <code>case_analysis_data</code> for the case with encoding <code>encoding</code>.</p>
-<p>The function is not invoked by drbbdup if <code>case_analysis_data</code> was set to NULL by the <a class="el" href="group__drbbdup.html#ga1635c9540f9b8de24bfc0e37a5ba60da">drbbdup_analyze_case_t</a> function.</p>
+<p>The function is not invoked by drbbdup if <code>case_analysis_data</code> was set to NULL by the <a class="el" href="group__drbbdup.html#ga769208834becf7cf4590797eaa33d6e6">drbbdup_analyze_case_t</a> function.</p>
 <p>The user data <code>user_data</code> is that supplied to <a class="el" href="group__drbbdup.html#ga70e7a3c219a3a1d1492af8d626e9832e">drbbdup_init()</a>. Analysis data <code>orig_analysis_data</code> that was conducted on the original bb is also provided.</p>
 <dl class="section note"><dt>Note</dt><dd>The user should not destroy orig_analysis_data. </dd></dl>
 
@@ -265,7 +265,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Destroys analysis data <code>orig_analysis_data</code>.</p>
-<p>The function is not invoked by drbbdup if <code>orig_analysis_data</code> was set to NULL by the the <a class="el" href="group__drbbdup.html#ga9ad6ccdf892113423001b6559e4ee8e8">drbbdup_analyze_orig_t</a> function. </p>
+<p>The function is not invoked by drbbdup if <code>orig_analysis_data</code> was set to NULL by the the <a class="el" href="group__drbbdup.html#gae19c32f94b0deaa5140107d504422bef">drbbdup_analyze_orig_t</a> function. </p>
 
 </div>
 </div>
@@ -318,14 +318,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gafc69f147f9c66259b8890b0d5aef38d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafc69f147f9c66259b8890b0d5aef38d8">&#9670;&nbsp;</a></span>drbbdup_set_up_bb_dups_t</h2>
+<a id="ga9a6bf9a298bc4585ce660a6ad75a1049"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a6bf9a298bc4585ce660a6ad75a1049">&#9670;&nbsp;</a></span>drbbdup_set_up_bb_dups_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef uintptr_t(* drbbdup_set_up_bb_dups_t) (void *drbbdup_ctx, void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, IN bool *enable_dups, IN bool *enable_dynamic_handling, void *user_data)</td>
+          <td class="memname">typedef uintptr_t(* drbbdup_set_up_bb_dups_t) (void *drbbdup_ctx, void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb, DR_PARAM_IN bool *enable_dups, DR_PARAM_IN bool *enable_dynamic_handling, void *user_data)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -415,8 +415,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga4743c5b48f29c25dcf7ea08329dc96a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4743c5b48f29c25dcf7ea08329dc96a8">&#9670;&nbsp;</a></span>drbbdup_get_stats()</h2>
+<a id="ga040f2e861191c2dd06c5c6bf7f8c6db7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga040f2e861191c2dd06c5c6bf7f8c6db7">&#9670;&nbsp;</a></span>drbbdup_get_stats()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -424,7 +424,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">DR_EXPORT <a class="el" href="group__drbbdup.html#ga29389438e052068540ac1fdcfc77f799">drbbdup_status_t</a> drbbdup_get_stats </td>
           <td>(</td>
-          <td class="paramtype">OUT <a class="el" href="structdrbbdup__stats__t.html">drbbdup_stats_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT <a class="el" href="structdrbbdup__stats__t.html">drbbdup_stats_t</a> *&#160;</td>
           <td class="paramname"><em>stats</em></td><td>)</td>
           <td></td>
         </tr>
@@ -458,8 +458,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga033b7015cc84c05542d96e886a11e588"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga033b7015cc84c05542d96e886a11e588">&#9670;&nbsp;</a></span>drbbdup_is_first_instr()</h2>
+<a id="gaca232781dbd0609f9ce701e88c5f6a46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaca232781dbd0609f9ce701e88c5f6a46">&#9670;&nbsp;</a></span>drbbdup_is_first_instr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -479,7 +479,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT bool *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT bool *&#160;</td>
           <td class="paramname"><em>is_start</em>&#160;</td>
         </tr>
         <tr>
@@ -534,8 +534,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga8b714ca5a27b1a31cf945391e98d2e4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8b714ca5a27b1a31cf945391e98d2e4c">&#9670;&nbsp;</a></span>drbbdup_is_last_instr()</h2>
+<a id="ga192ff54dde84c0e670bcc1f9ae2310c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga192ff54dde84c0e670bcc1f9ae2310c6">&#9670;&nbsp;</a></span>drbbdup_is_last_instr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -555,7 +555,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT bool *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT bool *&#160;</td>
           <td class="paramname"><em>is_last</em>&#160;</td>
         </tr>
         <tr>
@@ -597,7 +597,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Registers a non-default case encoding <code>encoding</code>. The function should only be called by a <a class="el" href="group__drbbdup.html#gafc69f147f9c66259b8890b0d5aef38d8">drbbdup_set_up_bb_dups_t</a> call-back function which provides <code>drbbdup_ctx</code>.</p>
+<p>Registers a non-default case encoding <code>encoding</code>. The function should only be called by a <a class="el" href="group__drbbdup.html#ga9a6bf9a298bc4585ce660a6ad75a1049">drbbdup_set_up_bb_dups_t</a> call-back function which provides <code>drbbdup_ctx</code>.</p>
 <p>The same encoding cannot be registered more than once.</p>
 <dl class="section return"><dt>Returns</dt><dd>whether successful or an error code on failure. </dd></dl>
 
@@ -609,5 +609,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19671 --- Fri Nov 10 2023 03:15:14 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19678 --- Fri Nov 17 2023 03:12:59 &nbsp; <img border=0 src="favicon.png">
 </small></address>

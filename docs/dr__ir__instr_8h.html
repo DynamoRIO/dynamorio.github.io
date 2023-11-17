@@ -579,10 +579,10 @@ Functions</h2></td></tr>
 <tr class="separator:a2e199cd53805f34e75c506a364005d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28829816cc8178aab86a55173599c477"><td class="memItemLeft" align="right" valign="top">DR_API app_pc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a28829816cc8178aab86a55173599c477">instr_compute_address</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> *mc)</td></tr>
 <tr class="separator:a28829816cc8178aab86a55173599c477"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad78a69d6d54664001ebfee25847a3983"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#ad78a69d6d54664001ebfee25847a3983">instr_compute_address_ex</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> *mc, uint index, OUT app_pc *addr, OUT bool *write)</td></tr>
-<tr class="separator:ad78a69d6d54664001ebfee25847a3983"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a119b505069a5608525bafb89ba0a2b8b"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a119b505069a5608525bafb89ba0a2b8b">instr_compute_address_ex_pos</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> *mc, uint index, OUT app_pc *addr, OUT bool *is_write, OUT uint *pos)</td></tr>
-<tr class="separator:a119b505069a5608525bafb89ba0a2b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a263a142a2599777f1c33c6991346cbaa"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a263a142a2599777f1c33c6991346cbaa">instr_compute_address_ex</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> *mc, uint index, DR_PARAM_OUT app_pc *addr, DR_PARAM_OUT bool *write)</td></tr>
+<tr class="separator:a263a142a2599777f1c33c6991346cbaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c9b98f9a0998bd33eef4b294b6ac70"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a29c9b98f9a0998bd33eef4b294b6ac70">instr_compute_address_ex_pos</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> *mc, uint index, DR_PARAM_OUT app_pc *addr, DR_PARAM_OUT bool *is_write, DR_PARAM_OUT uint *pos)</td></tr>
+<tr class="separator:a29c9b98f9a0998bd33eef4b294b6ac70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05eec4b2764a81b13af3fc1197fca98f"><td class="memItemLeft" align="right" valign="top">DR_API uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a05eec4b2764a81b13af3fc1197fca98f">instr_memory_reference_size</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
 <tr class="separator:a05eec4b2764a81b13af3fc1197fca98f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe35e7c108f27fd776a2294c584e19ee"><td class="memItemLeft" align="right" valign="top">DR_API uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#abe35e7c108f27fd776a2294c584e19ee">instr_num_memory_read_access</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
@@ -767,8 +767,8 @@ Functions</h2></td></tr>
 <tr class="separator:a134a4a1853343fab41695eebead0ddde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a538d4cf10249a468265438ca8587ce54"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a538d4cf10249a468265438ca8587ce54">instr_create_pusha</a> (void *drcontext)</td></tr>
 <tr class="separator:a538d4cf10249a468265438ca8587ce54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af80b7eb4b4e4f9c42fede8bfc375dd4e"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#af80b7eb4b4e4f9c42fede8bfc375dd4e">instr_is_reg_spill_or_restore</a> (void *drcontext, <a class="el" href="structinstr__t.html">instr_t</a> *instr, bool *tls OUT, bool *spill OUT, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> *reg OUT, uint *offs OUT)</td></tr>
-<tr class="separator:af80b7eb4b4e4f9c42fede8bfc375dd4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f51c6e8d68736c56f11bfabbc72d4a7"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a0f51c6e8d68736c56f11bfabbc72d4a7">instr_is_reg_spill_or_restore</a> (void *drcontext, <a class="el" href="structinstr__t.html">instr_t</a> *instr, bool *tls DR_PARAM_OUT, bool *spill DR_PARAM_OUT, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> *reg DR_PARAM_OUT, uint *offs DR_PARAM_OUT)</td></tr>
+<tr class="separator:a0f51c6e8d68736c56f11bfabbc72d4a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Functions to create and manipulate instructions. </p>
@@ -2009,8 +2009,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad78a69d6d54664001ebfee25847a3983"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad78a69d6d54664001ebfee25847a3983">&#9670;&nbsp;</a></span>instr_compute_address_ex()</h2>
+<a id="a263a142a2599777f1c33c6991346cbaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a263a142a2599777f1c33c6991346cbaa">&#9670;&nbsp;</a></span>instr_compute_address_ex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2036,13 +2036,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT app_pc *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT app_pc *&#160;</td>
           <td class="paramname"><em>addr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT bool *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT bool *&#160;</td>
           <td class="paramname"><em>write</em>&#160;</td>
         </tr>
         <tr>
@@ -2057,8 +2057,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a119b505069a5608525bafb89ba0a2b8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a119b505069a5608525bafb89ba0a2b8b">&#9670;&nbsp;</a></span>instr_compute_address_ex_pos()</h2>
+<a id="a29c9b98f9a0998bd33eef4b294b6ac70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29c9b98f9a0998bd33eef4b294b6ac70">&#9670;&nbsp;</a></span>instr_compute_address_ex_pos()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2084,19 +2084,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT app_pc *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT app_pc *&#160;</td>
           <td class="paramname"><em>addr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT bool *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT bool *&#160;</td>
           <td class="paramname"><em>is_write</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT uint *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT uint *&#160;</td>
           <td class="paramname"><em>pos</em>&#160;</td>
         </tr>
         <tr>
@@ -2106,7 +2106,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Performs address calculation in the same manner as <a class="el" href="dr__ir__instr_8h.html#ad78a69d6d54664001ebfee25847a3983">instr_compute_address_ex()</a> with additional information of which opnd is used for address computation returned in <code>pos</code>. If <code>pos</code> is NULL, it is the same as <a class="el" href="dr__ir__instr_8h.html#ad78a69d6d54664001ebfee25847a3983">instr_compute_address_ex()</a>.</p>
+<p>Performs address calculation in the same manner as <a class="el" href="dr__ir__instr_8h.html#a263a142a2599777f1c33c6991346cbaa">instr_compute_address_ex()</a> with additional information of which opnd is used for address computation returned in <code>pos</code>. If <code>pos</code> is NULL, it is the same as <a class="el" href="dr__ir__instr_8h.html#a263a142a2599777f1c33c6991346cbaa">instr_compute_address_ex()</a>.</p>
 <p>Like <a class="el" href="dr__ir__instr_8h.html#a461a626cbf3748356a96a0a5538871bd">instr_reads_memory()</a>, this routine does not consider multi-byte nops that use addressing operands, or the <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a8e5722f2fffd08c1e03efa408a6a0f55">OP_lea</a> instruction's source operand, to be memory references. </p>
 
 </div>
@@ -6216,8 +6216,8 @@ We recommend using this routine during the phase of application code analysis, a
 
 </div>
 </div>
-<a id="af80b7eb4b4e4f9c42fede8bfc375dd4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af80b7eb4b4e4f9c42fede8bfc375dd4e">&#9670;&nbsp;</a></span>instr_is_reg_spill_or_restore()</h2>
+<a id="a0f51c6e8d68736c56f11bfabbc72d4a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f51c6e8d68736c56f11bfabbc72d4a7">&#9670;&nbsp;</a></span>instr_is_reg_spill_or_restore()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6238,25 +6238,25 @@ We recommend using this routine during the phase of application code analysis, a
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool *tls&#160;</td>
-          <td class="paramname"><em>OUT</em>, </td>
+          <td class="paramname"><em>DR_PARAM_OUT</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool *spill&#160;</td>
-          <td class="paramname"><em>OUT</em>, </td>
+          <td class="paramname"><em>DR_PARAM_OUT</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> *reg&#160;</td>
-          <td class="paramname"><em>OUT</em>, </td>
+          <td class="paramname"><em>DR_PARAM_OUT</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint *offs&#160;</td>
-          <td class="paramname"><em>OUT</em>&#160;</td>
+          <td class="paramname"><em>DR_PARAM_OUT</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -8658,5 +8658,5 @@ mangle" if <code>val</code> is false.</p>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19671 --- Fri Nov 10 2023 03:15:10 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19678 --- Fri Nov 17 2023 03:12:57 &nbsp; <img border=0 src="favicon.png">
 </small></address>

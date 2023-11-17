@@ -44,6 +44,7 @@ permalink: /sec_drcachesim_config_file.html
 <li>cpu_scheduling &lt;bool&gt;</li>
 <li>verbose &lt;unsigned int&gt;</li>
 <li>coherence &lt;bool&gt;</li>
+<li>coherent &lt;bool&gt; - (alias for coherence)</li>
 <li>use_physical &lt;bool&gt;</li>
 </ul>
 <p>Supported cache parameters and their value types:</p><ul>
@@ -52,6 +53,7 @@ permalink: /sec_drcachesim_config_file.html
 <li>size &lt;unsigned int, power of 2&gt;</li>
 <li>assoc &lt;unsigned int, power of 2&gt;</li>
 <li>inclusive &lt;bool&gt;</li>
+<li>exclusive &lt;bool&gt;</li>
 <li>parent &lt;string&gt;</li>
 <li>replace_policy &lt;string, one of "LRU", "LFU", or "FIFO"&gt;</li>
 <li>prefetcher &lt;string, one of "nextline" or "none"&gt;</li>
@@ -93,7 +95,7 @@ permalink: /sec_drcachesim_config_file.html
 <div class="line">LLC {                          <span class="comment">// LLC</span></div>
 <div class="line">  size            1M</div>
 <div class="line">  assoc           16</div>
-<div class="line">  inclusive       <span class="keyword">true</span></div>
+<div class="line">  exclusive       <span class="keyword">true</span></div>
 <div class="line">  parent          memory</div>
 <div class="line">  replace_policy  LRU</div>
 <div class="line">  miss_file       misses.txt</div>
@@ -105,5 +107,5 @@ permalink: /sec_drcachesim_config_file.html
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19671 --- Fri Nov 10 2023 03:15:14 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19678 --- Fri Nov 17 2023 03:12:59 &nbsp; <img border=0 src="favicon.png">
 </small></address>

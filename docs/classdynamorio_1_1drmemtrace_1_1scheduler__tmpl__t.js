@@ -9,6 +9,8 @@
     [ "output_ordinal_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#abbf00e5453f5498c1fa32d7e00c760db", null ],
     [ "inter_input_dependency_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9", [
       [ "DEPENDENCY_IGNORE", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9af3b4cadcd03eac1003ccd1aced5e2823", null ],
+      [ "DEPENDENCY_TIMESTAMPS_BITFIELD", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9a0e69c8a9019491dec9ae148b78530458", null ],
+      [ "DEPENDENCY_DIRECT_SWITCH_BITFIELD", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9ab9576e2720f95250d9a35fee2e177aeb", null ],
       [ "DEPENDENCY_TIMESTAMPS", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9afa1e39bbc41fe11cc3bbbd36b2a13e6e", null ]
     ] ],
     [ "mapping_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#afb65a4beaa27ae26649738d2e565c0cc", [

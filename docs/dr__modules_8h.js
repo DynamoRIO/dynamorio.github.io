@@ -19,7 +19,7 @@
     [ "dr_free_module_data", "dr__modules_8h.html#a60e36cf43320758aace393fd8747ed19", null ],
     [ "dr_get_main_module", "dr__modules_8h.html#a7c8ab7e9af187cfd427206033ccadf49", null ],
     [ "dr_get_proc_address", "dr__modules_8h.html#acb571b80307fd90538cb006725ab6183", null ],
-    [ "dr_get_proc_address_ex", "dr__modules_8h.html#acc5a9cbb5954c2e7159c8a3b25dbf110", null ],
+    [ "dr_get_proc_address_ex", "dr__modules_8h.html#a0d6cd432835bd1de840fc02806f0b522", null ],
     [ "dr_lookup_module", "dr__modules_8h.html#ac258fe445fb4fbddf62dd38ecb3b2e32", null ],
     [ "dr_lookup_module_by_name", "dr__modules_8h.html#a86b55eeb3c559b4a26b47a6e7a01cc94", null ],
     [ "dr_lookup_module_section", "dr__modules_8h.html#aca9e22e479d790db91a42d890b1b6312", null ],

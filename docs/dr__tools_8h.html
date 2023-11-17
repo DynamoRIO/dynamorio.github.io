@@ -248,12 +248,12 @@ Functions</h2></td></tr>
 <tr class="separator:a558ef634eff90b0e777cddb73983617a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affc4a7a38a1fa1fe45c1a15e01a98e78"><td class="memItemLeft" align="right" valign="top">const DR_API char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#affc4a7a38a1fa1fe45c1a15e01a98e78">dr_get_options</a> (<a class="el" href="dr__defines_8h.html#a68540a70b4f8150a4fe6dcec91bf8825">client_id_t</a> client_id)</td></tr>
 <tr class="separator:affc4a7a38a1fa1fe45c1a15e01a98e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f53df83b2108925fa52bd607536e25d"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a5f53df83b2108925fa52bd607536e25d">dr_get_option_array</a> (<a class="el" href="dr__defines_8h.html#a68540a70b4f8150a4fe6dcec91bf8825">client_id_t</a> client_id, int *argc OUT, const char ***argv OUT)</td></tr>
-<tr class="separator:a5f53df83b2108925fa52bd607536e25d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d8202a00c908f0e98083cc2183abc40"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a7d8202a00c908f0e98083cc2183abc40">dr_get_string_option</a> (const char *option_name, char *buf OUT, size_t len)</td></tr>
-<tr class="separator:a7d8202a00c908f0e98083cc2183abc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b43ec2cea34645dab0282cf6204d226"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a0b43ec2cea34645dab0282cf6204d226">dr_get_integer_option</a> (const char *option_name, uint64 *val OUT)</td></tr>
-<tr class="separator:a0b43ec2cea34645dab0282cf6204d226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c584f24947b8c0d93bc39b79a0d7c50"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a4c584f24947b8c0d93bc39b79a0d7c50">dr_get_option_array</a> (<a class="el" href="dr__defines_8h.html#a68540a70b4f8150a4fe6dcec91bf8825">client_id_t</a> client_id, int *argc DR_PARAM_OUT, const char ***argv DR_PARAM_OUT)</td></tr>
+<tr class="separator:a4c584f24947b8c0d93bc39b79a0d7c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b4177d247de7c635394356442cbbba9"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a5b4177d247de7c635394356442cbbba9">dr_get_string_option</a> (const char *option_name, char *buf DR_PARAM_OUT, size_t len)</td></tr>
+<tr class="separator:a5b4177d247de7c635394356442cbbba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adccac14f49958b39bdea789d5600db6d"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#adccac14f49958b39bdea789d5600db6d">dr_get_integer_option</a> (const char *option_name, uint64 *val DR_PARAM_OUT)</td></tr>
+<tr class="separator:adccac14f49958b39bdea789d5600db6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afccb9210ada84de4fbbaa8d851952a37"><td class="memItemLeft" align="right" valign="top">const DR_API char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#afccb9210ada84de4fbbaa8d851952a37">dr_get_client_path</a> (<a class="el" href="dr__defines_8h.html#a68540a70b4f8150a4fe6dcec91bf8825">client_id_t</a> client_id)</td></tr>
 <tr class="separator:afccb9210ada84de4fbbaa8d851952a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdead1ca945b38f865c5599bdebf9d0e"><td class="memItemLeft" align="right" valign="top">DR_API byte *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#acdead1ca945b38f865c5599bdebf9d0e">dr_get_client_base</a> (<a class="el" href="dr__defines_8h.html#a68540a70b4f8150a4fe6dcec91bf8825">client_id_t</a> client_id)</td></tr>
@@ -390,8 +390,8 @@ Functions</h2></td></tr>
 <tr class="separator:afcdbd3905a8b32ce1386d7de86b396c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2752c8a9f9637159c83819285ca4cc40"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a2752c8a9f9637159c83819285ca4cc40">dr_atomic_store64</a> (volatile int64 *dest, int64 val)</td></tr>
 <tr class="separator:a2752c8a9f9637159c83819285ca4cc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a192497da7670d454f6aae17d293f70b4"><td class="memItemLeft" align="right" valign="top">DR_API byte *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a192497da7670d454f6aae17d293f70b4">dr_map_executable_file</a> (const char *filename, <a class="el" href="dr__tools_8h.html#ade307e7bb7b7ac46e874097fe62b9fef">dr_map_executable_flags_t</a> flags, size_t *size OUT)</td></tr>
-<tr class="separator:a192497da7670d454f6aae17d293f70b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bde68e4fe5dfd8f9257dd096db1afb7"><td class="memItemLeft" align="right" valign="top">DR_API byte *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a1bde68e4fe5dfd8f9257dd096db1afb7">dr_map_executable_file</a> (const char *filename, <a class="el" href="dr__tools_8h.html#ade307e7bb7b7ac46e874097fe62b9fef">dr_map_executable_flags_t</a> flags, size_t *size DR_PARAM_OUT)</td></tr>
+<tr class="separator:a1bde68e4fe5dfd8f9257dd096db1afb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01d306d881c59488dd6ae41f392074af"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a01d306d881c59488dd6ae41f392074af">dr_unmap_executable_file</a> (byte *base, size_t size)</td></tr>
 <tr class="separator:a01d306d881c59488dd6ae41f392074af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3912ab20d9a86a19627f3634a3a2f3d"><td class="memItemLeft" align="right" valign="top">DR_API reg_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#ae3912ab20d9a86a19627f3634a3a2f3d">dr_syscall_get_param</a> (void *drcontext, int param_num)</td></tr>
@@ -400,8 +400,8 @@ Functions</h2></td></tr>
 <tr class="separator:a2ba5b83fedf0082d4170c3caaf2224a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16f09772f0185557445cb46647268fa8"><td class="memItemLeft" align="right" valign="top">DR_API reg_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a16f09772f0185557445cb46647268fa8">dr_syscall_get_result</a> (void *drcontext)</td></tr>
 <tr class="separator:a16f09772f0185557445cb46647268fa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2906dcd1979be92605bdf3c58c9f373"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#ad2906dcd1979be92605bdf3c58c9f373">dr_syscall_get_result_ex</a> (void *drcontext, <a class="el" href="dr__tools_8h.html#afc574aa98b0e727a9b75059c4966eb10">dr_syscall_result_info_t</a> *info INOUT)</td></tr>
-<tr class="separator:ad2906dcd1979be92605bdf3c58c9f373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34a7817f8c366786557370f35633f0c7"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a34a7817f8c366786557370f35633f0c7">dr_syscall_get_result_ex</a> (void *drcontext, <a class="el" href="dr__tools_8h.html#afc574aa98b0e727a9b75059c4966eb10">dr_syscall_result_info_t</a> *info DR_PARAM_OUT)</td></tr>
+<tr class="separator:a34a7817f8c366786557370f35633f0c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d20c65a63ebb1a2081b3152d9d4647d"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a2d20c65a63ebb1a2081b3152d9d4647d">dr_syscall_set_result</a> (void *drcontext, reg_t value)</td></tr>
 <tr class="separator:a2d20c65a63ebb1a2081b3152d9d4647d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70710f3b42a9797a72ffb51f46720849"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a70710f3b42a9797a72ffb51f46720849">dr_syscall_set_result_ex</a> (void *drcontext, <a class="el" href="dr__tools_8h.html#afc574aa98b0e727a9b75059c4966eb10">dr_syscall_result_info_t</a> *info)</td></tr>
@@ -442,10 +442,10 @@ Functions</h2></td></tr>
 <tr class="separator:a0eb97885112fe6fdad5a983342545643"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08ac1cc05cf53faed156aa6c16a18d93"><td class="memItemLeft" align="right" valign="top">DR_API file_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a08ac1cc05cf53faed156aa6c16a18d93">dr_dup_file_handle</a> (file_t f)</td></tr>
 <tr class="separator:a08ac1cc05cf53faed156aa6c16a18d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34ee1db27b9b527a5488314d12782700"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a34ee1db27b9b527a5488314d12782700">dr_file_size</a> (file_t fd, OUT uint64 *size)</td></tr>
-<tr class="separator:a34ee1db27b9b527a5488314d12782700"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2885193f264131c620475894e3d1e1e"><td class="memItemLeft" align="right" valign="top">DR_API void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#ac2885193f264131c620475894e3d1e1e">dr_map_file</a> (file_t f, INOUT size_t *size, uint64 offs, app_pc addr, uint prot, uint flags)</td></tr>
-<tr class="separator:ac2885193f264131c620475894e3d1e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc5ab761cfd5d057d96f456acda81d3c"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#acc5ab761cfd5d057d96f456acda81d3c">dr_file_size</a> (file_t fd, DR_PARAM_OUT uint64 *size)</td></tr>
+<tr class="separator:acc5ab761cfd5d057d96f456acda81d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a463e82b25c6b4c7c799c286ce9940a46"><td class="memItemLeft" align="right" valign="top">DR_API void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a463e82b25c6b4c7c799c286ce9940a46">dr_map_file</a> (file_t f, DR_PARAM_INOUT size_t *size, uint64 offs, app_pc addr, uint prot, uint flags)</td></tr>
+<tr class="separator:a463e82b25c6b4c7c799c286ce9940a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b63ba5945657da579f044daa01ba035"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a3b63ba5945657da579f044daa01ba035">dr_unmap_file</a> (void *map, size_t size)</td></tr>
 <tr class="separator:a3b63ba5945657da579f044daa01ba035"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeea154f7dd2f1232aaba2e92d0a5cb24"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#aeea154f7dd2f1232aaba2e92d0a5cb24">dr_log</a> (void *drcontext, uint mask, uint level, const char *fmt,...)</td></tr>
@@ -498,10 +498,10 @@ Functions</h2></td></tr>
 <tr class="separator:aaa04a14c2cbf783b4926c2fd14445f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a534b38808801da50be64b9f0e6c8616f"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a534b38808801da50be64b9f0e6c8616f">dr_set_tls_field</a> (void *drcontext, void *value)</td></tr>
 <tr class="separator:a534b38808801da50be64b9f0e6c8616f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88d91064ffa84c097c84694d78a2ad22"><td class="memItemLeft" align="right" valign="top">DR_API void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a88d91064ffa84c097c84694d78a2ad22">dr_get_dr_segment_base</a> (IN <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> tls_register)</td></tr>
-<tr class="separator:a88d91064ffa84c097c84694d78a2ad22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5d2a2ccd58268f84c379a38bc4aa399"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#ac5d2a2ccd58268f84c379a38bc4aa399">dr_raw_tls_calloc</a> (OUT <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> *tls_register, OUT uint *offset, IN uint num_slots, IN uint alignment)</td></tr>
-<tr class="separator:ac5d2a2ccd58268f84c379a38bc4aa399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac8ca6c94601705938bbf00fb104cec6"><td class="memItemLeft" align="right" valign="top">DR_API void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#aac8ca6c94601705938bbf00fb104cec6">dr_get_dr_segment_base</a> (DR_PARAM_IN <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> tls_register)</td></tr>
+<tr class="separator:aac8ca6c94601705938bbf00fb104cec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6100c698663d8716aa5efffc0ae51919"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a6100c698663d8716aa5efffc0ae51919">dr_raw_tls_calloc</a> (DR_PARAM_OUT <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> *tls_register, DR_PARAM_OUT uint *offset, DR_PARAM_IN uint num_slots, DR_PARAM_IN uint alignment)</td></tr>
+<tr class="separator:a6100c698663d8716aa5efffc0ae51919"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2162f0dbd52d784c1fbfe8ac75cf6ec"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#ad2162f0dbd52d784c1fbfe8ac75cf6ec">dr_raw_tls_cfree</a> (uint offset, uint num_slots)</td></tr>
 <tr class="separator:ad2162f0dbd52d784c1fbfe8ac75cf6ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b8cdf29035914846c03c4409a3f8fcf"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a6b8cdf29035914846c03c4409a3f8fcf">dr_raw_tls_opnd</a> (void *drcontext, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> tls_register, uint tls_offs)</td></tr>
@@ -518,12 +518,12 @@ Functions</h2></td></tr>
 <tr class="separator:aac428021a331be838eca5a0ef19989bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a100ea691259a4eff5419e7b34245703d"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a100ea691259a4eff5419e7b34245703d">dr_thread_yield</a> (void)</td></tr>
 <tr class="separator:a100ea691259a4eff5419e7b34245703d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a566d8b7214afc621019c8f0048a094b0"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a566d8b7214afc621019c8f0048a094b0">dr_suspend_all_other_threads_ex</a> (OUT void ***drcontexts, OUT uint *num_suspended, OUT uint *num_unsuspended, <a class="el" href="dr__tools_8h.html#a66bef18f8eabc7a8b8b0368e8a96d179">dr_suspend_flags_t</a> flags)</td></tr>
-<tr class="separator:a566d8b7214afc621019c8f0048a094b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4eaefda11c27210a72df6d24f72871f"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#ae4eaefda11c27210a72df6d24f72871f">dr_suspend_all_other_threads</a> (OUT void ***drcontexts, OUT uint *num_suspended, OUT uint *num_unsuspended)</td></tr>
-<tr class="separator:ae4eaefda11c27210a72df6d24f72871f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5842900d62c160ea7f0e99c0eee77bb0"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a5842900d62c160ea7f0e99c0eee77bb0">dr_resume_all_other_threads</a> (IN void **drcontexts, IN uint num_suspended)</td></tr>
-<tr class="separator:a5842900d62c160ea7f0e99c0eee77bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbc63860f214ed00b877a9bc5108b3d3"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#abbc63860f214ed00b877a9bc5108b3d3">dr_suspend_all_other_threads_ex</a> (DR_PARAM_OUT void ***drcontexts, DR_PARAM_OUT uint *num_suspended, DR_PARAM_OUT uint *num_unsuspended, <a class="el" href="dr__tools_8h.html#a66bef18f8eabc7a8b8b0368e8a96d179">dr_suspend_flags_t</a> flags)</td></tr>
+<tr class="separator:abbc63860f214ed00b877a9bc5108b3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f0795f4e8676747db476444c8d7085b"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a9f0795f4e8676747db476444c8d7085b">dr_suspend_all_other_threads</a> (DR_PARAM_OUT void ***drcontexts, DR_PARAM_OUT uint *num_suspended, DR_PARAM_OUT uint *num_unsuspended)</td></tr>
+<tr class="separator:a9f0795f4e8676747db476444c8d7085b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a687adc9ac5976037440c5efc838f3d35"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a687adc9ac5976037440c5efc838f3d35">dr_resume_all_other_threads</a> (DR_PARAM_IN void **drcontexts, DR_PARAM_IN uint num_suspended)</td></tr>
+<tr class="separator:a687adc9ac5976037440c5efc838f3d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12f0ea543a114210feefc521b132d69b"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a12f0ea543a114210feefc521b132d69b">dr_is_thread_native</a> (void *drcontext)</td></tr>
 <tr class="separator:a12f0ea543a114210feefc521b132d69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69e371d4c7d897bf24c8a558b86a4c69"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a69e371d4c7d897bf24c8a558b86a4c69">dr_retakeover_suspended_native_thread</a> (void *drcontext)</td></tr>
@@ -536,8 +536,8 @@ Functions</h2></td></tr>
 <tr class="separator:ac922731194013612e4f4cb78075a2170"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab185c8efca620f8cd0e323164afbc935"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#ab185c8efca620f8cd0e323164afbc935">dr_is_tracking_where_am_i</a> (void)</td></tr>
 <tr class="separator:ab185c8efca620f8cd0e323164afbc935"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9333e0dee46cc854228efab156ce98c5"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__defines_8h.html#a145cc4ecf7cf2041207f0382d50f9620">dr_where_am_i_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a9333e0dee46cc854228efab156ce98c5">dr_where_am_i</a> (void *drcontext, app_pc pc, OUT void **tag)</td></tr>
-<tr class="separator:a9333e0dee46cc854228efab156ce98c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47cf743cee9d3fac9d0a41de3fc7a1d5"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__defines_8h.html#a145cc4ecf7cf2041207f0382d50f9620">dr_where_am_i_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a47cf743cee9d3fac9d0a41de3fc7a1d5">dr_where_am_i</a> (void *drcontext, app_pc pc, DR_PARAM_OUT void **tag)</td></tr>
+<tr class="separator:a47cf743cee9d3fac9d0a41de3fc7a1d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c602c9d795079655bc599550cb4492b"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a3c602c9d795079655bc599550cb4492b">dr_replace_fragment</a> (void *drcontext, void *tag, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist)</td></tr>
 <tr class="separator:a3c602c9d795079655bc599550cb4492b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65e5ee30d5f4226445ce589f5b41b720"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a65e5ee30d5f4226445ce589f5b41b720">dr_delete_fragment</a> (void *drcontext, void *tag)</td></tr>
@@ -1614,7 +1614,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Data structure used to obtain or modify the result of an application system call by <a class="el" href="dr__tools_8h.html#ad2906dcd1979be92605bdf3c58c9f373">dr_syscall_get_result_ex()</a> and <a class="el" href="dr__tools_8h.html#a70710f3b42a9797a72ffb51f46720849">dr_syscall_set_result_ex()</a>. </p>
+<p>Data structure used to obtain or modify the result of an application system call by <a class="el" href="dr__tools_8h.html#a34a7817f8c366786557370f35633f0c7">dr_syscall_get_result_ex()</a> and <a class="el" href="dr__tools_8h.html#a70710f3b42a9797a72ffb51f46720849">dr_syscall_set_result_ex()</a>. </p>
 
 </div>
 </div>
@@ -1630,7 +1630,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Flags for use with <a class="el" href="dr__tools_8h.html#ac2885193f264131c620475894e3d1e1e">dr_map_file()</a>. </p>
+<p>Flags for use with <a class="el" href="dr__tools_8h.html#a463e82b25c6b4c7c799c286ce9940a46">dr_map_file()</a>. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a39fca1837c5ce7715cbf571669660c13ace272a4f3f0eff24ef44c983bfa4ce63"></a>DR_MAP_PRIVATE&#160;</td><td class="fielddoc"><p>If set, changes to mapped memory are private to the mapping process and are not reflected in the underlying file. If not set, changes are visible to other processes that map the same file, and will be propagated to the file itself. </p>
 </td></tr>
@@ -1711,7 +1711,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Flags for use with <a class="el" href="dr__tools_8h.html#a192497da7670d454f6aae17d293f70b4">dr_map_executable_file()</a>. </p>
+<p>Flags for use with <a class="el" href="dr__tools_8h.html#a1bde68e4fe5dfd8f9257dd096db1afb7">dr_map_executable_file()</a>. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ade307e7bb7b7ac46e874097fe62b9fefa183f27400568e903a072c9fc5bf0af96"></a>DR_MAPEXE_SKIP_WRITABLE&#160;</td><td class="fielddoc"><p>Requests that writable segments are not mapped, to save address space. This may be ignored on some platforms and may only be honored for a writable segment that is at the very end of the loaded module. </p>
 </td></tr>
@@ -1750,9 +1750,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Flags controlling the behavior of <a class="el" href="dr__tools_8h.html#a566d8b7214afc621019c8f0048a094b0">dr_suspend_all_other_threads_ex()</a>. </p>
+<p>Flags controlling the behavior of <a class="el" href="dr__tools_8h.html#abbc63860f214ed00b877a9bc5108b3d3">dr_suspend_all_other_threads_ex()</a>. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a66bef18f8eabc7a8b8b0368e8a96d179a21ba834e13979aa7ad97fd13c69b3ae4"></a>DR_SUSPEND_NATIVE&#160;</td><td class="fielddoc"><p>By default, native threads are not suspended by <a class="el" href="dr__tools_8h.html#a566d8b7214afc621019c8f0048a094b0">dr_suspend_all_other_threads_ex()</a>. This flag requests that native threads (including those temporarily-native due to actions such as <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209a184a564eaa6cee9890f98f8a2d1c9c89">DR_EMIT_GO_NATIVE</a>) be suspended as well. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a66bef18f8eabc7a8b8b0368e8a96d179a21ba834e13979aa7ad97fd13c69b3ae4"></a>DR_SUSPEND_NATIVE&#160;</td><td class="fielddoc"><p>By default, native threads are not suspended by <a class="el" href="dr__tools_8h.html#abbc63860f214ed00b877a9bc5108b3d3">dr_suspend_all_other_threads_ex()</a>. This flag requests that native threads (including those temporarily-native due to actions such as <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209a184a564eaa6cee9890f98f8a2d1c9c89">DR_EMIT_GO_NATIVE</a>) be suspended as well. </p>
 </td></tr>
 </table>
 
@@ -2182,7 +2182,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Can only be called from a client thread: returns false if called from a non-client thread.</p>
-<p>Controls whether a client thread created with <a class="el" href="dr__tools_8h.html#aca9bc4918a9b5facc7f44cf6a9e8bdca">dr_create_client_thread()</a> will be suspended by DR for synchronization operations such as flushing or client requests like <a class="el" href="dr__tools_8h.html#ae4eaefda11c27210a72df6d24f72871f">dr_suspend_all_other_threads()</a>. A client thread that spends a lot of time holding locks can gain greater performance by not being suspended.</p>
+<p>Controls whether a client thread created with <a class="el" href="dr__tools_8h.html#aca9bc4918a9b5facc7f44cf6a9e8bdca">dr_create_client_thread()</a> will be suspended by DR for synchronization operations such as flushing or client requests like <a class="el" href="dr__tools_8h.html#a9f0795f4e8676747db476444c8d7085b">dr_suspend_all_other_threads()</a>. A client thread that spends a lot of time holding locks can gain greater performance by not being suspended.</p>
 <p>A client thread <b>will</b> be suspended for a thread termination operation, including at process exit, regardless of its suspendable requests. </p>
 
 </div>
@@ -2726,8 +2726,8 @@ Other options of removing the code fragments from code cache include <a class="e
 
 </div>
 </div>
-<a id="a34ee1db27b9b527a5488314d12782700"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34ee1db27b9b527a5488314d12782700">&#9670;&nbsp;</a></span>dr_file_size()</h2>
+<a id="acc5ab761cfd5d057d96f456acda81d3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc5ab761cfd5d057d96f456acda81d3c">&#9670;&nbsp;</a></span>dr_file_size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2741,7 +2741,7 @@ Other options of removing the code fragments from code cache include <a class="e
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT uint64 *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT uint64 *&#160;</td>
           <td class="paramname"><em>size</em>&#160;</td>
         </tr>
         <tr>
@@ -3082,8 +3082,8 @@ When printing floating-point values, the caller's code should use <a class="el" 
 
 </div>
 </div>
-<a id="a88d91064ffa84c097c84694d78a2ad22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88d91064ffa84c097c84694d78a2ad22">&#9670;&nbsp;</a></span>dr_get_dr_segment_base()</h2>
+<a id="aac8ca6c94601705938bbf00fb104cec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac8ca6c94601705938bbf00fb104cec6">&#9670;&nbsp;</a></span>dr_get_dr_segment_base()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3091,13 +3091,13 @@ When printing floating-point values, the caller's code should use <a class="el" 
         <tr>
           <td class="memname">DR_API void* dr_get_dr_segment_base </td>
           <td>(</td>
-          <td class="paramtype">IN <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a>&#160;</td>
+          <td class="paramtype">DR_PARAM_IN <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a>&#160;</td>
           <td class="paramname"><em>tls_register</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get DR's thread local storage segment base pointed at by <code>tls_register</code>. It can be used to get the base of the thread-local storage segment used by <a class="el" href="dr__tools_8h.html#ac5d2a2ccd58268f84c379a38bc4aa399">dr_raw_tls_calloc</a>.</p>
+<p>Get DR's thread local storage segment base pointed at by <code>tls_register</code>. It can be used to get the base of the thread-local storage segment used by <a class="el" href="dr__tools_8h.html#a6100c698663d8716aa5efffc0ae51919">dr_raw_tls_calloc</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>It should not be called on thread exit event, as the thread exit event may be invoked from other threads. See <a class="el" href="dr__events_8h.html#aa34d296a9e990925a096501a7d5c6596">dr_register_thread_exit_event</a> for details. </dd></dl>
 
 </div>
@@ -3142,8 +3142,8 @@ When printing floating-point values, the caller's code should use <a class="el" 
 
 </div>
 </div>
-<a id="a0b43ec2cea34645dab0282cf6204d226"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b43ec2cea34645dab0282cf6204d226">&#9670;&nbsp;</a></span>dr_get_integer_option()</h2>
+<a id="adccac14f49958b39bdea789d5600db6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adccac14f49958b39bdea789d5600db6d">&#9670;&nbsp;</a></span>dr_get_integer_option()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3158,7 +3158,7 @@ When printing floating-point values, the caller's code should use <a class="el" 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint64 *val&#160;</td>
-          <td class="paramname"><em>OUT</em>&#160;</td>
+          <td class="paramname"><em>DR_PARAM_OUT</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3257,8 +3257,8 @@ When printing floating-point values, the caller's code should use <a class="el" 
 
 </div>
 </div>
-<a id="a5f53df83b2108925fa52bd607536e25d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f53df83b2108925fa52bd607536e25d">&#9670;&nbsp;</a></span>dr_get_option_array()</h2>
+<a id="a4c584f24947b8c0d93bc39b79a0d7c50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c584f24947b8c0d93bc39b79a0d7c50">&#9670;&nbsp;</a></span>dr_get_option_array()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3273,13 +3273,13 @@ When printing floating-point values, the caller's code should use <a class="el" 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int *argc&#160;</td>
-          <td class="paramname"><em>OUT</em>, </td>
+          <td class="paramname"><em>DR_PARAM_OUT</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char ***argv&#160;</td>
-          <td class="paramname"><em>OUT</em>&#160;</td>
+          <td class="paramname"><em>DR_PARAM_OUT</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3308,7 +3308,7 @@ When printing floating-point values, the caller's code should use <a class="el" 
       </table>
 </div><div class="memdoc">
 <p>Returns the client-specific option string specified at client registration. <code>client_id</code> is the client ID passed to <a class="el" href="dr__api_8h.html#a2b938c98dd186cc94eef6880f9e3c3e9">dr_client_main()</a>.</p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated:</a></b></dt><dd>This routine is replaced by <a class="el" href="dr__api_8h.html#a2b938c98dd186cc94eef6880f9e3c3e9">dr_client_main()</a>'s arguments and by <a class="el" href="dr__tools_8h.html#a5f53df83b2108925fa52bd607536e25d">dr_get_option_array()</a>. The front-end <code>drrun</code> and other utilities now re-quote all tokens, providing simpler option passing without escaping or extra quote layers. This routine, for compatibility, strips those quotes off and returns a flat string without any token-delimiting quotes. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated:</a></b></dt><dd>This routine is replaced by <a class="el" href="dr__api_8h.html#a2b938c98dd186cc94eef6880f9e3c3e9">dr_client_main()</a>'s arguments and by <a class="el" href="dr__tools_8h.html#a4c584f24947b8c0d93bc39b79a0d7c50">dr_get_option_array()</a>. The front-end <code>drrun</code> and other utilities now re-quote all tokens, providing simpler option passing without escaping or extra quote layers. This routine, for compatibility, strips those quotes off and returns a flat string without any token-delimiting quotes. </dd></dl>
 
 </div>
 </div>
@@ -3426,8 +3426,8 @@ When printing floating-point values, the caller's code should use <a class="el" 
 
 </div>
 </div>
-<a id="a7d8202a00c908f0e98083cc2183abc40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d8202a00c908f0e98083cc2183abc40">&#9670;&nbsp;</a></span>dr_get_string_option()</h2>
+<a id="a5b4177d247de7c635394356442cbbba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b4177d247de7c635394356442cbbba9">&#9670;&nbsp;</a></span>dr_get_string_option()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3442,7 +3442,7 @@ When printing floating-point values, the caller's code should use <a class="el" 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char *buf&#160;</td>
-          <td class="paramname"><em>OUT</em>, </td>
+          <td class="paramname"><em>DR_PARAM_OUT</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -4037,7 +4037,7 @@ When printing floating-point values, the caller's code should use <a class="el" 
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns whether DR is using accurate tracking of the <a class="el" href="dr__tools_8h.html#a9333e0dee46cc854228efab156ce98c5">dr_where_am_i</a> value. Typically this is enabled by calling <a class="el" href="dr__tools_8h.html#ac922731194013612e4f4cb78075a2170">dr_track_where_am_i()</a>. </p>
+<p>Returns whether DR is using accurate tracking of the <a class="el" href="dr__tools_8h.html#a47cf743cee9d3fac9d0a41de3fc7a1d5">dr_where_am_i</a> value. Typically this is enabled by calling <a class="el" href="dr__tools_8h.html#ac922731194013612e4f4cb78075a2170">dr_track_where_am_i()</a>. </p>
 
 </div>
 </div>
@@ -4088,8 +4088,8 @@ When printing floating-point values, the caller's code should use <a class="el" 
 
 </div>
 </div>
-<a id="a192497da7670d454f6aae17d293f70b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a192497da7670d454f6aae17d293f70b4">&#9670;&nbsp;</a></span>dr_map_executable_file()</h2>
+<a id="a1bde68e4fe5dfd8f9257dd096db1afb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bde68e4fe5dfd8f9257dd096db1afb7">&#9670;&nbsp;</a></span>dr_map_executable_file()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4110,7 +4110,7 @@ When printing floating-point values, the caller's code should use <a class="el" 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t *size&#160;</td>
-          <td class="paramname"><em>OUT</em>&#160;</td>
+          <td class="paramname"><em>DR_PARAM_OUT</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -4124,8 +4124,8 @@ When printing floating-point values, the caller's code should use <a class="el" 
 
 </div>
 </div>
-<a id="ac2885193f264131c620475894e3d1e1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2885193f264131c620475894e3d1e1e">&#9670;&nbsp;</a></span>dr_map_file()</h2>
+<a id="a463e82b25c6b4c7c799c286ce9940a46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a463e82b25c6b4c7c799c286ce9940a46">&#9670;&nbsp;</a></span>dr_map_file()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4139,7 +4139,7 @@ When printing floating-point values, the caller's code should use <a class="el" 
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">INOUT size_t *&#160;</td>
+          <td class="paramtype">DR_PARAM_INOUT size_t *&#160;</td>
           <td class="paramname"><em>size</em>, </td>
         </tr>
         <tr>
@@ -4834,8 +4834,8 @@ When printing floating-point values on x86, the caller's code should use <a clas
 
 </div>
 </div>
-<a id="ac5d2a2ccd58268f84c379a38bc4aa399"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5d2a2ccd58268f84c379a38bc4aa399">&#9670;&nbsp;</a></span>dr_raw_tls_calloc()</h2>
+<a id="a6100c698663d8716aa5efffc0ae51919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6100c698663d8716aa5efffc0ae51919">&#9670;&nbsp;</a></span>dr_raw_tls_calloc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4843,25 +4843,25 @@ When printing floating-point values on x86, the caller's code should use <a clas
         <tr>
           <td class="memname">DR_API bool dr_raw_tls_calloc </td>
           <td>(</td>
-          <td class="paramtype">OUT <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> *&#160;</td>
           <td class="paramname"><em>tls_register</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT uint *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT uint *&#160;</td>
           <td class="paramname"><em>offset</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN uint&#160;</td>
+          <td class="paramtype">DR_PARAM_IN uint&#160;</td>
           <td class="paramname"><em>num_slots</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN uint&#160;</td>
+          <td class="paramtype">DR_PARAM_IN uint&#160;</td>
           <td class="paramname"><em>alignment</em>&#160;</td>
         </tr>
         <tr>
@@ -4871,7 +4871,7 @@ When printing floating-point values on x86, the caller's code should use <a clas
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Allocates <code>num_slots</code> contiguous thread-local storage (TLS) slots that can be directly accessed via an offset from <code>tls_register</code>. If <code>alignment</code> is non-zero, the slots will be aligned to <code>alignment</code>. These slots will be initialized to 0 for each new thread. The slot offsets are [<code>offset</code> .. <code>offset</code> + (num_slots - 1)]. These slots are disjoint from the <a class="el" href="dr__ir__utils_8h.html#a89a6b714ff24d91d78589877047a29b9">dr_spill_slot_t</a> register spill slots and the client tls field (<a class="el" href="dr__tools_8h.html#aaa04a14c2cbf783b4926c2fd14445f82">dr_get_tls_field()</a>). Returns whether or not the slots were successfully obtained. The linear address of the TLS base pointed at by <code>tls_register</code> can be obtained using <a class="el" href="dr__tools_8h.html#a88d91064ffa84c097c84694d78a2ad22">dr_get_dr_segment_base</a>. Raw TLs slots can be read directly using <a class="el" href="dr__tools_8h.html#a75586a7501d994aa4bbd70519b726c0c">dr_insert_read_raw_tls()</a> and written using <a class="el" href="dr__tools_8h.html#a802140e02e8ea041cd7ec793160d731f">dr_insert_write_raw_tls()</a>.</p>
+<p>Allocates <code>num_slots</code> contiguous thread-local storage (TLS) slots that can be directly accessed via an offset from <code>tls_register</code>. If <code>alignment</code> is non-zero, the slots will be aligned to <code>alignment</code>. These slots will be initialized to 0 for each new thread. The slot offsets are [<code>offset</code> .. <code>offset</code> + (num_slots - 1)]. These slots are disjoint from the <a class="el" href="dr__ir__utils_8h.html#a89a6b714ff24d91d78589877047a29b9">dr_spill_slot_t</a> register spill slots and the client tls field (<a class="el" href="dr__tools_8h.html#aaa04a14c2cbf783b4926c2fd14445f82">dr_get_tls_field()</a>). Returns whether or not the slots were successfully obtained. The linear address of the TLS base pointed at by <code>tls_register</code> can be obtained using <a class="el" href="dr__tools_8h.html#aac8ca6c94601705938bbf00fb104cec6">dr_get_dr_segment_base</a>. Raw TLs slots can be read directly using <a class="el" href="dr__tools_8h.html#a75586a7501d994aa4bbd70519b726c0c">dr_insert_read_raw_tls()</a> and written using <a class="el" href="dr__tools_8h.html#a802140e02e8ea041cd7ec793160d731f">dr_insert_write_raw_tls()</a>.</p>
 <p>Supports passing 0 for <code>num_slots</code>, in which case <code>tls_register</code> will be written but no other action taken.</p>
 <dl class="section note"><dt>Note</dt><dd>These slots are useful for thread-shared code caches. With thread-private caches, DR's memory pools are guaranteed to be reachable via absolute or rip-relative accesses from the code cache and client libraries.</dd>
 <dd>
@@ -4906,7 +4906,7 @@ On Mac OS, TLS slots may not be initialized to zero. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Frees <code>num_slots</code> raw thread-local storage slots starting at offset <code>offset</code> that were allocated with <a class="el" href="dr__tools_8h.html#ac5d2a2ccd58268f84c379a38bc4aa399">dr_raw_tls_calloc()</a>. Returns whether or not the slots were successfully freed. </p>
+<p>Frees <code>num_slots</code> raw thread-local storage slots starting at offset <code>offset</code> that were allocated with <a class="el" href="dr__tools_8h.html#a6100c698663d8716aa5efffc0ae51919">dr_raw_tls_calloc()</a>. Returns whether or not the slots were successfully freed. </p>
 
 </div>
 </div>
@@ -5208,8 +5208,8 @@ This routine supports replacement for the current thread only. <code>drcontext</
 
 </div>
 </div>
-<a id="a5842900d62c160ea7f0e99c0eee77bb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5842900d62c160ea7f0e99c0eee77bb0">&#9670;&nbsp;</a></span>dr_resume_all_other_threads()</h2>
+<a id="a687adc9ac5976037440c5efc838f3d35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a687adc9ac5976037440c5efc838f3d35">&#9670;&nbsp;</a></span>dr_resume_all_other_threads()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5217,13 +5217,13 @@ This routine supports replacement for the current thread only. <code>drcontext</
         <tr>
           <td class="memname">DR_API bool dr_resume_all_other_threads </td>
           <td>(</td>
-          <td class="paramtype">IN void **&#160;</td>
+          <td class="paramtype">DR_PARAM_IN void **&#160;</td>
           <td class="paramname"><em>drcontexts</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IN uint&#160;</td>
+          <td class="paramtype">DR_PARAM_IN uint&#160;</td>
           <td class="paramname"><em>num_suspended</em>&#160;</td>
         </tr>
         <tr>
@@ -5233,7 +5233,7 @@ This routine supports replacement for the current thread only. <code>drcontext</
         </tr>
       </table>
 </div><div class="memdoc">
-<p>May only be used after invoking <a class="el" href="dr__tools_8h.html#ae4eaefda11c27210a72df6d24f72871f">dr_suspend_all_other_threads()</a>. This routine resumes the threads that were suspended by <a class="el" href="dr__tools_8h.html#ae4eaefda11c27210a72df6d24f72871f">dr_suspend_all_other_threads()</a> and must be passed the same array and count of suspended threads that were returned by <a class="el" href="dr__tools_8h.html#ae4eaefda11c27210a72df6d24f72871f">dr_suspend_all_other_threads()</a>. It also frees the <code>drcontexts</code> array and releases the locks acquired by <a class="el" href="dr__tools_8h.html#ae4eaefda11c27210a72df6d24f72871f">dr_suspend_all_other_threads()</a>. The return value indicates whether all resumption attempts were successful. </p>
+<p>May only be used after invoking <a class="el" href="dr__tools_8h.html#a9f0795f4e8676747db476444c8d7085b">dr_suspend_all_other_threads()</a>. This routine resumes the threads that were suspended by <a class="el" href="dr__tools_8h.html#a9f0795f4e8676747db476444c8d7085b">dr_suspend_all_other_threads()</a> and must be passed the same array and count of suspended threads that were returned by <a class="el" href="dr__tools_8h.html#a9f0795f4e8676747db476444c8d7085b">dr_suspend_all_other_threads()</a>. It also frees the <code>drcontexts</code> array and releases the locks acquired by <a class="el" href="dr__tools_8h.html#a9f0795f4e8676747db476444c8d7085b">dr_suspend_all_other_threads()</a>. The return value indicates whether all resumption attempts were successful. </p>
 
 </div>
 </div>
@@ -5252,7 +5252,7 @@ This routine supports replacement for the current thread only. <code>drcontext</
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Causes the thread owning <code>drcontext</code> to begin executing in the code cache again once it is resumed. The thread must currently be suspended (typically by <a class="el" href="dr__tools_8h.html#a566d8b7214afc621019c8f0048a094b0">dr_suspend_all_other_threads_ex()</a> with <a class="el" href="dr__tools_8h.html#a66bef18f8eabc7a8b8b0368e8a96d179a21ba834e13979aa7ad97fd13c69b3ae4">DR_SUSPEND_NATIVE</a>) and must be currently native (typically from <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209a184a564eaa6cee9890f98f8a2d1c9c89">DR_EMIT_GO_NATIVE</a>). </p><dl class="section return"><dt>Returns</dt><dd>whether successful. </dd></dl>
+<p>Causes the thread owning <code>drcontext</code> to begin executing in the code cache again once it is resumed. The thread must currently be suspended (typically by <a class="el" href="dr__tools_8h.html#abbc63860f214ed00b877a9bc5108b3d3">dr_suspend_all_other_threads_ex()</a> with <a class="el" href="dr__tools_8h.html#a66bef18f8eabc7a8b8b0368e8a96d179a21ba834e13979aa7ad97fd13c69b3ae4">DR_SUSPEND_NATIVE</a>) and must be currently native (typically from <a class="el" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209a184a564eaa6cee9890f98f8a2d1c9c89">DR_EMIT_GO_NATIVE</a>). </p><dl class="section return"><dt>Returns</dt><dd>whether successful. </dd></dl>
 
 </div>
 </div>
@@ -5778,8 +5778,8 @@ When printing floating-point values, the caller's code should use <a class="el" 
 
 </div>
 </div>
-<a id="ae4eaefda11c27210a72df6d24f72871f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4eaefda11c27210a72df6d24f72871f">&#9670;&nbsp;</a></span>dr_suspend_all_other_threads()</h2>
+<a id="a9f0795f4e8676747db476444c8d7085b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f0795f4e8676747db476444c8d7085b">&#9670;&nbsp;</a></span>dr_suspend_all_other_threads()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5787,19 +5787,19 @@ When printing floating-point values, the caller's code should use <a class="el" 
         <tr>
           <td class="memname">DR_API bool dr_suspend_all_other_threads </td>
           <td>(</td>
-          <td class="paramtype">OUT void ***&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT void ***&#160;</td>
           <td class="paramname"><em>drcontexts</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT uint *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT uint *&#160;</td>
           <td class="paramname"><em>num_suspended</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT uint *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT uint *&#160;</td>
           <td class="paramname"><em>num_unsuspended</em>&#160;</td>
         </tr>
         <tr>
@@ -5809,12 +5809,12 @@ When printing floating-point values, the caller's code should use <a class="el" 
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Identical to <a class="el" href="dr__tools_8h.html#a566d8b7214afc621019c8f0048a094b0">dr_suspend_all_other_threads_ex()</a> with <code>flags</code> set to 0. </p>
+<p>Identical to <a class="el" href="dr__tools_8h.html#abbc63860f214ed00b877a9bc5108b3d3">dr_suspend_all_other_threads_ex()</a> with <code>flags</code> set to 0. </p>
 
 </div>
 </div>
-<a id="a566d8b7214afc621019c8f0048a094b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a566d8b7214afc621019c8f0048a094b0">&#9670;&nbsp;</a></span>dr_suspend_all_other_threads_ex()</h2>
+<a id="abbc63860f214ed00b877a9bc5108b3d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc63860f214ed00b877a9bc5108b3d3">&#9670;&nbsp;</a></span>dr_suspend_all_other_threads_ex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5822,19 +5822,19 @@ When printing floating-point values, the caller's code should use <a class="el" 
         <tr>
           <td class="memname">DR_API bool dr_suspend_all_other_threads_ex </td>
           <td>(</td>
-          <td class="paramtype">OUT void ***&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT void ***&#160;</td>
           <td class="paramname"><em>drcontexts</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT uint *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT uint *&#160;</td>
           <td class="paramname"><em>num_suspended</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT uint *&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT uint *&#160;</td>
           <td class="paramname"><em>num_unsuspended</em>, </td>
         </tr>
         <tr>
@@ -5853,7 +5853,7 @@ When printing floating-point values, the caller's code should use <a class="el" 
 <p>Suspends all other threads in the process and returns an array of contexts in <code>drcontexts</code> with one context per successfully suspended thread. The contexts can be passed to routines like <a class="el" href="dr__tools_8h.html#a56eae1c5bac30a5336a99c5d91d5a10c">dr_get_thread_id()</a> or <a class="el" href="dr__ir__utils_8h.html#a9e348b2596b8750ce3fad234ab022ced">dr_get_mcontext()</a>. However, the contexts may not be modified: <a class="el" href="dr__ir__utils_8h.html#ac4bfa7fc3f9d4adb0857675bec2712a2">dr_set_mcontext()</a> is not supported. <a class="el" href="dr__ir__utils_8h.html#a9e348b2596b8750ce3fad234ab022ced">dr_get_mcontext()</a> can be called on the caller of this routine, unless in a Windows nudge callback.</p>
 <p>The <code>flags</code> argument controls which threads are suspended and may add further options in the future.</p>
 <p>The number of successfully suspended threads, which is also the length of the <code>drcontexts</code> array, is returned in <code>num_suspended</code>, which is a required parameter. The number of un-successfully suspended threads, if any, is returned in the optional parameter <code>num_unsuspended</code>. The calling thread is not considered in either count. DR can fail to suspend a thread for privilege reasons (e.g., on Windows in a low-privilege process where another process injected a thread). This function returns true iff all threads were suspended, in which case <code>num_unsuspended</code> will be 0.</p>
-<p>The caller must invoke <a class="el" href="dr__tools_8h.html#a5842900d62c160ea7f0e99c0eee77bb0">dr_resume_all_other_threads()</a> in order to resume the suspended threads, free the <code>drcontexts</code> array, and release coarse-grain locks that prevent new threads from being created.</p>
+<p>The caller must invoke <a class="el" href="dr__tools_8h.html#a687adc9ac5976037440c5efc838f3d35">dr_resume_all_other_threads()</a> in order to resume the suspended threads, free the <code>drcontexts</code> array, and release coarse-grain locks that prevent new threads from being created.</p>
 <p>This routine may not be called from any registered event callback other than the nudge event or the pre- or post-system call event. It may be called from clean calls out of the cache. This routine may not be called while any locks are held that could block a thread processing a registered event callback or cache callout.</p>
 <dl class="section note"><dt>Note</dt><dd>A client wishing to invoke this routine from an event callback can queue up a nudge via <a class="el" href="dr__events_8h.html#a77b1a5319fb74fad6115f62393384380">dr_nudge_client()</a> and invoke this routine from the nudge callback. </dd></dl>
 
@@ -5906,14 +5906,14 @@ When printing floating-point values, the caller's code should use <a class="el" 
       </table>
 </div><div class="memdoc">
 <p>Usable only from a post-syscall (<a class="el" href="dr__events_8h.html#a7a62b6c11f3b0ae2fe7773189f6e4826">dr_register_post_syscall_event()</a>) event. Returns the return value of the system call that will be presented to the application.</p>
-<dl class="section note"><dt>Note</dt><dd>On some platforms (such as MacOS), a 32-bit application's system call can return a 64-bit value. Use <a class="el" href="dr__tools_8h.html#ad2906dcd1979be92605bdf3c58c9f373">dr_syscall_get_result_ex()</a> to obtain the upper bits in that case.</dd>
+<dl class="section note"><dt>Note</dt><dd>On some platforms (such as MacOS), a 32-bit application's system call can return a 64-bit value. Use <a class="el" href="dr__tools_8h.html#a34a7817f8c366786557370f35633f0c7">dr_syscall_get_result_ex()</a> to obtain the upper bits in that case.</dd>
 <dd>
-On some platforms (such as MacOS), whether a system call succeeded or failed cannot be determined from the main result value. Use <a class="el" href="dr__tools_8h.html#ad2906dcd1979be92605bdf3c58c9f373">dr_syscall_get_result_ex()</a> to obtain the success result in such cases. </dd></dl>
+On some platforms (such as MacOS), whether a system call succeeded or failed cannot be determined from the main result value. Use <a class="el" href="dr__tools_8h.html#a34a7817f8c366786557370f35633f0c7">dr_syscall_get_result_ex()</a> to obtain the success result in such cases. </dd></dl>
 
 </div>
 </div>
-<a id="ad2906dcd1979be92605bdf3c58c9f373"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2906dcd1979be92605bdf3c58c9f373">&#9670;&nbsp;</a></span>dr_syscall_get_result_ex()</h2>
+<a id="a34a7817f8c366786557370f35633f0c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34a7817f8c366786557370f35633f0c7">&#9670;&nbsp;</a></span>dr_syscall_get_result_ex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5928,7 +5928,7 @@ On some platforms (such as MacOS), whether a system call succeeded or failed can
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="dr__tools_8h.html#afc574aa98b0e727a9b75059c4966eb10">dr_syscall_result_info_t</a> *info&#160;</td>
-          <td class="paramname"><em>INOUT</em>&#160;</td>
+          <td class="paramname"><em>DR_PARAM_OUT</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -6297,7 +6297,7 @@ On some platforms (such as MacOS), whether a system call succeeded or failed can
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Should be called during process initialization. Requests more accurate tracking of the <a class="el" href="dr__defines_8h.html#a145cc4ecf7cf2041207f0382d50f9620">dr_where_am_i_t</a> value for use with <a class="el" href="dr__tools_8h.html#a9333e0dee46cc854228efab156ce98c5">dr_where_am_i()</a>. By default, if this routine is not called, DR avoids some updates to the value that incur extra overhead, such as identifying clean callees. </p>
+<p>Should be called during process initialization. Requests more accurate tracking of the <a class="el" href="dr__defines_8h.html#a145cc4ecf7cf2041207f0382d50f9620">dr_where_am_i_t</a> value for use with <a class="el" href="dr__tools_8h.html#a47cf743cee9d3fac9d0a41de3fc7a1d5">dr_where_am_i()</a>. By default, if this routine is not called, DR avoids some updates to the value that incur extra overhead, such as identifying clean callees. </p>
 
 </div>
 </div>
@@ -6364,7 +6364,7 @@ This routine is only available with either the -thread_private or -enable_full_a
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Unmaps a file loaded by <a class="el" href="dr__tools_8h.html#a192497da7670d454f6aae17d293f70b4">dr_map_executable_file()</a>. </p>
+<p>Unmaps a file loaded by <a class="el" href="dr__tools_8h.html#a1bde68e4fe5dfd8f9257dd096db1afb7">dr_map_executable_file()</a>. </p>
 
 </div>
 </div>
@@ -6393,7 +6393,7 @@ This routine is only available with either the -thread_private or -enable_full_a
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Unmaps a portion of a file mapping previously created by <a class="el" href="dr__tools_8h.html#ac2885193f264131c620475894e3d1e1e">dr_map_file()</a>. </p><dl class="section return"><dt>Returns</dt><dd>whether successful.</dd></dl>
+<p>Unmaps a portion of a file mapping previously created by <a class="el" href="dr__tools_8h.html#a463e82b25c6b4c7c799c286ce9940a46">dr_map_file()</a>. </p><dl class="section return"><dt>Returns</dt><dd>whether successful.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">map</td><td>The base address to be unmapped. Must be page size aligned. </td></tr>
@@ -6560,8 +6560,8 @@ This routine is only available with either the -thread_private or -enable_full_a
 
 </div>
 </div>
-<a id="a9333e0dee46cc854228efab156ce98c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9333e0dee46cc854228efab156ce98c5">&#9670;&nbsp;</a></span>dr_where_am_i()</h2>
+<a id="a47cf743cee9d3fac9d0a41de3fc7a1d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47cf743cee9d3fac9d0a41de3fc7a1d5">&#9670;&nbsp;</a></span>dr_where_am_i()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6581,7 +6581,7 @@ This routine is only available with either the -thread_private or -enable_full_a
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">OUT void **&#160;</td>
+          <td class="paramtype">DR_PARAM_OUT void **&#160;</td>
           <td class="paramname"><em>tag</em>&#160;</td>
         </tr>
         <tr>
@@ -6637,5 +6637,5 @@ This routine is only available with either the -thread_private or -enable_full_a
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19671 --- Fri Nov 10 2023 03:15:13 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19678 --- Fri Nov 17 2023 03:12:58 &nbsp; <img border=0 src="favicon.png">
 </small></address>

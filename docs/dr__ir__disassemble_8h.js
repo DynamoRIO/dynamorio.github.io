@@ -11,7 +11,7 @@
     [ "disassemble", "dr__ir__disassemble_8h.html#a4f2549391d161b1cee7d620efef7b9ff", null ],
     [ "disassemble_from_copy", "dr__ir__disassemble_8h.html#a0d650d53ee0c47b24b74703bb62a2c87", null ],
     [ "disassemble_set_syntax", "dr__ir__disassemble_8h.html#ac5e34cc6c23ce496b13eebb043184552", null ],
-    [ "disassemble_to_buffer", "dr__ir__disassemble_8h.html#a24a055e3c3228129c9b0229bfa3c9fdb", null ],
+    [ "disassemble_to_buffer", "dr__ir__disassemble_8h.html#a0161963718522db70fc80ebec022cee4", null ],
     [ "disassemble_with_info", "dr__ir__disassemble_8h.html#a890a42d15aed23a7e0b0c81a23e7e2ac", null ],
     [ "instr_disassemble", "dr__ir__disassemble_8h.html#aa79cdac5ac955e946ee053adf2bf81db", null ],
     [ "instr_disassemble_to_buffer", "dr__ir__disassemble_8h.html#ad5b34145a146be5a29f211dd4b76d5ee", null ],

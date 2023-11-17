@@ -1,6 +1,6 @@
 [
-    [ "init_with_metadata", "structdynamorio_1_1drmemtrace_1_1pt2ir__config__t.html#a40a46825c9bbb2c5003aa333159d75cd", null ],
-    [ "init_with_metadata", "structdynamorio_1_1drmemtrace_1_1pt2ir__config__t.html#a40a46825c9bbb2c5003aa333159d75cd", null ],
+    [ "init_with_metadata", "structdynamorio_1_1drmemtrace_1_1pt2ir__config__t.html#a0213be32114eb474c4e518735164027f", null ],
+    [ "init_with_metadata", "structdynamorio_1_1drmemtrace_1_1pt2ir__config__t.html#a0213be32114eb474c4e518735164027f", null ],
     [ "elf_base", "structdynamorio_1_1drmemtrace_1_1pt2ir__config__t.html#a56e6d150022c25fd7fff1384ff9e733c", null ],
     [ "elf_file_path", "structdynamorio_1_1drmemtrace_1_1pt2ir__config__t.html#a8e37dc2f8cdb6b8578f40b27ed913bd1", null ],
     [ "pt_config", "structdynamorio_1_1drmemtrace_1_1pt2ir__config__t.html#a25bbc67270fbe3147d213e15c4dff4e2", null ],

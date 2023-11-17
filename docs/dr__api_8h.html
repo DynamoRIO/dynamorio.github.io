@@ -117,7 +117,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>When registering a process, users must provide a list of paths to client libraries and their associated client-specific options. DR looks up "dr_client_main" in each client library and calls that function when the process starts. Clients can register to receive callbacks for the various events within <a class="el" href="dr__api_8h.html#a2b938c98dd186cc94eef6880f9e3c3e9">dr_client_main()</a>. Note that client paths and options cannot include semicolons.</p>
-<p><code>client_id</code> is the ID supplied at registration and is used to identify the client for <a class="el" href="dr__tools_8h.html#a5f53df83b2108925fa52bd607536e25d">dr_get_option_array()</a>, <a class="el" href="dr__tools_8h.html#afccb9210ada84de4fbbaa8d851952a37">dr_get_client_path()</a>, and external nudges.</p>
+<p><code>client_id</code> is the ID supplied at registration and is used to identify the client for <a class="el" href="dr__tools_8h.html#a4c584f24947b8c0d93bc39b79a0d7c50">dr_get_option_array()</a>, <a class="el" href="dr__tools_8h.html#afccb9210ada84de4fbbaa8d851952a37">dr_get_client_path()</a>, and external nudges.</p>
 <p>The arguments passed to the client are specified in <code>argc</code> and <code>argv</code>. To match standalone application conventions, <code>argv</code>[0] is set to the client library path, with the actual parameters starting at index 1. </p>
 
 </div>
@@ -147,5 +147,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19671 --- Fri Nov 10 2023 03:15:10 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19678 --- Fri Nov 17 2023 03:12:57 &nbsp; <img border=0 src="favicon.png">
 </small></address>

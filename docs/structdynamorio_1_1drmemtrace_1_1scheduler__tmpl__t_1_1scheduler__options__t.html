@@ -63,6 +63,10 @@ Data Fields</h2></td></tr>
 <tr class="separator:aebd6e85c8a7b37a2cbdfc64efc60537e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5367da0081dd5caed8d3d0c02fb9b6f2"><td class="memItemLeft" align="right" valign="top">archive_istream_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a5367da0081dd5caed8d3d0c02fb9b6f2">replay_as_traced_istream</a> = nullptr</td></tr>
 <tr class="separator:a5367da0081dd5caed8d3d0c02fb9b6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ea3487c8bbdb7ae52212b245c866608"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a6ea3487c8bbdb7ae52212b245c866608">syscall_switch_threshold</a> = 500</td></tr>
+<tr class="separator:a6ea3487c8bbdb7ae52212b245c866608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ea4a3f44bad298c9dffcc555f5d4241"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a0ea4a3f44bad298c9dffcc555f5d4241">blocking_switch_threshold</a> = 100</td></tr>
+<tr class="separator:a0ea4a3f44bad298c9dffcc555f5d4241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename RecordType, typename ReaderType&gt;<br />
@@ -150,6 +154,23 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Field Documentation</h2>
+<a id="a0ea4a3f44bad298c9dffcc555f5d4241"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ea4a3f44bad298c9dffcc555f5d4241">&#9670;&nbsp;</a></span>blocking_switch_threshold</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::scheduler_options_t::blocking_switch_threshold = 100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Determines the minimum latency in the unit of the trace's timestamps (microseconds) for which a maybe-blocking system call (one with a <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caa6544f9f8c54496a7befa481c81577b7">TRACE_MARKER_TYPE_MAYBE_BLOCKING_SYSCALL</a> marker) will be treated as blocking and trigger a context switch. </p>
+
+</div>
+</div>
 <a id="a70309788c8288f6981dffb5bb9513920"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a70309788c8288f6981dffb5bb9513920">&#9670;&nbsp;</a></span>deps</h2>
 
@@ -303,6 +324,23 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 
 </div>
 </div>
+<a id="a6ea3487c8bbdb7ae52212b245c866608"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ea3487c8bbdb7ae52212b245c866608">&#9670;&nbsp;</a></span>syscall_switch_threshold</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::scheduler_options_t::syscall_switch_threshold = 500</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Determines the minimum latency in the unit of the trace's timestamps (microseconds) for which a non-maybe-blocking system call (one without a <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caa6544f9f8c54496a7befa481c81577b7">TRACE_MARKER_TYPE_MAYBE_BLOCKING_SYSCALL</a> marker) will be treated as blocking and trigger a context switch. </p>
+
+</div>
+</div>
 <a id="afbaa418768eead0d256ea889fda40fef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afbaa418768eead0d256ea889fda40fef">&#9670;&nbsp;</a></span>verbosity</h2>
 
@@ -329,5 +367,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19671 --- Fri Nov 10 2023 03:15:15 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19678 --- Fri Nov 17 2023 03:12:59 &nbsp; <img border=0 src="favicon.png">
 </small></address>

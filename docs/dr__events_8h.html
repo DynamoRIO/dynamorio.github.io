@@ -235,18 +235,18 @@ Functions</h2></td></tr>
 <tr class="separator:a2c48140a1be3b3107557b8406225ab09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e02ed6af55d443db6f84778002cda78"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#a8e02ed6af55d443db6f84778002cda78">dr_fragment_persistable</a> (void *drcontext, void *perscxt, void *tag)</td></tr>
 <tr class="separator:a8e02ed6af55d443db6f84778002cda78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a825819cfee635c11b8d43070d09611ce"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#a825819cfee635c11b8d43070d09611ce">dr_register_persist_ro</a> (size_t(*func_size)(void *drcontext, void *perscxt, size_t file_offs, void **user_data OUT), bool(*func_persist)(void *drcontext, void *perscxt, file_t fd, void *user_data), bool(*func_resurrect)(void *drcontext, void *perscxt, byte **map INOUT))</td></tr>
-<tr class="separator:a825819cfee635c11b8d43070d09611ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bbd05194b36b98d04260650fc06d42d"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#a0bbd05194b36b98d04260650fc06d42d">dr_unregister_persist_ro</a> (size_t(*func_size)(void *drcontext, void *perscxt, size_t file_offs, void **user_data OUT), bool(*func_persist)(void *drcontext, void *perscxt, file_t fd, void *user_data), bool(*func_resurrect)(void *drcontext, void *perscxt, byte **map INOUT))</td></tr>
-<tr class="separator:a0bbd05194b36b98d04260650fc06d42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e3991d3fc34318385c4e1d7279ba4ef"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#a0e3991d3fc34318385c4e1d7279ba4ef">dr_register_persist_rx</a> (size_t(*func_size)(void *drcontext, void *perscxt, size_t file_offs, void **user_data OUT), bool(*func_persist)(void *drcontext, void *perscxt, file_t fd, void *user_data), bool(*func_resurrect)(void *drcontext, void *perscxt, byte **map INOUT))</td></tr>
-<tr class="separator:a0e3991d3fc34318385c4e1d7279ba4ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9db3c35bfba2b9b4199887eb7f6291d6"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#a9db3c35bfba2b9b4199887eb7f6291d6">dr_unregister_persist_rx</a> (size_t(*func_size)(void *drcontext, void *perscxt, size_t file_offs, void **user_data OUT), bool(*func_persist)(void *drcontext, void *perscxt, file_t fd, void *user_data), bool(*func_resurrect)(void *drcontext, void *perscxt, byte **map INOUT))</td></tr>
-<tr class="separator:a9db3c35bfba2b9b4199887eb7f6291d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad426e6c0afbb889d0b90f23a98bf6cc"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#aad426e6c0afbb889d0b90f23a98bf6cc">dr_register_persist_rw</a> (size_t(*func_size)(void *drcontext, void *perscxt, size_t file_offs, void **user_data OUT), bool(*func_persist)(void *drcontext, void *perscxt, file_t fd, void *user_data), bool(*func_resurrect)(void *drcontext, void *perscxt, byte **map INOUT))</td></tr>
-<tr class="separator:aad426e6c0afbb889d0b90f23a98bf6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8bebc195eecd4a000658e379a4e3147"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#af8bebc195eecd4a000658e379a4e3147">dr_unregister_persist_rw</a> (size_t(*func_size)(void *drcontext, void *perscxt, size_t file_offs, void **user_data OUT), bool(*func_persist)(void *drcontext, void *perscxt, file_t fd, void *user_data), bool(*func_resurrect)(void *drcontext, void *perscxt, byte **map INOUT))</td></tr>
-<tr class="separator:af8bebc195eecd4a000658e379a4e3147"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec87c7a0a16eeddd03bc983970ba70b7"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#aec87c7a0a16eeddd03bc983970ba70b7">dr_register_persist_ro</a> (size_t(*func_size)(void *drcontext, void *perscxt, size_t file_offs, void **user_data DR_PARAM_OUT), bool(*func_persist)(void *drcontext, void *perscxt, file_t fd, void *user_data), bool(*func_resurrect)(void *drcontext, void *perscxt, byte **map DR_PARAM_OUT))</td></tr>
+<tr class="separator:aec87c7a0a16eeddd03bc983970ba70b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4da323d72e667b045e3485636de83f4c"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#a4da323d72e667b045e3485636de83f4c">dr_unregister_persist_ro</a> (size_t(*func_size)(void *drcontext, void *perscxt, size_t file_offs, void **user_data DR_PARAM_OUT), bool(*func_persist)(void *drcontext, void *perscxt, file_t fd, void *user_data), bool(*func_resurrect)(void *drcontext, void *perscxt, byte **map DR_PARAM_OUT))</td></tr>
+<tr class="separator:a4da323d72e667b045e3485636de83f4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a35a59709cad66c3f68e74314e2011f"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#a2a35a59709cad66c3f68e74314e2011f">dr_register_persist_rx</a> (size_t(*func_size)(void *drcontext, void *perscxt, size_t file_offs, void **user_data DR_PARAM_OUT), bool(*func_persist)(void *drcontext, void *perscxt, file_t fd, void *user_data), bool(*func_resurrect)(void *drcontext, void *perscxt, byte **map DR_PARAM_OUT))</td></tr>
+<tr class="separator:a2a35a59709cad66c3f68e74314e2011f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25687a6d168851fca235adcce5e0179e"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#a25687a6d168851fca235adcce5e0179e">dr_unregister_persist_rx</a> (size_t(*func_size)(void *drcontext, void *perscxt, size_t file_offs, void **user_data DR_PARAM_OUT), bool(*func_persist)(void *drcontext, void *perscxt, file_t fd, void *user_data), bool(*func_resurrect)(void *drcontext, void *perscxt, byte **map DR_PARAM_OUT))</td></tr>
+<tr class="separator:a25687a6d168851fca235adcce5e0179e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb97433efe87f1d86e453bfe766ea56e"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#aeb97433efe87f1d86e453bfe766ea56e">dr_register_persist_rw</a> (size_t(*func_size)(void *drcontext, void *perscxt, size_t file_offs, void **user_data DR_PARAM_OUT), bool(*func_persist)(void *drcontext, void *perscxt, file_t fd, void *user_data), bool(*func_resurrect)(void *drcontext, void *perscxt, byte **map DR_PARAM_OUT))</td></tr>
+<tr class="separator:aeb97433efe87f1d86e453bfe766ea56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3f8b502cd0b0c4dab70dbdfbc45899"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#aca3f8b502cd0b0c4dab70dbdfbc45899">dr_unregister_persist_rw</a> (size_t(*func_size)(void *drcontext, void *perscxt, size_t file_offs, void **user_data DR_PARAM_OUT), bool(*func_persist)(void *drcontext, void *perscxt, file_t fd, void *user_data), bool(*func_resurrect)(void *drcontext, void *perscxt, byte **map DR_PARAM_OUT))</td></tr>
+<tr class="separator:aca3f8b502cd0b0c4dab70dbdfbc45899"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15a89c0af1a58f59b80649aaeda219fc"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#a15a89c0af1a58f59b80649aaeda219fc">dr_register_persist_patch</a> (bool(*func_patch)(void *drcontext, void *perscxt, byte *bb_start, size_t bb_size, void *user_data))</td></tr>
 <tr class="separator:a15a89c0af1a58f59b80649aaeda219fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8925d7369f4f270f7e0f0ada92676ea7"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#a8925d7369f4f270f7e0f0ada92676ea7">dr_unregister_persist_patch</a> (bool(*func_patch)(void *drcontext, void *perscxt, byte *bb_start, size_t bb_size, void *user_data))</td></tr>
@@ -1029,8 +1029,8 @@ Registration cannot be done during the basic block event: it should be done at i
 
 </div>
 </div>
-<a id="a825819cfee635c11b8d43070d09611ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a825819cfee635c11b8d43070d09611ce">&#9670;&nbsp;</a></span>dr_register_persist_ro()</h2>
+<a id="aec87c7a0a16eeddd03bc983970ba70b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec87c7a0a16eeddd03bc983970ba70b7">&#9670;&nbsp;</a></span>dr_register_persist_ro()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1038,7 +1038,7 @@ Registration cannot be done during the basic block event: it should be done at i
         <tr>
           <td class="memname">DR_API bool dr_register_persist_ro </td>
           <td>(</td>
-          <td class="paramtype">size_t(*)(void *drcontext, void *perscxt, size_t file_offs, void **user_data OUT)&#160;</td>
+          <td class="paramtype">size_t(*)(void *drcontext, void *perscxt, size_t file_offs, void **user_data DR_PARAM_OUT)&#160;</td>
           <td class="paramname"><em>func_size</em>, </td>
         </tr>
         <tr>
@@ -1050,7 +1050,7 @@ Registration cannot be done during the basic block event: it should be done at i
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool(*)(void *drcontext, void *perscxt, byte **map INOUT)&#160;</td>
+          <td class="paramtype">bool(*)(void *drcontext, void *perscxt, byte **map DR_PARAM_OUT)&#160;</td>
           <td class="paramname"><em>func_resurrect</em>&#160;</td>
         </tr>
         <tr>
@@ -1065,7 +1065,7 @@ Registration cannot be done during the basic block event: it should be done at i
 <p>For each callback, the <code>perscxt</code> parameter can be passed to the routines <a class="el" href="dr__events_8h.html#a6a6bf4ca1c6d6814460817acee222202">dr_persist_start()</a>, <a class="el" href="dr__events_8h.html#a2c48140a1be3b3107557b8406225ab09">dr_persist_size()</a>, and <a class="el" href="dr__events_8h.html#a8e02ed6af55d443db6f84778002cda78">dr_fragment_persistable()</a> to identify the region of code being persisted.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">func_size</td><td>The function to call to determine the size needed for persisted data. The <code>file_offs</code> parameter indicates the offset from the start of the persisted file where this data will reside (which is needed to calculate patch displacements). The callback can store a void* value into the address specified by <code>user_data</code>. This value will be passed to <code>func_persist</code> and if a patch callback is registered (see <a class="el" href="dr__events_8h.html#a15a89c0af1a58f59b80649aaeda219fc">dr_register_persist_patch()</a>) to <code>func_patch</code>. The same value will be shared with persisted code callbacks (see <a class="el" href="dr__events_8h.html#a0e3991d3fc34318385c4e1d7279ba4ef">dr_register_persist_rx()</a>) and writable data callbacks (see <a class="el" href="dr__events_8h.html#aad426e6c0afbb889d0b90f23a98bf6cc">dr_register_persist_rw()</a>). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func_size</td><td>The function to call to determine the size needed for persisted data. The <code>file_offs</code> parameter indicates the offset from the start of the persisted file where this data will reside (which is needed to calculate patch displacements). The callback can store a void* value into the address specified by <code>user_data</code>. This value will be passed to <code>func_persist</code> and if a patch callback is registered (see <a class="el" href="dr__events_8h.html#a15a89c0af1a58f59b80649aaeda219fc">dr_register_persist_patch()</a>) to <code>func_patch</code>. The same value will be shared with persisted code callbacks (see <a class="el" href="dr__events_8h.html#a2a35a59709cad66c3f68e74314e2011f">dr_register_persist_rx()</a>) and writable data callbacks (see <a class="el" href="dr__events_8h.html#aeb97433efe87f1d86e453bfe766ea56e">dr_register_persist_rw()</a>). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">func_persist</td><td>The function to call to write the actual data. Data to be persisted should be written to the file <code>fd</code> via <a class="el" href="dr__tools_8h.html#a451ff3e57783acbfdf24c1e557145807">dr_write_file()</a>. The data will be read-only when the persisted file is loaded back in for use. The return value of the function indicates success of the write. If the function returns false, the persisted cache file being generated will be abandoned under the assumption of a non-recoverable error. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">func_resurrect</td><td>The function to call to validate previously written data. The <code>map</code> variable points to the mapped-in data that was written at persist time. The return value of the function indicates success of the resurrection. If the function returns false, the persisted cache file being loaded will be abandoned under the assumption of a non-recoverable error. Any validation that the persisted file is suitable for use should be performed by the function prior to any restoration work needed for the data. The <code>map</code> address should be updated to point to the end of the persisted data (i.e., on return it should equal its start value plus the size that was passed to dr_register_persist_ro_size()). DR will perform self-consistency checks, including whether the whole pcache is present and that a checksum of at least part of the file matches, prior to calling this callback. Thus, the client can assume that it is not truncated. </td></tr>
   </table>
@@ -1076,8 +1076,8 @@ Registration cannot be done during the basic block event: it should be done at i
 
 </div>
 </div>
-<a id="aad426e6c0afbb889d0b90f23a98bf6cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad426e6c0afbb889d0b90f23a98bf6cc">&#9670;&nbsp;</a></span>dr_register_persist_rw()</h2>
+<a id="aeb97433efe87f1d86e453bfe766ea56e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb97433efe87f1d86e453bfe766ea56e">&#9670;&nbsp;</a></span>dr_register_persist_rw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1085,7 +1085,7 @@ Registration cannot be done during the basic block event: it should be done at i
         <tr>
           <td class="memname">DR_API bool dr_register_persist_rw </td>
           <td>(</td>
-          <td class="paramtype">size_t(*)(void *drcontext, void *perscxt, size_t file_offs, void **user_data OUT)&#160;</td>
+          <td class="paramtype">size_t(*)(void *drcontext, void *perscxt, size_t file_offs, void **user_data DR_PARAM_OUT)&#160;</td>
           <td class="paramname"><em>func_size</em>, </td>
         </tr>
         <tr>
@@ -1097,7 +1097,7 @@ Registration cannot be done during the basic block event: it should be done at i
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool(*)(void *drcontext, void *perscxt, byte **map INOUT)&#160;</td>
+          <td class="paramtype">bool(*)(void *drcontext, void *perscxt, byte **map DR_PARAM_OUT)&#160;</td>
           <td class="paramname"><em>func_resurrect</em>&#160;</td>
         </tr>
         <tr>
@@ -1112,7 +1112,7 @@ Registration cannot be done during the basic block event: it should be done at i
 <p>For each callback, the <code>perscxt</code> parameter can be passed to the routines <a class="el" href="dr__events_8h.html#a6a6bf4ca1c6d6814460817acee222202">dr_persist_start()</a>, <a class="el" href="dr__events_8h.html#a2c48140a1be3b3107557b8406225ab09">dr_persist_size()</a>, and <a class="el" href="dr__events_8h.html#a8e02ed6af55d443db6f84778002cda78">dr_fragment_persistable()</a> to identify the region of code being persisted.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">func_size</td><td>The function to call to determine the size needed for persisted data. The <code>file_offs</code> parameter indicates the offset from the start of the persisted file where this data will reside (which is needed to calculate patch displacements). The callback can store a void* value into the address specified by <code>user_data</code>. This value will be passed to <code>func_persist</code> and if a patch callback is registered (see <a class="el" href="dr__events_8h.html#a15a89c0af1a58f59b80649aaeda219fc">dr_register_persist_patch()</a>) to <code>func_patch</code>. The same value will be shared with persisted code callbacks (see <a class="el" href="dr__events_8h.html#a0e3991d3fc34318385c4e1d7279ba4ef">dr_register_persist_rx()</a>) and read-only data callbacks (see <a class="el" href="dr__events_8h.html#a825819cfee635c11b8d43070d09611ce">dr_register_persist_ro()</a>). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func_size</td><td>The function to call to determine the size needed for persisted data. The <code>file_offs</code> parameter indicates the offset from the start of the persisted file where this data will reside (which is needed to calculate patch displacements). The callback can store a void* value into the address specified by <code>user_data</code>. This value will be passed to <code>func_persist</code> and if a patch callback is registered (see <a class="el" href="dr__events_8h.html#a15a89c0af1a58f59b80649aaeda219fc">dr_register_persist_patch()</a>) to <code>func_patch</code>. The same value will be shared with persisted code callbacks (see <a class="el" href="dr__events_8h.html#a2a35a59709cad66c3f68e74314e2011f">dr_register_persist_rx()</a>) and read-only data callbacks (see <a class="el" href="dr__events_8h.html#aec87c7a0a16eeddd03bc983970ba70b7">dr_register_persist_ro()</a>). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">func_persist</td><td>The function to call to write the actual data. Data to be persisted should be written to the file <code>fd</code> via <a class="el" href="dr__tools_8h.html#a451ff3e57783acbfdf24c1e557145807">dr_write_file()</a>. The data will be writable when the persisted file is loaded back in for use. The return value of the function indicates success of the write. If the function returns false, the persisted cache file being generated will be abandoned under the assumption of a non-recoverable error. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">func_resurrect</td><td>The function to call to validate previously written data. The <code>map</code> variable points to the mapped-in data that was written at persist time. The return value of the function indicates success of the resurrection. If the function returns false, the persisted cache file being loaded will be abandoned under the assumption of a non-recoverable error. Any validation that the persisted file is suitable for use should be performed by the function prior to any restoration work needed for the data. The <code>map</code> address should be updated to point to the end of the persisted data (i.e., on return it should equal its start value plus the size that was passed to dr_register_persist_rw_size()). DR will perform self-consistency checks, including whether the whole pcache is present and that a checksum of at least part of the file matches, prior to calling this callback. Thus, the client can assume that it is not truncated. </td></tr>
   </table>
@@ -1123,8 +1123,8 @@ Registration cannot be done during the basic block event: it should be done at i
 
 </div>
 </div>
-<a id="a0e3991d3fc34318385c4e1d7279ba4ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e3991d3fc34318385c4e1d7279ba4ef">&#9670;&nbsp;</a></span>dr_register_persist_rx()</h2>
+<a id="a2a35a59709cad66c3f68e74314e2011f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a35a59709cad66c3f68e74314e2011f">&#9670;&nbsp;</a></span>dr_register_persist_rx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1132,7 +1132,7 @@ Registration cannot be done during the basic block event: it should be done at i
         <tr>
           <td class="memname">DR_API bool dr_register_persist_rx </td>
           <td>(</td>
-          <td class="paramtype">size_t(*)(void *drcontext, void *perscxt, size_t file_offs, void **user_data OUT)&#160;</td>
+          <td class="paramtype">size_t(*)(void *drcontext, void *perscxt, size_t file_offs, void **user_data DR_PARAM_OUT)&#160;</td>
           <td class="paramname"><em>func_size</em>, </td>
         </tr>
         <tr>
@@ -1144,7 +1144,7 @@ Registration cannot be done during the basic block event: it should be done at i
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool(*)(void *drcontext, void *perscxt, byte **map INOUT)&#160;</td>
+          <td class="paramtype">bool(*)(void *drcontext, void *perscxt, byte **map DR_PARAM_OUT)&#160;</td>
           <td class="paramname"><em>func_resurrect</em>&#160;</td>
         </tr>
         <tr>
@@ -1159,7 +1159,7 @@ Registration cannot be done during the basic block event: it should be done at i
 <p>For each callback, the <code>perscxt</code> parameter can be passed to the routines <a class="el" href="dr__events_8h.html#a6a6bf4ca1c6d6814460817acee222202">dr_persist_start()</a>, <a class="el" href="dr__events_8h.html#a2c48140a1be3b3107557b8406225ab09">dr_persist_size()</a>, and <a class="el" href="dr__events_8h.html#a8e02ed6af55d443db6f84778002cda78">dr_fragment_persistable()</a> to identify the region of code being persisted.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">func_size</td><td>The function to call to determine the size needed for persisted code. The <code>file_offs</code> parameter indicates the offset from the start of the persisted file where this code will reside (which is needed to calculate patch displacements). The callback can store a void* value into the address specified by <code>user_data</code>. This value will be passed to <code>func_persist</code> and if a patch callback is registered (see <a class="el" href="dr__events_8h.html#a15a89c0af1a58f59b80649aaeda219fc">dr_register_persist_patch()</a>) to <code>func_patch</code>. The same value will be shared with read-only data callbacks (see <a class="el" href="dr__events_8h.html#a825819cfee635c11b8d43070d09611ce">dr_register_persist_ro()</a>) and writable data callbacks (see <a class="el" href="dr__events_8h.html#aad426e6c0afbb889d0b90f23a98bf6cc">dr_register_persist_rw()</a>). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func_size</td><td>The function to call to determine the size needed for persisted code. The <code>file_offs</code> parameter indicates the offset from the start of the persisted file where this code will reside (which is needed to calculate patch displacements). The callback can store a void* value into the address specified by <code>user_data</code>. This value will be passed to <code>func_persist</code> and if a patch callback is registered (see <a class="el" href="dr__events_8h.html#a15a89c0af1a58f59b80649aaeda219fc">dr_register_persist_patch()</a>) to <code>func_patch</code>. The same value will be shared with read-only data callbacks (see <a class="el" href="dr__events_8h.html#aec87c7a0a16eeddd03bc983970ba70b7">dr_register_persist_ro()</a>) and writable data callbacks (see <a class="el" href="dr__events_8h.html#aeb97433efe87f1d86e453bfe766ea56e">dr_register_persist_rw()</a>). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">func_persist</td><td>The function to call to write the actual code. Code to be persisted should be written to the file <code>fd</code> via <a class="el" href="dr__tools_8h.html#a451ff3e57783acbfdf24c1e557145807">dr_write_file()</a>. The code will be read-only when the persisted file is loaded back in for use. The return value of the function indicates success of the write. If the function returns false, the persisted cache file being generated will be abandoned under the assumption of a non-recoverable error. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">func_resurrect</td><td>The function to call to validate previously written code. The <code>map</code> variable points to the mapped-in code that was written at persist time. The return value of the function indicates success of the resurrection. If the function returns false, the persisted cache file being loaded will be abandoned under the assumption of a non-recoverable error. Any validation that the persisted file is suitable for use should be performed by the function prior to any restoration work needed for the code. The <code>map</code> address should be updated to point to the end of the persisted data (i.e., on return it should equal its start value plus the size that was passed to dr_register_persist_rx_size()). DR will perform self-consistency checks, including whether the whole pcache is present and that a checksum of at least part of the file matches, prior to calling this callback. Thus, the client can assume that it is not truncated. </td></tr>
   </table>
@@ -1724,8 +1724,8 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
 
 </div>
 </div>
-<a id="a0bbd05194b36b98d04260650fc06d42d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bbd05194b36b98d04260650fc06d42d">&#9670;&nbsp;</a></span>dr_unregister_persist_ro()</h2>
+<a id="a4da323d72e667b045e3485636de83f4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4da323d72e667b045e3485636de83f4c">&#9670;&nbsp;</a></span>dr_unregister_persist_ro()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1733,7 +1733,7 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
         <tr>
           <td class="memname">DR_API bool dr_unregister_persist_ro </td>
           <td>(</td>
-          <td class="paramtype">size_t(*)(void *drcontext, void *perscxt, size_t file_offs, void **user_data OUT)&#160;</td>
+          <td class="paramtype">size_t(*)(void *drcontext, void *perscxt, size_t file_offs, void **user_data DR_PARAM_OUT)&#160;</td>
           <td class="paramname"><em>func_size</em>, </td>
         </tr>
         <tr>
@@ -1745,7 +1745,7 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool(*)(void *drcontext, void *perscxt, byte **map INOUT)&#160;</td>
+          <td class="paramtype">bool(*)(void *drcontext, void *perscxt, byte **map DR_PARAM_OUT)&#160;</td>
           <td class="paramname"><em>func_resurrect</em>&#160;</td>
         </tr>
         <tr>
@@ -1759,8 +1759,8 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
 
 </div>
 </div>
-<a id="af8bebc195eecd4a000658e379a4e3147"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8bebc195eecd4a000658e379a4e3147">&#9670;&nbsp;</a></span>dr_unregister_persist_rw()</h2>
+<a id="aca3f8b502cd0b0c4dab70dbdfbc45899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca3f8b502cd0b0c4dab70dbdfbc45899">&#9670;&nbsp;</a></span>dr_unregister_persist_rw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1768,7 +1768,7 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
         <tr>
           <td class="memname">DR_API bool dr_unregister_persist_rw </td>
           <td>(</td>
-          <td class="paramtype">size_t(*)(void *drcontext, void *perscxt, size_t file_offs, void **user_data OUT)&#160;</td>
+          <td class="paramtype">size_t(*)(void *drcontext, void *perscxt, size_t file_offs, void **user_data DR_PARAM_OUT)&#160;</td>
           <td class="paramname"><em>func_size</em>, </td>
         </tr>
         <tr>
@@ -1780,7 +1780,7 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool(*)(void *drcontext, void *perscxt, byte **map INOUT)&#160;</td>
+          <td class="paramtype">bool(*)(void *drcontext, void *perscxt, byte **map DR_PARAM_OUT)&#160;</td>
           <td class="paramname"><em>func_resurrect</em>&#160;</td>
         </tr>
         <tr>
@@ -1794,8 +1794,8 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
 
 </div>
 </div>
-<a id="a9db3c35bfba2b9b4199887eb7f6291d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9db3c35bfba2b9b4199887eb7f6291d6">&#9670;&nbsp;</a></span>dr_unregister_persist_rx()</h2>
+<a id="a25687a6d168851fca235adcce5e0179e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25687a6d168851fca235adcce5e0179e">&#9670;&nbsp;</a></span>dr_unregister_persist_rx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1803,7 +1803,7 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
         <tr>
           <td class="memname">DR_API bool dr_unregister_persist_rx </td>
           <td>(</td>
-          <td class="paramtype">size_t(*)(void *drcontext, void *perscxt, size_t file_offs, void **user_data OUT)&#160;</td>
+          <td class="paramtype">size_t(*)(void *drcontext, void *perscxt, size_t file_offs, void **user_data DR_PARAM_OUT)&#160;</td>
           <td class="paramname"><em>func_size</em>, </td>
         </tr>
         <tr>
@@ -1815,7 +1815,7 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool(*)(void *drcontext, void *perscxt, byte **map INOUT)&#160;</td>
+          <td class="paramtype">bool(*)(void *drcontext, void *perscxt, byte **map DR_PARAM_OUT)&#160;</td>
           <td class="paramname"><em>func_resurrect</em>&#160;</td>
         </tr>
         <tr>
@@ -2026,5 +2026,5 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19671 --- Fri Nov 10 2023 03:15:10 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19678 --- Fri Nov 17 2023 03:12:57 &nbsp; <img border=0 src="favicon.png">
 </small></address>
