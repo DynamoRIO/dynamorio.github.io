@@ -89,7 +89,7 @@ Protected Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
-<tr class="memitem:a2541ab899e27a3d31ac108180a670541"><td class="memItemLeft" align="right" valign="top">static const uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a2541ab899e27a3d31ac108180a670541">WRITE_BUFFER_SIZE</a> = 64</td></tr>
+<tr class="memitem:a2541ab899e27a3d31ac108180a670541"><td class="memItemLeft" align="right" valign="top">static const uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a2541ab899e27a3d31ac108180a670541">WRITE_BUFFER_SIZE</a> = 260</td></tr>
 <tr class="separator:a2541ab899e27a3d31ac108180a670541"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -779,7 +779,7 @@ Static Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const uint dynamorio::drmemtrace::raw2trace_t::WRITE_BUFFER_SIZE = 64</td>
+          <td class="memname">const uint dynamorio::drmemtrace::raw2trace_t::WRITE_BUFFER_SIZE = 260</td>
         </tr>
       </table>
   </td>
@@ -788,7 +788,8 @@ Static Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The trace_entry_t buffer returned by get_write_buffer() is assumed to be at least <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a2541ab899e27a3d31ac108180a670541">WRITE_BUFFER_SIZE</a> large. </p>
+<p>The trace_entry_t buffer returned by get_write_buffer() is assumed to be at least <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a2541ab899e27a3d31ac108180a670541">WRITE_BUFFER_SIZE</a> large.</p>
+<p>WRITE_BUFFER_SIZE needs to be large enough to hold one instruction and its memrefs. Some of the AArch64 SVE scatter/gather instructions have a lot of memref entries. For example ld4b loads 4 registers with byte sized elements, so that is (vl_bits / 8) * 4 entries. With a 512-bit vector length that is (512 / 8) * 4 = 256 memref entries. </p>
 
 </div>
 </div>
@@ -801,5 +802,5 @@ Static Protected Attributes</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19678 --- Fri Nov 17 2023 03:12:59 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19683 --- Fri Nov 24 2023 03:12:59 &nbsp; <img border=0 src="favicon.png">
 </small></address>
