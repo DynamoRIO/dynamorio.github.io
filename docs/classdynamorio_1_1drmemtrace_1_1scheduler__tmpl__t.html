@@ -84,7 +84,9 @@ Public Types</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5ad3d9e4dd441f8381818c09c548e34565">STATUS_SKIPPED</a>, 
 <br />
-&#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a1ce722940239ccf3b81c2da8cd50a4f1">STATUS_RECORD_FAILED</a>
+&#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a1ce722940239ccf3b81c2da8cd50a4f1">STATUS_RECORD_FAILED</a>, 
+<br />
+&#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a12d188836f862a7a68b558460b725f72">STATUS_IDLE</a>
 <br />
  }</td></tr>
 <tr class="separator:a23d5caa35aed595282c65964326860d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -366,7 +368,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 </td></tr>
 <tr><td class="fieldname"><a id="a23d5caa35aed595282c65964326860d5a784f8b3fe92773f567c14646994ee745"></a>STATUS_EOF&#160;</td><td class="fielddoc"><p>Stream is at its end. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a23d5caa35aed595282c65964326860d5a67fb8abc3aef15a51ed6ab4b4e75e720"></a>STATUS_WAIT&#160;</td><td class="fielddoc"><p>For dynamic scheduling with cross-stream dependencies, the scheduler may pause a stream if it gets ahead of another stream it should have a dependence on. This value is also used for schedules following the recorded timestamps (<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9afa1e39bbc41fe11cc3bbbd36b2a13e6e">DEPENDENCY_TIMESTAMPS</a>) to avoid one stream getting ahead of another. For replaying a schedule as it was traced with <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#afb65a4beaa27ae26649738d2e565c0cca62587c4b17b1c7e6f3ad49bb3747b2be">MAP_TO_RECORDED_OUTPUT</a> this can indicate an idle period on a core where the traced workload was not currently scheduled. </p>
+<tr><td class="fieldname"><a id="a23d5caa35aed595282c65964326860d5a67fb8abc3aef15a51ed6ab4b4e75e720"></a>STATUS_WAIT&#160;</td><td class="fielddoc"><p>For dynamic scheduling with cross-stream dependencies, the scheduler may pause a stream if it gets ahead of another stream it should have a dependence on. This value is also used for schedules following the recorded timestamps (<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9afa1e39bbc41fe11cc3bbbd36b2a13e6e">DEPENDENCY_TIMESTAMPS</a>) to avoid one stream getting ahead of another. <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a67fb8abc3aef15a51ed6ab4b4e75e720">STATUS_WAIT</a> should be treated as artificial, an artifact of enforcing a recorded schedule on concurrent differently-timed output streams. Simulators are suggested to not advance simulated time for <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a67fb8abc3aef15a51ed6ab4b4e75e720">STATUS_WAIT</a> while they should advance time for <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a12d188836f862a7a68b558460b725f72">STATUS_IDLE</a> as the latter indicates a true lack of work. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a23d5caa35aed595282c65964326860d5ab3ca72357837c9a033eff8516263ed46"></a>STATUS_INVALID&#160;</td><td class="fielddoc"><p>Error condition. </p>
 </td></tr>
@@ -377,6 +379,8 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <tr><td class="fieldname"><a id="a23d5caa35aed595282c65964326860d5ad3d9e4dd441f8381818c09c548e34565"></a>STATUS_SKIPPED&#160;</td><td class="fielddoc"><p>Used for internal scheduler purposes. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a23d5caa35aed595282c65964326860d5a1ce722940239ccf3b81c2da8cd50a4f1"></a>STATUS_RECORD_FAILED&#160;</td><td class="fielddoc"><p>Failed to record schedule for future replay. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a23d5caa35aed595282c65964326860d5a12d188836f862a7a68b558460b725f72"></a>STATUS_IDLE&#160;</td><td class="fielddoc"><p>This code indicates that all inputs are blocked waiting for kernel resources (such as i/o). This is similar to <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a67fb8abc3aef15a51ed6ab4b4e75e720">STATUS_WAIT</a>, but <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a67fb8abc3aef15a51ed6ab4b4e75e720">STATUS_WAIT</a> indicates an artificial pause due to imposing the original ordering while <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a12d188836f862a7a68b558460b725f72">STATUS_IDLE</a> indicates actual idle time in the application. Simulators are suggested to not advance simulated time for <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a67fb8abc3aef15a51ed6ab4b4e75e720">STATUS_WAIT</a> while they should advance time for <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a12d188836f862a7a68b558460b725f72">STATUS_IDLE</a>. </p>
 </td></tr>
 </table>
 
@@ -738,5 +742,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19683 --- Fri Nov 24 2023 03:12:59 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19692 --- Fri Dec 1 2023 03:13:08 &nbsp; <img border=0 src="favicon.png">
 </small></address>

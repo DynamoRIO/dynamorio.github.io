@@ -700,7 +700,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Disables or re-enables this output stream. If "active" is false, this stream becomes inactive and its currently assigned input is moved to the ready queue to be scheduled on other outputs. The <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a67fb8abc3aef15a51ed6ab4b4e75e720">STATUS_WAIT</a> code is returned to <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a0c957be2387f2a2ca6ed00117d2378d6">next_record()</a> for inactive streams. If "active" is true, this stream becomes active again. This is only supported for <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#afb65a4beaa27ae26649738d2e565c0ccaba192b7d617035b922db1f3960154406">MAP_TO_ANY_OUTPUT</a>. </p>
+<p>Disables or re-enables this output stream. If "active" is false, this stream becomes inactive and its currently assigned input is moved to the ready queue to be scheduled on other outputs. The <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a12d188836f862a7a68b558460b725f72">STATUS_IDLE</a> code is returned to <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a0c957be2387f2a2ca6ed00117d2378d6">next_record()</a> for inactive streams. If "active" is true, this stream becomes active again. This is only supported for <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#afb65a4beaa27ae26649738d2e565c0ccaba192b7d617035b922db1f3960154406">MAP_TO_ANY_OUTPUT</a>. </p>
 
 </div>
 </div>
@@ -810,5 +810,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19683 --- Fri Nov 24 2023 03:12:59 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19692 --- Fri Dec 1 2023 03:13:08 &nbsp; <img border=0 src="favicon.png">
 </small></address>

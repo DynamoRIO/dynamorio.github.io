@@ -304,10 +304,10 @@ When true, this option enables the drstatecmp library that performs state compar
 By default, offline tracing only records a userspace trace. If this option is enabled, offline tracing will record each syscall's Kernel PT and write every syscall's PT and metadata to files in -outdir/kernel.raw/ for later offline analysis. And this feature is available only on Intel CPUs that support Intel@ Processor Trace.</li>
 <li><b>-core_sharded</b> <br  />
 <em>default value: false</em> <br  />
-By default, the input trace is analyzed in parallel across shards equal to software threads. This option instead schedules those threads onto virtual cores and analyzes each core in parallel. Thus, each shard consists of pieces from many software threads. How the scheduling is performed is controlled by a set of options with the prefix "sched_" along with -num_cores.</li>
+By default, the input trace is analyzed in parallel across shards equal to software threads. This option instead schedules those threads onto virtual cores and analyzes each core in parallel. Thus, each shard consists of pieces from many software threads. How the scheduling is performed is controlled by a set of options with the prefix "sched_" along with -cores.</li>
 <li><b>-core_serial</b> <br  />
 <em>default value: false</em> <br  />
-In this mode, scheduling is performed just like for -core_sharded. However, the resulting schedule is acted upon by a single analysis threadwhich walks the N cores in lockstep in round robin fashion. How the scheduling is performed is controlled by a set of options with the prefix "sched_" along with -num_cores.</li>
+In this mode, scheduling is performed just like for -core_sharded. However, the resulting schedule is acted upon by a single analysis threadwhich walks the N cores in lockstep in round robin fashion. How the scheduling is performed is controlled by a set of options with the prefix "sched_" along with -cores.</li>
 <li><b>-sched_quantum</b> <br  />
 <em>default value: 1000000</em> <br  />
 Applies to -core_sharded and -core_serial. Scheduling quantum: in microseconds of wall-clock time if -sched_time is set; otherwise in instructions.</li>
@@ -343,5 +343,5 @@ A letter is printed every N instrs or N waits </li>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19683 --- Fri Nov 24 2023 03:12:59 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19692 --- Fri Dec 1 2023 03:13:08 &nbsp; <img border=0 src="favicon.png">
 </small></address>

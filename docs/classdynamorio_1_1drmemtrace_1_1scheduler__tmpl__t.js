@@ -46,7 +46,8 @@
       [ "STATUS_REGION_INVALID", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a665161d3ec22cbe06e12ffbf53e8d78a", null ],
       [ "STATUS_NOT_IMPLEMENTED", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5add5927b08989c9347c88685480fecc1b", null ],
       [ "STATUS_SKIPPED", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5ad3d9e4dd441f8381818c09c548e34565", null ],
-      [ "STATUS_RECORD_FAILED", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a1ce722940239ccf3b81c2da8cd50a4f1", null ]
+      [ "STATUS_RECORD_FAILED", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a1ce722940239ccf3b81c2da8cd50a4f1", null ],
+      [ "STATUS_IDLE", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a12d188836f862a7a68b558460b725f72", null ]
     ] ],
     [ "scheduler_tmpl_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a2f9418f2aad7ebca6ccc9bef08ed1cac", null ],
     [ "get_error_string", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a13a243f7d2fe325711ab0fab69576f9e", null ],

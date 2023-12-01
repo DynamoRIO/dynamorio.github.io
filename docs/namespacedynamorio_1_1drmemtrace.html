@@ -418,7 +418,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295cae7bcf6a915571421473532017fc86d24">TRACE_MARKER_TYPE_DIRECT_THREAD_SWITCH</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca8d688aeae7d50e45269dbb8b494cbac1">TRACE_MARKER_TYPE_CORE_WAIT</a>
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca8d688aeae7d50e45269dbb8b494cbac1">TRACE_MARKER_TYPE_CORE_WAIT</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295cabae8da1c6ba60323b5ef13fa55a799fc">TRACE_MARKER_TYPE_CORE_IDLE</a>
 <br />
  }</td></tr>
 <tr class="separator:ab8531c7f66ccc0d7fe59f436844a295c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1052,7 +1054,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The type of <a class="el" href="classdynamorio_1_1drmemtrace_1_1ir2trace__t.html#a0ea1250a2fff460ae0e49a7e0513fecf">ir2trace_t::convert()</a> return value. </p>
+<p>The type of <a class="el" href="classdynamorio_1_1drmemtrace_1_1ir2trace__t.html#ae465d167b11cd3597b2ce5f62cd577f8">ir2trace_t::convert()</a> return value. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a77c190220840ff3efd73bf565679379ea99d1a5a9f90b9e6835cfc8af25e4be70"></a>IR2TRACE_CONV_SUCCESS&#160;</td><td class="fielddoc"><p>The conversion process succeeded. </p>
 </td></tr>
@@ -1077,7 +1079,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The type of <a class="el" href="classdynamorio_1_1drmemtrace_1_1ir2trace__t.html#a0ea1250a2fff460ae0e49a7e0513fecf">ir2trace_t::convert()</a> return value. </p>
+<p>The type of <a class="el" href="classdynamorio_1_1drmemtrace_1_1ir2trace__t.html#ae465d167b11cd3597b2ce5f62cd577f8">ir2trace_t::convert()</a> return value. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a77c190220840ff3efd73bf565679379ea99d1a5a9f90b9e6835cfc8af25e4be70"></a>IR2TRACE_CONV_SUCCESS&#160;</td><td class="fielddoc"><p>The conversion process succeeded. </p>
 </td></tr>
@@ -1148,7 +1150,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The type of <a class="el" href="classdynamorio_1_1drmemtrace_1_1pt2ir__t.html#a3de7f68dfd3b08baaa57ac2533c81eb9">pt2ir_t::convert()</a> return value. </p>
+<p>The type of <a class="el" href="classdynamorio_1_1drmemtrace_1_1pt2ir__t.html#a3459a7a3fad90d3a520cf298e4bdbf5d">pt2ir_t::convert()</a> return value. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a40b6918b680abe46144fc9bd4b35f4cca2432ba912616213505b143e41cbd8679"></a>PT2IR_CONV_SUCCESS&#160;</td><td class="fielddoc"><p>The conversion process is successful. </p>
 </td></tr>
@@ -1205,7 +1207,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The type of <a class="el" href="classdynamorio_1_1drmemtrace_1_1pt2ir__t.html#a3de7f68dfd3b08baaa57ac2533c81eb9">pt2ir_t::convert()</a> return value. </p>
+<p>The type of <a class="el" href="classdynamorio_1_1drmemtrace_1_1pt2ir__t.html#a3459a7a3fad90d3a520cf298e4bdbf5d">pt2ir_t::convert()</a> return value. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a40b6918b680abe46144fc9bd4b35f4cca2432ba912616213505b143e41cbd8679"></a>PT2IR_CONV_SUCCESS&#160;</td><td class="fielddoc"><p>The conversion process is successful. </p>
 </td></tr>
@@ -1427,15 +1429,17 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295caa6544f9f8c54496a7befa481c81577b7"></a>TRACE_MARKER_TYPE_MAYBE_BLOCKING_SYSCALL&#160;</td><td class="fielddoc"><p>This marker is emitted prior to a system call which is known to block under some circumstances. Whether it blocks may depend on the values of parameters or the state of options set in prior system calls. Additionally, it is not guaranteed that every system call that might block is identified in the initial implementation, and it may be limited only to certain operating systems (Linux only for now).</p>
 <p>If these markers are present, the file type <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa0ada28582819d0a5287f47716a35239e">OFFLINE_FILE_TYPE_BLOCKING_SYSCALLS</a> is set. The marker value is 0. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca13fffec3c874dcd5cc84aa25387b76d3"></a>TRACE_MARKER_TYPE_SYSCALL_TRACE_START&#160;</td><td class="fielddoc"><p>Indicates a point in the trace where a syscall's kernel trace starts. </p>
+<tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca13fffec3c874dcd5cc84aa25387b76d3"></a>TRACE_MARKER_TYPE_SYSCALL_TRACE_START&#160;</td><td class="fielddoc"><p>Indicates a point in the trace where a syscall's kernel trace starts. The value of the marker is set to the syscall number. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295caef6df6ddbdffd994f91edba51c850cde"></a>TRACE_MARKER_TYPE_SYSCALL_TRACE_END&#160;</td><td class="fielddoc"><p>Indicates a point in the trace where a syscall's trace end. </p>
+<tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295caef6df6ddbdffd994f91edba51c850cde"></a>TRACE_MARKER_TYPE_SYSCALL_TRACE_END&#160;</td><td class="fielddoc"><p>Indicates a point in the trace where a syscall's trace ends. The value of the marker is set to the syscall number. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295cac4123c88a189fe7b52ceee6b7cab48ce"></a>TRACE_MARKER_TYPE_SYSCALL_FAILED&#160;</td><td class="fielddoc"><p>This marker is emitted for system calls whose parameters are traced with -record_syscall. It is emitted immediately after <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca58ff903618a785cb45ba4c57900db24f">TRACE_MARKER_TYPE_FUNC_RETVAL</a> if prior the system call (whose id is specified by the closest previous <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca5c6f08548563cb1456a4f09b9b5c3f59">TRACE_MARKER_TYPE_FUNC_ID</a> marker entry) failed. Whether it failed is obtained from <a class="el" href="dr__tools_8h.html#a34a7817f8c366786557370f35633f0c7">dr_syscall_get_result_ex()</a> via the "succeeded" field of <a class="el" href="dr__tools_8h.html#afc574aa98b0e727a9b75059c4966eb10">dr_syscall_result_info_t</a>. See the corresponding documentation for caveats about the accuracy of this determination. The marker value is the "errno_value" field of <a class="el" href="dr__tools_8h.html#afc574aa98b0e727a9b75059c4966eb10">dr_syscall_result_info_t</a>. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295cae7bcf6a915571421473532017fc86d24"></a>TRACE_MARKER_TYPE_DIRECT_THREAD_SWITCH&#160;</td><td class="fielddoc"><p>This marker is emitted prior to a system call (but after the system call's <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca9c6c0b467a729d1d4c4298bef1892c74">TRACE_MARKER_TYPE_SYSCALL</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caa6544f9f8c54496a7befa481c81577b7">TRACE_MARKER_TYPE_MAYBE_BLOCKING_SYSCALL</a> markers) that causes an immediate switch to another thread on the same core (with the current thread entering an unscheduled state), bypassing the kernel scheduler's normal dynamic switch code based on run queues. The marker value holds the thread id of the target thread. This should generally always be after a <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caa6544f9f8c54496a7befa481c81577b7">TRACE_MARKER_TYPE_MAYBE_BLOCKING_SYSCALL</a> marker as such a switch always has a chance of blocking if the target needs to be migrated. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca8d688aeae7d50e45269dbb8b494cbac1"></a>TRACE_MARKER_TYPE_CORE_WAIT&#160;</td><td class="fielddoc"><p>This marker is used for core-sharded analyses to indicate that the current core is waiting on another core. This is primarily only useful for analyses studying the scheduling of threads onto cores. A new marker is emitted each time the tool analysis framework requests a new record from the scheduler and is given a wait status. There are no units of time here but each repetition is roughly the time where a regular record could have been read and passed along. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295cabae8da1c6ba60323b5ef13fa55a799fc"></a>TRACE_MARKER_TYPE_CORE_IDLE&#160;</td><td class="fielddoc"><p>This marker is used for core-sharded analyses to indicate that the current core has no available inputs to run (all inputs are on other cores or are blocked waiting for kernel resources). A new marker is emitted each time the tool analysis framework requests a new record from the scheduler and is given an idle status. There are no units of time here but each repetition is roughly the time where a regular record could have been read and passed along. This idle marker indicates that a core actually had no work to do, as opposed to <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca8d688aeae7d50e45269dbb8b494cbac1">TRACE_MARKER_TYPE_CORE_WAIT</a> which is an artifact of an imposed re-created schedule. </p>
 </td></tr>
 </table>
 
@@ -2493,5 +2497,5 @@ For additional file open parameters with the thread and window identifiers, use 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19683 --- Fri Nov 24 2023 03:12:59 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19692 --- Fri Dec 1 2023 03:13:08 &nbsp; <img border=0 src="favicon.png">
 </small></address>
