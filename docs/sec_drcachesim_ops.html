@@ -323,6 +323,9 @@ Minimum latency in timestamp units (us) to consider any syscall as incurring a c
 <li><b>-sched_blocking_switch_us</b> <br  />
 <em>default value: 100</em> <br  />
 Minimum latency in timestamp units (us) to consider any syscall that is marked as maybe-blocking to incur a context switch. Applies to -core_sharded and -core_serial.</li>
+<li><b>-sched_block_scale</b> <br  />
+<em>default value: 1</em> <br  />
+A higher value here results in blocking syscalls keeping inputs unscheduled for longer.</li>
 <li><b>-record_file</b> <br  />
 <em>default value: ""</em> <br  />
 Applies to -core_sharded and -core_serial. Path for storing record of schedule.</li>
@@ -343,5 +346,5 @@ A letter is printed every N instrs or N waits </li>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19692 --- Fri Dec 1 2023 03:13:08 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19698 --- Fri Dec 8 2023 03:12:56 &nbsp; <img border=0 src="favicon.png">
 </small></address>

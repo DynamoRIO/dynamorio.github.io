@@ -67,6 +67,8 @@ Data Fields</h2></td></tr>
 <tr class="separator:a6ea3487c8bbdb7ae52212b245c866608"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ea4a3f44bad298c9dffcc555f5d4241"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a0ea4a3f44bad298c9dffcc555f5d4241">blocking_switch_threshold</a> = 100</td></tr>
 <tr class="separator:a0ea4a3f44bad298c9dffcc555f5d4241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c8933439fdf03dd72c3b849e1c4052c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a6c8933439fdf03dd72c3b849e1c4052c">block_time_scale</a> = 1.</td></tr>
+<tr class="separator:a6c8933439fdf03dd72c3b849e1c4052c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename RecordType, typename ReaderType&gt;<br />
@@ -154,6 +156,23 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Field Documentation</h2>
+<a id="a6c8933439fdf03dd72c3b849e1c4052c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c8933439fdf03dd72c3b849e1c4052c">&#9670;&nbsp;</a></span>block_time_scale</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::scheduler_options_t::block_time_scale = 1.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Controls the amount of time inputs are considered blocked at a syscall whose latency exceeds <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a6ea3487c8bbdb7ae52212b245c866608">syscall_switch_threshold</a> or <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a0ea4a3f44bad298c9dffcc555f5d4241">blocking_switch_threshold</a>. A "block time factor" is computed from the syscall latency divided by either <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a6ea3487c8bbdb7ae52212b245c866608">syscall_switch_threshold</a> or <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a0ea4a3f44bad298c9dffcc555f5d4241">blocking_switch_threshold</a>. This factor is multiplied by this field <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a6c8933439fdf03dd72c3b849e1c4052c">block_time_scale</a> to produce a final value. For <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a66d6f6bbc9213a887758d14d32a31199a731ead7ea1ca4e3248a56b7aefac9ed3">QUANTUM_TIME</a>, that final value's amount of time, as reported by the time parameter to next_record(), must pass before the input is no longer considered blocked. For instruction quanta, that final value's count of scheduler selections must occur before the input is actually selected. </p>
+
+</div>
+</div>
 <a id="a0ea4a3f44bad298c9dffcc555f5d4241"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ea4a3f44bad298c9dffcc555f5d4241">&#9670;&nbsp;</a></span>blocking_switch_threshold</h2>
 
@@ -367,5 +386,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19692 --- Fri Dec 1 2023 03:13:08 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19698 --- Fri Dec 8 2023 03:12:56 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -10,6 +10,10 @@
     [ "DRMEMTRACE_SERIAL_SCHEDULE_FILENAME", "trace__entry_8h.html#a8e130e1aa80df762896518a84d8d602d", null ],
     [ "addr_t", "trace__entry_8h.html#a55b7fcd36826c1ba1b6c06daddfcb777", null ],
     [ "trace_entry_t", "trace__entry_8h.html#a067f98c2dab7fe5329e2ba248836370e", null ],
+    [ "encoding_file_type_t", "trace__entry_8h.html#a393cabb0f62150962dddf071dc3759b4", [
+      [ "ENCODING_FILE_TYPE_DEFAULT", "trace__entry_8h.html#a393cabb0f62150962dddf071dc3759b4a7b53a8dfc62295f3a559d563c929e834", null ],
+      [ "ENCODING_FILE_TYPE_SEPARATE_NON_MOD_INSTRS", "trace__entry_8h.html#a393cabb0f62150962dddf071dc3759b4a21b6b926158a6c6c8e03439ace49b04e", null ]
+    ] ],
     [ "func_trace_t", "trace__entry_8h.html#a3d5397b42e7772c06802de628fcb846d", [
       [ "TRACE_FUNC_ID_SYSCALL_BASE", "trace__entry_8h.html#a3d5397b42e7772c06802de628fcb846da80c4ee4c838a408d1e4c158386007362", null ]
     ] ],
