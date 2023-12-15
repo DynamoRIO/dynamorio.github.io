@@ -31,7 +31,8 @@
       [ "OFFLINE_FILE_TYPE_SYSCALL_NUMBERS", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa2bbf303be87f5709ada421f2b68f9898", null ],
       [ "OFFLINE_FILE_TYPE_BLOCKING_SYSCALLS", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa0ada28582819d0a5287f47716a35239e", null ],
       [ "OFFLINE_FILE_TYPE_KERNEL_SYSCALLS", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa8122186112a3ca356479e0b8bd08e9be", null ],
-      [ "OFFLINE_FILE_TYPE_BIMODAL_FILTERED_WARMUP", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa7b6a185cde6ae20ece63f7bbfd0e5b26", null ]
+      [ "OFFLINE_FILE_TYPE_BIMODAL_FILTERED_WARMUP", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa7b6a185cde6ae20ece63f7bbfd0e5b26", null ],
+      [ "OFFLINE_FILE_TYPE_KERNEL_SYSCALL_TRACE_TEMPLATES", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa5b38b284207dd42f882942f149677362", null ]
     ] ],
     [ "trace_marker_type_t", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295c", [
       [ "TRACE_MARKER_TYPE_KERNEL_EVENT", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca3b75f9115bb4146ed5540412e36bdd5a", null ],

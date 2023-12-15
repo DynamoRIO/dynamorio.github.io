@@ -26,6 +26,7 @@ permalink: /classdynamorio_1_1drmemtrace_1_1raw2trace__t.html
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pro-static-attribs">Static Protected Attributes</a>  </div>
@@ -49,6 +50,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4d2da19abbafbb382f11dd0a7790749f"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a4d2da19abbafbb382f11dd0a7790749f">do_conversion</a> ()</td></tr>
 <tr class="separator:a4d2da19abbafbb382f11dd0a7790749f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a26b9006cd8e3411a68fc7b2b2e33a393"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a26b9006cd8e3411a68fc7b2b2e33a393">create_essential_header_entries</a> (byte *&amp;buf_ptr, int version, <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baa">offline_file_type_t</a> file_type, thread_id_t tid, process_id_t pid)</td></tr>
+<tr class="separator:a26b9006cd8e3411a68fc7b2b2e33a393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ac4f6f6f247a72c0e1a1cd27196381a6a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ac4f6f6f247a72c0e1a1cd27196381a6a">process_offline_entry</a> (raw2trace_thread_data_t *tdata, const offline_entry_t *in_entry, thread_id_t tid, DR_PARAM_OUT bool *end_of_record, DR_PARAM_OUT bool *last_bb_handled, DR_PARAM_OUT bool *flush_decode_cache)</td></tr>
@@ -69,6 +75,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a7aa5005defa3e5e815e1d092ef4a2bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99f00d9f03c626c96f9ff32678164b92"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a99f00d9f03c626c96f9ff32678164b92">process_next_thread_buffer</a> (raw2trace_thread_data_t *tdata, DR_PARAM_OUT bool *end_of_record)</td></tr>
 <tr class="separator:a99f00d9f03c626c96f9ff32678164b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f878550d53070fb71296f1304e09e8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ae6f878550d53070fb71296f1304e09e8">read_syscall_template_file</a> ()</td></tr>
+<tr class="separator:ae6f878550d53070fb71296f1304e09e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2bfe59e602f51da667e864093bba009"><td class="memItemLeft" align="right" valign="top">app_pc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ae2bfe59e602f51da667e864093bba009">get_first_app_pc_for_syscall_template</a> (int syscall_num)</td></tr>
+<tr class="separator:ae2bfe59e602f51da667e864093bba009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8169c0bff3707183b249e3ef606f68bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a8169c0bff3707183b249e3ef606f68bd">write_syscall_template</a> (raw2trace_thread_data_t *tdata, byte *&amp;buf, <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a067f98c2dab7fe5329e2ba248836370e">trace_entry_t</a> *buf_base, int syscall_num)</td></tr>
+<tr class="separator:a8169c0bff3707183b249e3ef606f68bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b23bb0d332c07aaa0cc15b6cdfc16c1"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; module_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a7b23bb0d332c07aaa0cc15b6cdfc16c1">modvec_</a> () const</td></tr>
 <tr class="separator:a7b23bb0d332c07aaa0cc15b6cdfc16c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad54f20f0cb2c70e538f4a551ad76ed59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ad54f20f0cb2c70e538f4a551ad76ed59">set_modvec_</a> (const std::vector&lt; module_t &gt; *modvec)</td></tr>
@@ -95,6 +107,61 @@ Static Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The raw2trace class converts the raw offline trace format to the format expected by analysis tools. It requires access to the binary files for the libraries and executable that were present during tracing. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a26b9006cd8e3411a68fc7b2b2e33a393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26b9006cd8e3411a68fc7b2b2e33a393">&#9670;&nbsp;</a></span>create_essential_header_entries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void dynamorio::drmemtrace::raw2trace_t::create_essential_header_entries </td>
+          <td>(</td>
+          <td class="paramtype">byte *&amp;&#160;</td>
+          <td class="paramname"><em>buf_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>version</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baa">offline_file_type_t</a>&#160;</td>
+          <td class="paramname"><em>file_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">thread_id_t&#160;</td>
+          <td class="paramname"><em>tid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">process_id_t&#160;</td>
+          <td class="paramname"><em>pid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Writes the essential header entries to the given buffer. This is useful for other libraries that want to create a trace that works with our tools like the analyzer framework. </p>
+
+</div>
+</div>
 <a id="a4d2da19abbafbb382f11dd0a7790749f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4d2da19abbafbb382f11dd0a7790749f">&#9670;&nbsp;</a></span>do_conversion()</h2>
 
@@ -186,6 +253,33 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>This interface is meant to be used with a final trace rather than a raw trace, using the module log file saved from the raw2trace conversion. When <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#adf37e4a9abaaaec9361b50cb90507323">do_module_parsing_and_mapping()</a> has been called, this routine can be used to convert an instruction program counter in a trace into an address in the current process where the instruction bytes for that instruction are mapped, allowing decoding for obtaining further information than is stored in the trace. Returns a non-empty error message on failure.</p>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd><a class="el" href="classdynamorio_1_1drmemtrace_1_1module__mapper__t.html#a4377f440ae23d7ac420f022a7faedee6">dynamorio::drmemtrace::module_mapper_t::find_mapped_trace_address()</a> should be used instead. </dd></dl>
+
+</div>
+</div>
+<a id="ae2bfe59e602f51da667e864093bba009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2bfe59e602f51da667e864093bba009">&#9670;&nbsp;</a></span>get_first_app_pc_for_syscall_template()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">app_pc dynamorio::drmemtrace::raw2trace_t::get_first_app_pc_for_syscall_template </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>syscall_num</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the app pc of the first instruction in the system call template read for syscall_num. Returns nullptr if it could not find it. </p>
 
 </div>
 </div>
@@ -668,6 +762,32 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ae6f878550d53070fb71296f1304e09e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6f878550d53070fb71296f1304e09e8">&#9670;&nbsp;</a></span>read_syscall_template_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string dynamorio::drmemtrace::raw2trace_t::read_syscall_template_file </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reads entries in the given system call template file. These will be added to the final trace at the locations of the corresponding system call number markers. </p>
+
+</div>
+</div>
 <a id="af39a7bfc8954256a2d913050bc8f4e7a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af39a7bfc8954256a2d913050bc8f4e7a">&#9670;&nbsp;</a></span>set_modmap_()</h2>
 
@@ -719,6 +839,55 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Set the module map. Must be called before <a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ac4f6f6f247a72c0e1a1cd27196381a6a">process_offline_entry()</a> is called. </p>
+
+</div>
+</div>
+<a id="a8169c0bff3707183b249e3ef606f68bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8169c0bff3707183b249e3ef606f68bd">&#9670;&nbsp;</a></span>write_syscall_template()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dynamorio::drmemtrace::raw2trace_t::write_syscall_template </td>
+          <td>(</td>
+          <td class="paramtype">raw2trace_thread_data_t *&#160;</td>
+          <td class="paramname"><em>tdata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte *&amp;&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a067f98c2dab7fe5329e2ba248836370e">trace_entry_t</a> *&#160;</td>
+          <td class="paramname"><em>buf_base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>syscall_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Writes the system call template to the output trace, if any was provided in the system call template file for the given syscall_num. </p>
 
 </div>
 </div>
@@ -802,5 +971,5 @@ Static Protected Attributes</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19698 --- Fri Dec 8 2023 03:12:56 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19705 --- Fri Dec 15 2023 03:13:24 &nbsp; <img border=0 src="favicon.png">
 </small></address>
