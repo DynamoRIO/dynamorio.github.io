@@ -7,5 +7,6 @@
     [ "get_last_timestamp", "classdynamorio_1_1drmemtrace_1_1record__reader__t.html#a2b843e57bf9e457a4fc545315125d018", null ],
     [ "get_page_size", "classdynamorio_1_1drmemtrace_1_1record__reader__t.html#a5f662528132b32dcb20f3333e03cc24a", null ],
     [ "get_record_ordinal", "classdynamorio_1_1drmemtrace_1_1record__reader__t.html#a6165ecd233d97ce2ad63dad4539f8077", null ],
-    [ "get_version", "classdynamorio_1_1drmemtrace_1_1record__reader__t.html#a1a2ec66afb3a74aa229e8c290411911a", null ]
+    [ "get_version", "classdynamorio_1_1drmemtrace_1_1record__reader__t.html#a1a2ec66afb3a74aa229e8c290411911a", null ],
+    [ "is_record_kernel", "classdynamorio_1_1drmemtrace_1_1record__reader__t.html#af851eab535645c2a02e552681a9adc74", null ]
 ],

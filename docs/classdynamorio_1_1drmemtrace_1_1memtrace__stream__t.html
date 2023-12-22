@@ -80,6 +80,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a97057e9e7a7f417b1841a0a2e37503d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee4fe624edfe4e8d9b8416ab2114c1d0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html">memtrace_stream_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#aee4fe624edfe4e8d9b8416ab2114c1d0">get_input_interface</a> () const</td></tr>
 <tr class="separator:aee4fe624edfe4e8d9b8416ab2114c1d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff0f5d22c992aa84c6dabb7713be9ec5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#aff0f5d22c992aa84c6dabb7713be9ec5">is_record_kernel</a> () const</td></tr>
+<tr class="separator:aff0f5d22c992aa84c6dabb7713be9ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>&lt; DrMemtrace tracing + simulation infrastructure namespace. This is an interface for obtaining information from analysis tools on the full stream of memory reference records. </p>
@@ -503,6 +505,34 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aff0f5d22c992aa84c6dabb7713be9ec5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff0f5d22c992aa84c6dabb7713be9ec5">&#9670;&nbsp;</a></span>is_record_kernel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool dynamorio::drmemtrace::memtrace_stream_t::is_record_kernel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns whether the current record is from a part of the trace corresponding to kernel execution. </p>
+
+<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#aa158c55e5bfa8b871c20ee3320b18b88">dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::stream_t</a>, <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__reader__t.html#af851eab535645c2a02e552681a9adc74">dynamorio::drmemtrace::record_reader_t</a>, and <a class="el" href="classdynamorio_1_1drmemtrace_1_1reader__t.html#aeb42db3a53d3dda582deb509717c916c">dynamorio::drmemtrace::reader_t</a>.</p>
+
+</div>
+</div>
 <a id="a978a48e6a9af3edce4d14b099abcdd9a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a978a48e6a9af3edce4d14b099abcdd9a">&#9670;&nbsp;</a></span>is_record_synthetic()</h2>
 
@@ -540,5 +570,5 @@ Public Member Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19705 --- Fri Dec 15 2023 03:13:24 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19712 --- Fri Dec 22 2023 03:12:38 &nbsp; <img border=0 src="favicon.png">
 </small></address>

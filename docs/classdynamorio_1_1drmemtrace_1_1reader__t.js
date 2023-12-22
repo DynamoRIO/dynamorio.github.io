@@ -8,5 +8,6 @@
     [ "get_page_size", "classdynamorio_1_1drmemtrace_1_1reader__t.html#a9efa990a351c6a197cec224c4b2d4057", null ],
     [ "get_record_ordinal", "classdynamorio_1_1drmemtrace_1_1reader__t.html#a4af42658070bcada1530d380f68f20e6", null ],
     [ "get_version", "classdynamorio_1_1drmemtrace_1_1reader__t.html#ad8d105e52f59eefe7bcfc41b26b82d92", null ],
+    [ "is_record_kernel", "classdynamorio_1_1drmemtrace_1_1reader__t.html#aeb42db3a53d3dda582deb509717c916c", null ],
     [ "is_record_synthetic", "classdynamorio_1_1drmemtrace_1_1reader__t.html#a9ce8a0a89f6c8793d74c76a238519329", null ]
 ],

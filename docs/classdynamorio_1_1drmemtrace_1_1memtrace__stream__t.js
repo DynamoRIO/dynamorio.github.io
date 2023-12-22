@@ -14,5 +14,6 @@
     [ "get_stream_name", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#ad97a175c6a42c2c397d379e784b57fea", null ],
     [ "get_version", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a39e6cb3a7e091424938e1850b64a4d97", null ],
     [ "get_workload_id", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a5f34384b44bf30646c470928d61919fb", null ],
+    [ "is_record_kernel", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#aff0f5d22c992aa84c6dabb7713be9ec5", null ],
     [ "is_record_synthetic", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a978a48e6a9af3edce4d14b099abcdd9a", null ]
 ],

@@ -428,7 +428,8 @@
       [ "DR_OPND_IS_VECTOR", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca0d57921fa8f9aed3d404f91dded1bcfb", null ],
       [ "DR_OPND_IS_MERGE_PREDICATE", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca08cf6c248755b218ee7e8ebc19e2a175", null ],
       [ "DR_OPND_IS_PREDICATE_CONSTRAINT", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca68a65b06c2a526745107a4cc43add80f", null ],
-      [ "DR_OPND_IMM_PRINT_DECIMAL", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca3dda5fba5134a94cfccfdfa7178d22d4", null ]
+      [ "DR_OPND_IMM_PRINT_DECIMAL", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca3dda5fba5134a94cfccfdfa7178d22d4", null ],
+      [ "DR_OPND_IMPLICIT", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca56dd8c909f6a42580b14f0d77b63b704", null ]
     ] ],
     [ "_dr_pred_constr_type_t", "dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bc", [
       [ "DR_PRED_CONSTR_POW2", "dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca67c0092c962e8e9d03872b40a2222d11", null ],

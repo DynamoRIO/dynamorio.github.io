@@ -121,7 +121,7 @@ If available, metadata with virtual-to-physical-address translation information 
 This option only applies if -use_physical is enabled. The virtual to physical mapping is cached for performance reasons, yet the underlying mapping can change without notice. This option controls the frequency with which the cached value is ignored in order to re-access the actual mapping and ensure accurate results. The units are the number of memory accesses per forced access. A value of 0 uses the cached values for the entire application execution.</li>
 <li><b>-cpu_scheduling</b> <br  />
 <em>default value: false</em> <br  />
-By default, the simulator schedules threads to simulated cores in a static round-robin fashion. This option causes the scheduler to instead use the recorded cpu that each thread executed on (at a granularity of the trace buffer size) for scheduling, mapping traced cpu's to cores and running each segment of each thread on the core that owns the recorded cpu for that segment.</li>
+By default, the simulator schedules threads to simulated cores in a static round-robin fashion. This option causes the scheduler to instead use the recorded cpu that each thread executed on (at a granularity of the trace buffer size) for scheduling, mapping traced cpu's to cores and running each segment of each thread on the core that owns the recorded cpu for that segment. This option is not supported with -core_serial; use -cpu_schedule_file with -core_serial instead.</li>
 <li><b>-max_trace_size</b> <br  />
 <em>default value: 0</em> <br  />
 If non-zero, this sets a maximum size on the amount of raw trace data gathered for each thread. This is not an exact limit: it may be exceeded by the size of one internal buffer. Once reached, instrumentation continues for that thread, but no further data is recorded.</li>
@@ -338,6 +338,9 @@ Applies to -core_sharded and -core_serial. Path with stored schedule for replay.
 <li><b>-cpu_schedule_file</b> <br  />
 <em>default value: ""</em> <br  />
 Applies to -core_sharded and -core_serial. Path with stored as-traced schedule for replay.</li>
+<li><b>-sched_switch_file</b> <br  />
+<em>default value: ""</em> <br  />
+Applies to -core_sharded and -core_serial. Path to file holding context switch sequences. The file can contain multiple sequences each with regular trace headers and the sequence proper bracketed by TRACE_MARKER_TYPE_CONTEXT_SWITCH_START and TRACE_MARKER_TYPE_CONTEXT_SWITCH_END markers.</li>
 <li><b>-schedule_stats_print_every</b> <br  />
 <em>default value: 500000</em> <br  />
 A letter is printed every N instrs or N waits</li>
@@ -352,5 +355,5 @@ Path to the file that contains system call trace templates. If set, system call 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19705 --- Fri Dec 15 2023 03:13:24 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19712 --- Fri Dec 22 2023 03:12:38 &nbsp; <img border=0 src="favicon.png">
 </small></address>

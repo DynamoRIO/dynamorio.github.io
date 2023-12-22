@@ -71,6 +71,14 @@ Data Fields</h2></td></tr>
 <tr class="separator:a6c8933439fdf03dd72c3b849e1c4052c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94617954966af426181065a7edfa1f9b"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a94617954966af426181065a7edfa1f9b">block_time_max</a> = 25000000</td></tr>
 <tr class="separator:a94617954966af426181065a7edfa1f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5665d877a7b54ed406752c2bf26cebea"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a5665d877a7b54ed406752c2bf26cebea">kernel_switch_trace_path</a></td></tr>
+<tr class="separator:a5665d877a7b54ed406752c2bf26cebea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e02a6e38c2872b6b0c0dc287772544c"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; ReaderType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a9e02a6e38c2872b6b0c0dc287772544c">kernel_switch_reader</a></td></tr>
+<tr class="separator:a9e02a6e38c2872b6b0c0dc287772544c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6b1d12f5c6c169d92d12c045fe653a1"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; ReaderType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#ae6b1d12f5c6c169d92d12c045fe653a1">kernel_switch_reader_end</a></td></tr>
+<tr class="separator:ae6b1d12f5c6c169d92d12c045fe653a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1783ff3a0ff0f81cb38922f8093a9118"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a1783ff3a0ff0f81cb38922f8093a9118">single_lockstep_output</a> = false</td></tr>
+<tr class="separator:a1783ff3a0ff0f81cb38922f8093a9118"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename RecordType, typename ReaderType&gt;<br />
@@ -243,6 +251,57 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 
 </div>
 </div>
+<a id="a9e02a6e38c2872b6b0c0dc287772544c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e02a6e38c2872b6b0c0dc287772544c">&#9670;&nbsp;</a></span>kernel_switch_reader</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;ReaderType&gt; <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::scheduler_options_t::kernel_switch_reader</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>An alternative to <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a5665d877a7b54ed406752c2bf26cebea">kernel_switch_trace_path</a> is to pass a reader and <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#ae6b1d12f5c6c169d92d12c045fe653a1">kernel_switch_reader_end</a>. See the description of <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a5665d877a7b54ed406752c2bf26cebea">kernel_switch_trace_path</a>. This field is only examined if <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a5665d877a7b54ed406752c2bf26cebea">kernel_switch_trace_path</a> is empty. The scheduler will call the <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a7d51e5baa505e36110a502f46c676d07">init()</a> function for the reader. </p>
+
+</div>
+</div>
+<a id="ae6b1d12f5c6c169d92d12c045fe653a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6b1d12f5c6c169d92d12c045fe653a1">&#9670;&nbsp;</a></span>kernel_switch_reader_end</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;ReaderType&gt; <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::scheduler_options_t::kernel_switch_reader_end</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The end reader for <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a9e02a6e38c2872b6b0c0dc287772544c">kernel_switch_reader</a>. </p>
+
+</div>
+</div>
+<a id="a5665d877a7b54ed406752c2bf26cebea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5665d877a7b54ed406752c2bf26cebea">&#9670;&nbsp;</a></span>kernel_switch_trace_path</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::scheduler_options_t::kernel_switch_trace_path</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Input file containing template sequences of kernel context switch code. Each sequence must start with a <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca0a5457fcd6611866e9cf31de09519ff0">TRACE_MARKER_TYPE_CONTEXT_SWITCH_START</a> marker and end with <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca70a0fea9e8810e597bce02424bb7a1d2">TRACE_MARKER_TYPE_CONTEXT_SWITCH_END</a>. The values of each marker must hold a <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aebe64f68f713ab5c29c22097e3b9946d">switch_type_t</a> enum value indicating which type of switch it corresponds to. Each sequence can be stored as a separate subfile of an archive file, or concatenated into a single file. Each sequence should be in the regular offline drmemtrace format. The sequence is inserted into the output stream on each context switch of the indicated type. The same file (or reader) must be passed when replaying as this kernel code is not stored when recording. An alternative to passing the file path is to pass <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a9e02a6e38c2872b6b0c0dc287772544c">kernel_switch_reader</a> and <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#ae6b1d12f5c6c169d92d12c045fe653a1">kernel_switch_reader_end</a>. </p>
+
+</div>
+</div>
 <a id="a86653e52217b6c9cf328696e911c4f57"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a86653e52217b6c9cf328696e911c4f57">&#9670;&nbsp;</a></span>mapping</h2>
 
@@ -345,6 +404,23 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 
 </div>
 </div>
+<a id="a1783ff3a0ff0f81cb38922f8093a9118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1783ff3a0ff0f81cb38922f8093a9118">&#9670;&nbsp;</a></span>single_lockstep_output</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::scheduler_options_t::single_lockstep_output = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>If true, enables a mode where all outputs are serialized into one global outer layer output. The single global output stream alternates in round-robin lockstep among each core output. The core outputs operate just like they would with no serialization, other than timing differences relative to other core outputs. </p>
+
+</div>
+</div>
 <a id="a2b8c561839112c900eda07ec8171abfb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2b8c561839112c900eda07ec8171abfb">&#9670;&nbsp;</a></span>struct_size</h2>
 
@@ -405,5 +481,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19705 --- Fri Dec 15 2023 03:13:24 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19712 --- Fri Dec 22 2023 03:12:38 &nbsp; <img border=0 src="favicon.png">
 </small></address>

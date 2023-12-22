@@ -991,7 +991,9 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca68a65b06c2a526745107a4cc43add80f">DR_OPND_IS_PREDICATE_CONSTRAINT</a> = 0x800, 
 <br />
-&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca3dda5fba5134a94cfccfdfa7178d22d4">DR_OPND_IMM_PRINT_DECIMAL</a> = 0x1000
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca3dda5fba5134a94cfccfdfa7178d22d4">DR_OPND_IMM_PRINT_DECIMAL</a> = 0x1000, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca56dd8c909f6a42580b14f0d77b63b704">DR_OPND_IMPLICIT</a> = 0x2000
 <br />
  }</td></tr>
 <tr class="separator:a7fd06e4caec9a02043d179ee25a9f60c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3295,6 +3297,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a7fd06e4caec9a02043d179ee25a9f60ca68a65b06c2a526745107a4cc43add80f"></a>DR_OPND_IS_PREDICATE_CONSTRAINT&#160;</td><td class="fielddoc"><p>This immediate integer operand should be treated as an AArch64 SVE predicate constraint </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a7fd06e4caec9a02043d179ee25a9f60ca3dda5fba5134a94cfccfdfa7178d22d4"></a>DR_OPND_IMM_PRINT_DECIMAL&#160;</td><td class="fielddoc"><p>This is used by RISCV64 for immediates display format. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7fd06e4caec9a02043d179ee25a9f60ca56dd8c909f6a42580b14f0d77b63b704"></a>DR_OPND_IMPLICIT&#160;</td><td class="fielddoc"><p>The register number is not in the instruction encoding but is calculated based on another register </p>
 </td></tr>
 </table>
 
@@ -7198,5 +7202,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19705 --- Fri Dec 15 2023 03:13:23 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19712 --- Fri Dec 22 2023 03:12:36 &nbsp; <img border=0 src="favicon.png">
 </small></address>

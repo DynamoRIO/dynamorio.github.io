@@ -15,6 +15,7 @@
     [ "get_stream_name", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ad648abe0b17d471550e514f3e852b31c", null ],
     [ "get_version", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a04ba6c08ee2b58c2008d5765988c4a4b", null ],
     [ "get_workload_id", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#abeb50e52709334f72a2e887ef27483f6", null ],
+    [ "is_record_kernel", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#aa158c55e5bfa8b871c20ee3320b18b88", null ],
     [ "is_record_synthetic", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ab276351adf53d50aecba8954f7f839d4", null ],
     [ "next_record", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a0c957be2387f2a2ca6ed00117d2378d6", null ],
     [ "next_record", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#abf906b3602844039ebba9b1fe9d14580", null ],

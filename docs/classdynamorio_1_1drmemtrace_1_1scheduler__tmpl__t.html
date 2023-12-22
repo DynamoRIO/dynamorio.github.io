@@ -132,6 +132,15 @@ Public Types</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a30edfde737fa568af6c815715e32e2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebe64f68f713ab5c29c22097e3b9946d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aebe64f68f713ab5c29c22097e3b9946d">switch_type_t</a> { <br />
+&#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aebe64f68f713ab5c29c22097e3b9946daa024292572b10275bc8b951833e76c82">SWITCH_INVALID</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aebe64f68f713ab5c29c22097e3b9946da49ef490ab454dcb538ec53e79bd951ff">SWITCH_THREAD</a>, 
+<br />
+&#160;&#160;<a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aebe64f68f713ab5c29c22097e3b9946daab361ee1b3ddd881e3a41c020cce1073">SWITCH_PROCESS</a>
+<br />
+ }</td></tr>
+<tr class="separator:aebe64f68f713ab5c29c22097e3b9946d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba6242678835329015e0fc77404a1865"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aba6242678835329015e0fc77404a1865">input_ordinal_t</a></td></tr>
 <tr class="separator:aba6242678835329015e0fc77404a1865"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbf00e5453f5498c1fa32d7e00c760db"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#abbf00e5453f5498c1fa32d7e00c760db">output_ordinal_t</a></td></tr>
@@ -381,6 +390,31 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <tr><td class="fieldname"><a id="a23d5caa35aed595282c65964326860d5a1ce722940239ccf3b81c2da8cd50a4f1"></a>STATUS_RECORD_FAILED&#160;</td><td class="fielddoc"><p>Failed to record schedule for future replay. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a23d5caa35aed595282c65964326860d5a12d188836f862a7a68b558460b725f72"></a>STATUS_IDLE&#160;</td><td class="fielddoc"><p>This code indicates that all inputs are blocked waiting for kernel resources (such as i/o). This is similar to <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a67fb8abc3aef15a51ed6ab4b4e75e720">STATUS_WAIT</a>, but <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a67fb8abc3aef15a51ed6ab4b4e75e720">STATUS_WAIT</a> indicates an artificial pause due to imposing the original ordering while <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a12d188836f862a7a68b558460b725f72">STATUS_IDLE</a> indicates actual idle time in the application. Simulators are suggested to not advance simulated time for <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a67fb8abc3aef15a51ed6ab4b4e75e720">STATUS_WAIT</a> while they should advance time for <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a12d188836f862a7a68b558460b725f72">STATUS_IDLE</a>. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="aebe64f68f713ab5c29c22097e3b9946d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebe64f68f713ab5c29c22097e3b9946d">&#9670;&nbsp;</a></span>switch_type_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aebe64f68f713ab5c29c22097e3b9946d">dynamorio::drmemtrace::scheduler_tmpl_t::switch_type_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Types of context switches for <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::scheduler_options_t</a>:: kernel_switch_trace_path and kernel_switch_reader. The enum value is the subfile component name in the archive_istream_t. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aebe64f68f713ab5c29c22097e3b9946daa024292572b10275bc8b951833e76c82"></a>SWITCH_INVALID&#160;</td><td class="fielddoc"><p>Invalid value. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aebe64f68f713ab5c29c22097e3b9946da49ef490ab454dcb538ec53e79bd951ff"></a>SWITCH_THREAD&#160;</td><td class="fielddoc"><p>Generic thread context switch. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aebe64f68f713ab5c29c22097e3b9946daab361ee1b3ddd881e3a41c020cce1073"></a>SWITCH_PROCESS&#160;</td><td class="fielddoc"><p>Generic process context switch. A workload is considered a process. </p>
 </td></tr>
 </table>
 
@@ -742,5 +776,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19705 --- Fri Dec 15 2023 03:13:24 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19712 --- Fri Dec 22 2023 03:12:38 &nbsp; <img border=0 src="favicon.png">
 </small></address>
