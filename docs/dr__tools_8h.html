@@ -244,6 +244,8 @@ Functions</h2></td></tr>
 <tr class="separator:a407fa7ac15e482174d2ff75dcc312192"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a684c0fc332a5e5aa11c28ad3d1a6ef57"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a684c0fc332a5e5aa11c28ad3d1a6ef57">dr_using_all_private_caches</a> (void)</td></tr>
 <tr class="separator:a684c0fc332a5e5aa11c28ad3d1a6ef57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53341fd7eb451b25d3419f2308a4a5bd"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a53341fd7eb451b25d3419f2308a4a5bd">dr_running_under_dynamorio</a> (void)</td></tr>
+<tr class="separator:a53341fd7eb451b25d3419f2308a4a5bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a558ef634eff90b0e777cddb73983617a"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a558ef634eff90b0e777cddb73983617a">dr_request_synchronized_exit</a> (void)</td></tr>
 <tr class="separator:a558ef634eff90b0e777cddb73983617a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affc4a7a38a1fa1fe45c1a15e01a98e78"><td class="memItemLeft" align="right" valign="top">const DR_API char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#affc4a7a38a1fa1fe45c1a15e01a98e78">dr_get_options</a> (<a class="el" href="dr__defines_8h.html#a68540a70b4f8150a4fe6dcec91bf8825">client_id_t</a> client_id)</td></tr>
@@ -5256,6 +5258,25 @@ This routine supports replacement for the current thread only. <code>drcontext</
 
 </div>
 </div>
+<a id="a53341fd7eb451b25d3419f2308a4a5bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53341fd7eb451b25d3419f2308a4a5bd">&#9670;&nbsp;</a></span>dr_running_under_dynamorio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API bool dr_running_under_dynamorio </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns false if DynamoRIO is being used as a "regular" standalone library (see <a class="el" href="dr__tools_8h.html#a0917d634fe88c7d368eb6a20c17c55cb">dr_standalone_init()</a> and <a class="el" href="page_standalone.html">Disassembly Library</a>). Returns true if DynamoRIO is controlling the application by running its code through a software code cache. </p>
+
+</div>
+</div>
 <a id="a25c352ae7d61d62b2ebd13174e2f50bd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a25c352ae7d61d62b2ebd13174e2f50bd">&#9670;&nbsp;</a></span>dr_rwlock_create()</h2>
 
@@ -6637,5 +6658,5 @@ This routine is only available with either the -thread_private or -enable_full_a
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19712 --- Fri Dec 29 2023 03:13:09 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19725 --- Fri Jan 5 2024 03:12:57 &nbsp; <img border=0 src="favicon.png">
 </small></address>

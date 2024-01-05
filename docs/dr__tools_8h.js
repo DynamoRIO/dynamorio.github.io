@@ -223,6 +223,7 @@
     [ "dr_request_synchronized_exit", "dr__tools_8h.html#a558ef634eff90b0e777cddb73983617a", null ],
     [ "dr_resume_all_other_threads", "dr__tools_8h.html#a687adc9ac5976037440c5efc838f3d35", null ],
     [ "dr_retakeover_suspended_native_thread", "dr__tools_8h.html#a69e371d4c7d897bf24c8a558b86a4c69", null ],
+    [ "dr_running_under_dynamorio", "dr__tools_8h.html#a53341fd7eb451b25d3419f2308a4a5bd", null ],
     [ "dr_rwlock_create", "dr__tools_8h.html#a25c352ae7d61d62b2ebd13174e2f50bd", null ],
     [ "dr_rwlock_destroy", "dr__tools_8h.html#ad2165aca91ac2de155d98c709436819f", null ],
     [ "dr_rwlock_mark_as_app", "dr__tools_8h.html#a2c95bd55446ba4232ca591233200f275", null ],
