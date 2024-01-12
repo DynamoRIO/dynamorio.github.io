@@ -43,9 +43,6 @@ Setup</h1>
 <p>More recent versions of <code>dbghelp.dll</code> on Windows can use significant amounts of stack space. We have observed usage of 36KB. This is within the default stack size for a DynamoRIO client, but be aware if trying to trim the stack size via the DynamoRIO runtime option <code>-stack_size</code> that anything lower than 36KB is likely to be problematic on Windows.</p>
 <p>On Windows, <code>drsyms</code> does support Cygwin and MinGW symbols, and will find file and line information if in DWARF2 format. The <code>stabs</code> format is not supported. Cygwin and MinGW gcc versions prior to 4.3 use <code>stabs</code> by default; pass the <code>-ggdb</code> flag to request DWARF2.</p>
 <p>The <code>drsyms</code> library on Linux and Mac uses bundled copies of <code>libelf</code>, <code>libdwarf</code>, and <code>libelftc</code> built from the <a href="http://elftoolchain.sourceforge.net">elftoolchain</a> project and requires no setup.</p>
-<h2><a class="anchor" id="sec_drsyms_unsupported_dwarfv5"></a>
-DWARFv5 not supported yet</h2>
-<p>The <a href="http://elftoolchain.sourceforge.net">elftoolchain</a> project does not support DWARFv5 yet (<a href="https://sourceforge.net/p/elftoolchain/tickets/611">ticket</a>). As a result, drsyms is not able to read line information output by some compiler varsions (<a href="https://github.com/DynamoRIO/dynamorio/issues/5926">i#5926</a>); e.g. this is the default behavior of g++-11. Possible workarounds are to use a different compiler version that outputs DWARF version 2 to 4, or set "-gdwarf-4" in the g++/gcc invocation to explicitly select the DWARFv4 format.</p>
 <h1><a class="anchor" id="sec_drsyms_paths"></a>
 Search Paths</h1>
 <p>On Linux, <code>drsyms</code> will look in the default debug directories for symbols for a library: a <code>.debug</code> subdirectory of the library's directory or in <code>/usr/lib/debug</code>.</p>
@@ -93,5 +90,5 @@ Module Bases</h2>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19725 --- Fri Jan 5 2024 03:12:58 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19732 --- Fri Jan 12 2024 03:13:36 &nbsp; <img border=0 src="favicon.png">
 </small></address>

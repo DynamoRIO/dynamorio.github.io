@@ -993,7 +993,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca3dda5fba5134a94cfccfdfa7178d22d4">DR_OPND_IMM_PRINT_DECIMAL</a> = 0x1000, 
 <br />
-&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca56dd8c909f6a42580b14f0d77b63b704">DR_OPND_IMPLICIT</a> = 0x2000
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca56dd8c909f6a42580b14f0d77b63b704">DR_OPND_IMPLICIT</a> = 0x2000, 
+<br />
+&#160;&#160;<a class="el" href="dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca62cd980e65312faabcbbb931403f6281">DR_OPND_IS_GOVERNING</a> = 0x4000
 <br />
  }</td></tr>
 <tr class="separator:a7fd06e4caec9a02043d179ee25a9f60c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1104,6 +1106,8 @@ Functions</h2></td></tr>
 <tr class="separator:a5ea72f7ac857921c572f7a43b3453bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad08354e0b0d2ef847763216c14296edd"><td class="memItemLeft" align="right" valign="top">DR_API INSTR_INLINE bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#ad08354e0b0d2ef847763216c14296edd">opnd_is_predicate_zero</a> (<a class="el" href="structopnd__t.html">opnd_t</a> opnd)</td></tr>
 <tr class="separator:ad08354e0b0d2ef847763216c14296edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c8d835bee444ca1967218748996de45"><td class="memItemLeft" align="right" valign="top">DR_API INSTR_INLINE bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a4c8d835bee444ca1967218748996de45">opnd_is_governing</a> (<a class="el" href="structopnd__t.html">opnd_t</a> opnd)</td></tr>
+<tr class="separator:a4c8d835bee444ca1967218748996de45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d0ce3414871686587c8eb7ecd3a7684"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a5d0ce3414871686587c8eb7ecd3a7684">opnd_is_vsib</a> (<a class="el" href="structopnd__t.html">opnd_t</a> opnd)</td></tr>
 <tr class="separator:a5d0ce3414871686587c8eb7ecd3a7684"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49e52f166cbfc609036d3b35075725c4"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a49e52f166cbfc609036d3b35075725c4">opnd_is_abs_addr</a> (<a class="el" href="structopnd__t.html">opnd_t</a> opnd)</td></tr>
@@ -3292,13 +3296,15 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a7fd06e4caec9a02043d179ee25a9f60ca0d57921fa8f9aed3d404f91dded1bcfb"></a>DR_OPND_IS_VECTOR&#160;</td><td class="fielddoc"><p>Registers with this flag should be considered vectors and have an element size representing their element size. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a7fd06e4caec9a02043d179ee25a9f60ca08cf6c248755b218ee7e8ebc19e2a175"></a>DR_OPND_IS_MERGE_PREDICATE&#160;</td><td class="fielddoc"><p>Predicate registers can either be merging, zero or neither. If one of these are set then they are either a merge or zero otherwise aren't either. </p>
+<tr><td class="fieldname"><a id="a7fd06e4caec9a02043d179ee25a9f60ca08cf6c248755b218ee7e8ebc19e2a175"></a>DR_OPND_IS_MERGE_PREDICATE&#160;</td><td class="fielddoc"><p>SVE predicate registers can either be merging, zero or neither. If one of these are set then they are either a merge or zero otherwise aren't either. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a7fd06e4caec9a02043d179ee25a9f60ca68a65b06c2a526745107a4cc43add80f"></a>DR_OPND_IS_PREDICATE_CONSTRAINT&#160;</td><td class="fielddoc"><p>This immediate integer operand should be treated as an AArch64 SVE predicate constraint </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a7fd06e4caec9a02043d179ee25a9f60ca3dda5fba5134a94cfccfdfa7178d22d4"></a>DR_OPND_IMM_PRINT_DECIMAL&#160;</td><td class="fielddoc"><p>This is used by RISCV64 for immediates display format. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a7fd06e4caec9a02043d179ee25a9f60ca56dd8c909f6a42580b14f0d77b63b704"></a>DR_OPND_IMPLICIT&#160;</td><td class="fielddoc"><p>The register number is not in the instruction encoding but is calculated based on another register </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7fd06e4caec9a02043d179ee25a9f60ca62cd980e65312faabcbbb931403f6281"></a>DR_OPND_IS_GOVERNING&#160;</td><td class="fielddoc"><p>The register is a SVE governing predicate register: it is used to select which elements of a vector are actually read or written to in AArch64 SVE </p>
 </td></tr>
 </table>
 
@@ -5379,6 +5385,25 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a4c8d835bee444ca1967218748996de45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c8d835bee444ca1967218748996de45">&#9670;&nbsp;</a></span>opnd_is_governing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API INSTR_INLINE bool opnd_is_governing </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structopnd__t.html">opnd_t</a>&#160;</td>
+          <td class="paramname"><em>opnd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns true iff <code>opnd</code> is an SVE governing predicate register. </p>
+
+</div>
+</div>
 <a id="a5213b9a7ac63b871a59d95ab6fb4ec74"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5213b9a7ac63b871a59d95ab6fb4ec74">&#9670;&nbsp;</a></span>opnd_is_immed()</h2>
 
@@ -5681,7 +5706,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns true iff <code>opnd</code> is a merging predicate register. </p>
+<p>Returns true iff <code>opnd</code> is a n SVE merging predicate register. </p>
 
 </div>
 </div>
@@ -5700,7 +5725,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns true iff <code>opnd</code> is a predicate register. </p>
+<p>Returns true iff <code>opnd</code> is an SVE predicate register. </p>
 
 </div>
 </div>
@@ -5719,7 +5744,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns true iff <code>opnd</code> is a zeroing predicate register. </p>
+<p>Returns true iff <code>opnd</code> is an SVE zeroing predicate register. </p>
 
 </div>
 </div>
@@ -7202,5 +7227,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19725 --- Fri Jan 5 2024 03:12:57 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19732 --- Fri Jan 12 2024 03:13:34 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -35,6 +35,7 @@ var NAVTREE =
       [ "Primary DynamoRIO License: BSD", "page_license.html#sec_bsd", null ],
       [ "libelftc License", "page_license.html#sec_libelftc", null ],
       [ "Certain Extensions: LGPL 2.1", "page_license.html#sec_lgpl_licenses", null ],
+      [ "drsyms Extension use of elfutils: LGPL 3", "page_license.html#sec_lgpl3_licenses", null ],
       [ "Code Coverage genhtml: GPL 2", "page_license.html#sec_gpl_licenses", null ]
     ] ],
 [ "API Reference", "files.html", [

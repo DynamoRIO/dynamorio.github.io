@@ -220,8 +220,8 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a78e6d52241fbdf06167efb1db2010afd">DR_PRED_AL</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a048818da71575e1f01f5b0bc50c698af">DR_PRED_NV</a>, 
-<br />
+&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a048818da71575e1f01f5b0bc50c698af">DR_PRED_NV</a>
+, <br />
 &#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ae6ed5c6e0b7b1f6c814ce9bae7de7cc3">DR_PRED_OP</a>, 
 <br />
 &#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71af38dfaa64a16c41e4228544713623f49">DR_PRED_HS</a> = DR_PRED_CS, 
@@ -1706,7 +1706,7 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a048818da71575e1f01f5b0bc50c698af"></a>DR_PRED_NV&#160;</td><td class="fielddoc"><p>ARM condition: 1111 Never, meaning always <br  />
  </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71ae6ed5c6e0b7b1f6c814ce9bae7de7cc3"></a>DR_PRED_OP&#160;</td><td class="fielddoc"><p>ARM condition: 1111 Part of opcode <br  />
+<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71ae6ed5c6e0b7b1f6c814ce9bae7de7cc3"></a>DR_PRED_OP&#160;</td><td class="fielddoc"><p>Used for AArch64 SVE instructions with governing predicate registers ARM condition: 1111 Part of opcode <br  />
  </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71af38dfaa64a16c41e4228544713623f49"></a>DR_PRED_HS&#160;</td><td class="fielddoc"><p>ARM condition: alias for DR_PRED_CS. </p>
@@ -8688,17 +8688,17 @@ mangle" if <code>val</code> is false.</p>
 </div><!-- contents -->
 <div class="ttc" id="adr__ir__decode_8h_html_a5ca2a278008e547130218e8cfde44e3d"><div class="ttname"><a href="dr__ir__decode_8h.html#a5ca2a278008e547130218e8cfde44e3d">decode</a></div><div class="ttdeci">DR_API byte * decode(void *drcontext, byte *pc, instr_t *instr)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a2b0ce5e5125951e4a7dfdc5ac716282a"><div class="ttname"><a href="dr__ir__instr_8h.html#a2b0ce5e5125951e4a7dfdc5ac716282a">instr_noalloc_init</a></div><div class="ttdeci">DR_API void instr_noalloc_init(void *drcontext, instr_noalloc_t *instr)</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_ad48dc68f818f028bee8b98ac396f1d71"><div class="ttname"><a href="dr__ir__instr_8h.html#ad48dc68f818f028bee8b98ac396f1d71">EFLAGS_READ_AC</a></div><div class="ttdeci">#define EFLAGS_READ_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2572</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_ab5727b7a5773bace9d656e4b969d7fce"><div class="ttname"><a href="dr__ir__instr_8h.html#ab5727b7a5773bace9d656e4b969d7fce">EFLAGS_WRITE_ALL</a></div><div class="ttdeci">#define EFLAGS_WRITE_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2577</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_ad48dc68f818f028bee8b98ac396f1d71"><div class="ttname"><a href="dr__ir__instr_8h.html#ad48dc68f818f028bee8b98ac396f1d71">EFLAGS_READ_AC</a></div><div class="ttdeci">#define EFLAGS_READ_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2575</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_ab5727b7a5773bace9d656e4b969d7fce"><div class="ttname"><a href="dr__ir__instr_8h.html#ab5727b7a5773bace9d656e4b969d7fce">EFLAGS_WRITE_ALL</a></div><div class="ttdeci">#define EFLAGS_WRITE_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2580</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a75a82f341d4ea6a5b5f29f2ef1263355"><div class="ttname"><a href="dr__ir__instr_8h.html#a75a82f341d4ea6a5b5f29f2ef1263355">instr_from_noalloc</a></div><div class="ttdeci">DR_API INSTR_INLINE instr_t * instr_from_noalloc(instr_noalloc_t *noalloc)</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_a633efa45a981d9ce3a558caddcdec212"><div class="ttname"><a href="dr__ir__instr_8h.html#a633efa45a981d9ce3a558caddcdec212">EFLAGS_WRITE_AC</a></div><div class="ttdeci">#define EFLAGS_WRITE_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2573</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_a88d4ed7d7b9c544c09c395872a86c0ea"><div class="ttname"><a href="dr__ir__instr_8h.html#a88d4ed7d7b9c544c09c395872a86c0ea">EFLAGS_READ_ALL</a></div><div class="ttdeci">#define EFLAGS_READ_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2575</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_a633efa45a981d9ce3a558caddcdec212"><div class="ttname"><a href="dr__ir__instr_8h.html#a633efa45a981d9ce3a558caddcdec212">EFLAGS_WRITE_AC</a></div><div class="ttdeci">#define EFLAGS_WRITE_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2576</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_a88d4ed7d7b9c544c09c395872a86c0ea"><div class="ttname"><a href="dr__ir__instr_8h.html#a88d4ed7d7b9c544c09c395872a86c0ea">EFLAGS_READ_ALL</a></div><div class="ttdeci">#define EFLAGS_READ_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2578</div></div>
 <div class="ttc" id="astructinstr__t_html"><div class="ttname"><a href="structinstr__t.html">instr_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:378</div></div>
-<div class="ttc" id="astructinstr__noalloc__t_html"><div class="ttname"><a href="structinstr__noalloc__t.html">instr_noalloc_t</a></div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:371</div></div>
+<div class="ttc" id="astructinstr__noalloc__t_html"><div class="ttname"><a href="structinstr__noalloc__t.html">instr_noalloc_t</a></div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:374</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19725 --- Fri Jan 5 2024 03:12:56 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19732 --- Fri Jan 12 2024 03:13:31 &nbsp; <img border=0 src="favicon.png">
 </small></address>

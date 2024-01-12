@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 10.0.19725"
+title: "Release Notes for Version 10.0.19732"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 10.0.19725 </div>  </div>
+<div class="title">Release Notes for Version 10.0.19732 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,8 +63,8 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 10.0.19725. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 10.0.19725 and 10.0.0 include the following compatibility changes:</p><ul>
+<p>The current version is 10.0.19732. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 10.0.19732 and 10.0.0 include the following compatibility changes:</p><ul>
 <li>Marked x86 rep instructions as predicated.</li>
 <li>The <a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893">dr_instr_category_t</a> enum underwent changes to support new categories such as STATE, MOVE, CONVERT, and MATH. INT_MATH has been removed and replaced with MATH. FP_MATH has been removed and replaced with FP|MATH. The enumeration was organized in a different order, the old numbers become invalid</li>
 <li>The <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca58ff903618a785cb45ba4c57900db24f">dynamorio::drmemtrace::TRACE_MARKER_TYPE_FUNC_RETVAL</a> marker for system calls changed to contain the actual return value, rather than just whether successful. A new marker <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295cac4123c88a189fe7b52ceee6b7cab48ce">dynamorio::drmemtrace::TRACE_MARKER_TYPE_SYSCALL_FAILED</a> was added to indicate failure.</li>
@@ -72,6 +72,7 @@ Changes Since Prior Releases</h1>
 <li>Rename the macro INSTR_CREATE_mul_sve to INSTR_CREATE_mul_sve_imm to differentiate it from the other SVE MUL instructions.</li>
 </ul>
 <p>Further non-compatibility-affecting changes include:</p><ul>
+<li>Added DWARF-5 support to the drsyms library by linking in 4 static libraries from elfutils. These libraries have LGPL licenses.</li>
 <li>Added raw2trace support to inject system call kernel trace templates collected from elsewhere (e.g., QEMU, Gem5) into the user-space drmemtrace traces at the corresponding system call number marker. This is done by specifying the path to the template file via the new -syscall_template_file option.</li>
 <li>Added a new scheme for the modoffs field in the PC trace entry which allows L0 filtering of non-module code; see <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a393cabb0f62150962dddf071dc3759b4a21b6b926158a6c6c8e03439ace49b04e">dynamorio::drmemtrace::ENCODING_FILE_TYPE_SEPARATE_NON_MOD_INSTRS</a>. Also added file type entry to the header of encoding files.</li>
 <li>Fixed a bug in the AArch64 codec with the way that SVE scalar+immediate predicated contiguous load and store instructions represented the immediate offset in the IR. In 10.0.0 the memory operand in these instruction used the immediate value from the instruction (which is an index to be scaled by the vector length) as the displacement, whereas the displacement value in a DynamoRIO memory operand should always be a byte offset. This has now been corrected. Traces and other tool results created with DynamoRIO prior to this fix may have incorrect results if the application contained these instructions. See <a href="https://github.com/DynamoRIO/dynamorio/pull/6390">PR #6390</a> for the full list of affected instructions.</li>
@@ -168,7 +169,7 @@ Changes Since Prior Releases</h1>
 <li>A source compatibilty change in drcachesim analysis tools for users who have created derived classes from existing analysis tools: member fields of classes are now following a consistent style with an underscore suffix. References to renamed fields will need to be updated.</li>
 <li>A change in the load callbacks used with <a class="el" href="group__drcovlib.html#ga33bf1c08f5e69e18e8450652928e0c66">drmodtrack_add_custom_data()</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae928b4aceb19475c965eb8de4d7ca07a">drmemtrace_custom_module_data()</a>: they each take an additional parameter, the segment index. The custom data field is now per-segment and not per-module, and all callbacks are invoked separately for each segment.</li>
 </ul>
-<p>The changes between version 10.0.19725 and 8.0.0 include the following minor compatibility changes:</p>
+<p>The changes between version 10.0.19732 and 8.0.0 include the following minor compatibility changes:</p>
 <ul>
 <li>drconfiglib (and thus drrun and drconfig) now sets only the new client path options which are added in this release to support other-bitwidth child processes. This means that a drconfiglib from this version will not properly configure for a DynamoRIO core library from a prior version.</li>
 <li>A new option -ldstex2cas is on by default on ARM and AArch64. This converts load-exclusive store-exclusive sequences to use compare-and-swap instead, which enables normal instrumentation of such sequences without clearing the exclusive monitor and causing infinite loops. However, the compare- and-swap's semantics are not identical: it does not detect "ABA" changes and could cause errors in lock-free data structures or other application constructs. See <a class="el" href="API_BT.html#sec_ldrex">Exclusive Monitor Instrumentation</a> for more information.</li>
@@ -348,7 +349,7 @@ Changes Since Prior Releases</h1>
 <li>Added <a class="el" href="group__drmgr.html#ga87b99b8b2501c91207ec508828c082b4">drmgr_register_module_load_event_user_data()</a> and <a class="el" href="group__drmgr.html#ga765dbfbaa6b6429ca35e2445d70badfc">drmgr_unregister_module_load_event_user_data()</a> to enable passing of user data.</li>
 <li>Added <a class="el" href="group__drmgr.html#ga20a8a8cd53bc9d76a453f6bfd13fc493">drmgr_register_module_unload_event_user_data()</a> and <a class="el" href="group__drmgr.html#ga931bff986b8763df57f85b0f6cdfde58">drmgr_unregister_module_unload_event()</a> to enable passing of user data.</li>
 <li>Added a new drcachesim feature that records which cpu each thread executed on along with an optional simulator scheduling feature to schedule threads on simulated cores to match the recorded execution on physical cpus.</li>
-<li>Added <a class="el" href="dr__api_8h.html#a70e64a4a868677325cf3b1f7e3ca0938">DR_DISALLOW_UNSAFE_STATIC</a> and dr_disallow_unsafe_static_behavior() for sanity checks to help support statically-linked clients.</li>
+<li>Added <a class="el" href="dr__api_8h.html#a70e64a4a868677325cf3b1f7e3ca0938">DR_DISALLOW_UNSAFE_STATIC</a> and <a class="el" href="dr__events_8h.html#a2bab7837ca93d577e4563e470601d371">dr_allow_unsafe_static_behavior()</a> for sanity checks to help support statically-linked clients.</li>
 <li>Added <a class="el" href="group__drmgr.html#gaf78a2dccf0cfbd0f0e07b0820c735fe9">drmgr_register_pre_syscall_event_user_data()</a> and <a class="el" href="group__drmgr.html#ga762e86ccf9fc30cc82d333f436531261">drmgr_unregister_pre_syscall_event_user_data()</a> to enable passing of user data.</li>
 <li>Added <a class="el" href="group__drmgr.html#gadc4de86d9bdbb6d85a05f81ec3aca1aa">drmgr_register_post_syscall_event_user_data()</a> and <a class="el" href="group__drmgr.html#ga2289eab1f61abd920c2c9e0b79d9a7c9">drmgr_unregister_post_syscall_event_user_data()</a> to enable passing of user data.</li>
 <li>Added <a class="el" href="dr__tools_8h.html#a47cf743cee9d3fac9d0a41de3fc7a1d5">dr_where_am_i()</a>, <a class="el" href="dr__tools_8h.html#ac922731194013612e4f4cb78075a2170">dr_track_where_am_i()</a>, and <a class="el" href="dr__tools_8h.html#ab185c8efca620f8cd0e323164afbc935">dr_is_tracking_where_am_i()</a> better support client self-profiling via sampling.</li>
@@ -1159,5 +1160,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19725 --- Fri Jan 5 2024 03:12:57 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19732 --- Fri Jan 12 2024 03:13:35 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -429,7 +429,8 @@
       [ "DR_OPND_IS_MERGE_PREDICATE", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca08cf6c248755b218ee7e8ebc19e2a175", null ],
       [ "DR_OPND_IS_PREDICATE_CONSTRAINT", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca68a65b06c2a526745107a4cc43add80f", null ],
       [ "DR_OPND_IMM_PRINT_DECIMAL", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca3dda5fba5134a94cfccfdfa7178d22d4", null ],
-      [ "DR_OPND_IMPLICIT", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca56dd8c909f6a42580b14f0d77b63b704", null ]
+      [ "DR_OPND_IMPLICIT", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca56dd8c909f6a42580b14f0d77b63b704", null ],
+      [ "DR_OPND_IS_GOVERNING", "dr__ir__opnd_8h.html#a7fd06e4caec9a02043d179ee25a9f60ca62cd980e65312faabcbbb931403f6281", null ]
     ] ],
     [ "_dr_pred_constr_type_t", "dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bc", [
       [ "DR_PRED_CONSTR_POW2", "dr__ir__opnd_8h.html#a31f806c4eccb96ed60ff64ab78e529bca67c0092c962e8e9d03872b40a2222d11", null ],
@@ -542,6 +543,7 @@
     [ "opnd_is_far_memory_reference", "dr__ir__opnd_8h.html#a163d9d438c7c13a47b846f852a41ff95", null ],
     [ "opnd_is_far_pc", "dr__ir__opnd_8h.html#acbf06e7b4823d47941b47393fa298ece", null ],
     [ "opnd_is_far_rel_addr", "dr__ir__opnd_8h.html#acf57b9981f60e8002d9e1bbfffb4d14f", null ],
+    [ "opnd_is_governing", "dr__ir__opnd_8h.html#a4c8d835bee444ca1967218748996de45", null ],
     [ "opnd_is_immed", "dr__ir__opnd_8h.html#a5213b9a7ac63b871a59d95ab6fb4ec74", null ],
     [ "opnd_is_immed_float", "dr__ir__opnd_8h.html#a4876a9cde38cc35be9aed8c44dd7b53b", null ],
     [ "opnd_is_immed_int", "dr__ir__opnd_8h.html#a1213776e6db1228b2eb03dfc026e1393", null ],
