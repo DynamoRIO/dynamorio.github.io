@@ -59,6 +59,7 @@
     [ "get_input_stream_count", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a4c949d33b5cd236838c4cfd496ab9078", null ],
     [ "get_input_stream_interface", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a5aff5fd94bfae5486b0d557c6ac87d57", null ],
     [ "get_input_stream_name", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a1748e9cb9d2fc381fcac6281354d71a1", null ],
+    [ "get_output_cpuid", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a20b505d09b98563bcf53f3a75564fa80", null ],
     [ "get_stream", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#ab2c178ab7a3601b6118ae097125929bd", null ],
     [ "init", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a7d51e5baa505e36110a502f46c676d07", null ],
     [ "make_scheduler_parallel_options", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a9b4920e65f3dd2894db0e815b90b86a2", null ],

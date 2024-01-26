@@ -72,12 +72,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a252e37074e0721049aa753cfa17a9ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a978a48e6a9af3edce4d14b099abcdd9a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a978a48e6a9af3edce4d14b099abcdd9a">is_record_synthetic</a> () const</td></tr>
 <tr class="separator:a978a48e6a9af3edce4d14b099abcdd9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2c4f15b4a5a6a7eb48968c8e473232"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a6d2c4f15b4a5a6a7eb48968c8e473232">get_shard_index</a> () const</td></tr>
+<tr class="separator:a6d2c4f15b4a5a6a7eb48968c8e473232"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a067c7ee96ecc1ea714b75fb9b82c3cd1"><td class="memItemLeft" align="right" valign="top">virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a067c7ee96ecc1ea714b75fb9b82c3cd1">get_output_cpuid</a> () const</td></tr>
 <tr class="separator:a067c7ee96ecc1ea714b75fb9b82c3cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f34384b44bf30646c470928d61919fb"><td class="memItemLeft" align="right" valign="top">virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a5f34384b44bf30646c470928d61919fb">get_workload_id</a> () const</td></tr>
 <tr class="separator:a5f34384b44bf30646c470928d61919fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97057e9e7a7f417b1841a0a2e37503d2"><td class="memItemLeft" align="right" valign="top">virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a97057e9e7a7f417b1841a0a2e37503d2">get_input_id</a> () const</td></tr>
 <tr class="separator:a97057e9e7a7f417b1841a0a2e37503d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74570fcd3910f8bf5f8c9d104af8b2c8"><td class="memItemLeft" align="right" valign="top">virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a74570fcd3910f8bf5f8c9d104af8b2c8">get_tid</a> () const</td></tr>
+<tr class="separator:a74570fcd3910f8bf5f8c9d104af8b2c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee4fe624edfe4e8d9b8416ab2114c1d0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html">memtrace_stream_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#aee4fe624edfe4e8d9b8416ab2114c1d0">get_input_interface</a> () const</td></tr>
 <tr class="separator:aee4fe624edfe4e8d9b8416ab2114c1d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff0f5d22c992aa84c6dabb7713be9ec5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#aff0f5d22c992aa84c6dabb7713be9ec5">is_record_kernel</a> () const</td></tr>
@@ -359,9 +363,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns a unique identifier for the current "output cpu". Generally this only applies when using <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a107f5120f8556cdf7bed8add898915baaa7bd23daf15197f85b315f00d1ba5654">SHARD_BY_CORE</a>. For dynamic schedules, the identifier is typically an output cpu ordinal. For replaying an as-traced schedule, the identifier is typically the original input cpu which is now mapped directly to this output. If not implemented for the current mode, -1 is returned. </p>
+<p>Returns a unique identifier for the current "output cpu". Generally this only applies when using <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a107f5120f8556cdf7bed8add898915baaa7bd23daf15197f85b315f00d1ba5654">SHARD_BY_CORE</a>. For dynamic schedules, the identifier is typically an output cpu ordinal equal to <a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a6d2c4f15b4a5a6a7eb48968c8e473232">get_shard_index()</a>. For replaying an as-traced schedule, the identifier is typically the original input cpu which is now mapped directly to this output. If not implemented for the current mode, -1 is returned. </p>
 
-<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#afddeb23340f782f500982cac5dda6af9">dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::stream_t</a>.</p>
+<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#afddeb23340f782f500982cac5dda6af9">dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::stream_t</a>, and <a class="el" href="classdynamorio_1_1drmemtrace_1_1default__memtrace__stream__t.html#aac752b9b131d4de41b3fb754807cea21">dynamorio::drmemtrace::default_memtrace_stream_t</a>.</p>
 
 </div>
 </div>
@@ -421,6 +425,34 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a6d2c4f15b4a5a6a7eb48968c8e473232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d2c4f15b4a5a6a7eb48968c8e473232">&#9670;&nbsp;</a></span>get_shard_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int dynamorio::drmemtrace::memtrace_stream_t::get_shard_index </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the 0-based ordinal for the current shard. For parallel analysis, this equals the <code>shard_index</code> passed to parallel_shard_init_stream(). This is more useful for serial modes where there is no other convenience mechanism to determine such an index; it allows a tool to compute per-shard results even in serial mode. The shard orderings in serial mode may not always mach the ordering in parallel mode. If not implemented, -1 is returned. </p>
+
+<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a9fca22c8cb40be11cc4af618e16709b3">dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::stream_t</a>, and <a class="el" href="classdynamorio_1_1drmemtrace_1_1default__memtrace__stream__t.html#a96e613af4b63b9819cdef58bbdda5725">dynamorio::drmemtrace::default_memtrace_stream_t</a>.</p>
+
+</div>
+</div>
 <a id="ad97a175c6a42c2c397d379e784b57fea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad97a175c6a42c2c397d379e784b57fea">&#9670;&nbsp;</a></span>get_stream_name()</h2>
 
@@ -446,6 +478,34 @@ Public Member Functions</h2></td></tr>
 <p>Returns a name for the memtrace stream. For stored offline traces, this is the base name of the trace on disk. For online traces, this is the name of the pipe. </p>
 
 <p>Implemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ad648abe0b17d471550e514f3e852b31c">dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::stream_t</a>, <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html#adca58ecd91243c2b9145653818277e07">dynamorio::drmemtrace::record_file_reader_t&lt; T &gt;</a>, and <a class="el" href="classdynamorio_1_1drmemtrace_1_1default__memtrace__stream__t.html#ab8f93d3f392efd52ab37e7d4ce198552">dynamorio::drmemtrace::default_memtrace_stream_t</a>.</p>
+
+</div>
+</div>
+<a id="a74570fcd3910f8bf5f8c9d104af8b2c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74570fcd3910f8bf5f8c9d104af8b2c8">&#9670;&nbsp;</a></span>get_tid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int64_t dynamorio::drmemtrace::memtrace_stream_t::get_tid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the thread identifier for the current input trace. This is a convenience method for use in parallel_shard_init_stream() prior to access to any <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae4a471ed806967b2b6f911b6ef770704">memref_t</a> records. </p>
+
+<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ac18de69b3d54507b3383ac5ddb4c6747">dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::stream_t</a>, and <a class="el" href="classdynamorio_1_1drmemtrace_1_1default__memtrace__stream__t.html#a61f6d4636732ae64cab89501f9973936">dynamorio::drmemtrace::default_memtrace_stream_t</a>.</p>
 
 </div>
 </div>
@@ -570,5 +630,5 @@ Public Member Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19740 --- Fri Jan 19 2024 03:13:49 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19748 --- Fri Jan 26 2024 03:14:17 &nbsp; <img border=0 src="favicon.png">
 </small></address>
