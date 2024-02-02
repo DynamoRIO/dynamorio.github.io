@@ -143,6 +143,19 @@ Pre-Commit Test Suite Over Ssh</h2>
 <h2><a class="anchor" id="autotoc_md304"></a>
 Test Failures</h2>
 <p>Unfortunately our test suite is not as clean as it could be. Some tests can be flaky and while they pass on the machines of the existing developers and on our automated test machines, they may fail occasionally on a new machine. Please search the issue tracker before filing a new issue to see if a test failure has already been seen once before. We welcome contributions to fix flaky tests.</p>
+<p>Flaky tests are marked in one of two ways:</p>
+<ul>
+<li>Append "_FLAKY" to the test's name<ul>
+<li>See <a href="https://github.com/DynamoRIO/dynamorio/blob/master/suite/tests/CMakeLists.txt">suite/tests/CMakeLists.txt</a> for examples</li>
+</ul>
+</li>
+<li>Mention the test in runsuite_wrapper.pl<ul>
+<li>See <a href="https://github.com/DynamoRIO/dynamorio/blob/master/suite/runsuite_wrapper.pl">suite/runsuite_wrapper.pl</a> for examples</li>
+</ul>
+</li>
+</ul>
+<p>In both cases make sure an issue is filed to fix the test and mention the issue at the place the test is marked as flaky.</p>
+<p>The latter is preferred for tests that should be fixed first.</p>
 <h2><a class="anchor" id="autotoc_md305"></a>
 Missing Tests</h2>
 <p>Some features that were tested in our pre-cmake infrastructure have not been ported to cmake. We welcome contributions in this area:</p>
@@ -174,5 +187,5 @@ Adding New Tests</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19748 --- Fri Jan 26 2024 03:14:17 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19755 --- Fri Feb 2 2024 03:14:15 &nbsp; <img border=0 src="favicon.png">
 </small></address>
