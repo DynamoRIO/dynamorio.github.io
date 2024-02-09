@@ -341,6 +341,9 @@ Applies to -core_sharded and -core_serial. Path with stored as-traced schedule f
 <li><b>-sched_switch_file</b> <br  />
 <em>default value: ""</em> <br  />
 Applies to -core_sharded and -core_serial. Path to file holding context switch sequences. The file can contain multiple sequences each with regular trace headers and the sequence proper bracketed by TRACE_MARKER_TYPE_CONTEXT_SWITCH_START and TRACE_MARKER_TYPE_CONTEXT_SWITCH_END markers.</li>
+<li><b>-sched_randomize</b> <br  />
+<em>default value: false</em> <br  />
+Applies to -core_sharded and -core_serial. Disables the normal methods of choosing the next input based on priority, timestamps (if -sched_order_time is set), and FIFO order and instead selects the next input randomly. This is intended for experimental use in sensitivity studies.</li>
 <li><b>-schedule_stats_print_every</b> <br  />
 <em>default value: 500000</em> <br  />
 A letter is printed every N instrs or N waits</li>
@@ -355,5 +358,5 @@ Path to the file that contains system call trace templates. If set, system call 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19755 --- Fri Feb 2 2024 03:14:16 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19761 --- Fri Feb 9 2024 03:12:41 &nbsp; <img border=0 src="favicon.png">
 </small></address>

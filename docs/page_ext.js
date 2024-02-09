@@ -57,7 +57,8 @@
     [ "Intel PT Tracing", "page_drpttracer.html", [
       [ "Setup", "page_drpttracer.html#sec_drpttracer_setup", null ],
       [ "Usage", "page_drpttracer.html#sec_drpttracer_usage", null ],
-      [ "Tracing Mode", "page_drpttracer.html#sec_drpttracer_tracing_mode", null ]
+      [ "Tracing Mode", "page_drpttracer.html#sec_drpttracer_tracing_mode", null ],
+      [ "Unit Tests", "page_drpttracer.html#sec_unit_tests", null ]
     ] ],
     [ "Register Management", "page_drreg.html", [
       [ "Setup", "page_drreg.html#sec_drreg_setup", null ],

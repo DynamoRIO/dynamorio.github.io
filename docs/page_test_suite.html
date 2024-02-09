@@ -46,7 +46,26 @@ Trybots</h2>
 <p>Our CI setups provide "trybot" functionality for nearly every platform via pull request testing. To test a change on platforms you don't have locally, or test whether your change will pass the CI, you can create a pull request. The CI will then automatically run the test suite on your change.</p>
 <h2><a class="anchor" id="autotoc_md295"></a>
 Debugging Tests on Github Actions Runner</h2>
-<p>Test failures that happen only on Github Actions and are not reproducible locally can be hard to debug. Fortunately, there's a way to SSH into a Github Actions runner to debug the test. This can be done using <code>tmate</code>: <a href="https://github.com/marketplace/actions/debugging-with-tmate">https://github.com/marketplace/actions/debugging-with-tmate</a>. Follow instructions on the page to make a temporary change to the Github Actions workflow config in your branch, and use the link output by <code>tmate</code> to ssh into the runner. You can install <code>gdb</code> if needed on the runner. <code>tmate</code> also allows web shell access; note that you may need to press <code>q</code> one time if the web page doesn't show anything.</p>
+<p>Test failures that happen only on Github Actions and are not reproducible locally can be hard to debug. Fortunately, there's a way to SSH into a Github Actions runner to debug the test. This can be done using <code>tmate</code>: <a href="https://github.com/marketplace/actions/debugging-with-tmate">https://github.com/marketplace/actions/debugging-with-tmate</a>.</p>
+<p>Using tmate requires sudo on the Actions runners which is only available with pull requests on branches within the repository; it will not work with pull requests created from external forks of the repository.</p>
+<p>First, identify the Actions workflow file which contains the job with the failure. From the Actions run page with the failing test (usually reached from the links in the job runs for a pull request), click on "Workflow file" in the bottom of the left sidebar. It will present the file contents with its path at the top. It will be something like ".github/workflows/ci-windows.yml". That is the path within the git repository.</p>
+<p>Next, go and edit that file in your branch. Delete all jobs except the failing one (just remove those lines from the file). For the failing one, add these 3 lines as a new step right after the "Run Suite" step but before the "Send
+failure email step". Be sure to match the surrounding indentation as indentation matters for .yml files. </p><pre class="fragment">- name: Setup tmate session
+  if: ${{ failure() }}
+  uses: mxschmitt/action-tmate@v3
+</pre><p>Next, delete all the other workflow files in the ".github/workflows/" directory. This will save you time and save resources in general, to only run the single target job.</p>
+<p>You can see an example of these workflow file deletions and edits in this commit: <a href="https://github.com/DynamoRIO/dynamorio/pull/6414/commits/08b96200cdb9fd4d39a4c89e2aa9eafed92027f4">https://github.com/DynamoRIO/dynamorio/pull/6414/commits/08b96200cdb9fd4d39a4c89e2aa9eafed92027f4</a></p>
+<p>If you want to focus on just one test, you can use a label like the <code>TMATE_DEBUG</code> label in the linked commit to run only that one test, but that is not necessary. Pasting the key lines for that here:</p>
+<p>In runsuite.cmake after the arg parsing:</p>
+<div class="fragment"><div class="line">set(extra_ctest_args INCLUDE_LABEL TMATE_DEBUG) <span class="preprocessor"># TEMPORARY</span></div>
+</div><!-- fragment --><p>At the bottom of suite/tests/CMakeLists.txt, add the label to the target test:</p>
+<div class="fragment"><div class="line">set_tests_properties(code_api|tool.drcacheoff.burst_traceopts PROPERTIES</div>
+<div class="line">    LABELS TMATE_DEBUG) <span class="preprocessor"># TEMPORARY</span></div>
+</div><!-- fragment --><p>Commit these changes with a title that starts with "DO NOT COMMIT" so it’s clear these are temporary debugging changes, and send to Github with <code>git review</code>.</p>
+<p>Now go to your pull request page and click on the details for the target workflow. Wait for it to reach the "Setup tmate session" step (this may take from a few minutes to 15-20 minutes depending on the job; you can look at prior instances of jobs to see how long they typically take). It will print a command like " ssh JhJp879nThXEKUAPWEGuatJ3J@sfo2.tmate.io". Run that command and you will have an interactive shell in the base build directory.</p>
+<p>By default, it may start the ssh in tmux review mode. You would need to quit out of that to get to the terminal. The shell should last until the action times out which is after 6 hours, or until you terminate the initial connection.</p>
+<p>The connection is through tmux, so you can create new panes and shells using tmux commands. You can install <code>gdb</code> if needed.</p>
+<p><code>tmate</code> also allows web shell access; note that you may need to press <code>q</code> one time if the web page doesn't show anything.</p>
 <h1><a class="anchor" id="autotoc_md296"></a>
 Regression Test Suite</h1>
 <p>The black box test suite for DynamoRIO resides in the suite/ directory. The tests are applications that we execute under control of DynamoRIO to ensure we're covering corner cases.</p>
@@ -187,5 +206,5 @@ Adding New Tests</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19755 --- Fri Feb 2 2024 03:14:15 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19761 --- Fri Feb 9 2024 03:12:41 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -82,7 +82,21 @@ Tracing Mode</h1>
 <li><a class="el" href="drpttracer_8h.html#ab099a83052a5a8b244083b57ddffcbc5a9d97d6e409ada6de57b31fe55aa0e4db">DRPTTRACER_TRACING_USER_AND_KERNEL</a></li>
 </ul>
 <p>When starting tracing, the client can choose the tracing mode by passing the appropriate flag to <a class="el" href="drpttracer_8h.html#a745f2eac2cda74e6dbdf3ec6aa9d1a53">drpttracer_start_tracing()</a>.</p>
-<dl class="section note"><dt>Note</dt><dd>For kernel PT traces, the trace data's raw bits are all from kcore. So the output data from <code>drpttracer</code> doesn't contain sideband data; it only contains the trace data and metadata. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>For kernel PT traces, the trace data's raw bits are all from kcore. So the output data from <code>drpttracer</code> doesn't contain sideband data; it only contains the trace data and metadata.</dd></dl>
+<h1><a class="anchor" id="sec_unit_tests"></a>
+Unit Tests</h1>
+<p><code>We</code> have some unit tests that verify the kernel tracing feature in drmemtrace, which also uses the <code>drpttracer</code> DynamoRIO extension. These tests are not built and run by default because they require superuser permission. They are also disabled automatically if the host system does not support the Intel-PT feature.</p>
+<p>To run these tests, pass <code>-DRUN_SUDO_TESTS=ON</code> to cmake when building DynamoRIO. E.g.,</p>
+<div class="fragment"><div class="line">$ cmake -DRUN_SUDO_TESTS=ON -DBUILD_TESTS=ON &lt;dynamorio-src-dir&gt;</div>
+<div class="line">$ make -j</div>
+<div class="line">$ ctest -R <span class="stringliteral">&#39;drpttracer|drcacheoff.kernel&#39;</span></div>
+</div><!-- fragment --><p>On some systems, one may see errors like the following:</p>
+<div class="fragment"><div class="line">408:   *** postcmd failed (1): drpt2ir: [28430, IP:ffffffffc11dd000] get next</div>
+<div class="line">408:   instruction error: no memory mapped at this address</div>
+</div><!-- fragment --><p>This is because our kcore logic copy may have missed copying some instructions from <code>/proc/kcore</code>. We rely on <code>/proc/modules</code> and <code>/proc/kallsyms</code> to point to relevant kernel code regions. Symbols for JIT code like eBPF are not included by default. The following workaround may help in cases where the missing memory region belongs to BPF JIT code. They make the BPF JIT code symbols visible in <code>/proc/kallsyms</code>.</p>
+<div class="fragment"><div class="line">$ sudo bash -c <span class="stringliteral">&quot;echo 0 &gt; /proc/sys/net/core/bpf_jit_harden&quot;</span></div>
+<div class="line">$ sudo bash -c <span class="stringliteral">&quot;echo 1 &gt; /proc/sys/net/core/bpf_jit_kallsyms&quot;</span></div>
+</div><!-- fragment --><p>You may want to record the existing values in these configs so you can revert them after running the tests. See <a href="https://docs.kernel.org/admin-guide/sysctl/net.html#proc-sys-net-core-network-core-options">https://docs.kernel.org/admin-guide/sysctl/net.html#proc-sys-net-core-network-core-options</a> for more details. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.17-->
@@ -90,5 +104,5 @@ Tracing Mode</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19755 --- Fri Feb 2 2024 03:14:15 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19761 --- Fri Feb 9 2024 03:12:41 &nbsp; <img border=0 src="favicon.png">
 </small></address>
