@@ -220,7 +220,10 @@ The full path to the tracer library.</li>
 The full path to the tracer library for the other bitwidth, for use on child processes with a different bitwidth from their parent. If empty, such child processes will die with fatal errors.</li>
 <li><b>-interval_microseconds</b> <br  />
 <em>default value: 0</em> <br  />
-Desired length of each trace interval, defined in microseconds of trace time. Trace intervals are measured using the TRACE_MARKER_TYPE_TIMESTAMP marker values. If set, analysis tools receive a callback at the end of each interval.</li>
+Desired length of each trace interval, defined in microseconds of trace time. Trace intervals are measured using the TRACE_MARKER_TYPE_TIMESTAMP marker values. If set, analysis tools receive a callback at the end of each interval, and one at the end of trace analysis to print the whole-trace interval results.</li>
+<li><b>-interval_instr_count</b> <br  />
+<em>default value: 0</em> <br  />
+Desired length of each trace interval, defined in instr count of each shard. With -parallel, this does not support whole trace intervals, only per-shard intervals. If set, analysis tools receive a callback at the end of each interval, and separate callbacks per shard at the end of trace analysis to print each shard's interval results.</li>
 <li><b>-only_thread</b> <br  />
 <em>default value: 0</em> <br  />
 Limits analyis to the single thread with the given identifier. 0 enables all threads.</li>
@@ -358,5 +361,5 @@ Path to the file that contains system call trace templates. If set, system call 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19761 --- Fri Feb 9 2024 03:12:41 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19768 --- Fri Feb 16 2024 03:14:41 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -33,7 +33,7 @@ permalink: /classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html
 
 <p><code>#include &lt;analyzer.h&gt;</code></p>
 
-<p>Inherited by dynamorio::drmemtrace::analyzer_multi_t.</p>
+<p>Inherited by dynamorio::drmemtrace::analyzer_multi_tmpl_t&lt; RecordType, ReaderType &gt;.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -45,8 +45,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2ebd83594ff8bcd5c153d9b24a4bba89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8a19de9de0c25f6e4889985dcaa4be7"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#ad8a19de9de0c25f6e4889985dcaa4be7">get_error_string</a> ()</td></tr>
 <tr class="separator:ad8a19de9de0c25f6e4889985dcaa4be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dc28b109b934b369d63e8ce288a44b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#a5dc28b109b934b369d63e8ce288a44b4">analyzer_tmpl_t</a> (const std::string &amp;trace_path, <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html">analysis_tool_tmpl_t</a>&lt; RecordType &gt; **tools, int num_tools, int worker_count=0, uint64_t skip_instrs=0, uint64_t interval_microseconds=0, int verbosity=0)</td></tr>
-<tr class="separator:a5dc28b109b934b369d63e8ce288a44b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a416fc74cbc470a0f2c4ed98e64588b88"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#a416fc74cbc470a0f2c4ed98e64588b88">analyzer_tmpl_t</a> (const std::string &amp;trace_path, <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html">analysis_tool_tmpl_t</a>&lt; RecordType &gt; **tools, int num_tools, int worker_count=0, uint64_t skip_instrs=0, uint64_t interval_microseconds=0, uint64_t interval_instr_count=0, int verbosity=0)</td></tr>
+<tr class="separator:a416fc74cbc470a0f2c4ed98e64588b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a341e9d5c106f77ee8644cfbed5b8fcfc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#a341e9d5c106f77ee8644cfbed5b8fcfc">run</a> ()</td></tr>
 <tr class="separator:a341e9d5c106f77ee8644cfbed5b8fcfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a414b0f52ac0eaa9af09722c03f6c58f1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#a414b0f52ac0eaa9af09722c03f6c58f1">print_stats</a> ()</td></tr>
@@ -59,8 +59,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2ebd83594ff8bcd5c153d9b24a4bba89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8a19de9de0c25f6e4889985dcaa4be7"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#ad8a19de9de0c25f6e4889985dcaa4be7">get_error_string</a> ()</td></tr>
 <tr class="separator:ad8a19de9de0c25f6e4889985dcaa4be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dc28b109b934b369d63e8ce288a44b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#a5dc28b109b934b369d63e8ce288a44b4">analyzer_tmpl_t</a> (const std::string &amp;trace_path, <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html">analysis_tool_tmpl_t</a>&lt; RecordType &gt; **tools, int num_tools, int worker_count=0, uint64_t skip_instrs=0, uint64_t interval_microseconds=0, int verbosity=0)</td></tr>
-<tr class="separator:a5dc28b109b934b369d63e8ce288a44b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a416fc74cbc470a0f2c4ed98e64588b88"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#a416fc74cbc470a0f2c4ed98e64588b88">analyzer_tmpl_t</a> (const std::string &amp;trace_path, <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html">analysis_tool_tmpl_t</a>&lt; RecordType &gt; **tools, int num_tools, int worker_count=0, uint64_t skip_instrs=0, uint64_t interval_microseconds=0, uint64_t interval_instr_count=0, int verbosity=0)</td></tr>
+<tr class="separator:a416fc74cbc470a0f2c4ed98e64588b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a341e9d5c106f77ee8644cfbed5b8fcfc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#a341e9d5c106f77ee8644cfbed5b8fcfc">run</a> ()</td></tr>
 <tr class="separator:a341e9d5c106f77ee8644cfbed5b8fcfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a414b0f52ac0eaa9af09722c03f6c58f1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#a414b0f52ac0eaa9af09722c03f6c58f1">print_stats</a> ()</td></tr>
@@ -124,8 +124,8 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 
 </div>
 </div>
-<a id="a5dc28b109b934b369d63e8ce288a44b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5dc28b109b934b369d63e8ce288a44b4">&#9670;&nbsp;</a></span>analyzer_tmpl_t() <span class="overload">[2/4]</span></h2>
+<a id="a416fc74cbc470a0f2c4ed98e64588b88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a416fc74cbc470a0f2c4ed98e64588b88">&#9670;&nbsp;</a></span>analyzer_tmpl_t() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,6 +167,12 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
           <td></td>
           <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>interval_microseconds</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>interval_instr_count</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -233,8 +239,8 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 
 </div>
 </div>
-<a id="a5dc28b109b934b369d63e8ce288a44b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5dc28b109b934b369d63e8ce288a44b4">&#9670;&nbsp;</a></span>analyzer_tmpl_t() <span class="overload">[4/4]</span></h2>
+<a id="a416fc74cbc470a0f2c4ed98e64588b88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a416fc74cbc470a0f2c4ed98e64588b88">&#9670;&nbsp;</a></span>analyzer_tmpl_t() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -276,6 +282,12 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
           <td></td>
           <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>interval_microseconds</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>interval_instr_count</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -528,5 +540,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19761 --- Fri Feb 9 2024 03:12:42 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19768 --- Fri Feb 16 2024 03:14:41 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -424,7 +424,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca0a5457fcd6611866e9cf31de09519ff0">TRACE_MARKER_TYPE_CONTEXT_SWITCH_START</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca70a0fea9e8810e597bce02424bb7a1d2">TRACE_MARKER_TYPE_CONTEXT_SWITCH_END</a>
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca70a0fea9e8810e597bce02424bb7a1d2">TRACE_MARKER_TYPE_CONTEXT_SWITCH_END</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca596e9201ac17982a47ad3c931aaca487">TRACE_MARKER_TYPE_VECTOR_LENGTH</a>
 <br />
  }</td></tr>
 <tr class="separator:ab8531c7f66ccc0d7fe59f436844a295c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1486,6 +1488,9 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca70a0fea9e8810e597bce02424bb7a1d2"></a>TRACE_MARKER_TYPE_CONTEXT_SWITCH_END&#160;</td><td class="fielddoc"><p>Indicates a point in the trace where a context switch's kernel trace ends. The value of the marker is set to the switch type enum value from <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aebe64f68f713ab5c29c22097e3b9946d">dynamorio::drmemtrace::scheduler_tmpl_t::switch_type_t</a>. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca596e9201ac17982a47ad3c931aaca487"></a>TRACE_MARKER_TYPE_VECTOR_LENGTH&#160;</td><td class="fielddoc"><p>This marker's value is the current thread's vector length in bytes, for architectures with a dynamic vector length. It is currently only used on AArch64.</p>
+<p>On AArch64 the marker's value contains the SVE vector length. The marker is emitted with the thread header to establish the initial vector length for that thread. In the future it will also be emitted later in the trace if the app changes the vector length at runtime (TODO i#6625). In all cases the vector length value is specific to the current thread. The vector length affects how some SVE instructions are decoded so any tools which decode instructions should clear any cached data and set the vector length used by the decoder using <a class="el" href="dr__ir__encode_8h.html#ab2d45b0fcd0aac92e2f5d2dac4381ae4">dr_set_sve_vector_length()</a>. </p>
+</td></tr>
 </table>
 
 </div>
@@ -2542,5 +2547,5 @@ For additional file open parameters with the thread and window identifiers, use 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19761 --- Fri Feb 9 2024 03:12:41 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19768 --- Fri Feb 16 2024 03:14:41 &nbsp; <img border=0 src="favicon.png">
 </small></address>

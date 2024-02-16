@@ -45,7 +45,7 @@ DynamoRIO's API is augmented by a collection of extension libraries.</li>
 DynamoRIO can be used as a standalone library for IA-32/AMD64/ARM/AArch64 disassembly, decoding, encoding, and general instruction manipulation. A separate static library is provided for this purpose.</li>
 <li><a class="el" href="overview.html">DynamoRIO System Overview</a> <br  />
 A description of the implementation of the DynamoRIO system.</li>
-<li><a class="el" href="release_notes.html">Release Notes for Version 10.0.19761</a> <br  />
+<li><a class="el" href="release_notes.html">Release Notes for Version 10.0.19768</a> <br  />
 Release notes for this release, including changes since prior releases and plans for future releases.</li>
 </ul>
 <p><br  />
@@ -101,7 +101,7 @@ Release notes for this release, including changes since prior releases and plans
 <div class="ttc" id="adr__tools_8h_html_a317a1bb4c01ab9e6e64d2644d0ea984c"><div class="ttname"><a href="dr__tools_8h.html#a317a1bb4c01ab9e6e64d2644d0ea984c">dr_get_current_drcontext</a></div><div class="ttdeci">DR_API void * dr_get_current_drcontext(void)</div></div>
 <div class="ttc" id="adr__api_8h_html_a2b938c98dd186cc94eef6880f9e3c3e9"><div class="ttname"><a href="dr__api_8h.html#a2b938c98dd186cc94eef6880f9e3c3e9">dr_client_main</a></div><div class="ttdeci">DR_EXPORT void dr_client_main(client_id_t id, int argc, const char *argv[])</div></div>
 <div class="ttc" id="adr__ir__macros__aarch64_8h_html_a54b8bd667a8a940e94bfcc7842c958eb"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#a54b8bd667a8a940e94bfcc7842c958eb">OPND_CREATE_ABSMEM</a></div><div class="ttdeci">#define OPND_CREATE_ABSMEM(addr, size)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:102</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_ad61b67b227ebe0012829621c25ca65f5"><div class="ttname"><a href="dr__ir__instr_8h.html#ad61b67b227ebe0012829621c25ca65f5">EFLAGS_READ_6</a></div><div class="ttdeci">#define EFLAGS_READ_6</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2583</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_ad61b67b227ebe0012829621c25ca65f5"><div class="ttname"><a href="dr__ir__instr_8h.html#ad61b67b227ebe0012829621c25ca65f5">EFLAGS_READ_6</a></div><div class="ttdeci">#define EFLAGS_READ_6</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2594</div></div>
 <div class="ttc" id="adr__ir__macros__x86_8h_html_a8104e895719c1f3a8558067b023cf9c5"><div class="ttname"><a href="dr__ir__macros__x86_8h.html#a8104e895719c1f3a8558067b023cf9c5">LOCK</a></div><div class="ttdeci">#define LOCK(instr_ptr)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_x86.h:60</div></div>
 <div class="ttc" id="adr__ir__macros_8h_html_a0cf77f656e96684678c30892c0c718af"><div class="ttname"><a href="dr__ir__macros_8h.html#a0cf77f656e96684678c30892c0c718af">OPND_CREATE_INT8</a></div><div class="ttdeci">#define OPND_CREATE_INT8(val)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros.h:136</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_add920ca9228d3e1daff67e0975a2e8cda5d5d0aac79cc4d1dbac875ae0a9f5a4e"><div class="ttname"><a href="dr__ir__instr_8h.html#add920ca9228d3e1daff67e0975a2e8cda5d5d0aac79cc4d1dbac875ae0a9f5a4e">DR_QUERY_DEFAULT</a></div><div class="ttdeci">@ DR_QUERY_DEFAULT</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:255</div></div>
@@ -119,7 +119,7 @@ Release notes for this release, including changes since prior releases and plans
 <div class="ttc" id="adr__ir__instr_8h_html_ac897243e24d71890e196586b8373b821"><div class="ttname"><a href="dr__ir__instr_8h.html#ac897243e24d71890e196586b8373b821">instr_get_next</a></div><div class="ttdeci">DR_API INSTR_INLINE instr_t * instr_get_next(instr_t *instr)</div></div>
 <div class="ttc" id="adr__ir__utils_8h_html_abd9f556b8175c4ac72d8e7df8295f121"><div class="ttname"><a href="dr__ir__utils_8h.html#abd9f556b8175c4ac72d8e7df8295f121">dr_save_arith_flags</a></div><div class="ttdeci">DR_API void dr_save_arith_flags(void *drcontext, instrlist_t *ilist, instr_t *where, dr_spill_slot_t slot)</div></div>
 <div class="ttc" id="adr__events_8h_html_a689518ac5d1ad136b13e03012702b209"><div class="ttname"><a href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a></div><div class="ttdeci">dr_emit_flags_t</div><div class="ttdef"><b>Definition:</b> dr_events.h:138</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_a8287fcf9cd6cd2338a57c54e45b08a7f"><div class="ttname"><a href="dr__ir__instr_8h.html#a8287fcf9cd6cd2338a57c54e45b08a7f">EFLAGS_WRITE_6</a></div><div class="ttdeci">#define EFLAGS_WRITE_6</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2585</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_a8287fcf9cd6cd2338a57c54e45b08a7f"><div class="ttname"><a href="dr__ir__instr_8h.html#a8287fcf9cd6cd2338a57c54e45b08a7f">EFLAGS_WRITE_6</a></div><div class="ttdeci">#define EFLAGS_WRITE_6</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2596</div></div>
 <div class="ttc" id="adr__app_8h_html_a43dead944cb3c75de2537404b568f8ec"><div class="ttname"><a href="dr__app_8h.html#a43dead944cb3c75de2537404b568f8ec">dr_app_take_over</a></div><div class="ttdeci">DR_APP_API void dr_app_take_over(void)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a99682422e3f2060e3b85a61ef7e4fbbb"><div class="ttname"><a href="dr__ir__instr_8h.html#a99682422e3f2060e3b85a61ef7e4fbbb">instr_get_opcode</a></div><div class="ttdeci">DR_API int instr_get_opcode(instr_t *instr)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_af7e998e183e87480e7fd82240ff6633d"><div class="ttname"><a href="dr__ir__instr_8h.html#af7e998e183e87480e7fd82240ff6633d">instr_init</a></div><div class="ttdeci">DR_API void instr_init(void *drcontext, instr_t *instr)</div></div>
@@ -182,5 +182,5 @@ Release notes for this release, including changes since prior releases and plans
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19761 --- Fri Feb 9 2024 03:12:40 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19768 --- Fri Feb 16 2024 03:14:40 &nbsp; <img border=0 src="favicon.png">
 </small></address>

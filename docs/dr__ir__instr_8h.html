@@ -645,6 +645,8 @@ Functions</h2></td></tr>
 <tr class="separator:aa8a4ff65160ca859ad0716563ad99b42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9111efc06cd64862130c1a769e6647dd"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a9111efc06cd64862130c1a769e6647dd">instr_is_rep_string_op</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
 <tr class="separator:a9111efc06cd64862130c1a769e6647dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9d0bcf7e2f76e3edd6458eebafbd73a"><td class="memItemLeft" align="right" valign="top">const DR_API char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#aa9d0bcf7e2f76e3edd6458eebafbd73a">instr_get_category_name</a> (<a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893">dr_instr_category_t</a> category)</td></tr>
+<tr class="separator:aa9d0bcf7e2f76e3edd6458eebafbd73a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cc622d4583d47001014683fe6e5dfb2"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a8cc622d4583d47001014683fe6e5dfb2">instr_is_floating_type</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, <a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893">dr_instr_category_t</a> *type)</td></tr>
 <tr class="separator:a8cc622d4583d47001014683fe6e5dfb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a279ef5b19e7c4f82f8804d9490da54"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a6a279ef5b19e7c4f82f8804d9490da54">instr_is_floating_ex</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, <a class="el" href="dr__ir__instr_8h.html#a192e9ddf90889e6de003d95ebdaa7beb">dr_fp_type_t</a> *type)</td></tr>
@@ -1771,7 +1773,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Indicates which category the instruction corresponds to. </p>
+<p>Indicates which category the instruction corresponds to. Update <a class="el" href="dr__ir__instr_8h.html#aa9d0bcf7e2f76e3edd6458eebafbd73a">instr_get_category_name()</a> in core/ir/instr_shared.c when adding new categories in this enum. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6a293267f240f04a49586895b3b67893a9a832083c102b2a094b2e9aa0b46b94f"></a>DR_INSTR_CATEGORY_UNCATEGORIZED&#160;</td><td class="fielddoc"><p>Uncategorized. </p>
 </td></tr>
@@ -4812,6 +4814,25 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns <code>instr's</code> set of categories (set of DR_INSTR_CATEGORY_ constants). See <a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893">dr_instr_category_t</a>. This API is only supported for decoded instructions, not for synthetic ones. Currently this is only supported for AArch64. </p>
+
+</div>
+</div>
+<a id="aa9d0bcf7e2f76e3edd6458eebafbd73a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9d0bcf7e2f76e3edd6458eebafbd73a">&#9670;&nbsp;</a></span>instr_get_category_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const DR_API char* instr_get_category_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893">dr_instr_category_t</a>&#160;</td>
+          <td class="paramname"><em>category</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assumes <code>category</code> is a DR_INSTR_CATEGORY_ constant. See <a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893">dr_instr_category_t</a>. Returns <code>category</code> name in string format. </p>
 
 </div>
 </div>
@@ -8688,11 +8709,11 @@ mangle" if <code>val</code> is false.</p>
 </div><!-- contents -->
 <div class="ttc" id="adr__ir__decode_8h_html_a5ca2a278008e547130218e8cfde44e3d"><div class="ttname"><a href="dr__ir__decode_8h.html#a5ca2a278008e547130218e8cfde44e3d">decode</a></div><div class="ttdeci">DR_API byte * decode(void *drcontext, byte *pc, instr_t *instr)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a2b0ce5e5125951e4a7dfdc5ac716282a"><div class="ttname"><a href="dr__ir__instr_8h.html#a2b0ce5e5125951e4a7dfdc5ac716282a">instr_noalloc_init</a></div><div class="ttdeci">DR_API void instr_noalloc_init(void *drcontext, instr_noalloc_t *instr)</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_ad48dc68f818f028bee8b98ac396f1d71"><div class="ttname"><a href="dr__ir__instr_8h.html#ad48dc68f818f028bee8b98ac396f1d71">EFLAGS_READ_AC</a></div><div class="ttdeci">#define EFLAGS_READ_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2575</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_ab5727b7a5773bace9d656e4b969d7fce"><div class="ttname"><a href="dr__ir__instr_8h.html#ab5727b7a5773bace9d656e4b969d7fce">EFLAGS_WRITE_ALL</a></div><div class="ttdeci">#define EFLAGS_WRITE_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2580</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_ad48dc68f818f028bee8b98ac396f1d71"><div class="ttname"><a href="dr__ir__instr_8h.html#ad48dc68f818f028bee8b98ac396f1d71">EFLAGS_READ_AC</a></div><div class="ttdeci">#define EFLAGS_READ_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2586</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_ab5727b7a5773bace9d656e4b969d7fce"><div class="ttname"><a href="dr__ir__instr_8h.html#ab5727b7a5773bace9d656e4b969d7fce">EFLAGS_WRITE_ALL</a></div><div class="ttdeci">#define EFLAGS_WRITE_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2591</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a75a82f341d4ea6a5b5f29f2ef1263355"><div class="ttname"><a href="dr__ir__instr_8h.html#a75a82f341d4ea6a5b5f29f2ef1263355">instr_from_noalloc</a></div><div class="ttdeci">DR_API INSTR_INLINE instr_t * instr_from_noalloc(instr_noalloc_t *noalloc)</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_a633efa45a981d9ce3a558caddcdec212"><div class="ttname"><a href="dr__ir__instr_8h.html#a633efa45a981d9ce3a558caddcdec212">EFLAGS_WRITE_AC</a></div><div class="ttdeci">#define EFLAGS_WRITE_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2576</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_a88d4ed7d7b9c544c09c395872a86c0ea"><div class="ttname"><a href="dr__ir__instr_8h.html#a88d4ed7d7b9c544c09c395872a86c0ea">EFLAGS_READ_ALL</a></div><div class="ttdeci">#define EFLAGS_READ_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2578</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_a633efa45a981d9ce3a558caddcdec212"><div class="ttname"><a href="dr__ir__instr_8h.html#a633efa45a981d9ce3a558caddcdec212">EFLAGS_WRITE_AC</a></div><div class="ttdeci">#define EFLAGS_WRITE_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2587</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_a88d4ed7d7b9c544c09c395872a86c0ea"><div class="ttname"><a href="dr__ir__instr_8h.html#a88d4ed7d7b9c544c09c395872a86c0ea">EFLAGS_READ_ALL</a></div><div class="ttdeci">#define EFLAGS_READ_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2589</div></div>
 <div class="ttc" id="astructinstr__t_html"><div class="ttname"><a href="structinstr__t.html">instr_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:378</div></div>
 <div class="ttc" id="astructinstr__noalloc__t_html"><div class="ttname"><a href="structinstr__noalloc__t.html">instr_noalloc_t</a></div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:374</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
@@ -8700,5 +8721,5 @@ mangle" if <code>val</code> is false.</p>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19761 --- Fri Feb 9 2024 03:12:36 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19768 --- Fri Feb 16 2024 03:14:39 &nbsp; <img border=0 src="favicon.png">
 </small></address>

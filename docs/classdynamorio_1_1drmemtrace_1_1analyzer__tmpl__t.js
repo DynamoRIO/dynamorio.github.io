@@ -1,10 +1,10 @@
 [
     [ "analyzer_tmpl_t", "classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#a54a17a85c517b305b6a14b6d63ff9e58", null ],
     [ "~analyzer_tmpl_t", "classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#af81b6a0489556181a46616591bcc4924", null ],
-    [ "analyzer_tmpl_t", "classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#a5dc28b109b934b369d63e8ce288a44b4", null ],
+    [ "analyzer_tmpl_t", "classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#a416fc74cbc470a0f2c4ed98e64588b88", null ],
     [ "analyzer_tmpl_t", "classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#a54a17a85c517b305b6a14b6d63ff9e58", null ],
     [ "~analyzer_tmpl_t", "classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#af81b6a0489556181a46616591bcc4924", null ],
-    [ "analyzer_tmpl_t", "classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#a5dc28b109b934b369d63e8ce288a44b4", null ],
+    [ "analyzer_tmpl_t", "classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#a416fc74cbc470a0f2c4ed98e64588b88", null ],
     [ "get_error_string", "classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#ad8a19de9de0c25f6e4889985dcaa4be7", null ],
     [ "get_error_string", "classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#ad8a19de9de0c25f6e4889985dcaa4be7", null ],
     [ "operator!", "classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html#a2ebd83594ff8bcd5c153d9b24a4bba89", null ],

@@ -203,6 +203,7 @@
     [ "instr_get_arith_flags", "dr__ir__instr_8h.html#a08af81c9de9f4f78c309ca59016398e4", null ],
     [ "instr_get_branch_target_pc", "dr__ir__instr_8h.html#a6d7f7844c363765a6a0e5e374f804d47", null ],
     [ "instr_get_category", "dr__ir__instr_8h.html#a2bb8455e57af9ec7f3e60c04aa5723bc", null ],
+    [ "instr_get_category_name", "dr__ir__instr_8h.html#aa9d0bcf7e2f76e3edd6458eebafbd73a", null ],
     [ "instr_get_dst", "dr__ir__instr_8h.html#a82807d01f70f547181c3b09e09548f6b", null ],
     [ "instr_get_eflags", "dr__ir__instr_8h.html#a35d5a7d70a380ef810267fa62d0a0d60", null ],
     [ "instr_get_interrupt_number", "dr__ir__instr_8h.html#ab5ebe3165e4385bb813e50e92eb23269", null ],
