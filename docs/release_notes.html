@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 10.0.19768"
+title: "Release Notes for Version 10.0.19775"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 10.0.19768 </div>  </div>
+<div class="title">Release Notes for Version 10.0.19775 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,14 +63,15 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 10.0.19768. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 10.0.19768 and 10.0.0 include the following compatibility changes:</p><ul>
+<p>The current version is 10.0.19775. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 10.0.19775 and 10.0.0 include the following compatibility changes:</p><ul>
 <li>Marked x86 rep instructions as predicated.</li>
 <li>The <a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893">dr_instr_category_t</a> enum underwent changes to support new categories such as STATE, MOVE, CONVERT, and MATH. INT_MATH has been removed and replaced with MATH. FP_MATH has been removed and replaced with FP|MATH. The enumeration was organized in a different order, the old numbers become invalid</li>
 <li>The <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca58ff903618a785cb45ba4c57900db24f">dynamorio::drmemtrace::TRACE_MARKER_TYPE_FUNC_RETVAL</a> marker for system calls changed to contain the actual return value, rather than just whether successful. A new marker <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295cac4123c88a189fe7b52ceee6b7cab48ce">dynamorio::drmemtrace::TRACE_MARKER_TYPE_SYSCALL_FAILED</a> was added to indicate failure.</li>
 <li>Changed the enum value of <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9afa1e39bbc41fe11cc3bbbd36b2a13e6e">dynamorio::drmemtrace::scheduler_t::DEPENDENCY_TIMESTAMPS</a> to include direct switch dependencies. This is not a binary compatibility change as the old value still refers purely to timestamps, but on a recompile it refers to timestamps and direct switches, which is what most users should want.</li>
 <li>Rename the macro INSTR_CREATE_mul_sve to INSTR_CREATE_mul_sve_imm to differentiate it from the other SVE MUL instructions.</li>
-<li>Added a new drmemtrace analyzer option <code>-interval_instr_count</code> that enables trace analyzer interval results for every given count of instrs in each shard. This mode does not support merging the shard interval snapshots to output the whole-trace interval snapshots. Instead, the print_interval_results() API is called separately for each shard with the interval state snapshots of that shard.</li>
+<li>Renamed a protected data member in <a class="el" href="classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html">dynamorio::drmemtrace::analyzer_tmpl_t</a> from merged_interval_snapshots_ to whole_trace_interval_snapshots_ (may be relevant for users sub-classing analyzer_tmpl_t).</li>
+<li>Converted <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">dynamorio::drmemtrace::analysis_tool_tmpl_t::interval_state_snapshot_t</a> into a class with all its data members marked private with public accessor functions.</li>
 </ul>
 <p>Further non-compatibility-affecting changes include:</p><ul>
 <li>Added DWARF-5 support to the drsyms library by linking in 4 static libraries from elfutils. These libraries have LGPL licenses.</li>
@@ -92,6 +93,8 @@ Changes Since Prior Releases</h1>
 <li>Added <a class="el" href="dr__tools_8h.html#a53341fd7eb451b25d3419f2308a4a5bd">dr_running_under_dynamorio()</a>.</li>
 <li>Added <a class="el" href="dr__ir__instr_8h.html#aa9d0bcf7e2f76e3edd6458eebafbd73a">instr_get_category_name()</a> API that returns the string version (as char*) of a category.</li>
 <li>Added <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca596e9201ac17982a47ad3c931aaca487">dynamorio::drmemtrace::TRACE_MARKER_TYPE_VECTOR_LENGTH</a> marker to indicate the current vector length for architectures with a hardware defined or runtime changeable vector length (such as AArch64's SVE scalable vectors).</li>
+<li>Added a new drmemtrace analyzer option <code>-interval_instr_count</code> that enables trace analyzer interval results for every given count of instrs in each shard. This mode does not support merging the shard interval snapshots to output the whole-trace interval snapshots. Instead, the print_interval_results() API is called separately for each shard with the interval state snapshots of that shard.</li>
+<li>Added a new finalize_interval_snapshots() API to <a class="el" href="namespacedynamorio_1_1drmemtrace.html#aa072932d15fbef2163f1b3704b33abf7">dynamorio::drmemtrace::analysis_tool_t</a> to allow the tool to make holistic adjustments to the interval snapshots after all have been generated, and before they are used for merging across shards (potentially), and printing the results.</li>
 </ul>
 <hr  />
 <p>The changes between version 10.0.0 and 9.0.1 include the following compatibility changes:</p><ul>
@@ -148,7 +151,7 @@ Changes Since Prior Releases</h1>
 <li>Added <a class="el" href="dr__ir__instr_8h.html#a0f959753ac522488db7436168624ed5b">instr_create_1dst_6src()</a> convenience function that returns an <a class="el" href="structinstr__t.html">instr_t</a> with one destination and six sources.</li>
 <li>Added a new label to help in handling "rseq" (Linux restartable sequence) regions: <a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a217ca0bfff6b13fc74018b26084764fe">DR_NOTE_RSEQ_ENTRY</a>.</li>
 <li>Added <a class="el" href="dr__ir__instr_8h.html#aaa2009a9051554c5805094bd1ba7fdf9">instr_get_offset()</a> API for getting the offset of an instr in an instrlist that has been encoded with instrlist_encode* set of APIs.</li>
-<li>Added a new drmemtrace analyzer option <code>-interval_microseconds</code> and various new <a class="el" href="namespacedynamorio_1_1drmemtrace.html#aa072932d15fbef2163f1b3704b33abf7">dynamorio::drmemtrace::analysis_tool_t</a> APIs for producing per-interval results. The analyzer framework invokes the generate_interval_snapshot() and generate_shard_interval_snapshot() analysis tool APIs periodically every <code>-interval_microseconds</code> of the trace as measured by the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca5935654bf36c3cb4e813ff0d8397e2ad">dynamorio::drmemtrace::TRACE_MARKER_TYPE_TIMESTAMP</a> marker values. In these callbacks, the tool creates and returns a snapshot of their internal state that is required to produce and print per-interval results in a later print_interval_results() call. The tool's internal state is a struct derived from the <a class="el" href="structdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">dynamorio::drmemtrace::analysis_tool_tmpl_t::interval_state_snapshot_t</a> base struct. Additionally, the tool implements combine_interval_snapshot() to combine two interval snapshot structs, which is required for producing whole-trace results in the parallel mode of analyzer operation, and also release_interval_snapshot() which is used to release the analyzer framework's claim to the interval snapshot objects.</li>
+<li>Added a new drmemtrace analyzer option <code>-interval_microseconds</code> and various new <a class="el" href="namespacedynamorio_1_1drmemtrace.html#aa072932d15fbef2163f1b3704b33abf7">dynamorio::drmemtrace::analysis_tool_t</a> APIs for producing per-interval results. The analyzer framework invokes the generate_interval_snapshot() and generate_shard_interval_snapshot() analysis tool APIs periodically every <code>-interval_microseconds</code> of the trace as measured by the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca5935654bf36c3cb4e813ff0d8397e2ad">dynamorio::drmemtrace::TRACE_MARKER_TYPE_TIMESTAMP</a> marker values. In these callbacks, the tool creates and returns a snapshot of their internal state that is required to produce and print per-interval results in a later print_interval_results() call. The tool's internal state is a struct derived from the <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t_1_1interval__state__snapshot__t.html">dynamorio::drmemtrace::analysis_tool_tmpl_t::interval_state_snapshot_t</a> base struct. Additionally, the tool implements combine_interval_snapshot() to combine two interval snapshot structs, which is required for producing whole-trace results in the parallel mode of analyzer operation, and also release_interval_snapshot() which is used to release the analyzer framework's claim to the interval snapshot objects.</li>
 <li>Added a new drmemtrace analysis tool: syscall_mix, to count frequency of system calls in a trace. This tool works in both the online and offline modes of drmemtrace.</li>
 <li>Added <a class="el" href="dr__proc_8h.html#a89abd1cbde7365ee89a22f27c0f26bdc">proc_get_vector_length_bytes()</a> for AArch64. This returns the current vector length on all ARMv8 hardware including hardware which supports the Scalable Vector Extension (SVE).</li>
 </ul>
@@ -172,7 +175,7 @@ Changes Since Prior Releases</h1>
 <li>A source compatibilty change in drcachesim analysis tools for users who have created derived classes from existing analysis tools: member fields of classes are now following a consistent style with an underscore suffix. References to renamed fields will need to be updated.</li>
 <li>A change in the load callbacks used with <a class="el" href="group__drcovlib.html#ga33bf1c08f5e69e18e8450652928e0c66">drmodtrack_add_custom_data()</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae928b4aceb19475c965eb8de4d7ca07a">drmemtrace_custom_module_data()</a>: they each take an additional parameter, the segment index. The custom data field is now per-segment and not per-module, and all callbacks are invoked separately for each segment.</li>
 </ul>
-<p>The changes between version 10.0.19768 and 8.0.0 include the following minor compatibility changes:</p>
+<p>The changes between version 10.0.19775 and 8.0.0 include the following minor compatibility changes:</p>
 <ul>
 <li>drconfiglib (and thus drrun and drconfig) now sets only the new client path options which are added in this release to support other-bitwidth child processes. This means that a drconfiglib from this version will not properly configure for a DynamoRIO core library from a prior version.</li>
 <li>A new option -ldstex2cas is on by default on ARM and AArch64. This converts load-exclusive store-exclusive sequences to use compare-and-swap instead, which enables normal instrumentation of such sequences without clearing the exclusive monitor and causing infinite loops. However, the compare- and-swap's semantics are not identical: it does not detect "ABA" changes and could cause errors in lock-free data structures or other application constructs. See <a class="el" href="API_BT.html#sec_ldrex">Exclusive Monitor Instrumentation</a> for more information.</li>
@@ -1163,5 +1166,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19768 --- Fri Feb 16 2024 03:14:41 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19775 --- Fri Feb 23 2024 03:12:54 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -1,9 +1,11 @@
 [
-    [ "interval_state_snapshot_t", "structdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t_1_1interval__state__snapshot__t.html", null ],
+    [ "interval_state_snapshot_t", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t_1_1interval__state__snapshot__t.html", null ],
     [ "analysis_tool_tmpl_t", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a38e79c2e45dbf8afe6ac6afba931af17", null ],
     [ "analysis_tool_tmpl_t", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a38e79c2e45dbf8afe6ac6afba931af17", null ],
     [ "combine_interval_snapshots", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a7c30215a1e22a7cff755216de9f1b4e1", null ],
     [ "combine_interval_snapshots", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a7c30215a1e22a7cff755216de9f1b4e1", null ],
+    [ "finalize_interval_snapshots", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#aad5f1cab8a5779bdfb77976599e1d9ae", null ],
+    [ "finalize_interval_snapshots", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#aad5f1cab8a5779bdfb77976599e1d9ae", null ],
     [ "generate_interval_snapshot", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a6cc9ad51fb05cf2d3dc98dd4f60141f8", null ],
     [ "generate_interval_snapshot", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a6cc9ad51fb05cf2d3dc98dd4f60141f8", null ],
     [ "generate_shard_interval_snapshot", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a3a3e6279a01ef55cc5f67ce7ea4a65b7", null ],

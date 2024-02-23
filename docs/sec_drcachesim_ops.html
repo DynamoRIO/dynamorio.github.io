@@ -187,7 +187,7 @@ Specifies the associativity of each unified L2 TLB. Must be a power of 2.</li>
 Specifies the replacement policy for TLBs. Supported policies: LFU (Least Frequently Used).</li>
 <li><b>-simulator_type</b> <br  />
 <em>default value: cache</em> <br  />
-Predefined types: cache, miss_analyzer, TLB, reuse_distance, reuse_time, histogram, basic_counts, invariant_checker, or schedule_stats. The external types: name of a tool identified by a name.drcachesim config file in the DR tools directory.</li>
+Predefined types: cache, miss_analyzer, TLB, reuse_distance, reuse_time, histogram, basic_counts, invariant_checker, schedule_stats, or record_filter. The record_filter tool cannot be combined with the others as it operates on raw disk records. To invoke an external tool: specify its name as identified by a name.drcachesim config file in the DR tools directory.</li>
 <li><b>-verbose</b> <br  />
 <em>default value: 0</em> <br  />
 Verbosity level for notifications.</li>
@@ -352,7 +352,25 @@ Applies to -core_sharded and -core_serial. Disables the normal methods of choosi
 A letter is printed every N instrs or N waits</li>
 <li><b>-syscall_template_file</b> <br  />
 <em>default value: ""</em> <br  />
-Path to the file that contains system call trace templates. If set, system call traces will be injected from the file into the resulting trace. </li>
+Path to the file that contains system call trace templates. If set, system call traces will be injected from the file into the resulting trace.</li>
+<li><b>-filter_stop_timestamp</b> <br  />
+<em>default value: 0</em> <br  />
+Record filtering will be disabled (everything will be output) when the tool sees a TRACE_MARKER_TYPE_TIMESTAMP marker with timestamp greater than the specified value.</li>
+<li><b>-filter_cache_size</b> <br  />
+<em>default value: 0</em> <br  />
+Enable data cache filter with given size (in bytes), with 64 byte line size and a direct mapped LRU cache.</li>
+<li><b>-filter_trace_types</b> <br  />
+<em>default value: ""</em> <br  />
+Comma-separated integers for trace types to remove. See trace_type_t for the list of trace entry types.</li>
+<li><b>-filter_marker_types</b> <br  />
+<em>default value: ""</em> <br  />
+Comma-separated integers for marker types to remove. See trace_marker_type_t for the list of marker types.</li>
+<li><b>-trim_before_timestamp</b> <br  />
+<em>default value: 0</em> <br  />
+Removes all records (after headers) before the first TRACE_MARKER_TYPE_TIMESTAMP marker in the trace with timestamp greater than or equal to the specified value.</li>
+<li><b>-trim_after_timestamp</b> <br  />
+<em>default value: 18446744073709551615</em> <br  />
+Removes all records from the first TRACE_MARKER_TYPE_TIMESTAMP marker with timestamp larger than the specified value. </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -361,5 +379,5 @@ Path to the file that contains system call trace templates. If set, system call 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19768 --- Fri Feb 16 2024 03:14:41 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19775 --- Fri Feb 23 2024 03:12:54 &nbsp; <img border=0 src="favicon.png">
 </small></address>

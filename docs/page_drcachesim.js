@@ -17,7 +17,8 @@
       [ "View Function Calls", "sec_drcachesim_tools.html#sec_tool_func_view", null ],
       [ "Cache Line Histogram", "sec_drcachesim_tools.html#sec_tool_histogram", null ],
       [ "Invariant Checker", "sec_drcachesim_tools.html#sec_tool_invariant_checker", null ],
-      [ "System Call Mix", "sec_drcachesim_tools.html#sec_tool_syscall_mix", null ]
+      [ "System Call Mix", "sec_drcachesim_tools.html#sec_tool_syscall_mix", null ],
+      [ "Record Filter", "sec_drcachesim_tools.html#sec_tool_record_filter", null ]
     ] ],
     [ "Google Workload Traces", "google_workload_traces.html", [
       [ "Trace Format", "google_workload_traces.html#sec_google_format", null ],

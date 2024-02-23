@@ -81,7 +81,7 @@
     [ "instr_noalloc_t", "structinstr__noalloc__t.html", null ],
     [ "dynamorio::drmemtrace::instr_summary_t", "structdynamorio_1_1drmemtrace_1_1instr__summary__t.html", null ],
     [ "instr_t", "structinstr__t.html", null ],
-    [ "dynamorio::drmemtrace::analysis_tool_tmpl_t< RecordType >::interval_state_snapshot_t", "structdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t_1_1interval__state__snapshot__t.html", null ],
+    [ "dynamorio::drmemtrace::analysis_tool_tmpl_t< RecordType >::interval_state_snapshot_t", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t_1_1interval__state__snapshot__t.html", null ],
     [ "dynamorio::drmemtrace::ir2trace_t", "classdynamorio_1_1drmemtrace_1_1ir2trace__t.html", null ],
     [ "dynamorio::drmemtrace::instr_summary_t::memref_summary_t", "structdynamorio_1_1drmemtrace_1_1instr__summary__t_1_1memref__summary__t.html", null ],
     [ "dynamorio::drmemtrace::memtrace_stream_t", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html", [
