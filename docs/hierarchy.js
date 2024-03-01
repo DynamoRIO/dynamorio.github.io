@@ -104,6 +104,7 @@
     [ "dynamorio::drmemtrace::pt_sb_config_t", "structdynamorio_1_1drmemtrace_1_1pt__sb__config__t.html", null ],
     [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::range_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html", null ],
     [ "dynamorio::drmemtrace::raw2trace_t", "classdynamorio_1_1drmemtrace_1_1raw2trace__t.html", null ],
+    [ "dynamorio::drmemtrace::replay_file_checker_t", "classdynamorio_1_1drmemtrace_1_1replay__file__checker__t.html", null ],
     [ "dynamorio::drmemtrace::reuse_distance_knobs_t", "structdynamorio_1_1drmemtrace_1_1reuse__distance__knobs__t.html", null ],
     [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::scheduler_options_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html", null ],
     [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html", null ],

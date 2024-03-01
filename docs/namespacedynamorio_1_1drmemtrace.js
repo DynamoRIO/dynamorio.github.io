@@ -27,6 +27,7 @@
     [ "reader_t", "classdynamorio_1_1drmemtrace_1_1reader__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1reader__t.js %} ],
     [ "record_file_reader_t", "classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1record__file__reader__t.js %} ],
     [ "record_reader_t", "classdynamorio_1_1drmemtrace_1_1record__reader__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1record__reader__t.js %} ],
+    [ "replay_file_checker_t", "classdynamorio_1_1drmemtrace_1_1replay__file__checker__t.html", null ],
     [ "reuse_distance_knobs_t", "structdynamorio_1_1drmemtrace_1_1reuse__distance__knobs__t.html", null ],
     [ "scheduler_tmpl_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.js %} ],
     [ "speculator_tmpl_t", "classdynamorio_1_1drmemtrace_1_1speculator__tmpl__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1speculator__tmpl__t.js %} ],

@@ -81,6 +81,8 @@ Data Fields</h2></td></tr>
 <tr class="separator:a1783ff3a0ff0f81cb38922f8093a9118"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b9eb1d470d20cf68c3fa76250b074fe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a9b9eb1d470d20cf68c3fa76250b074fe">randomize_next_input</a> = false</td></tr>
 <tr class="separator:a9b9eb1d470d20cf68c3fa76250b074fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34eaff9f2887f3469d737f73ad093343"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a34eaff9f2887f3469d737f73ad093343">read_inputs_in_init</a> = true</td></tr>
+<tr class="separator:a34eaff9f2887f3469d737f73ad093343"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename RecordType, typename ReaderType&gt;<br />
@@ -372,6 +374,23 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 
 </div>
 </div>
+<a id="a34eaff9f2887f3469d737f73ad093343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34eaff9f2887f3469d737f73ad093343">&#9670;&nbsp;</a></span>read_inputs_in_init</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::scheduler_options_t::read_inputs_in_init = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>If true, the scheduler will read from each input to determine its filetype during initialization. If false, the filetype will not be available prior to explicit record retrieval by the user, but this may be required for inputs whose sources are not yet set up at scheduler init time (e.g., inputs over blocking pipes with data only becoming available after initializing the scheduler, as happens with online trace analyzers). This must be true for <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9afa1e39bbc41fe11cc3bbbd36b2a13e6e">DEPENDENCY_TIMESTAMPS</a> as it also requires reading ahead. </p>
+
+</div>
+</div>
 <a id="a5367da0081dd5caed8d3d0c02fb9b6f2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5367da0081dd5caed8d3d0c02fb9b6f2">&#9670;&nbsp;</a></span>replay_as_traced_istream</h2>
 
@@ -500,5 +519,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19775 --- Fri Feb 23 2024 03:12:54 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19782 --- Fri Mar 1 2024 03:15:47 &nbsp; <img border=0 src="favicon.png">
 </small></address>
