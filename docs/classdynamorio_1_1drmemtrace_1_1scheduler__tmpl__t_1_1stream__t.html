@@ -637,7 +637,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5da">trace_version_t</a> value from the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca5f4d633b1e1075218c8e1067d12d496e">TRACE_MARKER_TYPE_VERSION</a> record in the trace header. </p>
+<p>Returns the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5da">trace_version_t</a> value from the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca5f4d633b1e1075218c8e1067d12d496e">TRACE_MARKER_TYPE_VERSION</a> record in the trace header. This can be queried prior to explicitly retrieving any records from output streams, unless <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>:: <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a34eaff9f2887f3469d737f73ad093343">scheduler_options_t.read_inputs_in_init</a> is false. </p>
 
 <p>Implements <a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a39e6cb3a7e091424938e1850b64a4d97">dynamorio::drmemtrace::memtrace_stream_t</a>.</p>
 
@@ -936,5 +936,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19786 --- Fri Mar 8 2024 03:13:02 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19795 --- Fri Mar 15 2024 03:14:47 &nbsp; <img border=0 src="favicon.png">
 </small></address>
