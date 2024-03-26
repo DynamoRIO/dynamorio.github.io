@@ -28,4 +28,4 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 # webrick must now be included explicitly.
 # See: https://github.com/jekyll/jekyll/issues/8523
-gem "webrick"
+gem "webrick", "~> 1.8.1"

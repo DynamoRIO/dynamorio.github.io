@@ -268,7 +268,7 @@ DEPENDENCIES
   minima (~> 2.0)
   rexml (>= 3.2.5)
   tzinfo-data
-  webrick
+  webrick (~> 1.8.1)
 
 BUNDLED WITH
    2.3.4
