@@ -12,14 +12,20 @@ tracker](https://github.com/DynamoRIO/dynamorio/issues).
 You can use jekyll to run a local server and view local changes to the
 website contents.
 
-First, install ruby, bundler, and the needed gems:
+First, install jekyll, ruby, bundler, and the needed gems:
 ```
-$ sudo apt-get install ruby-dev
-$ sudo gem install bundler
-$ bundle install
+sudo apt-get install jekyll
+sudo apt-get install ruby-dev
+sudo gem install bundler
+bundle config set --local path 'vendor/bundle'
+bundle install
 ```
 
-Now you can launch the local server:
+The `bundle config` command tells bundle to install gems locally to
+avoid requiring root access.  The `bundle install` command should be
+run from the directory containing the project Gemfile.
+
+Now you can launch the local server from the same directory like this:
 ```
 bundle exec jekyll serve
 ```
@@ -40,17 +46,17 @@ Run these commands to mirror the `devsetup.sh` script in the `dynamorio`
 repository, first replacing `PATH_TO_DR` with the path to your checkout of
 `dynamorio` for locating the helper scripts:
 ```
-$ git config core.autocrlf input
-$ git config core.whitespace blank-at-eol,tab-in-indent
-$ git config branch.autosetuprebase always
-$ git config alias.newbranch '!sh -c "git checkout --track -b $1 origin/master"'
-$ git config alias.split '!sh -c "git checkout -b $1 $2 && git branch --set-upstream-to=origin/master $1"'
-$ git config alias.review '!myf() { PATH_TO_DR/make/git/git_review.sh "$@"; }; myf'
-$ git config alias.pullall '!myf() { PATH_TO_DR/make/git/git_pullall.sh "$@"; }; myf'
-$ echo Please ensure your author name is correct: \"$(git config user.name)\"
-$ echo "  Run \"git config user.name New Name\" to update"
-$ echo Please ensure your author email is correct: \"$(git config user.email)\"
-$ echo "  Run \"git config user.email New Email\" to update"
+git config core.autocrlf input
+git config core.whitespace blank-at-eol,tab-in-indent
+git config branch.autosetuprebase always
+git config alias.newbranch '!sh -c "git checkout --track -b $1 origin/master"'
+git config alias.split '!sh -c "git checkout -b $1 $2 && git branch --set-upstream-to=origin/master $1"'
+git config alias.review '!myf() { PATH_TO_DR/make/git/git_review.sh "$@"; }; myf'
+git config alias.pullall '!myf() { PATH_TO_DR/make/git/git_pullall.sh "$@"; }; myf'
+echo Please ensure your author name is correct: \"$(git config user.name)\"
+echo "  Run \"git config user.name New Name\" to update"
+echo Please ensure your author email is correct: \"$(git config user.email)\"
+echo "  Run \"git config user.email New Email\" to update"
 ```
 
 Replace all references in printed statements from the scripts with the
