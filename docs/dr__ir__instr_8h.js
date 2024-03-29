@@ -287,6 +287,7 @@
     [ "instr_is_ubr", "dr__ir__instr_8h.html#afb67b03b4379bb333c98a5a7e4411c65", null ],
     [ "instr_is_undefined", "dr__ir__instr_8h.html#aef2bb687e09007057d09e27e1c95f373", null ],
     [ "instr_is_wow64_syscall", "dr__ir__instr_8h.html#a5d192fb176f46406fb2a356f6886a884", null ],
+    [ "instr_is_xrstor", "dr__ir__instr_8h.html#a3ff7cfc9da6e8cd7d3ebe06b8195ac6f", null ],
     [ "instr_is_xsave", "dr__ir__instr_8h.html#a811c5d939e913be439fe34be3c245f35", null ],
     [ "instr_it_block_compute_immediates", "dr__ir__instr_8h.html#a192215c3468cee805dc68afa83aae818", null ],
     [ "instr_it_block_create", "dr__ir__instr_8h.html#ab75da36d0a90197ef9f271fb632fe548", null ],

@@ -51,7 +51,7 @@ Debugging Tests on Github Actions Runner</h2>
 <p>First, identify the Actions workflow file which contains the job with the failure. From the Actions run page with the failing test (usually reached from the links in the job runs for a pull request), click on "Workflow file" in the bottom of the left sidebar. It will present the file contents with its path at the top. It will be something like ".github/workflows/ci-windows.yml". That is the path within the git repository.</p>
 <p>Next, go and edit that file in your branch. Delete all jobs except the failing one (just remove those lines from the file). For the failing one, add these 3 lines as a new step right after the "Run Suite" step but before the "Send
 failure email step". Be sure to match the surrounding indentation as indentation matters for .yml files. </p><pre class="fragment">- name: Setup tmate session
-  if: ${{ failure() }}
+  if: failure()
   uses: mxschmitt/action-tmate@v3
 </pre><p>Next, delete all the other workflow files in the ".github/workflows/" directory. This will save you time and save resources in general, to only run the single target job.</p>
 <p>You can see an example of these workflow file deletions and edits in this commit: <a href="https://github.com/DynamoRIO/dynamorio/pull/6414/commits/08b96200cdb9fd4d39a4c89e2aa9eafed92027f4">https://github.com/DynamoRIO/dynamorio/pull/6414/commits/08b96200cdb9fd4d39a4c89e2aa9eafed92027f4</a></p>
@@ -206,5 +206,5 @@ Adding New Tests</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19803 --- Fri Mar 22 2024 03:13:17 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19810 --- Fri Mar 29 2024 03:13:11 &nbsp; <img border=0 src="favicon.png">
 </small></address>

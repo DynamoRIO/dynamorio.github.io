@@ -571,6 +571,8 @@ Functions</h2></td></tr>
 <tr class="separator:a86eec1ba7341719083b40da5a2f2f8f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a811c5d939e913be439fe34be3c245f35"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a811c5d939e913be439fe34be3c245f35">instr_is_xsave</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
 <tr class="separator:a811c5d939e913be439fe34be3c245f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ff7cfc9da6e8cd7d3ebe06b8195ac6f"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a3ff7cfc9da6e8cd7d3ebe06b8195ac6f">instr_is_xrstor</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
+<tr class="separator:a3ff7cfc9da6e8cd7d3ebe06b8195ac6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4dd9c7a0964854463773c9a88e06fea"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#ab4dd9c7a0964854463773c9a88e06fea">instr_get_rel_data_or_instr_target</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, app_pc *target)</td></tr>
 <tr class="separator:ab4dd9c7a0964854463773c9a88e06fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92312678a9d109cc8f819fc326a0e08b"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a92312678a9d109cc8f819fc326a0e08b">instr_has_rel_addr_reference</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
@@ -6633,6 +6635,25 @@ We recommend using this routine during the phase of application code analysis, a
 
 </div>
 </div>
+<a id="a3ff7cfc9da6e8cd7d3ebe06b8195ac6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ff7cfc9da6e8cd7d3ebe06b8195ac6f">&#9670;&nbsp;</a></span>instr_is_xrstor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API bool instr_is_xrstor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
+          <td class="paramname"><em>instr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns true if <code>instr's</code> opcode is <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a55522f0b8f5637efc3b565db800e0368">OP_xrstor32</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a61f565eed481b70b1db3d1f9c3c4aca2">OP_xrstor64</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635ae9e8d18d5b9a1e1963c5233caf4a4e39">OP_xrstors32</a>, or <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a1e5b59b5d8e13e87833a4215ef94f0c9">OP_xrstors64</a>. </p>
+
+</div>
+</div>
 <a id="a811c5d939e913be439fe34be3c245f35"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a811c5d939e913be439fe34be3c245f35">&#9670;&nbsp;</a></span>instr_is_xsave()</h2>
 
@@ -6648,7 +6669,7 @@ We recommend using this routine during the phase of application code analysis, a
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns true if <code>instr's</code> opcode is <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a6575ad72769fb182c4347a3ef47f0d3d">OP_xsave32</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a2f4007b3ac1c49adf6932abb07a591f5">OP_xsaveopt32</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635ada373b4c19b296439101a6b414d3fc97">OP_xsave64</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a07bf2e028f6f09add15a1bc1cee5c40a">OP_xsaveopt64</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635ae666a35320f2dd755235611fd1ed9455">OP_xsavec32</a> or <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a178fa0b5ae1cc309bd03c34120de0c81">OP_xsavec64</a>. </p>
+<p>Returns true if <code>instr's</code> opcode is <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a6575ad72769fb182c4347a3ef47f0d3d">OP_xsave32</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a2f4007b3ac1c49adf6932abb07a591f5">OP_xsaveopt32</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635ada373b4c19b296439101a6b414d3fc97">OP_xsave64</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a07bf2e028f6f09add15a1bc1cee5c40a">OP_xsaveopt64</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635ae666a35320f2dd755235611fd1ed9455">OP_xsavec32</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a178fa0b5ae1cc309bd03c34120de0c81">OP_xsavec64</a>, <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a8f74d7e0df1959f0892f334e14e1f961">OP_xsaves32</a>, or <a class="el" href="dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a124300c08bff02027125abaa0ad5d6ea">OP_xsaves64</a>. </p>
 
 </div>
 </div>
@@ -8709,11 +8730,11 @@ mangle" if <code>val</code> is false.</p>
 </div><!-- contents -->
 <div class="ttc" id="adr__ir__decode_8h_html_a5ca2a278008e547130218e8cfde44e3d"><div class="ttname"><a href="dr__ir__decode_8h.html#a5ca2a278008e547130218e8cfde44e3d">decode</a></div><div class="ttdeci">DR_API byte * decode(void *drcontext, byte *pc, instr_t *instr)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a2b0ce5e5125951e4a7dfdc5ac716282a"><div class="ttname"><a href="dr__ir__instr_8h.html#a2b0ce5e5125951e4a7dfdc5ac716282a">instr_noalloc_init</a></div><div class="ttdeci">DR_API void instr_noalloc_init(void *drcontext, instr_noalloc_t *instr)</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_ad48dc68f818f028bee8b98ac396f1d71"><div class="ttname"><a href="dr__ir__instr_8h.html#ad48dc68f818f028bee8b98ac396f1d71">EFLAGS_READ_AC</a></div><div class="ttdeci">#define EFLAGS_READ_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2592</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_ab5727b7a5773bace9d656e4b969d7fce"><div class="ttname"><a href="dr__ir__instr_8h.html#ab5727b7a5773bace9d656e4b969d7fce">EFLAGS_WRITE_ALL</a></div><div class="ttdeci">#define EFLAGS_WRITE_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2597</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_ad48dc68f818f028bee8b98ac396f1d71"><div class="ttname"><a href="dr__ir__instr_8h.html#ad48dc68f818f028bee8b98ac396f1d71">EFLAGS_READ_AC</a></div><div class="ttdeci">#define EFLAGS_READ_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2601</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_ab5727b7a5773bace9d656e4b969d7fce"><div class="ttname"><a href="dr__ir__instr_8h.html#ab5727b7a5773bace9d656e4b969d7fce">EFLAGS_WRITE_ALL</a></div><div class="ttdeci">#define EFLAGS_WRITE_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2606</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a75a82f341d4ea6a5b5f29f2ef1263355"><div class="ttname"><a href="dr__ir__instr_8h.html#a75a82f341d4ea6a5b5f29f2ef1263355">instr_from_noalloc</a></div><div class="ttdeci">DR_API INSTR_INLINE instr_t * instr_from_noalloc(instr_noalloc_t *noalloc)</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_a633efa45a981d9ce3a558caddcdec212"><div class="ttname"><a href="dr__ir__instr_8h.html#a633efa45a981d9ce3a558caddcdec212">EFLAGS_WRITE_AC</a></div><div class="ttdeci">#define EFLAGS_WRITE_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2593</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_a88d4ed7d7b9c544c09c395872a86c0ea"><div class="ttname"><a href="dr__ir__instr_8h.html#a88d4ed7d7b9c544c09c395872a86c0ea">EFLAGS_READ_ALL</a></div><div class="ttdeci">#define EFLAGS_READ_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2595</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_a633efa45a981d9ce3a558caddcdec212"><div class="ttname"><a href="dr__ir__instr_8h.html#a633efa45a981d9ce3a558caddcdec212">EFLAGS_WRITE_AC</a></div><div class="ttdeci">#define EFLAGS_WRITE_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2602</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_a88d4ed7d7b9c544c09c395872a86c0ea"><div class="ttname"><a href="dr__ir__instr_8h.html#a88d4ed7d7b9c544c09c395872a86c0ea">EFLAGS_READ_ALL</a></div><div class="ttdeci">#define EFLAGS_READ_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2604</div></div>
 <div class="ttc" id="astructinstr__t_html"><div class="ttname"><a href="structinstr__t.html">instr_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:378</div></div>
 <div class="ttc" id="astructinstr__noalloc__t_html"><div class="ttname"><a href="structinstr__noalloc__t.html">instr_noalloc_t</a></div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:380</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
@@ -8721,5 +8742,5 @@ mangle" if <code>val</code> is false.</p>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19803 --- Fri Mar 22 2024 03:13:14 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19810 --- Fri Mar 29 2024 03:13:10 &nbsp; <img border=0 src="favicon.png">
 </small></address>

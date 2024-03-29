@@ -352,7 +352,7 @@ Applies to -core_sharded and -core_serial. Disables the normal methods of choosi
 A letter is printed every N instrs or N waits</li>
 <li><b>-syscall_template_file</b> <br  />
 <em>default value: ""</em> <br  />
-Path to the file that contains system call trace templates. If set, system call traces will be injected from the file into the resulting trace.</li>
+Path to the file that contains system call trace templates. If set, system call traces will be injected from the file into the resulting trace. This is still experimental so the template file format may change without backward compatibility.</li>
 <li><b>-filter_stop_timestamp</b> <br  />
 <em>default value: 0</em> <br  />
 Record filtering will be disabled (everything will be output) when the tool sees a TRACE_MARKER_TYPE_TIMESTAMP marker with timestamp greater than the specified value.</li>
@@ -370,7 +370,10 @@ Comma-separated integers for marker types to remove. See trace_marker_type_t for
 Removes all records (after headers) before the first TRACE_MARKER_TYPE_TIMESTAMP marker in the trace with timestamp greater than or equal to the specified value.</li>
 <li><b>-trim_after_timestamp</b> <br  />
 <em>default value: 18446744073709551615</em> <br  />
-Removes all records from the first TRACE_MARKER_TYPE_TIMESTAMP marker with timestamp larger than the specified value. </li>
+Removes all records from the first TRACE_MARKER_TYPE_TIMESTAMP marker with timestamp larger than the specified value.</li>
+<li><b>-abort_on_invariant_error</b> <br  />
+<em>default value: true</em> <br  />
+When set to true, the trace invariant checker analysis tool aborts when a trace invariant error is found. Otherwise it prints the error and continues. Also, the total invariant error count is printed at the end; a non-zero error count does not affect the exit code of the analyzer. </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -379,5 +382,5 @@ Removes all records from the first TRACE_MARKER_TYPE_TIMESTAMP marker with times
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19803 --- Fri Mar 22 2024 03:13:18 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19810 --- Fri Mar 29 2024 03:13:12 &nbsp; <img border=0 src="favicon.png">
 </small></address>
