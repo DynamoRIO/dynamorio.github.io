@@ -568,6 +568,7 @@
     [ "opnd_is_reg_partial", "dr__ir__opnd_8h.html#ac47cdf614648f0e0622e064b4f63d0f1", null ],
     [ "opnd_is_reg_pointer_sized", "dr__ir__opnd_8h.html#a4c3efc6293df924c5f925f23aaf511d9", null ],
     [ "opnd_is_rel_addr", "dr__ir__opnd_8h.html#af451897a176423eb75db2d607e9db7b3", null ],
+    [ "opnd_is_vector_base_disp", "dr__ir__opnd_8h.html#ad2ed08a0ffb88522c97e66ed6a6b1896", null ],
     [ "opnd_is_vsib", "dr__ir__opnd_8h.html#a5d0ce3414871686587c8eb7ecd3a7684", null ],
     [ "opnd_num_regs_used", "dr__ir__opnd_8h.html#a09b81db9fc97105d3897762e8c168cb9", null ],
     [ "opnd_replace_reg", "dr__ir__opnd_8h.html#aa05a718c4e4bd8e686843b9047e34612", null ],
