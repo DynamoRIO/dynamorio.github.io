@@ -687,6 +687,8 @@ Functions</h2></td></tr>
 <tr class="separator:a8d0845d1fc09251416c1515793d0b1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58c247518c78f0c544028b062ed8c4c6"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a58c247518c78f0c544028b062ed8c4c6">instr_convert_short_meta_jmp_to_long</a> (void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
 <tr class="separator:a58c247518c78f0c544028b062ed8c4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5206491d7fb853236584bc81df58027b"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a5206491d7fb853236584bc81df58027b">instr_convert_to_isa_regdeps</a> (void *drcontext, <a class="el" href="structinstr__t.html">instr_t</a> *instr_real_isa, <a class="el" href="structinstr__t.html">instr_t</a> *instr_regdeps_isa)</td></tr>
+<tr class="separator:a5206491d7fb853236584bc81df58027b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af42d0cd9e0a4b20c140b1f55fced96b0"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#af42d0cd9e0a4b20c140b1f55fced96b0">instr_jcc_taken</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, reg_t eflags)</td></tr>
 <tr class="separator:af42d0cd9e0a4b20c140b1f55fced96b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a949d2d48163c09469cac82295ac7d6ed"><td class="memItemLeft" align="right" valign="top">DR_API int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a949d2d48163c09469cac82295ac7d6ed">instr_cmovcc_to_jcc</a> (int cmovcc_opcode)</td></tr>
@@ -2185,6 +2187,41 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Assumes that instr is a meta instruction (<a class="el" href="dr__ir__instr_8h.html#abd98754c8f86df222e851a30af2abe9e">instr_is_meta()</a>) and an <a class="el" href="dr__ir__instr_8h.html#a4673e0623211c1a80fb4afb5edcaf129">instr_is_cti_short()</a> (&lt;=8-bit reach). Converts instr's opcode to a long form (32-bit reach for x86). If instr's opcode is OP_loop* or OP_jecxz for x86 or OP_cbnz or OP_cbz for ARM, converts it to a sequence of multiple instructions (which is different from <a class="el" href="dr__ir__instr_8h.html#a130b2815845e68b575b1f5dd329bfbf8">instr_is_cti_short_rewrite()</a>). Each added instruction is marked <a class="el" href="dr__ir__instr_8h.html#abd98754c8f86df222e851a30af2abe9e">instr_is_meta()</a>. Returns the long form of the instruction, which is identical to <code>instr</code> unless <code>instr</code> is OP_{loop*,jecxz,cbnz,cbz}, in which case the return value is the final instruction in the sequence, the one that has long reach. </p><dl class="section note"><dt>Note</dt><dd>DR automatically converts app short ctis to long form. </dd></dl>
+
+</div>
+</div>
+<a id="a5206491d7fb853236584bc81df58027b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5206491d7fb853236584bc81df58027b">&#9670;&nbsp;</a></span>instr_convert_to_isa_regdeps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API void instr_convert_to_isa_regdeps </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>drcontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
+          <td class="paramname"><em>instr_real_isa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
+          <td class="paramname"><em>instr_regdeps_isa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Converts a real ISA (e.g., <a class="el" href="dr__ir__encode_8h.html#a00e03b2e5e75a83eacf9a0ee1674074aabd60fe0abfbb90ba431205b7e5345ac0">DR_ISA_AMD64</a>) instruction <code>instr_real_isa</code> into a <a class="el" href="dr__ir__encode_8h.html#a00e03b2e5e75a83eacf9a0ee1674074aa1bbcfa1df3fffff3d96b357f9a2290d3">DR_ISA_REGDEPS</a> instruction and stores it into <code>instr_regdeps_isa</code>. Assumes <code>instr_regdeps_isa</code> has been allocated by the caller (e.g., using <a class="el" href="dr__ir__instr_8h.html#a9d9a1662aed6669a42a8284dae0e8019">instr_create()</a>). Assumes <code>instr_real_isa</code> is a fully-decoded or synthesized instruction of a real ISA with valid operand information. </p><dl class="section note"><dt>Note</dt><dd><code>instr_regdeps_isa</code> will contain only the information of a <a class="el" href="dr__ir__encode_8h.html#a00e03b2e5e75a83eacf9a0ee1674074aa1bbcfa1df3fffff3d96b357f9a2290d3">DR_ISA_REGDEPS</a> synthetic instruction. </dd></dl>
 
 </div>
 </div>
@@ -8730,17 +8767,17 @@ mangle" if <code>val</code> is false.</p>
 </div><!-- contents -->
 <div class="ttc" id="adr__ir__decode_8h_html_a5ca2a278008e547130218e8cfde44e3d"><div class="ttname"><a href="dr__ir__decode_8h.html#a5ca2a278008e547130218e8cfde44e3d">decode</a></div><div class="ttdeci">DR_API byte * decode(void *drcontext, byte *pc, instr_t *instr)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a2b0ce5e5125951e4a7dfdc5ac716282a"><div class="ttname"><a href="dr__ir__instr_8h.html#a2b0ce5e5125951e4a7dfdc5ac716282a">instr_noalloc_init</a></div><div class="ttdeci">DR_API void instr_noalloc_init(void *drcontext, instr_noalloc_t *instr)</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_ad48dc68f818f028bee8b98ac396f1d71"><div class="ttname"><a href="dr__ir__instr_8h.html#ad48dc68f818f028bee8b98ac396f1d71">EFLAGS_READ_AC</a></div><div class="ttdeci">#define EFLAGS_READ_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2602</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_ab5727b7a5773bace9d656e4b969d7fce"><div class="ttname"><a href="dr__ir__instr_8h.html#ab5727b7a5773bace9d656e4b969d7fce">EFLAGS_WRITE_ALL</a></div><div class="ttdeci">#define EFLAGS_WRITE_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2607</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_ad48dc68f818f028bee8b98ac396f1d71"><div class="ttname"><a href="dr__ir__instr_8h.html#ad48dc68f818f028bee8b98ac396f1d71">EFLAGS_READ_AC</a></div><div class="ttdeci">#define EFLAGS_READ_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2626</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_ab5727b7a5773bace9d656e4b969d7fce"><div class="ttname"><a href="dr__ir__instr_8h.html#ab5727b7a5773bace9d656e4b969d7fce">EFLAGS_WRITE_ALL</a></div><div class="ttdeci">#define EFLAGS_WRITE_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2631</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a75a82f341d4ea6a5b5f29f2ef1263355"><div class="ttname"><a href="dr__ir__instr_8h.html#a75a82f341d4ea6a5b5f29f2ef1263355">instr_from_noalloc</a></div><div class="ttdeci">DR_API INSTR_INLINE instr_t * instr_from_noalloc(instr_noalloc_t *noalloc)</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_a633efa45a981d9ce3a558caddcdec212"><div class="ttname"><a href="dr__ir__instr_8h.html#a633efa45a981d9ce3a558caddcdec212">EFLAGS_WRITE_AC</a></div><div class="ttdeci">#define EFLAGS_WRITE_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2603</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_a88d4ed7d7b9c544c09c395872a86c0ea"><div class="ttname"><a href="dr__ir__instr_8h.html#a88d4ed7d7b9c544c09c395872a86c0ea">EFLAGS_READ_ALL</a></div><div class="ttdeci">#define EFLAGS_READ_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2605</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_a633efa45a981d9ce3a558caddcdec212"><div class="ttname"><a href="dr__ir__instr_8h.html#a633efa45a981d9ce3a558caddcdec212">EFLAGS_WRITE_AC</a></div><div class="ttdeci">#define EFLAGS_WRITE_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2627</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_a88d4ed7d7b9c544c09c395872a86c0ea"><div class="ttname"><a href="dr__ir__instr_8h.html#a88d4ed7d7b9c544c09c395872a86c0ea">EFLAGS_READ_ALL</a></div><div class="ttdeci">#define EFLAGS_READ_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2629</div></div>
 <div class="ttc" id="astructinstr__t_html"><div class="ttname"><a href="structinstr__t.html">instr_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:378</div></div>
-<div class="ttc" id="astructinstr__noalloc__t_html"><div class="ttname"><a href="structinstr__noalloc__t.html">instr_noalloc_t</a></div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:380</div></div>
+<div class="ttc" id="astructinstr__noalloc__t_html"><div class="ttname"><a href="structinstr__noalloc__t.html">instr_noalloc_t</a></div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:389</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19817 --- Fri Apr 5 2024 03:14:29 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.0.19824 --- Fri Apr 12 2024 03:14:06 &nbsp; <img border=0 src="favicon.png">
 </small></address>

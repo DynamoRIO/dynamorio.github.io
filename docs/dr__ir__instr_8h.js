@@ -154,6 +154,7 @@
     [ "instr_compute_address_ex", "dr__ir__instr_8h.html#a263a142a2599777f1c33c6991346cbaa", null ],
     [ "instr_compute_address_ex_pos", "dr__ir__instr_8h.html#a29c9b98f9a0998bd33eef4b294b6ac70", null ],
     [ "instr_convert_short_meta_jmp_to_long", "dr__ir__instr_8h.html#a58c247518c78f0c544028b062ed8c4c6", null ],
+    [ "instr_convert_to_isa_regdeps", "dr__ir__instr_8h.html#a5206491d7fb853236584bc81df58027b", null ],
     [ "instr_create", "dr__ir__instr_8h.html#a9d9a1662aed6669a42a8284dae0e8019", null ],
     [ "instr_create_0dst_0src", "dr__ir__instr_8h.html#ae46bafd225c6e0863befba736c372455", null ],
     [ "instr_create_0dst_1src", "dr__ir__instr_8h.html#a842dc7ac2aea828a00c51765465f5428", null ],
