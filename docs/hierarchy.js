@@ -14,6 +14,7 @@
     [ "_dr_restore_state_info_t", "struct__dr__restore__state__info__t.html", null ],
     [ "_dr_siginfo_t", "struct__dr__siginfo__t.html", null ],
     [ "_dr_stats_t", "struct__dr__stats__t.html", null ],
+    [ "_dr_svep_t", "union__dr__svep__t.html", null ],
     [ "_dr_symbol_export_t", "struct__dr__symbol__export__t.html", null ],
     [ "_dr_symbol_import_t", "struct__dr__symbol__import__t.html", null ],
     [ "_dr_syscall_result_info_t", "struct__dr__syscall__result__info__t.html", null ],
