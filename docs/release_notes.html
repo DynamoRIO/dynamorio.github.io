@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 10.90.19831"
+title: "Release Notes for Version 10.90.19838"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 10.90.19831 </div>  </div>
+<div class="title">Release Notes for Version 10.90.19838 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,8 +63,8 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 10.90.19831. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 10.90.19831 and 10.0.0 include the following compatibility changes:</p><ul>
+<p>The current version is 10.90.19838. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 10.90.19838 and 10.0.0 include the following compatibility changes:</p><ul>
 <li>Marked x86 rep instructions as predicated.</li>
 <li>The <a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893">dr_instr_category_t</a> enum underwent changes to support new categories such as STATE, MOVE, CONVERT, and MATH. INT_MATH has been removed and replaced with MATH. FP_MATH has been removed and replaced with FP|MATH. The enumeration was organized in a different order, the old numbers become invalid</li>
 <li>The <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca58ff903618a785cb45ba4c57900db24f">dynamorio::drmemtrace::TRACE_MARKER_TYPE_FUNC_RETVAL</a> marker for system calls changed to contain the actual return value, rather than just whether successful. A new marker <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295cac4123c88a189fe7b52ceee6b7cab48ce">dynamorio::drmemtrace::TRACE_MARKER_TYPE_SYSCALL_FAILED</a> was added to indicate failure.</li>
@@ -181,7 +181,7 @@ Changes Since Prior Releases</h1>
 <li>A source compatibilty change in drcachesim analysis tools for users who have created derived classes from existing analysis tools: member fields of classes are now following a consistent style with an underscore suffix. References to renamed fields will need to be updated.</li>
 <li>A change in the load callbacks used with <a class="el" href="group__drcovlib.html#ga33bf1c08f5e69e18e8450652928e0c66">drmodtrack_add_custom_data()</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae928b4aceb19475c965eb8de4d7ca07a">drmemtrace_custom_module_data()</a>: they each take an additional parameter, the segment index. The custom data field is now per-segment and not per-module, and all callbacks are invoked separately for each segment.</li>
 </ul>
-<p>The changes between version 10.90.19831 and 8.0.0 include the following minor compatibility changes:</p>
+<p>The changes between version 10.90.19838 and 8.0.0 include the following minor compatibility changes:</p>
 <ul>
 <li>drconfiglib (and thus drrun and drconfig) now sets only the new client path options which are added in this release to support other-bitwidth child processes. This means that a drconfiglib from this version will not properly configure for a DynamoRIO core library from a prior version.</li>
 <li>A new option -ldstex2cas is on by default on ARM and AArch64. This converts load-exclusive store-exclusive sequences to use compare-and-swap instead, which enables normal instrumentation of such sequences without clearing the exclusive monitor and causing infinite loops. However, the compare- and-swap's semantics are not identical: it does not detect "ABA" changes and could cause errors in lock-free data structures or other application constructs. See <a class="el" href="API_BT.html#sec_ldrex">Exclusive Monitor Instrumentation</a> for more information.</li>
@@ -208,7 +208,7 @@ Changes Since Prior Releases</h1>
 <li>Added <a class="el" href="dr__ir__instr_8h.html#abdbd15b741792307845f5fc2df9b4b5d">instr_is_exclusive_load()</a>.</li>
 <li>Added <a class="el" href="dr__ir__macros__aarch64_8h.html#a0af576a857ca51596cc247dfa5771370">XINST_CREATE_store_pair()</a> and <a class="el" href="dr__ir__macros__aarch64_8h.html#a274c966568324357b4bb5785738bcfb7">XINST_CREATE_load_pair()</a>.</li>
 <li>Added <a class="el" href="dr__ir__instr_8h.html#a7aa1835665d4a2933d0a9bcfb0d42b4e">instr_replace_reg_resize()</a> and <a class="el" href="dr__ir__opnd_8h.html#aad964c704e6bdfcb1fe0fb633cd64e44">opnd_replace_reg_resize()</a>.</li>
-<li>Added <a class="el" href="group__drx.html#gga4790f45dcc812c1b00184a2edccdddf5aa50fccbd9d5dc9f300d6033c971f95e4">DRX_COUNTER_REL_ACQ</a> flag to optionally enable release-acquire semantics for <a class="el" href="group__drx.html#gab5f7ae9128e953fdf1f8c2ac3292f07a">drx_insert_counter_update()</a> on AArchXX.</li>
+<li>Added <a class="el" href="group__drx.html#gga4caf8d8f829279fba122163d961608a4aa50fccbd9d5dc9f300d6033c971f95e4">DRX_COUNTER_REL_ACQ</a> flag to optionally enable release-acquire semantics for <a class="el" href="group__drx.html#gab5f7ae9128e953fdf1f8c2ac3292f07a">drx_insert_counter_update()</a> on AArchXX.</li>
 <li>Added a preferred base field to the <a class="el" href="struct__module__data__t.html">_module_data_t</a> struct and to the <a class="el" href="struct__drmodtrack__info__t.html">_drmodtrack_info_t</a> struct.</li>
 <li>Added support for running under QEMU via the <a class="el" href="page_deploy.html#op_xarch_root">-xarch_root</a> runtime option which locates guest system libraries and enables workarounds for problems with QEMU's threads.</li>
 <li>Added <a class="el" href="dr__events_8h.html#a66a5226e857e03ebb685b3e8e1566c7c">dr_is_detaching()</a>, an API to query whether detach is in progress.</li>
@@ -621,7 +621,7 @@ Changes Since Prior Releases</h1>
 <li>Added <a class="el" href="group__drsyms.html#ga01b46346170fbc4580d2e4fb5c4ba616">drsym_enumerate_lines()</a></li>
 <li>Added <a class="el" href="dr__ir__disassemble_8h.html#a4c1e2fa2049719870ad0c1007b00d4e3aa9e5caa6773c8f8a4ff13b77231dbdaf">DR_DISASM_STRICT_INVALID</a></li>
 <li>Added a new runtime option <a class="el" href="page_deploy.html#op_syntax_att">-syntax_att</a> for AT&amp;T-style disassembly that hides the implicit operands. Also added <a class="el" href="dr__ir__disassemble_8h.html#a4c1e2fa2049719870ad0c1007b00d4e3af82d1bee9aa93ac6df451bd80a4b1278">DR_DISASM_DR</a> to name DR's default disassembly style, with <a class="el" href="dr__ir__disassemble_8h.html#a4c1e2fa2049719870ad0c1007b00d4e3a83d3ece1134b8dabc7f0fd2f84185f11">DR_DISASM_ATT</a> selecting a true AT&amp;T disassembly style that hides implicit operands. The only compatibility change here is if a client selected DR_DISASM_ATT and expected DR-style disassembly.</li>
-<li>Added <a class="el" href="dr__tools_8h.html#a39fca1837c5ce7715cbf571669660c13a12a6a7af3936e4c932effc9505f23be5">DR_MAP_IMAGE</a></li>
+<li>Added <a class="el" href="dr__tools_8h.html#aaf8fd5f0e57d456151c951e0f3715fc4a12a6a7af3936e4c932effc9505f23be5">DR_MAP_IMAGE</a></li>
 <li>Added -t option to drrun for end-user tools</li>
 <li>Added 64-bit reachability support to <a class="el" href="dr__ir__utils_8h.html#a0258cfa82416ee2ba40ed73e4d4eebf7">dr_insert_call()</a> and <a class="el" href="dr__ir__utils_8h.html#a1df44dbe3d8dbf82e63e96741f167c64">dr_insert_clean_call()</a>. Added explicit control over reachability in a new routine <a class="el" href="dr__ir__utils_8h.html#a4640c7ef1edbf0358ba3b315ec12fb64">dr_insert_call_ex()</a> and in <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212a9fe53fc77afb460ba31666995df5b6c9">DR_CLEANCALL_INDIRECT</a> for <a class="el" href="dr__ir__utils_8h.html#a175c7c2531aa70017d2fb020f93e374f">dr_insert_clean_call_ex()</a>.</li>
 <li>Added auto-magic conversion of absolute and pc-relative memory operands to each other for more flexible 64-bit encoding.</li>
@@ -1172,5 +1172,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.90.19831 --- Fri Apr 19 2024 03:13:17 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.90.19838 --- Fri Apr 26 2024 03:14:52 &nbsp; <img border=0 src="favicon.png">
 </small></address>

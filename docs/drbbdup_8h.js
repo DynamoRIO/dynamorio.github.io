@@ -12,9 +12,9 @@
     [ "drbbdup_instrument_instr_ex_t", "group__drbbdup.html#ga47176d17883196c07d77bcde5ad42a52", null ],
     [ "drbbdup_instrument_instr_t", "group__drbbdup.html#ga8928e3a20e86418d0371b3ec4e69d8cc", null ],
     [ "drbbdup_set_up_bb_dups_t", "group__drbbdup.html#ga9a6bf9a298bc4585ce660a6ad75a1049", null ],
-    [ "DRMGR_PRIORITY_APP2APP_DRBBDUP", "group__drbbdup.html#gga94798fdadfbf49a7c658ace669a1d310ac74a845acab5a3356d01d583ea351996", null ],
-    [ "DRMGR_PRIORITY_INSERT_DRBBDUP", "group__drbbdup.html#gga94798fdadfbf49a7c658ace669a1d310a20a8f68fe0adb1f3263d58e3411837ad", null ],
-    [ "DRMGR_PRIORITY_RESTORE_DRBBDUP", "group__drbbdup.html#gga94798fdadfbf49a7c658ace669a1d310acfdb7bb93fce9b58e50e0481e393c6b4", null ],
+    [ "DRMGR_PRIORITY_APP2APP_DRBBDUP", "group__drbbdup.html#ggae4d5251432e1a9e6803c0240cc492e18ac74a845acab5a3356d01d583ea351996", null ],
+    [ "DRMGR_PRIORITY_INSERT_DRBBDUP", "group__drbbdup.html#ggae4d5251432e1a9e6803c0240cc492e18a20a8f68fe0adb1f3263d58e3411837ad", null ],
+    [ "DRMGR_PRIORITY_RESTORE_DRBBDUP", "group__drbbdup.html#ggae4d5251432e1a9e6803c0240cc492e18acfdb7bb93fce9b58e50e0481e393c6b4", null ],
     [ "drbbdup_status_t", "group__drbbdup.html#ga29389438e052068540ac1fdcfc77f799", [
       [ "DRBBDUP_SUCCESS", "group__drbbdup.html#gga29389438e052068540ac1fdcfc77f799ae43e5d632661029506b3580cdd1222bb", null ],
       [ "DRBBDUP_ERROR_INVALID_PARAMETER", "group__drbbdup.html#gga29389438e052068540ac1fdcfc77f799ab46bf5c521cfe13eab724a6280b0c2de", null ],

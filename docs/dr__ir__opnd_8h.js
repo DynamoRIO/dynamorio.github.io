@@ -404,6 +404,7 @@
     [ "DR_REG_BND1", "dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600adf5e3fc73000fa5c5c2391e4d58ee46a", null ],
     [ "DR_REG_BND2", "dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600a1961b22196640b984b21603624bce109", null ],
     [ "DR_REG_BND3", "dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600ac6d47b2a536cbc23f3e82806dbd75f44", null ],
+    [ "DR_REG_V0", "dr__ir__opnd_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a7ea7b6939706b8624b7e1b1d43207aae", null ],
     [ "_dr_extend_type_t", "dr__ir__opnd_8h.html#adef5f1863dd46d4b22341f685782a695", [
       [ "DR_EXTEND_DEFAULT", "dr__ir__opnd_8h.html#adef5f1863dd46d4b22341f685782a695a27a6543009cc4794ce66ef71883c51ea", null ],
       [ "DR_EXTEND_UXTB", "dr__ir__opnd_8h.html#adef5f1863dd46d4b22341f685782a695ad80fa67fd24b28eb289d0096e08c4af8", null ],
