@@ -151,19 +151,30 @@
       ] ],
       [ "Concerns", "page_external_decoder.html#autotoc_md173", null ]
     ] ],
-    [ "Emulating x86 Scatter and Gather Instructions", "page_scatter_gather_emulation.html", [
-      [ "Background", "page_scatter_gather_emulation.html#autotoc_md279", null ],
-      [ "Problem Statement", "page_scatter_gather_emulation.html#autotoc_md280", null ],
-      [ "Design", "page_scatter_gather_emulation.html#autotoc_md281", [
-        [ "Scatter/gather Instruction Expansion", "page_scatter_gather_emulation.html#autotoc_md282", null ],
-        [ "Drreg Support For Multi-phase Reservations", "page_scatter_gather_emulation.html#autotoc_md283", [
-          [ "State Restoration For Drreg", "page_scatter_gather_emulation.html#autotoc_md284", null ]
-        ] ],
-        [ "Simplifying Instrumentation For Emulated Instructions", "page_scatter_gather_emulation.html#autotoc_md285", null ],
-        [ "Support For Vector Reservation", "page_scatter_gather_emulation.html#autotoc_md286", null ],
-        [ "Using The Expansion In DR Clients", "page_scatter_gather_emulation.html#autotoc_md287", null ]
+    [ "Emulating Scatter and Gather Instructions", "page_scatter_gather_emulation.html", [
+      [ "Background", "page_scatter_gather_emulation.html#autotoc_md279", [
+        [ "x86", "page_scatter_gather_emulation.html#autotoc_md280", null ],
+        [ "AArch64", "page_scatter_gather_emulation.html#autotoc_md281", [
+          [ "Scalar+vector", "page_scatter_gather_emulation.html#autotoc_md282", null ],
+          [ "Vector+immediate", "page_scatter_gather_emulation.html#autotoc_md283", null ],
+          [ "Vector+scalar", "page_scatter_gather_emulation.html#autotoc_md284", null ],
+          [ "Scalar+scalar", "page_scatter_gather_emulation.html#autotoc_md285", null ],
+          [ "Scalar+immediate", "page_scatter_gather_emulation.html#autotoc_md286", null ],
+          [ "Non-faulting loads", "page_scatter_gather_emulation.html#autotoc_md287", null ],
+          [ "First-faulting loads", "page_scatter_gather_emulation.html#autotoc_md288", null ]
+        ] ]
       ] ],
-      [ "Testing On Large Apps", "page_scatter_gather_emulation.html#autotoc_md288", null ]
+      [ "Problem Statement", "page_scatter_gather_emulation.html#autotoc_md289", null ],
+      [ "Design", "page_scatter_gather_emulation.html#autotoc_md290", [
+        [ "Scatter/gather Instruction Expansion", "page_scatter_gather_emulation.html#autotoc_md291", null ],
+        [ "Drreg Support For Multi-phase Reservations", "page_scatter_gather_emulation.html#autotoc_md292", [
+          [ "State Restoration For Drreg", "page_scatter_gather_emulation.html#autotoc_md293", null ]
+        ] ],
+        [ "Simplifying Instrumentation For Emulated Instructions", "page_scatter_gather_emulation.html#autotoc_md294", null ],
+        [ "Support For Vector Reservation", "page_scatter_gather_emulation.html#autotoc_md295", null ],
+        [ "Using The Expansion In DR Clients", "page_scatter_gather_emulation.html#autotoc_md296", null ]
+      ] ],
+      [ "Testing On Large Apps", "page_scatter_gather_emulation.html#autotoc_md297", null ]
     ] ],
     [ "Multi-Window Memtraces", "page_multi_trace_window.html", [
       [ "Overview", "page_multi_trace_window.html#autotoc_md209", null ],

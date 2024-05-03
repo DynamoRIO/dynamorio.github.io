@@ -39,7 +39,7 @@
     [ "Tracing Function Calls", "sec_drcachesim_funcs.html", null ],
     [ "Creating New Analysis Tools", "sec_drcachesim_newtool.html", [
       [ "Separately-Built Tools", "sec_drcachesim_newtool.html#external_tools", [
-        [ "External tool package", "sec_drcachesim_newtool.html#autotoc_md341", null ]
+        [ "External tool package", "sec_drcachesim_newtool.html#autotoc_md350", null ]
       ] ],
       [ "Scheduler", "sec_drcachesim_newtool.html#sec_drcachesim_sched", null ]
     ] ],

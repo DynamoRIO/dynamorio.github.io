@@ -40,26 +40,26 @@
       [ "Building the Qt DrGUI extension", "page_building.html#sec_drgui", null ]
     ] ],
     [ "Testing", "page_test_suite.html", [
-      [ "Automated Test Machines", "page_test_suite.html#autotoc_md289", [
-        [ "Continuous Integration (CI) via Github Actions", "page_test_suite.html#autotoc_md290", null ],
-        [ "CI Job Auto-Cancellation", "page_test_suite.html#autotoc_md291", null ],
-        [ "CI for AArch64 & AArch32", "page_test_suite.html#autotoc_md292", null ],
-        [ "CI Tree Closures", "page_test_suite.html#autotoc_md293", null ],
-        [ "Trybots", "page_test_suite.html#autotoc_md294", null ],
-        [ "Debugging Tests on Github Actions Runner", "page_test_suite.html#autotoc_md295", null ]
+      [ "Automated Test Machines", "page_test_suite.html#autotoc_md298", [
+        [ "Continuous Integration (CI) via Github Actions", "page_test_suite.html#autotoc_md299", null ],
+        [ "CI Job Auto-Cancellation", "page_test_suite.html#autotoc_md300", null ],
+        [ "CI for AArch64 & AArch32", "page_test_suite.html#autotoc_md301", null ],
+        [ "CI Tree Closures", "page_test_suite.html#autotoc_md302", null ],
+        [ "Trybots", "page_test_suite.html#autotoc_md303", null ],
+        [ "Debugging Tests on Github Actions Runner", "page_test_suite.html#autotoc_md304", null ]
       ] ],
-      [ "Regression Test Suite", "page_test_suite.html#autotoc_md296", [
-        [ "Test Organization", "page_test_suite.html#autotoc_md297", null ],
-        [ "Building and Running Tests", "page_test_suite.html#autotoc_md298", null ],
-        [ "Testing AArchXX", "page_test_suite.html#autotoc_md299", null ],
-        [ "Test Output", "page_test_suite.html#autotoc_md300", null ],
-        [ "Pre-Commit Test Suite", "page_test_suite.html#autotoc_md301", null ],
-        [ "Cross-Compilation and Android Testing", "page_test_suite.html#autotoc_md302", null ],
-        [ "Pre-Commit Test Suite Over Ssh", "page_test_suite.html#autotoc_md303", null ],
-        [ "Test Failures", "page_test_suite.html#autotoc_md304", null ],
-        [ "Missing Tests", "page_test_suite.html#autotoc_md305", null ]
+      [ "Regression Test Suite", "page_test_suite.html#autotoc_md305", [
+        [ "Test Organization", "page_test_suite.html#autotoc_md306", null ],
+        [ "Building and Running Tests", "page_test_suite.html#autotoc_md307", null ],
+        [ "Testing AArchXX", "page_test_suite.html#autotoc_md308", null ],
+        [ "Test Output", "page_test_suite.html#autotoc_md309", null ],
+        [ "Pre-Commit Test Suite", "page_test_suite.html#autotoc_md310", null ],
+        [ "Cross-Compilation and Android Testing", "page_test_suite.html#autotoc_md311", null ],
+        [ "Pre-Commit Test Suite Over Ssh", "page_test_suite.html#autotoc_md312", null ],
+        [ "Test Failures", "page_test_suite.html#autotoc_md313", null ],
+        [ "Missing Tests", "page_test_suite.html#autotoc_md314", null ]
       ] ],
-      [ "Adding New Tests", "page_test_suite.html#autotoc_md306", null ]
+      [ "Adding New Tests", "page_test_suite.html#autotoc_md315", null ]
     ] ],
     [ "Profiling DynamoRIO and Clients", "page_profiling.html", [
       [ "Linux", "page_profiling.html#autotoc_md243", [
