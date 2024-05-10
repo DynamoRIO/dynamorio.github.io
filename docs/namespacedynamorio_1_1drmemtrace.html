@@ -90,6 +90,8 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html">record_file_reader_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1record__filter__t.html">record_filter_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1record__reader__t.html">record_reader_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1replay__file__checker__t.html">replay_file_checker_t</a></td></tr>
@@ -448,8 +450,6 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa26a98ef2f22ff4bfc9a43c688ae5cbf7">OFFLINE_FILE_TYPE_ARCH_X86_64</a> = 0x40, 
 <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaac9118269c36e185fe2a9b0b6895e0d07">OFFLINE_FILE_TYPE_ARCH_ALL</a>, 
-<br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaab5c970fa5c78548056a2b3d90c2512b2">OFFLINE_FILE_TYPE_IFILTERED</a> = 0x80, 
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa2bde173fab00e1eb6b226453b70b5410">OFFLINE_FILE_TYPE_DFILTERED</a> = 0x100, 
@@ -468,7 +468,11 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa2eceb27369ebaa4b1acb9db29b7d64e0">OFFLINE_FILE_TYPE_KERNEL_SYSCALL_INSTR_ONLY</a> = 0x8000, 
 <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa86be29047ad4643d1e92a11b8c535335">OFFLINE_FILE_TYPE_CORE_SHARDED</a> = 0x10000
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa86be29047ad4643d1e92a11b8c535335">OFFLINE_FILE_TYPE_CORE_SHARDED</a> = 0x10000, 
+<br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa00dce088778fce7d653921465f82e71f">OFFLINE_FILE_TYPE_ARCH_REGDEPS</a> = 0x20000, 
+<br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaac9118269c36e185fe2a9b0b6895e0d07">OFFLINE_FILE_TYPE_ARCH_ALL</a>
 <br />
  }</td></tr>
 <tr class="separator:a017717a4b9ef5ae1f6d1fef1df834baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -598,6 +602,8 @@ Functions</h2></td></tr>
 <tr class="separator:a8df3e41912b8fec26518cb824505722c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af197d3a54edf9faf2e3c132537dc616d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#aa072932d15fbef2163f1b3704b33abf7">analysis_tool_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#af197d3a54edf9faf2e3c132537dc616d">opcode_mix_tool_create</a> (const std::string &amp;module_file_path, unsigned int verbose=0, const std::string &amp;alt_module_dir=&quot;&quot;)</td></tr>
 <tr class="separator:af197d3a54edf9faf2e3c132537dc616d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8fd21e9f63bcb7caf57c9ab146550a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a922f126e20f8a9b2a1d9f2634fcfff0e">record_analysis_tool_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad8fd21e9f63bcb7caf57c9ab146550a4">record_filter_tool_create</a> (const std::string &amp;output_dir, uint64_t stop_timestamp, int cache_filter_size, const std::string &amp;remove_trace_types, const std::string &amp;remove_marker_types, uint64_t trim_before_timestamp, uint64_t trim_after_timestamp, bool encodings2regdeps, unsigned int verbose)</td></tr>
+<tr class="separator:ad8fd21e9f63bcb7caf57c9ab146550a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b1651c8a97181eb4afe2c45476ce41e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#aa072932d15fbef2163f1b3704b33abf7">analysis_tool_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a7b1651c8a97181eb4afe2c45476ce41e">reuse_distance_tool_create</a> (const <a class="el" href="structdynamorio_1_1drmemtrace_1_1reuse__distance__knobs__t.html">reuse_distance_knobs_t</a> &amp;knobs)</td></tr>
 <tr class="separator:a7b1651c8a97181eb4afe2c45476ce41e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97b5e872335cb7666b7758a9f50b4579"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#aa072932d15fbef2163f1b3704b33abf7">analysis_tool_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a97b5e872335cb7666b7758a9f50b4579">reuse_time_tool_create</a> (unsigned int line_size=64, unsigned int verbose=0)</td></tr>
@@ -610,6 +616,8 @@ Functions</h2></td></tr>
 <tr class="separator:a3da86eaf6eb9950958f285c6d1ca4d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1ba1cd782ffa190a5110b94f88186b5"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#aa1ba1cd782ffa190a5110b94f88186b5">type_is_instr</a> (const <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59c">trace_type_t</a> type)</td></tr>
 <tr class="separator:aa1ba1cd782ffa190a5110b94f88186b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9151ca4d6eb3b845a0b6890555a4c217"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a9151ca4d6eb3b845a0b6890555a4c217">is_any_instr_type</a> (const <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59c">trace_type_t</a> type)</td></tr>
+<tr class="separator:a9151ca4d6eb3b845a0b6890555a4c217"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1d5a845b343a489ec61ceb2021bd1fc"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae1d5a845b343a489ec61ceb2021bd1fc">type_is_instr_branch</a> (const <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59c">trace_type_t</a> type)</td></tr>
 <tr class="separator:ae1d5a845b343a489ec61ceb2021bd1fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1a319424f45ebf473c8263fe37590cf"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#af1a319424f45ebf473c8263fe37590cf">type_is_instr_direct_branch</a> (const <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59c">trace_type_t</a> type)</td></tr>
@@ -1161,8 +1169,6 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaa26a98ef2f22ff4bfc9a43c688ae5cbf7"></a>OFFLINE_FILE_TYPE_ARCH_X86_64&#160;</td><td class="fielddoc"><p>Recorded on x86 (64-bit). </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaac9118269c36e185fe2a9b0b6895e0d07"></a>OFFLINE_FILE_TYPE_ARCH_ALL&#160;</td><td class="fielddoc"><p>All possible architecture types. </p>
-</td></tr>
 <tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaab5c970fa5c78548056a2b3d90c2512b2"></a>OFFLINE_FILE_TYPE_IFILTERED&#160;</td><td class="fielddoc"><p>Instruction addresses filtered online. Note: this file type may transition to non-filtered. If so, the transition is indicated by the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca2fa8ca3d28b2bd7b5b8c63ade7c6a26e">dynamorio::drmemtrace::TRACE_MARKER_TYPE_FILTER_ENDPOINT</a> marker and the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa7b6a185cde6ae20ece63f7bbfd0e5b26">OFFLINE_FILE_TYPE_BIMODAL_FILTERED_WARMUP</a> file type. Each window (which is indicated by the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca02845c6ba33cc5038f8a7bfe38c25f57">dynamorio::drmemtrace::TRACE_MARKER_TYPE_WINDOW_ID</a> marker) starts out filtered. This applies to <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa2bde173fab00e1eb6b226453b70b5410">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_DFILTERED</a> also. Note that threads that were created after the transition will also have this marker - right at the beginning. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaa2bde173fab00e1eb6b226453b70b5410"></a>OFFLINE_FILE_TYPE_DFILTERED&#160;</td><td class="fielddoc"><p>Data addresses filtered online. </p>
@@ -1183,6 +1189,10 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaa2eceb27369ebaa4b1acb9db29b7d64e0"></a>OFFLINE_FILE_TYPE_KERNEL_SYSCALL_INSTR_ONLY&#160;</td><td class="fielddoc"><p>Kernel instruction traces of syscalls are included. When memory addresses are also included for kernel execution, the file type is <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa8122186112a3ca356479e0b8bd08e9be">OFFLINE_FILE_TYPE_KERNEL_SYSCALLS</a> instead. On x86, the kernel trace is enabled by the -enable_kernel_tracing option that uses Intel® Processor Trace to collect an instruction trace for system call execution. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaa86be29047ad4643d1e92a11b8c535335"></a>OFFLINE_FILE_TYPE_CORE_SHARDED&#160;</td><td class="fielddoc"><p>Each trace shard represents one core and contains interleaved software threads. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaa00dce088778fce7d653921465f82e71f"></a>OFFLINE_FILE_TYPE_ARCH_REGDEPS&#160;</td><td class="fielddoc"><p>Trace filtered by the record_filter tool using -filter_encodings2regdeps. The encodings2regdeps filter replaces real ISA encodings with <a class="el" href="dr__ir__encode_8h.html#a00e03b2e5e75a83eacf9a0ee1674074aa1bbcfa1df3fffff3d96b357f9a2290d3">DR_ISA_REGDEPS</a> encodings. Note that these encoding changes do not update the instruction length, hence encoding size and instruction fetch size may not match. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaac9118269c36e185fe2a9b0b6895e0d07"></a>OFFLINE_FILE_TYPE_ARCH_ALL&#160;</td><td class="fielddoc"><p>All possible architecture types, including synthetic ones. </p>
 </td></tr>
 </table>
 
@@ -2128,6 +2138,33 @@ For additional file open parameters with the thread and window identifiers, use 
 
 </div>
 </div>
+<a id="a9151ca4d6eb3b845a0b6890555a4c217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9151ca4d6eb3b845a0b6890555a4c217">&#9670;&nbsp;</a></span>is_any_instr_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool dynamorio::drmemtrace::is_any_instr_type </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59c">trace_type_t</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns whether <code>type</code> represents any type of instruction record whether an instruction fetch or operation hint. This is a superset of <a class="el" href="namespacedynamorio_1_1drmemtrace.html#aa1ba1cd782ffa190a5110b94f88186b5">type_is_instr()</a> and includes <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca232a2e0ec49a9bbfff1a8b89cdf0f9eb">TRACE_TYPE_INSTR_NO_FETCH</a>. </p>
+
+</div>
+</div>
 <a id="af197d3a54edf9faf2e3c132537dc616d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af197d3a54edf9faf2e3c132537dc616d">&#9670;&nbsp;</a></span>opcode_mix_tool_create()</h2>
 
@@ -2160,6 +2197,91 @@ For additional file open parameters with the thread and window identifiers, use 
       </table>
 </div><div class="memdoc">
 <p>Creates an analysis tool which counts the number of instances of each opcode in the trace. This tool needs access to the modules.log and original libraries and binaries from the traced execution. It does not support online analysis. An alternate search path for the libraries in the modules.log can be specified in "alt_module_path". </p>
+
+</div>
+</div>
+<a id="ad8fd21e9f63bcb7caf57c9ab146550a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8fd21e9f63bcb7caf57c9ab146550a4">&#9670;&nbsp;</a></span>record_filter_tool_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a922f126e20f8a9b2a1d9f2634fcfff0e">record_analysis_tool_t</a>* dynamorio::drmemtrace::record_filter_tool_create </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>output_dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>stop_timestamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cache_filter_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>remove_trace_types</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>remove_marker_types</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>trim_before_timestamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>trim_after_timestamp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>encodings2regdeps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>verbose</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a record analysis tool that filters the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a067f98c2dab7fe5329e2ba248836370e">trace_entry_t</a> records of an offline trace. Streams through each shard independenty and parallelly, and writes the filtered version to the output directory with the same base name. Serial mode is not yet supported. The options specify the filter(s) to employ.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">output_dir</td><td>The destination directory for the new filtered trace. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stop_timestamp</td><td>Disables filtering (outputs everything) once a timestamp equal to or greater than this value is seen. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cache_filter_size</td><td>Enables a data cache filter with the given size in bytes with 64-byte lines and a direct mapped LRU cache. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">remove_trace_types</td><td>A comma-separated list of integers of <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59c">trace_type_t</a> types to remove. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">remove_marker_types</td><td>A comma-separated list of integers of <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295c">trace_marker_type_t</a> marker types to remove. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">trim_before_timestamp</td><td>Trim records from the trace's initial timestamp up to its first timestamp whose value is greater or equal to this parameter. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">trim_after_timestamp</td><td>Trim records after the trace's first timestamp whose value is greater than this parameter. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">encodings2regdeps</td><td>If true, converts instruction encodings from the real ISA of the input trace to the <a class="el" href="dr__ir__encode_8h.html#a00e03b2e5e75a83eacf9a0ee1674074aa1bbcfa1df3fffff3d96b357f9a2290d3">DR_ISA_REGDEPS</a> synthetic ISA. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">verbose</td><td>Verbosity level for notifications. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2553,5 +2675,5 @@ For additional file open parameters with the thread and window identifiers, use 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.90.19845 --- Fri May 3 2024 03:14:38 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.91.19853 --- Fri May 10 2024 03:13:42 &nbsp; <img border=0 src="favicon.png">
 </small></address>

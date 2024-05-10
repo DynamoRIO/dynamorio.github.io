@@ -24,7 +24,6 @@
       [ "OFFLINE_FILE_TYPE_ARCH_ARM32", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa2c33c3611a5d4a43dfea51af1cf25b07", null ],
       [ "OFFLINE_FILE_TYPE_ARCH_X86_32", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa4400e42a1e71d6069e13b21a8e9fc68d", null ],
       [ "OFFLINE_FILE_TYPE_ARCH_X86_64", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa26a98ef2f22ff4bfc9a43c688ae5cbf7", null ],
-      [ "OFFLINE_FILE_TYPE_ARCH_ALL", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaac9118269c36e185fe2a9b0b6895e0d07", null ],
       [ "OFFLINE_FILE_TYPE_IFILTERED", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaab5c970fa5c78548056a2b3d90c2512b2", null ],
       [ "OFFLINE_FILE_TYPE_DFILTERED", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa2bde173fab00e1eb6b226453b70b5410", null ],
       [ "OFFLINE_FILE_TYPE_ENCODINGS", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa1bc66b6cb976d3bb7f93af0ce5d2ec53", null ],
@@ -34,7 +33,9 @@
       [ "OFFLINE_FILE_TYPE_BIMODAL_FILTERED_WARMUP", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa7b6a185cde6ae20ece63f7bbfd0e5b26", null ],
       [ "OFFLINE_FILE_TYPE_KERNEL_SYSCALL_TRACE_TEMPLATES", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa5b38b284207dd42f882942f149677362", null ],
       [ "OFFLINE_FILE_TYPE_KERNEL_SYSCALL_INSTR_ONLY", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa2eceb27369ebaa4b1acb9db29b7d64e0", null ],
-      [ "OFFLINE_FILE_TYPE_CORE_SHARDED", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa86be29047ad4643d1e92a11b8c535335", null ]
+      [ "OFFLINE_FILE_TYPE_CORE_SHARDED", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa86be29047ad4643d1e92a11b8c535335", null ],
+      [ "OFFLINE_FILE_TYPE_ARCH_REGDEPS", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa00dce088778fce7d653921465f82e71f", null ],
+      [ "OFFLINE_FILE_TYPE_ARCH_ALL", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaac9118269c36e185fe2a9b0b6895e0d07", null ]
     ] ],
     [ "trace_marker_type_t", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295c", [
       [ "TRACE_MARKER_TYPE_KERNEL_EVENT", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca3b75f9115bb4146ed5540412e36bdd5a", null ],
@@ -129,6 +130,7 @@
       [ "TRACE_ENTRY_VERSION_FREQUENT_TIMESTAMPS", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daaf97ac42c62a634e8c33ffad2c4953f39", null ],
       [ "TRACE_ENTRY_VERSION", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e", null ]
     ] ],
+    [ "is_any_instr_type", "trace__entry_8h.html#a9151ca4d6eb3b845a0b6890555a4c217", null ],
     [ "type_has_address", "trace__entry_8h.html#a9ca0b3aaffc906b809a2ba3fb9dd730e", null ],
     [ "type_is_data", "trace__entry_8h.html#a8106f9507d394eb55d3be82b193733aa", null ],
     [ "type_is_instr", "trace__entry_8h.html#aa1ba1cd782ffa190a5110b94f88186b5", null ],

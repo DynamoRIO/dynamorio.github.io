@@ -185,9 +185,9 @@ Specifies the associativity of each unified L2 TLB. Must be a power of 2.</li>
 <li><b>-TLB_replace_policy</b> <br  />
 <em>default value: LFU</em> <br  />
 Specifies the replacement policy for TLBs. Supported policies: LFU (Least Frequently Used).</li>
-<li><b>-simulator_type</b> <br  />
-<em>default value: cache</em> <br  />
-Predefined types: cache, miss_analyzer, TLB, reuse_distance, reuse_time, histogram, basic_counts, invariant_checker, schedule_stats, or record_filter. The record_filter tool cannot be combined with the others as it operates on raw disk records. To invoke an external tool: specify its name as identified by a name.drcachesim config file in the DR tools directory.</li>
+<li><b>-tool</b> <br  />
+<em>default value: cache_simulator</em> <br  />
+Predefined types: cache_simulator, miss_analyzer, TLB_simulator, reuse_distance, reuse_time, histogram, basic_counts, invariant_checker, schedule_stats, or record_filter. The record_filter tool cannot be combined with the others as it operates on raw disk records. To invoke an external tool: specify its name as identified by a name.drcachesim config file in the DR tools directory.</li>
 <li><b>-verbose</b> <br  />
 <em>default value: 0</em> <br  />
 Verbosity level for notifications.</li>
@@ -368,6 +368,9 @@ Comma-separated integers for trace types to remove. See trace_type_t for the lis
 <li><b>-filter_marker_types</b> <br  />
 <em>default value: ""</em> <br  />
 Comma-separated integers for marker types to remove. See trace_marker_type_t for the list of marker types.</li>
+<li><b>-filter_encodings2regdeps</b> <br  />
+<em>default value: false</em> <br  />
+This option is for -simulator_type record_filter. When present, it converts the encoding of instructions from a real ISA to the DR_ISA_REGDEPS synthetic ISA.</li>
 <li><b>-trim_before_timestamp</b> <br  />
 <em>default value: 0</em> <br  />
 Removes all records (after headers) before the first TRACE_MARKER_TYPE_TIMESTAMP marker in the trace with timestamp greater than or equal to the specified value.</li>
@@ -385,5 +388,5 @@ When set to true, the trace invariant checker analysis tool aborts when a trace 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.90.19845 --- Fri May 3 2024 03:14:38 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.91.19853 --- Fri May 10 2024 03:13:42 &nbsp; <img border=0 src="favicon.png">
 </small></address>

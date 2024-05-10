@@ -33,6 +33,15 @@ permalink: /classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html
 <div class="contents">
 
 <p><code>#include &lt;analysis_tool.h&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for dynamorio::drmemtrace::analysis_tool_tmpl_t&lt; RecordType &gt;:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="/images/classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.png" usemap="#dynamorio::drmemtrace::analysis_5Ftool_5Ftmpl_5Ft_3C_20RecordType_20_3E_map" alt=""/>
+  <map id="dynamorio::drmemtrace::analysis_5Ftool_5Ftmpl_5Ft_3C_20RecordType_20_3E_map" name="dynamorio::drmemtrace::analysis_5Ftool_5Ftmpl_5Ft_3C_20RecordType_20_3E_map">
+<area href="classdynamorio_1_1drmemtrace_1_1record__filter__t.html" alt="dynamorio::drmemtrace::record_filter_t" shape="rect" coords="0,56,354,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -654,6 +663,8 @@ template&lt;typename RecordType &gt; </div>
 </div><div class="memdoc">
 <p>Identifies the shard type for this analysis. The return value indicates whether the tool supports this shard type, with failure (a non-empty string) being treated as a fatal error for the analysis. </p>
 
+<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__filter__t.html#a51e5e250f025c0af448cd60d2808ea7b">dynamorio::drmemtrace::record_filter_t</a>.</p>
+
 </div>
 </div>
 <a id="a220194108882407ba03f59dd4810d859"></a>
@@ -682,6 +693,8 @@ template&lt;typename RecordType &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Identifies the shard type for this analysis. The return value indicates whether the tool supports this shard type, with failure (a non-empty string) being treated as a fatal error for the analysis. </p>
+
+<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__filter__t.html#a51e5e250f025c0af448cd60d2808ea7b">dynamorio::drmemtrace::record_filter_t</a>.</p>
 
 </div>
 </div>
@@ -826,6 +839,8 @@ template&lt;typename RecordType &gt; </div>
 </div><div class="memdoc">
 <p>Returns a description of the last error for this shard. </p>
 
+<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__filter__t.html#aec4046997665cdbfd49d459e462fd705">dynamorio::drmemtrace::record_filter_t</a>.</p>
+
 </div>
 </div>
 <a id="a972477e400177256c6f27b0a82a25518"></a>
@@ -854,6 +869,8 @@ template&lt;typename RecordType &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Returns a description of the last error for this shard. </p>
+
+<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__filter__t.html#aec4046997665cdbfd49d459e462fd705">dynamorio::drmemtrace::record_filter_t</a>.</p>
 
 </div>
 </div>
@@ -884,6 +901,8 @@ template&lt;typename RecordType &gt; </div>
 </div><div class="memdoc">
 <p>Invoked once when all trace entries for a shard have been processed. <code>shard_data</code> is the value returned by <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a85bf2a95401193cc0c74b051598322ea">parallel_shard_init_stream()</a> for this shard. This allows a tool to clean up its thread data, or to report thread analysis results. Most tools, however, prefer to aggregate data or at least sort data, and perform nothing here, doing all cleanup in <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a69e143fd54a1bb740fd04d45c69d65da">print_results()</a> by storing the thread data into a table. Return whether exiting was successful. On failure, <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a972477e400177256c6f27b0a82a25518">parallel_shard_error()</a> returns a descriptive message. </p>
 
+<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__filter__t.html#a23e53ba9653056bfef282f570356ef8b">dynamorio::drmemtrace::record_filter_t</a>.</p>
+
 </div>
 </div>
 <a id="a9827b7c045e0f7b6ffa7451738d4b13a"></a>
@@ -912,6 +931,8 @@ template&lt;typename RecordType &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Invoked once when all trace entries for a shard have been processed. <code>shard_data</code> is the value returned by <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a85bf2a95401193cc0c74b051598322ea">parallel_shard_init_stream()</a> for this shard. This allows a tool to clean up its thread data, or to report thread analysis results. Most tools, however, prefer to aggregate data or at least sort data, and perform nothing here, doing all cleanup in <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a69e143fd54a1bb740fd04d45c69d65da">print_results()</a> by storing the thread data into a table. Return whether exiting was successful. On failure, <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a972477e400177256c6f27b0a82a25518">parallel_shard_error()</a> returns a descriptive message. </p>
+
+<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__filter__t.html#a23e53ba9653056bfef282f570356ef8b">dynamorio::drmemtrace::record_filter_t</a>.</p>
 
 </div>
 </div>
@@ -1036,6 +1057,8 @@ template&lt;typename RecordType &gt; </div>
 </div><div class="memdoc">
 <p>Invoked once for each trace shard prior to calling <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ae5604598d12427c46f4682b7bd580c39">parallel_shard_memref()</a> for that shard, this allows a tool to create data local to a shard. The <code>shard_index</code> is the 0-based ordinal of the shard, serving as a unique identifier allowing shard data to be stored into a global table if desired (typically for aggregation use in <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a69e143fd54a1bb740fd04d45c69d65da">print_results()</a>). The <code>worker_data</code> is the return value of <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ad8872d91bd44942a38eafbc9857ddfac">parallel_worker_init()</a> for the worker thread who will exclusively operate on this shard. The <code>shard_stream</code> allows tools to query details of the underlying trace shard during parallel operation; it is valid only until <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a9827b7c045e0f7b6ffa7451738d4b13a">parallel_shard_exit()</a> is called. The return value here will be passed to each invocation of <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ae5604598d12427c46f4682b7bd580c39">parallel_shard_memref()</a> for that same shard. </p>
 
+<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__filter__t.html#a2c9b39c566d195878dddb16915e67ae6">dynamorio::drmemtrace::record_filter_t</a>.</p>
+
 </div>
 </div>
 <a id="a85bf2a95401193cc0c74b051598322ea"></a>
@@ -1080,6 +1103,8 @@ template&lt;typename RecordType &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Invoked once for each trace shard prior to calling <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ae5604598d12427c46f4682b7bd580c39">parallel_shard_memref()</a> for that shard, this allows a tool to create data local to a shard. The <code>shard_index</code> is the 0-based ordinal of the shard, serving as a unique identifier allowing shard data to be stored into a global table if desired (typically for aggregation use in <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a69e143fd54a1bb740fd04d45c69d65da">print_results()</a>). The <code>worker_data</code> is the return value of <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ad8872d91bd44942a38eafbc9857ddfac">parallel_worker_init()</a> for the worker thread who will exclusively operate on this shard. The <code>shard_stream</code> allows tools to query details of the underlying trace shard during parallel operation; it is valid only until <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a9827b7c045e0f7b6ffa7451738d4b13a">parallel_shard_exit()</a> is called. The return value here will be passed to each invocation of <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ae5604598d12427c46f4682b7bd580c39">parallel_shard_memref()</a> for that same shard. </p>
+
+<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__filter__t.html#a2c9b39c566d195878dddb16915e67ae6">dynamorio::drmemtrace::record_filter_t</a>.</p>
 
 </div>
 </div>
@@ -1187,6 +1212,8 @@ template&lt;typename RecordType &gt; </div>
 </div><div class="memdoc">
 <p>Returns whether this tool supports analyzing trace shards concurrently, or whether it needs to see a single thread-interleaved stream of traced events. This may be called prior to <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a16ba77b9899dde9627e9383ca587af79">initialize()</a>. </p>
 
+<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__filter__t.html#ab1ed796b3533d63ae4e3c43ce287a344">dynamorio::drmemtrace::record_filter_t</a>.</p>
+
 </div>
 </div>
 <a id="a92fd2af4f6e88e5de7e4d2ad15574885"></a>
@@ -1214,6 +1241,8 @@ template&lt;typename RecordType &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Returns whether this tool supports analyzing trace shards concurrently, or whether it needs to see a single thread-interleaved stream of traced events. This may be called prior to <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a16ba77b9899dde9627e9383ca587af79">initialize()</a>. </p>
+
+<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__filter__t.html#ab1ed796b3533d63ae4e3c43ce287a344">dynamorio::drmemtrace::record_filter_t</a>.</p>
 
 </div>
 </div>
@@ -1421,6 +1450,8 @@ template&lt;typename RecordType &gt; </div>
 </div><div class="memdoc">
 <p>This routine reports the results of the trace analysis. It should leave the i/o state in a default format (std::dec) to support multiple tools. The return value indicates whether it was successful. On failure, <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ab9cb5947ef8a6de50dce906bf17bb580">get_error_string()</a> returns a descriptive message. </p>
 
+<p>Implemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__filter__t.html#ab292f41d274783a75dd50ac7e07e5cde">dynamorio::drmemtrace::record_filter_t</a>.</p>
+
 </div>
 </div>
 <a id="a69e143fd54a1bb740fd04d45c69d65da"></a>
@@ -1448,6 +1479,8 @@ template&lt;typename RecordType &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>This routine reports the results of the trace analysis. It should leave the i/o state in a default format (std::dec) to support multiple tools. The return value indicates whether it was successful. On failure, <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ab9cb5947ef8a6de50dce906bf17bb580">get_error_string()</a> returns a descriptive message. </p>
+
+<p>Implemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__filter__t.html#ab292f41d274783a75dd50ac7e07e5cde">dynamorio::drmemtrace::record_filter_t</a>.</p>
 
 </div>
 </div>
@@ -1578,5 +1611,5 @@ template&lt;typename RecordType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.90.19845 --- Fri May 3 2024 03:14:38 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.91.19853 --- Fri May 10 2024 03:13:42 &nbsp; <img border=0 src="favicon.png">
 </small></address>

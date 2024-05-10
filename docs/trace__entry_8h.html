@@ -280,8 +280,6 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa26a98ef2f22ff4bfc9a43c688ae5cbf7">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_ARCH_X86_64</a> = 0x40, 
 <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaac9118269c36e185fe2a9b0b6895e0d07">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_ARCH_ALL</a>, 
-<br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaab5c970fa5c78548056a2b3d90c2512b2">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_IFILTERED</a> = 0x80, 
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa2bde173fab00e1eb6b226453b70b5410">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_DFILTERED</a> = 0x100, 
@@ -300,7 +298,11 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa2eceb27369ebaa4b1acb9db29b7d64e0">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_KERNEL_SYSCALL_INSTR_ONLY</a> = 0x8000, 
 <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa86be29047ad4643d1e92a11b8c535335">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_CORE_SHARDED</a> = 0x10000
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa86be29047ad4643d1e92a11b8c535335">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_CORE_SHARDED</a> = 0x10000, 
+<br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa00dce088778fce7d653921465f82e71f">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_ARCH_REGDEPS</a> = 0x20000, 
+<br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaac9118269c36e185fe2a9b0b6895e0d07">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_ARCH_ALL</a>
 <br />
  }</td></tr>
 <tr class="separator:a017717a4b9ef5ae1f6d1fef1df834baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -316,6 +318,8 @@ Enumerations</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:aa1ba1cd782ffa190a5110b94f88186b5"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#aa1ba1cd782ffa190a5110b94f88186b5">dynamorio::drmemtrace::type_is_instr</a> (const trace_type_t type)</td></tr>
 <tr class="separator:aa1ba1cd782ffa190a5110b94f88186b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9151ca4d6eb3b845a0b6890555a4c217"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a9151ca4d6eb3b845a0b6890555a4c217">dynamorio::drmemtrace::is_any_instr_type</a> (const trace_type_t type)</td></tr>
+<tr class="separator:a9151ca4d6eb3b845a0b6890555a4c217"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1d5a845b343a489ec61ceb2021bd1fc"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae1d5a845b343a489ec61ceb2021bd1fc">dynamorio::drmemtrace::type_is_instr_branch</a> (const trace_type_t type)</td></tr>
 <tr class="separator:ae1d5a845b343a489ec61ceb2021bd1fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1a319424f45ebf473c8263fe37590cf"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#af1a319424f45ebf473c8263fe37590cf">dynamorio::drmemtrace::type_is_instr_direct_branch</a> (const trace_type_t type)</td></tr>
@@ -460,5 +464,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.90.19845 --- Fri May 3 2024 03:14:36 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.91.19853 --- Fri May 10 2024 03:13:40 &nbsp; <img border=0 src="favicon.png">
 </small></address>

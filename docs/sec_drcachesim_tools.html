@@ -24,7 +24,7 @@ permalink: /sec_drcachesim_tools.html
 <div class="title">Analysis Tool Suite </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>In addition to a CPU cache simulator, other predefined analysis tools are available that operate on memory address traces. Which set of tools is used can be selected with the <code>-simulator_type</code> parameter. New, custom tools can also be created, as described in <a class="el" href="sec_drcachesim_newtool.html">Creating New Analysis Tools</a>.</p>
+<div class="textblock"><p>In addition to a CPU cache simulator, other predefined analysis tools are available that operate on memory address traces. Which set of tools is used can be selected with the <code>-tool</code> parameter. New, custom tools can also be created, as described in <a class="el" href="sec_drcachesim_newtool.html">Creating New Analysis Tools</a>.</p>
 <ul>
 <li><a class="el" href="sec_drcachesim_tools.html#sec_tool_cache_sim">Cache Simulator</a></li>
 <li><a class="el" href="sec_drcachesim_tools.html#sec_tool_TLB_sim">TLB Simulator</a></li>
@@ -89,8 +89,8 @@ Cache Simulator</h1>
 <div class="line">    Total miss rate:                  0.76%</div>
 </div><!-- fragment --><h1><a class="anchor" id="sec_tool_TLB_sim"></a>
 TLB Simulator</h1>
-<p>To simulate TLB devices instead of caches, pass <code>TLB</code> to <code>-simulator_type:</code> </p>
-<div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -simulator_type TLB -- ~/test/pi_estimator</div>
+<p>To simulate TLB devices instead of caches, pass <code>TLB</code> to <code>-tool:</code> </p>
+<div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -tool TLB -- ~/test/pi_estimator</div>
 <div class="line">Estimation of pi is 3.142425985001098</div>
 <div class="line">---- &lt;application exited with code 0&gt; ----</div>
 <div class="line">TLB simulation results:</div>
@@ -143,7 +143,7 @@ TLB Simulator</h1>
 </div><!-- fragment --><h1><a class="anchor" id="sec_tool_reuse_distance"></a>
 Reuse Distance</h1>
 <p>To compute reuse distance metrics:</p>
-<div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -simulator_type reuse_distance -reuse_distance_histogram -- ~/test/pi_estimator</div>
+<div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -tool reuse_distance -reuse_distance_histogram -- ~/test/pi_estimator</div>
 <div class="line">Estimation of pi is 3.142425985001098</div>
 <div class="line">---- &lt;application exited with code 0&gt; ----</div>
 <div class="line">Reuse distance tool aggregated results:</div>
@@ -231,7 +231,7 @@ Reuse Distance</h1>
 </div><!-- fragment --><h1><a class="anchor" id="sec_tool_reuse_time"></a>
 Reuse Time</h1>
 <p>A reuse time tool is also provided, which counts the total number of memory accesses (without considering uniqueness) between accesses to the same address:</p>
-<div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -simulator_type reuse_time -- ~/test/pi_estimator</div>
+<div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -tool reuse_time -- ~/test/pi_estimator</div>
 <div class="line">Estimation of pi is 3.142425985001098</div>
 <div class="line">---- &lt;application exited with code 0&gt; ----</div>
 <div class="line">Reuse time tool aggregated results:</div>
@@ -268,7 +268,7 @@ Reuse Time</h1>
 </div><!-- fragment --><h1><a class="anchor" id="sec_tool_basic_counts"></a>
 Event Counts</h1>
 <p>To simply see the counts of instructions and memory references broken down by thread use the basic counts tool:</p>
-<div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -simulator_type basic_counts -- ~/test/pi_estimator</div>
+<div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -tool basic_counts -- ~/test/pi_estimator</div>
 <div class="line">Estimation of pi is 3.142425985001098</div>
 <div class="line">---- &lt;application exited with code 0&gt; ----</div>
 <div class="line">Basic counts tool results:</div>
@@ -371,7 +371,7 @@ Opcode Mix</h1>
 <p>The opcode_mix tool uses the non-fetched instruction information along with the preserved libraries and binaries from the traced execution to gather more information on each executed instruction than was stored in the trace. To run on online traces, pass the <code>-instr_encodings</code> option. The results are broken down by the opcodes used in DR's IR, where for x86 <code>mov</code> is split into a separate opcode for load and store but both have the same public string "mov":</p>
 <div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -offline -- ~/test/pi_estimator</div>
 <div class="line">Estimation of pi is 3.142425985001098</div>
-<div class="line">$ bin64/drrun -t drcachesim -simulator_type opcode_mix -indir drmemtrace.*.dir</div>
+<div class="line">$ bin64/drrun -t drcachesim -tool opcode_mix -indir drmemtrace.*.dir</div>
 <div class="line">Opcode mix tool results:</div>
 <div class="line">         267271 : total executed instructions</div>
 <div class="line">          36432 :       mov</div>
@@ -405,7 +405,7 @@ Human-Readable View</h1>
 <p>The view tool prints out the contents of the trace for human viewing, including disassembling instructions in AT&amp;T, Intel, Arm, or DR format (to see disassembly for online traces, pass the <code>-instr_encodings</code> option). The -skip_refs and -sim_refs flags can be used to set a start point and end point for the disassembled view. Note that these flags compute the number of trace entry records which are skipped or displayed which is distinct from the number of instruction records.</p>
 <p>The tool displays loads and stores, as well as metadata marker entries for timestamps, on which core and thread the subsequent instruction sequence was executed, and kernel and system call transfers (these correspond to signal or event handler interruptions of the regular execution flow).</p>
 <p>In its first two columns, the tool displays the trace record ordinal and the instruction fetch ordinal.</p>
-<div class="fragment"><div class="line">$ $ bin64/drrun -t drcachesim -simulator_type view -indir drmemtrace.*.dir -sim_refs 20</div>
+<div class="fragment"><div class="line">$ $ bin64/drrun -t drcachesim -tool view -indir drmemtrace.*.dir -sim_refs 20</div>
 <div class="line">Output format:</div>
 <div class="line">&lt;--record#-&gt; &lt;--instr#-&gt;: &lt;---tid---&gt; &lt;record details&gt;</div>
 <div class="line">------------------------------------------------------------</div>
@@ -488,7 +488,7 @@ View Function Calls</h1>
 <p>The func_view tool records function argument and return values for function names specified at tracing time. See <a class="el" href="sec_drcachesim_funcs.html">Tracing Function Calls</a> for more information.</p>
 <div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -offline -record_function <span class="stringliteral">&#39;fib|1&#39;</span> -- ~/test/fib 5</div>
 <div class="line">Estimation of pi is 3.142425985001098</div>
-<div class="line">$ bin64/drrun -t drcachesim -simulator_type func_view -indir drmemtrace.*.dir</div>
+<div class="line">$ bin64/drrun -t drcachesim -tool func_view -indir drmemtrace.*.dir</div>
 <div class="line">0x7fc06d2288eb =&gt; common.fib!fib(0x5)</div>
 <div class="line">    0x7fc06d22888e =&gt; common.fib!fib(0x4)</div>
 <div class="line">        0x7fc06d22888e =&gt; common.fib!fib(0x3)</div>
@@ -518,7 +518,7 @@ View Function Calls</h1>
 </div><!-- fragment --><h1><a class="anchor" id="sec_tool_histogram"></a>
 Cache Line Histogram</h1>
 <p>The top referenced cache lines are displayed by the <code>histogram</code> tool:</p>
-<div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -simulator_type histogram -- ~/test/pi_estimator</div>
+<div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -tool histogram -- ~/test/pi_estimator</div>
 <div class="line">Estimation of pi is 3.142425985001098</div>
 <div class="line">---- &lt;application exited with code 0&gt; ----</div>
 <div class="line">Cache line histogram tool results:</div>
@@ -552,7 +552,7 @@ Invariant Checker</h1>
 <h1><a class="anchor" id="sec_tool_syscall_mix"></a>
 System Call Mix</h1>
 <p>The system call mix tool counts the frequency of system calls in a trace. It works for both online and offline traces. It uses the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca9c6c0b467a729d1d4c4298bef1892c74">dynamorio::drmemtrace::TRACE_MARKER_TYPE_SYSCALL</a> markers that store the system call number. This works only with traces that have these markers; that is, offline traces must have <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa2bbf303be87f5709ada421f2b68f9898">dynamorio::drmemtrace::OFFLINE_FILE_TYPE_SYSCALL_NUMBERS</a> in their file type.</p>
-<div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -indir drmemtrace.ls.*.dir -simulator_type syscall_mix</div>
+<div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -indir drmemtrace.ls.*.dir -tool syscall_mix</div>
 <div class="line">Syscall mix tool results:</div>
 <div class="line">          count : syscall_num</div>
 <div class="line">             17 :         9</div>
@@ -587,7 +587,7 @@ Record Filter</h1>
 </ul>
 <p>A filter can be applied only to the start of a trace using the -filter_stop_timestamp option.</p>
 <p>Example of removing function markers:</p>
-<div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -indir mytracedir -simulator_type basic_counts</div>
+<div class="fragment"><div class="line">$ bin64/drrun -t drcachesim -indir mytracedir -tool basic_counts</div>
 <div class="line">...</div>
 <div class="line">        9009 total <span class="keyword">function</span> <span class="keywordtype">id</span> markers</div>
 <div class="line">        5006 total <span class="keyword">function</span> <span class="keywordflow">return</span> address markers</div>
@@ -595,10 +595,10 @@ Record Filter</h1>
 <div class="line">        4003 total <span class="keyword">function</span> <span class="keywordflow">return</span> value markers</div>
 <div class="line">...</div>
 <div class="line"> </div>
-<div class="line">$ bin64/drrun -t drcachesim -simulator_type record_filter -filter_marker_types 4,5,6,7 -indir mytracedir -outdir newdir</div>
+<div class="line">$ bin64/drrun -t drcachesim -tool record_filter -filter_marker_types 4,5,6,7 -indir mytracedir -outdir newdir</div>
 <div class="line">Output 1280800 entries from 1304825 entries.</div>
 <div class="line"> </div>
-<div class="line">$ bin64/drrun -t drcachesim -indir newdir -simulator_type basic_counts</div>
+<div class="line">$ bin64/drrun -t drcachesim -indir newdir -tool basic_counts</div>
 <div class="line">...</div>
 <div class="line">           0 total <span class="keyword">function</span> <span class="keywordtype">id</span> markers</div>
 <div class="line">           0 total <span class="keyword">function</span> <span class="keywordflow">return</span> address markers</div>
@@ -612,5 +612,5 @@ Record Filter</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.90.19845 --- Fri May 3 2024 03:14:38 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.91.19853 --- Fri May 10 2024 03:13:42 &nbsp; <img border=0 src="favicon.png">
 </small></address>

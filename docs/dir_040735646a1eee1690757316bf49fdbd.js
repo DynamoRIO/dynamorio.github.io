@@ -18,6 +18,7 @@
     [ "pt2ir.h", "build__release-64_2clients_2include_2drmemtrace_2pt2ir_8h.html", {% include_relative build__release-64_2clients_2include_2drmemtrace_2pt2ir_8h.js %} ],
     [ "raw2trace.h", "raw2trace_8h.html", {% include_relative raw2trace_8h.js %} ],
     [ "raw2trace_shared.h", "raw2trace__shared_8h.html", {% include_relative raw2trace__shared_8h.js %} ],
+    [ "record_filter_create.h", "record__filter__create_8h.html", {% include_relative record__filter__create_8h.js %} ],
     [ "reuse_distance_create.h", "reuse__distance__create_8h.html", {% include_relative reuse__distance__create_8h.js %} ],
     [ "reuse_time_create.h", "reuse__time__create_8h.html", {% include_relative reuse__time__create_8h.js %} ],
     [ "schedule_stats_create.h", "schedule__stats__create_8h.html", {% include_relative schedule__stats__create_8h.js %} ],

@@ -57,7 +57,9 @@
     [ "_tracedump_stub_data", "struct__tracedump__stub__data.html", null ],
     [ "_tracedump_trace_header_t", "struct__tracedump__trace__header__t.html", null ],
     [ "_version_number_t", "union__version__number__t.html", null ],
-    [ "dynamorio::drmemtrace::analysis_tool_tmpl_t< RecordType >", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html", null ],
+    [ "dynamorio::drmemtrace::analysis_tool_tmpl_t< RecordType >", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html", [
+      [ "dynamorio::drmemtrace::record_filter_t", "classdynamorio_1_1drmemtrace_1_1record__filter__t.html", null ]
+    ] ],
     [ "dynamorio::drmemtrace::analyzer_tmpl_t< RecordType, ReaderType >", "classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html", null ],
     [ "dynamorio::drmemtrace::bitset_hash_table_t< T >", "classdynamorio_1_1drmemtrace_1_1bitset__hash__table__t.html", null ],
     [ "dynamorio::drmemtrace::bitset_hash_table_t< app_pc >", "classdynamorio_1_1drmemtrace_1_1bitset__hash__table__t.html", null ],
@@ -105,6 +107,8 @@
     [ "dynamorio::drmemtrace::pt_sb_config_t", "structdynamorio_1_1drmemtrace_1_1pt__sb__config__t.html", null ],
     [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::range_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html", null ],
     [ "dynamorio::drmemtrace::raw2trace_t", "classdynamorio_1_1drmemtrace_1_1raw2trace__t.html", null ],
+    [ "dynamorio::drmemtrace::record_filter_t::record_filter_func_t", "classdynamorio_1_1drmemtrace_1_1record__filter__t_1_1record__filter__func__t.html", null ],
+    [ "dynamorio::drmemtrace::record_filter_t::record_filter_info_t", "structdynamorio_1_1drmemtrace_1_1record__filter__t_1_1record__filter__info__t.html", null ],
     [ "dynamorio::drmemtrace::replay_file_checker_t", "classdynamorio_1_1drmemtrace_1_1replay__file__checker__t.html", null ],
     [ "dynamorio::drmemtrace::reuse_distance_knobs_t", "structdynamorio_1_1drmemtrace_1_1reuse__distance__knobs__t.html", null ],
     [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::scheduler_options_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html", null ],

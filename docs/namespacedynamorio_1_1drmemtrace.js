@@ -26,6 +26,7 @@
     [ "raw2trace_t", "classdynamorio_1_1drmemtrace_1_1raw2trace__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1raw2trace__t.js %} ],
     [ "reader_t", "classdynamorio_1_1drmemtrace_1_1reader__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1reader__t.js %} ],
     [ "record_file_reader_t", "classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1record__file__reader__t.js %} ],
+    [ "record_filter_t", "classdynamorio_1_1drmemtrace_1_1record__filter__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1record__filter__t.js %} ],
     [ "record_reader_t", "classdynamorio_1_1drmemtrace_1_1record__reader__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1record__reader__t.js %} ],
     [ "replay_file_checker_t", "classdynamorio_1_1drmemtrace_1_1replay__file__checker__t.html", null ],
     [ "reuse_distance_knobs_t", "structdynamorio_1_1drmemtrace_1_1reuse__distance__knobs__t.html", null ],
