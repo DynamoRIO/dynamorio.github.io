@@ -37,10 +37,27 @@ permalink: /structdynamorio_1_1drmemtrace_1_1record__filter__t_1_1record__filter
 Data Fields</h2></td></tr>
 <tr class="memitem:a0f06f8f9a8be6dcb862afc23ffc13917"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a067f98c2dab7fe5329e2ba248836370e">trace_entry_t</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1record__filter__t_1_1record__filter__info__t.html#a0f06f8f9a8be6dcb862afc23ffc13917">last_encoding</a></td></tr>
 <tr class="separator:a0f06f8f9a8be6dcb862afc23ffc13917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a065340974eb24dca1de89791638bfa4a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1record__filter__t_1_1record__filter__info__t.html#a065340974eb24dca1de89791638bfa4a">dcontext</a></td></tr>
+<tr class="separator:a065340974eb24dca1de89791638bfa4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface for the record_filter to share data with its filters. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
+<a id="a065340974eb24dca1de89791638bfa4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a065340974eb24dca1de89791638bfa4a">&#9670;&nbsp;</a></span>dcontext</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* dynamorio::drmemtrace::record_filter_t::record_filter_info_t::dcontext</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gives filters access to dcontext_t. Note that dcontext_t is not entirely thread-safe. AArch32 encoding and decoding is problematic as the global encode_state_t and decode_state_t are used for GLOBAL_DCONTEXT. Furthermore, modifying the ISA mode can lead to data races. </p>
+
+</div>
+</div>
 <a id="a0f06f8f9a8be6dcb862afc23ffc13917"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0f06f8f9a8be6dcb862afc23ffc13917">&#9670;&nbsp;</a></span>last_encoding</h2>
 
@@ -65,5 +82,5 @@ Data Fields</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.91.19853 --- Fri May 10 2024 03:13:42 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.91.19860 --- Fri May 17 2024 03:14:12 &nbsp; <img border=0 src="favicon.png">
 </small></address>

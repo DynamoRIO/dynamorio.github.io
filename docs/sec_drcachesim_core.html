@@ -24,7 +24,7 @@ permalink: /sec_drcachesim_core.html
 <div class="title">Core Simulation Support </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <code>drcachesim</code> trace format includes information intended for use by core simulators as well as pure cache simulators. For traces that are not filtered by an online first-level cache, each data reference is preceded by the instruction fetch entry for the instruction that issued the data request, which includes the instruction encoding with the opcode and operands. Additionally, on x86, string loop instructions involve a single insruction fetch followed by a loop of loads and/or stores. A <code>drcachesim</code> trace includes a special "no-fetch" instruction entry per iteration so that core simulators have the instruction information to go along with each load and store, while cache simulators can ignore these "no-fetch" entries and avoid incorrectly inflating instruction fetch statistics.</p>
+<div class="textblock"><p>The <code>drmemtrace</code> trace format includes information intended for use by core simulators as well as pure cache simulators. For traces that are not filtered by an online first-level cache, each data reference is preceded by the instruction fetch entry for the instruction that issued the data request, which includes the instruction encoding with the opcode and operands. Additionally, on x86, string loop instructions involve a single insruction fetch followed by a loop of loads and/or stores. A <code>drmemtrace</code> trace includes a special "no-fetch" instruction entry per iteration so that core simulators have the instruction information to go along with each load and store, while cache simulators can ignore these "no-fetch" entries and avoid incorrectly inflating instruction fetch statistics.</p>
 <p>Traces include scheduling markers providing the timestamp and hardware thread identifier on each thread transition, allowing a simulator to more closely match the actual hardware if so desired.</p>
 <p>Traces also include markers indicating disruptions in user mode control flow such as signal handler entry and exit.</p>
 <p>Offline traces explicitly identify whether each conditional branch was taken or not, and include the actual target of indirect branches, for convenience to avoid having to read either the subsequent entry or the kernel transfer event marker (or infer branch behavior for rseq aborts):</p>
@@ -43,5 +43,5 @@ permalink: /sec_drcachesim_core.html
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.91.19853 --- Fri May 10 2024 03:13:42 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.91.19860 --- Fri May 17 2024 03:14:11 &nbsp; <img border=0 src="favicon.png">
 </small></address>
