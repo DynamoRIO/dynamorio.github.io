@@ -25,7 +25,7 @@ permalink: /page_code_content.html
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>See also <a class="el" href="page_workflow.html">Development Workflow</a> and <a class="el" href="page_code_style.html">Coding Style Conventions</a>.</p>
-<h1><a class="anchor" id="autotoc_md107"></a>
+<h1><a class="anchor" id="autotoc_md109"></a>
 Adding New Features</h1>
 <ol type="1">
 <li>A new feature should be added under its own preprocessor define as well as under its own off-by-default runtime option, to facilitate incremental development and testing. Once it is working properly, the ifdefs can be removed. Once it is proven to be worthwhile and robust, the option can be turned on by default.</li>
@@ -39,13 +39,13 @@ Adding New Features</h1>
 <li>Add a new statistic to <code>core/lib/statsx.h</code> for anything we might want to keep track of.</li>
 <li>Be careful with locks. Make sure to follow our deadlock-avoidance scheme when adding a new lock: add it to the list in <code>core/utils.h</code>.</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md108"></a>
+<h1><a class="anchor" id="autotoc_md110"></a>
 Backward Compatibility</h1>
 <ol type="1">
 <li>Remember that the DynamoRIO API is an interface used by many people. Do not take changes to the interface lightly. In general strive to avoid breaking either source compatibility or binary compatibility, though for us source is more important.</li>
 <li>If we decided that changing an interface is required, please update the changelog in api/docs/release.dox with a description of the change and a note that it breaks either binary or source compatibility.</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md109"></a>
+<h1><a class="anchor" id="autotoc_md111"></a>
 Security</h1>
 <ol type="1">
 <li>Be security aware. Carefully watch your buffers and input validation to avoid introducing vulnerabilities.</li>
@@ -89,7 +89,7 @@ Security</h1>
 <li>The options are made read-only after initialization. Now that we have .data read-only, this is simply part of that feature.</li>
 <li>The base of the dynamorio.dll library is randomized.</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md110"></a>
+<h1><a class="anchor" id="autotoc_md112"></a>
 Transparency</h1>
 <p>The DynamoRIO core must be absolutely transparent. It cannot interfere with the application's semantics. This means that extra care must be taken when using <b>any</b> operating system or shared library resources that might interact with the application's use of those resources. See the API documentation for more details. The following guidelines list some common mistakes to avoid.</p>
 <ol type="1">
@@ -108,5 +108,5 @@ Transparency</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.91.19860 --- Fri May 17 2024 03:14:10 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.92.19865 --- Fri May 24 2024 03:14:36 &nbsp; <img border=0 src="favicon.png">
 </small></address>

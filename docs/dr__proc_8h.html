@@ -156,6 +156,27 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a39fca1837c5ce7715cbf571669660c13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ffeec9fb13eabb34411ecd31d122911"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911">feature_reg_idx_t</a> { <br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911a1a828488d3f29269229746cd59a0e9e6">AA64ISAR0</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911ad165d43c9d86214d9480f0fc3c906f4c">AA64ISAR1</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911afb23e9bbf6374a903fcacf16412cb460">AA64PFR0</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911ac2e857a3a12a7e1ab2a1b80426508060">AA64MMFR1</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911a382d924718c00f169d32b528f6f1004a">AA64DFR0</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911a69bc8b8250e4a9c8371bce1d7f05d579">AA64ZFR0</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911a5ec3fb94b74951c44644d930f294d108">AA64PFR1</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911af93dd9b986c63ca1d5eb6e63468730a7">AA64ISAR2</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911a4ce413f8504c8d9519d9c37315469c4a">AA64_NUM_FEAT_REGS</a>
+<br />
+ }</td></tr>
+<tr class="separator:a9ffeec9fb13eabb34411ecd31d122911"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e226019d68bd13050692da392f6c4bf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bf">feature_bit_t</a> { <br />
 &#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac39f532dceb337cb996ebf5a8d658668">FEATURE_FPU</a> = 0, 
 <br />
@@ -327,81 +348,85 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac605f4f78478d02373fa0c694b129fa2">FEATURE_AVX512BW</a> = 30 + 128, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa650351ab203638f53d96bcbf0775da75">FEATURE_AESX</a> = DEF_FEAT(AA64ISAR0, 1, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa650351ab203638f53d96bcbf0775da75">FEATURE_AESX</a> = DEF_FEAT(AA64ISAR0, 1, 1, FEAT_GR_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa79127c7fb09d20205c16b9c607d7bee1">FEATURE_PMULL</a> = DEF_FEAT(AA64ISAR0, 1, 2, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa79127c7fb09d20205c16b9c607d7bee1">FEATURE_PMULL</a> = DEF_FEAT(AA64ISAR0, 1, 2, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa9076766d3f75068f3d59b79f2a2f7131">FEATURE_SHA1</a> = DEF_FEAT(AA64ISAR0, 2, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa9076766d3f75068f3d59b79f2a2f7131">FEATURE_SHA1</a> = DEF_FEAT(AA64ISAR0, 2, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa4b067643b7e43334035b4d0835a139cd">FEATURE_SHA256</a> = DEF_FEAT(AA64ISAR0, 3, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa4b067643b7e43334035b4d0835a139cd">FEATURE_SHA256</a> = DEF_FEAT(AA64ISAR0, 3, 1, FEAT_GR_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0236d3734b5934a8206d7f4e79f3e877">FEATURE_SHA512</a> = DEF_FEAT(AA64ISAR0, 3, 2, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0236d3734b5934a8206d7f4e79f3e877">FEATURE_SHA512</a> = DEF_FEAT(AA64ISAR0, 3, 2, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa413df9cec868d14d76f5a778cc959faa">FEATURE_CRC32</a> = DEF_FEAT(AA64ISAR0, 4, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa413df9cec868d14d76f5a778cc959faa">FEATURE_CRC32</a> = DEF_FEAT(AA64ISAR0, 4, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaf54c49607b5d61c7e0a9b21996689d1c">FEATURE_LSE</a> = DEF_FEAT(AA64ISAR0, 5, 2, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaf54c49607b5d61c7e0a9b21996689d1c">FEATURE_LSE</a> = DEF_FEAT(AA64ISAR0, 5, 1, FEAT_GR_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadfc1db618de483a39e5f8b8cec1622c1">FEATURE_RDM</a> = DEF_FEAT(AA64ISAR0, 7, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadfc1db618de483a39e5f8b8cec1622c1">FEATURE_RDM</a> = DEF_FEAT(AA64ISAR0, 7, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfad4a6c6e6b5996837a6d2a8b549559949">FEATURE_SHA3</a> = DEF_FEAT(AA64ISAR0, 8, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfad4a6c6e6b5996837a6d2a8b549559949">FEATURE_SHA3</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa3de95b3c23c1a1ddad9ff8fc5c4f9583">FEATURE_SM3</a> = DEF_FEAT(AA64ISAR0, 9, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa3de95b3c23c1a1ddad9ff8fc5c4f9583">FEATURE_SM3</a> = DEF_FEAT(AA64ISAR0, 9, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa6c5f6d72ed2576921da5edbd125d253f">FEATURE_SM4</a> = DEF_FEAT(AA64ISAR0, 10, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa6c5f6d72ed2576921da5edbd125d253f">FEATURE_SM4</a> = DEF_FEAT(AA64ISAR0, 10, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0e38620c3eb5b7692e6d440951dbb0dc">FEATURE_DotProd</a> = DEF_FEAT(AA64ISAR0, 11, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0e38620c3eb5b7692e6d440951dbb0dc">FEATURE_DotProd</a> = DEF_FEAT(AA64ISAR0, 11, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa6bff5b28b9e9b6f0c173dfbdba972acb">FEATURE_FHM</a> = DEF_FEAT(AA64ISAR0, 12, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa6bff5b28b9e9b6f0c173dfbdba972acb">FEATURE_FHM</a> = DEF_FEAT(AA64ISAR0, 12, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa29d7b02eb17caf4f89e108e9ae148970">FEATURE_FlagM</a> = DEF_FEAT(AA64ISAR0, 13, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa29d7b02eb17caf4f89e108e9ae148970">FEATURE_FlagM</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadb850e3a80639ccd801bf7475e1e2bdc">FEATURE_FlagM2</a> = DEF_FEAT(AA64ISAR0, 13, 2, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadb850e3a80639ccd801bf7475e1e2bdc">FEATURE_FlagM2</a> = DEF_FEAT(AA64ISAR0, 13, 2, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa221043bccb690068c1e8b5bebe94697d">FEATURE_RNG</a> = DEF_FEAT(AA64ISAR0, 15, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa221043bccb690068c1e8b5bebe94697d">FEATURE_RNG</a> = DEF_FEAT(AA64ISAR0, 15, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa57708e4fe0cae86a892bb260a6a79d58">FEATURE_DPB</a> = DEF_FEAT(AA64ISAR1, 0, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa57708e4fe0cae86a892bb260a6a79d58">FEATURE_DPB</a> = DEF_FEAT(AA64ISAR1, 0, 1, FEAT_GR_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac013883d3f4b04353abcab9e522283c0">FEATURE_DPB2</a> = DEF_FEAT(AA64ISAR1, 0, 2, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac013883d3f4b04353abcab9e522283c0">FEATURE_DPB2</a> = DEF_FEAT(AA64ISAR1, 0, 2, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa1f9367130a6e94661bb3fe59d4e9e76e">FEATURE_JSCVT</a> = DEF_FEAT(AA64ISAR1, 3, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa1f9367130a6e94661bb3fe59d4e9e76e">FEATURE_JSCVT</a> = DEF_FEAT(AA64ISAR1, 3, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa5883ceb38ea30920f389df49b380f366">FEATURE_FP16</a> = DEF_FEAT(AA64PFR0, 4, 1, 1), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa5883ceb38ea30920f389df49b380f366">FEATURE_FP16</a> = DEF_FEAT(AA64PFR0, 4, 1, FEAT_NS), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaa7e022c08f18b0f0ec9228964630b7ce">FEATURE_RAS</a> = DEF_FEAT(AA64PFR0, 7, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaa7e022c08f18b0f0ec9228964630b7ce">FEATURE_RAS</a> = DEF_FEAT(AA64PFR0, 7, 1, FEAT_GR_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa299212c8a14e60057bf69d1275af76f7">FEATURE_SVE</a> = DEF_FEAT(AA64PFR0, 8, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa299212c8a14e60057bf69d1275af76f7">FEATURE_SVE</a> = DEF_FEAT(AA64PFR0, 8, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa09685b77cdd25d64cbc842f03907555f">FEATURE_LOR</a> = DEF_FEAT(AA64MMFR1, 4, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa09685b77cdd25d64cbc842f03907555f">FEATURE_LOR</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadd626046ce5c535fa183e30bd955511a">FEATURE_SPE</a> = DEF_FEAT(AA64DFR0, 8, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadd626046ce5c535fa183e30bd955511a">FEATURE_SPE</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadcd15b8387c9a5f27331315ef3697734">FEATURE_PAUTH</a> = DEF_FEAT(AA64ISAR1, 2, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadcd15b8387c9a5f27331315ef3697734">FEATURE_PAUTH</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa52eb57e4c1d022da2bb029e9d02fc419">FEATURE_LRCPC</a> = DEF_FEAT(AA64ISAR1, 5, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa52eb57e4c1d022da2bb029e9d02fc419">FEATURE_LRCPC</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaf6bacb38c5902a00705faabb4038e49a">FEATURE_LRCPC2</a> = DEF_FEAT(AA64ISAR1, 5, 2, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaf6bacb38c5902a00705faabb4038e49a">FEATURE_LRCPC2</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaa0d21d92f0f1ab629fb607cba514dd47">FEATURE_FRINTTS</a> = DEF_FEAT(AA64ISAR1, 8, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaa0d21d92f0f1ab629fb607cba514dd47">FEATURE_FRINTTS</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa660bcd432adba110612085d3e342d191">FEATURE_BF16</a> = DEF_FEAT(AA64ZFR0, 5, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa660bcd432adba110612085d3e342d191">FEATURE_BF16</a> = DEF_FEAT(AA64ZFR0, 5, 1, FEAT_GR_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa4049a1663455381e954b90bc4c82d0f9">FEATURE_I8MM</a> = DEF_FEAT(AA64ZFR0, 11, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa4049a1663455381e954b90bc4c82d0f9">FEATURE_I8MM</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa00e265fb54ebf4536d256cc6f9e91598">FEATURE_F64MM</a> = DEF_FEAT(AA64ZFR0, 14, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa00e265fb54ebf4536d256cc6f9e91598">FEATURE_F64MM</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa01b47586d6caefe50c8dc66b54fefc22">FEATURE_SVE2</a> = DEF_FEAT(AA64ZFR0, 0, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa01b47586d6caefe50c8dc66b54fefc22">FEATURE_SVE2</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa7fd8a85f404439f0388a4f3c65ef2903">FEATURE_SVEAES</a> = DEF_FEAT(AA64ZFR0, 1, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa7fd8a85f404439f0388a4f3c65ef2903">FEATURE_SVEAES</a> = DEF_FEAT(AA64ZFR0, 1, 1, FEAT_GR_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa58ec93eb89212051693c560fc62c41fc">FEATURE_SVESHA3</a> = DEF_FEAT(AA64ZFR0, 8, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa58ec93eb89212051693c560fc62c41fc">FEATURE_SVESHA3</a> = DEF_FEAT(AA64ZFR0, 8, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0d4978ec608d1c4fc7716e0da34755ca">FEATURE_SVESM4</a> = DEF_FEAT(AA64ZFR0, 10, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0d4978ec608d1c4fc7716e0da34755ca">FEATURE_SVESM4</a> = DEF_FEAT(AA64ZFR0, 10, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0c250c34a2e3b943c03c42f533bbd9d8">FEATURE_SVEBitPerm</a> = DEF_FEAT(AA64ZFR0, 4, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0c250c34a2e3b943c03c42f533bbd9d8">FEATURE_SVEBitPerm</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaeb5e0a83139abb46700248d34fcad6d3">FEATURE_MTE</a> = DEF_FEAT(AA64PFR1, 2, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaeb5e0a83139abb46700248d34fcad6d3">FEATURE_MTE</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa000aab6f16a462d45581b222821b9d09">FEATURE_BTI</a> = DEF_FEAT(AA64PFR1, 0, 1, 0)
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa6f9410f833d20ff021dbeb0ca39a830b">FEATURE_MTE2</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa000aab6f16a462d45581b222821b9d09">FEATURE_BTI</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa6523811a9860d7f25714492395c7b362">FEATURE_PAUTH2</a>
 <br />
  }</td></tr>
 <tr class="separator:a5e226019d68bd13050692da392f6c4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -576,81 +601,85 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac605f4f78478d02373fa0c694b129fa2">FEATURE_AVX512BW</a> = 30 + 128, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa650351ab203638f53d96bcbf0775da75">FEATURE_AESX</a> = DEF_FEAT(AA64ISAR0, 1, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa650351ab203638f53d96bcbf0775da75">FEATURE_AESX</a> = DEF_FEAT(AA64ISAR0, 1, 1, FEAT_GR_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa79127c7fb09d20205c16b9c607d7bee1">FEATURE_PMULL</a> = DEF_FEAT(AA64ISAR0, 1, 2, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa79127c7fb09d20205c16b9c607d7bee1">FEATURE_PMULL</a> = DEF_FEAT(AA64ISAR0, 1, 2, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa9076766d3f75068f3d59b79f2a2f7131">FEATURE_SHA1</a> = DEF_FEAT(AA64ISAR0, 2, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa9076766d3f75068f3d59b79f2a2f7131">FEATURE_SHA1</a> = DEF_FEAT(AA64ISAR0, 2, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa4b067643b7e43334035b4d0835a139cd">FEATURE_SHA256</a> = DEF_FEAT(AA64ISAR0, 3, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa4b067643b7e43334035b4d0835a139cd">FEATURE_SHA256</a> = DEF_FEAT(AA64ISAR0, 3, 1, FEAT_GR_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0236d3734b5934a8206d7f4e79f3e877">FEATURE_SHA512</a> = DEF_FEAT(AA64ISAR0, 3, 2, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0236d3734b5934a8206d7f4e79f3e877">FEATURE_SHA512</a> = DEF_FEAT(AA64ISAR0, 3, 2, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa413df9cec868d14d76f5a778cc959faa">FEATURE_CRC32</a> = DEF_FEAT(AA64ISAR0, 4, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa413df9cec868d14d76f5a778cc959faa">FEATURE_CRC32</a> = DEF_FEAT(AA64ISAR0, 4, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaf54c49607b5d61c7e0a9b21996689d1c">FEATURE_LSE</a> = DEF_FEAT(AA64ISAR0, 5, 2, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaf54c49607b5d61c7e0a9b21996689d1c">FEATURE_LSE</a> = DEF_FEAT(AA64ISAR0, 5, 1, FEAT_GR_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadfc1db618de483a39e5f8b8cec1622c1">FEATURE_RDM</a> = DEF_FEAT(AA64ISAR0, 7, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadfc1db618de483a39e5f8b8cec1622c1">FEATURE_RDM</a> = DEF_FEAT(AA64ISAR0, 7, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfad4a6c6e6b5996837a6d2a8b549559949">FEATURE_SHA3</a> = DEF_FEAT(AA64ISAR0, 8, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfad4a6c6e6b5996837a6d2a8b549559949">FEATURE_SHA3</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa3de95b3c23c1a1ddad9ff8fc5c4f9583">FEATURE_SM3</a> = DEF_FEAT(AA64ISAR0, 9, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa3de95b3c23c1a1ddad9ff8fc5c4f9583">FEATURE_SM3</a> = DEF_FEAT(AA64ISAR0, 9, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa6c5f6d72ed2576921da5edbd125d253f">FEATURE_SM4</a> = DEF_FEAT(AA64ISAR0, 10, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa6c5f6d72ed2576921da5edbd125d253f">FEATURE_SM4</a> = DEF_FEAT(AA64ISAR0, 10, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0e38620c3eb5b7692e6d440951dbb0dc">FEATURE_DotProd</a> = DEF_FEAT(AA64ISAR0, 11, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0e38620c3eb5b7692e6d440951dbb0dc">FEATURE_DotProd</a> = DEF_FEAT(AA64ISAR0, 11, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa6bff5b28b9e9b6f0c173dfbdba972acb">FEATURE_FHM</a> = DEF_FEAT(AA64ISAR0, 12, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa6bff5b28b9e9b6f0c173dfbdba972acb">FEATURE_FHM</a> = DEF_FEAT(AA64ISAR0, 12, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa29d7b02eb17caf4f89e108e9ae148970">FEATURE_FlagM</a> = DEF_FEAT(AA64ISAR0, 13, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa29d7b02eb17caf4f89e108e9ae148970">FEATURE_FlagM</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadb850e3a80639ccd801bf7475e1e2bdc">FEATURE_FlagM2</a> = DEF_FEAT(AA64ISAR0, 13, 2, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadb850e3a80639ccd801bf7475e1e2bdc">FEATURE_FlagM2</a> = DEF_FEAT(AA64ISAR0, 13, 2, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa221043bccb690068c1e8b5bebe94697d">FEATURE_RNG</a> = DEF_FEAT(AA64ISAR0, 15, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa221043bccb690068c1e8b5bebe94697d">FEATURE_RNG</a> = DEF_FEAT(AA64ISAR0, 15, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa57708e4fe0cae86a892bb260a6a79d58">FEATURE_DPB</a> = DEF_FEAT(AA64ISAR1, 0, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa57708e4fe0cae86a892bb260a6a79d58">FEATURE_DPB</a> = DEF_FEAT(AA64ISAR1, 0, 1, FEAT_GR_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac013883d3f4b04353abcab9e522283c0">FEATURE_DPB2</a> = DEF_FEAT(AA64ISAR1, 0, 2, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac013883d3f4b04353abcab9e522283c0">FEATURE_DPB2</a> = DEF_FEAT(AA64ISAR1, 0, 2, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa1f9367130a6e94661bb3fe59d4e9e76e">FEATURE_JSCVT</a> = DEF_FEAT(AA64ISAR1, 3, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa1f9367130a6e94661bb3fe59d4e9e76e">FEATURE_JSCVT</a> = DEF_FEAT(AA64ISAR1, 3, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa5883ceb38ea30920f389df49b380f366">FEATURE_FP16</a> = DEF_FEAT(AA64PFR0, 4, 1, 1), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa5883ceb38ea30920f389df49b380f366">FEATURE_FP16</a> = DEF_FEAT(AA64PFR0, 4, 1, FEAT_NS), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaa7e022c08f18b0f0ec9228964630b7ce">FEATURE_RAS</a> = DEF_FEAT(AA64PFR0, 7, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaa7e022c08f18b0f0ec9228964630b7ce">FEATURE_RAS</a> = DEF_FEAT(AA64PFR0, 7, 1, FEAT_GR_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa299212c8a14e60057bf69d1275af76f7">FEATURE_SVE</a> = DEF_FEAT(AA64PFR0, 8, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa299212c8a14e60057bf69d1275af76f7">FEATURE_SVE</a> = DEF_FEAT(AA64PFR0, 8, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa09685b77cdd25d64cbc842f03907555f">FEATURE_LOR</a> = DEF_FEAT(AA64MMFR1, 4, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa09685b77cdd25d64cbc842f03907555f">FEATURE_LOR</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadd626046ce5c535fa183e30bd955511a">FEATURE_SPE</a> = DEF_FEAT(AA64DFR0, 8, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadd626046ce5c535fa183e30bd955511a">FEATURE_SPE</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadcd15b8387c9a5f27331315ef3697734">FEATURE_PAUTH</a> = DEF_FEAT(AA64ISAR1, 2, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfadcd15b8387c9a5f27331315ef3697734">FEATURE_PAUTH</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa52eb57e4c1d022da2bb029e9d02fc419">FEATURE_LRCPC</a> = DEF_FEAT(AA64ISAR1, 5, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa52eb57e4c1d022da2bb029e9d02fc419">FEATURE_LRCPC</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaf6bacb38c5902a00705faabb4038e49a">FEATURE_LRCPC2</a> = DEF_FEAT(AA64ISAR1, 5, 2, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaf6bacb38c5902a00705faabb4038e49a">FEATURE_LRCPC2</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaa0d21d92f0f1ab629fb607cba514dd47">FEATURE_FRINTTS</a> = DEF_FEAT(AA64ISAR1, 8, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaa0d21d92f0f1ab629fb607cba514dd47">FEATURE_FRINTTS</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa660bcd432adba110612085d3e342d191">FEATURE_BF16</a> = DEF_FEAT(AA64ZFR0, 5, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa660bcd432adba110612085d3e342d191">FEATURE_BF16</a> = DEF_FEAT(AA64ZFR0, 5, 1, FEAT_GR_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa4049a1663455381e954b90bc4c82d0f9">FEATURE_I8MM</a> = DEF_FEAT(AA64ZFR0, 11, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa4049a1663455381e954b90bc4c82d0f9">FEATURE_I8MM</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa00e265fb54ebf4536d256cc6f9e91598">FEATURE_F64MM</a> = DEF_FEAT(AA64ZFR0, 14, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa00e265fb54ebf4536d256cc6f9e91598">FEATURE_F64MM</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa01b47586d6caefe50c8dc66b54fefc22">FEATURE_SVE2</a> = DEF_FEAT(AA64ZFR0, 0, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa01b47586d6caefe50c8dc66b54fefc22">FEATURE_SVE2</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa7fd8a85f404439f0388a4f3c65ef2903">FEATURE_SVEAES</a> = DEF_FEAT(AA64ZFR0, 1, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa7fd8a85f404439f0388a4f3c65ef2903">FEATURE_SVEAES</a> = DEF_FEAT(AA64ZFR0, 1, 1, FEAT_GR_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa58ec93eb89212051693c560fc62c41fc">FEATURE_SVESHA3</a> = DEF_FEAT(AA64ZFR0, 8, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa58ec93eb89212051693c560fc62c41fc">FEATURE_SVESHA3</a> = DEF_FEAT(AA64ZFR0, 8, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0d4978ec608d1c4fc7716e0da34755ca">FEATURE_SVESM4</a> = DEF_FEAT(AA64ZFR0, 10, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0d4978ec608d1c4fc7716e0da34755ca">FEATURE_SVESM4</a> = DEF_FEAT(AA64ZFR0, 10, 1, FEAT_EQ), 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0c250c34a2e3b943c03c42f533bbd9d8">FEATURE_SVEBitPerm</a> = DEF_FEAT(AA64ZFR0, 4, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0c250c34a2e3b943c03c42f533bbd9d8">FEATURE_SVEBitPerm</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaeb5e0a83139abb46700248d34fcad6d3">FEATURE_MTE</a> = DEF_FEAT(AA64PFR1, 2, 1, 0), 
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaeb5e0a83139abb46700248d34fcad6d3">FEATURE_MTE</a>, 
 <br />
-&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa000aab6f16a462d45581b222821b9d09">FEATURE_BTI</a> = DEF_FEAT(AA64PFR1, 0, 1, 0)
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa6f9410f833d20ff021dbeb0ca39a830b">FEATURE_MTE2</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa000aab6f16a462d45581b222821b9d09">FEATURE_BTI</a>, 
+<br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa6523811a9860d7f25714492395c7b362">FEATURE_PAUTH2</a>
 <br />
  }</td></tr>
 <tr class="separator:a5e226019d68bd13050692da392f6c4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1716,7 +1745,7 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa413df9cec868d14d76f5a778cc959faa"></a>FEATURE_CRC32&#160;</td><td class="fielddoc"><p>CRC32&lt;x&gt; (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfaf54c49607b5d61c7e0a9b21996689d1c"></a>FEATURE_LSE&#160;</td><td class="fielddoc"><p>Atomic instructions (AArch64) </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfaf54c49607b5d61c7e0a9b21996689d1c"></a>FEATURE_LSE&#160;</td><td class="fielddoc"><p>Atomics (AArch64) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfadfc1db618de483a39e5f8b8cec1622c1"></a>FEATURE_RDM&#160;</td><td class="fielddoc"><p>SQRDMLAH,SQRDMLSH (AArch64) </p>
 </td></tr>
@@ -1760,25 +1789,29 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfaa0d21d92f0f1ab629fb607cba514dd47"></a>FEATURE_FRINTTS&#160;</td><td class="fielddoc"><p>FRINT(32/64)(X/Z) (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa660bcd432adba110612085d3e342d191"></a>FEATURE_BF16&#160;</td><td class="fielddoc"><p>SVE BFloat16 </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa660bcd432adba110612085d3e342d191"></a>FEATURE_BF16&#160;</td><td class="fielddoc"><p>SVE BFloat16 (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa4049a1663455381e954b90bc4c82d0f9"></a>FEATURE_I8MM&#160;</td><td class="fielddoc"><p>SVE Int8 matrix multiplication </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa4049a1663455381e954b90bc4c82d0f9"></a>FEATURE_I8MM&#160;</td><td class="fielddoc"><p>SVE Int8 matrix multiplication (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa00e265fb54ebf4536d256cc6f9e91598"></a>FEATURE_F64MM&#160;</td><td class="fielddoc"><p>SVE FP64 matrix multiplication </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa00e265fb54ebf4536d256cc6f9e91598"></a>FEATURE_F64MM&#160;</td><td class="fielddoc"><p>SVE FP64 matrix multiplication (AArch64) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa01b47586d6caefe50c8dc66b54fefc22"></a>FEATURE_SVE2&#160;</td><td class="fielddoc"><p>Scalable vectors 2 (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa7fd8a85f404439f0388a4f3c65ef2903"></a>FEATURE_SVEAES&#160;</td><td class="fielddoc"><p>SVE2 + AES(AArch64) </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa7fd8a85f404439f0388a4f3c65ef2903"></a>FEATURE_SVEAES&#160;</td><td class="fielddoc"><p>SVE2 + AES (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa58ec93eb89212051693c560fc62c41fc"></a>FEATURE_SVESHA3&#160;</td><td class="fielddoc"><p>SVE2 + SHA3(AArch64) </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa58ec93eb89212051693c560fc62c41fc"></a>FEATURE_SVESHA3&#160;</td><td class="fielddoc"><p>SVE2 + SHA3 (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa0d4978ec608d1c4fc7716e0da34755ca"></a>FEATURE_SVESM4&#160;</td><td class="fielddoc"><p>SVE2 + SM4(AArch64) </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa0d4978ec608d1c4fc7716e0da34755ca"></a>FEATURE_SVESM4&#160;</td><td class="fielddoc"><p>SVE2 + SM4 (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa0c250c34a2e3b943c03c42f533bbd9d8"></a>FEATURE_SVEBitPerm&#160;</td><td class="fielddoc"><p>SVE2 + BitPerm(AArch64) </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa0c250c34a2e3b943c03c42f533bbd9d8"></a>FEATURE_SVEBitPerm&#160;</td><td class="fielddoc"><p>SVE2 + BitPerm (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfaeb5e0a83139abb46700248d34fcad6d3"></a>FEATURE_MTE&#160;</td><td class="fielddoc"><p>Memory Tagging Extension </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfaeb5e0a83139abb46700248d34fcad6d3"></a>FEATURE_MTE&#160;</td><td class="fielddoc"><p>Instruction-only Memory Tagging (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa000aab6f16a462d45581b222821b9d09"></a>FEATURE_BTI&#160;</td><td class="fielddoc"><p>Branch Target Identification </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa6f9410f833d20ff021dbeb0ca39a830b"></a>FEATURE_MTE2&#160;</td><td class="fielddoc"><p>Full Memory Tagging (AArch64) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa000aab6f16a462d45581b222821b9d09"></a>FEATURE_BTI&#160;</td><td class="fielddoc"><p>Branch Target Identification (AArch64) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa6523811a9860d7f25714492395c7b362"></a>FEATURE_PAUTH2&#160;</td><td class="fielddoc"><p>PAuth2 extension (AArch64) </p>
 </td></tr>
 </table>
 
@@ -1795,7 +1828,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Feature bits returned by cpuid for X86 and mrs for AArch64. Pass one of these values to <a class="el" href="dr__proc_8h.html#ae5c3196adf3717ba1969084c2d7c7734">proc_has_feature()</a> to determine whether the underlying processor has the feature. </p>
+<p>Feature bits returned by mrs for AArch64. Pass one of these values to <a class="el" href="dr__proc_8h.html#ae5c3196adf3717ba1969084c2d7c7734">proc_has_feature()</a> to determine whether the underlying processor has the feature. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfac39f532dceb337cb996ebf5a8d658668"></a>FEATURE_FPU&#160;</td><td class="fielddoc"><p>Floating-point unit on chip (X86) </p>
 </td></tr>
@@ -1979,7 +2012,7 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa413df9cec868d14d76f5a778cc959faa"></a>FEATURE_CRC32&#160;</td><td class="fielddoc"><p>CRC32&lt;x&gt; (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfaf54c49607b5d61c7e0a9b21996689d1c"></a>FEATURE_LSE&#160;</td><td class="fielddoc"><p>Atomic instructions (AArch64) </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfaf54c49607b5d61c7e0a9b21996689d1c"></a>FEATURE_LSE&#160;</td><td class="fielddoc"><p>Atomics (AArch64) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfadfc1db618de483a39e5f8b8cec1622c1"></a>FEATURE_RDM&#160;</td><td class="fielddoc"><p>SQRDMLAH,SQRDMLSH (AArch64) </p>
 </td></tr>
@@ -2023,25 +2056,64 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfaa0d21d92f0f1ab629fb607cba514dd47"></a>FEATURE_FRINTTS&#160;</td><td class="fielddoc"><p>FRINT(32/64)(X/Z) (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa660bcd432adba110612085d3e342d191"></a>FEATURE_BF16&#160;</td><td class="fielddoc"><p>SVE BFloat16 </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa660bcd432adba110612085d3e342d191"></a>FEATURE_BF16&#160;</td><td class="fielddoc"><p>SVE BFloat16 (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa4049a1663455381e954b90bc4c82d0f9"></a>FEATURE_I8MM&#160;</td><td class="fielddoc"><p>SVE Int8 matrix multiplication </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa4049a1663455381e954b90bc4c82d0f9"></a>FEATURE_I8MM&#160;</td><td class="fielddoc"><p>SVE Int8 matrix multiplication (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa00e265fb54ebf4536d256cc6f9e91598"></a>FEATURE_F64MM&#160;</td><td class="fielddoc"><p>SVE FP64 matrix multiplication </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa00e265fb54ebf4536d256cc6f9e91598"></a>FEATURE_F64MM&#160;</td><td class="fielddoc"><p>SVE FP64 matrix multiplication (AArch64) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa01b47586d6caefe50c8dc66b54fefc22"></a>FEATURE_SVE2&#160;</td><td class="fielddoc"><p>Scalable vectors 2 (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa7fd8a85f404439f0388a4f3c65ef2903"></a>FEATURE_SVEAES&#160;</td><td class="fielddoc"><p>SVE2 + AES(AArch64) </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa7fd8a85f404439f0388a4f3c65ef2903"></a>FEATURE_SVEAES&#160;</td><td class="fielddoc"><p>SVE2 + AES (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa58ec93eb89212051693c560fc62c41fc"></a>FEATURE_SVESHA3&#160;</td><td class="fielddoc"><p>SVE2 + SHA3(AArch64) </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa58ec93eb89212051693c560fc62c41fc"></a>FEATURE_SVESHA3&#160;</td><td class="fielddoc"><p>SVE2 + SHA3 (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa0d4978ec608d1c4fc7716e0da34755ca"></a>FEATURE_SVESM4&#160;</td><td class="fielddoc"><p>SVE2 + SM4(AArch64) </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa0d4978ec608d1c4fc7716e0da34755ca"></a>FEATURE_SVESM4&#160;</td><td class="fielddoc"><p>SVE2 + SM4 (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa0c250c34a2e3b943c03c42f533bbd9d8"></a>FEATURE_SVEBitPerm&#160;</td><td class="fielddoc"><p>SVE2 + BitPerm(AArch64) </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa0c250c34a2e3b943c03c42f533bbd9d8"></a>FEATURE_SVEBitPerm&#160;</td><td class="fielddoc"><p>SVE2 + BitPerm (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfaeb5e0a83139abb46700248d34fcad6d3"></a>FEATURE_MTE&#160;</td><td class="fielddoc"><p>Memory Tagging Extension </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfaeb5e0a83139abb46700248d34fcad6d3"></a>FEATURE_MTE&#160;</td><td class="fielddoc"><p>Instruction-only Memory Tagging (AArch64) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa000aab6f16a462d45581b222821b9d09"></a>FEATURE_BTI&#160;</td><td class="fielddoc"><p>Branch Target Identification </p>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa6f9410f833d20ff021dbeb0ca39a830b"></a>FEATURE_MTE2&#160;</td><td class="fielddoc"><p>Full Memory Tagging (AArch64) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa000aab6f16a462d45581b222821b9d09"></a>FEATURE_BTI&#160;</td><td class="fielddoc"><p>Branch Target Identification (AArch64) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa6523811a9860d7f25714492395c7b362"></a>FEATURE_PAUTH2&#160;</td><td class="fielddoc"><p>PAuth2 extension (AArch64) </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a9ffeec9fb13eabb34411ecd31d122911"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ffeec9fb13eabb34411ecd31d122911">&#9670;&nbsp;</a></span>feature_reg_idx_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911">feature_reg_idx_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For AArch64 this enum represents the feature registers read by MRS instructions. Used by <a class="el" href="dr__proc_8h.html#ae5c3196adf3717ba1969084c2d7c7734">proc_has_feature()</a>. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9ffeec9fb13eabb34411ecd31d122911a1a828488d3f29269229746cd59a0e9e6"></a>AA64ISAR0&#160;</td><td class="fielddoc"><p>AArch64 Instruction Set Attribute Register 0. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9ffeec9fb13eabb34411ecd31d122911ad165d43c9d86214d9480f0fc3c906f4c"></a>AA64ISAR1&#160;</td><td class="fielddoc"><p>AArch64 Instruction Set Attribute Register 1. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9ffeec9fb13eabb34411ecd31d122911afb23e9bbf6374a903fcacf16412cb460"></a>AA64PFR0&#160;</td><td class="fielddoc"><p>AArch64 Processor Feature Register 0. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9ffeec9fb13eabb34411ecd31d122911ac2e857a3a12a7e1ab2a1b80426508060"></a>AA64MMFR1&#160;</td><td class="fielddoc"><p>AArch64 Memory Model Feature Register 1. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9ffeec9fb13eabb34411ecd31d122911a382d924718c00f169d32b528f6f1004a"></a>AA64DFR0&#160;</td><td class="fielddoc"><p>AArch64 Debug Feature Register 0. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9ffeec9fb13eabb34411ecd31d122911a69bc8b8250e4a9c8371bce1d7f05d579"></a>AA64ZFR0&#160;</td><td class="fielddoc"><p>SVE Feature ID Register 0. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9ffeec9fb13eabb34411ecd31d122911a5ec3fb94b74951c44644d930f294d108"></a>AA64PFR1&#160;</td><td class="fielddoc"><p>AArch64 Processor Feature Register 1. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9ffeec9fb13eabb34411ecd31d122911af93dd9b986c63ca1d5eb6e63468730a7"></a>AA64ISAR2&#160;</td><td class="fielddoc"><p>AArch64 Instruction Set Attribute Register 2. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9ffeec9fb13eabb34411ecd31d122911a4ce413f8504c8d9519d9c37315469c4a"></a>AA64_NUM_FEAT_REGS&#160;</td><td class="fielddoc"><p>Number of feature registers. </p>
 </td></tr>
 </table>
 
@@ -2556,5 +2628,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.91.19860 --- Fri May 17 2024 03:14:09 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.92.19865 --- Fri May 24 2024 03:14:35 &nbsp; <img border=0 src="favicon.png">
 </small></address>

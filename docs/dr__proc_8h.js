@@ -188,7 +188,9 @@
       [ "FEATURE_SVESM4", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0d4978ec608d1c4fc7716e0da34755ca", null ],
       [ "FEATURE_SVEBitPerm", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0c250c34a2e3b943c03c42f533bbd9d8", null ],
       [ "FEATURE_MTE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaeb5e0a83139abb46700248d34fcad6d3", null ],
-      [ "FEATURE_BTI", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa000aab6f16a462d45581b222821b9d09", null ]
+      [ "FEATURE_MTE2", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa6f9410f833d20ff021dbeb0ca39a830b", null ],
+      [ "FEATURE_BTI", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa000aab6f16a462d45581b222821b9d09", null ],
+      [ "FEATURE_PAUTH2", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa6523811a9860d7f25714492395c7b362", null ]
     ] ],
     [ "feature_bit_t", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bf", [
       [ "FEATURE_FPU", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac39f532dceb337cb996ebf5a8d658668", null ],
@@ -313,7 +315,20 @@
       [ "FEATURE_SVESM4", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0d4978ec608d1c4fc7716e0da34755ca", null ],
       [ "FEATURE_SVEBitPerm", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa0c250c34a2e3b943c03c42f533bbd9d8", null ],
       [ "FEATURE_MTE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaeb5e0a83139abb46700248d34fcad6d3", null ],
-      [ "FEATURE_BTI", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa000aab6f16a462d45581b222821b9d09", null ]
+      [ "FEATURE_MTE2", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa6f9410f833d20ff021dbeb0ca39a830b", null ],
+      [ "FEATURE_BTI", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa000aab6f16a462d45581b222821b9d09", null ],
+      [ "FEATURE_PAUTH2", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa6523811a9860d7f25714492395c7b362", null ]
+    ] ],
+    [ "feature_reg_idx_t", "dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911", [
+      [ "AA64ISAR0", "dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911a1a828488d3f29269229746cd59a0e9e6", null ],
+      [ "AA64ISAR1", "dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911ad165d43c9d86214d9480f0fc3c906f4c", null ],
+      [ "AA64PFR0", "dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911afb23e9bbf6374a903fcacf16412cb460", null ],
+      [ "AA64MMFR1", "dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911ac2e857a3a12a7e1ab2a1b80426508060", null ],
+      [ "AA64DFR0", "dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911a382d924718c00f169d32b528f6f1004a", null ],
+      [ "AA64ZFR0", "dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911a69bc8b8250e4a9c8371bce1d7f05d579", null ],
+      [ "AA64PFR1", "dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911a5ec3fb94b74951c44644d930f294d108", null ],
+      [ "AA64ISAR2", "dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911af93dd9b986c63ca1d5eb6e63468730a7", null ],
+      [ "AA64_NUM_FEAT_REGS", "dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911a4ce413f8504c8d9519d9c37315469c4a", null ]
     ] ],
     [ "proc_avx512_enabled", "dr__proc_8h.html#aaba068462550d9b73c32c0991c5f7551", null ],
     [ "proc_avx_enabled", "dr__proc_8h.html#adfd5dadf31b9a26540978b7331701770", null ],

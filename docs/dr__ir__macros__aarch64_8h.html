@@ -2262,6 +2262,16 @@ Macros</h2></td></tr>
 <tr class="separator:a0d4578907d7f1848a731b78676663d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c11e005380f8eaf1c3dde3cc7521de6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a6c11e005380f8eaf1c3dde3cc7521de6">INSTR_CREATE_frint64z_vector</a>(dc,  Rd,  Rn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_frint64z, Rd, Rn)</td></tr>
 <tr class="separator:a6c11e005380f8eaf1c3dde3cc7521de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f1f45c64488886d6ac415764ddba99b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a8f1f45c64488886d6ac415764ddba99b">INSTR_CREATE_stgm</a>(dc,  Rn,  Rt)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_stgm, Rn, Rt)</td></tr>
+<tr class="separator:a8f1f45c64488886d6ac415764ddba99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4fc74c904214a9d910c8782ea416fec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ad4fc74c904214a9d910c8782ea416fec">INSTR_CREATE_stzgm</a>(dc,  Rn,  Rt)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_stzgm, Rn, Rt)</td></tr>
+<tr class="separator:ad4fc74c904214a9d910c8782ea416fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e1d44b49e9036c16b3196985f52b36"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a39e1d44b49e9036c16b3196985f52b36">INSTR_CREATE_ldgm</a>(dc,  Rt,  Rn)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_ldgm, Rt, Rn)</td></tr>
+<tr class="separator:a39e1d44b49e9036c16b3196985f52b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79595ed463823f20d909d7f97526bcb3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a79595ed463823f20d909d7f97526bcb3">INSTR_CREATE_axflag</a>(dc)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ae46bafd225c6e0863befba736c372455">instr_create_0dst_0src</a>(dc, OP_axflag)</td></tr>
+<tr class="separator:a79595ed463823f20d909d7f97526bcb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1884ed7d1cc74bf643d24679345c4791"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a1884ed7d1cc74bf643d24679345c4791">INSTR_CREATE_xaflag</a>(dc)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ae46bafd225c6e0863befba736c372455">instr_create_0dst_0src</a>(dc, OP_xaflag)</td></tr>
+<tr class="separator:a1884ed7d1cc74bf643d24679345c4791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Platform-independent macros</div></td></tr>
 <tr class="memitem:a193d2b0123b3bdf0b9200f34a54d8002"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a193d2b0123b3bdf0b9200f34a54d8002">XINST_CREATE_debug_instr</a>(dc)&#160;&#160;&#160;INSTR_CREATE_brk((dc), <a class="el" href="dr__ir__macros_8h.html#ac2d087cee8f6726f09d76852c156e0cc">OPND_CREATE_INT16</a>(0))</td></tr>
 <tr class="separator:a193d2b0123b3bdf0b9200f34a54d8002"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4638,6 +4648,32 @@ Macros</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Rd</td><td>The source and destination register, X (Extended, 64 bits). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a79595ed463823f20d909d7f97526bcb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79595ed463823f20d909d7f97526bcb3">&#9670;&nbsp;</a></span>INSTR_CREATE_axflag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_axflag</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ae46bafd225c6e0863befba736c372455">instr_create_0dst_0src</a>(dc, OP_axflag)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an AXFLAG instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">   AXFLAG
+</pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -29112,6 +29148,50 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="a39e1d44b49e9036c16b3196985f52b36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39e1d44b49e9036c16b3196985f52b36">&#9670;&nbsp;</a></span>INSTR_CREATE_ldgm</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_ldgm</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_ldgm, Rt, Rn)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an LDGM instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">   LDGM    &lt;Xt&gt;, [&lt;Xn|SP&gt;]
+</pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rt</td><td>The source register, X (Extended, 64 bits). </td></tr>
+    <tr><td class="paramname">Rn</td><td>The source base register, constructed with the function: opnd_create_base_disp_aarch64(Rn, DR_REG_NULL, DR_EXTEND_UXTX, 0, 0, 0, OPSZ_0) Note that memory tag accesses are not treated as real/data memory accesses by DynamoRIO, similar to prefetch and PC-relative address manipulation instructions. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a351b41d58b0d7a0ad2ef9ce485302dd8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a351b41d58b0d7a0ad2ef9ce485302dd8">&#9670;&nbsp;</a></span>INSTR_CREATE_ldlar</h2>
 
@@ -48050,6 +48130,50 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="a8f1f45c64488886d6ac415764ddba99b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f1f45c64488886d6ac415764ddba99b">&#9670;&nbsp;</a></span>INSTR_CREATE_stgm</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_stgm</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rt&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_stgm, Rn, Rt)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an STGM instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">   STGM    &lt;Xt&gt;, [&lt;Xn|SP&gt;]
+</pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rn</td><td>The destination memory operand constructed with the function: opnd_create_base_disp_aarch64(Rn, DR_REG_NULL, DR_EXTEND_UXTX, 0, 0, 0, OPSZ_0) Note that memory tag accesses are not treated as real/data memory accesses by DynamoRIO, similar to prefetch and PC-relative address manipulation instructions. </td></tr>
+    <tr><td class="paramname">Rt</td><td>The first source register, X (Extended, 64 bits). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aca0f104476cea401081ae0a2bcdc3dea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca0f104476cea401081ae0a2bcdc3dea">&#9670;&nbsp;</a></span>INSTR_CREATE_stgp_offset</h2>
 
@@ -49033,6 +49157,50 @@ Macros</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
     <tr><td class="paramname">Rn</td><td>The second source and destination base register with an immediate offset, constructed with the function: opnd_create_base_disp(Rn, DR_REG_NULL, 0, simm, OPSZ_16) </td></tr>
+    <tr><td class="paramname">Rt</td><td>The first source register, X (Extended, 64 bits). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad4fc74c904214a9d910c8782ea416fec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4fc74c904214a9d910c8782ea416fec">&#9670;&nbsp;</a></span>INSTR_CREATE_stzgm</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_stzgm</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rn, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rt&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a>(dc, OP_stzgm, Rn, Rt)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an STZGM instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">   STZGM    &lt;Xt&gt;, [&lt;Xn|SP&gt;]
+</pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rn</td><td>The destination memory operand constructed with the function: opnd_create_base_disp_aarch64(Rn, DR_REG_NULL, DR_EXTEND_UXTX, 0, 0, 0, OPSZ_16) </td></tr>
     <tr><td class="paramname">Rt</td><td>The first source register, X (Extended, 64 bits). </td></tr>
   </table>
   </dd>
@@ -58701,6 +58869,32 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="a1884ed7d1cc74bf643d24679345c4791"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1884ed7d1cc74bf643d24679345c4791">&#9670;&nbsp;</a></span>INSTR_CREATE_xaflag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_xaflag</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ae46bafd225c6e0863befba736c372455">instr_create_0dst_0src</a>(dc, OP_xaflag)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a XAFLAG instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">   XAFLAG
+</pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a64d83506835ca09d5d0ee171dca743f7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a64d83506835ca09d5d0ee171dca743f7">&#9670;&nbsp;</a></span>INSTR_CREATE_xar</h2>
 
@@ -60748,5 +60942,5 @@ Macros</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.91.19860 --- Fri May 17 2024 03:14:07 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.92.19865 --- Fri May 24 2024 03:14:34 &nbsp; <img border=0 src="favicon.png">
 </small></address>

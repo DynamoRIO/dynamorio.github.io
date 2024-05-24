@@ -41,24 +41,12 @@ Data Fields</h2></td></tr>
 <tr class="separator:a45f7c37d632b49e8a7ed72da9698201d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad27bd3ac25405f22b71425c95773b7fa"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfeatures__t.html#ad27bd3ac25405f22b71425c95773b7fa">sext_flags_ebx</a></td></tr>
 <tr class="separator:ad27bd3ac25405f22b71425c95773b7fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af993b0e9bd74a9109b72ce4cd11c592b"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfeatures__t.html#af993b0e9bd74a9109b72ce4cd11c592b">flags_aa64isar0</a></td></tr>
-<tr class="separator:af993b0e9bd74a9109b72ce4cd11c592b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09507424c979e7999f13ef9849027f24"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfeatures__t.html#a09507424c979e7999f13ef9849027f24">flags_aa64isar1</a></td></tr>
-<tr class="separator:a09507424c979e7999f13ef9849027f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65f7f47df24cc8102e7024fa33c20065"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfeatures__t.html#a65f7f47df24cc8102e7024fa33c20065">flags_aa64pfr0</a></td></tr>
-<tr class="separator:a65f7f47df24cc8102e7024fa33c20065"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a973305e0be79705a6b22fee363692287"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfeatures__t.html#a973305e0be79705a6b22fee363692287">flags_aa64mmfr1</a></td></tr>
-<tr class="separator:a973305e0be79705a6b22fee363692287"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8451732681e6350f6c610d8b5b3df92"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfeatures__t.html#ae8451732681e6350f6c610d8b5b3df92">flags_aa64dfr0</a></td></tr>
-<tr class="separator:ae8451732681e6350f6c610d8b5b3df92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a886360e883815d4d1247f514fd9ec3ef"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfeatures__t.html#a886360e883815d4d1247f514fd9ec3ef">flags_aa64zfr0</a></td></tr>
-<tr class="separator:a886360e883815d4d1247f514fd9ec3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06dd6fb7c4e4b32e607d8890b95f90db"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfeatures__t.html#a06dd6fb7c4e4b32e607d8890b95f90db">flags_aa64pfr1</a></td></tr>
-<tr class="separator:a06dd6fb7c4e4b32e607d8890b95f90db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa08a1e99768dccf62b92d41e90f4fb16"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfeatures__t.html#aa08a1e99768dccf62b92d41e90f4fb16">isa_features</a> [<a class="el" href="dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911a4ce413f8504c8d9519d9c37315469c4a">AA64_NUM_FEAT_REGS</a>]</td></tr>
+<tr class="separator:aa08a1e99768dccf62b92d41e90f4fb16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>For X86 this struct holds all 4 32-bit feature values returned by cpuid. Used by <a class="el" href="dr__proc_8h.html#ada23da7224d8481ec34e2ff27ccf9c97">proc_get_all_feature_bits()</a>.</p>
-<p>For AArch64 this struct holds features registers' values read by MRS instructions. Used by <a class="el" href="dr__proc_8h.html#ada23da7224d8481ec34e2ff27ccf9c97">proc_get_all_feature_bits()</a>. </p>
+<p>For AArch64 this struct contains an array of ints which cache the values of AArch64 attribute registers. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a45f7c37d632b49e8a7ed72da9698201d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a45f7c37d632b49e8a7ed72da9698201d">&#9670;&nbsp;</a></span>ext_flags_ecx</h2>
@@ -87,111 +75,6 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>X86 extended feature flags stored in edx </p>
-
-</div>
-</div>
-<a id="ae8451732681e6350f6c610d8b5b3df92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8451732681e6350f6c610d8b5b3df92">&#9670;&nbsp;</a></span>flags_aa64dfr0</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint64 features_t::flags_aa64dfr0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>AArch64 feature flags stored in ID_AA64DFR0_EL1 </p>
-
-</div>
-</div>
-<a id="af993b0e9bd74a9109b72ce4cd11c592b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af993b0e9bd74a9109b72ce4cd11c592b">&#9670;&nbsp;</a></span>flags_aa64isar0</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint64 features_t::flags_aa64isar0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>AArch64 feature flags stored in ID_AA64ISAR0_EL1 </p>
-
-</div>
-</div>
-<a id="a09507424c979e7999f13ef9849027f24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09507424c979e7999f13ef9849027f24">&#9670;&nbsp;</a></span>flags_aa64isar1</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint64 features_t::flags_aa64isar1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>AArch64 feature flags stored in ID_AA64ISAR1_EL1 </p>
-
-</div>
-</div>
-<a id="a973305e0be79705a6b22fee363692287"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a973305e0be79705a6b22fee363692287">&#9670;&nbsp;</a></span>flags_aa64mmfr1</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint64 features_t::flags_aa64mmfr1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>AArch64 feature flags stored in ID_AA64MMFR1_EL1 </p>
-
-</div>
-</div>
-<a id="a65f7f47df24cc8102e7024fa33c20065"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65f7f47df24cc8102e7024fa33c20065">&#9670;&nbsp;</a></span>flags_aa64pfr0</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint64 features_t::flags_aa64pfr0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>AArch64 feature flags stored in ID_AA64PFR0_EL1 </p>
-
-</div>
-</div>
-<a id="a06dd6fb7c4e4b32e607d8890b95f90db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06dd6fb7c4e4b32e607d8890b95f90db">&#9670;&nbsp;</a></span>flags_aa64pfr1</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint64 features_t::flags_aa64pfr1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>AArch64 feature flags stored in ID_AA64PFR1_EL1 </p>
-
-</div>
-</div>
-<a id="a886360e883815d4d1247f514fd9ec3ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a886360e883815d4d1247f514fd9ec3ef">&#9670;&nbsp;</a></span>flags_aa64zfr0</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint64 features_t::flags_aa64zfr0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>AArch64 feature flags stored in ID_AA64ZFR0_EL1 </p>
 
 </div>
 </div>
@@ -225,6 +108,21 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="aa08a1e99768dccf62b92d41e90f4fb16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa08a1e99768dccf62b92d41e90f4fb16">&#9670;&nbsp;</a></span>isa_features</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64 features_t::isa_features[<a class="el" href="dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911a4ce413f8504c8d9519d9c37315469c4a">AA64_NUM_FEAT_REGS</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Array of ints representing attribute registers. </p>
+
+</div>
+</div>
 <a id="ad27bd3ac25405f22b71425c95773b7fa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad27bd3ac25405f22b71425c95773b7fa">&#9670;&nbsp;</a></span>sext_flags_ebx</h2>
 
@@ -249,5 +147,5 @@ Data Fields</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.91.19860 --- Fri May 17 2024 03:14:12 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.92.19865 --- Fri May 24 2024 03:14:36 &nbsp; <img border=0 src="favicon.png">
 </small></address>
