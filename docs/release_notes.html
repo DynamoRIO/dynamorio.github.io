@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 10.92.19865"
+title: "Release Notes for Version 10.92.19872"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 10.92.19865 </div>  </div>
+<div class="title">Release Notes for Version 10.92.19872 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,8 +63,8 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 10.92.19865. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 10.92.19865 and 10.0.0 include the following compatibility changes:</p><ul>
+<p>The current version is 10.92.19872. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 10.92.19872 and 10.0.0 include the following compatibility changes:</p><ul>
 <li>Marked x86 rep instructions as predicated.</li>
 <li>The <a class="el" href="dr__ir__instr_8h.html#a6a293267f240f04a49586895b3b67893">dr_instr_category_t</a> enum underwent changes to support new categories such as STATE, MOVE, CONVERT, and MATH. INT_MATH has been removed and replaced with MATH. FP_MATH has been removed and replaced with FP|MATH. The enumeration was organized in a different order, the old numbers become invalid</li>
 <li>The <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca58ff903618a785cb45ba4c57900db24f">dynamorio::drmemtrace::TRACE_MARKER_TYPE_FUNC_RETVAL</a> marker for system calls changed to contain the actual return value, rather than just whether successful. A new marker <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295cac4123c88a189fe7b52ceee6b7cab48ce">dynamorio::drmemtrace::TRACE_MARKER_TYPE_SYSCALL_FAILED</a> was added to indicate failure.</li>
@@ -187,7 +187,7 @@ Changes Since Prior Releases</h1>
 <li>A source compatibilty change in drcachesim analysis tools for users who have created derived classes from existing analysis tools: member fields of classes are now following a consistent style with an underscore suffix. References to renamed fields will need to be updated.</li>
 <li>A change in the load callbacks used with <a class="el" href="group__drcovlib.html#ga33bf1c08f5e69e18e8450652928e0c66">drmodtrack_add_custom_data()</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae928b4aceb19475c965eb8de4d7ca07a">drmemtrace_custom_module_data()</a>: they each take an additional parameter, the segment index. The custom data field is now per-segment and not per-module, and all callbacks are invoked separately for each segment.</li>
 </ul>
-<p>The changes between version 10.92.19865 and 8.0.0 include the following minor compatibility changes:</p>
+<p>The changes between version 10.92.19872 and 8.0.0 include the following minor compatibility changes:</p>
 <ul>
 <li>drconfiglib (and thus drrun and drconfig) now sets only the new client path options which are added in this release to support other-bitwidth child processes. This means that a drconfiglib from this version will not properly configure for a DynamoRIO core library from a prior version.</li>
 <li>A new option -ldstex2cas is on by default on ARM and AArch64. This converts load-exclusive store-exclusive sequences to use compare-and-swap instead, which enables normal instrumentation of such sequences without clearing the exclusive monitor and causing infinite loops. However, the compare- and-swap's semantics are not identical: it does not detect "ABA" changes and could cause errors in lock-free data structures or other application constructs. See <a class="el" href="API_BT.html#sec_ldrex">Exclusive Monitor Instrumentation</a> for more information.</li>
@@ -1178,5 +1178,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.92.19865 --- Fri May 24 2024 03:14:36 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.92.19872 --- Fri May 31 2024 03:14:47 &nbsp; <img border=0 src="favicon.png">
 </small></address>

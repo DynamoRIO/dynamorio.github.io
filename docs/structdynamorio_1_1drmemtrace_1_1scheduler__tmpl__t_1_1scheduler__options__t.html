@@ -185,7 +185,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The maximum time, in the units explained by <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a6c8933439fdf03dd72c3b849e1c4052c">block_time_scale</a> (either <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a66d6f6bbc9213a887758d14d32a31199a731ead7ea1ca4e3248a56b7aefac9ed3">QUANTUM_TIME</a> simulator time or wall-clock microseconds for <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a66d6f6bbc9213a887758d14d32a31199a8e189556d69dfb51884cfe5c0bab5196">QUANTUM_INSTRUCTIONS</a>), for an input to be considered blocked for any one system call. This is applied after multiplying by <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a6c8933439fdf03dd72c3b849e1c4052c">block_time_scale</a>. </p>
+<p>The maximum time, in the units explained by <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a6c8933439fdf03dd72c3b849e1c4052c">block_time_scale</a> (either <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a66d6f6bbc9213a887758d14d32a31199a731ead7ea1ca4e3248a56b7aefac9ed3">QUANTUM_TIME</a> simulator time or wall-clock microseconds for <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a66d6f6bbc9213a887758d14d32a31199a8e189556d69dfb51884cfe5c0bab5196">QUANTUM_INSTRUCTIONS</a>), for an input to be considered blocked for any one system call. This is applied after multiplying by <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a6c8933439fdf03dd72c3b849e1c4052c">block_time_scale</a>. This is also used as a fallback to avoid hangs when there are no scheduled inputs: if the only inputs left are "unscheduled" (see <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca6033baf3bb4bf61879c01e91e246b115">TRACE_MARKER_TYPE_SYSCALL_UNSCHEDULE</a>), after this amount of time those inputs are all re-scheduled. </p>
 
 </div>
 </div>
@@ -270,7 +270,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>If true, the scheduler will attempt to switch to the recorded targets of <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295cae7bcf6a915571421473532017fc86d24">TRACE_MARKER_TYPE_DIRECT_THREAD_SWITCH</a> system call metadata markers regardless of system call latency. If the target is not available, the current implementation will select the next available input in the regular scheduling queue, but in the future a forced migration may be applied for an input currently on another output. If false, the direct switch markers are ignored and only system call latency thresholds are used to determine switches (the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295cae7bcf6a915571421473532017fc86d24">TRACE_MARKER_TYPE_DIRECT_THREAD_SWITCH</a> markers remain: they are not removed from the trace). </p>
+<p>If true, the scheduler will attempt to switch to the recorded targets of <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295cae7bcf6a915571421473532017fc86d24">TRACE_MARKER_TYPE_DIRECT_THREAD_SWITCH</a> system call metadata markers regardless of system call latency. Furthermore, the scheduler will model "unscheduled" semantics and honor the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca6033baf3bb4bf61879c01e91e246b115">TRACE_MARKER_TYPE_SYSCALL_UNSCHEDULE</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caa8af23555ce5778daecf69b0ef0cf200">TRACE_MARKER_TYPE_SYSCALL_SCHEDULE</a> markers. If false, these markers are ignored and only system call latency thresholds are used to determine switches (these markers remain: they are not removed from the trace). </p>
 
 </div>
 </div>
@@ -538,5 +538,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.92.19865 --- Fri May 24 2024 03:14:37 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.92.19872 --- Fri May 31 2024 03:14:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>
