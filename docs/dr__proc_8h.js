@@ -195,7 +195,8 @@
       [ "FEATURE_SSBS", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfae5ca02daf3f87f04671573c80c5499b7", null ],
       [ "FEATURE_SSBS2", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa8c78f2763e8b99e6bd54d1e28e78bae8", null ],
       [ "FEATURE_DIT", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfad77cbb7dcb28e27032798261c7311101", null ],
-      [ "FEATURE_LSE2", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa234ee1a77e16297c1255164d9551c550", null ]
+      [ "FEATURE_LSE2", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa234ee1a77e16297c1255164d9551c550", null ],
+      [ "FEATURE_WFxT", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa872dd8c4fda04ab8d2a69be5a22b5709", null ]
     ] ],
     [ "feature_bit_t", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bf", [
       [ "FEATURE_FPU", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac39f532dceb337cb996ebf5a8d658668", null ],
@@ -327,7 +328,8 @@
       [ "FEATURE_SSBS", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfae5ca02daf3f87f04671573c80c5499b7", null ],
       [ "FEATURE_SSBS2", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa8c78f2763e8b99e6bd54d1e28e78bae8", null ],
       [ "FEATURE_DIT", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfad77cbb7dcb28e27032798261c7311101", null ],
-      [ "FEATURE_LSE2", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa234ee1a77e16297c1255164d9551c550", null ]
+      [ "FEATURE_LSE2", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa234ee1a77e16297c1255164d9551c550", null ],
+      [ "FEATURE_WFxT", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa872dd8c4fda04ab8d2a69be5a22b5709", null ]
     ] ],
     [ "feature_reg_idx_t", "dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911", [
       [ "AA64ISAR0", "dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911a1a828488d3f29269229746cd59a0e9e6", null ],

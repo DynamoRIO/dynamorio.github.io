@@ -2272,6 +2272,14 @@ Macros</h2></td></tr>
 <tr class="separator:a79595ed463823f20d909d7f97526bcb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1884ed7d1cc74bf643d24679345c4791"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a1884ed7d1cc74bf643d24679345c4791">INSTR_CREATE_xaflag</a>(dc)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ae46bafd225c6e0863befba736c372455">instr_create_0dst_0src</a>(dc, OP_xaflag)</td></tr>
 <tr class="separator:a1884ed7d1cc74bf643d24679345c4791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b29844fe8b30f37605b8a8237e83d93"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a6b29844fe8b30f37605b8a8237e83d93">INSTR_CREATE_wfe</a>(dc)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ae46bafd225c6e0863befba736c372455">instr_create_0dst_0src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9eab9c29413f060147bb0da2259154d42b8">OP_wfe</a>)</td></tr>
+<tr class="separator:a6b29844fe8b30f37605b8a8237e83d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27bec9a07593d3485fe138dacd8b990c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a27bec9a07593d3485fe138dacd8b990c">INSTR_CREATE_wfi</a>(dc)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ae46bafd225c6e0863befba736c372455">instr_create_0dst_0src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9ea4bffea8d29d1d9e26716a68be394af7b">OP_wfi</a>)</td></tr>
+<tr class="separator:a27bec9a07593d3485fe138dacd8b990c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c84f9e034c3dbd153569671f1d1fed7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a5c84f9e034c3dbd153569671f1d1fed7">INSTR_CREATE_wfet</a>(dc,  Rt)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a842dc7ac2aea828a00c51765465f5428">instr_create_0dst_1src</a>(dc, OP_wfet, Rt)</td></tr>
+<tr class="separator:a5c84f9e034c3dbd153569671f1d1fed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35b15f1af8b627829599dbadb1b19303"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a35b15f1af8b627829599dbadb1b19303">INSTR_CREATE_wfit</a>(dc,  Rt)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a842dc7ac2aea828a00c51765465f5428">instr_create_0dst_1src</a>(dc, OP_wfit, Rt)</td></tr>
+<tr class="separator:a35b15f1af8b627829599dbadb1b19303"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Platform-independent macros</div></td></tr>
 <tr class="memitem:a193d2b0123b3bdf0b9200f34a54d8002"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#a193d2b0123b3bdf0b9200f34a54d8002">XINST_CREATE_debug_instr</a>(dc)&#160;&#160;&#160;INSTR_CREATE_brk((dc), <a class="el" href="dr__ir__macros_8h.html#ac2d087cee8f6726f09d76852c156e0cc">OPND_CREATE_INT16</a>(0))</td></tr>
 <tr class="separator:a193d2b0123b3bdf0b9200f34a54d8002"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -58322,6 +58330,132 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="a6b29844fe8b30f37605b8a8237e83d93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b29844fe8b30f37605b8a8237e83d93">&#9670;&nbsp;</a></span>INSTR_CREATE_wfe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_wfe</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ae46bafd225c6e0863befba736c372455">instr_create_0dst_0src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9eab9c29413f060147bb0da2259154d42b8">OP_wfe</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a WFE instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">   WFE
+</pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5c84f9e034c3dbd153569671f1d1fed7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c84f9e034c3dbd153569671f1d1fed7">&#9670;&nbsp;</a></span>INSTR_CREATE_wfet</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_wfet</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rt&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a842dc7ac2aea828a00c51765465f5428">instr_create_0dst_1src</a>(dc, OP_wfet, Rt)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a WFET instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    WFET   &lt;Xt&gt;
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rt</td><td>The source register, X (Extended, 64 bits). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a27bec9a07593d3485fe138dacd8b990c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27bec9a07593d3485fe138dacd8b990c">&#9670;&nbsp;</a></span>INSTR_CREATE_wfi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_wfi</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ae46bafd225c6e0863befba736c372455">instr_create_0dst_0src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9ea4bffea8d29d1d9e26716a68be394af7b">OP_wfi</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a WFI instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">   WFI
+</pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a35b15f1af8b627829599dbadb1b19303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35b15f1af8b627829599dbadb1b19303">&#9670;&nbsp;</a></span>INSTR_CREATE_wfit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_wfit</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Rt&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a842dc7ac2aea828a00c51765465f5428">instr_create_0dst_1src</a>(dc, OP_wfit, Rt)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a WFIT instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    WFIT   &lt;Xt&gt;
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
+    <tr><td class="paramname">Rt</td><td>The source register, X (Extended, 64 bits). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a67b7c1b37913b03b729104c2bb686c35"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a67b7c1b37913b03b729104c2bb686c35">&#9670;&nbsp;</a></span>INSTR_CREATE_whilege_sve</h2>
 
@@ -60889,7 +61023,7 @@ Macros</h2></td></tr>
 <div class="ttc" id="adr__ir__macros__arm_8h_html_a8f83f8223e55cc0f4204ee06a827e565"><div class="ttname"><a href="dr__ir__macros__arm_8h.html#a8f83f8223e55cc0f4204ee06a827e565">INSTR_CREATE_str</a></div><div class="ttdeci">#define INSTR_CREATE_str(dc, mem, Rt)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_arm.h:1874</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a49e73cb4bc542e1b20aae716a3437fbe"><div class="ttname"><a href="dr__ir__instr_8h.html#a49e73cb4bc542e1b20aae716a3437fbe">instr_create_1dst_0src</a></div><div class="ttdeci">DR_API instr_t * instr_create_1dst_0src(void *drcontext, int opcode, opnd_t dst)</div></div>
 <div class="ttc" id="adr__ir__macros__aarch64_8h_html_afe62aa83b4e18021c3c4880dc573f78c"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#afe62aa83b4e18021c3c4880dc573f78c">OPND_CREATE_MUL</a></div><div class="ttdeci">#define OPND_CREATE_MUL()</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:118</div></div>
-<div class="ttc" id="adr__ir__macros__aarch64_8h_html_a3a5fa20afd157e3a42b1d54f6f9eff17"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#a3a5fa20afd157e3a42b1d54f6f9eff17">INSTR_CREATE_eor_sve_pred_b</a></div><div class="ttdeci">#define INSTR_CREATE_eor_sve_pred_b(dc, Pd, Pg, Pn, Pm)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:7216</div></div>
+<div class="ttc" id="adr__ir__macros__aarch64_8h_html_a3a5fa20afd157e3a42b1d54f6f9eff17"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#a3a5fa20afd157e3a42b1d54f6f9eff17">INSTR_CREATE_eor_sve_pred_b</a></div><div class="ttdeci">#define INSTR_CREATE_eor_sve_pred_b(dc, Pd, Pg, Pn, Pm)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:7218</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a3408612a2953255e7c3572cf76d296c1"><div class="ttname"><a href="dr__ir__opnd_8h.html#a3408612a2953255e7c3572cf76d296c1">opnd_create_predicate_reg</a></div><div class="ttdeci">DR_API INSTR_INLINE opnd_t opnd_create_predicate_reg(reg_id_t r, bool is_merge)</div></div>
 <div class="ttc" id="adr__ir__opcodes__arm_8h_html_ac66ed756685baa72f1882773dce5e297"><div class="ttname"><a href="dr__ir__opcodes__arm_8h.html#ac66ed756685baa72f1882773dce5e297">OP_cpy</a></div><div class="ttdeci">#define OP_cpy</div><div class="ttdef"><b>Definition:</b> dr_ir_opcodes_arm.h:1011</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a048d3f53da2ae3bbce71c91ceaa95f79"><div class="ttname"><a href="dr__ir__instr_8h.html#a048d3f53da2ae3bbce71c91ceaa95f79">instr_create_1dst_1src</a></div><div class="ttdeci">DR_API instr_t * instr_create_1dst_1src(void *drcontext, int opcode, opnd_t dst, opnd_t src)</div></div>
@@ -60942,5 +61076,5 @@ Macros</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.92.19880 --- Fri Jun 7 2024 03:15:24 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.92.19885 --- Fri Jun 14 2024 03:14:53 &nbsp; <img border=0 src="favicon.png">
 </small></address>
