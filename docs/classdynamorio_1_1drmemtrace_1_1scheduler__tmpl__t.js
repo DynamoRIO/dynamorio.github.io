@@ -5,6 +5,7 @@
     [ "range_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html", {% include_relative structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.js %} ],
     [ "scheduler_options_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html", {% include_relative structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.js %} ],
     [ "stream_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.js %} ],
+    [ "timestamp_range_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1timestamp__range__t.html", {% include_relative structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1timestamp__range__t.js %} ],
     [ "input_ordinal_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aba6242678835329015e0fc77404a1865", null ],
     [ "output_ordinal_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#abbf00e5453f5498c1fa32d7e00c760db", null ],
     [ "inter_input_dependency_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a820df460b5bb4bf9f9972ddb7d21f5d9", [

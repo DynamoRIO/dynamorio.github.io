@@ -229,10 +229,13 @@ Desired length of each trace interval, defined in instr count of each shard. Wit
 Limits analyis to the single thread with the given identifier. 0 enables all threads.</li>
 <li><b>-skip_instrs</b> <br  />
 <em>default value: 0</em> <br  />
-Specifies the number of instructions to skip in the beginning of the trace analysis. For serial iteration, this number is computed just once across the interleaving sequence of all threads; for parallel iteration, each thread skips this many insructions. When built with zipfile support, this skipping is optimized and large instruction counts can be quickly skipped; this is not the case for -skip_refs.</li>
+Specifies the number of instructions to skip in the beginning of the trace analysis. For serial iteration, this number is computed just once across the interleaving sequence of all threads; for parallel iteration, each thread skips this many instructions (see -skip_to_timestamp for an alternative which does align all threads). When built with zipfile support, this skipping is optimized and large instruction counts can be quickly skipped; this is not the case for -skip_refs.</li>
 <li><b>-skip_refs</b> <br  />
 <em>default value: 0</em> <br  />
 Specifies the number of references to skip in the beginning of the application execution. These memory references are dropped instead of being simulated. This skipping may be slow for large skip values; consider -skip_instrs for a faster method of skipping.</li>
+<li><b>-skip_to_timestamp</b> <br  />
+<em>default value: 0</em> <br  />
+Specifies a timestamp to start at, skipping over prior records in the trace. This is cross-cutting across all threads. If the target timestamp is not present as a timestamp marker, interpolation is used to approximate the target location in each thread. Only one of this and -skip_instrs can be specified. Requires -cpu_schedule_file to also be specified as a schedule file is required to translate the timestamp into per-thread instruction ordinals.When built with zipfile support, this skipping is optimized and large instruction counts can be quickly skipped.</li>
 <li><b>-L0_filter_until_instrs</b> <br  />
 <em>default value: 0</em> <br  />
 Specifies the number of instructions to run in warmup mode. This instruction count is per-thread. In warmup mode, we filter accesses through the -L0{D,I}_filter caches. If neither -L0D_filter nor -L0I_filter are specified then both are assumed to be true. The size of these can be specified using -L0{D,I}_size. The filter instructions come after the -trace_after_instrs count and before the full trace. This is intended to be used together with other trace options (e.g., -trace_for_instrs, -exit_after_tracing, -max_trace_size etc.) but with the difference that a filter trace is also collected. The filter trace and full trace are stored in a single file separated by a TRACE_MARKER_TYPE_FILTER_ENDPOINT marker. When used with windows (i.e., -retrace_every_instrs), each window contains a filter trace and a full trace. Therefore TRACE_MARKER_TYPE_WINDOW_ID markers indicate start of filtered records.</li>
@@ -340,7 +343,7 @@ Applies to -core_sharded and -core_serial. Path for storing record of schedule.<
 Applies to -core_sharded and -core_serial. Path with stored schedule for replay.</li>
 <li><b>-cpu_schedule_file</b> <br  />
 <em>default value: ""</em> <br  />
-Applies to -core_sharded and -core_serial. Path with stored as-traced schedule for replay.</li>
+Applies to -core_sharded and -core_serial. Path with stored as-traced schedule for replay. If specified with a non-zero -skip_to_timestamp, there is no replay and instead the file is used for the skip request.</li>
 <li><b>-sched_switch_file</b> <br  />
 <em>default value: ""</em> <br  />
 Applies to -core_sharded and -core_serial. Path to file holding context switch sequences. The file can contain multiple sequences each with regular trace headers and the sequence proper bracketed by TRACE_MARKER_TYPE_CONTEXT_SWITCH_START and TRACE_MARKER_TYPE_CONTEXT_SWITCH_END markers.</li>
@@ -391,5 +394,5 @@ When set to true, the trace invariant checker analysis tool aborts when a trace 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.92.19885 --- Fri Jun 14 2024 03:14:55 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.92.19894 --- Fri Jun 21 2024 03:14:50 &nbsp; <img border=0 src="favicon.png">
 </small></address>

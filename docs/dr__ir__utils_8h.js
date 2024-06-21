@@ -31,6 +31,7 @@
     [ "dr_insert_cbr_instrumentation_ex", "dr__ir__utils_8h.html#aaf70b54e0f62baf2a7bfe3b13b55c579", null ],
     [ "dr_insert_clean_call", "dr__ir__utils_8h.html#a1df44dbe3d8dbf82e63e96741f167c64", null ],
     [ "dr_insert_clean_call_ex", "dr__ir__utils_8h.html#a175c7c2531aa70017d2fb020f93e374f", null ],
+    [ "dr_insert_get_app_tls", "dr__ir__utils_8h.html#a1a95ab2f0eb56726765bbf1e6f4424e9", null ],
     [ "dr_insert_get_seg_base", "dr__ir__utils_8h.html#a9038ab78f7bc0385b10ea256610022ca", null ],
     [ "dr_insert_get_stolen_reg_value", "dr__ir__utils_8h.html#a7a38641e89e2573d725ec05d137e0fb6", null ],
     [ "dr_insert_it_instrs", "dr__ir__utils_8h.html#a1f2c05b5d49ca8dedfd52d7bbb2f59bb", null ],

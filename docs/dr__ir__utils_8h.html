@@ -187,6 +187,8 @@ Functions</h2></td></tr>
 <tr class="separator:ad2f75dd89d8a188f4a7fc9ae094bceaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f2c05b5d49ca8dedfd52d7bbb2f59bb"><td class="memItemLeft" align="right" valign="top">DR_API int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__utils_8h.html#a1f2c05b5d49ca8dedfd52d7bbb2f59bb">dr_insert_it_instrs</a> (void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist)</td></tr>
 <tr class="separator:a1f2c05b5d49ca8dedfd52d7bbb2f59bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a95ab2f0eb56726765bbf1e6f4424e9"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__utils_8h.html#a1a95ab2f0eb56726765bbf1e6f4424e9">dr_insert_get_app_tls</a> (void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *instr, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> tls_reg, <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> reg)</td></tr>
+<tr class="separator:a1a95ab2f0eb56726765bbf1e6f4424e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa23665c11b7d79a29ea185113d07944f"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__utils_8h.html#aa23665c11b7d79a29ea185113d07944f">dr_insert_save_fpstate</a> (void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="structopnd__t.html">opnd_t</a> buf)</td></tr>
 <tr class="separator:aa23665c11b7d79a29ea185113d07944f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74016eacf3a9cfc20a93a9ac0bca9c59"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__utils_8h.html#a74016eacf3a9cfc20a93a9ac0bca9c59">dr_insert_restore_fpstate</a> (void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="structopnd__t.html">opnd_t</a> buf)</td></tr>
@@ -907,6 +909,55 @@ Arguments that reference sub-register portions of DR_REG_XSP are not supported (
       </table>
 </div><div class="memdoc">
 <p>Identical to <a class="el" href="dr__ir__utils_8h.html#a1df44dbe3d8dbf82e63e96741f167c64">dr_insert_clean_call()</a> except it takes in <code>save_flags</code> which allows requests to not save certain state. This is intended for use at application call entry points or other contexts where a client is comfortable making assumptions. Keep in mind that any register that is not saved will not be present in a context obtained from <a class="el" href="dr__ir__utils_8h.html#a9e348b2596b8750ce3fad234ab022ced">dr_get_mcontext()</a>. </p>
+
+</div>
+</div>
+<a id="a1a95ab2f0eb56726765bbf1e6f4424e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a95ab2f0eb56726765bbf1e6f4424e9">&#9670;&nbsp;</a></span>dr_insert_get_app_tls()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API bool dr_insert_get_app_tls </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>drcontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *&#160;</td>
+          <td class="paramname"><em>ilist</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
+          <td class="paramname"><em>instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a>&#160;</td>
+          <td class="paramname"><em>tls_reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a>&#160;</td>
+          <td class="paramname"><em>reg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Insert code to get the application value of the thread pointer register into register <code>reg</code>.</p>
+<dl class="section return"><dt>Returns</dt><dd>whether successful.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>RISCV-only </dd></dl>
 
 </div>
 </div>
@@ -2573,5 +2624,5 @@ sahf" code sequence, which is faster and easier than popf. The caller must ensur
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.92.19885 --- Fri Jun 14 2024 03:14:54 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.92.19894 --- Fri Jun 21 2024 03:14:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

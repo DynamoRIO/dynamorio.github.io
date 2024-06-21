@@ -114,6 +114,7 @@
     [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::scheduler_options_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html", null ],
     [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html", null ],
     [ "dynamorio::drmemtrace::speculator_tmpl_t< RecordType >", "classdynamorio_1_1drmemtrace_1_1speculator__tmpl__t.html", null ],
+    [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::timestamp_range_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1timestamp__range__t.html", null ],
     [ "dynamorio::drmemtrace::tlb_simulator_knobs_t", "structdynamorio_1_1drmemtrace_1_1tlb__simulator__knobs__t.html", null ],
     [ "dynamorio::drmemtrace::trace_header_t", "structdynamorio_1_1drmemtrace_1_1trace__header__t.html", null ],
     [ "dynamorio::drmemtrace::trace_metadata_reader_t", "structdynamorio_1_1drmemtrace_1_1trace__metadata__reader__t.html", null ],
