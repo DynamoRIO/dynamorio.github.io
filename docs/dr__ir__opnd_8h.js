@@ -172,6 +172,7 @@
     [ "OPSZ_8_of_32_evex64", "dr__ir__opnd_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da904017b90f3a5ef7f2cefddee77716ca", null ],
     [ "OPSZ_8x16", "dr__ir__opnd_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da9327a3a29ff1d82c95674e1597c2271e", null ],
     [ "OPSZ_256", "dr__ir__opnd_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2dada1a78152242e5cca28a634ddebe426c", null ],
+    [ "OPSZ_192", "dr__ir__opnd_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2dabe5289caa1dcde512be0549a7b84871e", null ],
     [ "DR_REG_NULL", "dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600a3b7e285b0a732b7da09c0f65a66f7882", null ],
     [ "DR_REG_RAX", "dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600aa5c51b561fd965d340d4cf6266d814b8", null ],
     [ "DR_REG_RCX", "dr__ir__opnd_8h.html#abed82baf7f470b522273a3e37c24c600aa05b6f262667c94bb6e6b1ef454a69b4", null ],
