@@ -43,8 +43,9 @@ Requesting a Review as a Project Member</h1>
 Commit Messages</h1>
 <p>Commit messages should include an initial title line separated from the body of the message by a blank line. The title line should be a concise summary and should start with the issue number followed by a colon which is followed by the description of the issue fix. If the issue is fixed by more than one commit, the title should instead start with the issue number followed by a space and a short issue description, then a colon, and then a description of this particular fix, with a reference to the issue at the bottom for automatic linking in Github. In either case, the body of the message should elaborate on the contents of the commit using complete sentences.</p>
 <p>For a commit that fixes an Issue, be sure to resolve the Issue with a message indicating the commit revision number. If you use the exact string "Fixes: #NNNNN" (where NNNNN is replaced by an Issue number) with nothing else on that line in the commit message, the git push will auto-update the Issue to say "Fixed", avoiding any need to manually close the issue. You can also auto-close a Dr. Memory issue with "Fixes: DynamoRIO/drmemory#NNN". You can see other options in the <a href="https://help.github.com/articles/closing-issues-via-commit-messages/">GitHub documentation</a>.</p>
-<p>The string "Fixes: #NNNNN" in a Pull Request description will also close that issue, even if the final commit message does not contain that string, so be sure to edit the PR description if it's decided that the issue should stay open.</p>
 <p>If a commit does not fully fix an issue, include a reference to the issue with a line of the form "Issue: #NNNNN". Use this to add links to related issues as well, in a format that makes it easier for tools to locate within messages.</p>
+<p>Use line breaks to keep commit message lines below 80 characters.</p>
+<p>Markdown can make descriptions easier to read in the web view, and is allowed. It can make things harder to read in text views through so keep that in mind.</p>
 <p>An example of a single commit fixing an issue:</p>
 <pre class="fragment">i#3192: move delayed branches after markers (#3193)
 
@@ -90,7 +91,7 @@ Responding to Review Comments and Submitting Code Updates</h1>
 <p>After making changes in response to review comments, commit those changes locally as a new commit on top of your original commit. If the reviewer requested changes to the commit message, use a new proposed final commit message as the message for this change commit so that the reviewer can review the new message.</p>
 <p>Project members should then push the new commit to the pull request via:</p>
 <div class="fragment"><div class="line">git review</div>
-</div><!-- fragment --><p>Do not use a force push to change the history of the shared branch! Use a new, separate commit.</p>
+</div><!-- fragment --><p>Do not use a force push to change the history of the shared branch! Use a new, separate commit (these separate commits will all be squashed together upon merging).</p>
 <p>When the requested changes have been pushed, request a re-review from the reviewer so they know that the pull request is ready for another round of reviewing. This can be done by clicking the re-review button next to the reviewer's name at the top of the right sidebar on the pull request page.</p>
 <p>The final squash-and-merge step will squash these additional commits with the original to make a single commit that will be fast-forward-merged into master (see below for more details).</p>
 <h1><a class="anchor" id="autotoc_md119"></a>
@@ -98,37 +99,14 @@ Updating from Master</h1>
 <p>During local development before requesting review, i.e., before your feature branch is on the server, rebasing to pull in new changes from master is the preferred workflow. But once you've pushed your branch and it's shared, <b>do not rebase</b>, as it will destroy history in the pull request. Instead, merge changes from master if an update is needed (but see below: normally you should only do this at the very end after approval). These merge commits will disappear when the feature branch is fast-forward-merged to master.</p>
 <p>Generally, it's better to not update at all once a review has started. Do not click on the "Update Branch" until the review is approved and you are ready to merge into master. Clicking on it earlier when you may still need to make changes to your code just wastes resources. Furthermore, in some code review systems it corrupts the reviewer's view of the code, so it is a bad habit to get into.</p>
 <h1><a class="anchor" id="autotoc_md120"></a>
-Merging into Master and Cleaning Up the Final Commit Message</h1>
-<p>Only once the reviewer marks the proposed code changes as accepted and all of the continuous integration tests pass can the change be merged into master. If you have merge privileges, when performing the squash-and-merge, <b>be sure to edit the final commit message</b> (after pressing the squash-and-merge button, Github presents the final message in an edit box) to create a clean description of the commit without the messy incremental steps from the multiple commits fixing small issues during the review process. (You can resize the edit box by dragging the control in the bottom right.) <b>Especially be sure to remove <em>all</em> commit message titles</b> from the body of the final squash-and-merge message**, as the commit title is in a separate edit box (and defaults to the title of the first commit, so update it as well if the title changed during review). Also be sure to avoid truncation of the commit title, as Github likes to replace the end with "...".</p>
-<p>To clarify further, here is an example of what Github will present in the squash-and-merge step for the message body:</p>
-<pre class="fragment">* i#3192: move delayed branches after markers
-
-Fixes the problem of delayed branches being inserted between the
-timestamp and cpuid marker in drcachesim's offline traces by delaying
-the delayed branch until after all markers.
-
-Fixes: #3192
-
-* Fix clang warning
-
-* Address reviewer comment suggestions
-</pre><p>All the lines starting with a <code>*</code> are commit message titles from commits in the pull request branch. They should <b>all</b> be removed, <b>including the first one</b>. A separate single-line edit box contains the title line for the commit message, which will be added to the front of the description by Github. Thus, the final description edit box should contain no title at all:</p>
-<pre class="fragment">Fixes the problem of delayed branches being inserted between the
-timestamp and cpuid marker in drcachesim's offline traces by delaying
-the delayed branch until after all markers.
-
-Fixes: #3192
-</pre><p>When editing the title edit box, leave in place the pointer to the pull request, which Github automatically adds to the end of the commit message title, in parentheses, for its suggested final squash-and-merge title:</p>
-<div class="fragment"><div class="line">i#3192: move delayed branches after markers (#3193)</div>
-</div><!-- fragment --><p>Re-iterating as there is a tendency to just click through the squash-and-merge: <em><b>please edit and</b></em> <em><b>clean up the final commit message</b></em>!</p>
+Merging into Master</h1>
+<p>Only once the reviewer marks the proposed code changes as accepted, all outstanding review comments have been marked resolved, and all of the continuous integration tests pass can the change be merged into the master branch. All commits that are part of the pull request branch are squashed together into a single commit on the master branch. The commit message title for this single commit is the pull request title, with "(#NNNN)" auto-appended where NNNN is the pull request number. The commit message body is the initial comment at the top level of the pull request: the pull request description. This can be edited after the pull request is created and those edits will be used in the squash-and-merge commit message. The reviewer may request changes to the message, which should be performed by editing it through the web interface.</p>
+<p>Github automatically deletes the pull request branch upon merging.</p>
 <h1><a class="anchor" id="autotoc_md121"></a>
-Deleting the Branch</h1>
-<p>Generally, the feature branch should be deleted from the repository using the button that Github provides immediately after merging.</p>
-<h1><a class="anchor" id="autotoc_md122"></a>
 Review Delays</h1>
 <p>With an open-source project like this where each contributor has a day job with other priorities, code reviews should be expected to take a day or two, and longer if the change is lengthy. However, if the reviewer expects to not have time to complete the review within 2 days he or she should notify the author up front to give a chance to switch to a different reviewer.</p>
 <p>For reviews performed by developers all working on the same active project as part of a day job, reviews should be much more timely: within a few hours, to avoid disrupting productivity.</p>
-<h1><a class="anchor" id="autotoc_md123"></a>
+<h1><a class="anchor" id="autotoc_md122"></a>
 Project Branches</h1>
 <p>For larger, more experimental features that do not easily fit into the one-commit-per-merge model, project branches are used. The review process is identical to above but substituting the project branch for master: i.e., single-commit feature branches are still used and reviewed, but they are squash-and-fast-forward-merged into the project branch.</p>
 <p>Clean, reviewed commits then accumulate in the project branch until they are all ready to be merged into master. Here, a rebase is used rather than a squash-and-merge. </p>
@@ -139,5 +117,5 @@ Project Branches</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19915 --- Fri Jul 12 2024 03:15:50 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19922 --- Fri Jul 19 2024 03:16:18 &nbsp; <img border=0 src="favicon.png">
 </small></address>

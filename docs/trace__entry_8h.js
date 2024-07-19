@@ -75,7 +75,8 @@
       [ "TRACE_MARKER_TYPE_VECTOR_LENGTH", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca596e9201ac17982a47ad3c931aaca487", null ],
       [ "TRACE_MARKER_TYPE_SYSCALL_UNSCHEDULE", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca6033baf3bb4bf61879c01e91e246b115", null ],
       [ "TRACE_MARKER_TYPE_SYSCALL_SCHEDULE", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295caa8af23555ce5778daecf69b0ef0cf200", null ],
-      [ "TRACE_MARKER_TYPE_SYSCALL_ARG_TIMEOUT", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca8c60aa290a1c83f0119e7590fee5af0b", null ]
+      [ "TRACE_MARKER_TYPE_SYSCALL_ARG_TIMEOUT", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca8c60aa290a1c83f0119e7590fee5af0b", null ],
+      [ "TRACE_MARKER_TYPE_SIGNAL_NUMBER", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295caeab5ab5189617728fec57d491ef1d63d", null ]
     ] ],
     [ "trace_type_t", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59c", [
       [ "TRACE_TYPE_READ", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59ca018585565e72f9ebe6723e089f3d343d", null ],
