@@ -152,7 +152,8 @@ Cross-Compiling for 64-bit RISC-V (RISCV64) on Linux</h2>
 <p>Prepare cross-compiling environment for RISCV64:</p>
 <div class="fragment"><div class="line">$ sudo apt-get -y install doxygen vera++ cmake crossbuild-essential-riscv64 git</div>
 </div><!-- fragment --><p>Some packages may need to be manually installed for cross-compiling environment. You can also refer to our <a href="https://github.com/DynamoRIO/dynamorio/blob/master/.github/workflows/ci-riscv64.yml">CI workflow file</a> for creating a RISCV64 build environment.</p>
-<div class="fragment"><div class="line">$ sudo add-apt-repository <span class="stringliteral">&#39;deb [trusted=yes arch=riscv64] http://deb.debian.org/debian sid main&#39;</span></div>
+<div class="fragment"><div class="line">$ echo <span class="stringliteral">&#39;deb [arch=riscv64] http://ports.ubuntu.com/ubuntu-ports noble main&#39;</span> | sudo tee -a /etc/apt/sources.list</div>
+<div class="line">$ sudo apt-get update</div>
 <div class="line">$ apt download libunwind8:riscv64 libunwind-dev:riscv64 liblzma5:riscv64 zlib1g:riscv64 zlib1g-dev:riscv64 libsnappy1v5:riscv64 libsnappy-dev:riscv64 liblz4-1:riscv64 liblz4-dev:riscv64</div>
 <div class="line">$ mkdir ../extract</div>
 <div class="line">$ <span class="keywordflow">for</span> i in *.deb; <span class="keywordflow">do</span> dpkg-deb -x $i ../extract; done</div>
@@ -527,5 +528,5 @@ Building the Qt DrGUI extension</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19922 --- Fri Jul 19 2024 03:16:18 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19930 --- Fri Jul 26 2024 03:16:16 &nbsp; <img border=0 src="favicon.png">
 </small></address>

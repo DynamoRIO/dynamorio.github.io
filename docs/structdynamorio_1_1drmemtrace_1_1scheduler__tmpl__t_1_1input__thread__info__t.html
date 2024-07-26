@@ -38,6 +38,8 @@ permalink: /structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a63261a3aee4ad0db0fc1c82d1d6511d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#a63261a3aee4ad0db0fc1c82d1d6511d2">input_thread_info_t</a> (std::vector&lt; <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html">range_t</a> &gt; regions)</td></tr>
 <tr class="separator:a63261a3aee4ad0db0fc1c82d1d6511d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac21a5004f533301cf296d86a788d2bbf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#ac21a5004f533301cf296d86a788d2bbf">input_thread_info_t</a> (<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a3e5e148e77271ee047c9f3e79f82fd87">memref_tid_t</a> tid, std::vector&lt; <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html">range_t</a> &gt; regions)</td></tr>
+<tr class="separator:ac21a5004f533301cf296d86a788d2bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9e954a3f0df40e05f4cb0556fb154c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#ac9e954a3f0df40e05f4cb0556fb154c2">input_thread_info_t</a> (<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a3e5e148e77271ee047c9f3e79f82fd87">memref_tid_t</a> tid, int <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#a290e5c7299ecca9d28a489c297bb5747">priority</a>)</td></tr>
 <tr class="separator:ac9e954a3f0df40e05f4cb0556fb154c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8aa0acbe3564a62119db0d684dc1652f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#a8aa0acbe3564a62119db0d684dc1652f">input_thread_info_t</a> (std::set&lt; <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#abbf00e5453f5498c1fa32d7e00c760db">output_ordinal_t</a> &gt; <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#a7935c52a446817dae3261e55055eda99">output_binding</a>)</td></tr>
@@ -65,7 +67,7 @@ struct dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::
 <p>Specifies details about one set of input trace files from one workload, each input file representing a single software thread. It is assumed that there is no thread id duplication within one workload. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a63261a3aee4ad0db0fc1c82d1d6511d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63261a3aee4ad0db0fc1c82d1d6511d2">&#9670;&nbsp;</a></span>input_thread_info_t() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a63261a3aee4ad0db0fc1c82d1d6511d2">&#9670;&nbsp;</a></span>input_thread_info_t() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -93,8 +95,47 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 
 </div>
 </div>
+<a id="ac21a5004f533301cf296d86a788d2bbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac21a5004f533301cf296d86a788d2bbf">&#9670;&nbsp;</a></span>input_thread_info_t() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::input_thread_info_t::input_thread_info_t </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a3e5e148e77271ee047c9f3e79f82fd87">memref_tid_t</a>&#160;</td>
+          <td class="paramname"><em>tid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html">range_t</a> &gt;&#160;</td>
+          <td class="paramname"><em>regions</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Convenience constructor for common usage. </p>
+
+</div>
+</div>
 <a id="ac9e954a3f0df40e05f4cb0556fb154c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9e954a3f0df40e05f4cb0556fb154c2">&#9670;&nbsp;</a></span>input_thread_info_t() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9e954a3f0df40e05f4cb0556fb154c2">&#9670;&nbsp;</a></span>input_thread_info_t() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -133,7 +174,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 </div>
 </div>
 <a id="a8aa0acbe3564a62119db0d684dc1652f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8aa0acbe3564a62119db0d684dc1652f">&#9670;&nbsp;</a></span>input_thread_info_t() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aa0acbe3564a62119db0d684dc1652f">&#9670;&nbsp;</a></span>input_thread_info_t() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,7 +203,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 </div>
 </div>
 <a id="ae1c0b5f67f6306420032df12817e8941"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1c0b5f67f6306420032df12817e8941">&#9670;&nbsp;</a></span>input_thread_info_t() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1c0b5f67f6306420032df12817e8941">&#9670;&nbsp;</a></span>input_thread_info_t() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -248,7 +289,8 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>If non-empty, all input records outside of these ranges are skipped: it is as though the input were constructed by concatenating these ranges together. A <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca02845c6ba33cc5038f8a7bfe38c25f57">TRACE_MARKER_TYPE_WINDOW_ID</a> marker is inserted between ranges (with a value equal to the range ordinal) to notify the client of the discontinuity. This marker is inserted between back-to-back regions with no separation, but it is not inserted prior to the first range. A <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca2311f914a9e8e190d219e162c5e5afae">dynamorio::drmemtrace::TRACE_TYPE_THREAD_EXIT</a> record is inserted after the final range. These ranges must be non-overlapping and in increasing order. </p>
+<p>If non-empty, all input records outside of these ranges are skipped: it is as though the input were constructed by concatenating these ranges together. A <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca02845c6ba33cc5038f8a7bfe38c25f57">TRACE_MARKER_TYPE_WINDOW_ID</a> marker is inserted between ranges (with a value equal to the range ordinal) to notify the client of the discontinuity. This marker is inserted between back-to-back regions with no separation, but it is not inserted prior to the first range. A <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca2311f914a9e8e190d219e162c5e5afae">dynamorio::drmemtrace::TRACE_TYPE_THREAD_EXIT</a> record is inserted after the final range. These ranges must be non-overlapping and in increasing order.</p>
+<p>Be aware that selecting a subset of code can remove inter-input communication steps that could be required for forward progress. For example, if selected subsets include <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca6033baf3bb4bf61879c01e91e246b115">TRACE_MARKER_TYPE_SYSCALL_UNSCHEDULE</a> with no timeout but do not include a corresponding <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caa8af23555ce5778daecf69b0ef0cf200">TRACE_MARKER_TYPE_SYSCALL_SCHEDULE</a> for wakeup, an input could remain unscheduled. </p>
 
 </div>
 </div>
@@ -295,5 +337,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19922 --- Fri Jul 19 2024 03:16:18 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19930 --- Fri Jul 26 2024 03:16:17 &nbsp; <img border=0 src="favicon.png">
 </small></address>

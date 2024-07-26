@@ -1,5 +1,6 @@
 [
     [ "input_thread_info_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#a63261a3aee4ad0db0fc1c82d1d6511d2", null ],
+    [ "input_thread_info_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#ac21a5004f533301cf296d86a788d2bbf", null ],
     [ "input_thread_info_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#ac9e954a3f0df40e05f4cb0556fb154c2", null ],
     [ "input_thread_info_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#a8aa0acbe3564a62119db0d684dc1652f", null ],
     [ "input_thread_info_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#ae1c0b5f67f6306420032df12817e8941", null ],

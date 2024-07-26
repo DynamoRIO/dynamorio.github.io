@@ -37,7 +37,8 @@
       [ "STATUS_ERROR_FILE_OPEN_FAILED", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a0592e3ade99a43962b74dde29c4ab66cada16ebbea80fe5d582b835e3b9f5f422", null ],
       [ "STATUS_ERROR_FILE_READ_FAILED", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a0592e3ade99a43962b74dde29c4ab66ca606524225eb0d33c97ba9b2fda16aa76", null ],
       [ "STATUS_ERROR_NOT_IMPLEMENTED", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a0592e3ade99a43962b74dde29c4ab66ca84ebaeedf51b74933c4d48b6dde5e7ed", null ],
-      [ "STATUS_ERROR_FILE_WRITE_FAILED", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a0592e3ade99a43962b74dde29c4ab66cab71cf02f340eb67a517ca3133cd496b9", null ]
+      [ "STATUS_ERROR_FILE_WRITE_FAILED", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a0592e3ade99a43962b74dde29c4ab66cab71cf02f340eb67a517ca3133cd496b9", null ],
+      [ "STATUS_ERROR_RANGE_INVALID", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a0592e3ade99a43962b74dde29c4ab66cae11055dab16a1cdac1beb4611ccef2cf", null ]
     ] ],
     [ "stream_status_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5", [
       [ "STATUS_OK", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a4a9f07bc3714da2a39e0c60500da6492", null ],
