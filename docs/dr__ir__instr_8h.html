@@ -126,8 +126,6 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a855ff8e66c8493c78515f5e8f37ee914"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71">_dr_pred_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a></td></tr>
-<tr class="separator:a855ff8e66c8493c78515f5e8f37ee914"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea5eb2378e8c8e2e928f4e501f5b3808"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="dr__ir__instr_8h.html#a184245467ba8dac87ceab4042f61fcdd">_dr_encoding_hint_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#aea5eb2378e8c8e2e928f4e501f5b3808">dr_encoding_hint_type_t</a></td></tr>
 <tr class="separator:aea5eb2378e8c8e2e928f4e501f5b3808"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2aaa6ff57b03331c92e84525a5f3a56f"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__dr__instr__label__data__t.html">_dr_instr_label_data_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a2aaa6ff57b03331c92e84525a5f3a56f">dr_instr_label_data_t</a></td></tr>
@@ -143,111 +141,6 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ac55eea34836068d8d66196c3f1556d71"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71">_dr_pred_type_t</a> { <br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ad94a882e075b12c0e4e6e5f852e4e4b2">DR_PRED_NONE</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a73fe4e68d99f10cbef5cd9e22fd23577">DR_PRED_O</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a55f11d7f40baaa33ff1224d9b3d94210">DR_PRED_NO</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ad15eddf8665676a15deedc5878f2c3bf">DR_PRED_B</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a9e7e5cd4c46dfcd0524c89f97c5e5381">DR_PRED_NB</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a2bcac2d1e198e4708a2a08f4e429f748">DR_PRED_Z</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71add0fb2af7372312d49ec62cd1705f046">DR_PRED_NZ</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a3afd847eebcbed1bb9695858727b5e57">DR_PRED_BE</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a1286e03cd056a94201c46f3ed416074d">DR_PRED_NBE</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a0f3659e2b77ec4c3bf765394e14cea18">DR_PRED_S</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a1d73b15fb50af162b86ecfdca21cb067">DR_PRED_NS</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a6f0cd6c3f9706dd5b6abe4baeaf385b5">DR_PRED_P</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71aba0e448a0a4bcf4de31e28a61c46e96b">DR_PRED_NP</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a75f5f1a12d5b7707b7c3279bb71f7384">DR_PRED_L</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a6c14dd778a1f20408247ab7948d9e3e6">DR_PRED_NL</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71adef3652e87ed3e2ae0b4dcae7510c118">DR_PRED_LE</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71aecaeb5a9b0412fcd97706330b3d03758">DR_PRED_NLE</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ade60058c0eb6909b05024f9728c6b9bc">DR_PRED_COMPLEX</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71aa1a14900d3e16156d2869f22547524b0">DR_PRED_EQ</a> = DR_PRED_Z, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ae7bf2ba58687bb05979b582c4fae5dac">DR_PRED_NE</a> = DR_PRED_NZ, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a45a6d0ab07c54c28b48aa43d5252b6a2">DR_PRED_LT</a> = DR_PRED_L, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71af56d815bdf4faa3f78dd65fcc027debf">DR_PRED_GT</a> = DR_PRED_NLE, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a1e66b16a0cae287a95bb778e59211176">DR_PRED_GE</a> = DR_PRED_NL, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71aa1a14900d3e16156d2869f22547524b0">DR_PRED_EQ</a> = DR_PRED_Z, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ae7bf2ba58687bb05979b582c4fae5dac">DR_PRED_NE</a> = DR_PRED_NZ, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a3ca8bb0ef7a4db335daadb7bd725bdca">DR_PRED_CS</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a680c342e9f5822c48e2411a96fef898b">DR_PRED_CC</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a1ea45ab57ae4831e5456bc8468567051">DR_PRED_MI</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71af7a1462ef5f66ee8eff764a3a61bacb4">DR_PRED_PL</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a5512f168d661d7d5204e5adbe64c0e7b">DR_PRED_VS</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a62291267c0cc74f3e75b660bc4e1a31b">DR_PRED_VC</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a9dcda87aba73a765233147ddca5223b1">DR_PRED_HI</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a6bb89a0bace06c82c6be73dedf25c4f3">DR_PRED_LS</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a1e66b16a0cae287a95bb778e59211176">DR_PRED_GE</a> = DR_PRED_NL, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a45a6d0ab07c54c28b48aa43d5252b6a2">DR_PRED_LT</a> = DR_PRED_L, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71af56d815bdf4faa3f78dd65fcc027debf">DR_PRED_GT</a> = DR_PRED_NLE, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71adef3652e87ed3e2ae0b4dcae7510c118">DR_PRED_LE</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a78e6d52241fbdf06167efb1db2010afd">DR_PRED_AL</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a048818da71575e1f01f5b0bc50c698af">DR_PRED_NV</a>
-, <br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ae6ed5c6e0b7b1f6c814ce9bae7de7cc3">DR_PRED_OP</a>, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71af38dfaa64a16c41e4228544713623f49">DR_PRED_HS</a> = DR_PRED_CS, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71aa1d2962fff33ef9f59e5371d0d4b99ae">DR_PRED_LO</a> = DR_PRED_CC, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71af4da027a9e819976aa7eea004e365801">DR_PRED_SVE_NONE</a> = DR_PRED_EQ, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71af324a06c4e9c50dc46d288e153400c1c">DR_PRED_SVE_ANY</a> = DR_PRED_NE, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a5b1d7bd81b38ff5e2f7ce503af9b33c5">DR_PRED_SVE_NLAST</a> = DR_PRED_CS, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ae12ea504e862e82489de696e721ed1fc">DR_PRED_SVE_LAST</a> = DR_PRED_CC, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71af81c30e1097893545bc6a4e6ff6c59d8">DR_PRED_SVE_FIRST</a> = DR_PRED_MI, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ac0883231162ebaaf9026b17479059ac4">DR_PRED_SVE_NFRST</a> = DR_PRED_PL, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a56819690e7c1dc6588541b76deda5fe0">DR_PRED_SVE_PLAST</a> = DR_PRED_LS, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71abf01224885e4245b54e4e01c532b32ae">DR_PRED_SVE_TCONT</a> = DR_PRED_GE, 
-<br />
-&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a9a3ad843e3ee0113a9d897ed1b92ffb2">DR_PRED_SVE_TSTOP</a> = DR_PRED_LT
-<br />
- }</td></tr>
-<tr class="separator:ac55eea34836068d8d66196c3f1556d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a184245467ba8dac87ceab4042f61fcdd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a184245467ba8dac87ceab4042f61fcdd">_dr_encoding_hint_type_t</a> { <br />
 &#160;&#160;<a class="el" href="dr__ir__instr_8h.html#a184245467ba8dac87ceab4042f61fcddad31f6f0d7748a983418f6cd494a009ef">DR_ENCODING_HINT_NONE</a> = 0x0, 
 <br />
@@ -495,19 +388,19 @@ Functions</h2></td></tr>
 <tr class="separator:ac10ff7ad83028f5670256d7a2c05bc66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0dda1bdd960e675b6b65a4093b44896"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#aa0dda1bdd960e675b6b65a4093b44896">instr_is_predicated</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
 <tr class="separator:aa0dda1bdd960e675b6b65a4093b44896"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19932f4d78cd67b02b3b4c657fba329f"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a19932f4d78cd67b02b3b4c657fba329f">instr_get_predicate</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
+<tr class="memitem:a19932f4d78cd67b02b3b4c657fba329f"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a19932f4d78cd67b02b3b4c657fba329f">instr_get_predicate</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
 <tr class="separator:a19932f4d78cd67b02b3b4c657fba329f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08688c7671e76f37c3a5900f1f8c5b07"><td class="memItemLeft" align="right" valign="top">const DR_API char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a08688c7671e76f37c3a5900f1f8c5b07">instr_predicate_name</a> (<a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred)</td></tr>
+<tr class="memitem:a08688c7671e76f37c3a5900f1f8c5b07"><td class="memItemLeft" align="right" valign="top">const DR_API char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a08688c7671e76f37c3a5900f1f8c5b07">instr_predicate_name</a> (<a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred)</td></tr>
 <tr class="separator:a08688c7671e76f37c3a5900f1f8c5b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28054de839953da488ee2d0e1ea789aa"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a28054de839953da488ee2d0e1ea789aa">instr_invert_predicate</a> (<a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred)</td></tr>
+<tr class="memitem:a28054de839953da488ee2d0e1ea789aa"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a28054de839953da488ee2d0e1ea789aa">instr_invert_predicate</a> (<a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred)</td></tr>
 <tr class="separator:a28054de839953da488ee2d0e1ea789aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9b0e3fc0b9323e6cfe81eacffe3bf05"><td class="memItemLeft" align="right" valign="top">DR_API uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#ae9b0e3fc0b9323e6cfe81eacffe3bf05">instr_it_block_get_count</a> (<a class="el" href="structinstr__t.html">instr_t</a> *it_instr)</td></tr>
 <tr class="separator:ae9b0e3fc0b9323e6cfe81eacffe3bf05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf931c6538a371972a01c3d63f7f810b"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#adf931c6538a371972a01c3d63f7f810b">instr_it_block_get_pred</a> (<a class="el" href="structinstr__t.html">instr_t</a> *it_instr, uint index)</td></tr>
+<tr class="memitem:adf931c6538a371972a01c3d63f7f810b"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#adf931c6538a371972a01c3d63f7f810b">instr_it_block_get_pred</a> (<a class="el" href="structinstr__t.html">instr_t</a> *it_instr, uint index)</td></tr>
 <tr class="separator:adf931c6538a371972a01c3d63f7f810b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a192215c3468cee805dc68afa83aae818"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a192215c3468cee805dc68afa83aae818">instr_it_block_compute_immediates</a> (<a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred0, <a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred1, <a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred2, <a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred3, byte *firstcond_out, byte *mask_out)</td></tr>
+<tr class="memitem:a192215c3468cee805dc68afa83aae818"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a192215c3468cee805dc68afa83aae818">instr_it_block_compute_immediates</a> (<a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred0, <a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred1, <a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred2, <a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred3, byte *firstcond_out, byte *mask_out)</td></tr>
 <tr class="separator:a192215c3468cee805dc68afa83aae818"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab75da36d0a90197ef9f271fb632fe548"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#ab75da36d0a90197ef9f271fb632fe548">instr_it_block_create</a> (void *drcontext, <a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred0, <a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred1, <a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred2, <a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred3)</td></tr>
+<tr class="memitem:ab75da36d0a90197ef9f271fb632fe548"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#ab75da36d0a90197ef9f271fb632fe548">instr_it_block_create</a> (void *drcontext, <a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred0, <a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred1, <a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred2, <a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred3)</td></tr>
 <tr class="separator:ab75da36d0a90197ef9f271fb632fe548"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdbd15b741792307845f5fc2df9b4b5d"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#abdbd15b741792307845f5fc2df9b4b5d">instr_is_exclusive_load</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
 <tr class="separator:abdbd15b741792307845f5fc2df9b4b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -517,9 +410,9 @@ Functions</h2></td></tr>
 <tr class="separator:ad78d9b3a3bd6acf6ca3d1c047a6f0830"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab99dd3460f2fd5abc2d59a9ddb26a6b5"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#ab99dd3460f2fd5abc2d59a9ddb26a6b5">instr_is_gather</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr)</td></tr>
 <tr class="separator:ab99dd3460f2fd5abc2d59a9ddb26a6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2781b28dd7bf0ff307a284c08f1c107a"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a2781b28dd7bf0ff307a284c08f1c107a">instr_predicate_is_cond</a> (<a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred)</td></tr>
+<tr class="memitem:a2781b28dd7bf0ff307a284c08f1c107a"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a2781b28dd7bf0ff307a284c08f1c107a">instr_predicate_is_cond</a> (<a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred)</td></tr>
 <tr class="separator:a2781b28dd7bf0ff307a284c08f1c107a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefd8b628ad00a0f5600c0a49ed1dae20"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#aefd8b628ad00a0f5600c0a49ed1dae20">instr_set_predicate</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, <a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred)</td></tr>
+<tr class="memitem:aefd8b628ad00a0f5600c0a49ed1dae20"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#aefd8b628ad00a0f5600c0a49ed1dae20">instr_set_predicate</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, <a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> pred)</td></tr>
 <tr class="separator:aefd8b628ad00a0f5600c0a49ed1dae20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07d5832cf5ea24804b4c827b489f1ffc"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__ir__instr_8h.html#ade76e7e52fb017ae5438a6fa4903617f">dr_pred_trigger_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__instr_8h.html#a07d5832cf5ea24804b4c827b489f1ffc">instr_predicate_triggered</a> (<a class="el" href="structinstr__t.html">instr_t</a> *instr, <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> *mc)</td></tr>
 <tr class="separator:a07d5832cf5ea24804b4c827b489f1ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1426,21 +1319,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a855ff8e66c8493c78515f5e8f37ee914"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a855ff8e66c8493c78515f5e8f37ee914">&#9670;&nbsp;</a></span>dr_pred_type_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef enum <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71">_dr_pred_type_t</a> <a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Triggers used for conditionally executed instructions. </p>
-
-</div>
-</div>
 <a id="ae8b5942bc78904306cad446010dc1976"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae8b5942bc78904306cad446010dc1976">&#9670;&nbsp;</a></span>instr_label_callback_t</h2>
 
@@ -1588,154 +1466,6 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a8c0ff6068a163a5cd113771ef5ee7772ab472d01df9fead8c13beaf75da010400"></a>DR_PRED_TRIGGER_UNKNOWN&#160;</td><td class="fielddoc"><p>It is unknown whether the predicate matches. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a8c0ff6068a163a5cd113771ef5ee7772a36d7eb98d337bb458d3afd3f2c902787"></a>DR_PRED_TRIGGER_INVALID&#160;</td><td class="fielddoc"><p>An invalid parameter was passed. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a id="ac55eea34836068d8d66196c3f1556d71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac55eea34836068d8d66196c3f1556d71">&#9670;&nbsp;</a></span>_dr_pred_type_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71">_dr_pred_type_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Triggers used for conditionally executed instructions. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71ad94a882e075b12c0e4e6e5f852e4e4b2"></a>DR_PRED_NONE&#160;</td><td class="fielddoc"><p>No predicate is present. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a73fe4e68d99f10cbef5cd9e22fd23577"></a>DR_PRED_O&#160;</td><td class="fielddoc"><p>x86 condition: overflow (OF=1). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a55f11d7f40baaa33ff1224d9b3d94210"></a>DR_PRED_NO&#160;</td><td class="fielddoc"><p>x86 condition: no overflow (OF=0). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71ad15eddf8665676a15deedc5878f2c3bf"></a>DR_PRED_B&#160;</td><td class="fielddoc"><p>x86 condition: below (CF=1). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a9e7e5cd4c46dfcd0524c89f97c5e5381"></a>DR_PRED_NB&#160;</td><td class="fielddoc"><p>x86 condition: not below (CF=0). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a2bcac2d1e198e4708a2a08f4e429f748"></a>DR_PRED_Z&#160;</td><td class="fielddoc"><p>x86 condition: zero (ZF=1). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71add0fb2af7372312d49ec62cd1705f046"></a>DR_PRED_NZ&#160;</td><td class="fielddoc"><p>x86 condition: not zero (ZF=0). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a3afd847eebcbed1bb9695858727b5e57"></a>DR_PRED_BE&#160;</td><td class="fielddoc"><p>x86 condition: below or equal (CF=1 or ZF=1). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a1286e03cd056a94201c46f3ed416074d"></a>DR_PRED_NBE&#160;</td><td class="fielddoc"><p>x86 condition: not below or equal (CF=0 and ZF=0). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a0f3659e2b77ec4c3bf765394e14cea18"></a>DR_PRED_S&#160;</td><td class="fielddoc"><p>x86 condition: sign (SF=1). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a1d73b15fb50af162b86ecfdca21cb067"></a>DR_PRED_NS&#160;</td><td class="fielddoc"><p>x86 condition: not sign (SF=0). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a6f0cd6c3f9706dd5b6abe4baeaf385b5"></a>DR_PRED_P&#160;</td><td class="fielddoc"><p>x86 condition: parity (PF=1). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71aba0e448a0a4bcf4de31e28a61c46e96b"></a>DR_PRED_NP&#160;</td><td class="fielddoc"><p>x86 condition: not parity (PF=0). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a75f5f1a12d5b7707b7c3279bb71f7384"></a>DR_PRED_L&#160;</td><td class="fielddoc"><p>x86 condition: less (SF != OF). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a6c14dd778a1f20408247ab7948d9e3e6"></a>DR_PRED_NL&#160;</td><td class="fielddoc"><p>x86 condition: not less (SF=OF). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71adef3652e87ed3e2ae0b4dcae7510c118"></a>DR_PRED_LE&#160;</td><td class="fielddoc"><p>x86 condition: less or equal (ZF=1 or SF != OF).</p>
-<p>ARM condition: 1101 Signed &lt;= (Z == 1 or N != V) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71aecaeb5a9b0412fcd97706330b3d03758"></a>DR_PRED_NLE&#160;</td><td class="fielddoc"><p>x86 condition: not less or equal (ZF=0 and SF=OF). </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71ade60058c0eb6909b05024f9728c6b9bc"></a>DR_PRED_COMPLEX&#160;</td><td class="fielddoc"><p>x86 condition: special opcode-specific condition that depends on the values of the source operands. Thus, unlike all of the other conditions, the source operands will be accessed even if the condition then fails and the destinations are not touched. Any written eflags are unconditionally written, unlike regular destination operands. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71aa1a14900d3e16156d2869f22547524b0"></a>DR_PRED_EQ&#160;</td><td class="fielddoc"><p>Condition code: equal.</p>
-<p>ARM condition: 0000 Equal (Z == 1) <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71ae7bf2ba58687bb05979b582c4fae5dac"></a>DR_PRED_NE&#160;</td><td class="fielddoc"><p>Condition code: not equal.</p>
-<p>ARM condition: 0001 Not equal (Z == 0) <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a45a6d0ab07c54c28b48aa43d5252b6a2"></a>DR_PRED_LT&#160;</td><td class="fielddoc"><p>Condition code: signed less than.</p>
-<p>ARM condition: 1011 Signed less than (N != V) <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71af56d815bdf4faa3f78dd65fcc027debf"></a>DR_PRED_GT&#160;</td><td class="fielddoc"><p>Condition code: signed greater than.</p>
-<p>ARM condition: 1100 Signed greater than (Z == 0 and N == V) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a1e66b16a0cae287a95bb778e59211176"></a>DR_PRED_GE&#160;</td><td class="fielddoc"><p>Condition code: signed greater than or equal.</p>
-<p>ARM condition: 1010 Signed &gt;= (N == V) <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71aa1a14900d3e16156d2869f22547524b0"></a>DR_PRED_EQ&#160;</td><td class="fielddoc"><p>Condition code: equal.</p>
-<p>ARM condition: 0000 Equal (Z == 1) <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71ae7bf2ba58687bb05979b582c4fae5dac"></a>DR_PRED_NE&#160;</td><td class="fielddoc"><p>Condition code: not equal.</p>
-<p>ARM condition: 0001 Not equal (Z == 0) <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a3ca8bb0ef7a4db335daadb7bd725bdca"></a>DR_PRED_CS&#160;</td><td class="fielddoc"><p>ARM condition: 0010 Carry set (C == 1) <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a680c342e9f5822c48e2411a96fef898b"></a>DR_PRED_CC&#160;</td><td class="fielddoc"><p>ARM condition: 0011 Carry clear (C == 0) <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a1ea45ab57ae4831e5456bc8468567051"></a>DR_PRED_MI&#160;</td><td class="fielddoc"><p>ARM condition: 0100 Minus, negative (N == 1) <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71af7a1462ef5f66ee8eff764a3a61bacb4"></a>DR_PRED_PL&#160;</td><td class="fielddoc"><p>ARM condition: 0101 Plus, positive or zero (N == 0) <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a5512f168d661d7d5204e5adbe64c0e7b"></a>DR_PRED_VS&#160;</td><td class="fielddoc"><p>ARM condition: 0110 Overflow (V == 1) <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a62291267c0cc74f3e75b660bc4e1a31b"></a>DR_PRED_VC&#160;</td><td class="fielddoc"><p>ARM condition: 0111 No overflow (V == 0) <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a9dcda87aba73a765233147ddca5223b1"></a>DR_PRED_HI&#160;</td><td class="fielddoc"><p>ARM condition: 1000 Unsigned higher (C == 1 and Z == 0) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a6bb89a0bace06c82c6be73dedf25c4f3"></a>DR_PRED_LS&#160;</td><td class="fielddoc"><p>ARM condition: 1001 Unsigned lower or same (C == 1 or Z == 0) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a1e66b16a0cae287a95bb778e59211176"></a>DR_PRED_GE&#160;</td><td class="fielddoc"><p>Condition code: signed greater than or equal.</p>
-<p>ARM condition: 1010 Signed &gt;= (N == V) <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a45a6d0ab07c54c28b48aa43d5252b6a2"></a>DR_PRED_LT&#160;</td><td class="fielddoc"><p>Condition code: signed less than.</p>
-<p>ARM condition: 1011 Signed less than (N != V) <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71af56d815bdf4faa3f78dd65fcc027debf"></a>DR_PRED_GT&#160;</td><td class="fielddoc"><p>Condition code: signed greater than.</p>
-<p>ARM condition: 1100 Signed greater than (Z == 0 and N == V) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71adef3652e87ed3e2ae0b4dcae7510c118"></a>DR_PRED_LE&#160;</td><td class="fielddoc"><p>x86 condition: less or equal (ZF=1 or SF != OF).</p>
-<p>ARM condition: 1101 Signed &lt;= (Z == 1 or N != V) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a78e6d52241fbdf06167efb1db2010afd"></a>DR_PRED_AL&#160;</td><td class="fielddoc"><p>ARM condition: 1110 Always (unconditional) <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a048818da71575e1f01f5b0bc50c698af"></a>DR_PRED_NV&#160;</td><td class="fielddoc"><p>ARM condition: 1111 Never, meaning always <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71ae6ed5c6e0b7b1f6c814ce9bae7de7cc3"></a>DR_PRED_OP&#160;</td><td class="fielddoc"><p>Used for AArch64 SVE instructions with governing predicate registers ARM condition: 1111 Part of opcode <br  />
- </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71af38dfaa64a16c41e4228544713623f49"></a>DR_PRED_HS&#160;</td><td class="fielddoc"><p>ARM condition: alias for DR_PRED_CS. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71aa1d2962fff33ef9f59e5371d0d4b99ae"></a>DR_PRED_LO&#160;</td><td class="fielddoc"><p>ARM condition: alias for DR_PRED_CC. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71af4da027a9e819976aa7eea004e365801"></a>DR_PRED_SVE_NONE&#160;</td><td class="fielddoc"><p>0000 All active elements were false or no active elements (Z == 1) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71af324a06c4e9c50dc46d288e153400c1c"></a>DR_PRED_SVE_ANY&#160;</td><td class="fielddoc"><p>0001 An active element was true (Z == 0) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a5b1d7bd81b38ff5e2f7ce503af9b33c5"></a>DR_PRED_SVE_NLAST&#160;</td><td class="fielddoc"><p>0010 Last active element was false or no active elements (C == 1) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71ae12ea504e862e82489de696e721ed1fc"></a>DR_PRED_SVE_LAST&#160;</td><td class="fielddoc"><p>0011 Last active element was true (C == 0) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71af81c30e1097893545bc6a4e6ff6c59d8"></a>DR_PRED_SVE_FIRST&#160;</td><td class="fielddoc"><p>0100 First active element was true (N == 1) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71ac0883231162ebaaf9026b17479059ac4"></a>DR_PRED_SVE_NFRST&#160;</td><td class="fielddoc"><p>0101 First active element was false or no active elements (N == 0) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a56819690e7c1dc6588541b76deda5fe0"></a>DR_PRED_SVE_PLAST&#160;</td><td class="fielddoc"><p>1001 Last active element was true, all active elements were false, or no active elements (C == 1 or Z == 0) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71abf01224885e4245b54e4e01c532b32ae"></a>DR_PRED_SVE_TCONT&#160;</td><td class="fielddoc"><p>1010 CTERM termination condition not detected, continue loop (N == V) </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ac55eea34836068d8d66196c3f1556d71a9a3ad843e3ee0113a9d897ed1b92ffb2"></a>DR_PRED_SVE_TSTOP&#160;</td><td class="fielddoc"><p>1011 CTERM termination condition detected, terminate loop (N != V) </p>
 </td></tr>
 </table>
 
@@ -5116,7 +4846,7 @@ We recommend using this routine during the phase of application code analysis, a
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">DR_API <a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> instr_get_predicate </td>
+          <td class="memname">DR_API <a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> instr_get_predicate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
           <td class="paramname"><em>instr</em></td><td>)</td>
@@ -5567,15 +5297,15 @@ We recommend using this routine during the phase of application code analysis, a
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">DR_API <a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> instr_invert_predicate </td>
+          <td class="memname">DR_API <a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> instr_invert_predicate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
           <td class="paramname"><em>pred</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the DR_PRED_ constant that represents the opposite condition from <code>pred</code>. A valid conditional branch predicate must be passed (i.e., not <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ad94a882e075b12c0e4e6e5f852e4e4b2">DR_PRED_NONE</a>, <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a78e6d52241fbdf06167efb1db2010afd">DR_PRED_AL</a>, or <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ae6ed5c6e0b7b1f6c814ce9bae7de7cc3">DR_PRED_OP</a> for ARM and not <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ad94a882e075b12c0e4e6e5f852e4e4b2">DR_PRED_NONE</a>, <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a78e6d52241fbdf06167efb1db2010afd">DR_PRED_AL</a>, or <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a048818da71575e1f01f5b0bc50c698af">DR_PRED_NV</a> for AArch64). </p><dl class="section note"><dt>Note</dt><dd>ARM and AArch64-only. </dd></dl>
+<p>Returns the DR_PRED_ constant that represents the opposite condition from <code>pred</code>. A valid conditional branch predicate must be passed (i.e., not <a class="el" href="dr__ir__opnd_8h.html#ac55eea34836068d8d66196c3f1556d71ad94a882e075b12c0e4e6e5f852e4e4b2">DR_PRED_NONE</a>, <a class="el" href="dr__ir__opnd_8h.html#ac55eea34836068d8d66196c3f1556d71a78e6d52241fbdf06167efb1db2010afd">DR_PRED_AL</a>, or <a class="el" href="dr__ir__opnd_8h.html#ac55eea34836068d8d66196c3f1556d71ae6ed5c6e0b7b1f6c814ce9bae7de7cc3">DR_PRED_OP</a> for ARM and not <a class="el" href="dr__ir__opnd_8h.html#ac55eea34836068d8d66196c3f1556d71ad94a882e075b12c0e4e6e5f852e4e4b2">DR_PRED_NONE</a>, <a class="el" href="dr__ir__opnd_8h.html#ac55eea34836068d8d66196c3f1556d71a78e6d52241fbdf06167efb1db2010afd">DR_PRED_AL</a>, or <a class="el" href="dr__ir__opnd_8h.html#ac55eea34836068d8d66196c3f1556d71a048818da71575e1f01f5b0bc50c698af">DR_PRED_NV</a> for AArch64). </p><dl class="section note"><dt>Note</dt><dd>ARM and AArch64-only. </dd></dl>
 
 </div>
 </div>
@@ -6719,25 +6449,25 @@ We recommend using this routine during the phase of application code analysis, a
         <tr>
           <td class="memname">DR_API bool instr_it_block_compute_immediates </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
           <td class="paramname"><em>pred0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
           <td class="paramname"><em>pred1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
           <td class="paramname"><em>pred2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
           <td class="paramname"><em>pred3</em>, </td>
         </tr>
         <tr>
@@ -6759,7 +6489,7 @@ We recommend using this routine during the phase of application code analysis, a
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Computes immediates (firstcond and mask) for creating a new instruction with opcode <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9ea651b96b5040e974b49d32bf7f6277309">OP_it</a> with the given predicates. Up to four instructions can exist in a single IT block. Pass <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ad94a882e075b12c0e4e6e5f852e4e4b2">DR_PRED_NONE</a> for all predicates beyond the desired instruction count in the newly created IT block. Returns whether the given predicates are valid for creating an IT block. </p><dl class="section note"><dt>Note</dt><dd>ARM-only. </dd></dl>
+<p>Computes immediates (firstcond and mask) for creating a new instruction with opcode <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9ea651b96b5040e974b49d32bf7f6277309">OP_it</a> with the given predicates. Up to four instructions can exist in a single IT block. Pass <a class="el" href="dr__ir__opnd_8h.html#ac55eea34836068d8d66196c3f1556d71ad94a882e075b12c0e4e6e5f852e4e4b2">DR_PRED_NONE</a> for all predicates beyond the desired instruction count in the newly created IT block. Returns whether the given predicates are valid for creating an IT block. </p><dl class="section note"><dt>Note</dt><dd>ARM-only. </dd></dl>
 
 </div>
 </div>
@@ -6778,25 +6508,25 @@ We recommend using this routine during the phase of application code analysis, a
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
           <td class="paramname"><em>pred0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
           <td class="paramname"><em>pred1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
           <td class="paramname"><em>pred2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
           <td class="paramname"><em>pred3</em>&#160;</td>
         </tr>
         <tr>
@@ -6806,7 +6536,7 @@ We recommend using this routine during the phase of application code analysis, a
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a new instruction with opcode <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9ea651b96b5040e974b49d32bf7f6277309">OP_it</a> and immediates set to encode an IT block with the given predicates. Up to four instructions can exist in a single IT block. Pass <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ad94a882e075b12c0e4e6e5f852e4e4b2">DR_PRED_NONE</a> for all predicates beyond the desired instruction count in the newly created IT block. </p><dl class="section note"><dt>Note</dt><dd>ARM-only. </dd></dl>
+<p>Creates a new instruction with opcode <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9ea651b96b5040e974b49d32bf7f6277309">OP_it</a> and immediates set to encode an IT block with the given predicates. Up to four instructions can exist in a single IT block. Pass <a class="el" href="dr__ir__opnd_8h.html#ac55eea34836068d8d66196c3f1556d71ad94a882e075b12c0e4e6e5f852e4e4b2">DR_PRED_NONE</a> for all predicates beyond the desired instruction count in the newly created IT block. </p><dl class="section note"><dt>Note</dt><dd>ARM-only. </dd></dl>
 
 </div>
 </div>
@@ -6836,7 +6566,7 @@ We recommend using this routine during the phase of application code analysis, a
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">DR_API <a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> instr_it_block_get_pred </td>
+          <td class="memname">DR_API <a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a> instr_it_block_get_pred </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
           <td class="paramname"><em>it_instr</em>, </td>
@@ -7194,13 +6924,13 @@ We recommend using this routine during the phase of application code analysis, a
         <tr>
           <td class="memname">DR_API bool instr_predicate_is_cond </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
           <td class="paramname"><em>pred</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns true iff <code>pred</code> denotes a truly conditional predicate: on all architectures, this excludes <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ad94a882e075b12c0e4e6e5f852e4e4b2">DR_PRED_NONE</a>. On ARM it also excludes <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a78e6d52241fbdf06167efb1db2010afd">DR_PRED_AL</a> and <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ae6ed5c6e0b7b1f6c814ce9bae7de7cc3">DR_PRED_OP</a>; on AArch64, it also excludes <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a78e6d52241fbdf06167efb1db2010afd">DR_PRED_AL</a> and <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71a048818da71575e1f01f5b0bc50c698af">DR_PRED_NV</a>. </p>
+<p>Returns true iff <code>pred</code> denotes a truly conditional predicate: on all architectures, this excludes <a class="el" href="dr__ir__opnd_8h.html#ac55eea34836068d8d66196c3f1556d71ad94a882e075b12c0e4e6e5f852e4e4b2">DR_PRED_NONE</a>. On ARM it also excludes <a class="el" href="dr__ir__opnd_8h.html#ac55eea34836068d8d66196c3f1556d71a78e6d52241fbdf06167efb1db2010afd">DR_PRED_AL</a> and <a class="el" href="dr__ir__opnd_8h.html#ac55eea34836068d8d66196c3f1556d71ae6ed5c6e0b7b1f6c814ce9bae7de7cc3">DR_PRED_OP</a>; on AArch64, it also excludes <a class="el" href="dr__ir__opnd_8h.html#ac55eea34836068d8d66196c3f1556d71a78e6d52241fbdf06167efb1db2010afd">DR_PRED_AL</a> and <a class="el" href="dr__ir__opnd_8h.html#ac55eea34836068d8d66196c3f1556d71a048818da71575e1f01f5b0bc50c698af">DR_PRED_NV</a>. </p>
 
 </div>
 </div>
@@ -7213,7 +6943,7 @@ We recommend using this routine during the phase of application code analysis, a
         <tr>
           <td class="memname">const DR_API char* instr_predicate_name </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
           <td class="paramname"><em>pred</em></td><td>)</td>
           <td></td>
         </tr>
@@ -7248,7 +6978,7 @@ We recommend using this routine during the phase of application code analysis, a
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Given the machine context <code>mc</code>, returns whether or not the predicated instruction <code>instr</code> will execute. Currently condition-code predicates are supported and OP_bsf and OP_bsr from <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ade60058c0eb6909b05024f9728c6b9bc">DR_PRED_COMPLEX</a>; other instances of <a class="el" href="dr__ir__instr_8h.html#ac55eea34836068d8d66196c3f1556d71ade60058c0eb6909b05024f9728c6b9bc">DR_PRED_COMPLEX</a> are not supported. <code>mc-&gt;flags</code> must include <a class="el" href="dr__defines_8h.html#af0434595b47158e7512c2bf5f0e43ae4ab7914092947d4a374f4a95e089870218">DR_MC_CONTROL</a> for condition-code predicates, and additionally <a class="el" href="dr__defines_8h.html#af0434595b47158e7512c2bf5f0e43ae4af2252e055eafe402a7bf12b9951410d8">DR_MC_INTEGER</a> for OP_bsf and OP_bsr.</p>
+<p>Given the machine context <code>mc</code>, returns whether or not the predicated instruction <code>instr</code> will execute. Currently condition-code predicates are supported and OP_bsf and OP_bsr from <a class="el" href="dr__ir__opnd_8h.html#ac55eea34836068d8d66196c3f1556d71ade60058c0eb6909b05024f9728c6b9bc">DR_PRED_COMPLEX</a>; other instances of <a class="el" href="dr__ir__opnd_8h.html#ac55eea34836068d8d66196c3f1556d71ade60058c0eb6909b05024f9728c6b9bc">DR_PRED_COMPLEX</a> are not supported. <code>mc-&gt;flags</code> must include <a class="el" href="dr__defines_8h.html#af0434595b47158e7512c2bf5f0e43ae4ab7914092947d4a374f4a95e089870218">DR_MC_CONTROL</a> for condition-code predicates, and additionally <a class="el" href="dr__defines_8h.html#af0434595b47158e7512c2bf5f0e43ae4af2252e055eafe402a7bf12b9951410d8">DR_MC_INTEGER</a> for OP_bsf and OP_bsr.</p>
 <dl class="section note"><dt>Note</dt><dd>More complex predicates will be added in the future and they may require additional state in <code>mc</code>. </dd></dl>
 
 </div>
@@ -8165,7 +7895,7 @@ mangle" if <code>val</code> is false.</p>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="dr__ir__instr_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a855ff8e66c8493c78515f5e8f37ee914">dr_pred_type_t</a>&#160;</td>
           <td class="paramname"><em>pred</em>&#160;</td>
         </tr>
         <tr>
@@ -8767,17 +8497,17 @@ mangle" if <code>val</code> is false.</p>
 </div><!-- contents -->
 <div class="ttc" id="adr__ir__decode_8h_html_a5ca2a278008e547130218e8cfde44e3d"><div class="ttname"><a href="dr__ir__decode_8h.html#a5ca2a278008e547130218e8cfde44e3d">decode</a></div><div class="ttdeci">DR_API byte * decode(void *drcontext, byte *pc, instr_t *instr)</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a2b0ce5e5125951e4a7dfdc5ac716282a"><div class="ttname"><a href="dr__ir__instr_8h.html#a2b0ce5e5125951e4a7dfdc5ac716282a">instr_noalloc_init</a></div><div class="ttdeci">DR_API void instr_noalloc_init(void *drcontext, instr_noalloc_t *instr)</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_ad48dc68f818f028bee8b98ac396f1d71"><div class="ttname"><a href="dr__ir__instr_8h.html#ad48dc68f818f028bee8b98ac396f1d71">EFLAGS_READ_AC</a></div><div class="ttdeci">#define EFLAGS_READ_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2626</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_ab5727b7a5773bace9d656e4b969d7fce"><div class="ttname"><a href="dr__ir__instr_8h.html#ab5727b7a5773bace9d656e4b969d7fce">EFLAGS_WRITE_ALL</a></div><div class="ttdeci">#define EFLAGS_WRITE_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2631</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_ad48dc68f818f028bee8b98ac396f1d71"><div class="ttname"><a href="dr__ir__instr_8h.html#ad48dc68f818f028bee8b98ac396f1d71">EFLAGS_READ_AC</a></div><div class="ttdeci">#define EFLAGS_READ_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2516</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_ab5727b7a5773bace9d656e4b969d7fce"><div class="ttname"><a href="dr__ir__instr_8h.html#ab5727b7a5773bace9d656e4b969d7fce">EFLAGS_WRITE_ALL</a></div><div class="ttdeci">#define EFLAGS_WRITE_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2521</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_a75a82f341d4ea6a5b5f29f2ef1263355"><div class="ttname"><a href="dr__ir__instr_8h.html#a75a82f341d4ea6a5b5f29f2ef1263355">instr_from_noalloc</a></div><div class="ttdeci">DR_API INSTR_INLINE instr_t * instr_from_noalloc(instr_noalloc_t *noalloc)</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_a633efa45a981d9ce3a558caddcdec212"><div class="ttname"><a href="dr__ir__instr_8h.html#a633efa45a981d9ce3a558caddcdec212">EFLAGS_WRITE_AC</a></div><div class="ttdeci">#define EFLAGS_WRITE_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2627</div></div>
-<div class="ttc" id="adr__ir__instr_8h_html_a88d4ed7d7b9c544c09c395872a86c0ea"><div class="ttname"><a href="dr__ir__instr_8h.html#a88d4ed7d7b9c544c09c395872a86c0ea">EFLAGS_READ_ALL</a></div><div class="ttdeci">#define EFLAGS_READ_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2629</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_a633efa45a981d9ce3a558caddcdec212"><div class="ttname"><a href="dr__ir__instr_8h.html#a633efa45a981d9ce3a558caddcdec212">EFLAGS_WRITE_AC</a></div><div class="ttdeci">#define EFLAGS_WRITE_AC</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2517</div></div>
+<div class="ttc" id="adr__ir__instr_8h_html_a88d4ed7d7b9c544c09c395872a86c0ea"><div class="ttname"><a href="dr__ir__instr_8h.html#a88d4ed7d7b9c544c09c395872a86c0ea">EFLAGS_READ_ALL</a></div><div class="ttdeci">#define EFLAGS_READ_ALL</div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:2519</div></div>
 <div class="ttc" id="astructinstr__t_html"><div class="ttname"><a href="structinstr__t.html">instr_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:378</div></div>
-<div class="ttc" id="astructinstr__noalloc__t_html"><div class="ttname"><a href="structinstr__noalloc__t.html">instr_noalloc_t</a></div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:389</div></div>
+<div class="ttc" id="astructinstr__noalloc__t_html"><div class="ttname"><a href="structinstr__noalloc__t.html">instr_noalloc_t</a></div><div class="ttdef"><b>Definition:</b> dr_ir_instr.h:279</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19930 --- Fri Jul 26 2024 03:16:12 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19936 --- Fri Aug 2 2024 03:16:42 &nbsp; <img border=0 src="favicon.png">
 </small></address>
