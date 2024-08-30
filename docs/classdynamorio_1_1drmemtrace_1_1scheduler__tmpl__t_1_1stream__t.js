@@ -13,6 +13,7 @@
     [ "get_output_stream_ordinal", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a6e8f8595a28ae6ab27a00153279da271", null ],
     [ "get_page_size", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a32a519e6d59f331e7006179570823926", null ],
     [ "get_record_ordinal", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a92f2930a8d82b87898edf1b774c7e757", null ],
+    [ "get_schedule_statistic", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a6065496b6583a6754033ec4e6f7fcf0f", null ],
     [ "get_shard_index", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a9fca22c8cb40be11cc4af618e16709b3", null ],
     [ "get_stream_name", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ad648abe0b17d471550e514f3e852b31c", null ],
     [ "get_tid", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ac18de69b3d54507b3383ac5ddb4c6747", null ],

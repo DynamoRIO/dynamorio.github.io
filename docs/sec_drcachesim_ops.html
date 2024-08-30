@@ -314,6 +314,12 @@ When true, this option enables the drstatecmp library that performs state compar
 <li><b>-enable_kernel_tracing</b> <br  />
 <em>default value: false</em> <br  />
 By default, offline tracing only records a userspace trace. If this option is enabled, offline tracing will record each syscall's Kernel PT and write every syscall's PT and metadata to files in -outdir/kernel.raw/ for later offline analysis. And this feature is available only on Intel CPUs that support Intel@ Processor Trace.</li>
+<li><b>-skip_kcore_dump</b> <br  />
+<em>default value: false</em> <br  />
+By default, when -enable_kernel_tracing is set, offline tracing will dump kcore and kallsyms to the raw trace directory, which requires the user to run the target application with superuser permissions. However, if this option is enabled, we skip the dump, and since collecting kernel trace data using Intel-PT does not necessarily need superuser permissions, the target application can be run as normal. This may be useful if it is not feasible to run the application with superuser permissions and the user wants to use a different kcore dump, from a prior trace or created separately.</li>
+<li><b>-kernel_trace_buffer_size_shift</b> <br  />
+<em>default value: 8</em> <br  />
+When -enable_kernel_tracing is set, this is used to compute the size of the buffer used to collect kernel trace data. The size is computed as (1 &lt;&lt; kernel_trace_buffer_size_shift) * page_size. Too large buffers can cause OOMs on apps with many threads, whereas too small buffers can cause decoding issues in raw2trace due to dropped trace data.</li>
 <li><b>-core_sharded</b> <br  />
 <em>default value: false</em> <br  />
 By default, the input trace is analyzed in parallel across shards equal to software threads. This option instead schedules those threads onto virtual cores and analyzes each core in parallel. Thus, each shard consists of pieces from many software threads. How the scheduling is performed is controlled by a set of options with the prefix "sched_" along with -cores.</li>
@@ -336,10 +342,10 @@ Minimum latency in timestamp units (us) to consider a non-blocking syscall as in
 <em>default value: 500</em> <br  />
 Minimum latency in timestamp units (us) to consider any syscall that is marked as maybe-blocking to incur a context switch. Applies to -core_sharded and -core_serial.</li>
 <li><b>-sched_block_scale</b> <br  />
-<em>default value: 1000</em> <br  />
+<em>default value: 10</em> <br  />
 The scale applied to the microsecond latency of blocking system calls. A higher value here results in blocking syscalls keeping inputs unscheduled for longer. This should roughly equal the slowdown of instruction record processing versus the original (untraced) application execution.</li>
 <li><b>-sched_block_max_us</b> <br  />
-<em>default value: 25000000</em> <br  />
+<em>default value: 2500000</em> <br  />
 The maximum blocked time, after scaling with -sched_block_scale.</li>
 <li><b>-record_file</b> <br  />
 <em>default value: ""</em> <br  />
@@ -391,7 +397,10 @@ Removes all records (after headers) before the first TRACE_MARKER_TYPE_TIMESTAMP
 Removes all records from the first TRACE_MARKER_TYPE_TIMESTAMP marker with timestamp larger than the specified value.</li>
 <li><b>-abort_on_invariant_error</b> <br  />
 <em>default value: true</em> <br  />
-When set to true, the trace invariant checker analysis tool aborts when a trace invariant error is found. Otherwise it prints the error and continues. Also, the total invariant error count is printed at the end; a non-zero error count does not affect the exit code of the analyzer. </li>
+When set to true, the trace invariant checker analysis tool aborts when a trace invariant error is found. Otherwise it prints the error and continues. Also, the total invariant error count is printed at the end; a non-zero error count does not affect the exit code of the analyzer.</li>
+<li><b>-pt2ir_best_effort</b> <br  />
+<em>default value: false</em> <br  />
+By default, errors in decoding the kernel syscall PT trace in pt2ir are fatal to raw2trace. With -pt2ir_best_effort, those errors do not cause failures and their counts are reported by raw2trace at the end. This may result in a trace where not all syscalls have a trace, and the ones that do may have some PC discontinuities due to non-fatal decoding errors (these discontinuities will still be reported by the invariant checker). When using this option, it is prudent to check raw2trace stats to confirm that the error counts are within expected bounds (total syscall traces converted, syscall traces that were dropped from final trace because conversion failed, syscall traces found to be empty, and non-fatal decode errors seen in converted syscall traces). </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -400,5 +409,5 @@ When set to true, the trace invariant checker analysis tool aborts when a trace 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19957 --- Fri Aug 23 2024 03:15:32 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19964 --- Fri Aug 30 2024 03:15:44 &nbsp; <img border=0 src="favicon.png">
 </small></address>

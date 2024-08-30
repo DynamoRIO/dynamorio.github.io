@@ -106,7 +106,7 @@ Passing Options to Clients</h1>
 <div class="fragment"><div class="line">bin32/drconfig.exe -reg notepad.exe -c myclient.dll -op1 -op2 \<span class="stringliteral">&quot;value with spaces\&quot;</span></div>
 <div class="line"><span class="stringliteral">bin32/drconfig.exe -reg notepad.exe -client myclient.dll 0 &#39;-op1 -op2 &quot;</span>value with spaces<span class="stringliteral">&quot;&#39;</span></div>
 </div><!-- fragment --><p>The client's options are passed directly to its <code><a class="el" href="dr__api_8h.html#a2b938c98dd186cc94eef6880f9e3c3e9">dr_client_main()</a></code> initialization routine, in the same manner as arguments are passed to a regular application's <code>main()</code> routine. To match standalone application conventions, <code>argv</code>[0] is set to the client library path, with the actual parameters starting at index 1. The client can also optionally call <a class="el" href="dr__tools_8h.html#a4c584f24947b8c0d93bc39b79a0d7c50">dr_get_option_array()</a> to retrieve the options passed to it. C++ clients can use the convenience of the <a class="el" href="page_droption.html">DynamoRIO Option Parser</a>.</p>
-<p>Client options are not allowed to contain semicolons. Additionally, the client option string combined with the path to the client library cannot contain all three quote characters (', ", `) simultaneously.</p>
+<p>Client options are not allowed to contain semicolons. Additionally, the client option string combined with the path to the client library cannot contain all three quote characters (\', ", `) simultaneously.</p>
 <p>To ensure a client is loaded into a child process of a different bitwidth (i.e., a 32-bit child created by a 64-bit parent), use the <code>-c32</code> and <code>-c64</code> options to <code>drconfig</code> or <code>drrun</code>, with <code>&ndash;</code> ending the first client's options:</p>
 <p>bin32/drrun -c32 samples/bin32/bbsize.dll &ndash; -c64 samples/bin64/bbsize.dll &ndash; notepad</p>
 <p>The order matters: <code>-c32</code> must come first.</p>
@@ -162,6 +162,11 @@ Running a Subset of an Application</h1>
 <div class="line"><a class="code" href="dr__app_8h.html#af046ebf6c44ab47decbb4eba61236dcc">dr_app_stop_and_cleanup_with_stats</a>()</div>
 <div class="line"><a class="code" href="dr__app_8h.html#aea917a6c24c8bf526f77772b0b9848a8">dr_app_running_under_dynamorio</a>()</div>
 </div><!-- fragment --><p>When building an executable that uses DynamoRIO's Application Interface, follow the steps for <a class="el" href="page_build_client.html">How to Build a Tool</a> to include the header files and link with the DynamoRIO library, but omit the linker flags requesting no standard libraries or startup files. DynamoRIO's CMake support does this automatically, as the linker flags for shared libraries are separate from those for executables.</p>
+<h1><a class="anchor" id="sec_static_DR"></a>
+Statically Linking DynamoRIO</h1>
+<p>Limited support is provided to statically link DynamoRIO and clients into the application itself. This generally requires the start-stop interface (see <a class="el" href="page_deploy.html#sec_startstop">Running a Subset of an Application</a>) in order to trigger takeover.</p>
+<p>The configure_DynamoRIO_static and use_DynamoRIO_static_client CMake utilities are provided to help in setting up the link steps.</p>
+<p>One significant downside of statically linking is that DynamoRIO is not able to provide library isolation in this mode. This means that clients cannot safely use third-party library code at runtime. It is considered safe to use libraries during process-wide initialization, as that occurs in just one thread which is at a relatively safe point having called something like <a class="el" href="dr__app_8h.html#afb7b7aed03dd6f0ed8d48b8a8796e55e">dr_app_start()</a>. The <a class="el" href="dr__api_8h.html#a70e64a4a868677325cf3b1f7e3ca0938">DR_DISALLOW_UNSAFE_STATIC</a> and <a class="el" href="dr__events_8h.html#a2bab7837ca93d577e4563e470601d371">dr_allow_unsafe_static_behavior()</a> features are available to help detect violations of this rule, but they only detect these violations when using DynamoRIO in its dynamic library form. Thus, the recommendation is to support both modes and employ regression tests which set <a class="el" href="dr__api_8h.html#a70e64a4a868677325cf3b1f7e3ca0938">DR_DISALLOW_UNSAFE_STATIC</a> in dynamic mode in order to catch unsafe library code being added later.</p>
 <h1><a class="anchor" id="sec_options"></a>
 DynamoRIO Runtime Options</h1>
 <p>DynamoRIO's behavior can be fine-tuned using runtime parameters. Options are specified via <code>drconfig</code>, <code>drrun</code>, or <a class="el" href="dr__config_8h.html#a10d7c5dbc9a055fa6c18bf3f2a6eea46">dr_register_process()</a>. See <a class="el" href="page_deploy.html">How to Run</a>.</p>
@@ -250,5 +255,5 @@ DynamoRIO Runtime Options</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19957 --- Fri Aug 23 2024 03:15:32 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19964 --- Fri Aug 30 2024 03:15:44 &nbsp; <img border=0 src="favicon.png">
 </small></address>
