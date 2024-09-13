@@ -345,7 +345,7 @@ Minimum latency in timestamp units (us) to consider any syscall that is marked a
 <em>default value: 10</em> <br  />
 The scale applied to the microsecond latency of blocking system calls. A higher value here results in blocking syscalls keeping inputs unscheduled for longer. This should roughly equal the slowdown of instruction record processing versus the original (untraced) application execution.</li>
 <li><b>-sched_block_max_us</b> <br  />
-<em>default value: 2500000</em> <br  />
+<em>default value: 250000</em> <br  />
 The maximum blocked time, after scaling with -sched_block_scale.</li>
 <li><b>-record_file</b> <br  />
 <em>default value: ""</em> <br  />
@@ -409,5 +409,5 @@ By default, errors in decoding the kernel syscall PT trace in pt2ir are fatal to
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19971 --- Fri Sep 6 2024 03:16:40 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19978 --- Fri Sep 13 2024 03:16:23 &nbsp; <img border=0 src="favicon.png">
 </small></address>
