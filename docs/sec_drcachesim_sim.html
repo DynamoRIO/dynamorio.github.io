@@ -27,64 +27,66 @@ permalink: /sec_drcachesim_sim.html
 <div class="textblock"><p>Generally, the simulator is able to be extended to model a variety of caching devices. Currently, CPU caches and TLBs are implemented. The type of devices to simulate can be specified by the parameter "-tool" (see <a class="el" href="sec_drcachesim_ops.html">Simulator Parameters</a>).</p>
 <p>The CPU cache simulator models a configurable number of cores, each with an L1 data cache and an L1 instruction cache. Currently there is a single shared L2 unified cache, but we would like to extend support to arbitrary cache hierarchies (see <a class="el" href="sec_drcachesim_limit.html">Current Limitations</a>). The cache line size and each cache's total size and associativity are user-specified (see <a class="el" href="sec_drcachesim_ops.html">Simulator Parameters</a>).</p>
 <p>The TLB simulator models a configurable number of cores, each with an L1 instruction TLB, an L1 data TLB, and an L2 unified TLB. Each TLB's entry number and associativity, and the virtual/physical page size, are user-specified (see <a class="el" href="sec_drcachesim_ops.html">Simulator Parameters</a>).</p>
-<p>Neither simulator has a simple way to know which core any particular thread executed on for each of its instructions. The tracer records which core a thread is on each time it writes out a full trace buffer, giving an approximation of the actual scheduling (at the granularity of the trace buffer size). By default, these cache and TLB simulators ignore that information and schedule threads to simulated cores in a static round-robin fashion with load balancing to fill in gaps with new threads after threads exit. The option "-cpu_scheduling" (see <a class="el" href="sec_drcachesim_ops.html">Simulator Parameters</a>) can be used to instead map each physical cpu to a simulated core and use the recorded cpu that each segment of thread execution occurred on to schedule execution in a manner that more closely resembles the traced execution on the physical machine. Below is an example of the output using this option running an application with many threads on a pysical machine with 8 cpus. The 8 cpus are mapped to the 4 simulated cores:</p>
-<div class="fragment"><div class="line">$ bin64/drrun -t drmemtrace -cpu_scheduling -- ~/test/pi_estimator 20</div>
+<p>Neither simulator has a simple way to know which core any particular thread executed on for each of its instructions. The tracer records which core a thread is on each time it writes out a full trace buffer, giving an approximation of the actual scheduling: but this is not representative due to overhead (see <a class="el" href="sec_drcachesim_sched.html#sec_drcachesim_as_traced">As-Traced Schedule Limitations</a>). By default, these cache and TLB simulators ignore that information and schedule threads to simulated cores in a static round-robin fashion with load balancing to fill in gaps with new threads after threads exit. The option "-cpu_scheduling" (see <a class="el" href="sec_drcachesim_ops.html">Simulator Parameters</a>) can be used to instead map each physical cpu to a simulated core and use the recorded cpu that each segment of thread execution occurred on to schedule execution following the "as traced" schedule, but as just noted this is not representative. Instead, we recommend using offline traces and dynamic re-scheduling as explained in <a class="el" href="sec_drcachesim_sched.html#sec_drcachesim_sched_dynamic">Dynamic Scheduling</a> using the <code>-core_serial</code> parameter. Here is an example:</p>
+<div class="fragment"><div class="line">$ bin64/drrun -t drmemtrace -offline -- ~/test/pi_estimator 8 20</div>
 <div class="line">Estimation of pi is 3.141592653798125</div>
-<div class="line">&lt;Stopping application /home/bruening/dr/test/threadsig (213517)&gt;</div>
-<div class="line">---- &lt;application exited with code 0&gt; ----</div>
+<div class="line">$ bin64/drrun -t drcachesim -core_serial -cores 3 -indir drmemtrace.pi_estimator.*.dir</div>
 <div class="line">Cache simulation results:</div>
-<div class="line">Core #0 (2 traced CPU(s): #2, #5)</div>
-<div class="line">  L1I stats:</div>
-<div class="line">    Hits:                        2,756,429</div>
-<div class="line">    Misses:                          1,190</div>
-<div class="line">    Miss rate:                        0.04%</div>
-<div class="line">  L1D stats:</div>
-<div class="line">    Hits:                        1,747,822</div>
-<div class="line">    Misses:                         13,511</div>
-<div class="line">    Prefetch hits:                   2,354</div>
-<div class="line">    Prefetch misses:                11,157</div>
-<div class="line">    Miss rate:                        0.77%</div>
-<div class="line">Core #1 (2 traced CPU(s): #4, #0)</div>
-<div class="line">  L1I stats:</div>
-<div class="line">    Hits:                          472,948</div>
-<div class="line">    Misses:                            299</div>
-<div class="line">    Miss rate:                        0.06%</div>
-<div class="line">  L1D stats:</div>
-<div class="line">    Hits:                          895,099</div>
-<div class="line">    Misses:                          1,224</div>
-<div class="line">    Prefetch hits:                     253</div>
-<div class="line">    Prefetch misses:                   971</div>
+<div class="line">Core #0 (traced CPU(s): #0)</div>
+<div class="line">  L1I0 (size=32768, assoc=8, block=64, LRU) stats:</div>
+<div class="line">    Hits:                        1,853,727</div>
+<div class="line">    Misses:                          2,152</div>
+<div class="line">    Compulsory misses:               2,045</div>
+<div class="line">    Invalidations:                       0</div>
+<div class="line">    Miss rate:                        0.12%</div>
+<div class="line">  L1D0 (size=32768, assoc=8, block=64, LRU) stats:</div>
+<div class="line">    Hits:                          605,114</div>
+<div class="line">    Misses:                         11,973</div>
+<div class="line">    Compulsory misses:               9,845</div>
+<div class="line">    Invalidations:                       0</div>
+<div class="line">    Prefetch hits:                   1,880</div>
+<div class="line">    Prefetch misses:                10,093</div>
+<div class="line">    Miss rate:                        1.94%</div>
+<div class="line">Core #1 (traced CPU(s): #1)</div>
+<div class="line">  L1I1 (size=32768, assoc=8, block=64, LRU) stats:</div>
+<div class="line">    Hits:                          942,992</div>
+<div class="line">    Misses:                            461</div>
+<div class="line">    Compulsory misses:                 366</div>
+<div class="line">    Invalidations:                       0</div>
+<div class="line">    Miss rate:                        0.05%</div>
+<div class="line">  L1D1 (size=32768, assoc=8, block=64, LRU) stats:</div>
+<div class="line">    Hits:                          385,134</div>
+<div class="line">    Misses:                            534</div>
+<div class="line">    Compulsory misses:                 775</div>
+<div class="line">    Invalidations:                       0</div>
+<div class="line">    Prefetch hits:                     144</div>
+<div class="line">    Prefetch misses:                   390</div>
 <div class="line">    Miss rate:                        0.14%</div>
-<div class="line">Core #2 (2 traced CPU(s): #1, #7)</div>
-<div class="line">  L1I stats:</div>
-<div class="line">    Hits:                          448,581</div>
-<div class="line">    Misses:                            649</div>
+<div class="line">Core #2 (traced CPU(s): #2)</div>
+<div class="line">  L1I2 (size=32768, assoc=8, block=64, LRU) stats:</div>
+<div class="line">    Hits:                          944,622</div>
+<div class="line">    Misses:                            453</div>
+<div class="line">    Compulsory misses:                 365</div>
+<div class="line">    Invalidations:                       0</div>
+<div class="line">    Miss rate:                        0.05%</div>
+<div class="line">  L1D2 (size=32768, assoc=8, block=64, LRU) stats:</div>
+<div class="line">    Hits:                          385,808</div>
+<div class="line">    Misses:                            537</div>
+<div class="line">    Compulsory misses:                 791</div>
+<div class="line">    Invalidations:                       0</div>
+<div class="line">    Prefetch hits:                     140</div>
+<div class="line">    Prefetch misses:                   397</div>
 <div class="line">    Miss rate:                        0.14%</div>
-<div class="line">  L1D stats:</div>
-<div class="line">    Hits:                          811,483</div>
-<div class="line">    Misses:                          1,723</div>
-<div class="line">    Prefetch hits:                     378</div>
-<div class="line">    Prefetch misses:                 1,345</div>
-<div class="line">    Miss rate:                        0.21%</div>
-<div class="line">Core #3 (2 traced CPU(s): #6, #3)</div>
-<div class="line">  L1I stats:</div>
-<div class="line">    Hits:                          275,192</div>
-<div class="line">    Misses:                            154</div>
-<div class="line">    Miss rate:                        0.06%</div>
-<div class="line">  L1D stats:</div>
-<div class="line">    Hits:                          522,655</div>
-<div class="line">    Misses:                            850</div>
-<div class="line">    Prefetch hits:                     173</div>
-<div class="line">    Prefetch misses:                   677</div>
-<div class="line">    Miss rate:                        0.16%</div>
-<div class="line">LL stats:</div>
-<div class="line">    Hits:                           12,491</div>
-<div class="line">    Misses:                          7,109</div>
-<div class="line">    Prefetch hits:                   8,922</div>
-<div class="line">    Prefetch misses:                 5,228</div>
-<div class="line">    Local miss rate:                 36.27%</div>
-<div class="line">    Child hits:                  7,933,367</div>
-<div class="line">    Total miss rate:                  0.09%</div>
+<div class="line">LL (size=8388608, assoc=16, block=64, LRU) stats:</div>
+<div class="line">    Hits:                            8,091</div>
+<div class="line">    Misses:                          8,019</div>
+<div class="line">    Compulsory misses:              13,173</div>
+<div class="line">    Invalidations:                       0</div>
+<div class="line">    Prefetch hits:                   5,693</div>
+<div class="line">    Prefetch misses:                 5,187</div>
+<div class="line">    Local miss rate:                 49.78%</div>
+<div class="line">    Child hits:                  5,119,561</div>
+<div class="line">    Total miss rate:                  0.16%</div>
 </div><!-- fragment --><p>The memory access traces contain some optimizations that combine references for one basic block together. This may result in not considering some thread interleavings that could occur natively. There are no other disruptions to thread ordering, however, and the application runs with all of its threads concurrently just like it would natively (although slower).</p>
 <p>Once every process has exited, the simulator prints cache miss statistics for each cache to stderr. The simulator is designed to be extensible, allowing for different cache studies to be carried out: see <a class="el" href="sec_drcachesim_extend.html">Extending the Simulator</a>.</p>
 <p>For L2 caching devices, the L1 caching devices are considered its <em>children</em>. Two separate miss rates are computed, one (the "Local miss rate") considering just requests that reach L2 while the other (the "Total miss rate") includes the child hits. This generalizes to deeper hierarchies: lower level caches are children and reported child hits are cumulative across all lower levels.</p>
@@ -97,5 +99,5 @@ permalink: /sec_drcachesim_sim.html
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19978 --- Fri Sep 13 2024 03:16:23 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19982 --- Mon Sep 16 2024 20:26:53 &nbsp; <img border=0 src="favicon.png">
 </small></address>
