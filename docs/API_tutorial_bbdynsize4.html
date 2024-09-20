@@ -117,8 +117,8 @@ permalink: /API_tutorial_bbdynsize4.html
 <div class="line">    <a class="code" href="dr__tools_8h.html#a152f688d562d4cae18ad5790d8f6c4f6">dr_mutex_unlock</a>(as_built_lock);</div>
 <div class="line"> </div>
 <div class="line">+     <span class="comment">/* insert clean call */</span></div>
-<div class="line">+     <a class="code" href="dr__ir__utils_8h.html#a1df44dbe3d8dbf82e63e96741f167c64">dr_insert_clean_call</a>(drcontext, bb, <a class="code" href="dr__ir__instrlist_8h.html#a6491763e4a1534458a8d7034c8f69612">instrlist_first</a>(bb), clean_call, <span class="keyword">false</span>, 1,</div>
-<div class="line">+                          <a class="code" href="dr__ir__macros_8h.html#aa32fcd12a03eb97ef42ded7b68a85203">OPND_CREATE_INT32</a>(num_instructions));</div>
+<div class="line">+     <a class="code" href="dr__ir__utils_8h.html#a1df44dbe3d8dbf82e63e96741f167c64">dr_insert_clean_call</a>(drcontext, bb, <a class="code" href="dr__ir__instrlist_8h.html#a6491763e4a1534458a8d7034c8f69612">instrlist_first</a>(bb), (<span class="keywordtype">void</span> *)clean_call,</div>
+<div class="line">+                          <span class="keyword">false</span>, 1, <a class="code" href="dr__ir__macros_8h.html#aa32fcd12a03eb97ef42ded7b68a85203">OPND_CREATE_INT32</a>(num_instructions));</div>
 <div class="line">+</div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209a7d25c4546544d1a8c0b77c69230772eb">DR_EMIT_DEFAULT</a>;</div>
 <div class="line">}</div>
@@ -148,5 +148,5 @@ permalink: /API_tutorial_bbdynsize4.html
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19982 --- Mon Sep 16 2024 20:26:53 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19985 --- Fri Sep 20 2024 03:17:44 &nbsp; <img border=0 src="favicon.png">
 </small></address>

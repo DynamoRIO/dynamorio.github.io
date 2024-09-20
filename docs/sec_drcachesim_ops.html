@@ -119,6 +119,9 @@ If available, metadata with virtual-to-physical-address translation information 
 <li><b>-virt2phys_freq</b> <br  />
 <em>default value: 0</em> <br  />
 This option only applies if -use_physical is enabled. The virtual to physical mapping is cached for performance reasons, yet the underlying mapping can change without notice. This option controls the frequency with which the cached value is ignored in order to re-access the actual mapping and ensure accurate results. The units are the number of memory accesses per forced access. A value of 0 uses the cached values for the entire application execution.</li>
+<li><b>-v2p_file</b> <br  />
+<em>default value: ""</em> <br  />
+The TLB_simulator simulator can use v2p.textproto to translate virtual addresses to physical ones during offline analysis. If the file is named v2p.textproto and is in the same directory as the trace file, or a raw/ subdirectory below the trace file, this parameter can be omitted. This option overwrites both -page_size and the page size marker in the trace (if present) with the page size in v2p.textproto. The option -use_physical (in offline mode) must be set to use the v2p.textproto mapping. Note that -use_physical does not need to be set during tracing.</li>
 <li><b>-cpu_scheduling</b> <br  />
 <em>default value: false</em> <br  />
 By default, the simulator schedules threads to simulated cores in a static round-robin fashion. This option causes the scheduler to instead use the recorded cpu that each thread executed on (at a granularity of the trace buffer size) for scheduling, mapping traced cpu's to cores and running each segment of each thread on the core that owns the recorded cpu for that segment. This option is not supported with -core_serial; use -cpu_schedule_file with -core_serial instead.</li>
@@ -140,6 +143,9 @@ If non-zero, this stops recording a trace after the specified number of instruct
 <li><b>-retrace_every_instrs</b> <br  />
 <em>default value: 0</em> <br  />
 This option augments -trace_for_instrs. After tracing concludes, this option causes non-traced instructions to be counted and after the number specified by this option, tracing will start up again for the -trace_for_instrs duration. This process repeats itself. This can be combined with -trace_after_instrs for an initial period of non-tracing. Each tracing window is delimited by TRACE_MARKER_TYPE_WINDOW_ID markers. For -offline traces, each window is placed into its own separate set of output files, unless -no_split_windows is set.</li>
+<li><b>-trace_instr_intervals_file</b> <br  />
+<em>default value: ""</em> <br  />
+File containing instruction intervals to trace in csv format. Intervals are specified as a &lt;start, duration&gt; pair per line. Example in: clients/drcachesim/tests/instr_intervals_example.csv</li>
 <li><b>-split_windows</b> <br  />
 <em>default value: true</em> <br  />
 By default, offline traces in separate windows from -retrace_every_instrs are written to a different set of files for each window. If this option is disabled, all windows are concatenated into a single trace, separated by TRACE_MARKER_TYPE_WINDOW_ID markers.</li>
@@ -326,9 +332,12 @@ By default, the input trace is analyzed in parallel across shards equal to softw
 <li><b>-core_serial</b> <br  />
 <em>default value: false</em> <br  />
 In this mode, scheduling is performed just like for -core_sharded. However, the resulting schedule is acted upon by a single analysis threadwhich walks the N cores in lockstep in round robin fashion. How the scheduling is performed is controlled by a set of options with the prefix "sched_" along with -cores.</li>
+<li><b>-sched_time_per_us</b> <br  />
+<em>default value: 1000</em> <br  />
+Wall-clock microseconds per simulated microsecond.</li>
 <li><b>-sched_quantum</b> <br  />
-<em>default value: 6000000</em> <br  />
-Applies to -core_sharded and -core_serial. Scheduling quantum: in microseconds of wall-clock time if -sched_time is set; otherwise in instructions.</li>
+<em>default value: 10000000</em> <br  />
+Applies to -core_sharded and -core_serial. Scheduling quantum in instructions, unless -sched_time is set in which case this value is multiplied by -sched_time_per_us to produce a quantum in wall-clock microseconds.</li>
 <li><b>-sched_time</b> <br  />
 <em>default value: false</em> <br  />
 Applies to -core_sharded and -core_serial. Whether to use wall-clock time for the scheduling quantum, with a value equal to -sched_quantum in microseconds of wall-clock time.</li>
@@ -342,10 +351,10 @@ Minimum latency in timestamp units (us) to consider a non-blocking syscall as in
 <em>default value: 500</em> <br  />
 Minimum latency in timestamp units (us) to consider any syscall that is marked as maybe-blocking to incur a context switch. Applies to -core_sharded and -core_serial.</li>
 <li><b>-sched_block_scale</b> <br  />
-<em>default value: 10</em> <br  />
-The scale applied to the microsecond latency of blocking system calls. A higher value here results in blocking syscalls keeping inputs unscheduled for longer. This should roughly equal the slowdown of instruction record processing versus the original (untraced) application execution.</li>
+<em>default value: 0.1</em> <br  />
+A system call considered to block (see -sched_blocking_switch_us) will block in the trace scheduler for an amount of simulator time equal to its as-traced latency in trace-time microseconds multiplied by this parameter and by -sched_time_per_us in simulated microseconds, subject to a maximum of &ndash;sched_block_max_us. A higher value here results in blocking syscalls keeping inputs unscheduled for longer. There is indirect overhead inflating the as-traced times, so a value below 1 is typical.</li>
 <li><b>-sched_block_max_us</b> <br  />
-<em>default value: 250000</em> <br  />
+<em>default value: 2500</em> <br  />
 The maximum blocked time, after scaling with -sched_block_scale.</li>
 <li><b>-record_file</b> <br  />
 <em>default value: ""</em> <br  />
@@ -365,6 +374,15 @@ Applies to -core_sharded and -core_serial. Disables the normal methods of choosi
 <li><b>-sched_disable_direct_switches</b> <br  />
 <em>default value: false</em> <br  />
 Applies to -core_sharded and -core_serial. Disables switching to the recorded targets of TRACE_MARKER_TYPE_DIRECT_THREAD_SWITCH system call metadata markers and causes the associated system call to be treated like any other call with a switch being determined by latency and the next input in the queue. The TRACE_MARKER_TYPE_DIRECT_THREAD_SWITCH markers are not removed from the trace.</li>
+<li><b>-sched_time_units_per_us</b> <br  />
+<em>default value: 100</em> <br  />
+Time units (currently wall-clock time) per simulated microsecond. This scales all of the -sched_*_us values as it converts wall-clock time into the simulated microseconds measured by those options.</li>
+<li><b>-sched_migration_threshold_us</b> <br  />
+<em>default value: 500</em> <br  />
+The minimum time in simulated microseconds that must have elapsed since an input last ran on a core before it can be migrated to another core.</li>
+<li><b>-sched_rebalance_period_us</b> <br  />
+<em>default value: 50000</em> <br  />
+The period in simulated microseconds at which per-core run queues are re-balanced to redistribute load.</li>
 <li><b>-schedule_stats_print_every</b> <br  />
 <em>default value: 500000</em> <br  />
 A letter is printed every N instrs or N waits</li>
@@ -409,5 +427,5 @@ By default, errors in decoding the kernel syscall PT trace in pt2ir are fatal to
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19982 --- Mon Sep 16 2024 20:26:53 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19985 --- Fri Sep 20 2024 03:17:45 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -8,6 +8,7 @@
     [ "DRMEMTRACE_KERNEL_TRACE_SUBDIR", "trace__entry_8h.html#ae5cbfdf344722df8d76c1750d8eaee0f", null ],
     [ "DRMEMTRACE_MODULE_LIST_FILENAME", "trace__entry_8h.html#a11362437617ea146f226243e4de7ce7b", null ],
     [ "DRMEMTRACE_SERIAL_SCHEDULE_FILENAME", "trace__entry_8h.html#a8e130e1aa80df762896518a84d8d602d", null ],
+    [ "DRMEMTRACE_V2P_FILENAME", "trace__entry_8h.html#ae034780b4c90664a8ccd8a0a6cdf5884", null ],
     [ "addr_t", "trace__entry_8h.html#a55b7fcd36826c1ba1b6c06daddfcb777", null ],
     [ "trace_entry_t", "trace__entry_8h.html#a067f98c2dab7fe5329e2ba248836370e", null ],
     [ "encoding_file_type_t", "trace__entry_8h.html#a393cabb0f62150962dddf071dc3759b4", [
