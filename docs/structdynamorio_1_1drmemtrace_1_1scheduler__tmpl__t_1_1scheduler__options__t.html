@@ -99,6 +99,10 @@ Data Fields</h2></td></tr>
 <tr class="separator:af201380524f570dd73c5e3803eca9ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab94dd7429c3b333b663526268441d7a3"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#ab94dd7429c3b333b663526268441d7a3">rebalance_period_us</a> = 50000</td></tr>
 <tr class="separator:ab94dd7429c3b333b663526268441d7a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace64ac5c9ce99ff13be8a80d287d9f46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#ace64ac5c9ce99ff13be8a80d287d9f46">honor_infinite_timeouts</a> = false</td></tr>
+<tr class="separator:ace64ac5c9ce99ff13be8a80d287d9f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac627a524c333875673d4a1302e9ee2f3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#ac627a524c333875673d4a1302e9ee2f3">exit_if_fraction_inputs_left</a> = 0.05</td></tr>
+<tr class="separator:ac627a524c333875673d4a1302e9ee2f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename RecordType, typename ReaderType&gt;<br />
@@ -289,6 +293,23 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 
 </div>
 </div>
+<a id="ac627a524c333875673d4a1302e9ee2f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac627a524c333875673d4a1302e9ee2f3">&#9670;&nbsp;</a></span>exit_if_fraction_inputs_left</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::scheduler_options_t::exit_if_fraction_inputs_left = 0.05</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#afb65a4beaa27ae26649738d2e565c0ccaba192b7d617035b922db1f3960154406">MAP_TO_ANY_OUTPUT</a>, when an input reaches EOF, if the number of non-EOF inputs left as a fraction of the original inputs is equal to or less than this value then the scheduler exits (sets all outputs to EOF) rather than finishing off the final inputs. This helps avoid long sequences of idles during staggered endings with fewer inputs left than cores and only a small fraction of the total instructions left in those inputs. Since the remaining instruction count is not considered (as it is not available), use discretion when raising this value on uneven inputs. </p>
+
+</div>
+</div>
 <a id="a0aaac9f5b93b10fa4c72b620312f1bcd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0aaac9f5b93b10fa4c72b620312f1bcd">&#9670;&nbsp;</a></span>flags</h2>
 
@@ -320,6 +341,23 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
       </table>
 </div><div class="memdoc">
 <p>If true, the scheduler will attempt to switch to the recorded targets of <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295cae7bcf6a915571421473532017fc86d24">TRACE_MARKER_TYPE_DIRECT_THREAD_SWITCH</a> system call metadata markers regardless of system call latency. Furthermore, the scheduler will model "unscheduled" semantics and honor the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca6033baf3bb4bf61879c01e91e246b115">TRACE_MARKER_TYPE_SYSCALL_UNSCHEDULE</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caa8af23555ce5778daecf69b0ef0cf200">TRACE_MARKER_TYPE_SYSCALL_SCHEDULE</a> markers. If false, these markers are ignored and only system call latency thresholds are used to determine switches (these markers remain: they are not removed from the trace). </p>
+
+</div>
+</div>
+<a id="ace64ac5c9ce99ff13be8a80d287d9f46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace64ac5c9ce99ff13be8a80d287d9f46">&#9670;&nbsp;</a></span>honor_infinite_timeouts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::scheduler_options_t::honor_infinite_timeouts = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Determines whether an unscheduled-indefinitely input really is unscheduled for an infinite time, or instead is treated as blocked for the maxiumim time (<a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#ad3bf45c6ae11854a847a1c5ff27c03a0">block_time_max_us</a>) scaled by <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a76efe32409f8e56731cf218c67cb28ef">block_time_multiplier</a>. </p>
 
 </div>
 </div>
@@ -672,5 +710,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.19989 --- Fri Sep 27 2024 03:20:51 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.20000 --- Fri Oct 4 2024 03:20:56 &nbsp; <img border=0 src="favicon.png">
 </small></address>
