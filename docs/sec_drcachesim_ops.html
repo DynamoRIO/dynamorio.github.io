@@ -334,10 +334,10 @@ By default, the input trace is analyzed in parallel across shards equal to softw
 In this mode, scheduling is performed just like for -core_sharded. However, the resulting schedule is acted upon by a single analysis threadwhich walks the N cores in lockstep in round robin fashion. How the scheduling is performed is controlled by a set of options with the prefix "sched_" along with -cores.</li>
 <li><b>-sched_quantum</b> <br  />
 <em>default value: 10000000</em> <br  />
-Applies to -core_sharded and -core_serial. Scheduling quantum in instructions, unless -sched_time is set in which case this value is multiplied by -sched_time_per_us to produce a quantum in wall-clock microseconds.</li>
+Applies to -core_sharded and -core_serial. Scheduling quantum in instructions, unless -sched_time is set in which case this value is the quantum in simulated microseconds (equal to wall-clock microseconds multiplied by -sched_time_per_us).</li>
 <li><b>-sched_time</b> <br  />
 <em>default value: false</em> <br  />
-Applies to -core_sharded and -core_serial. Whether to use wall-clock time for the scheduling quantum, with a value equal to -sched_quantum in microseconds of wall-clock time.</li>
+Applies to -core_sharded and -core_serial. Whether to use wall-clock time (multiplied by -sched_time_per_us) for measuring idle time and for the scheduling quantum (see -sched_quantum).</li>
 <li><b>-sched_order_time</b> <br  />
 <em>default value: true</em> <br  />
 Applies to -core_sharded and -core_serial. Whether to honor recorded timestamps for ordering</li>
@@ -375,8 +375,8 @@ Applies to -core_sharded and -core_serial. Disables switching to the recorded ta
 <em>default value: false</em> <br  />
 Applies to -core_sharded and -core_serial. Determines whether an unscheduled-indefinitely input really is never scheduled (set to true), or instead is treated as blocked for the maximum time (scaled by the regular block scale) (set to false).</li>
 <li><b>-sched_time_units_per_us</b> <br  />
-<em>default value: 100</em> <br  />
-Time units (currently wall-clock time) per simulated microsecond. This scales all of the -sched_*_us values as it converts wall-clock time into the simulated microseconds measured by those options.</li>
+<em>default value: 1000</em> <br  />
+Time units per simulated microsecond. The units are either the instruction count plus the idle count (the default) or if -sched_time is selected wall-clock microseconds. This option value scales all of the -sched_*_us values as it converts time units into the simulated microseconds measured by those options.</li>
 <li><b>-sched_migration_threshold_us</b> <br  />
 <em>default value: 500</em> <br  />
 The minimum time in simulated microseconds that must have elapsed since an input last ran on a core before it can be migrated to another core.</li>
@@ -384,7 +384,7 @@ The minimum time in simulated microseconds that must have elapsed since an input
 <em>default value: 50000</em> <br  />
 The period in simulated microseconds at which per-core run queues are re-balanced to redistribute load.</li>
 <li><b>-sched_exit_if_fraction_inputs_left</b> <br  />
-<em>default value: 0.05</em> <br  />
+<em>default value: 0.1</em> <br  />
 Applies to -core_sharded and -core_serial. When an input reaches EOF, if the number of non-EOF inputs left as a fraction of the original inputs is equal to or less than this value then the scheduler exits (sets all outputs to EOF) rather than finishing off the final inputs. This helps avoid long sequences of idles during staggered endings with fewer inputs left than cores and only a small fraction of the total instructions left in those inputs. Since the remaining instruction count is not considered (as it is not available), use discretion when raising this value on uneven inputs.</li>
 <li><b>-schedule_stats_print_every</b> <br  />
 <em>default value: 500000</em> <br  />
@@ -430,5 +430,5 @@ By default, errors in decoding the kernel syscall PT trace in pt2ir are fatal to
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.20000 --- Fri Oct 4 2024 03:20:56 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.20006 --- Fri Oct 11 2024 03:19:55 &nbsp; <img border=0 src="favicon.png">
 </small></address>

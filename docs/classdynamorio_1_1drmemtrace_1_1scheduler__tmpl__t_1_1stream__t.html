@@ -60,6 +60,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a92f2930a8d82b87898edf1b774c7e757"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a83dd98176ac3c13de12ab60d478252"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a3a83dd98176ac3c13de12ab60d478252">get_instruction_ordinal</a> () const override</td></tr>
 <tr class="separator:a3a83dd98176ac3c13de12ab60d478252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22d0f62296ada8219d787612cb64953d"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a22d0f62296ada8219d787612cb64953d">get_output_instruction_ordinal</a> () const</td></tr>
+<tr class="separator:a22d0f62296ada8219d787612cb64953d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad648abe0b17d471550e514f3e852b31c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ad648abe0b17d471550e514f3e852b31c">get_stream_name</a> () const override</td></tr>
 <tr class="separator:ad648abe0b17d471550e514f3e852b31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af60ac75d60c9bef69f6630ab3aa016c1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aba6242678835329015e0fc77404a1865">input_ordinal_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#af60ac75d60c9bef69f6630ab3aa016c1">get_input_stream_ordinal</a> () const</td></tr>
@@ -465,6 +467,34 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 
 </div>
 </div>
+<a id="a22d0f62296ada8219d787612cb64953d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22d0f62296ada8219d787612cb64953d">&#9670;&nbsp;</a></span>get_output_instruction_ordinal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::stream_t::get_output_instruction_ordinal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Identical to <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a3a83dd98176ac3c13de12ab60d478252">get_instruction_ordinal()</a> but ignores the <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a1e290a29bdceade505c252246646d97b">SCHEDULER_USE_INPUT_ORDINALS</a> flag. </p>
+
+</div>
+</div>
 <a id="a6e8f8595a28ae6ab27a00153279da271"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6e8f8595a28ae6ab27a00153279da271">&#9670;&nbsp;</a></span>get_output_stream_ordinal()</h2>
 
@@ -820,7 +850,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Advances to the next record in the stream. Returns a status code on whether and how to continue. </p>
+<p>Advances to the next record in the stream. Returns a status code on whether and how to continue. Uses the instruction count plus idle count to this point as the time; use the variant that takes "cur_time" to instead provide a time. </p>
 
 </div>
 </div>
@@ -859,7 +889,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Advances to the next record in the stream. Returns a status code on whether and how to continue. Supplies the current time for <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a66d6f6bbc9213a887758d14d32a31199a731ead7ea1ca4e3248a56b7aefac9ed3">QUANTUM_TIME</a>. The time should be considered to be the time prior to processing the returned record. The time is unitless but needs to be a globally consistent increasing value across all output streams. <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5ab3ca72357837c9a033eff8516263ed46">STATUS_INVALID</a> is returned if 0 or a value smaller than the start time of the current input's quantum is passed in when <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a66d6f6bbc9213a887758d14d32a31199a731ead7ea1ca4e3248a56b7aefac9ed3">QUANTUM_TIME</a> and <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#afb65a4beaa27ae26649738d2e565c0ccaba192b7d617035b922db1f3960154406">MAP_TO_ANY_OUTPUT</a> are specified. </p>
+<p>Advances to the next record in the stream. Returns a status code on whether and how to continue. Supplies the current time for <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a66d6f6bbc9213a887758d14d32a31199a731ead7ea1ca4e3248a56b7aefac9ed3">QUANTUM_TIME</a>. The time should be considered to be the simulated time prior to processing the returned record. The time's units can be chosen by the caller, with <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a57204006ea4057e5a53e21abdc4e5dc3">dynamorio::drmemtrace::scheduler_tmpl_t::scheduler_options_t.time_units_per_us</a> providing the conversion to simulated microseconds. <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5ab3ca72357837c9a033eff8516263ed46">STATUS_INVALID</a> is returned if 0 or a value smaller than the start time of the current input's quantum is passed in when <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a66d6f6bbc9213a887758d14d32a31199a731ead7ea1ca4e3248a56b7aefac9ed3">QUANTUM_TIME</a> and <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#afb65a4beaa27ae26649738d2e565c0ccaba192b7d617035b922db1f3960154406">MAP_TO_ANY_OUTPUT</a> are specified. </p>
 
 </div>
 </div>
@@ -998,5 +1028,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.20000 --- Fri Oct 4 2024 03:20:56 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.20006 --- Fri Oct 11 2024 03:19:55 &nbsp; <img border=0 src="favicon.png">
 </small></address>

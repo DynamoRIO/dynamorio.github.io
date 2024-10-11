@@ -10,6 +10,7 @@
     [ "get_instruction_ordinal", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a3a83dd98176ac3c13de12ab60d478252", null ],
     [ "get_last_timestamp", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a3ea475b2b4f9dc3d440b4dc504c81d2b", null ],
     [ "get_output_cpuid", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#afddeb23340f782f500982cac5dda6af9", null ],
+    [ "get_output_instruction_ordinal", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a22d0f62296ada8219d787612cb64953d", null ],
     [ "get_output_stream_ordinal", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a6e8f8595a28ae6ab27a00153279da271", null ],
     [ "get_page_size", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a32a519e6d59f331e7006179570823926", null ],
     [ "get_record_ordinal", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a92f2930a8d82b87898edf1b774c7e757", null ],
