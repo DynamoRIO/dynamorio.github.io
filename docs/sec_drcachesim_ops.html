@@ -410,6 +410,9 @@ This option is for -tool record_filter. When present, it converts the encoding o
 <li><b>-filter_keep_func_ids</b> <br  />
 <em>default value: ""</em> <br  />
 This option is for -tool record_filter. It preserves TRACE_MARKER_TYPE_FUNC_[ID | ARG | RETVAL | RETADDR] markers for the listed function IDs and removes those belonging to unlisted function IDs.</li>
+<li><b>-filter_modify_marker_value</b> <br  />
+<em>default value: ""</em> <br  />
+This option is for -tool record_filter. It modifies the value of all listed TRACE_MARKER_TYPE_ markers in the trace with their corresponding new_value. The list must have an even size. Example: -filter_modify_marker_value 3,24,18,2048 sets all TRACE_MARKER_TYPE_CPU_ID == 3 in the trace to core 24 and TRACE_MARKER_TYPE_PAGE_SIZE == 18 to 2k.</li>
 <li><b>-trim_before_timestamp</b> <br  />
 <em>default value: 0</em> <br  />
 Removes all records (after headers) before the first TRACE_MARKER_TYPE_TIMESTAMP marker in the trace with timestamp greater than or equal to the specified value.</li>
@@ -430,5 +433,5 @@ By default, errors in decoding the kernel syscall PT trace in pt2ir are fatal to
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.20006 --- Fri Oct 11 2024 03:19:55 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.20012 --- Fri Oct 18 2024 03:23:00 &nbsp; <img border=0 src="favicon.png">
 </small></address>
