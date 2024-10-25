@@ -58,6 +58,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a71607218331f15e9882ed527a9654d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a220194108882407ba03f59dd4810d859"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a220194108882407ba03f59dd4810d859">initialize_shard_type</a> (<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a107f5120f8556cdf7bed8add898915ba">shard_type_t</a> shard_type)</td></tr>
 <tr class="separator:a220194108882407ba03f59dd4810d859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb572c2ab41e7d8fccaf6bfcb609ec2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a107f5120f8556cdf7bed8add898915ba">shard_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a0bb572c2ab41e7d8fccaf6bfcb609ec2">preferred_shard_type</a> ()</td></tr>
+<tr class="separator:a0bb572c2ab41e7d8fccaf6bfcb609ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2db6939f56118427cba732a4cd9ea69b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a2db6939f56118427cba732a4cd9ea69b">operator!</a> ()</td></tr>
 <tr class="separator:a2db6939f56118427cba732a4cd9ea69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9cb5947ef8a6de50dce906bf17bb580"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ab9cb5947ef8a6de50dce906bf17bb580">get_error_string</a> ()</td></tr>
@@ -102,6 +104,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a71607218331f15e9882ed527a9654d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a220194108882407ba03f59dd4810d859"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a220194108882407ba03f59dd4810d859">initialize_shard_type</a> (<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a107f5120f8556cdf7bed8add898915ba">shard_type_t</a> shard_type)</td></tr>
 <tr class="separator:a220194108882407ba03f59dd4810d859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb572c2ab41e7d8fccaf6bfcb609ec2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a107f5120f8556cdf7bed8add898915ba">shard_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a0bb572c2ab41e7d8fccaf6bfcb609ec2">preferred_shard_type</a> ()</td></tr>
+<tr class="separator:a0bb572c2ab41e7d8fccaf6bfcb609ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2db6939f56118427cba732a4cd9ea69b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a2db6939f56118427cba732a4cd9ea69b">operator!</a> ()</td></tr>
 <tr class="separator:a2db6939f56118427cba732a4cd9ea69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9cb5947ef8a6de50dce906bf17bb580"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ab9cb5947ef8a6de50dce906bf17bb580">get_error_string</a> ()</td></tr>
@@ -604,7 +608,7 @@ template&lt;typename RecordType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Destructor. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated:</a></b></dt><dd>The <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a71607218331f15e9882ed527a9654d69">initialize_stream()</a> function is called by the analyzer; this function is only called if the default implementation of <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a71607218331f15e9882ed527a9654d69">initialize_stream()</a> is left in place and it calls this version. On an error, this returns an error string. On success, it returns "". </dd></dl>
+<p>Destructor. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000030">Deprecated:</a></b></dt><dd>The <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a71607218331f15e9882ed527a9654d69">initialize_stream()</a> function is called by the analyzer; this function is only called if the default implementation of <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a71607218331f15e9882ed527a9654d69">initialize_stream()</a> is left in place and it calls this version. On an error, this returns an error string. On success, it returns "". </dd></dl>
 
 </div>
 </div>
@@ -632,7 +636,7 @@ template&lt;typename RecordType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Destructor. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000030">Deprecated:</a></b></dt><dd>The <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a71607218331f15e9882ed527a9654d69">initialize_stream()</a> function is called by the analyzer; this function is only called if the default implementation of <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a71607218331f15e9882ed527a9654d69">initialize_stream()</a> is left in place and it calls this version. On an error, this returns an error string. On success, it returns "". </dd></dl>
+<p>Destructor. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated:</a></b></dt><dd>The <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a71607218331f15e9882ed527a9654d69">initialize_stream()</a> function is called by the analyzer; this function is only called if the default implementation of <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a71607218331f15e9882ed527a9654d69">initialize_stream()</a> is left in place and it calls this version. On an error, this returns an error string. On success, it returns "". </dd></dl>
 
 </div>
 </div>
@@ -1366,6 +1370,62 @@ template&lt;typename RecordType &gt; </div>
 
 </div>
 </div>
+<a id="a0bb572c2ab41e7d8fccaf6bfcb609ec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bb572c2ab41e7d8fccaf6bfcb609ec2">&#9670;&nbsp;</a></span>preferred_shard_type() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a107f5120f8556cdf7bed8add898915ba">shard_type_t</a> <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html">dynamorio::drmemtrace::analysis_tool_tmpl_t</a>&lt; RecordType &gt;::preferred_shard_type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Identifies the preferred shard type for this analysis. This only applies when the user does not specify a shard type for a run. In that case, if every tool being run prefers <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a107f5120f8556cdf7bed8add898915baaa7bd23daf15197f85b315f00d1ba5654">SHARD_BY_CORE</a>, the framework uses that mode. If tools disagree then an error is raised. This is ignored if the user specifies a shard type via one of -core_sharded, -core_serial, -no_core_sharded, -no_core_serial, or -cpu_scheduling. </p>
+
+</div>
+</div>
+<a id="a0bb572c2ab41e7d8fccaf6bfcb609ec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bb572c2ab41e7d8fccaf6bfcb609ec2">&#9670;&nbsp;</a></span>preferred_shard_type() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a107f5120f8556cdf7bed8add898915ba">shard_type_t</a> <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html">dynamorio::drmemtrace::analysis_tool_tmpl_t</a>&lt; RecordType &gt;::preferred_shard_type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Identifies the preferred shard type for this analysis. This only applies when the user does not specify a shard type for a run. In that case, if every tool being run prefers <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a107f5120f8556cdf7bed8add898915baaa7bd23daf15197f85b315f00d1ba5654">SHARD_BY_CORE</a>, the framework uses that mode. If tools disagree then an error is raised. This is ignored if the user specifies a shard type via one of -core_sharded, -core_serial, -no_core_sharded, -no_core_serial, or -cpu_scheduling. </p>
+
+</div>
+</div>
 <a id="ad378988c437fc6be3efd1cee5315f457"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad378988c437fc6be3efd1cee5315f457">&#9670;&nbsp;</a></span>print_interval_results() <span class="overload">[1/2]</span></h2>
 
@@ -1615,5 +1675,5 @@ template&lt;typename RecordType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.20012 --- Fri Oct 18 2024 03:23:00 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.20019 --- Fri Oct 25 2024 03:23:20 &nbsp; <img border=0 src="favicon.png">
 </small></address>

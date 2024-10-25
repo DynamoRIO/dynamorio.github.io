@@ -36,6 +36,8 @@
     [ "parallel_worker_exit", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a664f0e42ab2d94e5c737f87ada98af8e", null ],
     [ "parallel_worker_init", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ad8872d91bd44942a38eafbc9857ddfac", null ],
     [ "parallel_worker_init", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ad8872d91bd44942a38eafbc9857ddfac", null ],
+    [ "preferred_shard_type", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a0bb572c2ab41e7d8fccaf6bfcb609ec2", null ],
+    [ "preferred_shard_type", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a0bb572c2ab41e7d8fccaf6bfcb609ec2", null ],
     [ "print_interval_results", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ad378988c437fc6be3efd1cee5315f457", null ],
     [ "print_interval_results", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ad378988c437fc6be3efd1cee5315f457", null ],
     [ "print_results", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a69e143fd54a1bb740fd04d45c69d65da", null ],
