@@ -867,7 +867,7 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:abed82baf7f470b522273a3e37c24c600"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab04a0655cd1e3bcac5e8f48c18df1a57"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="dr__ir__opnd_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a7ea7b6939706b8624b7e1b1d43207aae">DR_REG_V0</a> = DR_REG_NULL + 2
+<tr class="memitem:ab04a0655cd1e3bcac5e8f48c18df1a57"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="dr__ir__opnd_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a4c7b6bff6203dc1ce0501cd5e33ee27a">DR_REG_VIRT0</a>
  }</td></tr>
 <tr class="separator:ab04a0655cd1e3bcac5e8f48c18df1a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69ec8bd64ab30124cb8807e1d73fdd96"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a69ec8bd64ab30124cb8807e1d73fdd96">_dr_shift_type_t</a> { <br />
@@ -3380,7 +3380,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Virtual register identifiers for <a class="el" href="dr__ir__encode_8h.html#a00e03b2e5e75a83eacf9a0ee1674074aa1bbcfa1df3fffff3d96b357f9a2290d3">DR_ISA_REGDEPS</a>. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab04a0655cd1e3bcac5e8f48c18df1a57a7ea7b6939706b8624b7e1b1d43207aae"></a>DR_REG_V0&#160;</td><td class="fielddoc"><p>The first virtual register. Note that all virtual registers named here are valid. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab04a0655cd1e3bcac5e8f48c18df1a57a4c7b6bff6203dc1ce0501cd5e33ee27a"></a>DR_REG_VIRT0&#160;</td><td class="fielddoc"><p>The first virtual register. Note that all virtual registers named here are valid. </p>
 </td></tr>
 </table>
 
@@ -3744,7 +3744,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Assumes that <code>reg</code> is a DR_REG_ 32-bit register constant. Returns the string name for <code>reg</code>. </p><dl class="section note"><dt>Note</dt><dd>It uses the global dcontext_t to determine the ISA mode. If the ISA mode is a synthetic one (e.g., <a class="el" href="dr__ir__encode_8h.html#a00e03b2e5e75a83eacf9a0ee1674074aa1bbcfa1df3fffff3d96b357f9a2290d3">DR_ISA_REGDEPS</a>), it returns the name of a <a class="el" href="dr__ir__opnd_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a7ea7b6939706b8624b7e1b1d43207aae">DR_REG_V0</a> etc. virtual register. </dd></dl>
+<p>Assumes that <code>reg</code> is a DR_REG_ 32-bit register constant. Returns the string name for <code>reg</code>. </p><dl class="section note"><dt>Note</dt><dd>It uses the global dcontext_t to determine the ISA mode. If the ISA mode is a synthetic one (e.g., <a class="el" href="dr__ir__encode_8h.html#a00e03b2e5e75a83eacf9a0ee1674074aa1bbcfa1df3fffff3d96b357f9a2290d3">DR_ISA_REGDEPS</a>), it returns the name of a <a class="el" href="dr__ir__opnd_8h.html#ab04a0655cd1e3bcac5e8f48c18df1a57a4c7b6bff6203dc1ce0501cd5e33ee27a">DR_REG_VIRT0</a> etc. virtual register. </dd></dl>
 
 </div>
 </div>
@@ -7595,5 +7595,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 10.93.20019 --- Fri Oct 25 2024 03:23:19 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.0.20027 --- Fri Nov 1 2024 03:30:55 &nbsp; <img border=0 src="favicon.png">
 </small></address>
