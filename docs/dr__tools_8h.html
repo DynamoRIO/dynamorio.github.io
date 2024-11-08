@@ -187,7 +187,11 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a00269a3ba590923c5d0ec4e0bcf5a9ff"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a00269a3ba590923c5d0ec4e0bcf5a9ff">dr_memory_dump_flags_t</a> { <a class="el" href="dr__tools_8h.html#a00269a3ba590923c5d0ec4e0bcf5a9ffa00ec80b5919c0e6e1dc361a5fa9af02f">DR_MEMORY_DUMP_LDMP</a> = 0x0001
+<tr class="memitem:a00269a3ba590923c5d0ec4e0bcf5a9ff"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#a00269a3ba590923c5d0ec4e0bcf5a9ff">dr_memory_dump_flags_t</a> { <br />
+&#160;&#160;<a class="el" href="dr__tools_8h.html#a00269a3ba590923c5d0ec4e0bcf5a9ffa00ec80b5919c0e6e1dc361a5fa9af02f">DR_MEMORY_DUMP_LDMP</a> = 0x0001, 
+<br />
+&#160;&#160;<a class="el" href="dr__tools_8h.html#a00269a3ba590923c5d0ec4e0bcf5a9ffa798c406de5c100a87bd00f3352837fdb">DR_MEMORY_DUMP_ELF</a> = 0x0002
+<br />
  }</td></tr>
 <tr class="separator:a00269a3ba590923c5d0ec4e0bcf5a9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb7e20e83f7b8e1b65428e45c8ab4211"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__tools_8h.html#abb7e20e83f7b8e1b65428e45c8ab4211">dr_alloc_flags_t</a> { <br />
@@ -1736,6 +1740,9 @@ Functions</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a00269a3ba590923c5d0ec4e0bcf5a9ffa00ec80b5919c0e6e1dc361a5fa9af02f"></a>DR_MEMORY_DUMP_LDMP&#160;</td><td class="fielddoc"><p>A "livedump", or "ldmp", DynamoRIO's own custom memory dump format. The ldmp format does not currently support specifying a context for the calling thread, so it will always include the call frames to <a class="el" href="dr__tools_8h.html#afa268a6496cad930513c1f0353fdd06e">dr_create_memory_dump()</a>. The <code>ldmp.exe</code> tool can be used to create a dummy process (using the <code>dummy.exe</code> executable) which can then be attached to by the debugger (use a non-invasive attach) in order to view the memory dump contents.</p>
 <dl class="section note"><dt>Note</dt><dd>Windows only. </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="a00269a3ba590923c5d0ec4e0bcf5a9ffa798c406de5c100a87bd00f3352837fdb"></a>DR_MEMORY_DUMP_ELF&#160;</td><td class="fielddoc"><p>Memory dump in Executable and Linkable Format. This API has the same restrictions in where it can be called from as <a class="el" href="dr__tools_8h.html#abbc63860f214ed00b877a9bc5108b3d3">dr_suspend_all_other_threads_ex()</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>X64 Linux only. </dd></dl>
 </td></tr>
 </table>
 
@@ -6660,5 +6667,5 @@ This routine is only available with either the -thread_private or -enable_full_a
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.0.20033 --- Wed Nov 6 2024 21:57:12 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.0.20034 --- Fri Nov 8 2024 03:19:07 &nbsp; <img border=0 src="favicon.png">
 </small></address>

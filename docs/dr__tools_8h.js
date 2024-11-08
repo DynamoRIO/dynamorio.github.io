@@ -91,7 +91,8 @@
       [ "DR_MAPEXE_SKIP_WRITABLE", "dr__tools_8h.html#ade307e7bb7b7ac46e874097fe62b9fefa183f27400568e903a072c9fc5bf0af96", null ]
     ] ],
     [ "dr_memory_dump_flags_t", "dr__tools_8h.html#a00269a3ba590923c5d0ec4e0bcf5a9ff", [
-      [ "DR_MEMORY_DUMP_LDMP", "dr__tools_8h.html#a00269a3ba590923c5d0ec4e0bcf5a9ffa00ec80b5919c0e6e1dc361a5fa9af02f", null ]
+      [ "DR_MEMORY_DUMP_LDMP", "dr__tools_8h.html#a00269a3ba590923c5d0ec4e0bcf5a9ffa00ec80b5919c0e6e1dc361a5fa9af02f", null ],
+      [ "DR_MEMORY_DUMP_ELF", "dr__tools_8h.html#a00269a3ba590923c5d0ec4e0bcf5a9ffa798c406de5c100a87bd00f3352837fdb", null ]
     ] ],
     [ "dr_suspend_flags_t", "dr__tools_8h.html#a66bef18f8eabc7a8b8b0368e8a96d179", [
       [ "DR_SUSPEND_NATIVE", "dr__tools_8h.html#a66bef18f8eabc7a8b8b0368e8a96d179a21ba834e13979aa7ad97fd13c69b3ae4", null ]
