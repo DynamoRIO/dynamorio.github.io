@@ -483,6 +483,33 @@ Human-Readable View</h1>
 <div class="line">801375      601842:     1159769 &lt;marker: timestamp 13335923552684029&gt;</div>
 <div class="line">801376      601842:     1159769 &lt;marker: tid 1159769 on core 7&gt;</div>
 <div class="line">801377      601843:     1159769 ifetch       4 byte(s) @ 0x00007fc2c3aa5c72 48 83 c4 48          add    $0x48, %rsp</div>
+</div><!-- fragment --><p>Here is an illustration of what a trace would look like when an uncompleted instruction (mov) is interrupted by an asynchronous signal and the instruction is not removed (The following trace is for demonstration purpose only):</p>
+<div class="fragment"><div class="line">46914793    33950158:     3767811 ifetch       5 byte(s) @ 0x000055f52911b75e c4 42 f8 f5 e8       bzhi   %r8, %rax, %r13</div>
+<div class="line">46914794    33950159:     3767811 ifetch       5 byte(s) @ 0x000055f52911b763 c4 62 f8 f5 c3       bzhi   %rbx, %rax, %r8</div>
+<div class="line">46914795    33950160:     3767811 ifetch       4 byte(s) @ 0x000055f52911b768 48 c1 eb 33          shr    $0x33, %rbx</div>
+<div class="line">46914796    33950161:     3767811 ifetch       3 byte(s) @ 0x000055f52911b76c 48 01 f3             add    %rsi, %rbx</div>
+<div class="line">46914797    33950162:     3767811 ifetch       5 byte(s) @ 0x000055f52911b76f b8 04 00 00 00       mov    $0x00000004, %eax</div>
+<div class="line">(The line below is <span class="keywordflow">for</span> demonstration purpose only and will not appear in a real drmemtrace.)</div>
+<div class="line">46914798    33950163:     3767811 ifetch       6 byte(s) @ 0x000055f52911b774 89 85 68 ff ff ff    mov    %eax, -0x98(%rbp)</div>
+<div class="line">46914799    33950163:     3767811 &lt;marker: kernel xfer from 0x55f52911b774 to handler&gt;</div>
+<div class="line">46914800    33950163:     3767811 &lt;marker: signal #27&gt;</div>
+<div class="line">46914801    33950163:     3767811 &lt;marker: timestamp 13373506292215933&gt;</div>
+<div class="line">46914802    33950163:     3767811 &lt;marker: tid 3767811 on core 4139&gt;</div>
+<div class="line">46914803    33950164:     3767811 ifetch       1 <span class="keywordtype">byte</span>(s) @ 0x000055f5298f7500 55                   push   %rbp</div>
+<div class="line">46914804    33950164:     3767811 write        8 byte(s) @ 0x00007fd98bd2f210 by PC 0x000055f5298f7500</div>
+</div><!-- fragment --><p>When the uncompleted mov instruction is removed, a <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca27cc562c02c8a0f07411d2a349091950">dynamorio::drmemtrace::TRACE_MARKER_TYPE_UNCOMPLETED_INSTRUCTION</a> marker is placed to indicate an instruction has been removed:</p>
+<div class="fragment"><div class="line">46914793    33950158:     3767811 ifetch       5 byte(s) @ 0x000055f52911b75e c4 42 f8 f5 e8       bzhi   %r8, %rax, %r13</div>
+<div class="line">46914794    33950159:     3767811 ifetch       5 byte(s) @ 0x000055f52911b763 c4 62 f8 f5 c3       bzhi   %rbx, %rax, %r8</div>
+<div class="line">46914795    33950160:     3767811 ifetch       4 byte(s) @ 0x000055f52911b768 48 c1 eb 33          shr    $0x33, %rbx</div>
+<div class="line">46914796    33950161:     3767811 ifetch       3 byte(s) @ 0x000055f52911b76c 48 01 f3             add    %rsi, %rbx</div>
+<div class="line">46914797    33950162:     3767811 ifetch       5 byte(s) @ 0x000055f52911b76f b8 04 00 00 00       mov    $0x00000004, %eax</div>
+<div class="line">46914798    33950163:     3767811 &lt;marker: uncompleted instruction, encoding 0x898568ff&gt;</div>
+<div class="line">46914799    33950163:     3767811 &lt;marker: kernel xfer from 0x55f52911b774 to handler&gt;</div>
+<div class="line">46914800    33950163:     3767811 &lt;marker: signal #27&gt;</div>
+<div class="line">46914801    33950163:     3767811 &lt;marker: timestamp 13373506292215933&gt;</div>
+<div class="line">46914802    33950163:     3767811 &lt;marker: tid 3767811 on core 4139&gt;</div>
+<div class="line">46914803    33950164:     3767811 ifetch       1 byte(s) @ 0x000055f5298f7500 55                   push   %rbp</div>
+<div class="line">46914804    33950164:     3767811 write        8 byte(s) @ 0x00007fd98bd2f210 by PC 0x000055f5298f7500</div>
 </div><!-- fragment --><h1><a class="anchor" id="sec_tool_func_view"></a>
 View Function Calls</h1>
 <p>The func_view tool records function argument and return values for function names specified at tracing time. See <a class="el" href="sec_drcachesim_funcs.html">Tracing Function Calls</a> for more information.</p>
@@ -612,5 +639,5 @@ Record Filter</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.0.20034 --- Fri Nov 8 2024 03:19:09 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.0.20042 --- Fri Nov 15 2024 03:27:47 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -251,7 +251,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -311,7 +311,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -341,7 +341,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -369,7 +369,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -397,11 +397,11 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the count of instructions from the start of the trace to this point. For record_scheduler_t, if any encoding records or the internal record TRACE_MARKER_TYPE_BRANCH_TARGET records are present prior to an instruction marker, the count will increase at the first of those records as they are considered part of the instruction. If <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a1e290a29bdceade505c252246646d97b">SCHEDULER_USE_INPUT_ORDINALS</a> is set, then this value matches the instruction ordinal for the current input stream (and thus might decrease or not change across records if the input changed). Otherwise, if multiple input streams fed into this output stream, this includes the records from all those streams that were presented here: thus, this may be larger than what the current input stream reports (see <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a5aff5fd94bfae5486b0d557c6ac87d57">get_input_stream_interface()</a> and <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#af60ac75d60c9bef69f6630ab3aa016c1">get_input_stream_ordinal()</a>). This does not advance across skipped records in an input stream from a region of interest (see <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::range_t</a>), but it does advance if the output stream skipped ahead. </p>
+<p>Returns the count of instructions from the start of the trace to this point. For record_scheduler_t, if any encoding records or the internal record TRACE_MARKER_TYPE_BRANCH_TARGET records are present prior to an instruction marker, the count will increase at the first of those records as they are considered part of the instruction. If <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a1e290a29bdceade505c252246646d97b">SCHEDULER_USE_INPUT_ORDINALS</a> is set, then this value matches the instruction ordinal for the current input stream (and thus might decrease or not change across records if the input changed). Otherwise, if multiple input streams fed into this output stream, this includes the records from all those streams that were presented here: thus, this may be larger than what the current input stream reports (see <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#af2aa8522237f8d6ad408278645b3331d">get_input_stream_interface()</a> and <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#af60ac75d60c9bef69f6630ab3aa016c1">get_input_stream_ordinal()</a>). This does not advance across skipped records in an input stream from a region of interest (see <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::range_t</a>), but it does advance if the output stream skipped ahead. </p>
 
 <p>Implements <a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#ad4bd0ddaf428bb679f940f58f9a4e532">dynamorio::drmemtrace::memtrace_stream_t</a>.</p>
 
@@ -427,7 +427,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -457,7 +457,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -573,12 +573,12 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the count of <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae4a471ed806967b2b6f911b6ef770704">memref_t</a> records from the start of the trace to this point. It does not include synthetic records (see <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ab276351adf53d50aecba8954f7f839d4">is_record_synthetic()</a>).</p>
-<p>If <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a1e290a29bdceade505c252246646d97b">SCHEDULER_USE_INPUT_ORDINALS</a> is set, then this value matches the record ordinal for the current input stream (and thus might decrease or not change across records if the input changed). Otherwise, if multiple input streams fed into this output stream, this includes the records from all those streams that were presented here: thus, this may be larger than what the current input stream reports (see <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a5aff5fd94bfae5486b0d557c6ac87d57">get_input_stream_interface()</a> and <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#af60ac75d60c9bef69f6630ab3aa016c1">get_input_stream_ordinal()</a>). This does not advance across skipped records in an input stream from a region of interest (see <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::range_t</a>), but it does advance if the output stream skipped ahead. </p>
+<p>If <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a1e290a29bdceade505c252246646d97b">SCHEDULER_USE_INPUT_ORDINALS</a> is set, then this value matches the record ordinal for the current input stream (and thus might decrease or not change across records if the input changed). Otherwise, if multiple input streams fed into this output stream, this includes the records from all those streams that were presented here: thus, this may be larger than what the current input stream reports (see <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#af2aa8522237f8d6ad408278645b3331d">get_input_stream_interface()</a> and <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#af60ac75d60c9bef69f6630ab3aa016c1">get_input_stream_ordinal()</a>). This does not advance across skipped records in an input stream from a region of interest (see <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::range_t</a>), but it does advance if the output stream skipped ahead. </p>
 
 <p>Implements <a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a319e4bec8180d58bb05e02299dbbb884">dynamorio::drmemtrace::memtrace_stream_t</a>.</p>
 
@@ -605,7 +605,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -635,7 +635,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -665,7 +665,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -695,7 +695,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -785,7 +785,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -815,7 +815,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1028,5 +1028,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.0.20034 --- Fri Nov 8 2024 03:19:10 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.0.20042 --- Fri Nov 15 2024 03:27:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -1,5 +1,5 @@
 [
-    [ "replay_file_checker_t", "classdynamorio_1_1drmemtrace_1_1replay__file__checker__t.html", null ],
+    [ "scheduler_impl_tmpl_t", "classdynamorio_1_1drmemtrace_1_1scheduler__impl__tmpl__t.html", null ],
     [ "scheduler_tmpl_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.js %} ],
     [ "range_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html", {% include_relative structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.js %} ],
     [ "timestamp_range_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1timestamp__range__t.html", {% include_relative structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1timestamp__range__t.js %} ],
