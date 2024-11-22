@@ -4,6 +4,7 @@
     [ "input_workload_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__workload__t.html#a7406c4f6c1582ebc72e9fd1195e67168", null ],
     [ "only_shards", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__workload__t.html#a4965db9696363ba9fa95c9463f4e4a05", null ],
     [ "only_threads", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__workload__t.html#add28e59504a4978c8870da37cbc3b0ce", null ],
+    [ "output_limit", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__workload__t.html#af0ff124fb708c8c6ddf8db4776d63055", null ],
     [ "path", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__workload__t.html#a28573c3defc55365ec15a4a253946268", null ],
     [ "readers", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__workload__t.html#abd9cc43f03938dbd62c5bd13362bb873", null ],
     [ "struct_size", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__workload__t.html#a479bce8ba8b73288792dd5aada1f948d", null ],

@@ -2287,7 +2287,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Requests that DR create a memory dump file of the current process. The type of dump is specified by <code>spec</code>.</p>
 <dl class="section return"><dt>Returns</dt><dd>whether successful.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>this function is only supported on Windows for now. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>this function is only supported on Windows and X64 Linux only. For X64 Linux, this API has the same restriction as <a class="el" href="dr__tools_8h.html#abbc63860f214ed00b877a9bc5108b3d3">dr_suspend_all_other_threads_ex()</a>. For X86_64 platform, fast FP save and restore (fxsave64) support is required. And mixed mode (a process mixing 64-bit and 32-bit code) is not supported. </dd></dl>
 
 </div>
 </div>
@@ -6667,5 +6667,5 @@ This routine is only available with either the -thread_private or -enable_full_a
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.0.20042 --- Fri Nov 15 2024 03:27:45 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.0.20049 --- Fri Nov 22 2024 03:28:26 &nbsp; <img border=0 src="favicon.png">
 </small></address>

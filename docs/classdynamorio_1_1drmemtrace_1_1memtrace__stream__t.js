@@ -10,6 +10,7 @@
       [ "SCHED_STAT_MIGRATIONS", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a86e5d510793bb63af0144b38eded2d12a921acd4ced3736fcfb3574d86333891f", null ],
       [ "SCHED_STAT_RUNQUEUE_STEALS", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a86e5d510793bb63af0144b38eded2d12a310be564d4a2c5883b8ed6a17513a213", null ],
       [ "SCHED_STAT_RUNQUEUE_REBALANCES", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a86e5d510793bb63af0144b38eded2d12ac74a102df23fba1b38072a561345ef22", null ],
+      [ "SCHED_STAT_HIT_OUTPUT_LIMIT", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a86e5d510793bb63af0144b38eded2d12a33821b8d30bd4131212647a5b05bb42f", null ],
       [ "SCHED_STAT_TYPE_COUNT", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a86e5d510793bb63af0144b38eded2d12a3664b14b9015df679671119ba98e4e1b", null ]
     ] ],
     [ "~memtrace_stream_t", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a9456c6d4e4f7d8e70ad65345ebb2808a", null ],

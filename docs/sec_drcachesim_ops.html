@@ -386,6 +386,9 @@ The period in simulated microseconds at which per-core run queues are re-balance
 <li><b>-sched_exit_if_fraction_inputs_left</b> <br  />
 <em>default value: 0.1</em> <br  />
 Applies to -core_sharded and -core_serial. When an input reaches EOF, if the number of non-EOF inputs left as a fraction of the original inputs is equal to or less than this value then the scheduler exits (sets all outputs to EOF) rather than finishing off the final inputs. This helps avoid long sequences of idles during staggered endings with fewer inputs left than cores and only a small fraction of the total instructions left in those inputs. Since the remaining instruction count is not considered (as it is not available), use discretion when raising this value on uneven inputs.</li>
+<li><b>-sched_max_cores</b> <br  />
+<em>default value: 0</em> <br  />
+If non-zero, only this many live cores can be scheduled at any one time. Other cores will remain idle.</li>
 <li><b>-schedule_stats_print_every</b> <br  />
 <em>default value: 500000</em> <br  />
 A letter is printed every N instrs or N waits</li>
@@ -433,5 +436,5 @@ By default, errors in decoding the kernel syscall PT trace in pt2ir are fatal to
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.0.20042 --- Fri Nov 15 2024 03:27:47 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.0.20049 --- Fri Nov 22 2024 03:28:27 &nbsp; <img border=0 src="favicon.png">
 </small></address>
