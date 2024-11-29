@@ -628,6 +628,7 @@
     [ "INSTR_CREATE_sbb", "dr__ir__macros__x86_8h.html#a2c927d450b3507be1b1d576ba37aaba8", null ],
     [ "INSTR_CREATE_scas_1", "dr__ir__macros__x86_8h.html#a63dcd1d046be09e55e145b7b4ae61d68", null ],
     [ "INSTR_CREATE_scas_4", "dr__ir__macros__x86_8h.html#a38dec24b575f1f0100575f2b150c791a", null ],
+    [ "INSTR_CREATE_serialize", "dr__ir__macros__x86_8h.html#a15a8d36327a1d8f7b59ad99ebf82e416", null ],
     [ "INSTR_CREATE_setcc", "dr__ir__macros__x86_8h.html#ab6788ab030a89989cca7d4273839b36f", null ],
     [ "INSTR_CREATE_sfence", "dr__ir__macros__x86_8h.html#a10cadf04c4c2a02f0447a7ea0ea552c4", null ],
     [ "INSTR_CREATE_sgdt", "dr__ir__macros__x86_8h.html#af5d50bc8b2bc32bc3160f7d2f4406d91", null ],

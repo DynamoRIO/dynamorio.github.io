@@ -1494,6 +1494,7 @@
     [ "OP_xrstors64", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a1e5b59b5d8e13e87833a4215ef94f0c9", null ],
     [ "OP_xsusldtrk", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a9e57ff7ad80ac72c7b05cd88e353bfa5", null ],
     [ "OP_xresldtrk", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635ae08389d3be29a6552e4c5e5fe2e65633", null ],
+    [ "OP_serialize", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635abcda41603842c8471cea89da7734c070", null ],
     [ "OP_FIRST", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635a7b616dfe8fecf0a3f45179a237d71c93", null ],
     [ "OP_LAST", "dr__ir__opcodes__x86_8h.html#a726ca809ffd3d67ab4b8476646f26635ad4831564a9a3e47fd23c8b4498215ead", null ]
 ],
