@@ -358,6 +358,8 @@
     [ "INSTR_CREATE_movbe", "dr__ir__macros__x86_8h.html#aa1e5c6cf18bc9f99f8923dd3195bd8b1", null ],
     [ "INSTR_CREATE_movd", "dr__ir__macros__x86_8h.html#add1089640129ebab1773cd3c0c8e627c", null ],
     [ "INSTR_CREATE_movddup", "dr__ir__macros__x86_8h.html#a2c545b42e8aa72dec715724510008b44", null ],
+    [ "INSTR_CREATE_movdir64b", "dr__ir__macros__x86_8h.html#acc8a1288ae7673bccdf28030c5cf0f97", null ],
+    [ "INSTR_CREATE_movdiri", "dr__ir__macros__x86_8h.html#af62b45fb1cdacbff13dffb565f18abfd", null ],
     [ "INSTR_CREATE_movdq2q", "dr__ir__macros__x86_8h.html#a37b032e66fcf3456307c26f3567a8d70", null ],
     [ "INSTR_CREATE_movdqa", "dr__ir__macros__x86_8h.html#af9beae693c9c4ba2ad6cf9c6d943374b", null ],
     [ "INSTR_CREATE_movdqu", "dr__ir__macros__x86_8h.html#aa259504b794ed94c7304f1aedfc0559f", null ],
