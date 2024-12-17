@@ -612,6 +612,8 @@ Functions</h2></td></tr>
 <tr class="separator:a8df3e41912b8fec26518cb824505722c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af197d3a54edf9faf2e3c132537dc616d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#aa072932d15fbef2163f1b3704b33abf7">analysis_tool_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#af197d3a54edf9faf2e3c132537dc616d">opcode_mix_tool_create</a> (const std::string &amp;module_file_path, unsigned int verbose=0, const std::string &amp;alt_module_dir=&quot;&quot;)</td></tr>
 <tr class="separator:af197d3a54edf9faf2e3c132537dc616d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8405aaf95b3dbc5fbe8950578b6d6079"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a8405aaf95b3dbc5fbe8950578b6d6079">read_module_file</a> (const std::string &amp;modfilename, file_t &amp;modfile, char *&amp;modfile_bytes)</td></tr>
+<tr class="separator:a8405aaf95b3dbc5fbe8950578b6d6079"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a993bd4f18f4f49a8e686f6015162d554"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a922f126e20f8a9b2a1d9f2634fcfff0e">record_analysis_tool_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a993bd4f18f4f49a8e686f6015162d554">record_filter_tool_create</a> (const std::string &amp;output_dir, uint64_t stop_timestamp, int cache_filter_size, const std::string &amp;remove_trace_types, const std::string &amp;remove_marker_types, uint64_t trim_before_timestamp, uint64_t trim_after_timestamp, bool encodings2regdeps, const std::string &amp;keep_func_ids, const std::string &amp;modify_marker_value, unsigned int verbose)</td></tr>
 <tr class="separator:a993bd4f18f4f49a8e686f6015162d554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b1651c8a97181eb4afe2c45476ce41e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#aa072932d15fbef2163f1b3704b33abf7">analysis_tool_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a7b1651c8a97181eb4afe2c45476ce41e">reuse_distance_tool_create</a> (const <a class="el" href="structdynamorio_1_1drmemtrace_1_1reuse__distance__knobs__t.html">reuse_distance_knobs_t</a> &amp;knobs)</td></tr>
@@ -2221,6 +2223,43 @@ For additional file open parameters with the thread and window identifiers, use 
 
 </div>
 </div>
+<a id="a8405aaf95b3dbc5fbe8950578b6d6079"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8405aaf95b3dbc5fbe8950578b6d6079">&#9670;&nbsp;</a></span>read_module_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string dynamorio::drmemtrace::read_module_file </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>modfilename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">file_t &amp;&#160;</td>
+          <td class="paramname"><em>modfile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&amp;&#160;</td>
+          <td class="paramname"><em>modfile_bytes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Reads the module file at the given <code>modfilename</code> path. Returns an empty string if successful, or the error string if not.</p>
+<p>This uses the DR file APIs to read the module file. Generally we attempt to isolate implementation that uses DR file APIs to raw2trace_directory_t, and have raw2trace and raw2trace_shared deal only with file streams, but we make an exception here. This is acceptable because no current users of read_module_file need to read it from a stream. Also, this is a simple convenience routine that only reads the file without any module file specific logic.</p>
+<p>If successful, the returned <code>modfile</code> must be closed using <code>dr_close_file</code>, and the returned <code>modefilebytes</code> must be freed using a delete[]. </p>
+
+</div>
+</div>
 <a id="a993bd4f18f4f49a8e686f6015162d554"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a993bd4f18f4f49a8e686f6015162d554">&#9670;&nbsp;</a></span>record_filter_tool_create()</h2>
 
@@ -2710,5 +2749,5 @@ For additional file open parameters with the thread and window identifiers, use 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.0.20069 --- Fri Dec 13 2024 03:34:58 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.1.0 --- Tue Dec 17 2024 19:56:49 &nbsp; <img border=0 src="favicon.png">
 </small></address>
