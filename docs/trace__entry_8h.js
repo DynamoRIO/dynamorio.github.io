@@ -9,7 +9,7 @@
     [ "DRMEMTRACE_MODULE_LIST_FILENAME", "trace__entry_8h.html#a11362437617ea146f226243e4de7ce7b", null ],
     [ "DRMEMTRACE_SERIAL_SCHEDULE_FILENAME", "trace__entry_8h.html#a8e130e1aa80df762896518a84d8d602d", null ],
     [ "DRMEMTRACE_V2P_FILENAME", "trace__entry_8h.html#ae034780b4c90664a8ccd8a0a6cdf5884", null ],
-    [ "OFFLINE_FILE_VERSION_RETIRED_INSTRUCTIONS_ONLY", "trace__entry_8h.html#ad65d7a6c5f1507fc86596964954a6755", null ],
+    [ "OFFLINE_FILE_VERSION_NO_OP", "trace__entry_8h.html#a19844721609cff137a54735dc6da0715", null ],
     [ "OFFLINE_FILE_VERSION_XFER_ABS_PC", "trace__entry_8h.html#a754cc9677551e4d9cfb1c5e7267b7cb1", null ],
     [ "addr_t", "trace__entry_8h.html#a55b7fcd36826c1ba1b6c06daddfcb777", null ],
     [ "trace_entry_t", "trace__entry_8h.html#a067f98c2dab7fe5329e2ba248836370e", null ],
@@ -136,6 +136,7 @@
       [ "TRACE_ENTRY_VERSION_ENCODINGS", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daa00ea9310b6ca682075c2bdc469a1778c", null ],
       [ "TRACE_ENTRY_VERSION_BRANCH_INFO", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daa15c44ecec7fe8199d013bac8b759909e", null ],
       [ "TRACE_ENTRY_VERSION_FREQUENT_TIMESTAMPS", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daaf97ac42c62a634e8c33ffad2c4953f39", null ],
+      [ "TRACE_ENTRY_VERSION_RETIRED_INSTRUCTIONS_ONLY", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daaa9e2b8bacdf4a63bdcf4f6c15ec5855a", null ],
       [ "TRACE_ENTRY_VERSION", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e", null ]
     ] ],
     [ "is_any_instr_type", "trace__entry_8h.html#a9151ca4d6eb3b845a0b6890555a4c217", null ],

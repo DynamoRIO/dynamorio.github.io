@@ -4214,11 +4214,11 @@ permalink: /globals_i.html
 <li>INSTR_CREATE_pop_list
 : <a class="el" href="dr__ir__macros__arm_8h.html#a6f26909b61db1b8adf1892eddd7d4bf2">dr_ir_macros_arm.h</a>
 </li>
-<li>INSTR_CREATE_popa
-: <a class="el" href="dr__ir__macros__x86_8h.html#a669ae04113ae3231cfccefb52cc07422">dr_ir_macros_x86.h</a>
-</li>
 <li>instr_create_popa()
 : <a class="el" href="dr__ir__instr_8h.html#a134a4a1853343fab41695eebead0ddde">dr_ir_instr.h</a>
+</li>
+<li>INSTR_CREATE_popa
+: <a class="el" href="dr__ir__macros__x86_8h.html#a669ae04113ae3231cfccefb52cc07422">dr_ir_macros_x86.h</a>
 </li>
 <li>INSTR_CREATE_popcnt
 : <a class="el" href="dr__ir__macros__x86_8h.html#a17bb2e0e249c2a5cfe648ec52322143f">dr_ir_macros_x86.h</a>
@@ -12114,15 +12114,15 @@ permalink: /globals_i.html
 : <a class="el" href="dr__ir__macros__x86_8h.html#aec62fdab11810fe8446688aafa32f832">dr_ir_macros_x86.h</a>
 </li>
 <li>INSTR_CREATE_wfe
-: <a class="el" href="dr__ir__macros__aarch64_8h.html#a6b29844fe8b30f37605b8a8237e83d93">dr_ir_macros_aarch64.h</a>
-, <a class="el" href="dr__ir__macros__arm_8h.html#a6b29844fe8b30f37605b8a8237e83d93">dr_ir_macros_arm.h</a>
+: <a class="el" href="dr__ir__macros__arm_8h.html#a6b29844fe8b30f37605b8a8237e83d93">dr_ir_macros_arm.h</a>
+, <a class="el" href="dr__ir__macros__aarch64_8h.html#a6b29844fe8b30f37605b8a8237e83d93">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_wfet
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a5c84f9e034c3dbd153569671f1d1fed7">dr_ir_macros_aarch64.h</a>
 </li>
 <li>INSTR_CREATE_wfi
-: <a class="el" href="dr__ir__macros__arm_8h.html#a27bec9a07593d3485fe138dacd8b990c">dr_ir_macros_arm.h</a>
-, <a class="el" href="dr__ir__macros__aarch64_8h.html#a27bec9a07593d3485fe138dacd8b990c">dr_ir_macros_aarch64.h</a>
+: <a class="el" href="dr__ir__macros__aarch64_8h.html#a27bec9a07593d3485fe138dacd8b990c">dr_ir_macros_aarch64.h</a>
+, <a class="el" href="dr__ir__macros__arm_8h.html#a27bec9a07593d3485fe138dacd8b990c">dr_ir_macros_arm.h</a>
 </li>
 <li>INSTR_CREATE_wfit
 : <a class="el" href="dr__ir__macros__aarch64_8h.html#a35b15f1af8b627829599dbadb1b19303">dr_ir_macros_aarch64.h</a>
@@ -12357,6 +12357,9 @@ permalink: /globals_i.html
 </li>
 <li>instr_get_opcode_eflags()
 : <a class="el" href="dr__ir__instr_8h.html#adfdf69ae26fa0da74fc7fef90e3798be">dr_ir_instr.h</a>
+</li>
+<li>instr_get_operation_size()
+: <a class="el" href="dr__ir__instr_8h.html#a04d874af218c27761793d6bf4437e7ab">dr_ir_instr.h</a>
 </li>
 <li>instr_get_predicate()
 : <a class="el" href="dr__ir__instr_8h.html#a19932f4d78cd67b02b3b4c657fba329f">dr_ir_instr.h</a>
@@ -12748,6 +12751,9 @@ permalink: /globals_i.html
 <li>instr_set_operands_valid()
 : <a class="el" href="dr__ir__instr_8h.html#a46d22c1af43eed0feaf2350776287792">dr_ir_instr.h</a>
 </li>
+<li>instr_set_operation_size()
+: <a class="el" href="dr__ir__instr_8h.html#aee76538088d19fc9f40463ec7687f00c">dr_ir_instr.h</a>
+</li>
 <li>instr_set_predicate()
 : <a class="el" href="dr__ir__instr_8h.html#aefd8b628ad00a0f5600c0a49ed1dae20">dr_ir_instr.h</a>
 </li>
@@ -12941,5 +12947,5 @@ permalink: /globals_i.html
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.1.0 --- Tue Dec 17 2024 19:56:49 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.2.20077 --- Fri Dec 20 2024 03:20:52 &nbsp; <img border=0 src="favicon.png">
 </small></address>

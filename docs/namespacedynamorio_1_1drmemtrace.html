@@ -262,7 +262,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daaf97ac42c62a634e8c33ffad2c4953f39">TRACE_ENTRY_VERSION_FREQUENT_TIMESTAMPS</a> = 6, 
 <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e">TRACE_ENTRY_VERSION</a> = TRACE_ENTRY_VERSION_FREQUENT_TIMESTAMPS
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daaa9e2b8bacdf4a63bdcf4f6c15ec5855a">TRACE_ENTRY_VERSION_RETIRED_INSTRUCTIONS_ONLY</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e">TRACE_ENTRY_VERSION</a> = TRACE_ENTRY_VERSION_RETIRED_INSTRUCTIONS_ONLY
 <br />
  }</td></tr>
 <tr class="separator:ad84239da3ba299ee4ebcf24134e6b5da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1666,6 +1668,8 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daaf97ac42c62a634e8c33ffad2c4953f39"></a>TRACE_ENTRY_VERSION_FREQUENT_TIMESTAMPS&#160;</td><td class="fielddoc"><p>The trace contains additional timestamps to identify and distinguish application instruction execution, application syscall invocation, and trace i/o. The pre-syscall and post-syscall timestamps are as expected. Prior versions have the post-syscall timestamp actually containing the pre-syscall time. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daaa9e2b8bacdf4a63bdcf4f6c15ec5855a"></a>TRACE_ENTRY_VERSION_RETIRED_INSTRUCTIONS_ONLY&#160;</td><td class="fielddoc"><p>Trace version which has only retired instructions in drmemtraces. </p>
+</td></tr>
 <tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e"></a>TRACE_ENTRY_VERSION&#160;</td><td class="fielddoc"><p>The latest version of the trace format. </p>
 </td></tr>
 </table>
@@ -2749,5 +2753,5 @@ For additional file open parameters with the thread and window identifiers, use 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.1.0 --- Tue Dec 17 2024 19:56:49 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.2.20077 --- Fri Dec 20 2024 03:20:52 &nbsp; <img border=0 src="favicon.png">
 </small></address>
