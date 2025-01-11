@@ -20,11 +20,13 @@
       [ "System Call Mix", "sec_drcachesim_tools.html#sec_tool_syscall_mix", null ],
       [ "Record Filter", "sec_drcachesim_tools.html#sec_tool_record_filter", null ]
     ] ],
-    [ "Google Workload Traces", "google_workload_traces.html", [
-      [ "Trace Format", "google_workload_traces.html#sec_google_format", null ],
+    [ "Google Workload Traces (Version 2)", "google_workload_traces.html", [
+      [ "Public Trace Format", "google_workload_traces.html#sec_google_format", null ],
       [ "Getting the Traces", "google_workload_traces.html#sec_google_get", null ],
       [ "Getting Help and Reporting Bugs", "google_workload_traces.html#sec_google_help", null ],
-      [ "Contributing", "google_workload_traces.html#sec_google_contrib", null ]
+      [ "Contributing", "google_workload_traces.html#sec_google_contrib", null ],
+      [ "Cite Google Workload Traces", "google_workload_traces.html#sec_google_cite", null ],
+      [ "Deprecated Google Workload Traces (Version 1)", "google_workload_traces.html#sec_public_v1_deprecated", null ]
     ] ],
     [ "Configuration File", "sec_drcachesim_config_file.html", null ],
     [ "Offline Traces and Analysis", "sec_drcachesim_offline.html", null ],
