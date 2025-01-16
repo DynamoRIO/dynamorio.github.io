@@ -46,7 +46,7 @@ For the offline analysis mode (when -offline is requested), specifies the prefix
 After a trace file is produced via -offline into -outdir, it can be passed to the simulator via this flag pointing at the subdirectory created in -outdir. The -offline tracing produces raw data files which are converted into final trace files on the first execution with -indir. The raw files can also be manually converted using the drraw2trace tool. Legacy single trace files with all threads interleaved into one are not supported with this option: use -infile instead. The contents of this directory are internal to the tool. Do not alter, add, or delete files here.</li>
 <li><b>-infile</b> <br  />
 <em>default value: ""</em> <br  />
-Directs the simulator to use a single all-threads-interleaved-into-one trace file. This is a legacy file format that is no longer produced.</li>
+Directs the framework to use a single trace file. This could be a legacy all-software-threads-interleaved-into-one trace file, a core-sharded single hardware thread file mixing multiple software threads, or a single software thread selected from a directory (though in that case it is better to use -only_thread, -only_threads, or -only_shards). This method of input does not support any features that require auxiliary metadata files. Passing '-' will read from stdin as plain or gzip-compressed data.</li>
 <li><b>-jobs</b> <br  />
 <em>default value: -1</em> <br  />
 By default, both post-processing of offline raw trace files and analysis of trace files is parallelized. This option controls the number of concurrent jobs. 0 disables concurrency and uses a single thread to perform all operations. A negative value sets the job count to the number of hardware threads, with a cap of 16. This is ignored for -core_sharded where -cores sets the parallelism.</li>
@@ -436,5 +436,5 @@ By default, errors in decoding the kernel syscall PT trace in pt2ir are fatal to
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.3.0 --- Sat Jan 11 2025 04:08:59 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.3.20104 --- Thu Jan 16 2025 18:25:50 &nbsp; <img border=0 src="favicon.png">
 </small></address>

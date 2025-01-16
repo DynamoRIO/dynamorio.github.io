@@ -47,11 +47,15 @@ Public Trace Format</h1>
 <li><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca13fffec3c874dcd5cc84aa25387b76d3">dynamorio::drmemtrace::TRACE_MARKER_TYPE_SYSCALL_TRACE_START</a></li>
 <li><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caef6df6ddbdffd994f91edba51c850cde">dynamorio::drmemtrace::TRACE_MARKER_TYPE_SYSCALL_TRACE_END</a></li>
 <li><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295cac4123c88a189fe7b52ceee6b7cab48ce">dynamorio::drmemtrace::TRACE_MARKER_TYPE_SYSCALL_FAILED</a></li>
-<li><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caeab5ab5189617728fec57d491ef1d63d">dynamorio::drmemtrace::TRACE_MARKER_TYPE_SIGNAL_NUMBER</a> Which have been removed. Because tracing overhead results into inflated context switches, the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca0f5122cab14b6654b276de4aa7f8183c">dynamorio::drmemtrace::TRACE_MARKER_TYPE_CPU_ID</a> values have been modified to "unknown CPU" to avoid confusion. We recommend users to use our scheduler (see <a class="el" href="sec_drcachesim_sched.html">Trace Scheduler</a>) for a realistic schedule of a trace's threads. Also, we preserved the following markers:</li>
+<li><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caeab5ab5189617728fec57d491ef1d63d">dynamorio::drmemtrace::TRACE_MARKER_TYPE_SIGNAL_NUMBER</a></li>
+</ul>
+<p>Which have been removed.</p>
+<p>Because tracing overhead results into inflated context switches, the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca0f5122cab14b6654b276de4aa7f8183c">dynamorio::drmemtrace::TRACE_MARKER_TYPE_CPU_ID</a> values have been modified to "unknown CPU" to avoid confusion. We recommend users to use our scheduler (see <a class="el" href="sec_drcachesim_sched.html">Trace Scheduler</a>) for a realistic schedule of a trace's threads.</p>
+<p>Also, we preserved the following markers, but only for SYS_futex functions:</p><ul>
 <li><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca5c6f08548563cb1456a4f09b9b5c3f59">dynamorio::drmemtrace::TRACE_MARKER_TYPE_FUNC_ID</a></li>
 <li><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caf3a4f4b91cea5bb55ed8d9caae221e7c">dynamorio::drmemtrace::TRACE_MARKER_TYPE_FUNC_ARG</a></li>
 <li><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca58ff903618a785cb45ba4c57900db24f">dynamorio::drmemtrace::TRACE_MARKER_TYPE_FUNC_RETVAL</a></li>
-<li><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caaf1dc361b0b77c739bf4d0f87c7c43b9">dynamorio::drmemtrace::TRACE_MARKER_TYPE_FUNC_RETADDR</a> But only for SYS_futex functions.</li>
+<li><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caaf1dc361b0b77c739bf4d0f87c7c43b9">dynamorio::drmemtrace::TRACE_MARKER_TYPE_FUNC_RETADDR</a></li>
 </ul>
 <p>Finally, every trace has a v2p.textproto file associated to it, which provides a plausible virtual to physical mapping of the virtual addresses present in a trace for more realistic TLB simulations. This is a static virtual to physical mapping with 2 MB pages. Users can generate different mappings (e.g., smaller page size) by modifying this file, or create their own mapping following the same v2p.textproto format.</p>
 <p>These traces are supported starting from DynamoRIO 11.3.</p>
@@ -61,12 +65,10 @@ Getting the Traces</h1>
 <ul>
 <li><a href="https://console.cloud.google.com/storage/browser/external-traces-v2">Google workload trace folder</a></li>
 </ul>
-<p>Directory structure:</p><ul>
-<li><pre class="fragment">  workload_name/
-    &lt;uuid&gt;.&lt;tid&gt;.memtrace.zip
-    v2p.textproto</pre></li>
-</ul>
-<h1><a class="anchor" id="sec_google_help"></a>
+<p>Directory structure: </p><pre class="fragment">workload_name/
+  &lt;uuid&gt;.&lt;tid&gt;.memtrace.zip
+  v2p.textproto
+</pre><h1><a class="anchor" id="sec_google_help"></a>
 Getting Help and Reporting Bugs</h1>
 <p>The Google Workload Traces are essentially inputs to drive third party tools (such as analyzers or simulators, including those provided here: <a class="el" href="sec_drcachesim_tools.html">Analysis Tool Suite</a>). If you encounter a crash in a tool provided by a third party, please locate the issue tracker for the tool you are using and report the crash there. If you believe the issue is with the Google Workload Traces or with DynamoRIO or tools provided with DynamoRIO, you can file an issue as described at <a class="el" href="page_bug_reporting.html">Reporting Problems</a>.</p>
 <p>For general questions, or if you are not sure whether the problem you hit is a bug in your own code or in provided code, use the <a href="http://groups.google.com/group/dynamorio-users">DynamoRIO users group mailing list/discussion forum</a> rather than opening an issue in the tracker. The users list will reach a wider audience of people who might have an answer, and it will reach other users who may find the information beneficial.</p>
@@ -82,8 +84,8 @@ Contributing</h1>
 <h1><a class="anchor" id="sec_google_cite"></a>
 Cite Google Workload Traces</h1>
 <p>If you would like to cite this work, you can use the following BibTeX entry:</p>
-<pre class="fragment">@misc{ Google_Workload_Traces_Version_2,
-  title = {{Google Workload Traces Version 2}},
+<pre class="fragment">@misc{Google_Workload_Traces_Version_2,
+  title = {Google Workload Traces Version 2},
   howpublished = {\url{https://console.cloud.google.com/storage/browser/external-traces-v2}},
   note = {Accessed: yyyy-mm-dd}
 }
@@ -102,5 +104,5 @@ Deprecated Google Workload Traces (Version 1)</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.3.0 --- Sat Jan 11 2025 04:08:58 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.3.20104 --- Thu Jan 16 2025 18:25:50 &nbsp; <img border=0 src="favicon.png">
 </small></address>
