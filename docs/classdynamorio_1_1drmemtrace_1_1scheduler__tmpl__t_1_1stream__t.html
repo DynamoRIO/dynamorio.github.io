@@ -641,7 +641,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>For <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a1e290a29bdceade505c252246646d97b">SCHEDULER_USE_INPUT_ORDINALS</a> or <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a3416a380689b155e43aa091da75a0e6a">SCHEDULER_USE_SINGLE_INPUT_ORDINALS</a>, returns the input stream ordinal, except for the case of a single combined-stream input with the passed-in thread id set to INVALID_THREAD_ID (the serial analysis mode for analyzer tools) in which case the last trace record's tid is returned; otherwise returns the output stream ordinal. </p>
+<p>For <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a1e290a29bdceade505c252246646d97b">SCHEDULER_USE_INPUT_ORDINALS</a> or <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a30edfde737fa568af6c815715e32e2b8a3416a380689b155e43aa091da75a0e6a">SCHEDULER_USE_SINGLE_INPUT_ORDINALS</a>, returns the input stream ordinal, except for the case of a single combined-stream input with the passed-in thread id set to INVALID_THREAD_ID (the online analysis mode for analyzer tools where the inputs for multiple threads are all combined in one process-wide pipe) in which case the last trace record's tid as an ordinal (in the order observed in the output stream) is returned; otherwise returns the output stream ordinal. </p>
 
 <p>Reimplemented from <a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a6d2c4f15b4a5a6a7eb48968c8e473232">dynamorio::drmemtrace::memtrace_stream_t</a>.</p>
 
@@ -1030,5 +1030,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.3.20104 --- Fri Jan 17 2025 03:17:50 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20112 --- Fri Jan 24 2025 03:17:43 &nbsp; <img border=0 src="favicon.png">
 </small></address>

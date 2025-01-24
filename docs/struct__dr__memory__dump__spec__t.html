@@ -41,10 +41,44 @@ Data Fields</h2></td></tr>
 <tr class="separator:a9eb5eedc9cd3392c2514c77d2ae34eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfcb63526532db07f7ef18485ec24753"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__dr__memory__dump__spec__t.html#adfcb63526532db07f7ef18485ec24753">ldmp_path_size</a></td></tr>
 <tr class="separator:adfcb63526532db07f7ef18485ec24753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5819c0db028c7cd88abf0ab746214d23"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__dr__memory__dump__spec__t.html#a5819c0db028c7cd88abf0ab746214d23">elf_path</a></td></tr>
+<tr class="separator:a5819c0db028c7cd88abf0ab746214d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4ac273bc7a85d06a0bbe9eec1fc8b4c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__dr__memory__dump__spec__t.html#af4ac273bc7a85d06a0bbe9eec1fc8b4c">elf_path_size</a></td></tr>
+<tr class="separator:af4ac273bc7a85d06a0bbe9eec1fc8b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Indicates the type of memory dump for <a class="el" href="dr__tools_8h.html#afa268a6496cad930513c1f0353fdd06e">dr_create_memory_dump()</a>. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
+<a id="a5819c0db028c7cd88abf0ab746214d23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5819c0db028c7cd88abf0ab746214d23">&#9670;&nbsp;</a></span>elf_path</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* _dr_memory_dump_spec_t::elf_path</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This field only applies to <a class="el" href="dr__tools_8h.html#a00269a3ba590923c5d0ec4e0bcf5a9ffa798c406de5c100a87bd00f3352837fdb">DR_MEMORY_DUMP_ELF</a>. This is an optional output field that, if non-NULL, will be written with the path to the created file. </p>
+
+</div>
+</div>
+<a id="af4ac273bc7a85d06a0bbe9eec1fc8b4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4ac273bc7a85d06a0bbe9eec1fc8b4c">&#9670;&nbsp;</a></span>elf_path_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t _dr_memory_dump_spec_t::elf_path_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This field only applies to <a class="el" href="dr__tools_8h.html#a00269a3ba590923c5d0ec4e0bcf5a9ffa798c406de5c100a87bd00f3352837fdb">DR_MEMORY_DUMP_ELF</a>. This is the maximum size, in bytes, of elf_path. </p>
+
+</div>
+</div>
 <a id="ad9116bf5b9e35df23010715759e621aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad9116bf5b9e35df23010715759e621aa">&#9670;&nbsp;</a></span>flags</h2>
 
@@ -71,7 +105,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This field only applies to DR_MEMORY_DUMP_LDMP. This string is stored inside the ldmp as the reason for the dump. </p>
+<p>This field only applies to <a class="el" href="dr__tools_8h.html#a00269a3ba590923c5d0ec4e0bcf5a9ffa00ec80b5919c0e6e1dc361a5fa9af02f">DR_MEMORY_DUMP_LDMP</a>. This string is stored inside the ldmp as the reason for the dump. </p>
 
 </div>
 </div>
@@ -86,7 +120,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This field only applies to DR_MEMORY_DUMP_LDMP. This is an optional output field that, if non-NULL, will be written with the path to the created file. </p>
+<p>This field only applies to <a class="el" href="dr__tools_8h.html#a00269a3ba590923c5d0ec4e0bcf5a9ffa00ec80b5919c0e6e1dc361a5fa9af02f">DR_MEMORY_DUMP_LDMP</a>. This is an optional output field that, if non-NULL, will be written with the path to the created file. </p>
 
 </div>
 </div>
@@ -101,7 +135,7 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This field only applies to DR_MEMORY_DUMP_LDMP. This is the maximum size, in bytes, of ldmp_path. </p>
+<p>This field only applies to <a class="el" href="dr__tools_8h.html#a00269a3ba590923c5d0ec4e0bcf5a9ffa00ec80b5919c0e6e1dc361a5fa9af02f">DR_MEMORY_DUMP_LDMP</a>. This is the maximum size, in bytes, of ldmp_path. </p>
 
 </div>
 </div>
@@ -129,5 +163,5 @@ Data Fields</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.3.20104 --- Fri Jan 17 2025 03:17:49 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20112 --- Fri Jan 24 2025 03:17:43 &nbsp; <img border=0 src="favicon.png">
 </small></address>
