@@ -70,7 +70,7 @@ Launching From GDB</h2>
 <h2><a class="anchor" id="autotoc_md145"></a>
 Loading Client Symbols</h2>
 <p>To isolate clients and their libraries from the application, DR uses its own private loader to load clients. By default, gdb can only see libraries loaded by the glibc loader (ld-linux.so). To work around this problem, DR prints the gdb commands necessary to load symbols in a debug build. It looks like this:</p>
-<div class="fragment"><div class="line">&lt;Starting application /usr/local/google/home/rnk/dynamorio/build/suite/tests/bin/client.events (10801)&gt;</div>
+<div class="fragment"><div class="line">&lt;Starting application /usr/local/google/home/rnk/<a class="code" href="namespacedynamorio.html">dynamorio</a>/build/suite/tests/bin/client.events (10801)&gt;</div>
 <div class="line">&lt;Paste into GDB to debug DynamoRIO clients:</div>
 <div class="line">set confirm off</div>
 <div class="line">add-symbol-file <span class="stringliteral">&#39;/home/user/dr/suite/tests/bin/libclient.events.dll.so&#39;</span> 0x00007f14e46143e0</div>
@@ -91,7 +91,7 @@ Loading DynamoRIO Symbols</h2>
 <h2><a class="anchor" id="autotoc_md147"></a>
 Example Gdb Session</h2>
 <p>Below is a sample gdb session where we break on the <code>drtable_create</code> function in the <code>drcov</code> tool. We use <code>-msgbox_mask 15</code> in debug build to get a pause at each message including the one with all the symbol commands. At that message, we hit Control-C to interrupt into the debugger where we paste the symbol loading commands. Then we can use regular gdb breakpoint commands. Upon continuing, we have to remember to hit enter as the message is still waiting. We also disable SIGBUS to avoid safe-read faults from adding noise to the picture.</p>
-<div class="fragment"><div class="line">derek@dynamorio:~/dr/build$ gdb --args bin64/drrun -msgbox_mask 15 -t drcov -- suite/tests/bin/simple_app</div>
+<div class="fragment"><div class="line">derek@<a class="code" href="namespacedynamorio.html">dynamorio</a>:~/dr/build$ gdb --args bin64/drrun -msgbox_mask 15 -t drcov -- suite/tests/bin/simple_app</div>
 <div class="line">GNU gdb (Ubuntu 9.2-0ubuntu1~20.04.1) 9.2</div>
 <div class="line">...</div>
 <div class="line">Reading symbols from bin64/drrun...</div>
@@ -330,8 +330,8 @@ Launching Within WinDbg</h2>
 <div class="line">&gt; r $t0=poi(map)</div>
 <div class="line">&gt; g</div>
 <div class="line">&gt; .sympath c:\mybuild\lib32\debug</div>
-<div class="line">&gt; .reload dynamorio.dll=@$t0</div>
-<div class="line">&gt; bp dynamorio!dynamorio_earliest_init_takeover</div>
+<div class="line">&gt; .reload <a class="code" href="namespacedynamorio.html">dynamorio</a>.dll=@$t0</div>
+<div class="line">&gt; bp <a class="code" href="namespacedynamorio.html">dynamorio</a>!dynamorio_earliest_init_takeover</div>
 <div class="line">&gt; g</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md157"></a>
 Automatically loading symbols</h2>
@@ -344,11 +344,11 @@ Automatically loading symbols</h2>
 </div><!-- fragment --><p>These scripts will fail if the process is not running under DynamoRIO or if it has not finished DynamoRIO initialization: thus, they will not work at the early attach point described under Launching Within WinDbg above.</p>
 <p>To manually point WinDbg at the library, you will need its directory and its base address. Then use these two commands:</p>
 <div class="fragment"><div class="line">&gt; .sympath c:\path\to\lib32\debug</div>
-<div class="line">&gt; .reload dynamorio.dll=15000000</div>
+<div class="line">&gt; .reload <a class="code" href="namespacedynamorio.html">dynamorio</a>.dll=15000000</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md158"></a>
 Private Libraries</h2>
 <p>Libraries loaded for a client are not on the system library list. To identify these modules use the following command:</p>
-<div class="fragment"><div class="line">!list -t dynamorio!privmod_t.next -x <span class="stringliteral">&quot;dt&quot;</span> -a <span class="stringliteral">&quot;dynamorio!privmod_t&quot;</span> @@(dynamorio!modlist)</div>
+<div class="fragment"><div class="line">!list -t <a class="code" href="namespacedynamorio.html">dynamorio</a>!privmod_t.next -x <span class="stringliteral">&quot;dt&quot;</span> -a <span class="stringliteral">&quot;dynamorio!privmod_t&quot;</span> @@(<a class="code" href="namespacedynamorio.html">dynamorio</a>!modlist)</div>
 </div><!-- fragment --><p>Symbols for private libraries can be automatically loaded using the load_syms script. For 32-bit:</p>
 <div class="fragment"><div class="line">$&gt;&lt;c:\path\to\dynamorio\sources\tools\windbg-scripts\load_syms</div>
 </div><!-- fragment --><p>For 64-bit:</p>
@@ -362,10 +362,10 @@ Private Libraries</h2>
 </div><!-- fragment --><p>Another trick is to clobber the TEB stack fields:</p>
 <div class="fragment"><div class="line">$&gt;&lt;c:\path\to\dynamorio\sources\tools\windbg-scripts\load_syms</div>
 <div class="line">!teb</div>
-<div class="line">r $t0=poi(dynamorio!tls_dcontext_offs)</div>
+<div class="line">r $t0=poi(<a class="code" href="namespacedynamorio.html">dynamorio</a>!tls_dcontext_offs)</div>
 <div class="line">r $t0=poi(fs:@$t0)</div>
-<div class="line">ed @$teb+4 @@(((dynamorio!dcontext_t*)@$t0)-&gt;dstack)</div>
-<div class="line">ed @$teb+8 @@(((dynamorio!dcontext_t*)@$t0)-&gt;dstack - dynamorio!dynamo_options.stack_size)</div>
+<div class="line">ed @$teb+4 @@(((<a class="code" href="namespacedynamorio.html">dynamorio</a>!dcontext_t*)@$t0)-&gt;dstack)</div>
+<div class="line">ed @$teb+8 @@(((<a class="code" href="namespacedynamorio.html">dynamorio</a>!dcontext_t*)@$t0)-&gt;dstack - <a class="code" href="namespacedynamorio.html">dynamorio</a>!dynamo_options.stack_size)</div>
 <div class="line">kn</div>
 </div><!-- fragment --><p>Which will then result in the k commands working nicely (I've done this in 6.11.001.402; should work in all other versions). &#160;Though of course only do this when not planning to continue app execution, or restore the TEB fields, just in case (that's what the <code>!teb</code> is for, to print out the original values for restoring).</p>
 <h2><a class="anchor" id="autotoc_md160"></a>
@@ -373,11 +373,11 @@ Crash Callstacks</h2>
 <p>When DynamoRIO catches an unhandled exception, the callstack should have a <code>dynamorio!intercept_exception</code> frame. Navigate to that frame, where we have a <code>CONTEXT*</code> local var named <code>cxt</code>. Then change the thread's context and ask for a stack trace. So if you see in the initial callstack:</p>
 <div class="fragment"><div class="line"> 1. Child-SP          RetAddr           Call Site</div>
 <div class="line">00 00000000`bfc9df68 00000000`153f05f6 ntdll!NtRaiseHardError+0xa</div>
-<div class="line">01 00000000`bfc9df70 00000000`153a93ed dynamorio!nt_messagebox+0x176 [@ 3486](...\dr\git\src\core\win32\ntdll.c)</div>
-<div class="line">02 00000000`bfc9e010 00000000`15177168 dynamorio!debugbox+0x5d [@ 4570](...\dr\git\src\core\win32\os.c)</div>
-<div class="line">03 00000000`bfc9e040 00000000`153e132d dynamorio!notify+0x298 [@ 1956](...\dr\git\src\core\utils.c)</div>
-<div class="line">04 00000000`bfc9e8b0 00000000`15548cfc dynamorio!intercept_exception+0x27dd [@ 5521](...\dr\git\src\core\win32\callback.c)</div>
-<div class="line">05 00000000`bfc9ee60 00000000`bfc9ee80 dynamorio!interception_code_array+0xcfc</div>
+<div class="line">01 00000000`bfc9df70 00000000`153a93ed <a class="code" href="namespacedynamorio.html">dynamorio</a>!nt_messagebox+0x176 [@ 3486](...\dr\git\src\core\win32\ntdll.c)</div>
+<div class="line">02 00000000`bfc9e010 00000000`15177168 <a class="code" href="namespacedynamorio.html">dynamorio</a>!debugbox+0x5d [@ 4570](...\dr\git\src\core\win32\os.c)</div>
+<div class="line">03 00000000`bfc9e040 00000000`153e132d <a class="code" href="namespacedynamorio.html">dynamorio</a>!notify+0x298 [@ 1956](...\dr\git\src\core\utils.c)</div>
+<div class="line">04 00000000`bfc9e8b0 00000000`15548cfc <a class="code" href="namespacedynamorio.html">dynamorio</a>!intercept_exception+0x27dd [@ 5521](...\dr\git\src\core\win32\callback.c)</div>
+<div class="line">05 00000000`bfc9ee60 00000000`bfc9ee80 <a class="code" href="namespacedynamorio.html">dynamorio</a>!interception_code_array+0xcfc</div>
 </div><!-- fragment --><p>Execute these commands:</p>
 <div class="fragment"><div class="line">.frame 4</div>
 <div class="line">.cxr @@(cxt)</div>
@@ -464,13 +464,13 @@ Addr2Line</h2>
 <p>The address_query.pl script in the tools module can be used for a command-line address-to-line utility. It requires that you have already built DRload.exe in the tools module. It will use cdb if you've installed the Debugging Tools for Windows in the standard location; otherwise it uses the ntsd present on every machine and goes through a temporary log file.</p>
 <p>It can take as input stdin, a file, or command-line arguments listing the addresses to be queried. Here's the usage:</p>
 <div class="fragment"><div class="line">Usage: /i/dr/tools/address_query.pl [[-f &lt;addrfile&gt;](-raw]) [&lt;debuggerpath&gt;](-d) &lt;DRdllpath&gt; [... &lt;addrN&gt;](&lt;addr1&gt;)</div>
-</div><!-- fragment --><p>Here's an example using a command-line argument: </p><div class="fragment"><div class="line">% address_query.pl /i/dr/builds/11105/exports/x86_win32_rel/dynamorio.dll 0x7000ddb9</div>
+</div><!-- fragment --><p>Here's an example using a command-line argument: </p><div class="fragment"><div class="line">% address_query.pl /i/dr/builds/11105/exports/x86_win32_rel/<a class="code" href="namespacedynamorio.html">dynamorio</a>.dll 0x7000ddb9</div>
 <div class="line"> </div>
 <div class="line">0x7000ddb9:</div>
 <div class="line">vmareas.c(2420)+0x1</div>
-<div class="line">(7000dc40)   dynamorio!check_thread_vm_area+0x179   |  (7000e1b0)   dynamorio!prepend_fraglist</div>
+<div class="line">(7000dc40)   <a class="code" href="namespacedynamorio.html">dynamorio</a>!check_thread_vm_area+0x179   |  (7000e1b0)   <a class="code" href="namespacedynamorio.html">dynamorio</a>!prepend_fraglist</div>
 </div><!-- fragment --><p>As another example, if you have a callstack in the file "cstack" with two columns (frame pointers followed by addresses), you could do something like this:</p>
-<div class="fragment"><div class="line">% awk <span class="stringliteral">&#39;{print $2}&#39;</span> &lt; cstack | address_query.pl /c/derek/dr/builds/11087/exports/x86_win32_rel/dynamorio.dll</div>
+<div class="fragment"><div class="line">% awk <span class="stringliteral">&#39;{print $2}&#39;</span> &lt; cstack | address_query.pl /c/derek/dr/builds/11087/exports/x86_win32_rel/<a class="code" href="namespacedynamorio.html">dynamorio</a>.dll</div>
 <div class="line"> </div>
 <div class="line">77f830e7:</div>
 <div class="line">(77f82f56)   ntdll!RtlMultiByteToUnicodeN+0x190   |  (77f8e415)   ntdll!RtlpExecuteHandlerForException</div>
@@ -488,10 +488,11 @@ Addr2Line</h2>
 </div><!-- PageDoc -->
 <div class="ttc" id="adr__tools_8h_html_a7c07630dffdfd92bc6ee63abf405768c"><div class="ttname"><a href="dr__tools_8h.html#a7c07630dffdfd92bc6ee63abf405768c">DR_ASSERT</a></div><div class="ttdeci">#define DR_ASSERT(x)</div><div class="ttdef"><b>Definition:</b> dr_tools.h:114</div></div>
 <div class="ttc" id="agroup__drcontainers_html_ga2eac73999ae64ce7dab8617e7c3607dd"><div class="ttname"><a href="group__drcontainers.html#ga2eac73999ae64ce7dab8617e7c3607dd">drtable_create</a></div><div class="ttdeci">void * drtable_create(ptr_uint_t capacity, size_t entry_size, uint flags, bool synch, void(*free_entry_func)(ptr_uint_t idx, void *entry, void *user_data))</div></div>
+<div class="ttc" id="anamespacedynamorio_html"><div class="ttname"><a href="namespacedynamorio.html">dynamorio</a></div><div class="ttdef"><b>Definition:</b> drgui_main_window.h:55</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20112 --- Fri Jan 24 2025 03:17:43 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20118 --- Fri Jan 31 2025 03:17:17 &nbsp; <img border=0 src="favicon.png">
 </small></address>

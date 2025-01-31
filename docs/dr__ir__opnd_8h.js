@@ -1,7 +1,6 @@
 [
     [ "DR_NUM_GPR_REGS", "dr__ir__opnd_8h.html#ae10c1a6754e09eb003e0b651507462fe", null ],
     [ "DR_NUM_SIMD_VECTOR_REGS", "dr__ir__opnd_8h.html#a22ca880c7b9fab8ba115d3035f13a370", null ],
-    [ "DR_REG_LAST_ENUM", "dr__ir__opnd_8h.html#af01db24b9e2a038656f90f1d5230c098", null ],
     [ "DR_REG_LAST_VALID_ENUM", "dr__ir__opnd_8h.html#a13480b2d07fe53c9292ffaacedcf7231", null ],
     [ "DR_REG_START_16", "dr__ir__opnd_8h.html#ad553e8814805d1f9b570efdf7a47d896", null ],
     [ "DR_REG_START_32", "dr__ir__opnd_8h.html#aca93fb0bd9dd79133bf015b7c15d7229", null ],

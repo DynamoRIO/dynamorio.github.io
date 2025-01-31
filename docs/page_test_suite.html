@@ -89,7 +89,7 @@ Test Organization</h2>
 </ul>
 <h2><a class="anchor" id="autotoc_md308"></a>
 Building and Running Tests</h2>
-<p>CMake is used to build the tests. They are not built by default. To enable them, turn on the BUILD_TESTS CMake variable. For example, from a build directory next to the dynamorio source tree: </p><div class="fragment"><div class="line">cmake -DBUILD_TESTS=ON ../dynamorio</div>
+<p>CMake is used to build the tests. They are not built by default. To enable them, turn on the BUILD_TESTS CMake variable. For example, from a build directory next to the dynamorio source tree: </p><div class="fragment"><div class="line">cmake -DBUILD_TESTS=ON ../<a class="code" href="namespacedynamorio.html">dynamorio</a></div>
 </div><!-- fragment --><p>CTest is used to run the tests with various runtime options. Each test is named to indicate the runtime options and the executable. The options are first, separate by commas, with a pipe delimiting the end of the options. The executable has a dot instead of a slash. Here are some examples:</p>
 <div class="fragment"><div class="line">code_api|security-common.decode-bad-stack</div>
 <div class="line">code_api,disable_traces|client.events</div>
@@ -131,11 +131,11 @@ Pre-Commit Test Suite</h2>
 <p>The runsuite.cmake script is meant to be executed from an empty directory. It creates a subdirectory for each build in the suite. Use <code>ctest -S</code> to execute the script. Here is an example:</p>
 <div class="fragment"><div class="line">mkdir ../build_suite</div>
 <div class="line">cd ../build_suite</div>
-<div class="line">ctest -S ../dynamorio/suite/runsuite.cmake</div>
+<div class="line">ctest -S ../<a class="code" href="namespacedynamorio.html">dynamorio</a>/suite/runsuite.cmake</div>
 </div><!-- fragment --><p>We recommend using Ninja, in which case pass the use_ninja parameter:</p>
 <div class="fragment"><div class="line">mkdir ../build_suite</div>
 <div class="line">cd ../build_suite</div>
-<div class="line">ctest -S ../dynamorio/suite/runsuite.cmake,use_ninja</div>
+<div class="line">ctest -S ../<a class="code" href="namespacedynamorio.html">dynamorio</a>/suite/runsuite.cmake,use_ninja</div>
 </div><!-- fragment --><p>You can pass -V (or -VV for more output) to ctest to see the results as the test suite runs. Note that it is normal to have ctest output strings such as "No tests were
 found!!!" as we have builds for which we run no tests (particularly in the short suite). It is also expected to have an error at the end of the suite (if run with -V):</p>
 <div class="fragment"><div class="line">CMake Error: Some required settings in the configuration file were missing:</div>
@@ -201,10 +201,11 @@ Adding New Tests</h1>
 <p>Once the basic test has been set up and tested, following the process for checking in code at CommitCriteria to add your test. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
+<div class="ttc" id="anamespacedynamorio_html"><div class="ttname"><a href="namespacedynamorio.html">dynamorio</a></div><div class="ttdef"><b>Definition:</b> drgui_main_window.h:55</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20112 --- Fri Jan 24 2025 03:17:43 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20118 --- Fri Jan 31 2025 03:17:17 &nbsp; <img border=0 src="favicon.png">
 </small></address>

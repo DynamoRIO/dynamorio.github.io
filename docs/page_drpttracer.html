@@ -87,7 +87,7 @@ Tracing Mode</h1>
 Unit Tests</h1>
 <p><code>We</code> have some unit tests that verify the kernel tracing feature in drmemtrace, which also uses the <code>drpttracer</code> DynamoRIO extension. These tests are not built and run by default because they require superuser permission. They are also disabled automatically if the host system does not support the Intel-PT feature.</p>
 <p>To run these tests, pass <code>-DRUN_SUDO_TESTS=ON</code> to cmake when building DynamoRIO. E.g.,</p>
-<div class="fragment"><div class="line">$ cmake -DRUN_SUDO_TESTS=ON -DBUILD_TESTS=ON &lt;dynamorio-src-dir&gt;</div>
+<div class="fragment"><div class="line">$ cmake -DRUN_SUDO_TESTS=ON -DBUILD_TESTS=ON &lt;<a class="code" href="namespacedynamorio.html">dynamorio</a>-src-dir&gt;</div>
 <div class="line">$ make -j</div>
 <div class="line">$ ctest -R <span class="stringliteral">&#39;drpttracer|drcacheoff.kernel&#39;</span></div>
 </div><!-- fragment --><p>On some systems, one may see errors like the following:</p>
@@ -99,10 +99,11 @@ Unit Tests</h1>
 </div><!-- fragment --><p>You may want to record the existing values in these configs so you can revert them after running the tests. See <a href="https://docs.kernel.org/admin-guide/sysctl/net.html#proc-sys-net-core-network-core-options">https://docs.kernel.org/admin-guide/sysctl/net.html#proc-sys-net-core-network-core-options</a> for more details. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
+<div class="ttc" id="anamespacedynamorio_html"><div class="ttname"><a href="namespacedynamorio.html">dynamorio</a></div><div class="ttdef"><b>Definition:</b> drgui_main_window.h:55</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20112 --- Fri Jan 24 2025 03:17:43 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20118 --- Fri Jan 31 2025 03:17:18 &nbsp; <img border=0 src="favicon.png">
 </small></address>

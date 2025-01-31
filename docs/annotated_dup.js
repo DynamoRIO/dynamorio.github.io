@@ -1,12 +1,5 @@
 [
-    [ "dynamorio", null, [
-      [ "drgui", null, [
-        [ "drgui_options_interface_t", "classdynamorio_1_1drgui_1_1drgui__options__interface__t.html", {% include_relative classdynamorio_1_1drgui_1_1drgui__options__interface__t.js %} ],
-        [ "drgui_tool_interface_t", "classdynamorio_1_1drgui_1_1drgui__tool__interface__t.html", {% include_relative classdynamorio_1_1drgui_1_1drgui__tool__interface__t.js %} ]
-      ] ],
-      [ "drmemtrace", "namespacedynamorio_1_1drmemtrace.html", {% include_relative namespacedynamorio_1_1drmemtrace.js %} ],
-      [ "droption", "namespacedynamorio_1_1droption.html", {% include_relative namespacedynamorio_1_1droption.js %} ]
-    ] ],
+    [ "dynamorio", "namespacedynamorio.html", {% include_relative namespacedynamorio.js %} ],
     [ "_dr_app_arg_t", "struct__dr__app__arg__t.html", {% include_relative struct__dr__app__arg__t.js %} ],
     [ "_dr_config_client_t", "struct__dr__config__client__t.html", {% include_relative struct__dr__config__client__t.js %} ],
     [ "_dr_exception_t", "struct__dr__exception__t.html", {% include_relative struct__dr__exception__t.js %} ],

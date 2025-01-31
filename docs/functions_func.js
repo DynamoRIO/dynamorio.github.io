@@ -1,5 +1,6 @@
 [
     [ "a", "functions_func.html", null ],
+    [ "b", "functions_func_b.html", null ],
     [ "c", "functions_func_c.html", null ],
     [ "d", "functions_func_d.html", null ],
     [ "f", "functions_func_f.html", null ],

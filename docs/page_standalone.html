@@ -46,17 +46,18 @@ Using DynamoRIO as a Standalone Library</h1>
 <h1><a class="anchor" id="sec_standalone_shared"></a>
 DynamoRIO Shared Library Issues</h1>
 <p>Since the DynamoRIO library on Windows includes or forwards implementations of certain C library routines (see <a class="el" href="using.html#subsec_forwards">C library utilities</a>), standalone applications linking to both DynamoRIO and the C library may experience linker errors when building and floating point problems when running. To avoid these problems, explicitly list the C runtime library on the command line:</p>
-<div class="fragment"><div class="line">/link /nodefaultlib libcmt.lib dynamorio.lib </div>
+<div class="fragment"><div class="line">/link /nodefaultlib libcmt.lib <a class="code" href="namespacedynamorio.html">dynamorio</a>.lib </div>
 </div><!-- fragment --><p>DynamoRIO writes to stderr and stdout using raw system calls, which can interfere with the buffering of library routines. When mixing use of printf or fprintf with DynamoRIO output (including not only <a class="el" href="dr__tools_8h.html#aeb88b22ff95c29ae793b9d84e1b95275">dr_printf()</a> and <a class="el" href="dr__tools_8h.html#ae338685a241cfeae5f3d507ae9cff957">dr_fprintf()</a> but also passing STDOUT or STDERR to routines like <a class="el" href="dr__ir__disassemble_8h.html#a4f2549391d161b1cee7d620efef7b9ff">disassemble()</a>), you may need to flush between library printing and DynamoRIO printing (e.g., using fflush(stdout)) to ensure that the library output is visible.</p>
 <p>The binary tracedump reader (<a class="el" href="API_samples.html#sec_ex8">Use of Standalone API</a>) is an example of use of DynamoRIO as a standalone library.</p>
 <p>When building an application that uses DynamoRIO as a standalone library, follow the steps for <a class="el" href="page_build_client.html">How to Build a Tool</a> to include the header files and link with the DynamoRIO library, but omit the linker flags requesting no standard libraries or startup files. DynamoRIO's CMake support does this automatically via the configure_DynamoRIO_standalone() function. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <div class="ttc" id="adr__tools_8h_html_a0917d634fe88c7d368eb6a20c17c55cb"><div class="ttname"><a href="dr__tools_8h.html#a0917d634fe88c7d368eb6a20c17c55cb">dr_standalone_init</a></div><div class="ttdeci">DR_API void * dr_standalone_init(void)</div></div>
+<div class="ttc" id="anamespacedynamorio_html"><div class="ttname"><a href="namespacedynamorio.html">dynamorio</a></div><div class="ttdef"><b>Definition:</b> drgui_main_window.h:55</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20112 --- Fri Jan 24 2025 03:17:42 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20118 --- Fri Jan 31 2025 03:17:17 &nbsp; <img border=0 src="favicon.png">
 </small></address>

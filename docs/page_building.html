@@ -37,7 +37,7 @@ Linux</h2>
 <div class="line">$ git clone --recurse-submodules -j4 https:<span class="comment">//github.com/DynamoRIO/dynamorio.git</span></div>
 <div class="line"><span class="preprocessor"># Make a separate build directory.  Building in the source directory is not</span></div>
 <div class="line"><span class="preprocessor"># supported.</span></div>
-<div class="line">$ cd dynamorio &amp;&amp; mkdir build &amp;&amp; cd build</div>
+<div class="line">$ cd <a class="code" href="namespacedynamorio.html">dynamorio</a> &amp;&amp; mkdir build &amp;&amp; cd build</div>
 <div class="line"><span class="preprocessor"># Generate makefiles with CMake.  Pass in the path to your source directory.</span></div>
 <div class="line">$ cmake ..</div>
 <div class="line"><span class="preprocessor"># Build.</span></div>
@@ -63,7 +63,7 @@ Windows</h2>
 <div class="line">$ git clone --recurse-submodules -j4 https:<span class="comment">//github.com/DynamoRIO/dynamorio.git</span></div>
 <div class="line"><span class="preprocessor"># Make a separate build directory.  Building in the source directory is not</span></div>
 <div class="line"><span class="preprocessor"># supported.</span></div>
-<div class="line">$ cd dynamorio &amp;&amp; mkdir build &amp;&amp; cd build</div>
+<div class="line">$ cd <a class="code" href="namespacedynamorio.html">dynamorio</a> &amp;&amp; mkdir build &amp;&amp; cd build</div>
 <div class="line"><span class="preprocessor"># Configure using cmake.  Pass in the path to your source directory.</span></div>
 <div class="line">$ cmake -G<span class="stringliteral">&quot;Visual Studio 16&quot;</span> -A x64 ..</div>
 <div class="line"><span class="preprocessor"># Build from the command line.  Alternatively, open ALL_BUILD.vcproj in Visual</span></div>
@@ -131,7 +131,7 @@ Cross-Compiling for 64-bit ARM (AArch64) on Linux</h2>
 <div class="fragment"><div class="line">$ git clone --recurse-submodules -j4 https:<span class="comment">//github.com/DynamoRIO/dynamorio.git</span></div>
 <div class="line">$ mkdir build_aarch64</div>
 <div class="line">$ cd build_aarch64</div>
-<div class="line">$ cmake -DCMAKE_TOOLCHAIN_FILE=../dynamorio/make/toolchain-aarch64.cmake ../dynamorio</div>
+<div class="line">$ cmake -DCMAKE_TOOLCHAIN_FILE=../<a class="code" href="namespacedynamorio.html">dynamorio</a>/make/toolchain-aarch64.cmake ../<a class="code" href="namespacedynamorio.html">dynamorio</a></div>
 <div class="line">$ make -j</div>
 </div><!-- fragment --><p>To build a client, again use the toolchain file, as well as pointing at a DynamoRIO installation using <code>-DDynamoRIO_DIR=&lt;path&gt;</code> as described in the package documentation.</p>
 <hr  />
@@ -143,7 +143,7 @@ Cross-Compiling for 32-bit ARM (AArch32) on Linux</h2>
 <div class="fragment"><div class="line">$ git clone --recurse-submodules -j4 https:<span class="comment">//github.com/DynamoRIO/dynamorio.git</span></div>
 <div class="line">$ mkdir build_arm</div>
 <div class="line">$ cd build_arm</div>
-<div class="line">$ cmake -DCMAKE_TOOLCHAIN_FILE=../dynamorio/make/toolchain-arm32.cmake ../dynamorio</div>
+<div class="line">$ cmake -DCMAKE_TOOLCHAIN_FILE=../<a class="code" href="namespacedynamorio.html">dynamorio</a>/make/toolchain-arm32.cmake ../<a class="code" href="namespacedynamorio.html">dynamorio</a></div>
 <div class="line">$ make -j</div>
 </div><!-- fragment --><p>To build a client, again use the toolchain file, as well as pointing at a DynamoRIO installation using <code>-DDynamoRIO_DIR=&lt;path&gt;</code> as described in the package documentation.</p>
 <hr  />
@@ -166,7 +166,7 @@ Cross-Compiling for 64-bit RISC-V (RISCV64) on Linux</h2>
 <div class="fragment"><div class="line">$ git clone --recurse-submodules -j4 https:<span class="comment">//github.com/DynamoRIO/dynamorio.git</span></div>
 <div class="line">$ mkdir build_riscv64</div>
 <div class="line">$ cd build_riscv64</div>
-<div class="line">$ cmake -DCMAKE_TOOLCHAIN_FILE=../dynamorio/make/toolchain-riscv64.cmake ../dynamorio</div>
+<div class="line">$ cmake -DCMAKE_TOOLCHAIN_FILE=../<a class="code" href="namespacedynamorio.html">dynamorio</a>/make/toolchain-riscv64.cmake ../<a class="code" href="namespacedynamorio.html">dynamorio</a></div>
 <div class="line">$ make -j</div>
 </div><!-- fragment --><p>To build a client, again use the toolchain file, as well as pointing at a DynamoRIO installation using <code>-DDynamoRIO_DIR=&lt;path&gt;</code> as described in the package documentation.</p>
 <hr  />
@@ -183,7 +183,7 @@ Cross-Compiling for ARM Android</h2>
 <div class="fragment"><div class="line">$ git clone --recurse-submodules -j4 https:<span class="comment">//github.com/DynamoRIO/dynamorio.git</span></div>
 <div class="line">$ mkdir build_android</div>
 <div class="line">$ cd build_android</div>
-<div class="line">$ cmake -DCMAKE_TOOLCHAIN_FILE=../dynamorio/make/toolchain-android.cmake -DANDROID_TOOLCHAIN=/mytooldir/android-ndk-21 -DDR_COPY_TO_DEVICE=ON ../dynamorio</div>
+<div class="line">$ cmake -DCMAKE_TOOLCHAIN_FILE=../<a class="code" href="namespacedynamorio.html">dynamorio</a>/make/toolchain-android.cmake -DANDROID_TOOLCHAIN=/mytooldir/android-ndk-21 -DDR_COPY_TO_DEVICE=ON ../<a class="code" href="namespacedynamorio.html">dynamorio</a></div>
 <div class="line">$ make -j</div>
 </div><!-- fragment --><p>If your Android system does not have a writable <code>/data/local/tmp</code> directory, you will need to either set <code>DYNAMORIO_CONFIGDIR</code> to a writable location or always run from a writable current directory.</p>
 <p>After building, check that libdynamorio.so does not contain an INTERP segment:</p>
@@ -427,7 +427,7 @@ Re-Configuring</h2>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md104"></a>
 Building a Distributable Package</h2>
 <p>If you've been working with DynamoRIO's packaged binaries, you may find it easiest to install all of the dependencies listed above for your platform and then run the packaging script:</p>
-<div class="fragment"><div class="line">cd dynamorio</div>
+<div class="fragment"><div class="line">cd <a class="code" href="namespacedynamorio.html">dynamorio</a></div>
 <div class="line">mkdir <span class="keyword">package</span></div>
 <div class="line"><span class="keyword"></span>cd package</div>
 <div class="line">ctest -V -S ../make/package.cmake,build=1</div>
@@ -442,7 +442,7 @@ Details of CMake Visual Studio Generators</h2>
 </div><!-- fragment --><p>Due to a cmake bug (<a href="http://www.cmake.org/Bug/view.php?id=11830">http://www.cmake.org/Bug/view.php?id=11830</a>), for a release build you need to explicitly say you want release:</p>
 <div class="fragment"><div class="line">cmake --build . --config Release</div>
 </div><!-- fragment --><p>To request a particular target:</p>
-<div class="fragment"><div class="line">cmake --build . --target dynamorio</div>
+<div class="fragment"><div class="line">cmake --build . --target <a class="code" href="namespacedynamorio.html">dynamorio</a></div>
 </div><!-- fragment --><p>or</p>
 <div class="fragment"><div class="line">cmake --build . --target install</div>
 </div><!-- fragment --><h2><a class="anchor" id="sec_ninja"></a>
@@ -470,7 +470,7 @@ Using Ninja For Better Error Messages, Faster Builds, and Proper Incremental Bui
 <div class="fragment"><div class="line">ninja</div>
 </div><!-- fragment --><p>Ninja builds in parallel by default.</p>
 <p>To build a specific target:</p>
-<div class="fragment"><div class="line">ninja dynamorio</div>
+<div class="fragment"><div class="line">ninja <a class="code" href="namespacedynamorio.html">dynamorio</a></div>
 </div><!-- fragment --><p>One downside of the current CMake Ninja generator is that one must change the environment in order to switch to a 64-bit build directory (both the Visual Studio toolchain environment and the ASM environment variable mentioned above), whereas with the Visual Studio generator one can switch build directories without any environment changes (once the build directories are configured using the right environment).</p>
 <p>The test suite supports using Ninja by passing the use_ninja parameter:</p>
 <div class="fragment"><div class="line">ctest -V -S c:/mycheckout/suite/runsuite.cmake,use_ninja</div>
@@ -523,10 +523,11 @@ Building the Qt DrGUI extension</h1>
 </div><!-- fragment --><p>If Qt is installed in a non-standard location, set the Qt5Widgets_DIR cmake variable to point to the directory containing Qt5WidgetsConfig.cmake. E.g.: </p><div class="fragment"><div class="line">cmake -DQt5Widgets_DIR=/opt/Qt5.0.2/5.0.2/gcc/lib/cmake/Qt5Widgets/</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
+<div class="ttc" id="anamespacedynamorio_html"><div class="ttname"><a href="namespacedynamorio.html">dynamorio</a></div><div class="ttdef"><b>Definition:</b> drgui_main_window.h:55</div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20112 --- Fri Jan 24 2025 03:17:43 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20118 --- Fri Jan 31 2025 03:17:17 &nbsp; <img border=0 src="favicon.png">
 </small></address>

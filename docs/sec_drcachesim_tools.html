@@ -402,7 +402,7 @@ Opcode Mix</h1>
 <div class="line">...</div>
 </div><!-- fragment --><h1><a class="anchor" id="sec_tool_view"></a>
 Human-Readable View</h1>
-<p>The view tool prints out the contents of the trace for human viewing, including disassembling instructions in AT&amp;T, Intel, Arm, or DR format (to see disassembly for online traces, pass the <code>-instr_encodings</code> option). The -skip_refs and -sim_refs flags can be used to set a start point and end point for the disassembled view. Note that these flags compute the number of trace entry records which are skipped or displayed which is distinct from the number of instruction records.</p>
+<p>The view tool prints out the contents of the trace for human viewing, including disassembling instructions in AT&amp;T, Intel, Arm, or DR format (to see disassembly for online traces, pass the <code>-instr_encodings</code> option). The -skip_refs and -sim_refs flags can be used to set a start point and end point for the disassembled view. Note that these flags compute the number of trace entry records which are skipped or displayed which is distinct from the number of instruction records; to skip instruction records use -skip_instrs or -skip_to_timestamp (this is faster than -skip_refs).</p>
 <p>The tool displays loads and stores, as well as metadata marker entries for timestamps, on which core and thread the subsequent instruction sequence was executed, and kernel and system call transfers (these correspond to signal or event handler interruptions of the regular execution flow).</p>
 <p>In its first two columns, the tool displays the trace record ordinal and the instruction fetch ordinal.</p>
 <div class="fragment"><div class="line">$ $ bin64/drrun -t drmemtrace -tool view -indir drmemtrace.*.dir -sim_refs 20</div>
@@ -639,5 +639,5 @@ Record Filter</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20112 --- Fri Jan 24 2025 03:17:43 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20118 --- Fri Jan 31 2025 03:17:18 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -65,6 +65,14 @@
     [ "dynamorio::drmemtrace::bitset_hash_table_t< app_pc >", "classdynamorio_1_1drmemtrace_1_1bitset__hash__table__t.html", null ],
     [ "dynamorio::droption::bytesize_t", "classdynamorio_1_1droption_1_1bytesize__t.html", null ],
     [ "dynamorio::drmemtrace::cache_simulator_knobs_t", "structdynamorio_1_1drmemtrace_1_1cache__simulator__knobs__t.html", null ],
+    [ "dynamorio::drmemtrace::decode_cache_base_t", "classdynamorio_1_1drmemtrace_1_1decode__cache__base__t.html", [
+      [ "dynamorio::drmemtrace::decode_cache_t< DecodeInfo >", "classdynamorio_1_1drmemtrace_1_1decode__cache__t.html", [
+        [ "dynamorio::drmemtrace::test_decode_cache_t< DecodeInfo >", "classdynamorio_1_1drmemtrace_1_1test__decode__cache__t.html", null ]
+      ] ]
+    ] ],
+    [ "dynamorio::drmemtrace::decode_info_base_t", "classdynamorio_1_1drmemtrace_1_1decode__info__base__t.html", [
+      [ "dynamorio::drmemtrace::instr_decode_info_t", "classdynamorio_1_1drmemtrace_1_1instr__decode__info__t.html", null ]
+    ] ],
     [ "dr_time_t", "structdr__time__t.html", null ],
     [ "drbbdup_options_t", "structdrbbdup__options__t.html", null ],
     [ "drbbdup_stats_t", "structdrbbdup__stats__t.html", null ],
