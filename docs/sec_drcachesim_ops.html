@@ -44,6 +44,9 @@ For the offline analysis mode (when -offline is requested), specifies the prefix
 <li><b>-indir</b> <br  />
 <em>default value: ""</em> <br  />
 After a trace file is produced via -offline into -outdir, it can be passed to the simulator via this flag pointing at the subdirectory created in -outdir. The -offline tracing produces raw data files which are converted into final trace files on the first execution with -indir. The raw files can also be manually converted using the drraw2trace tool. Legacy single trace files with all threads interleaved into one are not supported with this option: use -infile instead. The contents of this directory are internal to the tool. Do not alter, add, or delete files here.</li>
+<li><b>-multi_indir</b> <br  />
+<em>default value: ""</em> <br  />
+Identical to -indir except this takes a colon-separated list of directories for offline analysis in core-sharded mode. Multiple inputs are not supported in any other mode; they are not supported currently with thread or shard limits; they are not supported for interval analysis, for replaying as-traced, or for core-sharded-on-disk inputs. Skipping is applied to every input thread. Auxiliary files such as the traced function list (see -funclist_file), the v2p file (see -v2p_file), schedule files for the invariant checker, and the module file (for legacy traces without encodings) are only auto-located in the first directory listed. Additional support may be added in the future. See -indir for further information on each input directory.</li>
 <li><b>-infile</b> <br  />
 <em>default value: ""</em> <br  />
 Directs the framework to use a single trace file. This could be a legacy all-software-threads-interleaved-into-one trace file, a core-sharded single hardware thread file mixing multiple software threads, or a single software thread selected from a directory (though in that case it is better to use -only_thread, -only_threads, or -only_shards). This method of input does not support any features that require auxiliary metadata files. Passing '-' will read from stdin as plain or gzip-compressed data.</li>
@@ -436,5 +439,5 @@ By default, errors in decoding the kernel syscall PT trace in pt2ir are fatal to
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20118 --- Fri Jan 31 2025 03:17:18 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20126 --- Fri Feb 7 2025 03:20:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -54,6 +54,9 @@ Record and Replay</h1>
 <h1><a class="anchor" id="sec_drcachesim_sched_roi"></a>
 Regions of Interest</h1>
 <p>The scheduler supports running a subset of each input. A list of start and stop endpoints delimiting the regions of interest can be supplied with each input. The end result is as though the inputs had been edited to remove all content not inside the target regions.</p>
+<h1><a class="anchor" id="sec_drcachesim_sched_multi"></a>
+Multiple Inputs</h1>
+<p>The scheduler API supports multiple inputs from multiple workloads. This can be achieved in the drmemtrace analyzer framework in core-sharded mode with the -multi_indir option. The threads from every workload will all be interleaved together.</p>
 <h1><a class="anchor" id="sec_drcachesim_sched_speculation"></a>
 Speculation Support</h1>
 <p>The scheduler contains preliminary speculation support for wrong-path execution. Currently it only feeds nops, but future versions plan to fill in content based on prior trace paths.</p>
@@ -105,5 +108,5 @@ Scheduler Interface Example</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20118 --- Fri Jan 31 2025 03:17:18 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20126 --- Fri Feb 7 2025 03:20:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

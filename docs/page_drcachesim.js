@@ -43,6 +43,7 @@
       [ "Idle Time", "sec_drcachesim_sched.html#sec_drcachesim_sched_idle", null ],
       [ "Record and Replay", "sec_drcachesim_sched.html#sec_drcachesim_sched_replay", null ],
       [ "Regions of Interest", "sec_drcachesim_sched.html#sec_drcachesim_sched_roi", null ],
+      [ "Multiple Inputs", "sec_drcachesim_sched.html#sec_drcachesim_sched_multi", null ],
       [ "Speculation Support", "sec_drcachesim_sched.html#sec_drcachesim_sched_speculation", null ],
       [ "Scheduler Interface Example", "sec_drcachesim_sched.html#sec_drcachesim_sched_ex", null ]
     ] ],
