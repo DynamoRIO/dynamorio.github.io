@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 11.90.20147"
+title: "Release Notes for Version 11.90.20153"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 11.90.20147 </div>  </div>
+<div class="title">Release Notes for Version 11.90.20153 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,12 +63,13 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 11.90.20147. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 11.90.20147 and 11.3.0 include the following compatibility changes:</p><ul>
+<p>The current version is 11.90.20153. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 11.90.20153 and 11.3.0 include the following compatibility changes:</p><ul>
 <li>On 32-bit Arm the size of <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> has been increased by 4 and the struct is now required to be 8-byte aligned. The offset of the field "simd" has changed.</li>
 <li>Added new fields elf_path and elf_path_size to dr_memory_dump_spec_t. When <a class="el" href="dr__tools_8h.html#afa268a6496cad930513c1f0353fdd06e">dr_create_memory_dump()</a> returns true and elf_path is not NULL, elf_path will be written with the path to the memory dump file.</li>
 </ul>
 <p>Further non-compatibility-affecting changes include:</p><ul>
+<li>Changed the types of <code>block_size</code>, <code>total_size</code>, <code>num_blocks</code>, to <code>int64_t</code> in dynamorio::drmemtrace::caching_device_t and its deriving classes.</li>
 <li>Added support for reading a single drmemtrace trace file from stdin via "-infile -".</li>
 <li>Added the <a class="el" href="classdynamorio_1_1drmemtrace_1_1decode__cache__t.html">dynamorio::drmemtrace::decode_cache_t</a> library to make it easier and more efficient for drmemtrace analysis tools to obtain decoded information about instructions in the trace. This works for traces that have embedded instruction encodings in them, and also for legacy traces without embedded encodings where the encodings are obtained from the application binaries instead.</li>
 <li>Added a new drmemtrace analyzer flag -sched_syscall_file to allow specifying the system call trace template file to be used for dynamic injection of system call trace templates. Added similar options for the drmemtrace scheduler: <a class="el" href="namespacedynamorio_1_1drmemtrace.html">dynamorio::drmemtrace</a>:: scheduler_tmpl_t::scheduler_options_t::kernel_syscall_trace_path, and <a class="el" href="namespacedynamorio.html">dynamorio</a>:: drmemtrace::scheduler_tmpl_t::scheduler_options_t::kernel_syscall_reader.</li>
@@ -236,7 +237,7 @@ Changes Since Prior Releases</h1>
 <li>A source compatibilty change in drcachesim analysis tools for users who have created derived classes from existing analysis tools: member fields of classes are now following a consistent style with an underscore suffix. References to renamed fields will need to be updated.</li>
 <li>A change in the load callbacks used with <a class="el" href="group__drcovlib.html#ga33bf1c08f5e69e18e8450652928e0c66">drmodtrack_add_custom_data()</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae928b4aceb19475c965eb8de4d7ca07a">drmemtrace_custom_module_data()</a>: they each take an additional parameter, the segment index. The custom data field is now per-segment and not per-module, and all callbacks are invoked separately for each segment.</li>
 </ul>
-<p>The changes between version 11.90.20147 and 8.0.0 include the following minor compatibility changes:</p>
+<p>The changes between version 9.0.0 and 8.0.0 include the following minor compatibility changes:</p>
 <ul>
 <li>drconfiglib (and thus drrun and drconfig) now sets only the new client path options which are added in this release to support other-bitwidth child processes. This means that a drconfiglib from this version will not properly configure for a DynamoRIO core library from a prior version.</li>
 <li>A new option -ldstex2cas is on by default on ARM and AArch64. This converts load-exclusive store-exclusive sequences to use compare-and-swap instead, which enables normal instrumentation of such sequences without clearing the exclusive monitor and causing infinite loops. However, the compare- and-swap's semantics are not identical: it does not detect "ABA" changes and could cause errors in lock-free data structures or other application constructs. See <a class="el" href="API_BT.html#sec_ldrex">Exclusive Monitor Instrumentation</a> for more information.</li>
@@ -1227,5 +1228,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20147 --- Fri Feb 28 2025 03:24:12 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20153 --- Fri Mar 7 2025 03:26:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>
