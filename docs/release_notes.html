@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 11.90.20153"
+title: "Release Notes for Version 11.90.20160"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 11.90.20153 </div>  </div>
+<div class="title">Release Notes for Version 11.90.20160 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,8 +63,8 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 11.90.20153. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 11.90.20153 and 11.3.0 include the following compatibility changes:</p><ul>
+<p>The current version is 11.90.20160. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 11.90.20160 and 11.3.0 include the following compatibility changes:</p><ul>
 <li>On 32-bit Arm the size of <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> has been increased by 4 and the struct is now required to be 8-byte aligned. The offset of the field "simd" has changed.</li>
 <li>Added new fields elf_path and elf_path_size to dr_memory_dump_spec_t. When <a class="el" href="dr__tools_8h.html#afa268a6496cad930513c1f0353fdd06e">dr_create_memory_dump()</a> returns true and elf_path is not NULL, elf_path will be written with the path to the memory dump file.</li>
 </ul>
@@ -1228,5 +1228,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20153 --- Fri Mar 7 2025 03:26:48 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20160 --- Fri Mar 14 2025 03:26:45 &nbsp; <img border=0 src="favicon.png">
 </small></address>
