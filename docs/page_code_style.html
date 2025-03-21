@@ -197,7 +197,7 @@ Commenting Conventions</h1>
 <li>Comments that contain more than one sentence should be properly capitalized and punctuated and should use complete sentences. Single-sentence comments should also prefer capitalization, punctuation, and to use a complete sentence when occupying an entire line. For comments that are inside a line of code or at the end of a line of code, sentence fragments or phrases are fine.</li>
 <li>Use <code>XXX</code> in comments to indicate code that could be optimized or something that may warrant re-examination later. Include the issue number using the syntax <code>i#&lt;number&gt;</code>. For example (ignore leading dots &ndash; only there to work around GitHub markdown problems with leading spaces in literal blocks in list entries): <pre class="fragment"> /* XXX i#391: this could be done more efficiently via ...
   */</pre></li>
-<li>Use <code>FIXME</code> or <code>TODO</code> in comments to indicate missing features that are required and not just optimizations or optional improvements (use <code>XXX</code> for those). Include the issue number using the syntax <code>i#&lt;number&gt;</code>. For example (ignore leading dots &ndash; only there to work around GitHub markdown problems with leading spaces in literal blocks in list entries): <pre class="fragment"> /* FIXME i#999: we do not yet handle a corner case where ...
+<li>Use <code>TODO</code> in comments to indicate missing features that are required and not just optimizations or optional improvements (use <code>XXX</code> for those). (Avoid <code>FIXME</code> in new comments as its connotations are too negative and too easily mis-interpreted in code audits.) Include the issue number using the syntax <code>i#&lt;number&gt;</code>. For example (ignore leading dots &ndash; only there to work around GitHub markdown problems with leading spaces in literal blocks in list entries): <pre class="fragment"> /* TODO i#999: we do not yet handle a corner case where ...
   */</pre></li>
 <li>Mark any temporary or unfinished code unsuitable for committing with a <code>NOCHECKIN</code> comment. The <code>make/codereview.cmake</code> script will remind you to clean up the code. <pre class="fragment"> x = 4; /* NOCHECKIN: temporary debugging change */</pre></li>
 <li>For banner comments that separate out groups of related functions, use the following style (ignore leading dots &ndash; only there to work around GitHub markdown problems with leading spaces in literal blocks in list entries): <pre class="fragment"> /****************************************************************************
@@ -320,5 +320,5 @@ C++</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20160 --- Fri Mar 14 2025 03:26:45 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20167 --- Fri Mar 21 2025 03:29:53 &nbsp; <img border=0 src="favicon.png">
 </small></address>

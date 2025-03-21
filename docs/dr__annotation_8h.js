@@ -14,6 +14,12 @@
       [ "DR_VG_ID__DO_LEAK_CHECK", "dr__annotation_8h.html#a991e19026e652477136bd555de560c19aeac89b5320d10b8ff4e6be192458ffbe", null ],
       [ "DR_VG_ID__MAKE_MEM_DEFINED_IF_ADDRESSABLE", "dr__annotation_8h.html#a991e19026e652477136bd555de560c19a4a3a7646cd176f003a2199d87f25f1d0", null ],
       [ "DR_VG_ID__DISCARD_TRANSLATIONS", "dr__annotation_8h.html#a991e19026e652477136bd555de560c19a70fbb5f2728906ed5fef0409e06b75f1", null ],
+      [ "DR_VG_ID__MAKE_MEM_UNDEFINED", "dr__annotation_8h.html#a991e19026e652477136bd555de560c19af667116b281fe7c8c8eecd6a182cabcf", null ],
+      [ "DR_VG_ID__MAKE_MEM_DEFINED", "dr__annotation_8h.html#a991e19026e652477136bd555de560c19a0fc6f7d3c350707464807a4304fa158b", null ],
+      [ "DR_VG_ID__CHECK_MEM_IS_ADDRESSABLE", "dr__annotation_8h.html#a991e19026e652477136bd555de560c19acf99c17c464609566aaaab06ea9b159d", null ],
+      [ "DR_VG_ID__CHECK_MEM_IS_DEFINED", "dr__annotation_8h.html#a991e19026e652477136bd555de560c19a178a927f74ae3d9a7e0e3b2c34387175", null ],
+      [ "DR_VG_ID__MALLOCLIKE_BLOCK", "dr__annotation_8h.html#a991e19026e652477136bd555de560c19a320a3b7a90e41d54759e7ebbcb5bc6b4", null ],
+      [ "DR_VG_ID__FREELIKE_BLOCK", "dr__annotation_8h.html#a991e19026e652477136bd555de560c19aa4cadf29059b124039de639985a65426", null ],
       [ "DR_VG_ID__LAST", "dr__annotation_8h.html#a991e19026e652477136bd555de560c19ade400c6f5dbd4b8faa24da149b16e05d", null ]
     ] ],
     [ "dr_annotation_pass_pc", "dr__annotation_8h.html#ae540235e4d9025f60479d3fd181f697b", null ],
