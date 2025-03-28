@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 11.90.20167"
+title: "Release Notes for Version 11.90.20174"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 11.90.20167 </div>  </div>
+<div class="title">Release Notes for Version 11.90.20174 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,10 +63,11 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 11.90.20167. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 11.90.20167 and 11.3.0 include the following compatibility changes:</p><ul>
+<p>The current version is 11.90.20174. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 11.90.20174 and 11.3.0 include the following compatibility changes:</p><ul>
 <li>On 32-bit Arm the size of <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> has been increased by 4 and the struct is now required to be 8-byte aligned. The offset of the field "simd" has changed.</li>
 <li>Added new fields elf_path and elf_path_size to dr_memory_dump_spec_t. When <a class="el" href="dr__tools_8h.html#afa268a6496cad930513c1f0353fdd06e">dr_create_memory_dump()</a> returns true and elf_path is not NULL, elf_path will be written with the path to the memory dump file.</li>
+<li>Added a separate cache replacement policy object to <code>caching_device_t</code>. <code>init</code> now takes an <code>std::unique_ptr&lt;cache_replacement_policy_t&gt;</code> that defines the replacement policy. It can be created manually or by using <code>create_cache_replacement_policy</code>. Removed the subclasses <code>cache_lru_t</code>, <code>cache_fifo_t</code>, <code>tlb_lfu_t</code>, <code>tlb_plru_t</code> that implemented specific cache replacement policies. Added implementations for the matching policies as subclasses of <code>cache_replacement_policy_t</code>.</li>
 </ul>
 <p>Further non-compatibility-affecting changes include:</p><ul>
 <li>Changed the types of <code>block_size</code>, <code>total_size</code>, <code>num_blocks</code>, to <code>int64_t</code> in dynamorio::drmemtrace::caching_device_t and its deriving classes.</li>
@@ -264,7 +265,7 @@ Changes Since Prior Releases</h1>
 <li>Added <a class="el" href="dr__ir__instr_8h.html#abdbd15b741792307845f5fc2df9b4b5d">instr_is_exclusive_load()</a>.</li>
 <li>Added <a class="el" href="dr__ir__macros__aarch64_8h.html#a0af576a857ca51596cc247dfa5771370">XINST_CREATE_store_pair()</a> and <a class="el" href="dr__ir__macros__aarch64_8h.html#a274c966568324357b4bb5785738bcfb7">XINST_CREATE_load_pair()</a>.</li>
 <li>Added <a class="el" href="dr__ir__instr_8h.html#a7aa1835665d4a2933d0a9bcfb0d42b4e">instr_replace_reg_resize()</a> and <a class="el" href="dr__ir__opnd_8h.html#aad964c704e6bdfcb1fe0fb633cd64e44">opnd_replace_reg_resize()</a>.</li>
-<li>Added <a class="el" href="group__drx.html#gga4caf8d8f829279fba122163d961608a4aa50fccbd9d5dc9f300d6033c971f95e4">DRX_COUNTER_REL_ACQ</a> flag to optionally enable release-acquire semantics for <a class="el" href="group__drx.html#gab5f7ae9128e953fdf1f8c2ac3292f07a">drx_insert_counter_update()</a> on AArchXX.</li>
+<li>Added <a class="el" href="group__drx.html#gga1f9aebf1de3ebbf4283a4dcf73308562aa50fccbd9d5dc9f300d6033c971f95e4">DRX_COUNTER_REL_ACQ</a> flag to optionally enable release-acquire semantics for <a class="el" href="group__drx.html#gab5f7ae9128e953fdf1f8c2ac3292f07a">drx_insert_counter_update()</a> on AArchXX.</li>
 <li>Added a preferred base field to the <a class="el" href="struct__module__data__t.html">_module_data_t</a> struct and to the <a class="el" href="struct__drmodtrack__info__t.html">_drmodtrack_info_t</a> struct.</li>
 <li>Added support for running under QEMU via the <a class="el" href="page_deploy.html#op_xarch_root">-xarch_root</a> runtime option which locates guest system libraries and enables workarounds for problems with QEMU's threads.</li>
 <li>Added <a class="el" href="dr__events_8h.html#a66a5226e857e03ebb685b3e8e1566c7c">dr_is_detaching()</a>, an API to query whether detach is in progress.</li>
@@ -1228,5 +1229,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20167 --- Fri Mar 21 2025 03:29:53 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20174 --- Fri Mar 28 2025 03:32:02 &nbsp; <img border=0 src="favicon.png">
 </small></address>

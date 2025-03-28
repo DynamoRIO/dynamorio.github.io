@@ -119,6 +119,9 @@ permalink: /functions_s.html
 <li>second
 : <a class="el" href="structdr__time__t.html#a2c63b61ff9664368aa999af1398e2c6c">dr_time_t</a>
 </li>
+<li>secondary
+: <a class="el" href="struct__drsys__sysnum__t.html#a2f38db14bafa6e26dff8fe8c4290a3a2">_drsys_sysnum_t</a>
+</li>
 <li>service_pack_major
 : <a class="el" href="struct__dr__os__version__info__t.html#a08f07ca7af394b040a62d3bf01d77f6e">_dr_os_version_info_t</a>
 </li>
@@ -179,6 +182,7 @@ permalink: /functions_s.html
 , <a class="el" href="struct__drmodtrack__info__t.html#a67f5a4e48a289a528b164173457b7da7">_drmodtrack_info_t</a>
 , <a class="el" href="struct__drreg__reserve__info__t.html#a49eeef31142c83ee1ea6be3db685c097">_drreg_reserve_info_t</a>
 , <a class="el" href="struct__drsym__type__t.html#a14e2d3815493d4aa393f514e8704d1ed">_drsym_type_t</a>
+, <a class="el" href="struct__drsys__arg__t.html#aa8b3d6943ba6c56e086c2fc27ee5e76b">_drsys_arg_t</a>
 , <a class="el" href="struct__drwrap__stats__t.html#ae586934cc966965fe212d326a1923cad">_drwrap_stats_t</a>
 , <a class="el" href="struct__emulated__instr__t.html#ad11a8f11b085ffa7cb9da11c22a4d353">_emulated_instr_t</a>
 , <a class="el" href="struct__hashtable__config__t.html#a3aa61b25956331b55b7633bf3bbd3266">_hashtable_config_t</a>
@@ -186,6 +190,9 @@ permalink: /functions_s.html
 , <a class="el" href="structdynamorio_1_1drmemtrace_1_1__memref__flush__t.html#aa52bd61fea0003e9c48b28acd6463f1d">dynamorio::drmemtrace::_memref_flush_t</a>
 , <a class="el" href="structdynamorio_1_1drmemtrace_1_1__memref__instr__t.html#a776974359362dddcb6bb247290c15d78">dynamorio::drmemtrace::_memref_instr_t</a>
 , <a class="el" href="structdynamorio_1_1drmemtrace_1_1drmemtrace__replace__file__ops__t.html#abffcc769c95a6749967b312c89200842">dynamorio::drmemtrace::drmemtrace_replace_file_ops_t</a>
+</li>
+<li>skip_internal_tables
+: <a class="el" href="struct__drsys__options__t.html#ae98bfa07c53b7d298fda30b7be617452">_drsys_options_t</a>
 </li>
 <li>source_mcontext
 : <a class="el" href="struct__dr__kernel__xfer__info__t.html#a926c93a22d44fd6d1804ef426a996573">_dr_kernel_xfer_info_t</a>
@@ -210,6 +217,9 @@ permalink: /functions_s.html
 , <a class="el" href="struct__drmodtrack__info__t.html#ab3887591c237b9ec4528c9ecaa598e17">_drmodtrack_info_t</a>
 , <a class="el" href="struct__module__data__t.html#aac28072fa786f69d70339d842052c9cf">_module_data_t</a>
 , <a class="el" href="struct__module__segment__data__t.html#a4c7d97f35fcf1c74096c1728d3468e79">_module_segment_data_t</a>
+</li>
+<li>start_addr
+: <a class="el" href="struct__drsys__arg__t.html#adf024d889968a29418ee86bc7937371f">_drsys_arg_t</a>
 </li>
 <li>start_instruction
 : <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1range__t.html#afe98a67ad706c1452b545ecf4b813e42">dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::range_t</a>
@@ -302,6 +312,7 @@ permalink: /functions_s.html
 , <a class="el" href="struct__drmodtrack__info__t.html#af6970fbf182fb9d2489a6df7f0f404e4">_drmodtrack_info_t</a>
 , <a class="el" href="struct__drreg__options__t.html#a8bc71c47c70c0ac240cb6c75822f619d">_drreg_options_t</a>
 , <a class="el" href="struct__drsym__info__t.html#acd54e31710d366097dcbf2984cf337c5">_drsym_info_t</a>
+, <a class="el" href="struct__drsys__options__t.html#ac35d3a3a7f5dd5f266b95d8bdb1d948d">_drsys_options_t</a>
 , <a class="el" href="structdrbbdup__options__t.html#a52583a66d35fdff96ca0d026bd9feb47">drbbdup_options_t</a>
 , <a class="el" href="structdrbbdup__stats__t.html#a570b1815b1c2236058be24d04a02ac96">drbbdup_stats_t</a>
 , <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#ad6af52c2c9d5c1317bdcd9e53d240d16">dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::input_thread_info_t</a>
@@ -338,8 +349,26 @@ permalink: /functions_s.html
 <li>synchs_not_at_safe_spot
 : <a class="el" href="struct__dr__stats__t.html#a657853fc1d4000c9d60a5bee84d02209">_dr_stats_t</a>
 </li>
+<li>syscall
+: <a class="el" href="struct__drsys__arg__t.html#ae3f960c74180d7c6190415de8f059812">_drsys_arg_t</a>
+</li>
+<li>syscall_driver
+: <a class="el" href="struct__drsys__options__t.html#acf96eea8b757c1cf5cf9cc5ebf1dad54">_drsys_options_t</a>
+</li>
+<li>syscall_dword_granularity
+: <a class="el" href="struct__drsys__options__t.html#a8dafc6a6995f1c11438e200ab130ef6c">_drsys_options_t</a>
+</li>
+<li>syscall_sentinels
+: <a class="el" href="struct__drsys__options__t.html#a0903b4a6615e8f83fbe60a2211750675">_drsys_options_t</a>
+</li>
 <li>syscall_switch_threshold
 : <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a6ea3487c8bbdb7ae52212b245c866608">dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::scheduler_options_t</a>
+</li>
+<li>sysnum
+: <a class="el" href="struct__drsys__arg__t.html#a1c3f24ad8500fd5b75a5a30eb16542cc">_drsys_arg_t</a>
+</li>
+<li>sysnum_file
+: <a class="el" href="struct__drsys__options__t.html#ab983f4031f8c4e4d67c3b6b6b70b09c6">_drsys_options_t</a>
 </li>
 <li>sysroot
 : <a class="el" href="structdynamorio_1_1drmemtrace_1_1pt__sb__config__t.html#a1f05fb0b01db7364aaeaae4fc48d0b39">dynamorio::drmemtrace::pt_sb_config_t</a>
@@ -351,5 +380,5 @@ permalink: /functions_s.html
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20167 --- Fri Mar 21 2025 03:29:54 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20174 --- Fri Mar 28 2025 03:32:04 &nbsp; <img border=0 src="favicon.png">
 </small></address>

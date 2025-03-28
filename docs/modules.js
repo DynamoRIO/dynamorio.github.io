@@ -7,6 +7,7 @@
     [ "Register Usage Coordinator", "group__drreg.html", {% include_relative group__drreg.js %} ],
     [ "Machine State Comparison Library", "group__drstatecmp.html", {% include_relative group__drstatecmp.js %} ],
     [ "Symbol Access Library", "group__drsyms.html", {% include_relative group__drsyms.js %} ],
+    [ "Dr. Syscall: System Call Monitoring Extension", "group__drsyscall.html", null ],
     [ "Instrumentation Utilities", "group__drutil.html", {% include_relative group__drutil.js %} ],
     [ "Function Wrapping and Replacing", "group__drwrap.html", {% include_relative group__drwrap.js %} ],
     [ "DynamoRIO eXtension utilities", "group__drx.html", {% include_relative group__drx.js %} ]

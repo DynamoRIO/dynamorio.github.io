@@ -84,6 +84,12 @@
         [ "Module Bases", "page_drsyms.html#sec_drsyms_modbase", null ]
       ] ]
     ] ],
+    [ "Dr. Syscall: System Call Monitoring Extension", "page_drsyscall.html", [
+      [ "Setup", "page_drsyscall.html#sec_drsyscall_setup", null ],
+      [ "Event Replacement", "page_drsyscall.html#sec_drsyscall_events", null ],
+      [ "Dr. Syscall API", "page_drsyscall.html#sec_drsyscall_API", null ],
+      [ "System Call Numbers", "page_drsyscall.html#sec_drsyscall_nums", null ]
+    ] ],
     [ "Instrumentation Utilities", "page_drutil.html", [
       [ "Setup", "page_drutil.html#sec_drutil_setup", null ],
       [ "API", "page_drutil.html#sec_drutil_api", null ],

@@ -8,9 +8,9 @@
     [ "DRWRAP_REPLACE_NATIVE_SP_SLOT", "group__drwrap.html#gad88566adce8386b5d2e6c6de83e21e8b", null ],
     [ "atomic_int_t", "group__drwrap.html#gafc20bc1dcc4afe6a2e7a9b15cea91562", null ],
     [ "drwrap_stats_t", "group__drwrap.html#ga6f6dc4aedef59ad64117973f081fd903", [
-      [ "DRMGR_PRIORITY_APP2APP_DRWRAP", "group__drwrap.html#gga0ed680fdb405e7195d9f14032851eebba556c6bce97b9c415e089261848536c14", null ],
-      [ "DRMGR_PRIORITY_INSERT_DRWRAP", "group__drwrap.html#gga0ed680fdb405e7195d9f14032851eebbada17e11e67b93129fede7890e032bbbd", null ],
-      [ "DRMGR_PRIORITY_FAULT_DRWRAP", "group__drwrap.html#gga0ed680fdb405e7195d9f14032851eebbaf45be46f89c86ce07739c8243fde7f5d", null ]
+      [ "DRMGR_PRIORITY_APP2APP_DRWRAP", "group__drwrap.html#gga96a58e29e8dbf2b5bdeb775cba46556ea556c6bce97b9c415e089261848536c14", null ],
+      [ "DRMGR_PRIORITY_INSERT_DRWRAP", "group__drwrap.html#gga96a58e29e8dbf2b5bdeb775cba46556eada17e11e67b93129fede7890e032bbbd", null ],
+      [ "DRMGR_PRIORITY_FAULT_DRWRAP", "group__drwrap.html#gga96a58e29e8dbf2b5bdeb775cba46556eaf45be46f89c86ce07739c8243fde7f5d", null ]
     ] ],
     [ "drwrap_callconv_t", "group__drwrap.html#gae5c8c610a356f2dd2eaf27380a1645a0", [
       [ "DRWRAP_CALLCONV_AMD64", "group__drwrap.html#ggae5c8c610a356f2dd2eaf27380a1645a0aea459bcd58f48f7412609258f9d82482", null ],
