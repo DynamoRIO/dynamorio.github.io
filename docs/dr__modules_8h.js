@@ -32,7 +32,7 @@
     [ "dr_module_iterator_next", "dr__modules_8h.html#a972a000a8141e1e17d2546afb8b97312", null ],
     [ "dr_module_iterator_start", "dr__modules_8h.html#a5722f6e9954edbe6c7e9156c14f6d5b9", null ],
     [ "dr_module_iterator_stop", "dr__modules_8h.html#af4dd9cec539324e7b5b10efbaf8238fe", null ],
-    [ "dr_module_preferred_name", "dr__modules_8h.html#accc7374ad62e1b06c6f33eae8a764592", null ],
+    [ "dr_module_preferred_name", "dr__modules_8h.html#a32025070ddddcceb586da8e91d3fd9e2", null ],
     [ "dr_module_set_should_instrument", "dr__modules_8h.html#a8c700b30c9784f4c88820a51198d4f54", null ],
     [ "dr_module_should_instrument", "dr__modules_8h.html#a34911adad5e409df66fe151149bfc344", null ],
     [ "dr_symbol_export_iterator_hasnext", "dr__modules_8h.html#a18ca7c4764a623a1d3dde9cf4cd11a11", null ],

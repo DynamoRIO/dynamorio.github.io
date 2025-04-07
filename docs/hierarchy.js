@@ -99,7 +99,9 @@
     [ "dynamorio::drmemtrace::instr_summary_t::memref_summary_t", "structdynamorio_1_1drmemtrace_1_1instr__summary__t_1_1memref__summary__t.html", null ],
     [ "dynamorio::drmemtrace::memtrace_stream_t", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html", [
       [ "dynamorio::drmemtrace::default_memtrace_stream_t", "classdynamorio_1_1drmemtrace_1_1default__memtrace__stream__t.html", null ],
-      [ "dynamorio::drmemtrace::reader_t", "classdynamorio_1_1drmemtrace_1_1reader__t.html", null ],
+      [ "dynamorio::drmemtrace::reader_t", "classdynamorio_1_1drmemtrace_1_1reader__t.html", [
+        [ "dynamorio::drmemtrace::noise_generator_t", "classdynamorio_1_1drmemtrace_1_1noise__generator__t.html", null ]
+      ] ],
       [ "dynamorio::drmemtrace::record_reader_t", "classdynamorio_1_1drmemtrace_1_1record__reader__t.html", [
         [ "dynamorio::drmemtrace::record_file_reader_t< T >", "classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html", null ]
       ] ],
@@ -108,6 +110,8 @@
     [ "dynamorio::drmemtrace::module_mapper_t", "classdynamorio_1_1drmemtrace_1_1module__mapper__t.html", [
       [ "dynamorio::drmemtrace::test_module_mapper_t", "classdynamorio_1_1drmemtrace_1_1test__module__mapper__t.html", null ]
     ] ],
+    [ "dynamorio::drmemtrace::noise_generator_factory_t< RecordType, ReaderType >", "classdynamorio_1_1drmemtrace_1_1noise__generator__factory__t.html", null ],
+    [ "dynamorio::drmemtrace::noise_generator_info_t", "structdynamorio_1_1drmemtrace_1_1noise__generator__info__t.html", null ],
     [ "opnd_t", "structopnd__t.html", null ],
     [ "dynamorio::drmemtrace::pt2ir_config_t", "structdynamorio_1_1drmemtrace_1_1pt2ir__config__t.html", null ],
     [ "dynamorio::drmemtrace::pt2ir_t", "classdynamorio_1_1drmemtrace_1_1pt2ir__t.html", null ],

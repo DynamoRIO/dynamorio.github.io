@@ -6,7 +6,7 @@
     [ "decode_from_copy", "dr__ir__decode_8h.html#abf858ce8d17c1221ea6121f1bb437348", null ],
     [ "decode_memory_reference_size", "dr__ir__decode_8h.html#ac2d565e4e2eb9e0330181d03e69ba883", null ],
     [ "decode_next_pc", "dr__ir__decode_8h.html#ab6f165443f3c713182124b81656aca21", null ],
-    [ "decode_opcode_name", "dr__ir__decode_8h.html#a9793c4f9a1e642ca51c059c409ad8ffd", null ],
+    [ "decode_opcode_name", "dr__ir__decode_8h.html#a4e082d601545ea412f832608e822e668", null ],
     [ "decode_sizeof", "dr__ir__decode_8h.html#af4a2c830c95757037eaa1a192a22aa3a", null ],
     [ "decode_sizeof_ex", "dr__ir__decode_8h.html#ae858a4329f5eab4fd5c2562831ddc196", null ],
     [ "decode_trace", "dr__ir__decode_8h.html#ad6681a8cffe359fd76b9ed5f83ff0e3e", null ],

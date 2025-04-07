@@ -7,5 +7,9 @@
     [ "_memref_t", "uniondynamorio_1_1drmemtrace_1_1__memref__t.html", {% include_relative uniondynamorio_1_1drmemtrace_1_1__memref__t.js %} ],
     [ "memref_pid_t", "memref_8h.html#a513b2e3221fb3f740542d7498ab25fa8", null ],
     [ "memref_t", "memref_8h.html#ae4a471ed806967b2b6f911b6ef770704", null ],
-    [ "memref_tid_t", "memref_8h.html#a3e5e148e77271ee047c9f3e79f82fd87", null ]
+    [ "memref_tid_t", "memref_8h.html#a3e5e148e77271ee047c9f3e79f82fd87", null ],
+    [ "pid_from_memref_pid", "memref_8h.html#a8acb004d3ab8b200b5fc4d4ac145c55e", null ],
+    [ "tid_from_memref_tid", "memref_8h.html#a9999f67005065d6e82d34ef66e8ec0db", null ],
+    [ "workload_from_memref_pid", "memref_8h.html#a5d4cea2caf82880722e32975f5ed9885", null ],
+    [ "workload_from_memref_tid", "memref_8h.html#a4ce9436b26857c5c3cdb79f03087a163", null ]
 ],

@@ -88,7 +88,8 @@
       [ "Setup", "page_drsyscall.html#sec_drsyscall_setup", null ],
       [ "Event Replacement", "page_drsyscall.html#sec_drsyscall_events", null ],
       [ "Dr. Syscall API", "page_drsyscall.html#sec_drsyscall_API", null ],
-      [ "System Call Numbers", "page_drsyscall.html#sec_drsyscall_nums", null ]
+      [ "System Call Numbers", "page_drsyscall.html#sec_drsyscall_nums", null ],
+      [ "CI Test Coverage", "page_drsyscall.html#sec_ci_test_coverage", null ]
     ] ],
     [ "Instrumentation Utilities", "page_drutil.html", [
       [ "Setup", "page_drutil.html#sec_drutil_setup", null ],
