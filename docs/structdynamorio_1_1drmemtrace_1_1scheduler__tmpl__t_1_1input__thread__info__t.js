@@ -7,6 +7,7 @@
     [ "output_binding", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#a7935c52a446817dae3261e55055eda99", null ],
     [ "priority", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#a290e5c7299ecca9d28a489c297bb5747", null ],
     [ "regions_of_interest", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#a472a8e437ac776acb06bfffa3c928ae3", null ],
+    [ "shards", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#aefe97d86e00d42969e1a0dacc8169d85", null ],
     [ "struct_size", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#ad6af52c2c9d5c1317bdcd9e53d240d16", null ],
     [ "tids", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#ab404528b4974a4d98cb2b84504af7e3d", null ]
 ],

@@ -28,7 +28,8 @@ permalink: /namespacedynamorio_1_1drmemtrace.html
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">dynamorio::drmemtrace Namespace Reference</div>  </div>
 </div><!--header-->
@@ -661,6 +662,11 @@ Functions</h2></td></tr>
 <tr class="separator:a73a3b41d08fe1a6ff4f002ae7b643507"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade00c5d94b488ef28af05c948631ba04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#aa072932d15fbef2163f1b3704b33abf7">analysis_tool_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ade00c5d94b488ef28af05c948631ba04">view_tool_create</a> (const std::string &amp;module_file_path, uint64_t skip_refs, uint64_t sim_refs, const std::string &amp;syntax, unsigned int verbose=0, const std::string &amp;alt_module_dir=&quot;&quot;)</td></tr>
 <tr class="separator:ade00c5d94b488ef28af05c948631ba04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ac830533bb90de0ee0ccc3a573fe12f3e"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ac830533bb90de0ee0ccc3a573fe12f3e">MEMREF_T_SIZE_BYTES</a> = sizeof(<a class="el" href="structdynamorio_1_1drmemtrace_1_1__memref__instr__t.html">_memref_instr_t</a>)</td></tr>
+<tr class="separator:ac830533bb90de0ee0ccc3a573fe12f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>&lt; General DynamoRIO namespace. </p>
@@ -922,7 +928,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Each trace entry is one of the structures in this union. Each entry identifies the originating process and thread. Although the pc of each data reference is provided, the trace also guarantees that an instruction entry immediately precedes the data references that it is responsible for, with no intervening trace entries (unless it is a trace filtered with an online first-level cache). Offline traces further guarantee that an instruction entry for a branch instruction is always followed by an instruction entry for the branch's target (with any memory references for the branch in between of course) without a thread switch intervening, to make it simpler to identify branch targets (again, unless the trace is filtered by an online first-level cache). Online traces do not currently guarantee this. </p>
+<p>Each trace entry is one of the structures in this union. Each entry identifies the originating process and thread. Although the pc of each data reference is provided, the trace also guarantees that an instruction entry immediately precedes the data references that it is responsible for, with no intervening trace entries (unless it is a trace filtered with an online first-level cache). Offline traces further guarantee that an instruction entry for a branch instruction is always followed by an instruction entry for the branch's target (with any memory references for the branch in between of course) without a thread switch intervening, to make it simpler to identify branch targets (again, unless the trace is filtered by an online first-level cache). Online traces do not currently guarantee this.</p>
+<p>Note that <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae4a471ed806967b2b6f911b6ef770704">memref_t</a> is <b>not</b> initialized by default. The _raw_bytes array is added to the union as its first member to make sure a <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae4a471ed806967b2b6f911b6ef770704">memref_t</a> object can be fully initialized if desired, for example <code>memref_t memref = {};</code>. </p>
 
 </div>
 </div>
@@ -1628,7 +1635,7 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59ca2311f914a9e8e190d219e162c5e5afae"></a>TRACE_TYPE_THREAD_EXIT&#160;</td><td class="fielddoc"><p>A thread exit. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59ca5b91dc062b99779eb16c7647e07bac81"></a>TRACE_TYPE_FOOTER&#160;</td><td class="fielddoc"><p>The final entry in an offline file or a pipe. Not exposed to tools. </p>
+<tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59ca5b91dc062b99779eb16c7647e07bac81"></a>TRACE_TYPE_FOOTER&#160;</td><td class="fielddoc"><p>The final entry in an offline file or a pipe. Not exposed to tools. This can be in the middle of a derived trace when existing traces are combined into a new trace, as happens with core-sharded-on-disk traces produced by the record_filter tool in core-sharded mode. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59cabb6b1e53588cf4c57900ffd9389d30b8"></a>TRACE_TYPE_HARDWARE_PREFETCH&#160;</td><td class="fielddoc"><p>A hardware-issued prefetch (generated after tracing by a cache simulator). </p>
 </td></tr>
@@ -2888,11 +2895,35 @@ For additional file open parameters with the thread and window identifiers, use 
 
 </div>
 </div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ac830533bb90de0ee0ccc3a573fe12f3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac830533bb90de0ee0ccc3a573fe12f3e">&#9670;&nbsp;</a></span>MEMREF_T_SIZE_BYTES</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int dynamorio::drmemtrace::MEMREF_T_SIZE_BYTES = sizeof(<a class="el" href="structdynamorio_1_1drmemtrace_1_1__memref__instr__t.html">_memref_instr_t</a>)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>To enable <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae4a471ed806967b2b6f911b6ef770704">memref_t</a> to be default initialized reliably, a byte array is defined with the same length as the largest member of the union. A subsequent static_assert makes sure the chosen size is truly the largest. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20185 --- Mon Apr 7 2025 21:20:10 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20188 --- Fri Apr 11 2025 03:32:29 &nbsp; <img border=0 src="favicon.png">
 </small></address>

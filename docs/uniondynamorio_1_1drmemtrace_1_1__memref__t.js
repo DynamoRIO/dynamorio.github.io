@@ -1,4 +1,5 @@
 [
+    [ "_raw_bytes", "uniondynamorio_1_1drmemtrace_1_1__memref__t.html#a3290b2a5e2488080e0712fe29faf724b", null ],
     [ "data", "uniondynamorio_1_1drmemtrace_1_1__memref__t.html#a88831e4c9e223e304b4eed4ea36c7d1d", null ],
     [ "exit", "uniondynamorio_1_1drmemtrace_1_1__memref__t.html#ac87de83c7fd6d8c1d599e80012577876", null ],
     [ "flush", "uniondynamorio_1_1drmemtrace_1_1__memref__t.html#abb933652bf846a62a5af38df2cf9274e", null ],

@@ -53,6 +53,8 @@ Data Fields</h2></td></tr>
 <tr class="separator:ad6af52c2c9d5c1317bdcd9e53d240d16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab404528b4974a4d98cb2b84504af7e3d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a3e5e148e77271ee047c9f3e79f82fd87">memref_tid_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#ab404528b4974a4d98cb2b84504af7e3d">tids</a></td></tr>
 <tr class="separator:ab404528b4974a4d98cb2b84504af7e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefe97d86e00d42969e1a0dacc8169d85"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#aefe97d86e00d42969e1a0dacc8169d85">shards</a></td></tr>
+<tr class="separator:aefe97d86e00d42969e1a0dacc8169d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7935c52a446817dae3261e55055eda99"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#abbf00e5453f5498c1fa32d7e00c760db">output_ordinal_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#a7935c52a446817dae3261e55055eda99">output_binding</a></td></tr>
 <tr class="separator:a7935c52a446817dae3261e55055eda99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a290e5c7299ecca9d28a489c297bb5747"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html#a290e5c7299ecca9d28a489c297bb5747">priority</a> = 0</td></tr>
@@ -64,7 +66,7 @@ Data Fields</h2></td></tr>
 <div class="textblock"><h3>template&lt;typename RecordType, typename ReaderType&gt;<br />
 struct dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::input_thread_info_t</h3>
 
-<p>Specifies details about one set of input trace files from one workload, each input file representing a single software thread. It is assumed that there is no thread id duplication within one workload. </p>
+<p>Specifies details about one set of input trace files from one workload. Each input file typically represents either one software thread ("thread-sharded") or one hardware thread ("core-sharded"). The details in this struct apply to the inputs listed in the 'tids' (for thread-sharded, if identifying by tid) or 'shards' (for any sharding, if identifying by ordinal). When using 'tids' it is assumed that there is no thread id duplication within one workload. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a63261a3aee4ad0db0fc1c82d1d6511d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a63261a3aee4ad0db0fc1c82d1d6511d2">&#9670;&nbsp;</a></span>input_thread_info_t() <span class="overload">[1/5]</span></h2>
@@ -295,6 +297,23 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 
 </div>
 </div>
+<a id="aefe97d86e00d42969e1a0dacc8169d85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefe97d86e00d42969e1a0dacc8169d85">&#9670;&nbsp;</a></span>shards</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::input_thread_info_t::shards</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Which inputs the details in this structure apply to, expressed as 0-based ordinals in the 'readers' vector or in the files opened at 'path' (which are sorted lexicographically by path) in the containing <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__workload__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::input_workload_t</a>. Only one of 'tids' and 'shards' can be non-empty. If 'tids' is empty and 'shards' is empty, the details apply to all not-yet-mentioned (by other 'tids' or 'shards' vectors in prior entries for this workload) inputs in the <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__workload__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::input_workload_t</a>. If multiple entries list the same shard ordinal, only the last one is honored. </p>
+
+</div>
+</div>
 <a id="ad6af52c2c9d5c1317bdcd9e53d240d16"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad6af52c2c9d5c1317bdcd9e53d240d16">&#9670;&nbsp;</a></span>struct_size</h2>
 
@@ -308,7 +327,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Size of the struct for binary-compatible additions. </p>
+<p>Size of the struct. Not used as this structure cannot support binary-compatible additions due to limits of C++ offsetof support with some implementations of std::set where it is not a standard-layout class: thus, changes here require recompiling tools using this code. </p>
 
 </div>
 </div>
@@ -325,7 +344,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Which threads the details in this structure apply to. If empty, the details apply to all not-yet-mentioned (by other 'tids' vectors in prior entries for this workload) threads in the <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__workload__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::input_workload_t</a>. </p>
+<p>Which input threads the details in this structure apply to. Only one of 'tids' and 'shards' can be non-empty. If 'tids' is empty and 'shards' is empty, the details apply to all unmentioned (by other 'tids' or 'shards' vectors in other entries for this workload) inputs in the <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__workload__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::input_workload_t</a>. When using 'tids' it is assumed that there is no thread id duplication within one workload. If multiple entries list the same tid, only the last one is honored. </p>
 
 </div>
 </div>
@@ -338,5 +357,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20185 --- Mon Apr 7 2025 21:20:11 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20188 --- Fri Apr 11 2025 03:32:29 &nbsp; <img border=0 src="favicon.png">
 </small></address>

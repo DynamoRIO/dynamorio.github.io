@@ -320,5 +320,6 @@
     [ "type_is_read", "namespacedynamorio_1_1drmemtrace.html#a73a3b41d08fe1a6ff4f002ae7b643507", null ],
     [ "view_tool_create", "namespacedynamorio_1_1drmemtrace.html#ade00c5d94b488ef28af05c948631ba04", null ],
     [ "workload_from_memref_pid", "namespacedynamorio_1_1drmemtrace.html#a5d4cea2caf82880722e32975f5ed9885", null ],
-    [ "workload_from_memref_tid", "namespacedynamorio_1_1drmemtrace.html#a4ce9436b26857c5c3cdb79f03087a163", null ]
+    [ "workload_from_memref_tid", "namespacedynamorio_1_1drmemtrace.html#a4ce9436b26857c5c3cdb79f03087a163", null ],
+    [ "MEMREF_T_SIZE_BYTES", "namespacedynamorio_1_1drmemtrace.html#ac830533bb90de0ee0ccc3a573fe12f3e", null ]
 ],

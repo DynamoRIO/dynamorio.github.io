@@ -11,5 +11,6 @@
     [ "pid_from_memref_pid", "memref_8h.html#a8acb004d3ab8b200b5fc4d4ac145c55e", null ],
     [ "tid_from_memref_tid", "memref_8h.html#a9999f67005065d6e82d34ef66e8ec0db", null ],
     [ "workload_from_memref_pid", "memref_8h.html#a5d4cea2caf82880722e32975f5ed9885", null ],
-    [ "workload_from_memref_tid", "memref_8h.html#a4ce9436b26857c5c3cdb79f03087a163", null ]
+    [ "workload_from_memref_tid", "memref_8h.html#a4ce9436b26857c5c3cdb79f03087a163", null ],
+    [ "MEMREF_T_SIZE_BYTES", "memref_8h.html#ac830533bb90de0ee0ccc3a573fe12f3e", null ]
 ],

@@ -35,6 +35,8 @@ permalink: /uniondynamorio_1_1drmemtrace_1_1__memref__t.html
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
+<tr class="memitem:a3290b2a5e2488080e0712fe29faf724b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uniondynamorio_1_1drmemtrace_1_1__memref__t.html#a3290b2a5e2488080e0712fe29faf724b">_raw_bytes</a> [<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ac830533bb90de0ee0ccc3a573fe12f3e">MEMREF_T_SIZE_BYTES</a>]</td></tr>
+<tr class="separator:a3290b2a5e2488080e0712fe29faf724b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88831e4c9e223e304b4eed4ea36c7d1d"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdynamorio_1_1drmemtrace_1_1__memref__data__t.html">_memref_data_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uniondynamorio_1_1drmemtrace_1_1__memref__t.html#a88831e4c9e223e304b4eed4ea36c7d1d">data</a></td></tr>
 <tr class="separator:a88831e4c9e223e304b4eed4ea36c7d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc6545d605997d015e75696eacddecd9"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdynamorio_1_1drmemtrace_1_1__memref__instr__t.html">_memref_instr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uniondynamorio_1_1drmemtrace_1_1__memref__t.html#abc6545d605997d015e75696eacddecd9">instr</a></td></tr>
@@ -47,8 +49,24 @@ Data Fields</h2></td></tr>
 <tr class="separator:a4f3a4f14814e7efb3496681f33001213"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Each trace entry is one of the structures in this union. Each entry identifies the originating process and thread. Although the pc of each data reference is provided, the trace also guarantees that an instruction entry immediately precedes the data references that it is responsible for, with no intervening trace entries (unless it is a trace filtered with an online first-level cache). Offline traces further guarantee that an instruction entry for a branch instruction is always followed by an instruction entry for the branch's target (with any memory references for the branch in between of course) without a thread switch intervening, to make it simpler to identify branch targets (again, unless the trace is filtered by an online first-level cache). Online traces do not currently guarantee this. </p>
+<div class="textblock"><p>Each trace entry is one of the structures in this union. Each entry identifies the originating process and thread. Although the pc of each data reference is provided, the trace also guarantees that an instruction entry immediately precedes the data references that it is responsible for, with no intervening trace entries (unless it is a trace filtered with an online first-level cache). Offline traces further guarantee that an instruction entry for a branch instruction is always followed by an instruction entry for the branch's target (with any memory references for the branch in between of course) without a thread switch intervening, to make it simpler to identify branch targets (again, unless the trace is filtered by an online first-level cache). Online traces do not currently guarantee this.</p>
+<p>Note that <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae4a471ed806967b2b6f911b6ef770704">memref_t</a> is <b>not</b> initialized by default. The _raw_bytes array is added to the union as its first member to make sure a <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae4a471ed806967b2b6f911b6ef770704">memref_t</a> object can be fully initialized if desired, for example <code>memref_t memref = {};</code>. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
+<a id="a3290b2a5e2488080e0712fe29faf724b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3290b2a5e2488080e0712fe29faf724b">&#9670;&nbsp;</a></span>_raw_bytes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t dynamorio::drmemtrace::_memref_t::_raw_bytes[<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ac830533bb90de0ee0ccc3a573fe12f3e">MEMREF_T_SIZE_BYTES</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Do not use: for init only. </p>
+
+</div>
+</div>
 <a id="a88831e4c9e223e304b4eed4ea36c7d1d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a88831e4c9e223e304b4eed4ea36c7d1d">&#9670;&nbsp;</a></span>data</h2>
 
@@ -133,5 +151,5 @@ Data Fields</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20185 --- Mon Apr 7 2025 21:20:10 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20188 --- Fri Apr 11 2025 03:32:29 &nbsp; <img border=0 src="favicon.png">
 </small></address>
