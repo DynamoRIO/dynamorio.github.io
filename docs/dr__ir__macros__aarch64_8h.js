@@ -189,6 +189,7 @@
     [ "INSTR_CREATE_eors_sve_pred", "dr__ir__macros__aarch64_8h.html#af4a333109e49ee10c12fa3a20ba6414d", null ],
     [ "INSTR_CREATE_eortb_sve", "dr__ir__macros__aarch64_8h.html#a03f6429c57cfcdf4988433abb06da9b4", null ],
     [ "INSTR_CREATE_eorv_sve_pred", "dr__ir__macros__aarch64_8h.html#a7441ca5aeb4bd0630c1f69895ab6bc98", null ],
+    [ "INSTR_CREATE_eret", "dr__ir__macros__aarch64_8h.html#ae39af6c564b142ce405ff305da2270fa", null ],
     [ "INSTR_CREATE_eretaa", "dr__ir__macros__aarch64_8h.html#ab16eb6cc2804e528628a3bba398f05d1", null ],
     [ "INSTR_CREATE_eretab", "dr__ir__macros__aarch64_8h.html#ae5fbc04167cee081bbf89de0f687dc6e", null ],
     [ "INSTR_CREATE_esb", "dr__ir__macros__aarch64_8h.html#a1667ee46b0f1dc66bafb003851d3596b", null ],

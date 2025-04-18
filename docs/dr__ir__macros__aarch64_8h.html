@@ -1742,6 +1742,8 @@ Macros</h2></td></tr>
 <tr class="separator:aba779414eb8acdf1d5f5497ade5b7adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afeb0ab0c4af3e65793809de7a767e48e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#afeb0ab0c4af3e65793809de7a767e48e">INSTR_CREATE_xpaclri</a>(dc)</td></tr>
 <tr class="separator:afeb0ab0c4af3e65793809de7a767e48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae39af6c564b142ce405ff305da2270fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ae39af6c564b142ce405ff305da2270fa">INSTR_CREATE_eret</a>(dc)&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ae46bafd225c6e0863befba736c372455">instr_create_0dst_0src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9eacc2c967c9393afbd2cc4027e09b8e918">OP_eret</a>)</td></tr>
+<tr class="separator:ae39af6c564b142ce405ff305da2270fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab16eb6cc2804e528628a3bba398f05d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ab16eb6cc2804e528628a3bba398f05d1">INSTR_CREATE_eretaa</a>(dc)</td></tr>
 <tr class="separator:ab16eb6cc2804e528628a3bba398f05d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5fbc04167cee081bbf89de0f687dc6e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__macros__aarch64_8h.html#ae5fbc04167cee081bbf89de0f687dc6e">INSTR_CREATE_eretab</a>(dc)</td></tr>
@@ -11863,6 +11865,32 @@ Macros</h2></td></tr>
     <tr><td class="paramname">Vd</td><td>The destination register. Can be H (halfword, 16 bits), S (singleword, 32 bits), B (byte, 8 bits) or D (doubleword, 64 bits). </td></tr>
     <tr><td class="paramname">Pg</td><td>The governing predicate register, P (Predicate). </td></tr>
     <tr><td class="paramname">Zn</td><td>The source vector register, Z (Scalable). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae39af6c564b142ce405ff305da2270fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae39af6c564b142ce405ff305da2270fa">&#9670;&nbsp;</a></span>INSTR_CREATE_eret</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTR_CREATE_eret</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="dr__ir__instr_8h.html#ae46bafd225c6e0863befba736c372455">instr_create_0dst_0src</a>(dc, <a class="el" href="dr__ir__opcodes__arm_8h.html#a61dadd085c1777f559549e05962b2c9eacc2c967c9393afbd2cc4027e09b8e918">OP_eret</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates an ERET instruction.</p>
+<p>This macro is used to encode the forms: </p><pre class="fragment">*    ERET
+* </pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dc</td><td>The void * dcontext used to allocate memory for the <a class="el" href="structinstr__t.html">instr_t</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -61408,5 +61436,5 @@ Macros</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20188 --- Fri Apr 11 2025 03:32:26 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20196 --- Fri Apr 18 2025 03:32:09 &nbsp; <img border=0 src="favicon.png">
 </small></address>
