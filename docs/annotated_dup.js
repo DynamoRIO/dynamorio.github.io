@@ -119,5 +119,6 @@
     [ "features_t", "structfeatures__t.html", {% include_relative structfeatures__t.js %} ],
     [ "instr_noalloc_t", "structinstr__noalloc__t.html", {% include_relative structinstr__noalloc__t.js %} ],
     [ "instr_t", "structinstr__t.html", null ],
-    [ "opnd_t", "structopnd__t.html", null ]
+    [ "opnd_t", "structopnd__t.html", null ],
+    [ "syscall_record_t_", "structsyscall__record__t__.html", {% include_relative structsyscall__record__t__.js %} ]
 ],

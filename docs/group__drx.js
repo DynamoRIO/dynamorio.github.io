@@ -5,13 +5,13 @@
     [ "DRX_FILE_SKIP_OPEN", "group__drx.html#ga1c12b3b71826d8b412f25a0059fd2017", null ],
     [ "drx_buf_full_cb_t", "group__drx.html#ga8006198d0e3f3f85df687e9286de597c", null ],
     [ "drx_buf_t", "group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf", [
-      [ "DRMGR_PRIORITY_FAULT_DRX", "group__drx.html#ggab48899087cc647f0f791ed0c459adc53a8cd3adf4599b9be81a32a0d111df47ed", null ],
-      [ "DRX_COUNTER_64BIT", "group__drx.html#gga1f9aebf1de3ebbf4283a4dcf73308562a507636af18a8858c214066682d013a1a", null ],
-      [ "DRX_COUNTER_REL_ACQ", "group__drx.html#gga1f9aebf1de3ebbf4283a4dcf73308562aa50fccbd9d5dc9f300d6033c971f95e4", null ],
-      [ "DRX_COUNTER_LOCK", "group__drx.html#gga1f9aebf1de3ebbf4283a4dcf73308562aa45e32a1d62398b84858de6759364688", null ],
-      [ "DRX_BUF_FAST_CIRCULAR_BUFSZ", "group__drx.html#gga77867ab4129f63159b37bca3b652a798a72c2469ba268615b188959b3ffbef685", null ],
-      [ "DRMGR_PRIORITY_THREAD_INIT_DRX_BUF", "group__drx.html#gga16685eea158879e41b101ca3634de462ad97fe2f57b9c6ec96fd3b8461b0cfeb1", null ],
-      [ "DRMGR_PRIORITY_THREAD_EXIT_DRX_BUF", "group__drx.html#gga16685eea158879e41b101ca3634de462a2c71daa1f7dc4665d5e32997578809c0", null ]
+      [ "DRMGR_PRIORITY_FAULT_DRX", "group__drx.html#gga16685eea158879e41b101ca3634de462a8cd3adf4599b9be81a32a0d111df47ed", null ],
+      [ "DRX_COUNTER_64BIT", "group__drx.html#ggafa231099d07583c3ed0981e0bb665f55a507636af18a8858c214066682d013a1a", null ],
+      [ "DRX_COUNTER_REL_ACQ", "group__drx.html#ggafa231099d07583c3ed0981e0bb665f55aa50fccbd9d5dc9f300d6033c971f95e4", null ],
+      [ "DRX_COUNTER_LOCK", "group__drx.html#ggafa231099d07583c3ed0981e0bb665f55aa45e32a1d62398b84858de6759364688", null ],
+      [ "DRX_BUF_FAST_CIRCULAR_BUFSZ", "group__drx.html#gga394b3903fbf00ba2b6243f60689a5a5fa72c2469ba268615b188959b3ffbef685", null ],
+      [ "DRMGR_PRIORITY_THREAD_INIT_DRX_BUF", "group__drx.html#ggac205be2172292384dd687b5471a87eddad97fe2f57b9c6ec96fd3b8461b0cfeb1", null ],
+      [ "DRMGR_PRIORITY_THREAD_EXIT_DRX_BUF", "group__drx.html#ggac205be2172292384dd687b5471a87edda2c71daa1f7dc4665d5e32997578809c0", null ]
     ] ],
     [ "drx_aflags_are_dead", "group__drx.html#gae33a91872caa46e430d5d721af6d8c82", null ],
     [ "drx_buf_create_circular_buffer", "group__drx.html#ga4caa3e50a3cfb5ecb5c08e65fc44ada3", null ],
