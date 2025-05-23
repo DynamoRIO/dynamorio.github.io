@@ -32366,7 +32366,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="dr__ir__macros__aarch64_8h.html#a3a5fa20afd157e3a42b1d54f6f9eff17">INSTR_CREATE_eor_sve_pred_b</a>(                    \</div>
 <div class="line">        dc, Pd, Pg, Pn, <a class="code" href="dr__ir__opnd_8h.html#a02af50459baa3969fb852eac4bef6d12">opnd_create_reg_element_vector</a>(<a class="code" href="dr__ir__opnd_8h.html#ac3ba48b3ee94afa0dde7fa025c199892">opnd_get_reg</a>(Pg), <a class="code" href="dr__ir__opnd_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da1ae7577a8e73d4a38aa18598de9ba8a6">OPSZ_1</a>))</div>
-<div class="ttc" id="adr__ir__macros__aarch64_8h_html_a3a5fa20afd157e3a42b1d54f6f9eff17"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#a3a5fa20afd157e3a42b1d54f6f9eff17">INSTR_CREATE_eor_sve_pred_b</a></div><div class="ttdeci">#define INSTR_CREATE_eor_sve_pred_b(dc, Pd, Pg, Pn, Pm)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:7256</div></div>
+<div class="ttc" id="adr__ir__macros__aarch64_8h_html_a3a5fa20afd157e3a42b1d54f6f9eff17"><div class="ttname"><a href="dr__ir__macros__aarch64_8h.html#a3a5fa20afd157e3a42b1d54f6f9eff17">INSTR_CREATE_eor_sve_pred_b</a></div><div class="ttdeci">#define INSTR_CREATE_eor_sve_pred_b(dc, Pd, Pg, Pn, Pm)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_aarch64.h:7291</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a02af50459baa3969fb852eac4bef6d12"><div class="ttname"><a href="dr__ir__opnd_8h.html#a02af50459baa3969fb852eac4bef6d12">opnd_create_reg_element_vector</a></div><div class="ttdeci">DR_API INSTR_INLINE opnd_t opnd_create_reg_element_vector(reg_id_t r, opnd_size_t element_size)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a0411cd49bb5b71852cecd93bcbf0ca2da1ae7577a8e73d4a38aa18598de9ba8a6"><div class="ttname"><a href="dr__ir__opnd_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da1ae7577a8e73d4a38aa18598de9ba8a6">OPSZ_1</a></div><div class="ttdeci">@ OPSZ_1</div><div class="ttdef"><b>Definition:</b> dr_ir_opnd.h:83</div></div>
 </div><!-- fragment --><p>Creates a NOT instruction.</p>
@@ -61101,11 +61101,11 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    (<a class="code" href="dr__ir__opnd_8h.html#aa4a4d5c6b8fd6d065b4719124f4dcafe">opnd_is_reg</a>(rm_or_imm)                                                           \</div>
-<div class="line">         ? <a class="code" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_lsrv, d, d, rm_or_imm)                       \</div>
-<div class="line">         : <a class="code" href="dr__ir__instr_8h.html#a930c98d46baab6d438dd81936c0666a4">instr_create_1dst_3src</a>(dc, OP_ubfm, d, d, rm_or_imm,                       \</div>
-<div class="line">                                  <a class="code" href="dr__ir__opnd_8h.html#a6769b1787653c1a0fb2070df83d79a73">reg_is_32bit</a>(<a class="code" href="dr__ir__opnd_8h.html#ac3ba48b3ee94afa0dde7fa025c199892">opnd_get_reg</a>(d)) ? <a class="code" href="dr__ir__macros__aarch64_8h.html#aaaaa7dc76fd64fbfe69faa2be5c1c909">OPND_CREATE_INT</a>(31) \</div>
-<div class="line">                                                                : <a class="code" href="dr__ir__macros__aarch64_8h.html#aaaaa7dc76fd64fbfe69faa2be5c1c909">OPND_CREATE_INT</a>(63)))</div>
+<b>Value:</b><div class="fragment"><div class="line">    (<a class="code" href="dr__ir__opnd_8h.html#aa4a4d5c6b8fd6d065b4719124f4dcafe">opnd_is_reg</a>(rm_or_imm)                                                      \</div>
+<div class="line">         ? <a class="code" href="dr__ir__instr_8h.html#afae7934b382c9878b415a3fdd8a55204">instr_create_1dst_2src</a>(dc, OP_lsrv, d, d, rm_or_imm)                  \</div>
+<div class="line">         : INSTR_CREATE_ubfm(dc, d, d, rm_or_imm,                                \</div>
+<div class="line">                             <a class="code" href="dr__ir__opnd_8h.html#a6769b1787653c1a0fb2070df83d79a73">reg_is_32bit</a>(<a class="code" href="dr__ir__opnd_8h.html#ac3ba48b3ee94afa0dde7fa025c199892">opnd_get_reg</a>(d)) ? <a class="code" href="dr__ir__macros__aarch64_8h.html#aaaaa7dc76fd64fbfe69faa2be5c1c909">OPND_CREATE_INT</a>(31) \</div>
+<div class="line">                                                           : <a class="code" href="dr__ir__macros__aarch64_8h.html#aaaaa7dc76fd64fbfe69faa2be5c1c909">OPND_CREATE_INT</a>(63)))</div>
 <div class="ttc" id="adr__ir__opnd_8h_html_a6769b1787653c1a0fb2070df83d79a73"><div class="ttname"><a href="dr__ir__opnd_8h.html#a6769b1787653c1a0fb2070df83d79a73">reg_is_32bit</a></div><div class="ttdeci">DR_API bool reg_is_32bit(reg_id_t reg)</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_aa4a4d5c6b8fd6d065b4719124f4dcafe"><div class="ttname"><a href="dr__ir__opnd_8h.html#aa4a4d5c6b8fd6d065b4719124f4dcafe">opnd_is_reg</a></div><div class="ttdeci">DR_API bool opnd_is_reg(opnd_t opnd)</div></div>
 </div><!-- fragment --><p>This platform-independent macro creates an <a class="el" href="structinstr__t.html">instr_t</a> for a logical right shift instruction that does affect the status flags. </p><dl class="params"><dt>Parameters</dt><dd>
@@ -61436,5 +61436,5 @@ Macros</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20224 --- Fri May 16 2025 03:42:46 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20229 --- Fri May 23 2025 03:41:42 &nbsp; <img border=0 src="favicon.png">
 </small></address>
