@@ -72,6 +72,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abb52725f62535d935819773a3257fb8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61f6d4636732ae64cab89501f9973936"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1default__memtrace__stream__t.html#a61f6d4636732ae64cab89501f9973936">get_tid</a> () const override</td></tr>
 <tr class="separator:a61f6d4636732ae64cab89501f9973936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dd7a40a576ab9c5adec2b721ec779f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1default__memtrace__stream__t.html#a6dd7a40a576ab9c5adec2b721ec779f5">is_record_kernel</a> () const override</td></tr>
+<tr class="separator:a6dd7a40a576ab9c5adec2b721ec779f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdynamorio_1_1drmemtrace_1_1memtrace__stream__t"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdynamorio_1_1drmemtrace_1_1memtrace__stream__t')"><img src="/images/closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html">dynamorio::drmemtrace::memtrace_stream_t</a></td></tr>
 <tr class="memitem:a9456c6d4e4f7d8e70ad65345ebb2808a inherit pub_methods_classdynamorio_1_1drmemtrace_1_1memtrace__stream__t"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a9456c6d4e4f7d8e70ad65345ebb2808a">~memtrace_stream_t</a> ()</td></tr>
 <tr class="separator:a9456c6d4e4f7d8e70ad65345ebb2808a inherit pub_methods_classdynamorio_1_1drmemtrace_1_1memtrace__stream__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -81,8 +83,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a97057e9e7a7f417b1841a0a2e37503d2 inherit pub_methods_classdynamorio_1_1drmemtrace_1_1memtrace__stream__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee4fe624edfe4e8d9b8416ab2114c1d0 inherit pub_methods_classdynamorio_1_1drmemtrace_1_1memtrace__stream__t"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html">memtrace_stream_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#aee4fe624edfe4e8d9b8416ab2114c1d0">get_input_interface</a> () const</td></tr>
 <tr class="separator:aee4fe624edfe4e8d9b8416ab2114c1d0 inherit pub_methods_classdynamorio_1_1drmemtrace_1_1memtrace__stream__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff0f5d22c992aa84c6dabb7713be9ec5 inherit pub_methods_classdynamorio_1_1drmemtrace_1_1memtrace__stream__t"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#aff0f5d22c992aa84c6dabb7713be9ec5">is_record_kernel</a> () const</td></tr>
-<tr class="separator:aff0f5d22c992aa84c6dabb7713be9ec5 inherit pub_methods_classdynamorio_1_1drmemtrace_1_1memtrace__stream__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf6b2b760e4daa1d40d6bc151a6c9eb2 inherit pub_methods_classdynamorio_1_1drmemtrace_1_1memtrace__stream__t"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#abf6b2b760e4daa1d40d6bc151a6c9eb2">get_schedule_statistic</a> (<a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a86e5d510793bb63af0144b38eded2d12">schedule_statistic_t</a> stat) const</td></tr>
 <tr class="separator:abf6b2b760e4daa1d40d6bc151a6c9eb2 inherit pub_methods_classdynamorio_1_1drmemtrace_1_1memtrace__stream__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -516,6 +516,34 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a6dd7a40a576ab9c5adec2b721ec779f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dd7a40a576ab9c5adec2b721ec779f5">&#9670;&nbsp;</a></span>is_record_kernel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dynamorio::drmemtrace::default_memtrace_stream_t::is_record_kernel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns whether the current record is from a part of the trace corresponding to kernel execution. </p>
+
+<p>Reimplemented from <a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#aff0f5d22c992aa84c6dabb7713be9ec5">dynamorio::drmemtrace::memtrace_stream_t</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/runner/work/dynamorio/dynamorio/build_release-64/clients/include/drmemtrace/<a class="el" href="memtrace__stream_8h.html">memtrace_stream.h</a></li>
 </ul>
@@ -525,5 +553,5 @@ Additional Inherited Members</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20229 --- Fri May 23 2025 03:41:45 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20236 --- Fri May 30 2025 03:42:55 &nbsp; <img border=0 src="favicon.png">
 </small></address>
