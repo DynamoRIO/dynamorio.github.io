@@ -26,6 +26,7 @@
       [ "Getting Help and Reporting Bugs", "google_workload_traces.html#sec_google_help", null ],
       [ "Contributing", "google_workload_traces.html#sec_google_contrib", null ],
       [ "Cite Google Workload Traces", "google_workload_traces.html#sec_google_cite", null ],
+      [ "Common Issues", "google_workload_traces.html#sec_google_common_issues", null ],
       [ "Deprecated Google Workload Traces (Version 1)", "google_workload_traces.html#sec_public_v1_deprecated", null ]
     ] ],
     [ "Configuration File", "sec_drcachesim_config_file.html", null ],

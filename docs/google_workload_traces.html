@@ -99,7 +99,13 @@ Cite Google Workload Traces</h1>
   howpublished = {\url{https://console.cloud.google.com/storage/browser/external-traces-v2}},
   note = {Accessed: yyyy-mm-dd}
 }
-</pre><h1><a class="anchor" id="sec_public_v1_deprecated"></a>
+</pre><h1><a class="anchor" id="sec_google_common_issues"></a>
+Common Issues</h1>
+<p>Here we collect common issues that some users might experience when using the Google Workload Traces.</p>
+<ul>
+<li>Depending on the Linux distribution used, there might be a "nofile" threshold for the number of files a single process can open that is set too low (e.g., 1024). This threshold can be increased using "ulimit -n 8192". A threshold of 8192 is enough for Google Workload Traces. Consider adding this command to your ".bashrc". A low "nofile" threshold is problematic when a DynamoRIO analyzer or scheduler operates on a whole Google trace, which can have over 2000 trace files (one per software thread). This can result in "Failed to initialize scheduler: Failed to open PATH/TO/MEMTRACE.ZIP". If this happens, please increase the "nofile" threshold.</li>
+</ul>
+<h1><a class="anchor" id="sec_public_v1_deprecated"></a>
 Deprecated Google Workload Traces (Version 1)</h1>
 <p>The previous version of Google workload traces contains a subset of the information of the current traces and has been deprecated. Please use the current version described above.</p>
 <p>The previous version can still be found at:</p>
@@ -114,5 +120,5 @@ Deprecated Google Workload Traces (Version 1)</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20236 --- Fri May 30 2025 03:42:55 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20244 --- Fri Jun 6 2025 03:46:15 &nbsp; <img border=0 src="favicon.png">
 </small></address>
