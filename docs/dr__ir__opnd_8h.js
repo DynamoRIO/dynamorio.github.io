@@ -335,6 +335,7 @@
     [ "reg_get_value_ex", "dr__ir__opnd_8h.html#a91a1e9af9b33791b59a5903bdeef9415", null ],
     [ "reg_is_32bit", "dr__ir__opnd_8h.html#a6769b1787653c1a0fb2070df83d79a73", null ],
     [ "reg_is_64bit", "dr__ir__opnd_8h.html#a3259d4fdc82dc2318922acfe1c2a4f54", null ],
+    [ "reg_is_avx512", "dr__ir__opnd_8h.html#ad0fb1965186462344031bd3dff76dbe6", null ],
     [ "reg_is_avx512_extended", "dr__ir__opnd_8h.html#a0c72ebc524eec58cc52c0fda76251b19", null ],
     [ "reg_is_bnd", "dr__ir__opnd_8h.html#a6f336ce867c15469b664a710fe8e2a2b", null ],
     [ "reg_is_extended", "dr__ir__opnd_8h.html#a3d184213410a0e31c4b3895fb7d4708f", null ],

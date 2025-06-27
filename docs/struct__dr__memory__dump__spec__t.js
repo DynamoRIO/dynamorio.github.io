@@ -1,4 +1,5 @@
 [
+    [ "elf_output_directory", "struct__dr__memory__dump__spec__t.html#a435d0ae2139bcc5ce93d8bc8f9efeae8", null ],
     [ "elf_path", "struct__dr__memory__dump__spec__t.html#a5819c0db028c7cd88abf0ab746214d23", null ],
     [ "elf_path_size", "struct__dr__memory__dump__spec__t.html#af4ac273bc7a85d06a0bbe9eec1fc8b4c", null ],
     [ "flags", "struct__dr__memory__dump__spec__t.html#ad9116bf5b9e35df23010715759e621aa", null ],

@@ -1596,6 +1596,8 @@ Functions</h2></td></tr>
 <tr class="separator:a3d184213410a0e31c4b3895fb7d4708f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c72ebc524eec58cc52c0fda76251b19"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a0c72ebc524eec58cc52c0fda76251b19">reg_is_avx512_extended</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> reg)</td></tr>
 <tr class="separator:a0c72ebc524eec58cc52c0fda76251b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0fb1965186462344031bd3dff76dbe6"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#ad0fb1965186462344031bd3dff76dbe6">reg_is_avx512</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> reg)</td></tr>
+<tr class="separator:ad0fb1965186462344031bd3dff76dbe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e762bd30785c3eef5bf1de58362112d"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a8e762bd30785c3eef5bf1de58362112d">reg_32_to_opsz</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> reg, <a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a> sz)</td></tr>
 <tr class="separator:a8e762bd30785c3eef5bf1de58362112d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ef3aeb840262664fad8e94937ae82c2"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__ir__opnd_8h.html#a8ef3aeb840262664fad8e94937ae82c2">reg_resize_to_opsz</a> (<a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a> reg, <a class="el" href="dr__ir__opnd_8h.html#a74a13beec75b515dee3dffd3a12110ff">opnd_size_t</a> sz)</td></tr>
@@ -7363,6 +7365,25 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad0fb1965186462344031bd3dff76dbe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0fb1965186462344031bd3dff76dbe6">&#9670;&nbsp;</a></span>reg_is_avx512()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_API bool reg_is_avx512 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dr__ir__opnd_8h.html#a0ee0a856086c863d56ad515919e03136">reg_id_t</a>&#160;</td>
+          <td class="paramname"><em>reg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns true iff <code>reg</code> refers to register added by the AVX-512 feature set. Returns true for any ZMM register, any opmask register, and any <a class="el" href="dr__ir__opnd_8h.html#a0c72ebc524eec58cc52c0fda76251b19">reg_is_avx512_extended()</a> register. </p>
+
+</div>
+</div>
 <a id="a0c72ebc524eec58cc52c0fda76251b19"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0c72ebc524eec58cc52c0fda76251b19">&#9670;&nbsp;</a></span>reg_is_avx512_extended()</h2>
 
@@ -7888,5 +7909,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20246 --- Fri Jun 20 2025 03:47:13 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20266 --- Fri Jun 27 2025 03:49:23 &nbsp; <img border=0 src="favicon.png">
 </small></address>

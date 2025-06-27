@@ -137,6 +137,9 @@ If non-zero, this sets a maximum size on the amount of trace entry references (o
 <li><b>-align_endpoints</b> <br  />
 <em>default value: true</em> <br  />
 When using attach/detach to trace a burst, the attach and detach processes are staggered, with the set of threads producing trace data incrementally growing or shrinking. This results in uneven thread activity at the start and end of the burst. If this option is enabled, tracing is nop-ed until fully attached to all threads and is nop-ed as soon as detach starts, eliminating the unevenness. This also allows omitting threads that did nothing during the burst.</li>
+<li><b>-memdump_on_window</b> <br  />
+<em>default value: false</em> <br  />
+Capture a memory dump upon the initiation of tracing triggered by -trace_after_instrs, -trace_instr_intervals_file, or -retrace_every_instrs. If -retrace_every_instrs is also enabled, a memory dump will be captured for each individual tracing window. This is only supported on X64 Linux.</li>
 <li><b>-trace_after_instrs</b> <br  />
 <em>default value: 0</em> <br  />
 If non-zero, this causes tracing to be suppressed until this many dynamic instruction executions are observed from the start of the application. At that point, regular tracing is put into place. The threshold should be considered approximate, especially for larger values. Use -trace_for_instrs, -max_trace_size, or -max_global_trace_refs to set a limit on the subsequent trace length. Use -retrace_every_instrs to trace repeatedly.</li>
@@ -445,5 +448,5 @@ By default, errors in decoding the kernel syscall PT trace in pt2ir are fatal to
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20246 --- Fri Jun 20 2025 03:47:15 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20266 --- Fri Jun 27 2025 03:49:24 &nbsp; <img border=0 src="favicon.png">
 </small></address>
