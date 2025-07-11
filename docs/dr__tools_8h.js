@@ -176,6 +176,7 @@
     [ "dr_hashtable_remove", "dr__tools_8h.html#a591d0cd49bd9a54ee723edadf4f72895", null ],
     [ "dr_insert_read_raw_tls", "dr__tools_8h.html#a75586a7501d994aa4bbd70519b726c0c", null ],
     [ "dr_insert_write_raw_tls", "dr__tools_8h.html#a802140e02e8ea041cd7ec793160d731f", null ],
+    [ "dr_invoke_syscall_as_app", "dr__tools_8h.html#a5a3d2094bf20d16d0086bd980842257b", null ],
     [ "dr_is_notify_on", "dr__tools_8h.html#ae2868b3eac7b652ffa561f3f4d15a6c0", null ],
     [ "dr_is_thread_native", "dr__tools_8h.html#a12f0ea543a114210feefc521b132d69b", null ],
     [ "dr_is_tracking_where_am_i", "dr__tools_8h.html#ab185c8efca620f8cd0e323164afbc935", null ],
