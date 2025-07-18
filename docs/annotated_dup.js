@@ -102,6 +102,7 @@
     [ "_drsys_sysnum_t", "struct__drsys__sysnum__t.html", {% include_relative struct__drsys__sysnum__t.js %} ],
     [ "_drvector_t", "struct__drvector__t.html", {% include_relative struct__drvector__t.js %} ],
     [ "_drwrap_stats_t", "struct__drwrap__stats__t.html", {% include_relative struct__drwrap__stats__t.js %} ],
+    [ "_drx_time_scale_t", "struct__drx__time__scale__t.html", {% include_relative struct__drx__time__scale__t.js %} ],
     [ "_emulated_instr_t", "struct__emulated__instr__t.html", {% include_relative struct__emulated__instr__t.js %} ],
     [ "_hashtable_config_t", "struct__hashtable__config__t.html", {% include_relative struct__hashtable__config__t.js %} ],
     [ "_module_data_t", "struct__module__data__t.html", {% include_relative struct__module__data__t.js %} ],

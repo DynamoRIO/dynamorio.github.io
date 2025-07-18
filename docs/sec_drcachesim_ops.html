@@ -265,7 +265,10 @@ This option is honored by certain tools such as the cache and TLB simulators. It
 Specifies the fraction of last level cache blocks to be loaded such that the cache is considered to be warmed up before simulation. The warmup fraction is computed after the skipped references and before simulated references. This flag is incompatible with warmup_refs.</li>
 <li><b>-sim_refs</b> <br  />
 <em>default value: 8589934592G</em> <br  />
-This option is honored by certain tools such as the cache and TLB simulators and the view tool. It causes them to only analyze this many records and ignore all subsequent records. If -skip_refs is specified, the analyzed records start after the skipped ones end; similarly, if -warmup_refs is specified, the warmup records come prior to the -sim_refs records. Since the framework is still iterating over all the records and it is the tool who is ignoring those outside of this range, a large trace may still take time even with a small value for this option.</li>
+This option is honored by certain tools such as the cache and TLB simulators and the view tool. It causes them to only analyze this many records and then exit. If -skip_refs is specified, the analyzed records start after the skipped ones end; similarly, if -warmup_refs or -warmup_fraction is specified, the warmup records come prior to the -sim_refs records. Use -exit_after_records for a similar feature that works on all tools (but does not work with -warmup_*, -sim_refs, or -skip_refs).</li>
+<li><b>-exit_after_records</b> <br  />
+<em>default value: 8589934592G</em> <br  />
+Causes trace analyzers to only analyze this many records and then exit. If instructions are skipped (-skip_instrs), that happens first before record counting starts here. This is similar to -sim_refs, though it is implemented in the framework and so applies to all tools. This option is not compatible with -sim_refs, -skip_refs, -warmup_refs, or -warmup_fraction. For traces with multiple shards, each shard separately stops when it reaches this count within the shard.</li>
 <li><b>-view_syntax</b> <br  />
 <em>default value: att/arm/dr/riscv</em> <br  />
 Specifies the syntax to use when viewing disassembled offline traces. The option can be set to one of "att" (AT&amp;T style), "intel" (Intel style), "dr" (DynamoRIO's native style with all implicit operands listed), "arm" (32-bit ARM style), and "riscv" (RISC-V style). An invalid specification falls back to the default, which is "att" for x86, "arm" for ARM (32-bit), "dr" for AArch64, and "riscv" for RISC-V.</li>
@@ -439,7 +442,10 @@ Removes all records from the first TRACE_MARKER_TYPE_TIMESTAMP marker with times
 When set to true, the trace invariant checker analysis tool aborts when a trace invariant error is found. Otherwise it prints the error and continues. Also, the total invariant error count is printed at the end; a non-zero error count does not affect the exit code of the analyzer.</li>
 <li><b>-pt2ir_best_effort</b> <br  />
 <em>default value: false</em> <br  />
-By default, errors in decoding the kernel syscall PT trace in pt2ir are fatal to raw2trace. With -pt2ir_best_effort, those errors do not cause failures and their counts are reported by raw2trace at the end. This may result in a trace where not all syscalls have a trace, and the ones that do may have some PC discontinuities due to non-fatal decoding errors (these discontinuities will still be reported by the invariant checker). When using this option, it is prudent to check raw2trace stats to confirm that the error counts are within expected bounds (total syscall traces converted, syscall traces that were dropped from final trace because conversion failed, syscall traces found to be empty, and non-fatal decode errors seen in converted syscall traces). </li>
+By default, errors in decoding the kernel syscall PT trace in pt2ir are fatal to raw2trace. With -pt2ir_best_effort, those errors do not cause failures and their counts are reported by raw2trace at the end. This may result in a trace where not all syscalls have a trace, and the ones that do may have some PC discontinuities due to non-fatal decoding errors (these discontinuities will still be reported by the invariant checker). When using this option, it is prudent to check raw2trace stats to confirm that the error counts are within expected bounds (total syscall traces converted, syscall traces that were dropped from final trace because conversion failed, syscall traces found to be empty, and non-fatal decode errors seen in converted syscall traces).</li>
+<li><b>-scale_timers</b> <br  />
+<em>default value: 0</em> <br  />
+If non-zero, application timer initial durations and periodic durations are inflated by this scale. This can help preserve relative timing between timer-based application work and other application work in the presence of significant slowdowns from tracing. Currently only supported on Linux. </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -448,5 +454,5 @@ By default, errors in decoding the kernel syscall PT trace in pt2ir are fatal to
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20280 --- Fri Jul 11 2025 03:59:06 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20286 --- Fri Jul 18 2025 04:00:16 &nbsp; <img border=0 src="favicon.png">
 </small></address>

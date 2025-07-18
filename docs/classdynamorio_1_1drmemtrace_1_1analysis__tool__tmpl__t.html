@@ -1151,7 +1151,10 @@ template&lt;typename RecordType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The heart of an analysis tool, this routine operates on a single trace entry and takes whatever actions the tool needs to perform its analysis. The <code>shard_data</code> parameter is the value returned by <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a85bf2a95401193cc0c74b051598322ea">parallel_shard_init_stream()</a> for this shard. Since each shard is operated upon in its entirety by the same worker thread, no synchronization is needed. The return value indicates whether this function was successful. On failure, <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a972477e400177256c6f27b0a82a25518">parallel_shard_error()</a> returns a descriptive message. </p>
+<p>The heart of an analysis tool, this routine operates on a single trace entry and takes whatever actions the tool needs to perform its analysis. The <code>shard_data</code> parameter is the value returned by <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a85bf2a95401193cc0c74b051598322ea">parallel_shard_init_stream()</a> for this shard. Since each shard is operated upon in its entirety by the same worker thread, no synchronization is needed. A return value of true indicates to keep going. A return value of false indicates one of two things:</p><ul>
+<li>A fatal error that requires stopping immediately, if <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a972477e400177256c6f27b0a82a25518">parallel_shard_error()</a> returns a non-empty value (it should contain a description of the error).</li>
+<li>The tool is finished for non-error reasons and analysis can stop, if <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a972477e400177256c6f27b0a82a25518">parallel_shard_error()</a> returns an empty string. If there are multiple tools, analysis may continue and the tool should be prepared to potentially have some of its methods called again. </li>
+</ul>
 
 </div>
 </div>
@@ -1190,7 +1193,10 @@ template&lt;typename RecordType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The heart of an analysis tool, this routine operates on a single trace entry and takes whatever actions the tool needs to perform its analysis. The <code>shard_data</code> parameter is the value returned by <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a85bf2a95401193cc0c74b051598322ea">parallel_shard_init_stream()</a> for this shard. Since each shard is operated upon in its entirety by the same worker thread, no synchronization is needed. The return value indicates whether this function was successful. On failure, <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a972477e400177256c6f27b0a82a25518">parallel_shard_error()</a> returns a descriptive message. </p>
+<p>The heart of an analysis tool, this routine operates on a single trace entry and takes whatever actions the tool needs to perform its analysis. The <code>shard_data</code> parameter is the value returned by <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a85bf2a95401193cc0c74b051598322ea">parallel_shard_init_stream()</a> for this shard. Since each shard is operated upon in its entirety by the same worker thread, no synchronization is needed. A return value of true indicates to keep going. A return value of false indicates one of two things:</p><ul>
+<li>A fatal error that requires stopping immediately, if <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a972477e400177256c6f27b0a82a25518">parallel_shard_error()</a> returns a non-empty value (it should contain a description of the error).</li>
+<li>The tool is finished for non-error reasons and analysis can stop, if <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a972477e400177256c6f27b0a82a25518">parallel_shard_error()</a> returns an empty string. If there are multiple tools, analysis may continue and the tool should be prepared to potentially have some of its methods called again. </li>
+</ul>
 
 </div>
 </div>
@@ -1573,7 +1579,10 @@ template&lt;typename RecordType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The heart of an analysis tool, this routine operates on a single trace entry and takes whatever actions the tool needs to perform its analysis. If it prints, it should leave the i/o state in a default format (std::dec) to support multiple tools. The return value indicates whether it was successful. On failure, <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ab9cb5947ef8a6de50dce906bf17bb580">get_error_string()</a> returns a descriptive message. </p>
+<p>The heart of an analysis tool, this routine operates on a single trace entry and takes whatever actions the tool needs to perform its analysis. If it prints, it should leave the i/o state in a default format (std::dec) to support multiple tools. A return value of true indicates to keep going. A return value of false indicates one of two things:</p><ul>
+<li>A fatal error that requires stopping immediately, if <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ab9cb5947ef8a6de50dce906bf17bb580">get_error_string()</a> returns a non-empty value (it should contain a description of the error).</li>
+<li>The tool is finished for non-error reasons and analysis can stop, if <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ab9cb5947ef8a6de50dce906bf17bb580">get_error_string()</a> returns an empty string. If there are multiple tools, analysis may continue and the tool should be prepared to potentially have some of its methods called again. </li>
+</ul>
 
 </div>
 </div>
@@ -1602,7 +1611,10 @@ template&lt;typename RecordType &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The heart of an analysis tool, this routine operates on a single trace entry and takes whatever actions the tool needs to perform its analysis. If it prints, it should leave the i/o state in a default format (std::dec) to support multiple tools. The return value indicates whether it was successful. On failure, <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ab9cb5947ef8a6de50dce906bf17bb580">get_error_string()</a> returns a descriptive message. </p>
+<p>The heart of an analysis tool, this routine operates on a single trace entry and takes whatever actions the tool needs to perform its analysis. If it prints, it should leave the i/o state in a default format (std::dec) to support multiple tools. A return value of true indicates to keep going. A return value of false indicates one of two things:</p><ul>
+<li>A fatal error that requires stopping immediately, if <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ab9cb5947ef8a6de50dce906bf17bb580">get_error_string()</a> returns a non-empty value (it should contain a description of the error).</li>
+<li>The tool is finished for non-error reasons and analysis can stop, if <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ab9cb5947ef8a6de50dce906bf17bb580">get_error_string()</a> returns an empty string. If there are multiple tools, analysis may continue and the tool should be prepared to potentially have some of its methods called again. </li>
+</ul>
 
 </div>
 </div>
@@ -1675,5 +1687,5 @@ template&lt;typename RecordType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20280 --- Fri Jul 11 2025 03:59:06 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20286 --- Fri Jul 18 2025 04:00:16 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -1,17 +1,31 @@
 [
+    [ "_drx_time_scale_t", "struct__drx__time__scale__t.html", [
+      [ "struct_size", "struct__drx__time__scale__t.html#aeb7fef711f2e8d227cbc36b575f3601b", null ],
+      [ "timeout_scale", "struct__drx__time__scale__t.html#a497a0494c6b46f6a66010349a56f64ff", null ],
+      [ "timer_scale", "struct__drx__time__scale__t.html#accce7a99d52920e57a709f6216686e27", null ]
+    ] ],
     [ "DRMGR_PRIORITY_NAME_DRX_BUF_EXIT", "group__drx.html#ga6ddda40d50adc634c87223c1dd474a3e", null ],
     [ "DRMGR_PRIORITY_NAME_DRX_BUF_INIT", "group__drx.html#ga0645733e06c68e965ccc9e7c3126d438", null ],
     [ "DRMGR_PRIORITY_NAME_DRX_FAULT", "group__drx.html#ga48c78ac1ff92549afbe94c26369e168e", null ],
+    [ "DRMGR_PRIORITY_NAME_DRX_SCALE_EXIT", "group__drx.html#gaed76eefa71a39ee9a4c4e84db0d07679", null ],
+    [ "DRMGR_PRIORITY_NAME_DRX_SCALE_INIT", "group__drx.html#gae01f6cc1c59a9f0fedfeddbacabb544c", null ],
+    [ "DRMGR_PRIORITY_NAME_DRX_SCALE_POST_SYS", "group__drx.html#ga9c18f2af5d08e34c9aa2b65fe5ebadf2", null ],
+    [ "DRMGR_PRIORITY_NAME_DRX_SCALE_PRE_SYS", "group__drx.html#ga4adbe617df53fb9790691e4b444b920a", null ],
     [ "DRX_FILE_SKIP_OPEN", "group__drx.html#ga1c12b3b71826d8b412f25a0059fd2017", null ],
     [ "drx_buf_full_cb_t", "group__drx.html#ga8006198d0e3f3f85df687e9286de597c", null ],
-    [ "drx_buf_t", "group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf", [
+    [ "drx_buf_t", "group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf", null ],
+    [ "drx_time_scale_t", "group__drx.html#ga5b54714f9acdae0b7623033df07ecbd9", [
       [ "DRMGR_PRIORITY_FAULT_DRX", "group__drx.html#gga16685eea158879e41b101ca3634de462a8cd3adf4599b9be81a32a0d111df47ed", null ],
       [ "DRX_COUNTER_64BIT", "group__drx.html#ggafa231099d07583c3ed0981e0bb665f55a507636af18a8858c214066682d013a1a", null ],
       [ "DRX_COUNTER_REL_ACQ", "group__drx.html#ggafa231099d07583c3ed0981e0bb665f55aa50fccbd9d5dc9f300d6033c971f95e4", null ],
       [ "DRX_COUNTER_LOCK", "group__drx.html#ggafa231099d07583c3ed0981e0bb665f55aa45e32a1d62398b84858de6759364688", null ],
       [ "DRX_BUF_FAST_CIRCULAR_BUFSZ", "group__drx.html#gga394b3903fbf00ba2b6243f60689a5a5fa72c2469ba268615b188959b3ffbef685", null ],
       [ "DRMGR_PRIORITY_THREAD_INIT_DRX_BUF", "group__drx.html#ggac205be2172292384dd687b5471a87eddad97fe2f57b9c6ec96fd3b8461b0cfeb1", null ],
-      [ "DRMGR_PRIORITY_THREAD_EXIT_DRX_BUF", "group__drx.html#ggac205be2172292384dd687b5471a87edda2c71daa1f7dc4665d5e32997578809c0", null ]
+      [ "DRMGR_PRIORITY_THREAD_EXIT_DRX_BUF", "group__drx.html#ggac205be2172292384dd687b5471a87edda2c71daa1f7dc4665d5e32997578809c0", null ],
+      [ "DRMGR_PRIORITY_THREAD_INIT_DRX_SCALE", "group__drx.html#gga157d5577a5b2f5986037d0d09c7dc77dace263d9f5b6baee08bbfc15ad8a0a739", null ],
+      [ "DRMGR_PRIORITY_THREAD_EXIT_DRX_SCALE", "group__drx.html#gga157d5577a5b2f5986037d0d09c7dc77dab74ef9f52fd6072563a764408dc7366d", null ],
+      [ "DRMGR_PRIORITY_PRE_SYS_DRX_SCALE", "group__drx.html#gga157d5577a5b2f5986037d0d09c7dc77da96655f33bca516aa98f800f41be80270", null ],
+      [ "DRMGR_PRIORITY_POST_SYS_DRX_SCALE", "group__drx.html#gga157d5577a5b2f5986037d0d09c7dc77daf5b18ed4bf8cc3f6ed299f135bd45754", null ]
     ] ],
     [ "drx_aflags_are_dead", "group__drx.html#gae33a91872caa46e430d5d721af6d8c82", null ],
     [ "drx_buf_create_circular_buffer", "group__drx.html#ga4caa3e50a3cfb5ecb5c08e65fc44ada3", null ],
@@ -35,6 +49,8 @@
     [ "drx_open_unique_appid_file", "group__drx.html#ga8e4967eff12630001938ef282ec5a5e3", null ],
     [ "drx_open_unique_file", "group__drx.html#ga45ee420dff6928ec73e00de41d9b506e", null ],
     [ "drx_register_soft_kills", "group__drx.html#ga9348e840424caf0098a8b1ba69955864", null ],
+    [ "drx_register_time_scaling", "group__drx.html#ga4f657728a448e98f041dc8df7adacaeb", null ],
     [ "drx_reserve_note_range", "group__drx.html#ga3189cbfbf85d5c32965bd8a140b2c35e", null ],
-    [ "drx_tail_pad_block", "group__drx.html#ga8f9c7628a63632568aaeb62beeb3a89a", null ]
+    [ "drx_tail_pad_block", "group__drx.html#ga8f9c7628a63632568aaeb62beeb3a89a", null ],
+    [ "drx_unregister_time_scaling", "group__drx.html#gadb73fd51afeefebe64992c18ffde4a69", null ]
 ],

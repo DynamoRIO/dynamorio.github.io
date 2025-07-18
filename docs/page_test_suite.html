@@ -56,7 +56,7 @@ failure email step". Be sure to match the surrounding indentation as indentation
 </pre><p> Next, delete all the other workflow files in the ".github/workflows/" directory. This will save you time and save resources in general, to only run the single target job.</p>
 <p>You can see an example of these workflow file deletions and edits in this commit: <a href="https://github.com/DynamoRIO/dynamorio/pull/6414/commits/08b96200cdb9fd4d39a4c89e2aa9eafed92027f4">https://github.com/DynamoRIO/dynamorio/pull/6414/commits/08b96200cdb9fd4d39a4c89e2aa9eafed92027f4</a></p>
 <p>If you want to focus on just one test, you can use a label like the <code>TMATE_DEBUG</code> label in the linked commit to run only that one test, but that is not necessary. Pasting the key lines for that here:</p>
-<p>In runsuite.cmake after the arg parsing:</p>
+<p>In runsuite.cmake after the arg parsing and after the line <code>set(build_tests "BUILD_TESTS:BOOL=ON")</code> add this:</p>
 <div class="fragment"><div class="line">set(extra_ctest_args INCLUDE_LABEL TMATE_DEBUG) <span class="preprocessor"># TEMPORARY</span></div>
 </div><!-- fragment --><p>At the bottom of suite/tests/CMakeLists.txt, add the label to the target test:</p>
 <div class="fragment"><div class="line">set_tests_properties(code_api|tool.drcacheoff.burst_traceopts PROPERTIES</div>
@@ -66,6 +66,11 @@ failure email step". Be sure to match the surrounding indentation as indentation
 <p>By default, it may start the ssh in tmux review mode. You would need to quit out of that to get to the terminal. The shell should last until the action times out which is after 6 hours, or until you terminate the initial connection.</p>
 <p>The connection is through tmux, so you can create new panes and shells using tmux commands. You can install <code>gdb</code> if needed.</p>
 <p><code>tmate</code> also allows web shell access; note that you may need to press <code>q</code> one time if the web page doesn't show anything.</p>
+<p>On Windows, the connection is a mingw shell, where the <code>gdb</code> debugger cannot read our PDB symbols. Use the <code>cdb</code> debugger instead, which is not on the PATH by default. Here is an example of launching a test inside <code>cdb</code>:</p>
+<div class="fragment"><div class="line">runneradmin@fv-az844-677 MINGW64 /d/a/<a class="code" href="namespacedynamorio.html">dynamorio</a>/<a class="code" href="namespacedynamorio.html">dynamorio</a>/build_debug-<span class="keyword">internal</span>-64</div>
+<div class="line"><span class="preprocessor"># &#39;/c/Program Files (x86)/Windows Kits/10/Debuggers/x64/cdb.exe&#39; clients/bin64/drmemtrace_launcher.exe &quot;-dr&quot;</span> &quot;D:\a\dynamorio\dynamorio\build_debug-internal-64&quot; &quot;-dr_ops&quot; &quot;&quot; &quot;-tracer&quot; &quot;D:\a\dynamorio\dynamorio\build_debug-internal-64/clients/lib64/debug/drmemtrace.dll&quot; &quot;-tracer_alt&quot; &quot;&quot; &quot;-dr_debug&quot; &quot;-offline&quot; &quot;--&quot; &quot;suite/tests/bin/simple_app&quot;</div>
+<div class="ttc" id="anamespacedynamorio_html"><div class="ttname"><a href="namespacedynamorio.html">dynamorio</a></div><div class="ttdef"><b>Definition:</b> drgui_main_window.h:55</div></div>
+</div><!-- fragment --><p>Remember when launching to use <code>.childdbg 1</code> to follow into the separate process created for the new application process.</p>
 <h1><a class="anchor" id="autotoc_md306"></a>
 Regression Test Suite</h1>
 <p>The black box test suite for DynamoRIO resides in the suite/ directory. The tests are applications that we execute under control of DynamoRIO to ensure we're covering corner cases.</p>
@@ -90,7 +95,6 @@ Test Organization</h2>
 <h2><a class="anchor" id="autotoc_md308"></a>
 Building and Running Tests</h2>
 <p>CMake is used to build the tests. They are not built by default. To enable them, turn on the BUILD_TESTS CMake variable. For example, from a build directory next to the dynamorio source tree: </p><div class="fragment"><div class="line">cmake -DBUILD_TESTS=ON ../<a class="code" href="namespacedynamorio.html">dynamorio</a></div>
-<div class="ttc" id="anamespacedynamorio_html"><div class="ttname"><a href="namespacedynamorio.html">dynamorio</a></div><div class="ttdef"><b>Definition:</b> drgui_main_window.h:55</div></div>
 </div><!-- fragment --><p>CTest is used to run the tests with various runtime options. Each test is named to indicate the runtime options and the executable. The options are first, separate by commas, with a pipe delimiting the end of the options. The executable has a dot instead of a slash. Here are some examples:</p>
 <div class="fragment"><div class="line">code_api|security-common.decode-bad-stack</div>
 <div class="line">code_api,disable_traces|client.events</div>
@@ -207,5 +211,5 @@ Adding New Tests</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20280 --- Fri Jul 11 2025 03:59:05 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20286 --- Fri Jul 18 2025 04:00:16 &nbsp; <img border=0 src="favicon.png">
 </small></address>
