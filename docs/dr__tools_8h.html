@@ -6121,7 +6121,7 @@ On some platforms (such as MacOS), whether a system call succeeded or failed can
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Usable only from a pre-syscall (<a class="el" href="dr__events_8h.html#a80d0f026def74d903a83fb6122816ae2">dr_register_pre_syscall_event()</a>) event or a post-syscall (<a class="el" href="dr__events_8h.html#a7a62b6c11f3b0ae2fe7773189f6e4826">dr_register_post_syscall_event()</a>) event. From a post-syscall event this will not affect the syscall that just happened (but it will affect a second syscall when using <a class="el" href="dr__tools_8h.html#aedb494e753b1a2f0e79cb4bd09700c3c">dr_syscall_invoke_another()</a>.</p>
+<p>Usable only from a pre-syscall (<a class="el" href="dr__events_8h.html#a80d0f026def74d903a83fb6122816ae2">dr_register_pre_syscall_event()</a>) event or a post-syscall (<a class="el" href="dr__events_8h.html#a7a62b6c11f3b0ae2fe7773189f6e4826">dr_register_post_syscall_event()</a>) event. From a post-syscall event this will not affect the syscall that just happened (but it will affect a second syscall when using <a class="el" href="dr__tools_8h.html#aedb494e753b1a2f0e79cb4bd09700c3c">dr_syscall_invoke_another()</a>; additionally, be careful when using from a post-syscall event as for some architectures the first syscall parameter becomes the return value.</p>
 <p>Sets the value of system call parameter number <code>param_num</code> to <code>new_value</code>.</p>
 <p>It is up to the caller to ensure that writing this parameter is safe: this routine does not know the number of parameters for each system call, nor does it check whether this might write beyond the base of the stack.</p>
 <dl class="section note"><dt>Note</dt><dd>On some platforms, notably MacOS, a 32-bit application's system call can still take a 64-bit parameter (typically on the stack). In that situation, this routine will consider the 64-bit parameter to be split into high and low parts, each with its own parameter number. </dd></dl>
@@ -6712,5 +6712,5 @@ This routine is only available with either the -thread_private or -enable_full_a
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20286 --- Fri Jul 18 2025 04:00:15 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20294 --- Fri Jul 25 2025 04:00:43 &nbsp; <img border=0 src="favicon.png">
 </small></address>

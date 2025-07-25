@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 11.90.20286"
+title: "Release Notes for Version 11.90.20294"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 11.90.20286 </div>  </div>
+<div class="title">Release Notes for Version 11.90.20294 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,17 +63,18 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 11.90.20286. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 11.90.20286 and 11.3.0 include the following compatibility changes:</p><ul>
+<p>The current version is 11.90.20294. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 11.90.20294 and 11.3.0 include the following compatibility changes:</p><ul>
 <li>On 32-bit Arm the size of <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> has been increased by 4 and the struct is now required to be 8-byte aligned. The offset of the field "simd" has changed.</li>
 <li>Added new fields elf_path and elf_path_size to dr_memory_dump_spec_t. When <a class="el" href="dr__tools_8h.html#afa268a6496cad930513c1f0353fdd06e">dr_create_memory_dump()</a> returns true and elf_path is not NULL, elf_path will be written with the path to the memory dump file.</li>
 </ul>
-<p>The changes between version 11.90.20286 and 11.3.0 include the following minor compatibility changes:</p>
+<p>The changes between version 11.90.20294 and 11.3.0 include the following minor compatibility changes:</p>
 <ul>
 <li>Added a separate cache replacement policy object to <code>caching_device_t</code>. <code>init</code> now takes an <code>std::unique_ptr&lt;cache_replacement_policy_t&gt;</code> that defines the replacement policy. It can be created manually or by using <code>create_cache_replacement_policy</code>. Removed the subclasses <code>cache_lru_t</code>, <code>cache_fifo_t</code>, <code>tlb_lfu_t</code>, <code>tlb_plru_t</code> that implemented specific cache replacement policies. Added implementations for the matching policies as subclasses of <code>cache_replacement_policy_t</code>.</li>
 <li>Added the workload to the top bits of the tid for multi-workload drmemtrace scheduling. The drmemtrace view tool now prints the workload and tid in the form "Wn.Tmmm".</li>
 <li>Changed the <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__thread__info__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::input_thread_info_t</a>. regions_of_interest structure layout, requiring recompiling using code.</li>
 <li>Changed the <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#a08ef7c28c3e029642f2408d58547c0f8">dynamorio::drmemtrace::analysis_tool_tmpl_t::process_memref</a> and <a class="el" href="classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html#ae5604598d12427c46f4682b7bd580c39">dynamorio::drmemtrace::analysis_tool_tmpl_t::parallel_shard_memref</a> return conditions to no longer indicate an error if the error string is empty. This can now be used to exit early without reporting an error.</li>
+<li>Changed the -skip_refs drmemtrace option to not count markers, matching the -sim_refs and -warmup_refs options. (The new -skip_records counts markers.)</li>
 </ul>
 <p>Further non-compatibility-affecting changes include:</p><ul>
 <li>Changed the types of <code>block_size</code>, <code>total_size</code>, <code>num_blocks</code>, to <code>int64_t</code> in dynamorio::drmemtrace::caching_device_t and its deriving classes.</li>
@@ -94,6 +95,8 @@ Changes Since Prior Releases</h1>
 <li>Added <a class="el" href="group__drx.html#ga4f657728a448e98f041dc8df7adacaeb">drx_register_time_scaling()</a> which scales timers on UNIX to align with the slowdown of heavyweight instrumentation.</li>
 <li>Added a new drmemtrace option -exit_after_records which applies to all tools and exits after N records.</li>
 <li>Added get_output_record_ordinal() to the drmemtrace scheduler.</li>
+<li>Added a new drmemtrace option -skip_records which applies to all tools and skips the first N records.</li>
+<li>Added -trim_before_instr and -trim_after_instr options to trim_filter (part of drmemtrace's record_filter). They allow the trimming of a trace using instruction ordinals. The trimming is approximated to the closest timestamp in the trace that follows the provided instuction ordinals, as timestamps are a safe spot to trim a trace.</li>
 </ul>
 <hr  />
 <p>The changes between version 11.3.0 and 11.2.0 include the following compatibility changes:</p><ul>
@@ -1251,5 +1254,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20286 --- Fri Jul 18 2025 04:00:16 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20294 --- Fri Jul 25 2025 04:00:44 &nbsp; <img border=0 src="favicon.png">
 </small></address>

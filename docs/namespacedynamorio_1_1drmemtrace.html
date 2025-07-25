@@ -630,8 +630,8 @@ Functions</h2></td></tr>
 <tr class="separator:af197d3a54edf9faf2e3c132537dc616d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8405aaf95b3dbc5fbe8950578b6d6079"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a8405aaf95b3dbc5fbe8950578b6d6079">read_module_file</a> (const std::string &amp;modfilename, file_t &amp;modfile, char *&amp;modfile_bytes)</td></tr>
 <tr class="separator:a8405aaf95b3dbc5fbe8950578b6d6079"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a993bd4f18f4f49a8e686f6015162d554"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a922f126e20f8a9b2a1d9f2634fcfff0e">record_analysis_tool_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a993bd4f18f4f49a8e686f6015162d554">record_filter_tool_create</a> (const std::string &amp;output_dir, uint64_t stop_timestamp, int cache_filter_size, const std::string &amp;remove_trace_types, const std::string &amp;remove_marker_types, uint64_t trim_before_timestamp, uint64_t trim_after_timestamp, bool encodings2regdeps, const std::string &amp;keep_func_ids, const std::string &amp;modify_marker_value, unsigned int verbose)</td></tr>
-<tr class="separator:a993bd4f18f4f49a8e686f6015162d554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3833ce6eb2b86d53a2fbd30295d71c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a922f126e20f8a9b2a1d9f2634fcfff0e">record_analysis_tool_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ac3833ce6eb2b86d53a2fbd30295d71c4">record_filter_tool_create</a> (const std::string &amp;output_dir, uint64_t stop_timestamp, int cache_filter_size, const std::string &amp;remove_trace_types, const std::string &amp;remove_marker_types, uint64_t trim_before_timestamp, uint64_t trim_after_timestamp, uint64_t trim_before_instr, uint64_t trim_after_instr, bool encodings2regdeps, const std::string &amp;keep_func_ids, const std::string &amp;modify_marker_value, unsigned int verbose)</td></tr>
+<tr class="separator:ac3833ce6eb2b86d53a2fbd30295d71c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b1651c8a97181eb4afe2c45476ce41e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#aa072932d15fbef2163f1b3704b33abf7">analysis_tool_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a7b1651c8a97181eb4afe2c45476ce41e">reuse_distance_tool_create</a> (const <a class="el" href="structdynamorio_1_1drmemtrace_1_1reuse__distance__knobs__t.html">reuse_distance_knobs_t</a> &amp;knobs)</td></tr>
 <tr class="separator:a7b1651c8a97181eb4afe2c45476ce41e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97b5e872335cb7666b7758a9f50b4579"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#aa072932d15fbef2163f1b3704b33abf7">analysis_tool_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a97b5e872335cb7666b7758a9f50b4579">reuse_time_tool_create</a> (unsigned int line_size=64, unsigned int verbose=0)</td></tr>
@@ -2336,8 +2336,8 @@ For additional file open parameters with the thread and window identifiers, use 
 
 </div>
 </div>
-<a id="a993bd4f18f4f49a8e686f6015162d554"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a993bd4f18f4f49a8e686f6015162d554">&#9670;&nbsp;</a></span>record_filter_tool_create()</h2>
+<a id="ac3833ce6eb2b86d53a2fbd30295d71c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3833ce6eb2b86d53a2fbd30295d71c4">&#9670;&nbsp;</a></span>record_filter_tool_create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2387,6 +2387,18 @@ For additional file open parameters with the thread and window identifiers, use 
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>trim_before_instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>trim_after_instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>encodings2regdeps</em>, </td>
         </tr>
@@ -2425,6 +2437,8 @@ For additional file open parameters with the thread and window identifiers, use 
     <tr><td class="paramdir">[in]</td><td class="paramname">remove_marker_types</td><td>A comma-separated list of integers of <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295c">trace_marker_type_t</a> marker types to remove. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">trim_before_timestamp</td><td>Trim records from the trace's initial timestamp up to its first timestamp whose value is greater or equal to this parameter. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">trim_after_timestamp</td><td>Trim records after the trace's first timestamp whose value is greater than this parameter. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">trim_before_instr</td><td>Trim records from the trace's initial timestamp up to the first timestamp that follows the instruction ordinal specified by this parameter. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">trim_after_instr</td><td>Trim records after the trace's first timestamp that follows the instruction ordinal specified by this parameter. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">encodings2regdeps</td><td>If true, converts instruction encodings from the real ISA of the input trace to the <a class="el" href="dr__ir__encode_8h.html#a00e03b2e5e75a83eacf9a0ee1674074aa1bbcfa1df3fffff3d96b357f9a2290d3">DR_ISA_REGDEPS</a> synthetic ISA. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">keep_func_ids</td><td>A comma-separated list of integers representing the function IDs related to <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca5c6f08548563cb1456a4f09b9b5c3f59">TRACE_MARKER_TYPE_FUNC_ID</a> (and _ARG, _RETVAL, _RETADDR) markers to preserve in the trace, while removing all other function markers. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">modify_marker_value</td><td>A list of comma-separated pairs of integers representing &lt;TRACE_MARKER_TYPE_, new_value&gt; to modify the value of all listed TRACE_MARKER_TYPE_ in the trace with their corresponding new_value. </td></tr>
@@ -2930,5 +2944,5 @@ For additional file open parameters with the thread and window identifiers, use 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20286 --- Fri Jul 18 2025 04:00:16 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20294 --- Fri Jul 25 2025 04:00:45 &nbsp; <img border=0 src="favicon.png">
 </small></address>
