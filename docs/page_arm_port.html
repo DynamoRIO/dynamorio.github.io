@@ -138,7 +138,7 @@ DynamoRIO IR for ARM: IR decisions</h1>
   TYPE_M_N4_4,   /* mem offs - 8-bit immed split @ 11:8|3:0 */
   TYPE_M_S7,     /* mem offs + signed 7-bit immed @ 6:0 */
   TYPE_M_P5,     /* mem offs + 5-bit immed @ 5:0 */</pre><p class="startli">post-indexed negative: </p><pre class="fragment">  str  Rt, [Rn], Rm
-  {OP_str    , 0x06000000, "str"   , Mw, Rn, Rt, Rn, RmN/*FIXME: how store this in opnd_t?*/, xop_shift|pred|dstX2, x, END_LIST},/*PUW=000*/</pre><p class="startli">Choices:</p><ol type="1">
+  {OP_str    , 0x06000000, "str"   , Mw, Rn, Rt, Rn, RmN/*XXX: how store this in opnd_t?*/, xop_shift|pred|dstX2, x, END_LIST},/*PUW=000*/</pre><p class="startli">Choices:</p><ol type="1">
 <li>Add to opcode: though we’re avoiding doing that for the different addressing modes OP_str_post? 8 different variations: PUW bits = {pre,post} X {add,sub} X {wb,don’t}, except post+wb is illegal so 6. Add formal secondary opcode field? Add PREFIX_ flag? Encode semantics into memref (TYPE_M_NORMAL_…, TYPE_M_WB_…)? The 6 types (P=0 W=1 is illegal): <pre class="fragment">   str  Rt, [Rn + Rm] =&gt; all in the memref: new signed index bit in opnd_t, but also need to add PREFIX_NEGATIVE_INDEX for opnd_get_index()?  what about up above we decided to add opnd_get_index_sign()?
    str  Rt, [Rn - Rm] =&gt; all in the memref: new signed index bit in opnd_t
    str  Rt, [Rn], Rm
@@ -389,7 +389,7 @@ OS/TLS/Steal reg</h2>
       reg_t r0, r1, r2, r3;
       reg_t reg_steal;              /* slot for steal register */
   #endif
-      /* FIXME: move this below the tables to fit more on cache line */
+      /* XXX: move this below the tables to fit more on cache line */
 
   XXXX check table cache line alignment
       dcontext_t *dcontext;
@@ -498,5 +498,5 @@ Conditional Syscall</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20294 --- Fri Jul 25 2025 04:00:44 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20300 --- Fri Aug 1 2025 04:14:13 &nbsp; <img border=0 src="favicon.png">
 </small></address>

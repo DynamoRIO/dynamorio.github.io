@@ -319,7 +319,7 @@
     [ "type_is_instr_direct_branch", "namespacedynamorio_1_1drmemtrace.html#af1a319424f45ebf473c8263fe37590cf", null ],
     [ "type_is_prefetch", "namespacedynamorio_1_1drmemtrace.html#a1ba3d847cac01db253754e37a4833d63", null ],
     [ "type_is_read", "namespacedynamorio_1_1drmemtrace.html#a73a3b41d08fe1a6ff4f002ae7b643507", null ],
-    [ "view_tool_create", "namespacedynamorio_1_1drmemtrace.html#ade00c5d94b488ef28af05c948631ba04", null ],
+    [ "view_tool_create", "namespacedynamorio_1_1drmemtrace.html#af5f76f35b16bdaa7163b05c94f36cba6", null ],
     [ "workload_from_memref_pid", "namespacedynamorio_1_1drmemtrace.html#a5d4cea2caf82880722e32975f5ed9885", null ],
     [ "workload_from_memref_tid", "namespacedynamorio_1_1drmemtrace.html#a4ce9436b26857c5c3cdb79f03087a163", null ],
     [ "MEMREF_T_SIZE_BYTES", "namespacedynamorio_1_1drmemtrace.html#ac830533bb90de0ee0ccc3a573fe12f3e", null ]

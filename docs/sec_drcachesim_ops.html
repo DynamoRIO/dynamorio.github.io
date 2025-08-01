@@ -453,8 +453,11 @@ When set to true, the trace invariant checker analysis tool aborts when a trace 
 <em>default value: false</em> <br  />
 By default, errors in decoding the kernel syscall PT trace in pt2ir are fatal to raw2trace. With -pt2ir_best_effort, those errors do not cause failures and their counts are reported by raw2trace at the end. This may result in a trace where not all syscalls have a trace, and the ones that do may have some PC discontinuities due to non-fatal decoding errors (these discontinuities will still be reported by the invariant checker). When using this option, it is prudent to check raw2trace stats to confirm that the error counts are within expected bounds (total syscall traces converted, syscall traces that were dropped from final trace because conversion failed, syscall traces found to be empty, and non-fatal decode errors seen in converted syscall traces).</li>
 <li><b>-scale_timers</b> <br  />
-<em>default value: 0</em> <br  />
-If non-zero, application timer initial durations and periodic durations are inflated by this scale. This can help preserve relative timing between timer-based application work and other application work in the presence of significant slowdowns from tracing. Currently only supported on Linux. </li>
+<em>default value: 1</em> <br  />
+If &gt;1, application timer initial durations and periodic durations are inflated by this scale. This can help preserve relative timing between timer-based application work and other application work in the presence of significant slowdowns from tracing. Currently only supported on Linux.</li>
+<li><b>-scale_timeouts</b> <br  />
+<em>default value: 1</em> <br  />
+If &gt;1, time arguments to certain system calls (currently Linux-only sleeps) are multiplied by the specified value. This can help preserve relative timing among application threads in the presence of significant slowdowns from tracing. </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -463,5 +466,5 @@ If non-zero, application timer initial durations and periodic durations are infl
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20294 --- Fri Jul 25 2025 04:00:45 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20300 --- Fri Aug 1 2025 04:14:14 &nbsp; <img border=0 src="favicon.png">
 </small></address>
