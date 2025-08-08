@@ -46,8 +46,8 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ac336a49f7dd17682568c60a535452cd6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drsyscall__record_8h.html#ac336a49f7dd17682568c60a535452cd6">SYSCALL_RECORD_UNION_SIZE_BYTES</a>&#160;&#160;&#160;(sizeof(uint8_t *) + sizeof(size_t))</td></tr>
-<tr class="separator:ac336a49f7dd17682568c60a535452cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a4488eb749d6dfc2985a08d5fd8e984"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drsyscall__record_8h.html#a9a4488eb749d6dfc2985a08d5fd8e984">SYSCALL_RECORD_CONTENT_SIZE_BYTES</a>&#160;&#160;&#160;(sizeof(uint8_t *) + sizeof(size_t))</td></tr>
+<tr class="separator:a9a4488eb749d6dfc2985a08d5fd8e984"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -57,7 +57,7 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:a636118441fe62a792fe5cf5f273b4490"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drsyscall__record_8h.html#a636118441fe62a792fe5cf5f273b4490">syscall_record_type_t</a> { <br />
-&#160;&#160;<a class="el" href="drsyscall__record_8h.html#a636118441fe62a792fe5cf5f273b4490acb3dd9fca366e6ffa6a8cf9fd70caf67">DRSYS_SYSCALL_NUMBER</a> = 1
+&#160;&#160;<a class="el" href="drsyscall__record_8h.html#a636118441fe62a792fe5cf5f273b4490ac49f79f140a07e88f7ac1a9457a65307">DRSYS_SYSCALL_NUMBER_DEPRECATED</a> = 1
 , <br />
 &#160;&#160;<a class="el" href="drsyscall__record_8h.html#a636118441fe62a792fe5cf5f273b4490a43d417b031f6e8916c2a78d4656ebd44">DRSYS_PRECALL_PARAM</a>
 , <br />
@@ -67,7 +67,11 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="drsyscall__record_8h.html#a636118441fe62a792fe5cf5f273b4490a670d43fd3df6d6bb4e3de7675e8070f0">DRSYS_RETURN_VALUE</a>
 , <br />
-&#160;&#160;<a class="el" href="drsyscall__record_8h.html#a636118441fe62a792fe5cf5f273b4490a01539050ded732f76746b66dcf1b1fa8">DRSYS_RECORD_END</a>
+&#160;&#160;<a class="el" href="drsyscall__record_8h.html#a636118441fe62a792fe5cf5f273b4490a7a46bad779d13dbd155d97ca73ad2726">DRSYS_RECORD_END_DEPRECATED</a>
+, <br />
+&#160;&#160;<a class="el" href="drsyscall__record_8h.html#a636118441fe62a792fe5cf5f273b4490afa62ceee4eb2db6bed8dd975b05a4bc0">DRSYS_SYSCALL_NUMBER_TIMESTAMP</a>
+, <br />
+&#160;&#160;<a class="el" href="drsyscall__record_8h.html#a636118441fe62a792fe5cf5f273b4490a24f8b06d9bbda428f25cb789934b6c10">DRSYS_RECORD_END_TIMESTAMP</a>
 <br />
  }</td></tr>
 <tr class="separator:a636118441fe62a792fe5cf5f273b4490"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -75,14 +79,14 @@ Enumerations</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header for Dr. Syscall system call records. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ac336a49f7dd17682568c60a535452cd6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac336a49f7dd17682568c60a535452cd6">&#9670;&nbsp;</a></span>SYSCALL_RECORD_UNION_SIZE_BYTES</h2>
+<a id="a9a4488eb749d6dfc2985a08d5fd8e984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a4488eb749d6dfc2985a08d5fd8e984">&#9670;&nbsp;</a></span>SYSCALL_RECORD_CONTENT_SIZE_BYTES</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SYSCALL_RECORD_UNION_SIZE_BYTES&#160;&#160;&#160;(sizeof(uint8_t *) + sizeof(size_t))</td>
+          <td class="memname">#define SYSCALL_RECORD_CONTENT_SIZE_BYTES&#160;&#160;&#160;(sizeof(uint8_t *) + sizeof(size_t))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -120,7 +124,7 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 <p>The type of the syscall record. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a636118441fe62a792fe5cf5f273b4490acb3dd9fca366e6ffa6a8cf9fd70caf67"></a>DRSYS_SYSCALL_NUMBER&#160;</td><td class="fielddoc"><p>Start of a syscall. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a636118441fe62a792fe5cf5f273b4490ac49f79f140a07e88f7ac1a9457a65307"></a>DRSYS_SYSCALL_NUMBER_DEPRECATED&#160;</td><td class="fielddoc"><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>Replaced by DRSYS_SYSCALL_NUMBER_TIMESTAMP. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="a636118441fe62a792fe5cf5f273b4490a43d417b031f6e8916c2a78d4656ebd44"></a>DRSYS_PRECALL_PARAM&#160;</td><td class="fielddoc"><p>Pre-syscall parameter. </p>
 </td></tr>
@@ -130,7 +134,11 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a636118441fe62a792fe5cf5f273b4490a670d43fd3df6d6bb4e3de7675e8070f0"></a>DRSYS_RETURN_VALUE&#160;</td><td class="fielddoc"><p>Return value of the syscall. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a636118441fe62a792fe5cf5f273b4490a01539050ded732f76746b66dcf1b1fa8"></a>DRSYS_RECORD_END&#160;</td><td class="fielddoc"><p>End of a syscall. </p>
+<tr><td class="fieldname"><a id="a636118441fe62a792fe5cf5f273b4490a7a46bad779d13dbd155d97ca73ad2726"></a>DRSYS_RECORD_END_DEPRECATED&#160;</td><td class="fielddoc"><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Replaced by DRSYS_RECORD_END_TIMESTAMP. </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="a636118441fe62a792fe5cf5f273b4490afa62ceee4eb2db6bed8dd975b05a4bc0"></a>DRSYS_SYSCALL_NUMBER_TIMESTAMP&#160;</td><td class="fielddoc"><p>Start of a syscall with a timestamp. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a636118441fe62a792fe5cf5f273b4490a24f8b06d9bbda428f25cb789934b6c10"></a>DRSYS_RECORD_END_TIMESTAMP&#160;</td><td class="fielddoc"><p>End of a syscall with a timestamp. </p>
 </td></tr>
 </table>
 
@@ -142,5 +150,5 @@ Enumerations</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20300 --- Fri Aug 1 2025 04:14:12 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20305 --- Fri Aug 8 2025 04:05:03 &nbsp; <img border=0 src="favicon.png">
 </small></address>

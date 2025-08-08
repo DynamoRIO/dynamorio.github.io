@@ -11,7 +11,6 @@
     [ "drsys_iter_cb_t", "drsyscall_8h.html#a76aab7d6de7ced55a9723d682c49953d", null ],
     [ "drsys_options_t", "drsyscall_8h.html#a6037913f370bc62200d73cd3bed6eb90", null ],
     [ "drsys_syscall_t", "drsyscall_8h.html#ab0c3754725bdec08ed2ba10ce5e0a70f", null ],
-    [ "drsys_sysnum_t", "drsyscall_8h.html#ac1684ff6465dbcf70de6e1b04a1cea32", null ],
     [ "drsys_gateway_t", "drsyscall_8h.html#afb6afc6d2d961de74816bcd7c3561709", null ],
     [ "drsys_param_mode_t", "drsyscall_8h.html#aae53f35a45772ead54b9dd29db92c831", [
       [ "DRSYS_PARAM_IN", "drsyscall_8h.html#aae53f35a45772ead54b9dd29db92c831ad70df0ce77ca0bd28f4aaaa6d96d3dc0", null ],

@@ -36,7 +36,7 @@ permalink: /structsyscall__record__t__.html
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t syscall_record_t_::_raw_bytes[<a class="el" href="drsyscall__record_8h.html#ac336a49f7dd17682568c60a535452cd6">SYSCALL_RECORD_UNION_SIZE_BYTES</a>]</td>
+          <td class="memname">uint8_t syscall_record_t_::_raw_bytes[SYSCALL_RECORD_UNION_SIZE_BYTES]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -59,8 +59,8 @@ permalink: /structsyscall__record__t__.html
 
 </div>
 </div>
-<a id="ad2bc8be96e44d93fb298273f87c9a4af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2bc8be96e44d93fb298273f87c9a4af">&#9670;&nbsp;</a></span></h2>
+<a id="aa170f31d246ec055e0fc239c7d2a8965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa170f31d246ec055e0fc239c7d2a8965">&#9670;&nbsp;</a></span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -89,8 +89,8 @@ permalink: /structsyscall__record__t__.html
 
 </div>
 </div>
-<a id="aee2b35b6c1e5a2a01c00acb67db1221f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee2b35b6c1e5a2a01c00acb67db1221f">&#9670;&nbsp;</a></span></h2>
+<a id="a6a13a90f2d95367a35ecb8b740cf0c87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a13a90f2d95367a35ecb8b740cf0c87">&#9670;&nbsp;</a></span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,7 +135,7 @@ permalink: /structsyscall__record__t__.html
 </div>
 </div>
 <a id="a4a391be7fbfba92cbc1a52335a12dc98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a391be7fbfba92cbc1a52335a12dc98">&#9670;&nbsp;</a></span>syscall_number</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a391be7fbfba92cbc1a52335a12dc98">&#9670;&nbsp;</a></span>syscall_number <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,7 +145,53 @@ permalink: /structsyscall__record__t__.html
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The syscall number. It is used for type <a class="el" href="drsyscall__record_8h.html#a636118441fe62a792fe5cf5f273b4490acb3dd9fca366e6ffa6a8cf9fd70caf67">DRSYS_SYSCALL_NUMBER</a> or <a class="el" href="drsyscall__record_8h.html#a636118441fe62a792fe5cf5f273b4490a01539050ded732f76746b66dcf1b1fa8">DRSYS_RECORD_END</a>. </p>
+<p>The syscall number. It is used for type <a class="el" href="drsyscall__record_8h.html#a636118441fe62a792fe5cf5f273b4490ac49f79f140a07e88f7ac1a9457a65307">DRSYS_SYSCALL_NUMBER_DEPRECATED</a> or <a class="el" href="drsyscall__record_8h.html#a636118441fe62a792fe5cf5f273b4490a7a46bad779d13dbd155d97ca73ad2726">DRSYS_RECORD_END_DEPRECATED</a>. This is limited to system call numbers that can fit in 16 bits.</p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>Replaced by syscall_number_timestamp.syscall_number. </dd></dl>
+
+</div>
+</div>
+<a id="a4afc54ed98e6d9abd6268f65f6c5b77f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4afc54ed98e6d9abd6268f65f6c5b77f">&#9670;&nbsp;</a></span>syscall_number <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">drsys_sysnum_t syscall_record_t_::syscall_number</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The syscall number. </p>
+
+</div>
+</div>
+<a id="a7eb25c523aef97284b8c1e61c356cda6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eb25c523aef97284b8c1e61c356cda6">&#9670;&nbsp;</a></span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">START_PACKED_STRUCTURE { ... }  syscall_record_t_::syscall_number_timestamp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The syscall number and a timestamp. It is used for type <a class="el" href="drsyscall__record_8h.html#a636118441fe62a792fe5cf5f273b4490afa62ceee4eb2db6bed8dd975b05a4bc0">DRSYS_SYSCALL_NUMBER_TIMESTAMP</a> and <a class="el" href="drsyscall__record_8h.html#a636118441fe62a792fe5cf5f273b4490a24f8b06d9bbda428f25cb789934b6c10">DRSYS_RECORD_END_TIMESTAMP</a>. </p>
+
+</div>
+</div>
+<a id="a061d2f6033dd5c3c7173c9fc463a6f4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a061d2f6033dd5c3c7173c9fc463a6f4a">&#9670;&nbsp;</a></span>timestamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t syscall_record_t_::timestamp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The timestamp marks the beginning of the syscall for <a class="el" href="drsyscall__record_8h.html#a636118441fe62a792fe5cf5f273b4490afa62ceee4eb2db6bed8dd975b05a4bc0">DRSYS_SYSCALL_NUMBER_TIMESTAMP</a>, and the end of the syscall for <a class="el" href="drsyscall__record_8h.html#a636118441fe62a792fe5cf5f273b4490a24f8b06d9bbda428f25cb789934b6c10">DRSYS_RECORD_END_TIMESTAMP</a>. </p>
 
 </div>
 </div>
@@ -173,5 +219,5 @@ permalink: /structsyscall__record__t__.html
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20300 --- Fri Aug 1 2025 04:14:14 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20305 --- Fri Aug 8 2025 04:05:05 &nbsp; <img border=0 src="favicon.png">
 </small></address>
