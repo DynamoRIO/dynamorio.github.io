@@ -35,6 +35,8 @@ permalink: /group__drx.html
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__drx__time__scale__t.html">_drx_time_scale_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__drx__time__scale__stat__t.html">_drx_time_scale_stat_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
@@ -63,6 +65,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:ga839a0a82cdb05bc4285369d905e3daaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5b54714f9acdae0b7623033df07ecbd9"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__drx__time__scale__t.html">_drx_time_scale_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga5b54714f9acdae0b7623033df07ecbd9">drx_time_scale_t</a></td></tr>
 <tr class="separator:ga5b54714f9acdae0b7623033df07ecbd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaebe9cf738140a05b45496364cd328bc2"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__drx__time__scale__stat__t.html">_drx_time_scale_stat_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#gaebe9cf738140a05b45496364cd328bc2">drx_time_scale_stat_t</a></td></tr>
+<tr class="separator:gaebe9cf738140a05b45496364cd328bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -88,6 +92,19 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:gac205be2172292384dd687b5471a87edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c416996ed85cb27363274f7ca027892"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga5c416996ed85cb27363274f7ca027892">drx_time_scale_type_t</a> { <br />
+&#160;&#160;<a class="el" href="group__drx.html#gga5c416996ed85cb27363274f7ca027892ac17355e44156a80c51d4b3ef30e212cf">DRX_SCALE_ITIMER</a>
+, <br />
+&#160;&#160;<a class="el" href="group__drx.html#gga5c416996ed85cb27363274f7ca027892a4450ee2d5674c7d7a3f026d35bac8988">DRX_SCALE_POSIX_TIMER</a>
+, <br />
+&#160;&#160;<a class="el" href="group__drx.html#gga5c416996ed85cb27363274f7ca027892aa0ede6377f9a6e77d9f82fd990075239">DRX_SCALE_SLEEP</a>
+, <br />
+&#160;&#160;<a class="el" href="group__drx.html#gga5c416996ed85cb27363274f7ca027892aeb32405971a679bb84e6092c7fcb48e4">DRX_SCALE_FUTEX</a>
+, <br />
+&#160;&#160;<a class="el" href="group__drx.html#gga5c416996ed85cb27363274f7ca027892a0850edcb870de5bdd3e3d0a52609e069">DRX_SCALE_STAT_TYPES</a>
+<br />
+ }</td></tr>
+<tr class="separator:ga5c416996ed85cb27363274f7ca027892"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga157d5577a5b2f5986037d0d09c7dc77d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
 &#160;&#160;<a class="el" href="group__drx.html#gga157d5577a5b2f5986037d0d09c7dc77dace263d9f5b6baee08bbfc15ad8a0a739">DRMGR_PRIORITY_THREAD_INIT_DRX_SCALE</a> = -7500
 , <br />
@@ -154,6 +171,8 @@ Functions</h2></td></tr>
 <tr class="separator:ga4f657728a448e98f041dc8df7adacaeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadb73fd51afeefebe64992c18ffde4a69"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#gadb73fd51afeefebe64992c18ffde4a69">drx_unregister_time_scaling</a> ()</td></tr>
 <tr class="separator:gadb73fd51afeefebe64992c18ffde4a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2fae833149f578e0d1255363dee6098a"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drx.html#ga2fae833149f578e0d1255363dee6098a">drx_get_time_scaling_stats</a> (<a class="el" href="group__drx.html#gaebe9cf738140a05b45496364cd328bc2">drx_time_scale_stat_t</a> **stats_array)</td></tr>
+<tr class="separator:ga2fae833149f578e0d1255363dee6098a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -309,6 +328,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gaebe9cf738140a05b45496364cd328bc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaebe9cf738140a05b45496364cd328bc2">&#9670;&nbsp;</a></span>drx_time_scale_stat_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct__drx__time__scale__stat__t.html">_drx_time_scale_stat_t</a> <a class="el" href="group__drx.html#gaebe9cf738140a05b45496364cd328bc2">drx_time_scale_stat_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Statistics on scaling attempts for one application action type. </p>
+
+</div>
+</div>
 <a id="ga5b54714f9acdae0b7623033df07ecbd9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga5b54714f9acdae0b7623033df07ecbd9">&#9670;&nbsp;</a></span>drx_time_scale_t</h2>
 
@@ -425,6 +459,33 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="gga157d5577a5b2f5986037d0d09c7dc77da96655f33bca516aa98f800f41be80270"></a>DRMGR_PRIORITY_PRE_SYS_DRX_SCALE&#160;</td><td class="fielddoc"><p>Priority of drx time scaling pre-syscall event: before client. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga157d5577a5b2f5986037d0d09c7dc77daf5b18ed4bf8cc3f6ed299f135bd45754"></a>DRMGR_PRIORITY_POST_SYS_DRX_SCALE&#160;</td><td class="fielddoc"><p>Priority of drx time post-syscall event: before client. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga5c416996ed85cb27363274f7ca027892"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5c416996ed85cb27363274f7ca027892">&#9670;&nbsp;</a></span>drx_time_scale_type_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__drx.html#ga5c416996ed85cb27363274f7ca027892">drx_time_scale_type_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Application action types for <a class="el" href="group__drx.html#gaebe9cf738140a05b45496364cd328bc2">drx_time_scale_stat_t</a>. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga5c416996ed85cb27363274f7ca027892ac17355e44156a80c51d4b3ef30e212cf"></a>DRX_SCALE_ITIMER&#160;</td><td class="fielddoc"><p>Any of the 3 itimers. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga5c416996ed85cb27363274f7ca027892a4450ee2d5674c7d7a3f026d35bac8988"></a>DRX_SCALE_POSIX_TIMER&#160;</td><td class="fielddoc"><p>Any POSIX timer. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga5c416996ed85cb27363274f7ca027892aa0ede6377f9a6e77d9f82fd990075239"></a>DRX_SCALE_SLEEP&#160;</td><td class="fielddoc"><p>Any sleep system call. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga5c416996ed85cb27363274f7ca027892aeb32405971a679bb84e6092c7fcb48e4"></a>DRX_SCALE_FUTEX&#160;</td><td class="fielddoc"><p>The futex system call. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga5c416996ed85cb27363274f7ca027892a0850edcb870de5bdd3e3d0a52609e069"></a>DRX_SCALE_STAT_TYPES&#160;</td><td class="fielddoc"><p>Count of stat types. </p>
 </td></tr>
 </table>
 
@@ -955,6 +1016,25 @@ This method simply wraps a store that also sets an app translation. Make sure th
 
 </div>
 </div>
+<a id="ga2fae833149f578e0d1255363dee6098a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2fae833149f578e0d1255363dee6098a">&#9670;&nbsp;</a></span>drx_get_time_scaling_stats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT bool drx_get_time_scaling_stats </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__drx.html#gaebe9cf738140a05b45496364cd328bc2">drx_time_scale_stat_t</a> **&#160;</td>
+          <td class="paramname"><em>stats_array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns a pointer to an array with <a class="el" href="group__drx.html#gga5c416996ed85cb27363274f7ca027892a0850edcb870de5bdd3e3d0a52609e069">DRX_SCALE_STAT_TYPES</a> entries, with the entry at index "i" containing statistics on scaling for the <a class="el" href="group__drx.html#ga5c416996ed85cb27363274f7ca027892">drx_time_scale_type_t</a> with value equal to "i". </p>
+
+</div>
+</div>
 <a id="gae0665a86427616ffc80c59375649e283"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gae0665a86427616ffc80c59375649e283">&#9670;&nbsp;</a></span>drx_init()</h2>
 
@@ -1378,5 +1458,5 @@ To update multiple counters at the same place, multiple <a class="el" href="grou
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20312 --- Fri Aug 15 2025 03:31:12 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20322 --- Fri Aug 22 2025 03:22:31 &nbsp; <img border=0 src="favicon.png">
 </small></address>

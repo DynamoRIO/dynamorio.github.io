@@ -9,7 +9,15 @@
     [ "DRX_FILE_SKIP_OPEN", "group__drx.html#ga1c12b3b71826d8b412f25a0059fd2017", null ],
     [ "drx_buf_full_cb_t", "group__drx.html#ga8006198d0e3f3f85df687e9286de597c", null ],
     [ "drx_buf_t", "group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf", null ],
+    [ "drx_time_scale_stat_t", "group__drx.html#gaebe9cf738140a05b45496364cd328bc2", null ],
     [ "drx_time_scale_t", "group__drx.html#ga5b54714f9acdae0b7623033df07ecbd9", null ],
+    [ "drx_time_scale_type_t", "group__drx.html#ga5c416996ed85cb27363274f7ca027892", [
+      [ "DRX_SCALE_ITIMER", "group__drx.html#gga5c416996ed85cb27363274f7ca027892ac17355e44156a80c51d4b3ef30e212cf", null ],
+      [ "DRX_SCALE_POSIX_TIMER", "group__drx.html#gga5c416996ed85cb27363274f7ca027892a4450ee2d5674c7d7a3f026d35bac8988", null ],
+      [ "DRX_SCALE_SLEEP", "group__drx.html#gga5c416996ed85cb27363274f7ca027892aa0ede6377f9a6e77d9f82fd990075239", null ],
+      [ "DRX_SCALE_FUTEX", "group__drx.html#gga5c416996ed85cb27363274f7ca027892aeb32405971a679bb84e6092c7fcb48e4", null ],
+      [ "DRX_SCALE_STAT_TYPES", "group__drx.html#gga5c416996ed85cb27363274f7ca027892a0850edcb870de5bdd3e3d0a52609e069", null ]
+    ] ],
     [ "drx_aflags_are_dead", "group__drx.html#gae33a91872caa46e430d5d721af6d8c82", null ],
     [ "drx_buf_create_circular_buffer", "group__drx.html#ga4caa3e50a3cfb5ecb5c08e65fc44ada3", null ],
     [ "drx_buf_create_trace_buffer", "group__drx.html#ga26d48f2339de13a75bfe21b5fd04a6c7", null ],
@@ -24,6 +32,7 @@
     [ "drx_buf_set_buffer_ptr", "group__drx.html#ga22218727d86b15b625a9d0f5729b9955", null ],
     [ "drx_exit", "group__drx.html#ga996c662c089046984b64a627500748f5", null ],
     [ "drx_expand_scatter_gather", "group__drx.html#gadef64ded5369dbe2fe6f5831205530e7", null ],
+    [ "drx_get_time_scaling_stats", "group__drx.html#ga2fae833149f578e0d1255363dee6098a", null ],
     [ "drx_init", "group__drx.html#gae0665a86427616ffc80c59375649e283", null ],
     [ "drx_insert_counter_update", "group__drx.html#gab5f7ae9128e953fdf1f8c2ac3292f07a", null ],
     [ "drx_instrlist_app_size", "group__drx.html#ga4ced61bc9752b42236f79929a3daf830", null ],

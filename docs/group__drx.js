@@ -4,6 +4,12 @@
       [ "timeout_scale", "struct__drx__time__scale__t.html#a497a0494c6b46f6a66010349a56f64ff", null ],
       [ "timer_scale", "struct__drx__time__scale__t.html#accce7a99d52920e57a709f6216686e27", null ]
     ] ],
+    [ "_drx_time_scale_stat_t", "struct__drx__time__scale__stat__t.html", [
+      [ "count_attempted", "struct__drx__time__scale__stat__t.html#a52cd26d69fcf70badcc1e67b763f81c3", null ],
+      [ "count_failed", "struct__drx__time__scale__stat__t.html#a5945397db6dd7b03ea5db37b6ae5bcf4", null ],
+      [ "count_nop", "struct__drx__time__scale__stat__t.html#a78ae0fc4ff6435c5b029c4c5c3c3228d", null ],
+      [ "count_zero_to_nonzero", "struct__drx__time__scale__stat__t.html#ac2451ccf9ae1f21cb2722aee4ae673c2", null ]
+    ] ],
     [ "DRMGR_PRIORITY_NAME_DRX_BUF_EXIT", "group__drx.html#ga6ddda40d50adc634c87223c1dd474a3e", null ],
     [ "DRMGR_PRIORITY_NAME_DRX_BUF_INIT", "group__drx.html#ga0645733e06c68e965ccc9e7c3126d438", null ],
     [ "DRMGR_PRIORITY_NAME_DRX_FAULT", "group__drx.html#ga48c78ac1ff92549afbe94c26369e168e", null ],
@@ -14,6 +20,7 @@
     [ "DRX_FILE_SKIP_OPEN", "group__drx.html#ga1c12b3b71826d8b412f25a0059fd2017", null ],
     [ "drx_buf_full_cb_t", "group__drx.html#ga8006198d0e3f3f85df687e9286de597c", null ],
     [ "drx_buf_t", "group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf", null ],
+    [ "drx_time_scale_stat_t", "group__drx.html#gaebe9cf738140a05b45496364cd328bc2", null ],
     [ "drx_time_scale_t", "group__drx.html#ga5b54714f9acdae0b7623033df07ecbd9", [
       [ "DRMGR_PRIORITY_FAULT_DRX", "group__drx.html#gga16685eea158879e41b101ca3634de462a8cd3adf4599b9be81a32a0d111df47ed", null ],
       [ "DRX_COUNTER_64BIT", "group__drx.html#ggafa231099d07583c3ed0981e0bb665f55a507636af18a8858c214066682d013a1a", null ],
@@ -26,6 +33,13 @@
       [ "DRMGR_PRIORITY_THREAD_EXIT_DRX_SCALE", "group__drx.html#gga157d5577a5b2f5986037d0d09c7dc77dab74ef9f52fd6072563a764408dc7366d", null ],
       [ "DRMGR_PRIORITY_PRE_SYS_DRX_SCALE", "group__drx.html#gga157d5577a5b2f5986037d0d09c7dc77da96655f33bca516aa98f800f41be80270", null ],
       [ "DRMGR_PRIORITY_POST_SYS_DRX_SCALE", "group__drx.html#gga157d5577a5b2f5986037d0d09c7dc77daf5b18ed4bf8cc3f6ed299f135bd45754", null ]
+    ] ],
+    [ "drx_time_scale_type_t", "group__drx.html#ga5c416996ed85cb27363274f7ca027892", [
+      [ "DRX_SCALE_ITIMER", "group__drx.html#gga5c416996ed85cb27363274f7ca027892ac17355e44156a80c51d4b3ef30e212cf", null ],
+      [ "DRX_SCALE_POSIX_TIMER", "group__drx.html#gga5c416996ed85cb27363274f7ca027892a4450ee2d5674c7d7a3f026d35bac8988", null ],
+      [ "DRX_SCALE_SLEEP", "group__drx.html#gga5c416996ed85cb27363274f7ca027892aa0ede6377f9a6e77d9f82fd990075239", null ],
+      [ "DRX_SCALE_FUTEX", "group__drx.html#gga5c416996ed85cb27363274f7ca027892aeb32405971a679bb84e6092c7fcb48e4", null ],
+      [ "DRX_SCALE_STAT_TYPES", "group__drx.html#gga5c416996ed85cb27363274f7ca027892a0850edcb870de5bdd3e3d0a52609e069", null ]
     ] ],
     [ "drx_aflags_are_dead", "group__drx.html#gae33a91872caa46e430d5d721af6d8c82", null ],
     [ "drx_buf_create_circular_buffer", "group__drx.html#ga4caa3e50a3cfb5ecb5c08e65fc44ada3", null ],
@@ -41,6 +55,7 @@
     [ "drx_buf_set_buffer_ptr", "group__drx.html#ga22218727d86b15b625a9d0f5729b9955", null ],
     [ "drx_exit", "group__drx.html#ga996c662c089046984b64a627500748f5", null ],
     [ "drx_expand_scatter_gather", "group__drx.html#gadef64ded5369dbe2fe6f5831205530e7", null ],
+    [ "drx_get_time_scaling_stats", "group__drx.html#ga2fae833149f578e0d1255363dee6098a", null ],
     [ "drx_init", "group__drx.html#gae0665a86427616ffc80c59375649e283", null ],
     [ "drx_insert_counter_update", "group__drx.html#gab5f7ae9128e953fdf1f8c2ac3292f07a", null ],
     [ "drx_instrlist_app_size", "group__drx.html#ga4ced61bc9752b42236f79929a3daf830", null ],
