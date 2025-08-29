@@ -16,6 +16,7 @@
       [ "DRX_SCALE_POSIX_TIMER", "group__drx.html#gga5c416996ed85cb27363274f7ca027892a4450ee2d5674c7d7a3f026d35bac8988", null ],
       [ "DRX_SCALE_SLEEP", "group__drx.html#gga5c416996ed85cb27363274f7ca027892aa0ede6377f9a6e77d9f82fd990075239", null ],
       [ "DRX_SCALE_FUTEX", "group__drx.html#gga5c416996ed85cb27363274f7ca027892aeb32405971a679bb84e6092c7fcb48e4", null ],
+      [ "DRX_SCALE_EPOLL", "group__drx.html#gga5c416996ed85cb27363274f7ca027892ae8b4f0f34837054944ff4ebd063c96f2", null ],
       [ "DRX_SCALE_STAT_TYPES", "group__drx.html#gga5c416996ed85cb27363274f7ca027892a0850edcb870de5bdd3e3d0a52609e069", null ]
     ] ],
     [ "drx_aflags_are_dead", "group__drx.html#gae33a91872caa46e430d5d721af6d8c82", null ],

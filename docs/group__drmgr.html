@@ -181,6 +181,14 @@ Functions</h2></td></tr>
 <tr class="separator:ga6373ac13132abb039c7d0593bde073ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga357735ce7daa0bb717556455f20040a5"><td class="memItemLeft" align="right" valign="top">DR_EXPORT int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga357735ce7daa0bb717556455f20040a5">drmgr_decode_sysnum_from_wrapper</a> (app_pc entry)</td></tr>
 <tr class="separator:ga357735ce7daa0bb717556455f20040a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga233a12a964639905520d64c38bda40ef"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga233a12a964639905520d64c38bda40ef">drmgr_register_exit_event</a> (void(*func)(void))</td></tr>
+<tr class="separator:ga233a12a964639905520d64c38bda40ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47ac0eb7ae1d63f4a80e7e77dac0e647"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga47ac0eb7ae1d63f4a80e7e77dac0e647">drmgr_register_exit_event_user_data</a> (void(*func)(void *user_data), <a class="el" href="group__drmgr.html#gad1ea8251bfe11bcc02821ada3852e599">drmgr_priority_t</a> *priority, void *user_data)</td></tr>
+<tr class="separator:ga47ac0eb7ae1d63f4a80e7e77dac0e647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05642880e7d09b468bb28cc4d4bc9fd9"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga05642880e7d09b468bb28cc4d4bc9fd9">drmgr_unregister_exit_event</a> (void(*func)(void))</td></tr>
+<tr class="separator:ga05642880e7d09b468bb28cc4d4bc9fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga450ef70dcea0b533e9627c71818510d2"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga450ef70dcea0b533e9627c71818510d2">drmgr_unregister_exit_event_user_data</a> (void(*func)(void *user_data))</td></tr>
+<tr class="separator:ga450ef70dcea0b533e9627c71818510d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaaac050cf70682f6fcb8e28aa942705cd"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#gaaac050cf70682f6fcb8e28aa942705cd">drmgr_register_thread_init_event</a> (void(*func)(void *drcontext))</td></tr>
 <tr class="separator:gaaac050cf70682f6fcb8e28aa942705cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf5d894ba37e777790c9dec6f265892cb"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#gaf5d894ba37e777790c9dec6f265892cb">drmgr_register_thread_init_event_ex</a> (void(*func)(void *drcontext), <a class="el" href="group__drmgr.html#gad1ea8251bfe11bcc02821ada3852e599">drmgr_priority_t</a> *priority)</td></tr>
@@ -201,6 +209,14 @@ Functions</h2></td></tr>
 <tr class="separator:ga1a83a4ecf1b6172eab85e116aef96bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga587650c7772d977480861daa39911d22"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga587650c7772d977480861daa39911d22">drmgr_unregister_thread_exit_event_user_data</a> (void(*func)(void *drcontext, void *user_data))</td></tr>
 <tr class="separator:ga587650c7772d977480861daa39911d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27249c169d56944f813995dc93c82867"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga27249c169d56944f813995dc93c82867">drmgr_register_filter_syscall_event</a> (bool(*func)(void *drcontext, int sysnum))</td></tr>
+<tr class="separator:ga27249c169d56944f813995dc93c82867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1538ad0a664e9af608b3f0f91f29ae4a"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga1538ad0a664e9af608b3f0f91f29ae4a">drmgr_register_filter_syscall_event_user_data</a> (bool(*func)(void *drcontext, int sysnum, void *user_data), <a class="el" href="group__drmgr.html#gad1ea8251bfe11bcc02821ada3852e599">drmgr_priority_t</a> *priority, void *user_data)</td></tr>
+<tr class="separator:ga1538ad0a664e9af608b3f0f91f29ae4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad476b725b2b1098b1ec6e624f259dced"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#gad476b725b2b1098b1ec6e624f259dced">drmgr_unregister_filter_syscall_event</a> (bool(*func)(void *drcontext, int sysnum))</td></tr>
+<tr class="separator:gad476b725b2b1098b1ec6e624f259dced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga245e5f1c3d186a91e67116a0261df13e"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga245e5f1c3d186a91e67116a0261df13e">drmgr_unregister_filter_syscall_event_user_data</a> (bool(*func)(void *drcontext, int sysnum, void *user_data))</td></tr>
+<tr class="separator:ga245e5f1c3d186a91e67116a0261df13e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad4c1941a911a84b4f0ec60d2c37c6862"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#gad4c1941a911a84b4f0ec60d2c37c6862">drmgr_register_pre_syscall_event</a> (bool(*func)(void *drcontext, int sysnum))</td></tr>
 <tr class="separator:gad4c1941a911a84b4f0ec60d2c37c6862"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5afd374b143bb438d486c60bdf7cbc4e"><td class="memItemLeft" align="right" valign="top">DR_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drmgr.html#ga5afd374b143bb438d486c60bdf7cbc4e">drmgr_register_pre_syscall_event_ex</a> (bool(*func)(void *drcontext, int sysnum), <a class="el" href="group__drmgr.html#gad1ea8251bfe11bcc02821ada3852e599">drmgr_priority_t</a> *priority)</td></tr>
@@ -747,7 +763,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Initializes the drmgr extension. Must be called prior to any of the other routines. Can be called multiple times (by separate components, normally) but each call must be paired with a corresponding call to <a class="el" href="group__drmgr.html#ga1e27214f63289548497d25c9e628a5d7">drmgr_exit()</a>.</p>
+<p>Initializes the drmgr extension. Must be called prior to any of the other routines. Can be called multiple times (by separate components, normally) but each call must be paired with a corresponding call to <a class="el" href="group__drmgr.html#ga1e27214f63289548497d25c9e628a5d7">drmgr_exit()</a></p>
 <dl class="section return"><dt>Returns</dt><dd>whether successful. </dd></dl>
 
 </div>
@@ -1563,6 +1579,114 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga233a12a964639905520d64c38bda40ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga233a12a964639905520d64c38bda40ef">&#9670;&nbsp;</a></span>drmgr_register_exit_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT bool drmgr_register_exit_event </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(void)&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Registers a callback function for the exit event, which behaves just like the event registered by <a class="el" href="dr__events_8h.html#a32f38cabf4b2c554ce4e476c5d5f6f3a">dr_register_exit_event()</a>. </p><dl class="section return"><dt>Returns</dt><dd>whether successful. </dd></dl>
+
+</div>
+</div>
+<a id="ga47ac0eb7ae1d63f4a80e7e77dac0e647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga47ac0eb7ae1d63f4a80e7e77dac0e647">&#9670;&nbsp;</a></span>drmgr_register_exit_event_user_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT bool drmgr_register_exit_event_user_data </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(void *user_data)&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__drmgr.html#gad1ea8251bfe11bcc02821ada3852e599">drmgr_priority_t</a> *&#160;</td>
+          <td class="paramname"><em>priority</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Registers a callback function for the exit event, which behaves just like the event registered by <a class="el" href="dr__events_8h.html#a32f38cabf4b2c554ce4e476c5d5f6f3a">dr_register_exit_event()</a> but is ordered by <code>priority</code>. Allows for the passing of user data <code>user_data</code> which is available upon the execution of the callback. </p><dl class="section return"><dt>Returns</dt><dd>whether successful. </dd></dl>
+
+</div>
+</div>
+<a id="ga27249c169d56944f813995dc93c82867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga27249c169d56944f813995dc93c82867">&#9670;&nbsp;</a></span>drmgr_register_filter_syscall_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT bool drmgr_register_filter_syscall_event </td>
+          <td>(</td>
+          <td class="paramtype">bool(*)(void *drcontext, int sysnum)&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Registers a callback function for the syscall filter event, which behaves just like DR's pre-syscall event <a class="el" href="dr__events_8h.html#a1f98fd4c247abe6c7fcc6d02291b44de">dr_register_filter_syscall_event()</a>. </p><dl class="section return"><dt>Returns</dt><dd>whether successful. </dd></dl>
+
+</div>
+</div>
+<a id="ga1538ad0a664e9af608b3f0f91f29ae4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1538ad0a664e9af608b3f0f91f29ae4a">&#9670;&nbsp;</a></span>drmgr_register_filter_syscall_event_user_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT bool drmgr_register_filter_syscall_event_user_data </td>
+          <td>(</td>
+          <td class="paramtype">bool(*)(void *drcontext, int sysnum, void *user_data)&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__drmgr.html#gad1ea8251bfe11bcc02821ada3852e599">drmgr_priority_t</a> *&#160;</td>
+          <td class="paramname"><em>priority</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Registers a callback function for the syscall filter event, which behaves just like DR's pre-syscall event <a class="el" href="dr__events_8h.html#a1f98fd4c247abe6c7fcc6d02291b44de">dr_register_filter_syscall_event()</a>, ordered by <code>priority</code>. Allows for the passing of user data <code>user_data</code> which is available upon the execution of the callback. </p><dl class="section return"><dt>Returns</dt><dd>whether successful. </dd></dl>
+
+</div>
+</div>
 <a id="ga4db3e75ae461dc2596d24d0768ab2716"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga4db3e75ae461dc2596d24d0768ab2716">&#9670;&nbsp;</a></span>drmgr_register_kernel_xfer_event()</h2>
 
@@ -2015,7 +2139,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Registers a callback function for the pre-syscall event, which behaves just like DR's pre-syscall event <a class="el" href="dr__events_8h.html#a80d0f026def74d903a83fb6122816ae2">dr_register_pre_syscall_event()</a>. In particular, a filter event is still needed to ensure that a pre- or post-syscall event is actually called: use <a class="el" href="dr__events_8h.html#a1f98fd4c247abe6c7fcc6d02291b44de">dr_register_filter_syscall_event()</a>. </p><dl class="section return"><dt>Returns</dt><dd>whether successful. </dd></dl>
+<p>Registers a callback function for the pre-syscall event, which behaves just like DR's pre-syscall event <a class="el" href="dr__events_8h.html#a80d0f026def74d903a83fb6122816ae2">dr_register_pre_syscall_event()</a>. In particular, a filter event is still needed to ensure that a pre- or post-syscall event is actually called: use <a class="el" href="group__drmgr.html#ga1538ad0a664e9af608b3f0f91f29ae4a">drmgr_register_filter_syscall_event_user_data()</a>. </p><dl class="section return"><dt>Returns</dt><dd>whether successful. </dd></dl>
 
 </div>
 </div>
@@ -2728,6 +2852,82 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga05642880e7d09b468bb28cc4d4bc9fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga05642880e7d09b468bb28cc4d4bc9fd9">&#9670;&nbsp;</a></span>drmgr_unregister_exit_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT bool drmgr_unregister_exit_event </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(void)&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Unregister a callback function for the exit event. </p><dl class="section return"><dt>Returns</dt><dd>true if unregistration is successful and false if it is not (e.g., <code>func</code> was not registered). </dd></dl>
+
+</div>
+</div>
+<a id="ga450ef70dcea0b533e9627c71818510d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga450ef70dcea0b533e9627c71818510d2">&#9670;&nbsp;</a></span>drmgr_unregister_exit_event_user_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT bool drmgr_unregister_exit_event_user_data </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(void *user_data)&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Unregister a callback function for the exit event. </p><dl class="section return"><dt>Returns</dt><dd>true if unregistration is successful and false if it is not (e.g., <code>func</code> was not registered). </dd></dl>
+
+</div>
+</div>
+<a id="gad476b725b2b1098b1ec6e624f259dced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad476b725b2b1098b1ec6e624f259dced">&#9670;&nbsp;</a></span>drmgr_unregister_filter_syscall_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT bool drmgr_unregister_filter_syscall_event </td>
+          <td>(</td>
+          <td class="paramtype">bool(*)(void *drcontext, int sysnum)&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Unregister a callback function for the syscall filter event. </p><dl class="section return"><dt>Returns</dt><dd>true if unregistration is successful and false if it is not (e.g., <code>func</code> was not registered). </dd></dl>
+
+</div>
+</div>
+<a id="ga245e5f1c3d186a91e67116a0261df13e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga245e5f1c3d186a91e67116a0261df13e">&#9670;&nbsp;</a></span>drmgr_unregister_filter_syscall_event_user_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DR_EXPORT bool drmgr_unregister_filter_syscall_event_user_data </td>
+          <td>(</td>
+          <td class="paramtype">bool(*)(void *drcontext, int sysnum, void *user_data)&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Unregister a callback function, which takes user data, for the syscall filter event. </p><dl class="section return"><dt>Returns</dt><dd>true if unregistration is successful and false if it is not (e.g., <code>func</code> was not registered). </dd></dl>
+
+</div>
+</div>
 <a id="ga05c1d9997f1587ff4b690c3fc99a8244"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga05c1d9997f1587ff4b690c3fc99a8244">&#9670;&nbsp;</a></span>drmgr_unregister_kernel_xfer_event()</h2>
 
@@ -3152,5 +3352,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20322 --- Fri Aug 22 2025 03:22:31 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20328 --- Fri Aug 29 2025 03:20:22 &nbsp; <img border=0 src="favicon.png">
 </small></address>
