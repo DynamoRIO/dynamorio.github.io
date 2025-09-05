@@ -41,6 +41,8 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html">analyzer_tmpl_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1cache__replacement__policy__t.html">cache_replacement_policy_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1cache__simulator__knobs__t.html">cache_simulator_knobs_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1decode__info__base__t.html">decode_info_base_t</a></td></tr>
@@ -80,6 +82,14 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1noise__generator__t.html">noise_generator_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1noise__generator__factory__t.html">noise_generator_factory_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1policy__bit__plru__t.html">policy_bit_plru_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1policy__fifo__t.html">policy_fifo_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1policy__lru__t.html">policy_lru_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1policy__rrip__t.html">policy_rrip_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1pt__iscache__autoclean__t.html">pt_iscache_autoclean_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,6 +202,15 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a107f5120f8556cdf7bed8add898915ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b7ed7ead7fdd94e458a042a29c68cfb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a4b7ed7ead7fdd94e458a042a29c68cfb">invalidation_type_t</a> { <br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a4b7ed7ead7fdd94e458a042a29c68cfba52f7d8a0a90c37e2417145f88af45024">INVALIDATION_INCLUSIVE</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a4b7ed7ead7fdd94e458a042a29c68cfba75c4b4ab5c48e4182ddd8bcaf6516663">INVALIDATION_COHERENCE</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a4b7ed7ead7fdd94e458a042a29c68cfba7dea98d2b94b3801be867cd53f0d9322">INVALIDATION_EXCLUSIVE</a>
+<br />
+ }</td></tr>
+<tr class="separator:a4b7ed7ead7fdd94e458a042a29c68cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e273d2446c97f759c93ee0bbd941f34"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a2e273d2446c97f759c93ee0bbd941f34">drmemtrace_status_t</a> { <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a2e273d2446c97f759c93ee0bbd941f34a6b6ba763503b22bd32d68f6d96ecc41d">DRMEMTRACE_SUCCESS</a>
 , <br />
@@ -1142,6 +1161,29 @@ Variables</h2></td></tr>
 <p>Constants related to function or system call parameter tracing. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3d5397b42e7772c06802de628fcb846da80c4ee4c838a408d1e4c158386007362"></a>TRACE_FUNC_ID_SYSCALL_BASE&#160;</td><td class="fielddoc"><p>When system call parameter and return values are provided, they use the function tracing markers <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca5c6f08548563cb1456a4f09b9b5c3f59">TRACE_MARKER_TYPE_FUNC_ID</a>, <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caf3a4f4b91cea5bb55ed8d9caae221e7c">TRACE_MARKER_TYPE_FUNC_ARG</a>, and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca58ff903618a785cb45ba4c57900db24f">TRACE_MARKER_TYPE_FUNC_RETVAL</a>. The identifier used for <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca5c6f08548563cb1456a4f09b9b5c3f59">TRACE_MARKER_TYPE_FUNC_ID</a> is equal to this base value plus the 32-bit system call number for 64-bit marker values or this base value plus the lower 16 bits of the system call number for 32-bit marker values. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a4b7ed7ead7fdd94e458a042a29c68cfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7ed7ead7fdd94e458a042a29c68cfb">&#9670;&nbsp;</a></span>invalidation_type_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a4b7ed7ead7fdd94e458a042a29c68cfb">dynamorio::drmemtrace::invalidation_type_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enumerates the different types of cache line invalidation events that may be seen by a cache. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4b7ed7ead7fdd94e458a042a29c68cfba52f7d8a0a90c37e2417145f88af45024"></a>INVALIDATION_INCLUSIVE&#160;</td><td class="fielddoc"><p>Invalidation performed to maintain inclusivity of the parent cache, which evicted a cache line due to its replacement policy, or to maintain its own parent's inclusivity. Inclusive caches also propagate this events to their children. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4b7ed7ead7fdd94e458a042a29c68cfba75c4b4ab5c48e4182ddd8bcaf6516663"></a>INVALIDATION_COHERENCE&#160;</td><td class="fielddoc"><p>Invalidation performed to honor cache coherence protocols. This is also propagated to the cache's children. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4b7ed7ead7fdd94e458a042a29c68cfba7dea98d2b94b3801be867cd53f0d9322"></a>INVALIDATION_EXCLUSIVE&#160;</td><td class="fielddoc"><p>Invalidation performed when a line is moved to a child cache of an exclusive cache. </p>
 </td></tr>
 </table>
 
@@ -2932,5 +2974,5 @@ For additional file open parameters with the thread and window identifiers, use 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20328 --- Fri Aug 29 2025 03:20:22 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20335 --- Fri Sep 5 2025 03:16:59 &nbsp; <img border=0 src="favicon.png">
 </small></address>

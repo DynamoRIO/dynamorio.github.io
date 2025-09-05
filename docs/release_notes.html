@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 11.90.20328"
+title: "Release Notes for Version 11.90.20335"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 11.90.20328 </div>  </div>
+<div class="title">Release Notes for Version 11.90.20335 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,12 +63,17 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 11.90.20328. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 11.90.20328 and 11.3.0 include the following compatibility changes:</p><ul>
+<p>The current version is 11.90.20335. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 11.90.20335 and 11.3.0 include the following compatibility changes:</p><ul>
 <li>On 32-bit Arm the size of <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> has been increased by 4 and the struct is now required to be 8-byte aligned. The offset of the field "simd" has changed.</li>
 <li>Added new fields elf_path and elf_path_size to dr_memory_dump_spec_t. When <a class="el" href="dr__tools_8h.html#afa268a6496cad930513c1f0353fdd06e">dr_create_memory_dump()</a> returns true and elf_path is not NULL, elf_path will be written with the path to the memory dump file.</li>
+<li>Added new argument access_type of enum cache_access_type_t to the method access_update() of the classes <a class="el" href="classdynamorio_1_1drmemtrace_1_1cache__replacement__policy__t.html">dynamorio::drmemtrace::cache_replacement_policy_t</a> and dynamorio::drmemtrace::caching_device_t. Possible values are:<ul>
+<li>cache_access_type_t::HIT,</li>
+<li>cache_access_type_t::MISS.</li>
 </ul>
-<p>The changes between version 11.90.20328 and 11.3.0 include the following minor compatibility changes:</p>
+</li>
+</ul>
+<p>The changes between version 11.90.20335 and 11.3.0 include the following minor compatibility changes:</p>
 <ul>
 <li>Added <a class="el" href="group__drmgr.html#ga233a12a964639905520d64c38bda40ef">drmgr_register_exit_event()</a>, <a class="el" href="group__drmgr.html#ga05642880e7d09b468bb28cc4d4bc9fd9">drmgr_unregister_exit_event()</a>, <a class="el" href="group__drmgr.html#ga47ac0eb7ae1d63f4a80e7e77dac0e647">drmgr_register_exit_event_user_data()</a>, and <a class="el" href="group__drmgr.html#ga450ef70dcea0b533e9627c71818510d2">drmgr_unregister_exit_event_user_data()</a>, which are required to be used instead of <a class="el" href="dr__events_8h.html#a32f38cabf4b2c554ce4e476c5d5f6f3a">dr_register_exit_event()</a> when using drmgr and provide priorities and user data to the exit event.</li>
 <li>Added <a class="el" href="group__drmgr.html#ga27249c169d56944f813995dc93c82867">drmgr_register_filter_syscall_event()</a>, <a class="el" href="group__drmgr.html#gad476b725b2b1098b1ec6e624f259dced">drmgr_unregister_filter_syscall_event()</a>, <a class="el" href="group__drmgr.html#ga1538ad0a664e9af608b3f0f91f29ae4a">drmgr_register_filter_syscall_event_user_data()</a>, and <a class="el" href="group__drmgr.html#ga245e5f1c3d186a91e67116a0261df13e">drmgr_unregister_filter_syscall_event_user_data()</a>, which are required to be used instead of <a class="el" href="dr__events_8h.html#a1f98fd4c247abe6c7fcc6d02291b44de">dr_register_filter_syscall_event()</a> when using drmgr and provide priorities and user data to the filter event.</li>
@@ -101,6 +106,7 @@ Changes Since Prior Releases</h1>
 <li>Added a new drmemtrace option -skip_records which applies to all tools and skips the first N records.</li>
 <li>Added -trim_before_instr and -trim_after_instr options to trim_filter (part of drmemtrace's record_filter). They allow the trimming of a trace using instruction ordinals. The trimming is approximated to the closest timestamp in the trace that follows the provided instuction ordinals, as timestamps are a safe spot to trim a trace.</li>
 <li>Added a new library, drsyscall_record_lib, for reading and writing detailed syscall records. These records capture arguments, memory regions, and return codes. A new viewer, drsyscall_record_viewer, was also added to display the contents of these records.</li>
+<li>Added the class <a class="el" href="classdynamorio_1_1drmemtrace_1_1policy__rrip__t.html">dynamorio::drmemtrace::policy_rrip_t</a> which implements RRIP cache replacement policy model for the drcachesim tool.</li>
 </ul>
 <hr  />
 <p>The changes between version 11.3.0 and 11.2.0 include the following compatibility changes:</p><ul>
@@ -1258,5 +1264,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20328 --- Fri Aug 29 2025 03:20:21 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20335 --- Fri Sep 5 2025 03:16:58 &nbsp; <img border=0 src="favicon.png">
 </small></address>

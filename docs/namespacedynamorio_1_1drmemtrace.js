@@ -1,6 +1,7 @@
 [
     [ "analysis_tool_tmpl_t", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.js %} ],
     [ "analyzer_tmpl_t", "classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.js %} ],
+    [ "cache_replacement_policy_t", "classdynamorio_1_1drmemtrace_1_1cache__replacement__policy__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1cache__replacement__policy__t.js %} ],
     [ "cache_simulator_knobs_t", "structdynamorio_1_1drmemtrace_1_1cache__simulator__knobs__t.html", null ],
     [ "decode_info_base_t", "classdynamorio_1_1drmemtrace_1_1decode__info__base__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1decode__info__base__t.js %} ],
     [ "instr_decode_info_t", "classdynamorio_1_1drmemtrace_1_1instr__decode__info__t.html", null ],
@@ -21,6 +22,10 @@
     [ "noise_generator_info_t", "structdynamorio_1_1drmemtrace_1_1noise__generator__info__t.html", null ],
     [ "noise_generator_t", "classdynamorio_1_1drmemtrace_1_1noise__generator__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1noise__generator__t.js %} ],
     [ "noise_generator_factory_t", "classdynamorio_1_1drmemtrace_1_1noise__generator__factory__t.html", null ],
+    [ "policy_bit_plru_t", "classdynamorio_1_1drmemtrace_1_1policy__bit__plru__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1policy__bit__plru__t.js %} ],
+    [ "policy_fifo_t", "classdynamorio_1_1drmemtrace_1_1policy__fifo__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1policy__fifo__t.js %} ],
+    [ "policy_lru_t", "classdynamorio_1_1drmemtrace_1_1policy__lru__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1policy__lru__t.js %} ],
+    [ "policy_rrip_t", "classdynamorio_1_1drmemtrace_1_1policy__rrip__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1policy__rrip__t.js %} ],
     [ "pt_iscache_autoclean_t", "structdynamorio_1_1drmemtrace_1_1pt__iscache__autoclean__t.html", null ],
     [ "pt_cpu_t", "structdynamorio_1_1drmemtrace_1_1pt__cpu__t.html", {% include_relative structdynamorio_1_1drmemtrace_1_1pt__cpu__t.js %} ],
     [ "pt_config_t", "structdynamorio_1_1drmemtrace_1_1pt__config__t.html", {% include_relative structdynamorio_1_1drmemtrace_1_1pt__config__t.js %} ],
@@ -78,6 +83,11 @@
     ] ],
     [ "func_trace_t", "namespacedynamorio_1_1drmemtrace.html#a3d5397b42e7772c06802de628fcb846d", [
       [ "TRACE_FUNC_ID_SYSCALL_BASE", "namespacedynamorio_1_1drmemtrace.html#a3d5397b42e7772c06802de628fcb846da80c4ee4c838a408d1e4c158386007362", null ]
+    ] ],
+    [ "invalidation_type_t", "namespacedynamorio_1_1drmemtrace.html#a4b7ed7ead7fdd94e458a042a29c68cfb", [
+      [ "INVALIDATION_INCLUSIVE", "namespacedynamorio_1_1drmemtrace.html#a4b7ed7ead7fdd94e458a042a29c68cfba52f7d8a0a90c37e2417145f88af45024", null ],
+      [ "INVALIDATION_COHERENCE", "namespacedynamorio_1_1drmemtrace.html#a4b7ed7ead7fdd94e458a042a29c68cfba75c4b4ab5c48e4182ddd8bcaf6516663", null ],
+      [ "INVALIDATION_EXCLUSIVE", "namespacedynamorio_1_1drmemtrace.html#a4b7ed7ead7fdd94e458a042a29c68cfba7dea98d2b94b3801be867cd53f0d9322", null ]
     ] ],
     [ "ir2trace_convert_status_t", "namespacedynamorio_1_1drmemtrace.html#a77c190220840ff3efd73bf565679379e", [
       [ "IR2TRACE_CONV_SUCCESS", "namespacedynamorio_1_1drmemtrace.html#a77c190220840ff3efd73bf565679379ea99d1a5a9f90b9e6835cfc8af25e4be70", null ],

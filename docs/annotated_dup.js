@@ -7,6 +7,7 @@
       [ "drmemtrace", "namespacedynamorio_1_1drmemtrace.html", [
         [ "analysis_tool_tmpl_t", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t.js %} ],
         [ "analyzer_tmpl_t", "classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1analyzer__tmpl__t.js %} ],
+        [ "cache_replacement_policy_t", "classdynamorio_1_1drmemtrace_1_1cache__replacement__policy__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1cache__replacement__policy__t.js %} ],
         [ "cache_simulator_knobs_t", "structdynamorio_1_1drmemtrace_1_1cache__simulator__knobs__t.html", null ],
         [ "decode_info_base_t", "classdynamorio_1_1drmemtrace_1_1decode__info__base__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1decode__info__base__t.js %} ],
         [ "instr_decode_info_t", "classdynamorio_1_1drmemtrace_1_1instr__decode__info__t.html", null ],
@@ -27,6 +28,10 @@
         [ "noise_generator_info_t", "structdynamorio_1_1drmemtrace_1_1noise__generator__info__t.html", null ],
         [ "noise_generator_t", "classdynamorio_1_1drmemtrace_1_1noise__generator__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1noise__generator__t.js %} ],
         [ "noise_generator_factory_t", "classdynamorio_1_1drmemtrace_1_1noise__generator__factory__t.html", null ],
+        [ "policy_bit_plru_t", "classdynamorio_1_1drmemtrace_1_1policy__bit__plru__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1policy__bit__plru__t.js %} ],
+        [ "policy_fifo_t", "classdynamorio_1_1drmemtrace_1_1policy__fifo__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1policy__fifo__t.js %} ],
+        [ "policy_lru_t", "classdynamorio_1_1drmemtrace_1_1policy__lru__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1policy__lru__t.js %} ],
+        [ "policy_rrip_t", "classdynamorio_1_1drmemtrace_1_1policy__rrip__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1policy__rrip__t.js %} ],
         [ "pt_iscache_autoclean_t", "structdynamorio_1_1drmemtrace_1_1pt__iscache__autoclean__t.html", null ],
         [ "pt_cpu_t", "structdynamorio_1_1drmemtrace_1_1pt__cpu__t.html", {% include_relative structdynamorio_1_1drmemtrace_1_1pt__cpu__t.js %} ],
         [ "pt_config_t", "structdynamorio_1_1drmemtrace_1_1pt__config__t.html", {% include_relative structdynamorio_1_1drmemtrace_1_1pt__config__t.js %} ],
