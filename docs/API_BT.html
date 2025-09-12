@@ -86,7 +86,7 @@ Basic Block Creation</h2>
 <div class="fragment"><div class="line"><a class="code" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a> new_block(<span class="keywordtype">void</span> *drcontext, <span class="keywordtype">void</span> *tag, <a class="code" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *bb,</div>
 <div class="line">                          <span class="keywordtype">bool</span> for_trace, <span class="keywordtype">bool</span> translating);</div>
 <div class="ttc" id="adr__defines_8h_html_a3fb73c55def575ec5705577625491d66"><div class="ttname"><a href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a></div><div class="ttdeci">struct _instrlist_t instrlist_t</div><div class="ttdef"><b>Definition:</b> dr_defines.h:908</div></div>
-<div class="ttc" id="adr__events_8h_html_a689518ac5d1ad136b13e03012702b209"><div class="ttname"><a href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a></div><div class="ttdeci">dr_emit_flags_t</div><div class="ttdef"><b>Definition:</b> dr_events.h:138</div></div>
+<div class="ttc" id="adr__events_8h_html_a689518ac5d1ad136b13e03012702b209"><div class="ttname"><a href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209">dr_emit_flags_t</a></div><div class="ttdeci">dr_emit_flags_t</div><div class="ttdef"><b>Definition:</b> dr_events.h:145</div></div>
 </div><!-- fragment --><ul>
 <li><code>drcontext</code> is a pointer to the input program's machine context. Clients should not inspect or modify the context; it is provided as an opaque pointer (i.e., <code>void *</code>) to be passed to API routines that require access to this internal data.</li>
 <li><code>tag</code> is a unique identifier for the basic block fragment.</li>
@@ -108,7 +108,7 @@ Basic Block Creation</h2>
 <div class="line">  }</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209a7d25c4546544d1a8c0b77c69230772eb">DR_EMIT_DEFAULT</a>;</div>
 <div class="line">}</div>
-<div class="ttc" id="adr__events_8h_html_a689518ac5d1ad136b13e03012702b209a7d25c4546544d1a8c0b77c69230772eb"><div class="ttname"><a href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209a7d25c4546544d1a8c0b77c69230772eb">DR_EMIT_DEFAULT</a></div><div class="ttdeci">@ DR_EMIT_DEFAULT</div><div class="ttdef"><b>Definition:</b> dr_events.h:140</div></div>
+<div class="ttc" id="adr__events_8h_html_a689518ac5d1ad136b13e03012702b209a7d25c4546544d1a8c0b77c69230772eb"><div class="ttname"><a href="dr__events_8h.html#a689518ac5d1ad136b13e03012702b209a7d25c4546544d1a8c0b77c69230772eb">DR_EMIT_DEFAULT</a></div><div class="ttdeci">@ DR_EMIT_DEFAULT</div><div class="ttdef"><b>Definition:</b> dr_events.h:147</div></div>
 <div class="ttc" id="adr__ir__instr_8h_html_ac897243e24d71890e196586b8373b821"><div class="ttname"><a href="dr__ir__instr_8h.html#ac897243e24d71890e196586b8373b821">instr_get_next</a></div><div class="ttdeci">DR_API INSTR_INLINE instr_t * instr_get_next(instr_t *instr)</div></div>
 <div class="ttc" id="adr__ir__instrlist_8h_html_a6491763e4a1534458a8d7034c8f69612"><div class="ttname"><a href="dr__ir__instrlist_8h.html#a6491763e4a1534458a8d7034c8f69612">instrlist_first</a></div><div class="ttdeci">DR_API instr_t * instrlist_first(instrlist_t *ilist)</div></div>
 <div class="ttc" id="astructinstr__t_html"><div class="ttname"><a href="structinstr__t.html">instr_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:378</div></div>
@@ -166,7 +166,7 @@ State Restoration</h2>
 <div class="line"><span class="keywordtype">void</span> restore_state_ex(<span class="keywordtype">void</span> *drcontext, <span class="keywordtype">bool</span> restore_memory,</div>
 <div class="line">                      <a class="code" href="struct__dr__restore__state__info__t.html">dr_restore_state_info_t</a> *info)</div>
 <div class="ttc" id="astruct__dr__mcontext__t_html"><div class="ttname"><a href="struct__dr__mcontext__t.html">_dr_mcontext_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:885</div></div>
-<div class="ttc" id="astruct__dr__restore__state__info__t_html"><div class="ttname"><a href="struct__dr__restore__state__info__t.html">_dr_restore_state_info_t</a></div><div class="ttdef"><b>Definition:</b> dr_events.h:724</div></div>
+<div class="ttc" id="astruct__dr__restore__state__info__t_html"><div class="ttname"><a href="struct__dr__restore__state__info__t.html">_dr_restore_state_info_t</a></div><div class="ttdef"><b>Definition:</b> dr_events.h:731</div></div>
 </div><!-- fragment --><p>See <a class="el" href="API_BT.html#sec_translation">State Translation</a> for further details.</p>
 <h2><a class="anchor" id="sec_events_del"></a>
 Basic Block and Trace Deletion</h2>
@@ -499,5 +499,5 @@ Persisting Code</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20335 --- Fri Sep 5 2025 03:16:58 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20342 --- Fri Sep 12 2025 03:13:58 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -57,6 +57,7 @@
       [ "DR_STATE_ALL", "dr__os__utils_8h.html#ad051d9da5ddb2100eb450587e7551a70a6f0f881ce02e1caf28ffbbc1246aa9a8", null ]
     ] ],
     [ "dr_app_arg_as_cstring", "dr__os__utils_8h.html#ac73ccfd45e62b2ac766022f159ffb87a", null ],
+    [ "dr_attached_midrun", "dr__os__utils_8h.html#a4af26c52e6f5bb2703afefb9ff80bf84", null ],
     [ "dr_convert_handle_to_pid", "dr__os__utils_8h.html#af71c6708c5b03e67687a40533a2e0f2d", null ],
     [ "dr_convert_pid_to_handle", "dr__os__utils_8h.html#a8eaacb8d6e7e0934088e74475c9e7b35", null ],
     [ "dr_get_app_args", "dr__os__utils_8h.html#adf92b27aafaa8ee5d8959790a2735edb", null ],

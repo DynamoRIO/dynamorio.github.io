@@ -1185,8 +1185,10 @@ Registration cannot be done during the basic block event: it should be done at i
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Registers a function which is called after all other threads have been taken over during a process attach event, whether externally triggered or internally triggered (via <a class="el" href="dr__app_8h.html#afb7b7aed03dd6f0ed8d48b8a8796e55e">dr_app_start()</a> or related functions). If this process instance was not initiated by an attach or takeover methodology where multiple application threads may exist at the time of takeover (such as a process newly created on Linux), this registration function returns false.</p>
-<p>The attach methodology operates in a staggered fashion, with each thread being taken over and executed under DR control in turn. If the application has many threads, threads taken over early in this process may execute substantial amounts of instrumented code before the threads taken over last start executing instrumented code. The purpose of this event is to provide a single control point where all threads are known to be under DR control and running instrumented code. </p>
+<p>Registers a function which is called after all other threads have been taken over during a process attach event, whether externally triggered or internally triggered (via <a class="el" href="dr__app_8h.html#afb7b7aed03dd6f0ed8d48b8a8796e55e">dr_app_start()</a> or related functions). If the current process was launched by DR, this event is still called right before starting to execute the initial thread.</p>
+<p>The attach methodology suspends each thread taken over until all threads are taken over. This event is then invoked, and only once the event is finished are any of the threads allowed to start executing. Thus, this event is a good place to take a snapshot of the global state such as the address space. The <a class="el" href="dr__api_8h.html#a2b938c98dd186cc94eef6880f9e3c3e9">dr_client_main()</a> is called (when attaching to an existing process) with other threads active, meaning that if a snapshot is taken at that point the gap between then and this thread suspension can lead to missing information not present in the snapshot and not observed after takeover.</p>
+<p>(If -synchronous_attach is disabled, then the attach methodology operates in a staggered fashion, with each thread being taken over and executed under DR control in turn, with no reliable place for a snapshot.)</p>
+<dl class="section return"><dt>Returns</dt><dd>whether registration is successful. </dd></dl>
 
 </div>
 </div>
@@ -2026,5 +2028,5 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20335 --- Fri Sep 5 2025 03:16:54 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20342 --- Fri Sep 12 2025 03:13:55 &nbsp; <img border=0 src="favicon.png">
 </small></address>
