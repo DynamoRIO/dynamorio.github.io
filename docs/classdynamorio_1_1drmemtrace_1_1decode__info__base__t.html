@@ -25,7 +25,8 @@ permalink: /classdynamorio_1_1drmemtrace_1_1decode__info__base__t.html
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">dynamorio::drmemtrace::decode_info_base_t Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
@@ -50,9 +51,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9cdf4ae4edb090f9a82af59f88c85f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f6a7a826e5cef1fa8bb4c80c88c2dae"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1decode__info__base__t.html#a1f6a7a826e5cef1fa8bb4c80c88c2dae">get_error_string</a> () const</td></tr>
 <tr class="separator:a1f6a7a826e5cef1fa8bb4c80c88c2dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:afa43616d1e3e7d909bfde20774f8a7a1"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1decode__info__base__t.html#afa43616d1e3e7d909bfde20774f8a7a1">set_decode_info_derived</a> (void *dcontext, const <a class="el" href="structdynamorio_1_1drmemtrace_1_1__memref__instr__t.html">dynamorio::drmemtrace::_memref_instr_t</a> &amp;memref_instr, <a class="el" href="structinstr__t.html">instr_t</a> *instr, app_pc decode_pc)=0</td></tr>
+<tr class="separator:afa43616d1e3e7d909bfde20774f8a7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base class for storing instruction decode info. Users should sub-class this base class and implement set_decode_info_derived() to derive and store the decode info they need. </p>
+<div class="textblock"><p>Base class for storing instruction decode info. Users should sub-class this base class and implement <a class="el" href="classdynamorio_1_1drmemtrace_1_1decode__info__base__t.html#afa43616d1e3e7d909bfde20774f8a7a1">set_decode_info_derived()</a> to derive and store the decode info they need. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1f6a7a826e5cef1fa8bb4c80c88c2dae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1f6a7a826e5cef1fa8bb4c80c88c2dae">&#9670;&nbsp;</a></span>get_error_string()</h2>
@@ -68,7 +74,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the details of the error encountered when decoding the instruction or during the custom logic in set_decode_info_derived(). </p>
+<p>Returns the details of the error encountered when decoding the instruction or during the custom logic in <a class="el" href="classdynamorio_1_1drmemtrace_1_1decode__info__base__t.html#afa43616d1e3e7d909bfde20774f8a7a1">set_decode_info_derived()</a>. </p>
 
 </div>
 </div>
@@ -128,9 +134,64 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Sets the decode info for the provided <code>instr</code> which was allocated using the provided <code>dcontext</code> for the provided <code>memref_instr</code>, decoded from raw bytes at the provided address in <code>decode_pc</code> (raw bytes address is valid only for this call).</p>
-<p>This invokes the set_decode_info_derived() provided by the derived class, and additionally does other required bookkeeping.</p>
-<p>set_decode_info_derived() is expected to take ownership of the provided <code>instr</code> if used with a <a class="el" href="classdynamorio_1_1drmemtrace_1_1decode__cache__t.html">dynamorio::drmemtrace::decode_cache_t</a> object constructed with <code>persist_decoded_instr_</code> set to true.</p>
+<p>This invokes the <a class="el" href="classdynamorio_1_1drmemtrace_1_1decode__info__base__t.html#afa43616d1e3e7d909bfde20774f8a7a1">set_decode_info_derived()</a> provided by the derived class, and additionally does other required bookkeeping.</p>
+<p><a class="el" href="classdynamorio_1_1drmemtrace_1_1decode__info__base__t.html#afa43616d1e3e7d909bfde20774f8a7a1">set_decode_info_derived()</a> is expected to take ownership of the provided <code>instr</code> if used with a <a class="el" href="classdynamorio_1_1drmemtrace_1_1decode__cache__t.html">dynamorio::drmemtrace::decode_cache_t</a> object constructed with <code>persist_decoded_instr_</code> set to true.</p>
 <p>The provided <code>instr</code> will be nullptr if the <a class="el" href="classdynamorio_1_1drmemtrace_1_1decode__cache__t.html">dynamorio::drmemtrace::decode_cache_t</a> was constructed with <code>include_decoded_instr_</code> set to false, which is useful when the user needs only the <code>decode_pc</code> to perform the actual decoding themselves. </p>
+
+</div>
+</div>
+<a id="afa43616d1e3e7d909bfde20774f8a7a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa43616d1e3e7d909bfde20774f8a7a1">&#9670;&nbsp;</a></span>set_decode_info_derived()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string dynamorio::drmemtrace::decode_info_base_t::set_decode_info_derived </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>dcontext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdynamorio_1_1drmemtrace_1_1__memref__instr__t.html">dynamorio::drmemtrace::_memref_instr_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>memref_instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structinstr__t.html">instr_t</a> *&#160;</td>
+          <td class="paramname"><em>instr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">app_pc&#160;</td>
+          <td class="paramname"><em>decode_pc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the decoding info fields as required by the derived class, based on the provided <a class="el" href="structinstr__t.html">instr_t</a> which was allocated using the provided opaque <code>dcontext</code> for the provided <code>memref_instr</code>, decoded from raw bytes at the provided address in <code>decode_pc</code> (raw bytes address is valid only for this call). Derived classes must implement this virtual function. Note that this cannot be invoked directly as it is private, but only through <a class="el" href="classdynamorio_1_1drmemtrace_1_1decode__info__base__t.html#a3fad97cabb7549c1cddf868d54776bc1">set_decode_info()</a> which does other required bookkeeping.</p>
+<p>This is meant for use with <a class="el" href="classdynamorio_1_1drmemtrace_1_1decode__cache__t.html">dynamorio::drmemtrace::decode_cache_t</a>, which will invoke <a class="el" href="classdynamorio_1_1drmemtrace_1_1decode__info__base__t.html#a3fad97cabb7549c1cddf868d54776bc1">set_decode_info()</a> for each new decoded instruction.</p>
+<p>The responsibility for invoking <a class="el" href="dr__ir__instr_8h.html#a9e2667003be814d4b2e887d8ae29dac1">instr_destroy()</a> on the provided <code>instr</code> lies with this <a class="el" href="classdynamorio_1_1drmemtrace_1_1decode__info__base__t.html">dynamorio::drmemtrace::decode_info_base_t</a> object, unless the <a class="el" href="classdynamorio_1_1drmemtrace_1_1decode__cache__t.html">dynamorio::drmemtrace::decode_cache_t</a> was constructed with <code>persist_decoded_instr_</code> set to false, in which case no heap allocation takes place.</p>
+<p>The provided <code>instr</code> will be nullptr if the <a class="el" href="classdynamorio_1_1drmemtrace_1_1decode__cache__t.html">dynamorio::drmemtrace::decode_cache_t</a> was constructed with <code>include_decoded_instr_</code> set to false.</p>
+<p>Returns an empty string if successful, or the error description. </p>
+
+<p>Implemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1instr__decode__info__t.html#a55f83b1f55d24431dbf160100d425eb5">dynamorio::drmemtrace::instr_decode_info_t</a>.</p>
 
 </div>
 </div>
@@ -143,5 +204,5 @@ Public Member Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20342 --- Fri Sep 12 2025 03:14:00 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20349 --- Fri Sep 19 2025 03:18:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

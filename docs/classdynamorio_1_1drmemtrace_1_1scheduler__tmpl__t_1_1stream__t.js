@@ -9,6 +9,7 @@
     [ "get_input_workload_ordinal", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a350bdb2c70127ec774444d540a49cfd6", null ],
     [ "get_instruction_ordinal", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a3a83dd98176ac3c13de12ab60d478252", null ],
     [ "get_last_timestamp", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a3ea475b2b4f9dc3d440b4dc504c81d2b", null ],
+    [ "get_next_trace_pc", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a2e8ebed15fa52f35afb27637ce2d83d6", null ],
     [ "get_output_cpuid", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#afddeb23340f782f500982cac5dda6af9", null ],
     [ "get_output_instruction_ordinal", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a22d0f62296ada8219d787612cb64953d", null ],
     [ "get_output_record_ordinal", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#adad13986931ac7087d4dc63204336120", null ],

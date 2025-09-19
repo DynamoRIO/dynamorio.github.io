@@ -40,11 +40,13 @@ Inheritance diagram for dynamorio::drmemtrace::memtrace_stream_t:</div>
   <img src="/images/classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.png" usemap="#dynamorio::drmemtrace::memtrace_5Fstream_5Ft_map" alt=""/>
   <map id="dynamorio::drmemtrace::memtrace_5Fstream_5Ft_map" name="dynamorio::drmemtrace::memtrace_5Fstream_5Ft_map">
 <area href="classdynamorio_1_1drmemtrace_1_1default__memtrace__stream__t.html" alt="dynamorio::drmemtrace::default_memtrace_stream_t" shape="rect" coords="0,56,468,80"/>
-<area href="classdynamorio_1_1drmemtrace_1_1reader__t.html" alt="dynamorio::drmemtrace::reader_t" shape="rect" coords="478,56,946,80"/>
-<area href="classdynamorio_1_1drmemtrace_1_1record__reader__t.html" alt="dynamorio::drmemtrace::record_reader_t" shape="rect" coords="956,56,1424,80"/>
-<area href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html" alt="dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::stream_t" shape="rect" coords="1434,56,1902,80"/>
-<area href="classdynamorio_1_1drmemtrace_1_1noise__generator__t.html" alt="dynamorio::drmemtrace::noise_generator_t" shape="rect" coords="478,112,946,136"/>
-<area href="classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html" alt="dynamorio::drmemtrace::record_file_reader_t&lt; T &gt;" shape="rect" coords="956,112,1424,136"/>
+<area href="classdynamorio_1_1drmemtrace_1_1reader__base__t.html" alt="dynamorio::drmemtrace::reader_base_t" shape="rect" coords="597,56,1065,80"/>
+<area href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html" alt="dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::stream_t" shape="rect" coords="1075,56,1543,80"/>
+<area href="classdynamorio_1_1drmemtrace_1_1reader__t.html" alt="dynamorio::drmemtrace::reader_t" shape="rect" coords="239,112,707,136"/>
+<area href="classdynamorio_1_1drmemtrace_1_1record__reader__t.html" alt="dynamorio::drmemtrace::record_reader_t" shape="rect" coords="956,112,1424,136"/>
+<area href="classdynamorio_1_1drmemtrace_1_1file__reader__t.html" alt="dynamorio::drmemtrace::file_reader_t&lt; T &gt;" shape="rect" coords="0,168,468,192"/>
+<area href="classdynamorio_1_1drmemtrace_1_1noise__generator__t.html" alt="dynamorio::drmemtrace::noise_generator_t" shape="rect" coords="478,168,946,192"/>
+<area href="classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html" alt="dynamorio::drmemtrace::record_file_reader_t&lt; T &gt;" shape="rect" coords="956,168,1424,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -124,6 +126,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aff0f5d22c992aa84c6dabb7713be9ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf6b2b760e4daa1d40d6bc151a6c9eb2"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#abf6b2b760e4daa1d40d6bc151a6c9eb2">get_schedule_statistic</a> (<a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a86e5d510793bb63af0144b38eded2d12">schedule_statistic_t</a> stat) const</td></tr>
 <tr class="separator:abf6b2b760e4daa1d40d6bc151a6c9eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94346885fec8a5fc2b15e283534c9db3"><td class="memItemLeft" align="right" valign="top">virtual uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a94346885fec8a5fc2b15e283534c9db3">get_next_trace_pc</a> () const</td></tr>
+<tr class="separator:a94346885fec8a5fc2b15e283534c9db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>&lt; DrMemtrace tracing + simulation infrastructure namespace. This is an interface for obtaining information from analysis tools on the full stream of memory reference records. </p>
@@ -425,6 +429,35 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a94346885fec8a5fc2b15e283534c9db3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94346885fec8a5fc2b15e283534c9db3">&#9670;&nbsp;</a></span>get_next_trace_pc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint64_t dynamorio::drmemtrace::memtrace_stream_t::get_next_trace_pc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the value of the next continuous PC in the trace after the current trace record. This PC is from the next instruction or the next <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca3b75f9115bb4146ed5540412e36bdd5a">TRACE_MARKER_TYPE_KERNEL_EVENT</a>, whichever comes first.</p>
+<p>This is not supported during online analysis, and for i-filtered traces. i-filtered traces have a zero-sized instr entry before memrefs, which is not presented to the tools. Reading ahead past them to provide the actual next trace pc complicates read-ahead logic especially for zipfile readers. </p>
+
+<p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a2e8ebed15fa52f35afb27637ce2d83d6">dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::stream_t</a>, and <a class="el" href="classdynamorio_1_1drmemtrace_1_1reader__base__t.html#a69df93635416e15366787045fc55da85">dynamorio::drmemtrace::reader_base_t</a>.</p>
+
+</div>
+</div>
 <a id="a067c7ee96ecc1ea714b75fb9b82c3cd1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a067c7ee96ecc1ea714b75fb9b82c3cd1">&#9670;&nbsp;</a></span>get_output_cpuid()</h2>
 
@@ -590,7 +623,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns a name for the memtrace stream. For stored offline traces, this is the base name of the trace on disk. For online traces, this is the name of the pipe. </p>
 
-<p>Implemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ad648abe0b17d471550e514f3e852b31c">dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::stream_t</a>, <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html#adca58ecd91243c2b9145653818277e07">dynamorio::drmemtrace::record_file_reader_t&lt; T &gt;</a>, <a class="el" href="classdynamorio_1_1drmemtrace_1_1noise__generator__t.html#a0b7d57a46a1b56639ee1ce97a47fea0f">dynamorio::drmemtrace::noise_generator_t</a>, and <a class="el" href="classdynamorio_1_1drmemtrace_1_1default__memtrace__stream__t.html#ab8f93d3f392efd52ab37e7d4ce198552">dynamorio::drmemtrace::default_memtrace_stream_t</a>.</p>
+<p>Implemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ad648abe0b17d471550e514f3e852b31c">dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::stream_t</a>, <a class="el" href="classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html#adca58ecd91243c2b9145653818277e07">dynamorio::drmemtrace::record_file_reader_t&lt; T &gt;</a>, <a class="el" href="classdynamorio_1_1drmemtrace_1_1noise__generator__t.html#a0b7d57a46a1b56639ee1ce97a47fea0f">dynamorio::drmemtrace::noise_generator_t</a>, <a class="el" href="classdynamorio_1_1drmemtrace_1_1default__memtrace__stream__t.html#ab8f93d3f392efd52ab37e7d4ce198552">dynamorio::drmemtrace::default_memtrace_stream_t</a>, and <a class="el" href="classdynamorio_1_1drmemtrace_1_1file__reader__t.html#a018f8b720943d67dae079c206efed858">dynamorio::drmemtrace::file_reader_t&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -743,5 +776,5 @@ Public Member Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20342 --- Fri Sep 12 2025 03:14:00 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20349 --- Fri Sep 19 2025 03:18:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -24,6 +24,7 @@
     [ "get_input_interface", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#aee4fe624edfe4e8d9b8416ab2114c1d0", null ],
     [ "get_instruction_ordinal", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#ad4bd0ddaf428bb679f940f58f9a4e532", null ],
     [ "get_last_timestamp", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#af538bcfbd6d8fef5612dac7228c6cb83", null ],
+    [ "get_next_trace_pc", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a94346885fec8a5fc2b15e283534c9db3", null ],
     [ "get_output_cpuid", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a067c7ee96ecc1ea714b75fb9b82c3cd1", null ],
     [ "get_page_size", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a252e37074e0721049aa753cfa17a9ccc", null ],
     [ "get_record_ordinal", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a319e4bec8180d58bb05e02299dbbb884", null ],

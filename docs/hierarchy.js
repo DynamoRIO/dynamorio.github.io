@@ -94,6 +94,7 @@
       [ "dynamorio::droption::droption_t< T >", "classdynamorio_1_1droption_1_1droption__t.html", null ]
     ] ],
     [ "drstatecmp_options_t", "structdrstatecmp__options__t.html", null ],
+    [ "dynamorio::drmemtrace::entry_queue_t", "classdynamorio_1_1drmemtrace_1_1entry__queue__t.html", null ],
     [ "features_t", "structfeatures__t.html", null ],
     [ "dynamorio::drmemtrace::flexible_queue_t< T, comparator_t, hash_t >", "classdynamorio_1_1drmemtrace_1_1flexible__queue__t.html", null ],
     [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::input_reader_t", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__reader__t.html", null ],
@@ -107,11 +108,14 @@
     [ "dynamorio::drmemtrace::instr_summary_t::memref_summary_t", "structdynamorio_1_1drmemtrace_1_1instr__summary__t_1_1memref__summary__t.html", null ],
     [ "dynamorio::drmemtrace::memtrace_stream_t", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html", [
       [ "dynamorio::drmemtrace::default_memtrace_stream_t", "classdynamorio_1_1drmemtrace_1_1default__memtrace__stream__t.html", null ],
-      [ "dynamorio::drmemtrace::reader_t", "classdynamorio_1_1drmemtrace_1_1reader__t.html", [
-        [ "dynamorio::drmemtrace::noise_generator_t", "classdynamorio_1_1drmemtrace_1_1noise__generator__t.html", null ]
-      ] ],
-      [ "dynamorio::drmemtrace::record_reader_t", "classdynamorio_1_1drmemtrace_1_1record__reader__t.html", [
-        [ "dynamorio::drmemtrace::record_file_reader_t< T >", "classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html", null ]
+      [ "dynamorio::drmemtrace::reader_base_t", "classdynamorio_1_1drmemtrace_1_1reader__base__t.html", [
+        [ "dynamorio::drmemtrace::reader_t", "classdynamorio_1_1drmemtrace_1_1reader__t.html", [
+          [ "dynamorio::drmemtrace::file_reader_t< T >", "classdynamorio_1_1drmemtrace_1_1file__reader__t.html", null ],
+          [ "dynamorio::drmemtrace::noise_generator_t", "classdynamorio_1_1drmemtrace_1_1noise__generator__t.html", null ]
+        ] ],
+        [ "dynamorio::drmemtrace::record_reader_t", "classdynamorio_1_1drmemtrace_1_1record__reader__t.html", [
+          [ "dynamorio::drmemtrace::record_file_reader_t< T >", "classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html", null ]
+        ] ]
       ] ],
       [ "dynamorio::drmemtrace::scheduler_tmpl_t< RecordType, ReaderType >::stream_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html", null ]
     ] ],

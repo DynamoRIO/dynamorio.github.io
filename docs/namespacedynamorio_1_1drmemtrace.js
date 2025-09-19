@@ -4,11 +4,12 @@
     [ "cache_replacement_policy_t", "classdynamorio_1_1drmemtrace_1_1cache__replacement__policy__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1cache__replacement__policy__t.js %} ],
     [ "cache_simulator_knobs_t", "structdynamorio_1_1drmemtrace_1_1cache__simulator__knobs__t.html", null ],
     [ "decode_info_base_t", "classdynamorio_1_1drmemtrace_1_1decode__info__base__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1decode__info__base__t.js %} ],
-    [ "instr_decode_info_t", "classdynamorio_1_1drmemtrace_1_1instr__decode__info__t.html", null ],
+    [ "instr_decode_info_t", "classdynamorio_1_1drmemtrace_1_1instr__decode__info__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1instr__decode__info__t.js %} ],
     [ "decode_cache_base_t", "classdynamorio_1_1drmemtrace_1_1decode__cache__base__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1decode__cache__base__t.js %} ],
     [ "decode_cache_t", "classdynamorio_1_1drmemtrace_1_1decode__cache__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1decode__cache__t.js %} ],
-    [ "test_decode_cache_t", "classdynamorio_1_1drmemtrace_1_1test__decode__cache__t.html", null ],
+    [ "test_decode_cache_t", "classdynamorio_1_1drmemtrace_1_1test__decode__cache__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1test__decode__cache__t.js %} ],
     [ "drmemtrace_replace_file_ops_t", "structdynamorio_1_1drmemtrace_1_1drmemtrace__replace__file__ops__t.html", {% include_relative structdynamorio_1_1drmemtrace_1_1drmemtrace__replace__file__ops__t.js %} ],
+    [ "file_reader_t", "classdynamorio_1_1drmemtrace_1_1file__reader__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1file__reader__t.js %} ],
     [ "flexible_queue_t", "classdynamorio_1_1drmemtrace_1_1flexible__queue__t.html", null ],
     [ "ir2trace_t", "classdynamorio_1_1drmemtrace_1_1ir2trace__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1ir2trace__t.js %} ],
     [ "_memref_data_t", "structdynamorio_1_1drmemtrace_1_1__memref__data__t.html", {% include_relative structdynamorio_1_1drmemtrace_1_1__memref__data__t.js %} ],
@@ -41,6 +42,8 @@
     [ "module_mapper_t", "classdynamorio_1_1drmemtrace_1_1module__mapper__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1module__mapper__t.js %} ],
     [ "test_module_mapper_t", "classdynamorio_1_1drmemtrace_1_1test__module__mapper__t.html", null ],
     [ "reader_t", "classdynamorio_1_1drmemtrace_1_1reader__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1reader__t.js %} ],
+    [ "entry_queue_t", "classdynamorio_1_1drmemtrace_1_1entry__queue__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1entry__queue__t.js %} ],
+    [ "reader_base_t", "classdynamorio_1_1drmemtrace_1_1reader__base__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1reader__base__t.js %} ],
     [ "record_reader_t", "classdynamorio_1_1drmemtrace_1_1record__reader__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1record__reader__t.js %} ],
     [ "record_file_reader_t", "classdynamorio_1_1drmemtrace_1_1record__file__reader__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1record__file__reader__t.js %} ],
     [ "record_filter_t", "classdynamorio_1_1drmemtrace_1_1record__filter__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1record__filter__t.js %} ],
@@ -234,7 +237,8 @@
       [ "TRACE_MARKER_TYPE_SYSCALL_SCHEDULE", "namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caa8af23555ce5778daecf69b0ef0cf200", null ],
       [ "TRACE_MARKER_TYPE_SYSCALL_ARG_TIMEOUT", "namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca8c60aa290a1c83f0119e7590fee5af0b", null ],
       [ "TRACE_MARKER_TYPE_SIGNAL_NUMBER", "namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caeab5ab5189617728fec57d491ef1d63d", null ],
-      [ "TRACE_MARKER_TYPE_UNCOMPLETED_INSTRUCTION", "namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca27cc562c02c8a0f07411d2a349091950", null ]
+      [ "TRACE_MARKER_TYPE_UNCOMPLETED_INSTRUCTION", "namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca27cc562c02c8a0f07411d2a349091950", null ],
+      [ "TRACE_MARKER_TYPE_MIDBLOCK_END_PC", "namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca46d34740a104840abc5dd52eccb8e00c", null ]
     ] ],
     [ "trace_type_t", "namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59c", [
       [ "TRACE_TYPE_READ", "namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca018585565e72f9ebe6723e089f3d343d", null ],

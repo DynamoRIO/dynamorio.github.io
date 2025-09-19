@@ -310,7 +310,8 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Which inputs the details in this structure apply to, expressed as 0-based ordinals in the 'readers' vector or in the files opened at 'path' (which are sorted lexicographically by path) in the containing <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__workload__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::input_workload_t</a>. Only one of 'tids' and 'shards' can be non-empty. If 'tids' is empty and 'shards' is empty, the details apply to all not-yet-mentioned (by other 'tids' or 'shards' vectors in prior entries for this workload) inputs in the <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__workload__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::input_workload_t</a>. If multiple entries list the same shard ordinal, only the last one is honored. </p>
+<p>Which inputs the details in this structure apply to, expressed as 0-based ordinals in the 'readers' vector or in the files opened at 'path' (which are sorted lexicographically by path) in the containing <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__workload__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::input_workload_t</a>. Only one of 'tids' and 'shards' can be non-empty. If 'tids' is empty and 'shards' is empty, the details apply to all not-yet-mentioned (by other 'tids' or 'shards' vectors in prior entries for this workload) inputs in the <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__workload__t.html">dynamorio::drmemtrace::scheduler_tmpl_t::input_workload_t</a>. If multiple entries list the same shard ordinal, only the last one is honored.</p>
+<p>If <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1input__workload__t.html#a4965db9696363ba9fa95c9463f4e4a05">dynamorio::drmemtrace::scheduler_tmpl_t::input_workload_t.only_shards</a> is also set, the indices here apply to the input list <em>after</em> only those matching only_shards are removed. </p>
 
 </div>
 </div>
@@ -357,5 +358,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20342 --- Fri Sep 12 2025 03:14:00 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20349 --- Fri Sep 19 2025 03:18:48 &nbsp; <img border=0 src="favicon.png">
 </small></address>
