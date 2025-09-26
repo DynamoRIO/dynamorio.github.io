@@ -694,6 +694,10 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:ac830533bb90de0ee0ccc3a573fe12f3e"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#ac830533bb90de0ee0ccc3a573fe12f3e">MEMREF_T_SIZE_BYTES</a> = sizeof(<a class="el" href="structdynamorio_1_1drmemtrace_1_1__memref__instr__t.html">_memref_instr_t</a>)</td></tr>
 <tr class="separator:ac830533bb90de0ee0ccc3a573fe12f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addb5db6cd9a35b731ae9f0f3f3b174ba"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#addb5db6cd9a35b731ae9f0f3f3b174ba">IDLE_THREAD_ID</a> = -1</td></tr>
+<tr class="separator:addb5db6cd9a35b731ae9f0f3f3b174ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63d6cca5d46c70c3beb5d2243e82affa"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a63d6cca5d46c70c3beb5d2243e82affa">DEFAULT_SYSCALL_TRACE_TEMPLATE_NUM</a> = 0xffff</td></tr>
+<tr class="separator:a63d6cca5d46c70c3beb5d2243e82affa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>&lt; General DynamoRIO namespace. </p>
@@ -1287,10 +1291,9 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaa7b6a185cde6ae20ece63f7bbfd0e5b26"></a>OFFLINE_FILE_TYPE_BIMODAL_FILTERED_WARMUP&#160;</td><td class="fielddoc"><p>Partially filtered trace. The initial part up to the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca2fa8ca3d28b2bd7b5b8c63ade7c6a26e">TRACE_MARKER_TYPE_FILTER_ENDPOINT</a> marker is filtered, and the later part is not. Look for other filtering-related file types (<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaab5c970fa5c78548056a2b3d90c2512b2">OFFLINE_FILE_TYPE_IFILTERED</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa2bde173fab00e1eb6b226453b70b5410">OFFLINE_FILE_TYPE_DFILTERED</a>) to determine how the initial part was filtered. The initial part can be used by a simulator for warmup. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaa5b38b284207dd42f882942f149677362"></a>OFFLINE_FILE_TYPE_KERNEL_SYSCALL_TRACE_TEMPLATES&#160;</td><td class="fielddoc"><p>Indicates an offline trace that contains trace templates for some system calls. The individual traces are enclosed within a pair of <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca13fffec3c874dcd5cc84aa25387b76d3">TRACE_MARKER_TYPE_SYSCALL_TRACE_START</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caef6df6ddbdffd994f91edba51c850cde">TRACE_MARKER_TYPE_SYSCALL_TRACE_END</a> markers which also specify what system call the contained trace belongs to. This file can be used to create an <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa8122186112a3ca356479e0b8bd08e9be">OFFLINE_FILE_TYPE_KERNEL_SYSCALLS</a> trace with -syscall_template_file to raw2trace, with -sched_syscall_file to the drmemtrace analyzer framework, and also with <a class="el" href="namespacedynamorio_1_1drmemtrace.html">dynamorio::drmemtrace</a>:: <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#aeffac2cf5ac00980653bbf22b31a51e4">scheduler_tmpl_t::scheduler_options_t.kernel_syscall_trace_path</a> and <a class="el" href="namespacedynamorio.html">dynamorio</a>:: <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a0a08d4779407ad848c57c49e12f668d3">drmemtrace::scheduler_tmpl_t::scheduler_options_t.kernel_syscall_reader</a> to the scheduler. Each system call trace template uses the regular drmemtrace format, including using paired <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca3b75f9115bb4146ed5540412e36bdd5a">TRACE_MARKER_TYPE_KERNEL_EVENT</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca6b85d979c3dbcd4dd614c4399067ba73">TRACE_MARKER_TYPE_KERNEL_XFER</a> markers to represent kernel interrupts during system call execution. Each system call trace should end with an indirect branch instruction (e.g., iret/sysret/sysexit on x86, or eret on AArch64) which must be preceded by a <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca9ccf81370a91222945dc5d3e44fb718d">TRACE_MARKER_TYPE_BRANCH_TARGET</a> marker with any value; the marker's value will be appropriately set to point to the fallthrough pc of the prior syscall instruction when the trace template is injected. Note: the marker value will not be the actual next pc in the trace in some cases (i#7496):</p><ul>
-<li>if a <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca3b75f9115bb4146ed5540412e36bdd5a">TRACE_MARKER_TYPE_KERNEL_EVENT</a> immediately follows the syscall trace, it indicates interruption of the syscall by a signal; in this case, the next pc after the signal is the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca3b75f9115bb4146ed5540412e36bdd5a">TRACE_MARKER_TYPE_KERNEL_EVENT</a> marker value, which for auto-restart syscalls would be the same as the syscall instr pc.</li>
-<li>for the sigreturn syscall, the next pc in the trace is what was specified in the prior <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca3b75f9115bb4146ed5540412e36bdd5a">TRACE_MARKER_TYPE_KERNEL_EVENT</a> marker. See the sample file written by the burst_syscall_inject.cpp test for more details on the expected format for the system call template file.</li>
-</ul>
+<tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaa5b38b284207dd42f882942f149677362"></a>OFFLINE_FILE_TYPE_KERNEL_SYSCALL_TRACE_TEMPLATES&#160;</td><td class="fielddoc"><p>Indicates an offline trace that contains trace templates for some system calls. The individual traces are enclosed within a pair of <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca13fffec3c874dcd5cc84aa25387b76d3">TRACE_MARKER_TYPE_SYSCALL_TRACE_START</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caef6df6ddbdffd994f91edba51c850cde">TRACE_MARKER_TYPE_SYSCALL_TRACE_END</a> markers which also specify what system call the contained trace belongs to. This file can be used to create an <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa8122186112a3ca356479e0b8bd08e9be">OFFLINE_FILE_TYPE_KERNEL_SYSCALLS</a> trace with -syscall_template_file to raw2trace, with -sched_syscall_file to the drmemtrace analyzer framework, and also with <a class="el" href="namespacedynamorio_1_1drmemtrace.html">dynamorio::drmemtrace</a>:: <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#aeffac2cf5ac00980653bbf22b31a51e4">scheduler_tmpl_t::scheduler_options_t.kernel_syscall_trace_path</a> and <a class="el" href="namespacedynamorio.html">dynamorio</a>:: <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a0a08d4779407ad848c57c49e12f668d3">drmemtrace::scheduler_tmpl_t::scheduler_options_t.kernel_syscall_reader</a> to the scheduler. Each system call trace template uses the regular drmemtrace format, including using paired <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca3b75f9115bb4146ed5540412e36bdd5a">TRACE_MARKER_TYPE_KERNEL_EVENT</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca6b85d979c3dbcd4dd614c4399067ba73">TRACE_MARKER_TYPE_KERNEL_XFER</a> markers to represent kernel interrupts during system call execution. Each system call trace should end with an indirect branch instruction (e.g., iret/sysret/sysexit on x86, or eret on AArch64) which must be preceded by a <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca9ccf81370a91222945dc5d3e44fb718d">TRACE_MARKER_TYPE_BRANCH_TARGET</a> marker with any value; the marker's value will be appropriately set to point to the next instr in the thread's trace when the trace template is injected.</p>
+<p>The file may also include a "default" trace that can be used for system calls that do not have any trace specified in this file. The default trace has the sysnum set to <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a63d6cca5d46c70c3beb5d2243e82affa">DEFAULT_SYSCALL_TRACE_TEMPLATE_NUM</a> in the enclosing markers in the trace template file. When this trace is injected by the scheduler for some syscall, the value in the enclosing markers will be changed to that syscall num.</p>
+<p>See the sample file written by the burst_syscall_inject.cpp test for more details on the expected format for the system call template file.</p>
 <p>TODO i#6495: Add support for reading a zipfile where each trace template is in a separate component. This will make it easier to manually append, update, or inspect the individual templates, and also allow streaming the component with the required template when needed instead of reading the complete file into memory ahead of time. Note that we may drop support for non-zipfile template files in the future. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a017717a4b9ef5ae1f6d1fef1df834baaa2eceb27369ebaa4b1acb9db29b7d64e0"></a>OFFLINE_FILE_TYPE_KERNEL_SYSCALL_INSTR_ONLY&#160;</td><td class="fielddoc"><p>Kernel instruction traces of syscalls are included. When memory addresses are also included for kernel execution, the file type is <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa8122186112a3ca356479e0b8bd08e9be">OFFLINE_FILE_TYPE_KERNEL_SYSCALLS</a> instead. On x86, the kernel trace is enabled by the -enable_kernel_tracing option that uses Intel® Processor Trace to collect an instruction trace for system call execution. </p>
@@ -1607,7 +1610,7 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca8d688aeae7d50e45269dbb8b494cbac1"></a>TRACE_MARKER_TYPE_CORE_WAIT&#160;</td><td class="fielddoc"><p>This marker is used for core-sharded analyses to indicate that the current core is waiting on another core. This is primarily only useful for analyses studying the scheduling of threads onto cores. A new marker is emitted each time the tool analysis framework requests a new record from the scheduler and is given a wait status. There are no units of time here but each repetition is roughly the time where a regular record could have been read and passed along. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295cabae8da1c6ba60323b5ef13fa55a799fc"></a>TRACE_MARKER_TYPE_CORE_IDLE&#160;</td><td class="fielddoc"><p>This marker is used for core-sharded analyses to indicate that the current core has no available inputs to run (all inputs are on other cores or are blocked waiting for kernel resources). A new marker is emitted each time the tool analysis framework requests a new record from the scheduler and is given an idle status. There are no units of time here but each repetition is roughly the time where a regular record could have been read and passed along. This idle marker indicates that a core actually had no work to do, as opposed to <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca8d688aeae7d50e45269dbb8b494cbac1">TRACE_MARKER_TYPE_CORE_WAIT</a> which is an artifact of an imposed re-created schedule. </p>
+<tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295cabae8da1c6ba60323b5ef13fa55a799fc"></a>TRACE_MARKER_TYPE_CORE_IDLE&#160;</td><td class="fielddoc"><p>This marker is used for core-sharded analyses to indicate that the current core has no available inputs to run (all inputs are on other cores or are blocked waiting for kernel resources). A new marker is emitted each time the tool analysis framework requests a new record from the scheduler and is given an idle status. There are no units of time here but each repetition is roughly the time where a regular record could have been read and passed along. This idle marker indicates that a core actually had no work to do, as opposed to <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca8d688aeae7d50e45269dbb8b494cbac1">TRACE_MARKER_TYPE_CORE_WAIT</a> which is an artifact of an imposed re-created schedule. When presented as a <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae4a471ed806967b2b6f911b6ef770704">dynamorio::drmemtrace::memref_t</a> record, the tid field will be set to <a class="el" href="namespacedynamorio_1_1drmemtrace.html#addb5db6cd9a35b731ae9f0f3f3b174ba">dynamorio::drmemtrace::IDLE_THREAD_ID</a>. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca0a5457fcd6611866e9cf31de09519ff0"></a>TRACE_MARKER_TYPE_CONTEXT_SWITCH_START&#160;</td><td class="fielddoc"><p>Indicates a point in the trace where context switch's kernel trace starts. The value of the marker is set to the switch type enum value from <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aebe64f68f713ab5c29c22097e3b9946d">dynamorio::drmemtrace::scheduler_tmpl_t::switch_type_t</a>. </p>
 </td></tr>
@@ -2955,6 +2958,52 @@ For additional file open parameters with the thread and window identifiers, use 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a63d6cca5d46c70c3beb5d2243e82affa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63d6cca5d46c70c3beb5d2243e82affa">&#9670;&nbsp;</a></span>DEFAULT_SYSCALL_TRACE_TEMPLATE_NUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int dynamorio::drmemtrace::DEFAULT_SYSCALL_TRACE_TEMPLATE_NUM = 0xffff</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Value used by the system call trace template files (having the type <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa5b38b284207dd42f882942f149677362">OFFLINE_FILE_TYPE_KERNEL_SYSCALL_TRACE_TEMPLATES</a>) in the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca13fffec3c874dcd5cc84aa25387b76d3">TRACE_MARKER_TYPE_SYSCALL_TRACE_START</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295caef6df6ddbdffd994f91edba51c850cde">TRACE_MARKER_TYPE_SYSCALL_TRACE_END</a> markers to denote a trace to be used for syscalls that have no other trace available in the template file. </p>
+
+</div>
+</div>
+<a id="addb5db6cd9a35b731ae9f0f3f3b174ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addb5db6cd9a35b731ae9f0f3f3b174ba">&#9670;&nbsp;</a></span>IDLE_THREAD_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int dynamorio::drmemtrace::IDLE_THREAD_ID = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A thread id sentinel for an idle core with no software thread. </p>
+
+</div>
+</div>
 <a id="ac830533bb90de0ee0ccc3a573fe12f3e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac830533bb90de0ee0ccc3a573fe12f3e">&#9670;&nbsp;</a></span>MEMREF_T_SIZE_BYTES</h2>
 
@@ -2984,5 +3033,5 @@ For additional file open parameters with the thread and window identifiers, use 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20349 --- Fri Sep 19 2025 03:18:48 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20356 --- Fri Sep 26 2025 03:17:55 &nbsp; <img border=0 src="favicon.png">
 </small></address>

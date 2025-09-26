@@ -452,7 +452,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Returns the value of the next continuous PC in the trace after the current trace record. This PC is from the next instruction or the next <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca3b75f9115bb4146ed5540412e36bdd5a">TRACE_MARKER_TYPE_KERNEL_EVENT</a>, whichever comes first.</p>
-<p>This is not supported during online analysis, and for i-filtered traces. i-filtered traces have a zero-sized instr entry before memrefs, which is not presented to the tools. Reading ahead past them to provide the actual next trace pc complicates read-ahead logic especially for zipfile readers. </p>
+<p>This is not supported during online analysis, and for i-filtered traces. i-filtered traces have a zero-sized instr entry before memrefs, which is not presented to the tools. Reading ahead past them to provide the actual next trace pc complicates read-ahead logic especially for zipfile readers.</p>
+<p>As the record stream proceeds to the next record, the value returned by this routine generally changes only when the record corresponding to the prior returned "next trace pc" value is seen. It may also change when a dynamic decision is made by the drmemtrace scheduler to insert trace records for a system call or context switch sequence, at the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca9c6c0b467a729d1d4c4298bef1892c74">TRACE_MARKER_TYPE_SYSCALL</a> and <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca0a5457fcd6611866e9cf31de09519ff0">TRACE_MARKER_TYPE_CONTEXT_SWITCH_START</a> markers respectively. Also, when dynamic injection&#160;for context switch sequences is not enabled, the returned value may change when the actual switch to a new input is made. </p>
 
 <p>Reimplemented in <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a2e8ebed15fa52f35afb27637ce2d83d6">dynamorio::drmemtrace::scheduler_tmpl_t&lt; RecordType, ReaderType &gt;::stream_t</a>, and <a class="el" href="classdynamorio_1_1drmemtrace_1_1reader__base__t.html#a69df93635416e15366787045fc55da85">dynamorio::drmemtrace::reader_base_t</a>.</p>
 
@@ -776,5 +777,5 @@ Public Member Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20349 --- Fri Sep 19 2025 03:18:48 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20356 --- Fri Sep 26 2025 03:17:55 &nbsp; <img border=0 src="favicon.png">
 </small></address>

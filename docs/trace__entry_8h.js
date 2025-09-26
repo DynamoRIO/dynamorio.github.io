@@ -149,5 +149,7 @@
     [ "type_is_instr_conditional_branch", "trace__entry_8h.html#a18cba5b1d90a1ef689078acbf787331b", null ],
     [ "type_is_instr_direct_branch", "trace__entry_8h.html#af1a319424f45ebf473c8263fe37590cf", null ],
     [ "type_is_prefetch", "trace__entry_8h.html#a1ba3d847cac01db253754e37a4833d63", null ],
-    [ "type_is_read", "trace__entry_8h.html#a73a3b41d08fe1a6ff4f002ae7b643507", null ]
+    [ "type_is_read", "trace__entry_8h.html#a73a3b41d08fe1a6ff4f002ae7b643507", null ],
+    [ "DEFAULT_SYSCALL_TRACE_TEMPLATE_NUM", "trace__entry_8h.html#a63d6cca5d46c70c3beb5d2243e82affa", null ],
+    [ "IDLE_THREAD_ID", "trace__entry_8h.html#addb5db6cd9a35b731ae9f0f3f3b174ba", null ]
 ],
