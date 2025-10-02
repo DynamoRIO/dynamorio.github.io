@@ -22,6 +22,7 @@
     ] ],
     [ "Google Workload Traces (Version 2)", "google_workload_traces.html", [
       [ "Public Trace Format", "google_workload_traces.html#sec_google_format", null ],
+      [ "Recommendations", "google_workload_traces.html#Simulation", null ],
       [ "Getting the Traces", "google_workload_traces.html#sec_google_get", null ],
       [ "Getting Help and Reporting Bugs", "google_workload_traces.html#sec_google_help", null ],
       [ "Contributing", "google_workload_traces.html#sec_google_contrib", null ],

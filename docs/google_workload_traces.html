@@ -62,6 +62,11 @@ Public Trace Format</h1>
 <p>To run the TLB_simulator tool leveraging the provided v2p.textproto, use: </p><pre class="fragment">drrun -t drmemtrace -tool TLB_simulator -indir ${PATH_TO_TRACE} -use_physical -v2p_file ${PATH_TO_TRACE}/aux/v2p.textproto
 </pre><p>The info.textproto file provides users with additional, human-readable information about a trace. Unlike v2p.textproto, this file is currently not intended to be used with any DynamoRIO tool. The file contains information on phases of the underlying workload and the number of peak live cores (i.e., the maximum number of cores used at the same time during the executon of the traced workload). We recommend users to set their trace simulations to use the provided number of peak live cores and scale the LLC accordingly, if the peak live cores is not the whole socket.</p>
 <p>These traces are supported starting from DynamoRIO 11.3.</p>
+<h1><a class="anchor" id="Simulation"></a>
+Recommendations</h1>
+<p>As noted above, for each workload, we recommend using our scheduler (see <a class="el" href="sec_drcachesim_sched.html">Trace Scheduler</a>) to interleave the individual software thread traces to produce a realistic hardware-view schedule for that workload. Configure the scheduler for the number of cores listed in the info.textproto file as the peak live cores.</p>
+<p>We recommend configuring simulation to use the same peak live core count, simulating all cores simultaneously. Scale the LLC accordingly if the peak live cores is not the whole socket. We strongly caution against simulating a single core in isolation, as this will not produce representative results.</p>
+<p>We do not recommend creating a schedule and then independently feeding each core's view into the simulator. This can lead to drift where cores no longer align and two software threads could then run simultaneously on two cores. Instead, use online conversion into the simulator's input format, with the scheduler integrated into the worfklow. We recommend using dynamic scheduling with the scheduler selecting the schedule as the simulation unfolds, so the simulated time drives the scheduling. For repeatable schedules, leverage the record-replay capability of the scheduler: record one schedule and replay in subsequent runs. When replaying a previously recorded schedule, the scheduler will cause a core that gets ahead to wait and not continue until other cores catch up.</p>
 <h1><a class="anchor" id="sec_google_get"></a>
 Getting the Traces</h1>
 <p>The Google Workload Traces can be downloaded from:</p>
@@ -120,5 +125,5 @@ Deprecated Google Workload Traces (Version 1)</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20356 --- Fri Sep 26 2025 03:17:54 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20363 --- Thu Oct 2 2025 02:26:17 &nbsp; <img border=0 src="favicon.png">
 </small></address>
