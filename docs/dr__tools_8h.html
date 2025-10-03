@@ -5800,6 +5800,7 @@ When printing floating-point values, the caller's code should use <a class="el" 
 <li>%x: Matches an unsigned hexadecimal integer, with or without a leading 0x.</li>
 <li>%p: Matches a pointer-sized hexadecimal integer as x does.</li>
 <li>%%: Matches a literal % character. Does not store output.</li>
+<li>%[..]: Matches characters in the set within the brackets, or all other characters if the first character after the open bracket is ^. To include a close bracket in the set, make it the first set character. A range of characters can be specified with a hyphen. The result is copied into the provided output string buffer. To avoid buffer overflow, the caller should use a width specifier.</li>
 </ul>
 <p>Supported format modifiers:</p><ul>
 <li>*: The * modifier causes the scan to match the specifier, but not store any output. No output parameter is consumed for this specifier, and one should not be passed.</li>
@@ -6712,5 +6713,5 @@ This routine is only available with either the -thread_private or -enable_full_a
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20363 --- Thu Oct 2 2025 02:26:16 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20363 --- Fri Oct 3 2025 03:15:20 &nbsp; <img border=0 src="favicon.png">
 </small></address>
