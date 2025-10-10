@@ -79,8 +79,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a99f00d9f03c626c96f9ff32678164b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6f878550d53070fb71296f1304e09e8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ae6f878550d53070fb71296f1304e09e8">read_syscall_template_file</a> ()</td></tr>
 <tr class="separator:ae6f878550d53070fb71296f1304e09e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2bfe59e602f51da667e864093bba009"><td class="memItemLeft" align="right" valign="top">app_pc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ae2bfe59e602f51da667e864093bba009">get_first_app_pc_for_syscall_template</a> (int syscall_num)</td></tr>
-<tr class="separator:ae2bfe59e602f51da667e864093bba009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1c88c94282aaa71dcc27a93a783af19"><td class="memItemLeft" align="right" valign="top">app_pc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#ab1c88c94282aaa71dcc27a93a783af19">get_first_app_pc_for_syscall_template</a> (trace_template_t *trace_template)</td></tr>
+<tr class="separator:ab1c88c94282aaa71dcc27a93a783af19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a713d51aa66dc162be7338321d9510919"><td class="memItemLeft" align="right" valign="top">trace_template_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a713d51aa66dc162be7338321d9510919">get_syscall_template</a> (int syscall_num)</td></tr>
+<tr class="separator:a713d51aa66dc162be7338321d9510919"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8169c0bff3707183b249e3ef606f68bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a8169c0bff3707183b249e3ef606f68bd">write_syscall_template</a> (raw2trace_thread_data_t *tdata, byte *&amp;buf, <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a067f98c2dab7fe5329e2ba248836370e">trace_entry_t</a> *buf_base, int syscall_num)</td></tr>
 <tr class="separator:a8169c0bff3707183b249e3ef606f68bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b23bb0d332c07aaa0cc15b6cdfc16c1"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; module_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1raw2trace__t.html#a7b23bb0d332c07aaa0cc15b6cdfc16c1">modvec_</a> () const</td></tr>
@@ -258,8 +260,8 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae2bfe59e602f51da667e864093bba009"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2bfe59e602f51da667e864093bba009">&#9670;&nbsp;</a></span>get_first_app_pc_for_syscall_template()</h2>
+<a id="ab1c88c94282aaa71dcc27a93a783af19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1c88c94282aaa71dcc27a93a783af19">&#9670;&nbsp;</a></span>get_first_app_pc_for_syscall_template()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,8 +272,8 @@ Static Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">app_pc dynamorio::drmemtrace::raw2trace_t::get_first_app_pc_for_syscall_template </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>syscall_num</em></td><td>)</td>
+          <td class="paramtype">trace_template_t *&#160;</td>
+          <td class="paramname"><em>trace_template</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -281,7 +283,7 @@ Static Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the app pc of the first instruction in the system call template read for syscall_num. Returns nullptr if it could not find it. </p>
+<p>Returns the app pc of the first instruction in the given system call template. Returns nullptr if it could not find it. </p>
 
 </div>
 </div>
@@ -336,6 +338,33 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Records the currently stored last entry in order to remember two entries at once (for handling split two-entry markers) and then reads and returns a pointer to the next entry. A subsequent call to unread_last_entry() will put back both entries. Returns an emptry string on success or an error description on an error. </p>
+
+</div>
+</div>
+<a id="a713d51aa66dc162be7338321d9510919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a713d51aa66dc162be7338321d9510919">&#9670;&nbsp;</a></span>get_syscall_template()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">trace_template_t* dynamorio::drmemtrace::raw2trace_t::get_syscall_template </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>syscall_num</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the trace template for the given syscall num, or the default syscall template if one is available. </p>
 
 </div>
 </div>
@@ -1010,5 +1039,5 @@ Static Protected Attributes</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20363 --- Fri Oct 3 2025 03:15:21 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20369 --- Fri Oct 10 2025 03:18:52 &nbsp; <img border=0 src="favicon.png">
 </small></address>
