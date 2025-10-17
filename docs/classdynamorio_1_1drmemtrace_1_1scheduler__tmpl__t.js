@@ -53,11 +53,6 @@
       [ "STATUS_IMPOSSIBLE_BINDING", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a0c0b48538026e54ccfe1f5066eb59185", null ],
       [ "STATUS_STOLE", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a882cd290b0efb076ccc59f6322551561", null ]
     ] ],
-    [ "switch_type_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aebe64f68f713ab5c29c22097e3b9946d", [
-      [ "SWITCH_INVALID", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aebe64f68f713ab5c29c22097e3b9946daa024292572b10275bc8b951833e76c82", null ],
-      [ "SWITCH_THREAD", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aebe64f68f713ab5c29c22097e3b9946da49ef490ab454dcb538ec53e79bd951ff", null ],
-      [ "SWITCH_PROCESS", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aebe64f68f713ab5c29c22097e3b9946daab361ee1b3ddd881e3a41c020cce1073", null ]
-    ] ],
     [ "scheduler_tmpl_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aef76c4829ea214c9440b782db10ec346", null ],
     [ "get_error_string", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a13a243f7d2fe325711ab0fab69576f9e", null ],
     [ "get_input_stream_count", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a6bf7cf60f527c5c36a9ad5d2c073a132", null ],

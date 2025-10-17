@@ -40,6 +40,12 @@
       [ "OFFLINE_FILE_TYPE_ARCH_REGDEPS", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa00dce088778fce7d653921465f82e71f", null ],
       [ "OFFLINE_FILE_TYPE_ARCH_ALL", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaac9118269c36e185fe2a9b0b6895e0d07", null ]
     ] ],
+    [ "switch_type_t", "trace__entry_8h.html#ad43c30e27dd0fd0f05906eebbea5997b", [
+      [ "SWITCH_INVALID", "trace__entry_8h.html#ad43c30e27dd0fd0f05906eebbea5997bae74f151216c4026d4d3c6b9959288e65", null ],
+      [ "SWITCH_THREAD", "trace__entry_8h.html#ad43c30e27dd0fd0f05906eebbea5997ba7d83cca0adf8a025334fb5887f23dfb6", null ],
+      [ "SWITCH_PROCESS", "trace__entry_8h.html#ad43c30e27dd0fd0f05906eebbea5997bae48c60e593369e656d8720921692003e", null ],
+      [ "SWITCH_LAST_VALID_ENUM", "trace__entry_8h.html#ad43c30e27dd0fd0f05906eebbea5997bab520a41bf98358ef789f22707e59273a", null ]
+    ] ],
     [ "trace_marker_type_t", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295c", [
       [ "TRACE_MARKER_TYPE_KERNEL_EVENT", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca3b75f9115bb4146ed5540412e36bdd5a", null ],
       [ "TRACE_MARKER_TYPE_KERNEL_XFER", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca6b85d979c3dbcd4dd614c4399067ba73", null ],
