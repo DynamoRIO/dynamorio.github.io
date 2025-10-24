@@ -318,6 +318,7 @@
     [ "drmemtrace_get_timestamp_from_offline_trace", "namespacedynamorio_1_1drmemtrace.html#aaad1e4d672ad494a44210e072c75933d", null ],
     [ "drmemtrace_replace_file_ops", "namespacedynamorio_1_1drmemtrace.html#a5bbf91691acf379d4fb0c3800fa2bb13", null ],
     [ "drmemtrace_replace_file_ops_ex", "namespacedynamorio_1_1drmemtrace.html#aa76ec43a6631fb20e8d612a036c56ee4", null ],
+    [ "entry_has_pc", "namespacedynamorio_1_1drmemtrace.html#a936a4942bde0193daddcb026ee138c59", null ],
     [ "func_view_tool_create", "namespacedynamorio_1_1drmemtrace.html#a1a18ab9e30544257caf90022b404478e", null ],
     [ "histogram_tool_create", "namespacedynamorio_1_1drmemtrace.html#a8df3e41912b8fec26518cb824505722c", null ],
     [ "is_any_instr_type", "namespacedynamorio_1_1drmemtrace.html#a9151ca4d6eb3b845a0b6890555a4c217", null ],

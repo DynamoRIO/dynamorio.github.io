@@ -47,6 +47,7 @@
     [ "_drx_time_scale_t", "struct__drx__time__scale__t.html", null ],
     [ "_emulated_instr_t", "struct__emulated__instr__t.html", null ],
     [ "_hashtable_config_t", "struct__hashtable__config__t.html", null ],
+    [ "_hashtable_t", "struct__hashtable__t.html", null ],
     [ "dynamorio::drmemtrace::_memref_data_t", "structdynamorio_1_1drmemtrace_1_1__memref__data__t.html", null ],
     [ "dynamorio::drmemtrace::_memref_flush_t", "structdynamorio_1_1drmemtrace_1_1__memref__flush__t.html", null ],
     [ "dynamorio::drmemtrace::_memref_instr_t", "structdynamorio_1_1drmemtrace_1_1__memref__instr__t.html", null ],

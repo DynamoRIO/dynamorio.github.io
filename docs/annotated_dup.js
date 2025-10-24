@@ -114,6 +114,7 @@
     [ "_drx_time_scale_t", "struct__drx__time__scale__t.html", {% include_relative struct__drx__time__scale__t.js %} ],
     [ "_emulated_instr_t", "struct__emulated__instr__t.html", {% include_relative struct__emulated__instr__t.js %} ],
     [ "_hashtable_config_t", "struct__hashtable__config__t.html", {% include_relative struct__hashtable__config__t.js %} ],
+    [ "_hashtable_t", "struct__hashtable__t.html", null ],
     [ "_module_data_t", "struct__module__data__t.html", {% include_relative struct__module__data__t.js %} ],
     [ "_module_names_t", "struct__module__names__t.html", {% include_relative struct__module__names__t.js %} ],
     [ "_module_segment_data_t", "struct__module__segment__data__t.html", {% include_relative struct__module__segment__data__t.js %} ],

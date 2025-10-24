@@ -147,6 +147,7 @@
       [ "TRACE_ENTRY_VERSION_RETIRED_INSTRUCTIONS_ONLY", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daaa9e2b8bacdf4a63bdcf4f6c15ec5855a", null ],
       [ "TRACE_ENTRY_VERSION", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e", null ]
     ] ],
+    [ "entry_has_pc", "trace__entry_8h.html#a936a4942bde0193daddcb026ee138c59", null ],
     [ "is_any_instr_type", "trace__entry_8h.html#a9151ca4d6eb3b845a0b6890555a4c217", null ],
     [ "type_has_address", "trace__entry_8h.html#a9ca0b3aaffc906b809a2ba3fb9dd730e", null ],
     [ "type_is_data", "trace__entry_8h.html#a8106f9507d394eb55d3be82b193733aa", null ],

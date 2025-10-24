@@ -1,5 +1,6 @@
 [
     [ "hashtable_config_t", "group__drcontainers.html#gad856384ed5ad3b1a1c42e5095d7432b8", null ],
+    [ "hashtable_t", "group__drcontainers.html#gab84bdc794f91cd7691bb434877df1d3c", null ],
     [ "hash_type_t", "group__drcontainers.html#ga2cde78f27c3374749c462a5d58a5e38e", [
       [ "HASH_INTPTR", "group__drcontainers.html#gga2cde78f27c3374749c462a5d58a5e38ea7e83c8ad190fd19419c301ace3bcbe2e", null ],
       [ "HASH_STRING", "group__drcontainers.html#gga2cde78f27c3374749c462a5d58a5e38ea3a57810af6552f1efcda7a6abddbe92a", null ],
@@ -15,6 +16,7 @@
     ] ],
     [ "hashtable_add", "group__drcontainers.html#ga42cb0b8a85c6b4cdba6ee7b984aeff25", null ],
     [ "hashtable_add_replace", "group__drcontainers.html#ga3d443ee70d3fd35d853b9697f999cbf7", null ],
+    [ "hashtable_apply_to_all_key_payload_pairs_user_data", "group__drcontainers.html#gaf406a7d846f101444aa4665a2ada8b1f", null ],
     [ "hashtable_apply_to_all_payloads", "group__drcontainers.html#ga01abdf4a47a2603aca94ab3f5be14c98", null ],
     [ "hashtable_apply_to_all_payloads_user_data", "group__drcontainers.html#ga82d3119a99127a7d18441bbecc868699", null ],
     [ "hashtable_clear", "group__drcontainers.html#ga2bcb10d265f6005bbcef89129ad58548", null ],

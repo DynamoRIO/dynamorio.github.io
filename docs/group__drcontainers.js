@@ -13,9 +13,11 @@
       [ "resize_threshold", "struct__hashtable__config__t.html#a0980cc09676063a4c9d5cc223f11eb51", null ],
       [ "size", "struct__hashtable__config__t.html#a3aa61b25956331b55b7633bf3bbd3266", null ]
     ] ],
+    [ "_hashtable_t", "struct__hashtable__t.html", null ],
     [ "DRTABLE_INVALID_INDEX", "group__drcontainers.html#gaeaba87af31694a825496218053177d64", null ],
     [ "drvector_t", "group__drcontainers.html#gad6c70a83ab635d96376710bffe4e4ced", null ],
     [ "hashtable_config_t", "group__drcontainers.html#gad856384ed5ad3b1a1c42e5095d7432b8", null ],
+    [ "hashtable_t", "group__drcontainers.html#gab84bdc794f91cd7691bb434877df1d3c", null ],
     [ "drtable_flags_t", "group__drcontainers.html#gabdc8e2396ab8607a7e4c1e5f05c588c3", [
       [ "DRTABLE_MEM_REACHABLE", "group__drcontainers.html#ggabdc8e2396ab8607a7e4c1e5f05c588c3a8a428f6ca9cdbd75e3f9807d8e03379f", null ],
       [ "DRTABLE_MEM_32BIT", "group__drcontainers.html#ggabdc8e2396ab8607a7e4c1e5f05c588c3adc74fb8cb16fc3a8a9fd8f898ee05d98", null ],
@@ -53,6 +55,7 @@
     [ "drvector_unlock", "group__drcontainers.html#ga752060ab72ce4d597fed7684332bba5b", null ],
     [ "hashtable_add", "group__drcontainers.html#ga42cb0b8a85c6b4cdba6ee7b984aeff25", null ],
     [ "hashtable_add_replace", "group__drcontainers.html#ga3d443ee70d3fd35d853b9697f999cbf7", null ],
+    [ "hashtable_apply_to_all_key_payload_pairs_user_data", "group__drcontainers.html#gaf406a7d846f101444aa4665a2ada8b1f", null ],
     [ "hashtable_apply_to_all_payloads", "group__drcontainers.html#ga01abdf4a47a2603aca94ab3f5be14c98", null ],
     [ "hashtable_apply_to_all_payloads_user_data", "group__drcontainers.html#ga82d3119a99127a7d18441bbecc868699", null ],
     [ "hashtable_clear", "group__drcontainers.html#ga2bcb10d265f6005bbcef89129ad58548", null ],

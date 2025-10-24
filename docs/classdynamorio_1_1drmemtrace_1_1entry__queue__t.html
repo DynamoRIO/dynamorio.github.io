@@ -25,8 +25,7 @@ permalink: /classdynamorio_1_1drmemtrace_1_1entry__queue__t.html
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">dynamorio::drmemtrace::entry_queue_t Class Reference</div>  </div>
 </div><!--header-->
@@ -48,11 +47,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7bdc61f6b58aeb921ca8333c8982c79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbfff5dca2ffc1a87a07aca25b8d465b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1entry__queue__t.html#abbfff5dca2ffc1a87a07aca25b8d465b">push_back</a> (const <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a067f98c2dab7fe5329e2ba248836370e">trace_entry_t</a> &amp;entry)</td></tr>
 <tr class="separator:abbfff5dca2ffc1a87a07aca25b8d465b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a32575cbe15d31333ad03adde64e613b8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1entry__queue__t.html#a32575cbe15d31333ad03adde64e613b8">entry_has_pc</a> (const <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a067f98c2dab7fe5329e2ba248836370e">trace_entry_t</a> &amp;entry, uint64_t *pc=nullptr)</td></tr>
-<tr class="separator:a32575cbe15d31333ad03adde64e613b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Queue of <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a067f98c2dab7fe5329e2ba248836370e">dynamorio::drmemtrace::trace_entry_t</a> that have been read from the input but are yet to be processed by the reader.</p>
@@ -96,43 +90,6 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns whether the queue is empty. </p>
-
-</div>
-</div>
-<a id="a32575cbe15d31333ad03adde64e613b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32575cbe15d31333ad03adde64e613b8">&#9670;&nbsp;</a></span>entry_has_pc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool dynamorio::drmemtrace::entry_queue_t::entry_has_pc </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a067f98c2dab7fe5329e2ba248836370e">trace_entry_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>entry</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint64_t *&#160;</td>
-          <td class="paramname"><em>pc</em> = <code>nullptr</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns whether the given <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a067f98c2dab7fe5329e2ba248836370e">dynamorio::drmemtrace::trace_entry_t</a> has a PC, and if so, sets it at the given *pc. </p>
 
 </div>
 </div>
@@ -242,5 +199,5 @@ Static Public Member Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20377 --- Fri Oct 17 2025 03:20:13 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20384 --- Fri Oct 24 2025 03:21:37 &nbsp; <img border=0 src="favicon.png">
 </small></address>
