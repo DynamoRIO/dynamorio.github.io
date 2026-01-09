@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 11.90.20452"
+title: "Release Notes for Version 11.90.20461"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 11.90.20452 </div>  </div>
+<div class="title">Release Notes for Version 11.90.20461 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,8 +63,8 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 11.90.20452. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 11.90.20452 and 11.3.0 include the following compatibility changes:</p><ul>
+<p>The current version is 11.90.20461. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 11.90.20461 and 11.3.0 include the following compatibility changes:</p><ul>
 <li>On 32-bit Arm the size of <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> has been increased by 4 and the struct is now required to be 8-byte aligned. The offset of the field "simd" has changed.</li>
 <li>Added new fields elf_path and elf_path_size to dr_memory_dump_spec_t. When <a class="el" href="dr__tools_8h.html#afa268a6496cad930513c1f0353fdd06e">dr_create_memory_dump()</a> returns true and elf_path is not NULL, elf_path will be written with the path to the memory dump file.</li>
 <li>Added new argument access_type of enum cache_access_type_t to the method access_update() of the classes <a class="el" href="classdynamorio_1_1drmemtrace_1_1cache__replacement__policy__t.html">dynamorio::drmemtrace::cache_replacement_policy_t</a> and dynamorio::drmemtrace::caching_device_t. Possible values are:<ul>
@@ -79,7 +79,7 @@ Changes Since Prior Releases</h1>
 <li>Added a parameter to the constructor of <a class="el" href="namespacedynamorio_1_1drmemtrace.html">dynamorio::drmemtrace</a>:reader_t and <a class="el" href="namespacedynamorio_1_1drmemtrace.html">dynamorio::drmemtrace</a>:record_reader_t that indicates whether it is being used in the online or offline mode.</li>
 <li>Moved the switch type enum from <a class="el" href="scheduler_8h.html" title="DrMemtrace top-level trace scheduler.">scheduler.h</a> to <a class="el" href="trace__entry_8h.html" title="DrMemtrace trace entry enum types and definitions.">trace_entry.h</a>, now referenced as <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad43c30e27dd0fd0f05906eebbea5997b">dynamorio::drmemtrace::switch_type_t</a>.</li>
 </ul>
-<p>The changes between version 11.90.20452 and 11.3.0 include the following minor compatibility changes:</p>
+<p>The changes between version 11.90.20461 and 11.3.0 include the following minor compatibility changes:</p>
 <ul>
 <li>Added <a class="el" href="group__drmgr.html#ga233a12a964639905520d64c38bda40ef">drmgr_register_exit_event()</a>, <a class="el" href="group__drmgr.html#ga05642880e7d09b468bb28cc4d4bc9fd9">drmgr_unregister_exit_event()</a>, <a class="el" href="group__drmgr.html#ga47ac0eb7ae1d63f4a80e7e77dac0e647">drmgr_register_exit_event_user_data()</a>, and <a class="el" href="group__drmgr.html#ga450ef70dcea0b533e9627c71818510d2">drmgr_unregister_exit_event_user_data()</a>, which are required to be used instead of <a class="el" href="dr__events_8h.html#a32f38cabf4b2c554ce4e476c5d5f6f3a">dr_register_exit_event()</a> when using drmgr and provide priorities and user data to the exit event.</li>
 <li>Added <a class="el" href="group__drmgr.html#ga27249c169d56944f813995dc93c82867">drmgr_register_filter_syscall_event()</a>, <a class="el" href="group__drmgr.html#gad476b725b2b1098b1ec6e624f259dced">drmgr_unregister_filter_syscall_event()</a>, <a class="el" href="group__drmgr.html#ga1538ad0a664e9af608b3f0f91f29ae4a">drmgr_register_filter_syscall_event_user_data()</a>, and <a class="el" href="group__drmgr.html#ga245e5f1c3d186a91e67116a0261df13e">drmgr_unregister_filter_syscall_event_user_data()</a>, which are required to be used instead of <a class="el" href="dr__events_8h.html#a1f98fd4c247abe6c7fcc6d02291b44de">dr_register_filter_syscall_event()</a> when using drmgr and provide priorities and user data to the filter event.</li>
@@ -93,6 +93,7 @@ Changes Since Prior Releases</h1>
 <li>Changed takeover of other threads at start time from a staggered takeover where each thread starts running as soon as it can to instead a synchronous takeover where all threads must be taken over before any can start executing. The post-attach event becomes a safe spot for a snapshot of global properties while all threads are paused. Setting -no_synchronous_attach switches to the old behavior, which may be needed for apps with a large number of threads that have some awareness of their slowdown and may construe it as a hang.</li>
 <li>Added <a class="el" href="group__drmgr.html#ga0be481545ef7ef944887fc4de5288d8c">drmgr_register_post_attach_event()</a>, <a class="el" href="group__drmgr.html#ga59472f87a748e030b75a6183113754c5">drmgr_unregister_post_attach_event()</a>, <a class="el" href="group__drmgr.html#gad3d5b8fa2856c05f3fca636868a0b1c2">drmgr_register_post_attach_event_user_data()</a>, and <a class="el" href="group__drmgr.html#gaa0344f398d62f658f2dc79cc55bf3e9f">drmgr_unregister_post_attach_event_user_data()</a>, which are required to be used instead of <a class="el" href="dr__events_8h.html#a6d993f7bdcf2f7f10be9d0adeda09327">dr_register_post_attach_event()</a> when using drmgr and provide priorities and user data to the post-attach event.</li>
 <li>Added <a class="el" href="group__drmgr.html#gac77a2ca6e4372d2f214c05d48d6f8f1d">drmgr_register_pre_detach_event()</a>, <a class="el" href="group__drmgr.html#ga1854cf4d9c52a8b67421b55a8fc99a5b">drmgr_unregister_pre_detach_event()</a>, <a class="el" href="group__drmgr.html#gaf549e25f407c85df705992ce3cb379ff">drmgr_register_pre_detach_event_user_data()</a>, and <a class="el" href="group__drmgr.html#ga3a644c3f78d2a29a2de600f72f30b2a4">drmgr_unregister_pre_detach_event_user_data()</a>, which are required to be used instead of <a class="el" href="dr__events_8h.html#a62b3d8421215e3bcdbc9c86aa68c0421">dr_register_pre_detach_event()</a> when using drmgr and provide priorities and user data to the pre-detach event.</li>
+<li>A C++14-supporting toolchain is now required to build the tests.</li>
 </ul>
 <p>Further non-compatibility-affecting changes include:</p><ul>
 <li>Changed the types of <code>block_size</code>, <code>total_size</code>, <code>num_blocks</code>, to <code>int64_t</code> in dynamorio::drmemtrace::caching_device_t and its deriving classes.</li>
@@ -1277,5 +1278,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20452 --- Fri Jan 2 2026 03:34:18 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20461 --- Fri Jan 9 2026 03:35:15 &nbsp; <img border=0 src="favicon.png">
 </small></address>
