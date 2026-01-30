@@ -271,10 +271,13 @@ This option is honored by certain tools such as the cache and TLB simulators. It
 Specifies the fraction of last level cache blocks to be loaded such that the cache is considered to be warmed up before simulation. The warmup fraction is computed after the skipped references and before simulated references. This flag is incompatible with warmup_refs.</li>
 <li><b>-sim_refs</b> <br  />
 <em>default value: 8589934592G</em> <br  />
-This option is honored by certain tools such as the cache and TLB simulators. It causes them to only analyze this many non-marker (i.e., actual memory reference ('ref') records) and then exit. If -skip_refs is specified, the analyzed records start after the skipped ones end; similarly, if -warmup_refs or -warmup_fraction is specified, the warmup records come prior to the -sim_refs records. Use -exit_after_records for a similar feature that works on all tools (but does not work with -warmup_*, -sim_refs, or -skip_refs).</li>
+This option is honored by certain tools such as the cache and TLB simulators. It causes them to only analyze this many non-marker (i.e., actual memory reference ('ref') records) and then exit. If -skip_refs is specified, the analyzed records start after the skipped ones end; similarly, if -warmup_refs or -warmup_fraction is specified, the warmup records come prior to the -sim_refs records. Use -exit_after_records or -exit_after_instrs for a similar feature that works on all tools (but does not work with -warmup_*, -sim_refs, or -skip_refs).</li>
+<li><b>-exit_after_instrs</b> <br  />
+<em>default value: 0</em> <br  />
+Causes trace analyzers to only analyze this many instructions (and any number of associated non-instruction records) and then exit. A 0 value disables. If instructions are skipped (-skip_instrs), that happens first before instruction counting starts here. This option is not compatible with -sim_refs, -skip_refs, -warmup_refs, or -warmup_fraction. For traces with multiple shards, each input shard separately stops when it reaches this count within the shard.</li>
 <li><b>-exit_after_records</b> <br  />
-<em>default value: 8589934592G</em> <br  />
-Causes trace analyzers to only analyze this many records and then exit. If instructions are skipped (-skip_instrs), that happens first before record counting starts here. This is similar to -sim_refs, though it is implemented in the framework and so applies to all tools. This option is not compatible with -sim_refs, -skip_refs, -warmup_refs, or -warmup_fraction. For traces with multiple shards, each shard separately stops when it reaches this count within the shard.</li>
+<em>default value: 0</em> <br  />
+Causes trace analyzers to only analyze this many records and then exit. A 0 value disables. If instructions are skipped (-skip_instrs), that happens first before record counting starts here. This is similar to -sim_refs, though it is implemented in the framework and so applies to all tools. This option is not compatible with -sim_refs, -skip_refs, -warmup_refs, or -warmup_fraction. For traces with multiple shards, each output shard separately stops when it reaches this count within the shard.</li>
 <li><b>-view_syntax</b> <br  />
 <em>default value: att/arm/dr/riscv</em> <br  />
 Specifies the syntax to use when viewing disassembled offline traces. The option can be set to one of "att" (AT&amp;T style), "intel" (Intel style), "dr" (DynamoRIO's native style with all implicit operands listed), "arm" (32-bit ARM style), and "riscv" (RISC-V style). An invalid specification falls back to the default, which is "att" for x86, "arm" for ARM (32-bit), "dr" for AArch64, and "riscv" for RISC-V.</li>
@@ -469,5 +472,5 @@ If &gt;1, time arguments to certain system calls (currently Linux-only sleeps) a
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20475 --- Fri Jan 23 2026 03:35:31 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20482 --- Fri Jan 30 2026 03:48:56 &nbsp; <img border=0 src="favicon.png">
 </small></address>
