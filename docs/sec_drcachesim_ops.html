@@ -452,6 +452,9 @@ Removes all records (after headers) before the first TRACE_MARKER_TYPE_TIMESTAMP
 <li><b>-trim_after_instr</b> <br  />
 <em>default value: 0</em> <br  />
 Removes all records from the first TRACE_MARKER_TYPE_TIMESTAMP marker in the trace that comes after the specified instruction ordinal.</li>
+<li><b>-filter_kernel</b> <br  />
+<em>default value: false</em> <br  />
+This option is for -tool record_filter. When present, it removes the kernel system call trace content between TRACE_MARKER_TYPE_SYSCALL_TRACE_START and TRACE_MARKER_TYPE_SYSCALL_TRACE_END, the kernel context switch trace content between TRACE_MARKER_TYPE_CONTEXT_SWITCH_START and TRACE_MARKER_TYPE_CONTEXT_SWITCH_END, and also updates the trace file type to remove the OFFLINE_FILE_TYPE_KERNEL_SYSCALLS bit.</li>
 <li><b>-abort_on_invariant_error</b> <br  />
 <em>default value: true</em> <br  />
 When set to true, the trace invariant checker analysis tool aborts when a trace invariant error is found. Otherwise it prints the error and continues. Also, the total invariant error count is printed at the end; a non-zero error count does not affect the exit code of the analyzer.</li>
@@ -472,5 +475,5 @@ If &gt;1, time arguments to certain system calls (currently Linux-only sleeps) a
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20482 --- Fri Jan 30 2026 03:48:56 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20489 --- Fri Feb 6 2026 03:50:08 &nbsp; <img border=0 src="favicon.png">
 </small></address>
