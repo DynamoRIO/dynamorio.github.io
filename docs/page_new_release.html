@@ -29,7 +29,7 @@ Versioning</h1>
 <p>We use a 3-field version number, major.minor.patchlevel. The major is incremented on an interface change that breaks backward compatibility, or on a significant interface addition. The minor is incremented on an interface addition (i.e., new features) that does not break compatibility, although for minor compatibility breaks in extension libraries we may increment only the minor version. The patchlevel is 0 for an official release or the subversion revision number for a developer build. If we put out a bugfix release, the patchlevel will be a small integer smaller than any revision number.</p>
 <p>After releasing an official release, we leave the major.minor unchanged. Even if we add new features during development before the next release, we leave the major.minor the same. However, if we break backward compatibility during development, we expect to increment the major number on the next release and we immediately change the minor number to 90. A subsequent break before the next release would increment that to 91, and so forth. This allows users to perform dependence checking on the existing major.minor and not have interfaces change.</p>
 <p>Users must perform dependence checks only versus either an official release or the very latest development version. This allows us to release a bugfix version X.Y.1 and not have users who depend on that bugfix be confused by a development version X.Y.NNNN that does not have the fix yet has a higher version number.</p>
-<p>When incrementing the major and minor versions, changes may need to be made to the version checks in make/DynamoRIOConfigVersion.cmake.in, the OLDEST_COMPATIBLE_VERSION variable in the top-level CMakeLists.txt, the default values in ci-package.yml, and the version checks when loading client libraries.</p>
+<p>When incrementing the major and minor versions, changes may need to be made to the version checks in make/DynamoRIOConfigVersion.cmake.in, OLDEST_COMPATIBLE_VERSION variable in the top-level CMakeLists.txt, and the version checks when loading client libraries.</p>
 <h1><a class="anchor" id="autotoc_md232"></a>
 Steps for Publishing a New Release</h1>
 <h2><a class="anchor" id="autotoc_md233"></a>
@@ -39,8 +39,7 @@ Sanity Testing</h2>
 Commit the Version and Changelist Changes</h2>
 <p>Update the following in the code and commit the change:</p>
 <ul>
-<li>Update <code>VERSION_NUMBER_DEFAULT</code>.</li>
-<li>Update the default git tag version in <code>ci-package.yml</code> and <code>ci-docs.yml</code>.</li>
+<li>Update the "major.minor" version numbers in <code>make/version.txt</code> (note: these is no validation or sanitization of this file in our building process, so do not add anything extra).</li>
 <li>Update <code>OLDEST_COMPATIBLE_VERSION_DEFAULT</code> if necessary.</li>
 </ul>
 <p>Don't add a new changelist section for the next release after this one: that is best done after finishing this release.</p>
@@ -259,5 +258,5 @@ ctest -D CMAKE_SYSTEM_PROCESSOR=arm -V -S /dynamorio_package/make/package.cmake,
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20494 --- Tue Feb 10 2026 01:44:21 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20494 --- Tue Feb 10 2026 17:50:59 &nbsp; <img border=0 src="favicon.png">
 </small></address>
