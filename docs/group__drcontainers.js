@@ -1,7 +1,12 @@
 [
+    [ "_drvector_config_t", "struct__drvector__config__t.html", [
+      [ "size", "struct__drvector__config__t.html#ab596cbbb9891b4eccda57633d0c8599e", null ],
+      [ "zero_alloc", "struct__drvector__config__t.html#a9f725ad445b7a9daf513e084da1b875c", null ]
+    ] ],
     [ "_drvector_t", "struct__drvector__t.html", [
       [ "array", "struct__drvector__t.html#a5c9bec5511cdff545bd57359e89d28e6", null ],
       [ "capacity", "struct__drvector__t.html#ab7d8d7a51745a133c587c8b5a3dc0710", null ],
+      [ "config", "struct__drvector__t.html#a7f9c936043bda2da52ac08d4fddd9b87", null ],
       [ "entries", "struct__drvector__t.html#ac477b5fe208fbc26774954584107cc97", null ],
       [ "free_data_func", "struct__drvector__t.html#aeaf30d5a2eb34f62af43be996ca7e38d", null ],
       [ "lock", "struct__drvector__t.html#afc85faf9469e92cb4cf9af6ef1b0cccd", null ],
@@ -15,6 +20,7 @@
     ] ],
     [ "_hashtable_t", "struct__hashtable__t.html", null ],
     [ "DRTABLE_INVALID_INDEX", "group__drcontainers.html#gaeaba87af31694a825496218053177d64", null ],
+    [ "drvector_config_t", "group__drcontainers.html#ga299ffcce5c591c3664ade219fa24305c", null ],
     [ "drvector_t", "group__drcontainers.html#gad6c70a83ab635d96376710bffe4e4ced", null ],
     [ "hashtable_config_t", "group__drcontainers.html#gad856384ed5ad3b1a1c42e5095d7432b8", null ],
     [ "hashtable_t", "group__drcontainers.html#gab84bdc794f91cd7691bb434877df1d3c", null ],
@@ -47,9 +53,11 @@
     [ "drtable_num_entries", "group__drcontainers.html#ga9ebd56f50630fd8e60c0a26037f8c35a", null ],
     [ "drtable_unlock", "group__drcontainers.html#gab138f40390422527895eda77fb2d2dbb", null ],
     [ "drvector_append", "group__drcontainers.html#ga380b542d2b8b997ded501df7f54b6919", null ],
+    [ "drvector_clear", "group__drcontainers.html#ga79924fa050e3c76126eeb3865a66265a", null ],
     [ "drvector_delete", "group__drcontainers.html#ga2e5949b592508c61e35ec14bfa731d62", null ],
     [ "drvector_get_entry", "group__drcontainers.html#gaa578776ea720fb04c87ac04181d89f4e", null ],
     [ "drvector_init", "group__drcontainers.html#gae5206874469dc2551dad9e8f375e87df", null ],
+    [ "drvector_init_ex", "group__drcontainers.html#gafc8c2293e2712d00a4aa81668e7fdfab", null ],
     [ "drvector_lock", "group__drcontainers.html#gacf1b3d3080e42bc98cddc75d675cd786", null ],
     [ "drvector_set_entry", "group__drcontainers.html#ga70494a642307dd41ad8b6a754fcea9c8", null ],
     [ "drvector_unlock", "group__drcontainers.html#ga752060ab72ce4d597fed7684332bba5b", null ],

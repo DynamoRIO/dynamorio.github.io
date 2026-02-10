@@ -1,9 +1,12 @@
 [
+    [ "drvector_config_t", "group__drcontainers.html#ga299ffcce5c591c3664ade219fa24305c", null ],
     [ "drvector_t", "group__drcontainers.html#gad6c70a83ab635d96376710bffe4e4ced", null ],
     [ "drvector_append", "group__drcontainers.html#ga380b542d2b8b997ded501df7f54b6919", null ],
+    [ "drvector_clear", "group__drcontainers.html#ga79924fa050e3c76126eeb3865a66265a", null ],
     [ "drvector_delete", "group__drcontainers.html#ga2e5949b592508c61e35ec14bfa731d62", null ],
     [ "drvector_get_entry", "group__drcontainers.html#gaa578776ea720fb04c87ac04181d89f4e", null ],
     [ "drvector_init", "group__drcontainers.html#gae5206874469dc2551dad9e8f375e87df", null ],
+    [ "drvector_init_ex", "group__drcontainers.html#gafc8c2293e2712d00a4aa81668e7fdfab", null ],
     [ "drvector_lock", "group__drcontainers.html#gacf1b3d3080e42bc98cddc75d675cd786", null ],
     [ "drvector_set_entry", "group__drcontainers.html#ga70494a642307dd41ad8b6a754fcea9c8", null ],
     [ "drvector_unlock", "group__drcontainers.html#ga752060ab72ce4d597fed7684332bba5b", null ]

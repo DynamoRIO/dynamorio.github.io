@@ -41,8 +41,73 @@ Hashtable</h1>
 <p>The hashtable supports integer, string, and custom hash keys, and has synchronization and memory allocation and deallocation parametrized for flexible usage. See <a class="el" href="group__drcontainers.html#ga307d17165381371418414308b3eed803">hashtable_init_ex()</a> and related functions.</p>
 <h1><a class="anchor" id="sec_drcontainers_vector"></a>
 DrVector</h1>
-<p>The DrVector is a simple resizable array.</p>
-<h1><a class="anchor" id="sec_drcontainers_table"></a>
+<p>The <code>drvector</code> DynamoRIO Extension provides a simple resizable array (a vector).</p>
+<h2><a class="anchor" id="sec_drvector_init"></a>
+Initialization</h2>
+<p>Initialize a vector with <a class="el" href="group__drcontainers.html#gae5206874469dc2551dad9e8f375e87df">drvector_init()</a>: </p><div class="fragment"><div class="line"><a class="code" href="struct__drvector__t.html">drvector_t</a> vec;</div>
+<div class="line"><a class="code" href="group__drcontainers.html#gae5206874469dc2551dad9e8f375e87df">drvector_init</a>(&amp;vec, <span class="comment">/*initial_capacity=*/</span>10, <span class="comment">/*synch=*/</span><span class="keyword">true</span>, free_callback);</div>
+<div class="ttc" id="agroup__drcontainers_html_gae5206874469dc2551dad9e8f375e87df"><div class="ttname"><a href="group__drcontainers.html#gae5206874469dc2551dad9e8f375e87df">drvector_init</a></div><div class="ttdeci">bool drvector_init(drvector_t *vec, uint initial_capacity, bool synch, void(*free_data_func)(void *))</div></div>
+<div class="ttc" id="astruct__drvector__t_html"><div class="ttname"><a href="struct__drvector__t.html">_drvector_t</a></div><div class="ttdef"><b>Definition:</b> drvector.h:63</div></div>
+</div><!-- fragment --><p>To provide additional configuration parameters, use <a class="el" href="group__drcontainers.html#gafc8c2293e2712d00a4aa81668e7fdfab">drvector_init_ex()</a>: </p><div class="fragment"><div class="line"><a class="code" href="struct__drvector__t.html">drvector_t</a> vec;</div>
+<div class="line"><a class="code" href="struct__drvector__config__t.html">drvector_config_t</a> config = {<span class="comment">/*size=*/</span><span class="keyword">sizeof</span>(config), <span class="comment">/*zero_alloc=*/</span><span class="keyword">true</span>};</div>
+<div class="line"><a class="code" href="group__drcontainers.html#gafc8c2293e2712d00a4aa81668e7fdfab">drvector_init_ex</a>(&amp;vec, <span class="comment">/*initial_capacity=*/</span>10, <span class="comment">/*synch=*/</span><span class="keyword">true</span>, free_callback, &amp;config);</div>
+<div class="ttc" id="agroup__drcontainers_html_gafc8c2293e2712d00a4aa81668e7fdfab"><div class="ttname"><a href="group__drcontainers.html#gafc8c2293e2712d00a4aa81668e7fdfab">drvector_init_ex</a></div><div class="ttdeci">bool drvector_init_ex(drvector_t *vec, uint initial_capacity, bool synch, void(*free_data_func)(void *), drvector_config_t *config)</div></div>
+<div class="ttc" id="astruct__drvector__config__t_html"><div class="ttname"><a href="struct__drvector__config__t.html">_drvector_config_t</a></div><div class="ttdef"><b>Definition:</b> drvector.h:57</div></div>
+</div><!-- fragment --><p>The <code>initial_capacity</code> can be 0, in which case the internal array is lazily allocated upon the first insertion (using an internal default initial size).</p>
+<h2><a class="anchor" id="sec_drvector_ops"></a>
+Operations</h2>
+<p>Entries can be added to the end of the vector using <a class="el" href="group__drcontainers.html#ga380b542d2b8b997ded501df7f54b6919">drvector_append()</a>: </p><div class="fragment"><div class="line"><a class="code" href="group__drcontainers.html#ga380b542d2b8b997ded501df7f54b6919">drvector_append</a>(&amp;vec, data);</div>
+<div class="ttc" id="agroup__drcontainers_html_ga380b542d2b8b997ded501df7f54b6919"><div class="ttname"><a href="group__drcontainers.html#ga380b542d2b8b997ded501df7f54b6919">drvector_append</a></div><div class="ttdeci">bool drvector_append(drvector_t *vec, void *data)</div></div>
+</div><!-- fragment --><p>Entries can be retrieved or set by index: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> *data = <a class="code" href="group__drcontainers.html#gaa578776ea720fb04c87ac04181d89f4e">drvector_get_entry</a>(&amp;vec, 5);</div>
+<div class="line"><a class="code" href="group__drcontainers.html#ga70494a642307dd41ad8b6a754fcea9c8">drvector_set_entry</a>(&amp;vec, 3, new_data);</div>
+<div class="ttc" id="agroup__drcontainers_html_ga70494a642307dd41ad8b6a754fcea9c8"><div class="ttname"><a href="group__drcontainers.html#ga70494a642307dd41ad8b6a754fcea9c8">drvector_set_entry</a></div><div class="ttdeci">bool drvector_set_entry(drvector_t *vec, uint idx, void *data)</div></div>
+<div class="ttc" id="agroup__drcontainers_html_gaa578776ea720fb04c87ac04181d89f4e"><div class="ttname"><a href="group__drcontainers.html#gaa578776ea720fb04c87ac04181d89f4e">drvector_get_entry</a></div><div class="ttdeci">void * drvector_get_entry(drvector_t *vec, uint idx)</div></div>
+</div><!-- fragment --><p><a class="el" href="group__drcontainers.html#gaa578776ea720fb04c87ac04181d89f4e">drvector_get_entry()</a> returns <code>NULL</code> if the index is out of bounds.</p>
+<p>For an unsynchronized vector, the caller is free to directly access the <code>array</code> field of the <code>drvector_t</code> structure for better performance.</p>
+<p><a class="el" href="group__drcontainers.html#ga70494a642307dd41ad8b6a754fcea9c8">drvector_set_entry()</a> will automatically resize the vector if the index is beyond the current capacity. It also updates the number of entries to be <code>idx</code> + 1 if the index is greater than or equal to the current number of entries. Note that entries in between the last set index and the current index are left uninitialized (unless <a class="el" href="struct__drvector__config__t.html#a9f725ad445b7a9daf513e084da1b875c">drvector_config_t.zero_alloc</a> is set), hence clearing or deleting a vector that has a <code>free_callback</code> set can be problematic, as the <code>free_callback</code> function will be called on uninitialized entries. It's the user's responsibility to set all entries prior to the <code>free_callback</code> being called.</p>
+<h2><a class="anchor" id="sec_drcontainers_vector_synch"></a>
+Synchronization</h2>
+<p>The vector can be initialized to automatically synchronize each operation by passing <code>true</code> for the <code>synch</code> parameter to <a class="el" href="group__drcontainers.html#gae5206874469dc2551dad9e8f375e87df">drvector_init()</a> or <a class="el" href="group__drcontainers.html#gafc8c2293e2712d00a4aa81668e7fdfab">drvector_init_ex()</a>.</p>
+<p>Even when <code>synch</code> is <code>false</code>, the vector's lock is initialized and can be manually acquired and released: </p><div class="fragment"><div class="line"><a class="code" href="group__drcontainers.html#gacf1b3d3080e42bc98cddc75d675cd786">drvector_lock</a>(&amp;vec);</div>
+<div class="line"><span class="comment">/* perform multiple operations or access vec-&gt;array directly */</span></div>
+<div class="line"><a class="code" href="group__drcontainers.html#ga752060ab72ce4d597fed7684332bba5b">drvector_unlock</a>(&amp;vec);</div>
+<div class="ttc" id="agroup__drcontainers_html_ga752060ab72ce4d597fed7684332bba5b"><div class="ttname"><a href="group__drcontainers.html#ga752060ab72ce4d597fed7684332bba5b">drvector_unlock</a></div><div class="ttdeci">void drvector_unlock(drvector_t *vec)</div></div>
+<div class="ttc" id="agroup__drcontainers_html_gacf1b3d3080e42bc98cddc75d675cd786"><div class="ttname"><a href="group__drcontainers.html#gacf1b3d3080e42bc98cddc75d675cd786">drvector_lock</a></div><div class="ttdeci">void drvector_lock(drvector_t *vec)</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="sec_drcontainers_vector_mem"></a>
+Memory Management</h2>
+<p>A callback for freeing each data item can be provided to <a class="el" href="group__drcontainers.html#gae5206874469dc2551dad9e8f375e87df">drvector_init()</a> or <a class="el" href="group__drcontainers.html#gafc8c2293e2712d00a4aa81668e7fdfab">drvector_init_ex()</a>. This callback is called for each entry when <a class="el" href="group__drcontainers.html#ga2e5949b592508c61e35ec14bfa731d62">drvector_delete()</a> or <a class="el" href="group__drcontainers.html#ga79924fa050e3c76126eeb3865a66265a">drvector_clear()</a> is called.</p>
+<p>The <a class="el" href="struct__drvector__config__t.html#a9f725ad445b7a9daf513e084da1b875c">drvector_config_t.zero_alloc</a> field can be set to <code>true</code> to ensure that the memory allocated for the vector's internal storage is zeroed. This is typically set via <a class="el" href="group__drcontainers.html#gafc8c2293e2712d00a4aa81668e7fdfab">drvector_init_ex()</a>. When <code>zero_alloc</code> is <code>true</code>, <a class="el" href="group__drcontainers.html#ga79924fa050e3c76126eeb3865a66265a">drvector_clear()</a> also zeros the entire storage after calling <code>free_callback</code>.</p>
+<p>To completely free the vector's storage: </p><div class="fragment"><div class="line"><a class="code" href="group__drcontainers.html#ga2e5949b592508c61e35ec14bfa731d62">drvector_delete</a>(&amp;vec);</div>
+<div class="ttc" id="agroup__drcontainers_html_ga2e5949b592508c61e35ec14bfa731d62"><div class="ttname"><a href="group__drcontainers.html#ga2e5949b592508c61e35ec14bfa731d62">drvector_delete</a></div><div class="ttdeci">bool drvector_delete(drvector_t *vec)</div></div>
+</div><!-- fragment --><p>To clear the vector without freeing its internal storage: </p><div class="fragment"><div class="line"><a class="code" href="group__drcontainers.html#ga79924fa050e3c76126eeb3865a66265a">drvector_clear</a>(&amp;vec);</div>
+<div class="ttc" id="agroup__drcontainers_html_ga79924fa050e3c76126eeb3865a66265a"><div class="ttname"><a href="group__drcontainers.html#ga79924fa050e3c76126eeb3865a66265a">drvector_clear</a></div><div class="ttdeci">bool drvector_clear(drvector_t *vec)</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="sec_drvector_example"></a>
+Example</h2>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> free_data(<span class="keywordtype">void</span> *ptr) {</div>
+<div class="line">    <a class="code" href="dr__tools_8h.html#a32b5d7da931da632140c0e7adcdac75b">dr_global_free</a>(ptr, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="struct__drvector__t.html">drvector_t</a> vec;</div>
+<div class="line"><a class="code" href="struct__drvector__config__t.html">drvector_config_t</a> config = {<span class="comment">/*size=*/</span><span class="keyword">sizeof</span>(config), <span class="comment">/*zero_alloc=*/</span><span class="keyword">true</span>};</div>
+<div class="line"><a class="code" href="group__drcontainers.html#gafc8c2293e2712d00a4aa81668e7fdfab">drvector_init_ex</a>(&amp;vec, <span class="comment">/*initial_capacity=*/</span>0, <span class="comment">/*synch=*/</span><span class="keyword">false</span>, free_data, &amp;config);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> *data = <a class="code" href="dr__tools_8h.html#a82f6546fc3e259e64493aeda5a8f1c86">dr_global_alloc</a>(<span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line">*data = 42;</div>
+<div class="line"><a class="code" href="group__drcontainers.html#ga380b542d2b8b997ded501df7f54b6919">drvector_append</a>(&amp;vec, data);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* Accessing by index */</span></div>
+<div class="line"><span class="keywordtype">int</span> *val = (<span class="keywordtype">int</span> *)<a class="code" href="group__drcontainers.html#gaa578776ea720fb04c87ac04181d89f4e">drvector_get_entry</a>(&amp;vec, 0);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* Direct access (unsynchronized) */</span></div>
+<div class="line"><span class="keywordflow">if</span> (vec.<a class="code" href="struct__drvector__t.html#ac477b5fe208fbc26774954584107cc97">entries</a> &gt; 0)</div>
+<div class="line">    val = (<span class="keywordtype">int</span> *)vec.<a class="code" href="struct__drvector__t.html#a5c9bec5511cdff545bd57359e89d28e6">array</a>[0];</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="group__drcontainers.html#ga2e5949b592508c61e35ec14bfa731d62">drvector_delete</a>(&amp;vec);</div>
+<div class="ttc" id="adr__tools_8h_html_a32b5d7da931da632140c0e7adcdac75b"><div class="ttname"><a href="dr__tools_8h.html#a32b5d7da931da632140c0e7adcdac75b">dr_global_free</a></div><div class="ttdeci">DR_API void dr_global_free(void *mem, size_t size)</div></div>
+<div class="ttc" id="adr__tools_8h_html_a82f6546fc3e259e64493aeda5a8f1c86"><div class="ttname"><a href="dr__tools_8h.html#a82f6546fc3e259e64493aeda5a8f1c86">dr_global_alloc</a></div><div class="ttdeci">DR_API void * dr_global_alloc(size_t size)</div></div>
+<div class="ttc" id="astruct__drvector__t_html_a5c9bec5511cdff545bd57359e89d28e6"><div class="ttname"><a href="struct__drvector__t.html#a5c9bec5511cdff545bd57359e89d28e6">_drvector_t::array</a></div><div class="ttdeci">void ** array</div><div class="ttdef"><b>Definition:</b> drvector.h:66</div></div>
+<div class="ttc" id="astruct__drvector__t_html_ac477b5fe208fbc26774954584107cc97"><div class="ttname"><a href="struct__drvector__t.html#ac477b5fe208fbc26774954584107cc97">_drvector_t::entries</a></div><div class="ttdeci">uint entries</div><div class="ttdef"><b>Definition:</b> drvector.h:64</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="sec_drcontainers_table"></a>
 DrTable</h1>
 <p>The DrTable is a resizable array that does not relocate data, enabling a user to use pointers to access array entries directly. </p>
 </div></div><!-- contents -->
@@ -52,5 +117,5 @@ DrTable</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20489 --- Fri Feb 6 2026 03:50:07 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20493 --- Mon Feb 9 2026 23:54:04 &nbsp; <img border=0 src="favicon.png">
 </small></address>

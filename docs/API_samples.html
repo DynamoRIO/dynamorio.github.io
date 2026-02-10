@@ -29,37 +29,453 @@ permalink: /API_samples.html
 <p>For larger examples of clients, see the provided <a class="el" href="page_tool.html">Available Tools</a>, which are larger and more polished end-user clients than these samples.</p>
 <h1><a class="anchor" id="sample_list"></a>
 List of Samples</h1>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/bbbuf.c">bbbuf.c</a> demonstrates how to use a TLS field for per-thread basic block profiling.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/bbcount.c">bbcount.c</a> illustrates how to perform performant instrumentation for reporting the dynamic execution count of all basic blocks.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/bbsize.c">bbsize.c</a> collects statistics on the sizes of all basic blocks in the target application.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/callstack.cpp">callstack.cpp</a> walks the application callstack at a given function entry point.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/cbr.c">cbr.c</a> collects conditional branch execution information and shows how to dynamically update or replace instrumented code after it executes.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/cbrtrace.c">cbrtrace.c</a> collects conditional branch execution traces and writes them into files.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/countcalls.c">countcalls.c</a> reports the dynamic execution count for direct calls, indirect calls, and returns in the target application. It illustrates how to perform performant inline increments and use per-thread data structures.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/div.c">div.c</a> demonstrates profiling the types of values fed to a particular opcode.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/empty.c">empty.c</a> is provided as an example client that does nothing.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/inc2add.c">inc2add.c</a> performs a dynamic optimization: it converts the "inc" instruction to "add 1" without perturbing the target application's behavior.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/inline.c">inline.c</a> performs an optimization that uses the custom trace API to inline entire callees into traces.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/inscount.cpp">inscount.cpp</a> reports the dynamic count of the total number of instructions executed via inserting performant clean calls which are auto-inlined by DynamoRIO. It also illustrates use of the <a class="el" href="page_droption.html">DynamoRIO Option Parser</a>.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/instrace_simple.c">instrace_simple.c</a> is provided as an example client that illustrates how to gather an instruction trace in a simple, cross-platform way. It is much slower than instrace_x86_binary, however.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/instrace_x86.c">instrace_x86.c</a> is provided as an example client that illustrates how to create a private code cache and perform lean procedure calls to generate an instruction trace in a performant manner. It is compiled into two different libraries: instrace_x86_text, which produces a readable, text-mode trace, but is much slower than instrace_x86_binary, which produces a binary-format trace file.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/instrcalls.c">instrcalls.c</a> demonstrates how to instrument direct calls, indirect calls and returns.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/memtrace_simple.c">memtrace_simple.c</a> is provided as an example client that illustrates how to gather a memory trace in a simple, cross-platform way. It is much slower than memtrace_x86_binary, however.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/memval_simple.c">memval_simple.c</a> is provided as an example client that illustrates how to gather a memory trace of stored addresses and the values being stored.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/memtrace_x86.c">memtrace_x86.c</a> is provided as an example client that illustrates how to create a private code cache and perform lean procedure calls. It is compiled into two different libraries: memtrace_x86_text, which produces a readable, text-mode trace, but is much slower than memtrace_x86_binary, which produces a binary-format trace file.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/hot_bbcount.c">hot_bbcount.c</a> uses the drbbdup extension to count the execution of hot basic blocks which have exceeded a given hit threshold.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/opcode_count.cpp">opcode_count.cpp</a> takes an opcode as input and uses drmgr's instrumentation events to count the number of times instructions with that opcode are executed.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/modxfer.c">modxfer.c</a> reports the control flow transfers between modules.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/modxfer_app2lib.c">modxfer_app2lib.c</a> reports the control flow transfers between the application executable and other dynamic libraries and modules. It illustrates how to perform performant clean calls on different modules.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/opcodes.c">opcodes.c</a> computes dynamic execution counts broken down by instruction opcode.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/prefetch.c">prefetch.c</a> demonstrates modifying the dynamic code stream for compatibility between different processor types.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/signal.c">signal.c</a> demonstrates how to use the signal event.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/statecmp.c">statecmp.c</a> demonstrates how to use the drstatecmp instrumentation testing library.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/stl_test.cpp">stl_test.cpp</a> is provided as an example client that uses C++ STL containers.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/syscall.c">syscall.c</a> displays how to use the system call events and API routines.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/tracedump.c">tracedump.c</a> is provided as a standalone application that disassembles a trace dump in binary format produced by the -tracedump_binary option.</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/wrap.c">wrap.c</a> demonstrates how to use the drwrap extension (see <a class="el" href="page_drwrap.html">Function Wrapping and Replacing Extension</a>).</p>
-<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/ssljack.c">ssljack.c</a> demonstrates how to hook OpenSSL and GnuTLS functions, using the drwrap extension.</p>
+<p>Each sample below is in the <code>api/samples</code> directory. The links point to the corresponding source file in the Git repository.</p>
+<h2><a class="anchor" id="sec_sample_bbbuf"></a>
+bbbuf.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/bbbuf.c">bbbuf.c</a> records each basic block’s start PC into a per-thread fast circular buffer (default 64KB) by inserting inline instrumentation at the first instruction of each basic block using the drx_buf extension. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>TLS-backed per-thread buffers via <a class="el" href="page_drx.html">DynamoRIO eXtension utilities</a> (Buffer Filling API) </li>
+<li>Basic block instrumentation at block entry </li>
+<li>Scratch register management with <a class="el" href="page_drreg.html">Register Management</a> </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Hot path profiling based on basic block history </li>
+<li>Lightweight execution tracing for debugging</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_bbcount"></a>
+bbcount.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/bbcount.c">bbcount.c</a> counts dynamic basic block executions by inserting a non-atomic global counter update at the start of each basic block using <a class="el" href="page_drx.html">DynamoRIO eXtension utilities</a> counter helpers. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Basic block instrumentation </li>
+<li>Inline counter updates with <a class="el" href="page_drx.html">DynamoRIO eXtension utilities</a> </li>
+<li>AFLAGS liveness checks via <a class="el" href="page_drreg.html">Register Management</a> </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Measuring overall execution volume </li>
+<li>Comparing workloads by basic block activity</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_bbsize"></a>
+bbsize.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/bbsize.c">bbsize.c</a> computes the number, maximum size, and average size of basic blocks using a basic-block analysis callback and explicit floating-point state save/restore. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Basic block analysis callbacks </li>
+<li>Floating-point state preservation in callbacks </li>
+<li>Shared statistics protected by a mutex </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Characterizing code layout behavior </li>
+<li>Comparing compiler output across binaries</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_callstack"></a>
+callstack.cpp</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/callstack.cpp">callstack.cpp</a> wraps a configurable function (default: malloc) and prints a symbolized call stack on each call using <a class="el" href="page_drwrap.html">Function Wrapping and Replacing Extension</a>, <a class="el" href="page_drcallstack.html">Callstack Walking</a>, and <a class="el" href="page_drsyms.html">Symbol Access Library</a>. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Function wrapping with <a class="el" href="page_drwrap.html">Function Wrapping and Replacing Extension</a> </li>
+<li>Call stack walking via the <a class="el" href="page_drcallstack.html">Callstack Walking</a> extension </li>
+<li>Symbol lookup with <a class="el" href="page_drsyms.html">Symbol Access Library</a> </li>
+<li>Runtime options via <a class="el" href="page_droption.html">DynamoRIO Option Parser</a> </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Debugging unexpected call paths </li>
+<li>Capturing stack traces at selected points</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_cbr"></a>
+cbr.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/cbr.c">cbr.c</a> instruments conditional branches with separate taken/not-taken clean calls, records which edges execute, and flushes and redirects execution to remove instrumentation during execution once each edge has been seen. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Conditional branch instrumentation with clean calls </li>
+<li>Fragment flushing and execution redirection </li>
+<li>Per-branch state tracking with a hash table </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Building dynamic control-flow graphs </li>
+<li>Reducing overhead after edge discovery</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_cbrtrace"></a>
+cbrtrace.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/cbrtrace.c">cbrtrace.c</a> logs each conditional branch’s address, fall-through, target, and taken direction to per-thread log files using <a class="el" href="dr__ir__utils_8h.html#aaf70b54e0f62baf2a7bfe3b13b55c579">dr_insert_cbr_instrumentation_ex()</a>. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Conditional branch instrumentation </li>
+<li>Thread-local storage via drmgr TLS fields (<a class="el" href="page_drmgr.html">Multi-Instrumentation Manager</a>) </li>
+<li>Per-thread log file output </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Debugging branch behavior </li>
+<li>Building branch outcome traces</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_countcalls"></a>
+countcalls.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/countcalls.c">countcalls.c</a> counts dynamic direct calls, indirect calls, and returns using per-thread TLS data and inline counter updates with flag preservation. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>TLS-based per-thread data via drmgr (<a class="el" href="page_drmgr.html">Multi-Instrumentation Manager</a>) </li>
+<li>Instruction classification for calls and returns </li>
+<li>Inline counter updates with <a class="el" href="page_drreg.html">Register Management</a> </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Profiling call/return behavior </li>
+<li>Comparing indirect call frequency across inputs</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_div"></a>
+div.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/div.c">div.c</a> counts unsigned division instructions and how often the runtime divisor is a power of two, using a clean call to read the divisor value. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Clean calls for operand inspection </li>
+<li>Runtime operand value extraction </li>
+<li>Thread-safe counters with a mutex </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Identifying optimization opportunities </li>
+<li>Finding expensive divisions in hot code</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_empty"></a>
+empty.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/empty.c">empty.c</a> is a minimal client that only registers an exit event and performs no instrumentation. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Client initialization </li>
+<li>Exit event handling </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Starting point for new clients </li>
+<li>Verifying build and load pipelines</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_hot_bbcount"></a>
+hot_bbcount.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/hot_bbcount.c">hot_bbcount.c</a> uses <a class="el" href="page_drbbdup.html">Basic Block Duplicator</a> to create cold and hot versions of basic block instrumentation, switching to inline counter updates after a per-block hit threshold is reached. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Basic block duplication (<a class="el" href="page_drbbdup.html">Basic Block Duplicator</a>) </li>
+<li>Clean calls versus inline counter updates </li>
+<li>Runtime case encoding stored in raw TLS </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Hot path profiling with reduced overhead </li>
+<li>Tiered instrumentation strategies</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_inc2add"></a>
+inc2add.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/inc2add.c">inc2add.c</a> performs an app2app transformation that replaces inc/dec with add/sub in trace blocks when the carry flag is not live, using drreg liveness analysis to preserve correctness. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>App2app transformations </li>
+<li>Instruction replacement </li>
+<li>Flag liveness checks with <a class="el" href="page_drreg.html">Register Management</a> </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Exploring micro-architecture-specific optimizations </li>
+<li>Testing transformation pipelines</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_inline"></a>
+inline.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/inline.c">inline.c</a> customizes trace formation to inline callees into traces by marking call sites as trace heads and ending traces after returns or size limits. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Custom trace control via end-trace events </li>
+<li>Trace head tracking with <a class="el" href="page_drmgr.html">Multi-Instrumentation Manager</a> and <a class="el" href="dr__tools_8h.html#a15aa23aae4a1d322fbe0a1cffedbaf3a">dr_mark_trace_head()</a> </li>
+<li>Fragment lifecycle handling on deletion </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Dynamic inlining experiments </li>
+<li>Trace-level performance research</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_inscount"></a>
+inscount.cpp</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/inscount.cpp">inscount.cpp</a> counts executed instructions by computing per-basic-block instruction counts in analysis and adding them via an auto-inlined clean call, with an option to count only application code. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Clean calls optimized by DynamoRIO </li>
+<li>Runtime options via <a class="el" href="page_droption.html">DynamoRIO Option Parser</a> </li>
+<li>Emulation-aware instruction counting with drmgr (<a class="el" href="page_drmgr.html">Multi-Instrumentation Manager</a>) </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Instruction count profiling </li>
+<li>Validating instrumentation overhead</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_instrace_simple"></a>
+instrace_simple.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/instrace_simple.c">instrace_simple.c</a> records a per-thread instruction trace (PC and opcode) into a raw TLS buffer with inline instrumentation and flushes it to a text file using clean calls. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Raw TLS buffer management </li>
+<li>Inline per-instruction instrumentation </li>
+<li>Clean calls to flush per-thread buffers </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Building simple instruction traces </li>
+<li>Validating instrumentation correctness </li>
+<li>For a full-featured instruction and data address tracing tool, see <a class="el" href="page_drcachesim.html">Tracing and Analysis Framework</a>.</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_instrace_x86"></a>
+instrace_x86.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/instrace_x86.c">instrace_x86.c</a> captures a per-thread instruction trace on x86 using inline buffer filling and a local code cache for lean clean calls when the buffer fills. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Local code cache generation </li>
+<li>Lean clean calls </li>
+<li>Per-thread buffering and file output </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>High-performance instruction tracing </li>
+<li>Producing binary traces for offline analysis </li>
+<li>For a full-featured instruction and data address tracing tool, see <a class="el" href="page_drcachesim.html">Tracing and Analysis Framework</a>.</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_instrcalls"></a>
+instrcalls.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/instrcalls.c">instrcalls.c</a> logs each direct call, indirect call, and return with target information to per-thread files, with optional symbolization via drsyms (<a class="el" href="page_drsyms.html">Symbol Access Library</a>). </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Call and return instrumentation </li>
+<li>Per-thread logging </li>
+<li>Optional symbol lookup with drsyms </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Building call flow traces </li>
+<li>Investigating indirect call behavior</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_memtrace_simple"></a>
+memtrace_simple.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/memtrace_simple.c">memtrace_simple.c</a> records instruction and memory-reference entries (type, size, address) into a per-thread buffer and dumps them to a text file using clean calls. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Memory operand analysis </li>
+<li><a class="el" href="page_drutil.html">Instrumentation Utilities</a> helpers for address and size </li>
+<li><a class="el" href="page_drx.html">DynamoRIO eXtension utilities</a> expansion of string and scatter/gather operations </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Studying memory access patterns </li>
+<li>Validating memory reference instrumentation </li>
+<li>For a full-featured instruction and data address tracing tool, see <a class="el" href="page_drcachesim.html">Tracing and Analysis Framework</a>.</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_memtrace_x86"></a>
+memtrace_x86.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/memtrace_x86.c">memtrace_x86.c</a> captures memory references on x86 with inline buffer filling and a local code cache for lean clean calls, writing binary or text traces per thread. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li><a class="el" href="page_drutil.html">Instrumentation Utilities</a> string and scatter/gather expansion </li>
+<li>Local code cache generation </li>
+<li>Per-thread buffering with lean clean calls </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>High-performance memory tracing </li>
+<li>Generating binary traces for offline analysis </li>
+<li>For a full-featured instruction and data address tracing tool, see <a class="el" href="page_drcachesim.html">Tracing and Analysis Framework</a>.</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_memval_simple"></a>
+memval_simple.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/memval_simple.c">memval_simple.c</a> records memory write addresses and the written bytes using drx_buf trace and circular buffers, flushing via a trace-buffer fault handler to per-thread log files. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Post-instruction instrumentation for write values </li>
+<li><a class="el" href="page_drx.html">DynamoRIO eXtension utilities</a> trace and circular buffers with a fault handler (Buffer Filling API) </li>
+<li>Memory operand address calculation with <a class="el" href="page_drutil.html">Instrumentation Utilities</a> </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Tracking data writes for debugging </li>
+<li>Building lightweight memory value traces</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_modxfer"></a>
+modxfer.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/modxfer.c">modxfer.c</a> counts instructions per module and tracks cross-module indirect branch transfers between any modules, logging summary statistics at exit. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Module load and unload tracking </li>
+<li>Indirect branch instrumentation </li>
+<li>Per-module counters with <a class="el" href="page_drx.html">DynamoRIO eXtension utilities</a> </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Studying inter-module call patterns </li>
+<li>Identifying frequent cross-module transfers</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_modxfer_app2lib"></a>
+modxfer_app2lib.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/modxfer_app2lib.c">modxfer_app2lib.c</a> counts instructions in the main application versus libraries and tracks indirect call/jump transfers between them using per-basic-block clean calls. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Module range checks for app vs. library code </li>
+<li>Clean call updates of per-basic-block counts </li>
+<li>Indirect branch instrumentation for cross-module transfers </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Measuring time spent in app vs. libraries </li>
+<li>Detecting app-to-lib transition frequency</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_opcode_count"></a>
+opcode_count.cpp</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/opcode_count.cpp">opcode_count.cpp</a> counts executions of a selected opcode and the total instruction count using drmgr opcode instrumentation events and drx counter updates. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Opcode instrumentation events via <a class="el" href="page_drmgr.html">Multi-Instrumentation Manager</a> </li>
+<li>Inline counter updates with <a class="el" href="page_drx.html">DynamoRIO eXtension utilities</a> </li>
+<li>Runtime options via <a class="el" href="page_droption.html">DynamoRIO Option Parser</a> </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Focused opcode profiling </li>
+<li>Regression checks for specific instruction patterns</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_opcodes"></a>
+opcodes.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/opcodes.c">opcodes.c</a> counts dynamic instruction executions by opcode, grouped by ISA mode, and reports the top opcode counts at exit. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Basic block instrumentation </li>
+<li>Inline counter updates with <a class="el" href="page_drx.html">DynamoRIO eXtension utilities</a> </li>
+<li>ISA mode awareness </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Opcode mix profiling </li>
+<li>Comparing dynamic behavior across workloads</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_prefetch"></a>
+prefetch.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/prefetch.c">prefetch.c</a> removes prefetch and prefetchw instructions on Intel CPUs using an app2app pass, counting the removals for reporting. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>App2app instruction removal </li>
+<li>CPU vendor detection </li>
+<li>Thread-safe counting with a mutex </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Running AMD-optimized binaries on Intel CPUs </li>
+<li>Testing instruction stream sanitization</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_signal"></a>
+signal.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/signal.c">signal.c</a> monitors UNIX signals, suppressing SIGTERM and redirecting SIGSEGV by skipping the faulting instruction while counting signals seen. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Signal event callbacks (UNIX) </li>
+<li>Signal suppression and redirection </li>
+<li>Atomic counters </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Observing crash signals in a controlled way </li>
+<li>Prototyping signal-based fault handling</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_ssljack"></a>
+ssljack.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/ssljack.c">ssljack.c</a> wraps OpenSSL and GnuTLS read/write functions on module load and logs plaintext data to per-SSL-context files. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Module load events </li>
+<li>Function wrapping (<a class="el" href="page_drwrap.html">Function Wrapping and Replacing Extension</a>) </li>
+<li>Per-context file logging </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Inspecting decrypted SSL/TLS traffic </li>
+<li>Debugging application-level crypto usage</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_statecmp"></a>
+statecmp.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/statecmp.c">statecmp.c</a> uses <a class="el" href="page_drstatecmp.html">Machine State Comparison Library</a> to detect instrumentation-induced state mismatches by intentionally clobbering flags and handling mismatches via a user callback. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li><a class="el" href="page_drstatecmp.html">Machine State Comparison Library</a> integration </li>
+<li>Instrumentation correctness checking </li>
+<li>Custom mismatch callbacks </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Validating new instrumentation passes </li>
+<li>Debugging subtle state clobbers</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_stats"></a>
+stats.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/stats.c">stats.c</a> (Windows-only) exports instruction, floating-point, and syscall counters via shared memory for the stats viewer, using drx counter updates per basic block. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Shared memory usage for client stats </li>
+<li>Inline counters with <a class="el" href="page_drx.html">DynamoRIO eXtension utilities</a> </li>
+<li>Windows-specific API interactions </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Live statistics dashboards </li>
+<li>Comparing runs without heavy logging</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_strace"></a>
+strace.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/strace.c">strace.c</a> prints the name and result of every system call using the <a class="el" href="page_drsyscall.html">Dr. Syscall: System Call Monitoring Extension</a> extension from DRMF. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Syscall event callbacks via <a class="el" href="page_drsyscall.html">Dr. Syscall: System Call Monitoring Extension</a> </li>
+<li>Syscall name lookup with DRMF </li>
+<li>Result decoding </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Debugging unexpected syscalls </li>
+<li>Building basic syscall traces</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_stl_test"></a>
+stl_test.cpp</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/stl_test.cpp">stl_test.cpp</a> is a C++ client that exercises STL containers (vector, list, map) and optionally uses a TLS variable on UNIX when SHOW_RESULTS is enabled. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>C++ client setup </li>
+<li>STL usage in a client </li>
+<li>Exit event registration </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>C++ client scaffolding </li>
+<li>Validating STL usage in DynamoRIO clients</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_syscall"></a>
+syscall.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/syscall.c">syscall.c</a> monitors system calls, counts them, and modifies write syscalls (SYS_write/NtWriteFile) using drmgr’s pre/post syscall events and thread-context-local storage (<a class="el" href="page_drmgr.html">Multi-Instrumentation Manager</a>). </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Syscall interception events </li>
+<li>Thread-context-local storage via drmgr CLS (<a class="el" href="page_drmgr.html">Multi-Instrumentation Manager</a>) </li>
+<li>Platform-specific syscall handling and parameter modification </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Auditing syscall activity </li>
+<li>Prototyping syscall rewriting</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_tracedump"></a>
+tracedump.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/tracedump.c">tracedump.c</a> uses the standalone API to parse and disassemble binary trace dump files produced by the -tracedump_binary option. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Standalone API usage </li>
+<li>Trace dump file parsing </li>
+<li>Disassembly of cached code </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Inspecting trace dumps offline </li>
+<li>Debugging code cache behavior</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_utils"></a>
+utils.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/utils.c">utils.c</a> provides shared logging helpers for samples, including unique per-process log file creation and FILE* stream helpers. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Client path discovery </li>
+<li>Log file creation helpers via <a class="el" href="page_drx.html">DynamoRIO eXtension utilities</a> </li>
+<li>Stream helper utilities </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Reusing logging utilities across sample clients </li>
+<li>Standardizing output file naming</li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="sec_sample_wrap"></a>
+wrap.c</h2>
+<p>The sample <a href="https://github.com/DynamoRIO/dynamorio/tree/master/api/samples/wrap.c">wrap.c</a> wraps malloc (Linux) or HeapAlloc (Windows) to track the maximum allocation size and optionally force occasional allocation failures. </p><dl class="section user"><dt>DynamoRIO concepts demonstrated</dt><dd><ul>
+<li>Module load callbacks </li>
+<li>Function wrapping (<a class="el" href="page_drwrap.html">Function Wrapping and Replacing Extension</a>) </li>
+<li>Return value modification </li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt>Typical use cases</dt><dd><ul>
+<li>Testing error handling paths </li>
+<li>Tracking allocation patterns</li>
+</ul>
+</dd></dl>
 <h1><a class="anchor" id="bt_examples"></a>
 Discussion of Selected Samples</h1>
 <h2><a class="anchor" id="sec_ex1"></a>
@@ -363,5 +779,5 @@ Use of Standalone API</h2>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20489 --- Fri Feb 6 2026 03:50:07 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20493 --- Mon Feb 9 2026 23:54:03 &nbsp; <img border=0 src="favicon.png">
 </small></address>

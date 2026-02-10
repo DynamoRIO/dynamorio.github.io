@@ -38,16 +38,22 @@ permalink: /drvector_8h.html
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__drvector__config__t.html">_drvector_config_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__drvector__t.html">_drvector_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:ga299ffcce5c591c3664ade219fa24305c"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__drvector__config__t.html">_drvector_config_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drcontainers.html#ga299ffcce5c591c3664ade219fa24305c">drvector_config_t</a></td></tr>
+<tr class="separator:ga299ffcce5c591c3664ade219fa24305c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad6c70a83ab635d96376710bffe4e4ced"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__drvector__t.html">_drvector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drcontainers.html#gad6c70a83ab635d96376710bffe4e4ced">drvector_t</a></td></tr>
 <tr class="separator:gad6c70a83ab635d96376710bffe4e4ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:gafc8c2293e2712d00a4aa81668e7fdfab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drcontainers.html#gafc8c2293e2712d00a4aa81668e7fdfab">drvector_init_ex</a> (<a class="el" href="group__drcontainers.html#gad6c70a83ab635d96376710bffe4e4ced">drvector_t</a> *vec, uint initial_capacity, bool synch, void(*free_data_func)(void *), <a class="el" href="group__drcontainers.html#ga299ffcce5c591c3664ade219fa24305c">drvector_config_t</a> *config)</td></tr>
+<tr class="separator:gafc8c2293e2712d00a4aa81668e7fdfab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae5206874469dc2551dad9e8f375e87df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drcontainers.html#gae5206874469dc2551dad9e8f375e87df">drvector_init</a> (<a class="el" href="group__drcontainers.html#gad6c70a83ab635d96376710bffe4e4ced">drvector_t</a> *vec, uint initial_capacity, bool synch, void(*free_data_func)(void *))</td></tr>
 <tr class="separator:gae5206874469dc2551dad9e8f375e87df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa578776ea720fb04c87ac04181d89f4e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drcontainers.html#gaa578776ea720fb04c87ac04181d89f4e">drvector_get_entry</a> (<a class="el" href="group__drcontainers.html#gad6c70a83ab635d96376710bffe4e4ced">drvector_t</a> *vec, uint idx)</td></tr>
@@ -58,6 +64,8 @@ Functions</h2></td></tr>
 <tr class="separator:ga380b542d2b8b997ded501df7f54b6919"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2e5949b592508c61e35ec14bfa731d62"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drcontainers.html#ga2e5949b592508c61e35ec14bfa731d62">drvector_delete</a> (<a class="el" href="group__drcontainers.html#gad6c70a83ab635d96376710bffe4e4ced">drvector_t</a> *vec)</td></tr>
 <tr class="separator:ga2e5949b592508c61e35ec14bfa731d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga79924fa050e3c76126eeb3865a66265a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drcontainers.html#ga79924fa050e3c76126eeb3865a66265a">drvector_clear</a> (<a class="el" href="group__drcontainers.html#gad6c70a83ab635d96376710bffe4e4ced">drvector_t</a> *vec)</td></tr>
+<tr class="separator:ga79924fa050e3c76126eeb3865a66265a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacf1b3d3080e42bc98cddc75d675cd786"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drcontainers.html#gacf1b3d3080e42bc98cddc75d675cd786">drvector_lock</a> (<a class="el" href="group__drcontainers.html#gad6c70a83ab635d96376710bffe4e4ced">drvector_t</a> *vec)</td></tr>
 <tr class="separator:gacf1b3d3080e42bc98cddc75d675cd786"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga752060ab72ce4d597fed7684332bba5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drcontainers.html#ga752060ab72ce4d597fed7684332bba5b">drvector_unlock</a> (<a class="el" href="group__drcontainers.html#gad6c70a83ab635d96376710bffe4e4ced">drvector_t</a> *vec)</td></tr>
@@ -71,5 +79,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.90.20489 --- Fri Feb 6 2026 03:50:06 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20493 --- Mon Feb 9 2026 23:54:02 &nbsp; <img border=0 src="favicon.png">
 </small></address>

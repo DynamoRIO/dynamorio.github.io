@@ -14,7 +14,13 @@
     [ "Container Data Structures", "page_drcontainers.html", [
       [ "Setup", "page_drcontainers.html#sec_drcontainers_setup", null ],
       [ "Hashtable", "page_drcontainers.html#sec_drcontainers_hashtable", null ],
-      [ "DrVector", "page_drcontainers.html#sec_drcontainers_vector", null ],
+      [ "DrVector", "page_drcontainers.html#sec_drcontainers_vector", [
+        [ "Initialization", "page_drcontainers.html#sec_drvector_init", null ],
+        [ "Operations", "page_drcontainers.html#sec_drvector_ops", null ],
+        [ "Synchronization", "page_drcontainers.html#sec_drcontainers_vector_synch", null ],
+        [ "Memory Management", "page_drcontainers.html#sec_drcontainers_vector_mem", null ],
+        [ "Example", "page_drcontainers.html#sec_drvector_example", null ]
+      ] ],
       [ "DrTable", "page_drcontainers.html#sec_drcontainers_table", null ]
     ] ],
     [ "Code Coverage Library", "page_drcovlib.html", [

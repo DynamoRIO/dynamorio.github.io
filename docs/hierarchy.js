@@ -41,6 +41,7 @@
     [ "_drsys_arg_t", "struct__drsys__arg__t.html", null ],
     [ "_drsys_options_t", "struct__drsys__options__t.html", null ],
     [ "_drsys_sysnum_t", "struct__drsys__sysnum__t.html", null ],
+    [ "_drvector_config_t", "struct__drvector__config__t.html", null ],
     [ "_drvector_t", "struct__drvector__t.html", null ],
     [ "_drwrap_stats_t", "struct__drwrap__stats__t.html", null ],
     [ "_drx_time_scale_stat_t", "struct__drx__time__scale__stat__t.html", null ],

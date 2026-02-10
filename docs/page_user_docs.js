@@ -1,7 +1,42 @@
 [
     [ "Tutorials", "page_tutorials.html", {% include_relative page_tutorials.js %} ],
     [ "Sample Tools", "API_samples.html", [
-      [ "List of Samples", "API_samples.html#sample_list", null ],
+      [ "List of Samples", "API_samples.html#sample_list", [
+        [ "bbbuf.c", "API_samples.html#sec_sample_bbbuf", null ],
+        [ "bbcount.c", "API_samples.html#sec_sample_bbcount", null ],
+        [ "bbsize.c", "API_samples.html#sec_sample_bbsize", null ],
+        [ "callstack.cpp", "API_samples.html#sec_sample_callstack", null ],
+        [ "cbr.c", "API_samples.html#sec_sample_cbr", null ],
+        [ "cbrtrace.c", "API_samples.html#sec_sample_cbrtrace", null ],
+        [ "countcalls.c", "API_samples.html#sec_sample_countcalls", null ],
+        [ "div.c", "API_samples.html#sec_sample_div", null ],
+        [ "empty.c", "API_samples.html#sec_sample_empty", null ],
+        [ "hot_bbcount.c", "API_samples.html#sec_sample_hot_bbcount", null ],
+        [ "inc2add.c", "API_samples.html#sec_sample_inc2add", null ],
+        [ "inline.c", "API_samples.html#sec_sample_inline", null ],
+        [ "inscount.cpp", "API_samples.html#sec_sample_inscount", null ],
+        [ "instrace_simple.c", "API_samples.html#sec_sample_instrace_simple", null ],
+        [ "instrace_x86.c", "API_samples.html#sec_sample_instrace_x86", null ],
+        [ "instrcalls.c", "API_samples.html#sec_sample_instrcalls", null ],
+        [ "memtrace_simple.c", "API_samples.html#sec_sample_memtrace_simple", null ],
+        [ "memtrace_x86.c", "API_samples.html#sec_sample_memtrace_x86", null ],
+        [ "memval_simple.c", "API_samples.html#sec_sample_memval_simple", null ],
+        [ "modxfer.c", "API_samples.html#sec_sample_modxfer", null ],
+        [ "modxfer_app2lib.c", "API_samples.html#sec_sample_modxfer_app2lib", null ],
+        [ "opcode_count.cpp", "API_samples.html#sec_sample_opcode_count", null ],
+        [ "opcodes.c", "API_samples.html#sec_sample_opcodes", null ],
+        [ "prefetch.c", "API_samples.html#sec_sample_prefetch", null ],
+        [ "signal.c", "API_samples.html#sec_sample_signal", null ],
+        [ "ssljack.c", "API_samples.html#sec_sample_ssljack", null ],
+        [ "statecmp.c", "API_samples.html#sec_sample_statecmp", null ],
+        [ "stats.c", "API_samples.html#sec_sample_stats", null ],
+        [ "strace.c", "API_samples.html#sec_sample_strace", null ],
+        [ "stl_test.cpp", "API_samples.html#sec_sample_stl_test", null ],
+        [ "syscall.c", "API_samples.html#sec_sample_syscall", null ],
+        [ "tracedump.c", "API_samples.html#sec_sample_tracedump", null ],
+        [ "utils.c", "API_samples.html#sec_sample_utils", null ],
+        [ "wrap.c", "API_samples.html#sec_sample_wrap", null ]
+      ] ],
       [ "Discussion of Selected Samples", "API_samples.html#bt_examples", [
         [ "Instruction Counting", "API_samples.html#sec_ex1", null ],
         [ "Instruction Profiling", "API_samples.html#sec_ex2", null ],
@@ -92,7 +127,7 @@
       [ "DynamoRIO Shared Library Issues", "page_standalone.html#sec_standalone_shared", null ]
     ] ],
     [ "DynamoRIO System Overview", "overview.html", {% include_relative overview.js %} ],
-    [ "Release Notes for Version 11.90.20489", "release_notes.html", [
+    [ "Release Notes for Version 11.91.20493", "release_notes.html", [
       [ "Distribution Contents", "release_notes.html#sec_package", null ],
       [ "Changes Since Prior Releases", "release_notes.html#sec_changes", null ],
       [ "Limitations", "release_notes.html#sec_limits", [
