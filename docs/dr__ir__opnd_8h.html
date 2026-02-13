@@ -4751,7 +4751,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns an immediate float operand with value <code>f</code>. The caller's code should use <a class="el" href="dr__proc_8h.html#a48ca3205c37d6e41d007ac54a1d60e6a">proc_save_fpstate()</a> or be inside a clean call that has requested to preserve the floating-point state. </p>
+<p>Returns an immediate float operand with value <code>f</code>. The caller's code should use <a class="el" href="dr__proc_8h.html#a48ca3205c37d6e41d007ac54a1d60e6a">proc_save_fpstate()</a> or be inside a clean call that has requested to preserve the floating-point state. </p><dl class="section note"><dt>Note</dt><dd>Floating-point state preservation applies only to managed DynamoRIO modes. In standalone decoder mode, floating-point state is not preserved or managed and <a class="el" href="dr__proc_8h.html#a48ca3205c37d6e41d007ac54a1d60e6a">proc_save_fpstate()</a>/proc_restore_fpstate() are no-ops, so callers must not rely on x87/FPU state being saved or restored when disassembling. </dd></dl>
 
 </div>
 </div>
@@ -7909,5 +7909,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20494 --- Tue Feb 10 2026 17:50:58 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20496 --- Fri Feb 13 2026 03:52:55 &nbsp; <img border=0 src="favicon.png">
 </small></address>

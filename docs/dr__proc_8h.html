@@ -2665,7 +2665,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Restores the x87 floating point state from the buffer <code>buf</code>. On x86, the buffer must be 16-byte-aligned, and it must be 512 (<a class="el" href="dr__proc_8h.html#a59e3ffef992aef6512371c679cf5d6f0">DR_FPSTATE_BUF_SIZE</a>) bytes for processors with the FXSR feature, and 108 bytes for those without (where this routine does not support 16-bit operand sizing). On ARM/AArch64, nothing needs to be restored as the SIMD/FP registers are restored together with the general-purpose registers.</p>
 <dl class="section note"><dt>Note</dt><dd><a class="el" href="dr__proc_8h.html#aadb44c42bd9051b210f7016089c7f89c">proc_fpstate_save_size()</a> can be used to determine the particular size needed.</dd></dl>
-<p>When the FXSR feature is present, the fxsave format matches the bitwidth of the ISA mode of the current thread (see <a class="el" href="dr__ir__encode_8h.html#ae8f9b08f90490fbeae26d12a461af084">dr_get_isa_mode()</a>). </p>
+<p>When the FXSR feature is present, the fxsave format matches the bitwidth of the ISA mode of the current thread (see <a class="el" href="dr__ir__encode_8h.html#ae8f9b08f90490fbeae26d12a461af084">dr_get_isa_mode()</a>). </p><dl class="section note"><dt>Note</dt><dd>Floating-point state handling applies only to managed DynamoRIO modes. In standalone decoder mode, this routine is stubbed out and does not restore any state. </dd></dl>
 
 </div>
 </div>
@@ -2689,7 +2689,7 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd><a class="el" href="dr__proc_8h.html#aadb44c42bd9051b210f7016089c7f89c">proc_fpstate_save_size()</a> can be used to determine the particular size needed.</dd></dl>
 <p>When the FXSR feature is present, the fxsave format matches the bitwidth of the ISA mode of the current thread (see <a class="el" href="dr__ir__encode_8h.html#ae8f9b08f90490fbeae26d12a461af084">dr_get_isa_mode()</a>).</p>
 <p>The last floating-point instruction address is left in an untranslated state (i.e., it may point into the code cache).</p>
-<p>DR does NOT save the application's x87 floating-point or MMX state on context switches! Thus if a client performs any floating-point operations in its main routines called by DR and cannot prove that its compiler will not use x87 operations, the client must save and restore the x87 floating-point/MMX state. If the client needs to do so inside the code cache the client should implement that itself. Returns number of bytes written. </p>
+<p>DR does NOT save the application's x87 floating-point or MMX state on context switches! Thus if a client performs any floating-point operations in its main routines called by DR and cannot prove that its compiler will not use x87 operations, the client must save and restore the x87 floating-point/MMX state. If the client needs to do so inside the code cache the client should implement that itself. </p><dl class="section note"><dt>Note</dt><dd>Floating-point state handling applies only to managed DynamoRIO modes. In standalone decoder mode, this routine is stubbed out and does not save any state; standalone decoding does not execute application code and does not manage x87/SSE state. Returns number of bytes written. </dd></dl>
 
 </div>
 </div>
@@ -2718,5 +2718,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20494 --- Tue Feb 10 2026 17:50:58 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20496 --- Fri Feb 13 2026 03:52:55 &nbsp; <img border=0 src="favicon.png">
 </small></address>
