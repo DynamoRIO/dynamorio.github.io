@@ -24,10 +24,10 @@ permalink: /page_building.html
 <div class="title">Building from Source </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md73"></a>
+<div class="textblock"><h1><a class="anchor" id="sec_build_quick"></a>
 Quick Start</h1>
 <p>If you don't need to modify DR and just need a recent build, you can download <a class="el" href="page_weekly_builds.html">weekly package builds</a>.</p>
-<h2><a class="anchor" id="autotoc_md74"></a>
+<h2><a class="anchor" id="sec_build_quick_linux"></a>
 Linux</h2>
 <p>To build DynamoRIO on Linux, use the following commands as a guide. This builds 64-bit DynamoRIO in release mode:</p>
 <div class="fragment"><div class="line"><span class="preprocessor"># Install dependencies for Ubuntu 15+.  Adjust this command as appropriate for</span></div>
@@ -48,7 +48,8 @@ Linux</h2>
 <div class="line">$ ./bin64/drrun echo hello world</div>
 <div class="line">hello world</div>
 <div class="ttc" id="anamespacedynamorio_html"><div class="ttname"><a href="namespacedynamorio.html">dynamorio</a></div><div class="ttdef"><b>Definition:</b> drgui_main_window.h:55</div></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md75"></a>
+</div><!-- fragment --><p>To run a target application under DynamoRIO, see <a class="el" href="page_deploy.html">How to Run</a>. To run DynamoRIO's regression test suite, see <a class="el" href="page_test_suite.html">Testing</a>.</p>
+<h2><a class="anchor" id="sec_build_quick_windows"></a>
 Windows</h2>
 <p>To build DynamoRIO on Windows, first install the following software.</p>
 <ul>
@@ -73,11 +74,52 @@ Windows</h2>
 <div class="line">$ cmake --build . --config RelWithDebInfo</div>
 <div class="line"><span class="preprocessor"># Run notepad under DR to see whether it worked.</span></div>
 <div class="line"><span class="preprocessor">$ bin64\drrun.exe notepad.exe</span></div>
-</div><!-- fragment --><p>If you need a 32-bit build, choose <code>x86 Native Tools Command Prompt</code> and pass <code>-G"Visual Studio 17 2022" -A Win32</code> to cmake.</p>
+</div><!-- fragment --><p>To run a target application under DynamoRIO, see <a class="el" href="page_deploy.html">How to Run</a>. To run DynamoRIO's regression test suite, see <a class="el" href="page_test_suite.html">Testing</a>.</p>
+<p>For developers building DynamoRIO regularly or modifying the sources, using <a class="el" href="page_building.html#sec_ninja">Ninja</a> is strongly recommended for faster builds.</p>
+<p>For 32-bit builds, alternative prompts, and Ninja guidance, see <a class="el" href="page_building.html#sec_build_windows_variants">Windows Build Variants</a>.</p>
+<hr  />
+<h1><a class="anchor" id="sec_build_install"></a>
+Install and Build Outputs</h1>
+<p>This section describes where build artifacts are produced and how the layout differs between a build tree, an install tree, and a release package. It does not cover runtime execution; see <a class="el" href="page_deploy.html">How to Run</a> for deployment workflows.</p>
+<h2><a class="anchor" id="sec_build_layout"></a>
+Build and Install Layout Conventions</h2>
+<ul>
+<li><b>Build tree</b>: The output of a single build configuration in a dedicated directory (e.g., <code>build/</code>). Binaries and libraries are placed under architecture-specific subdirectories such as <code>bin32/</code> and <code>bin64/</code>.</li>
+<li><b>Install tree</b>: The output of the <code>install</code> target, rooted at <code>CMAKE_INSTALL_PREFIX</code>. It mirrors the release package layout, combining the results from multiple build directories.</li>
+<li><b>Release package</b>: A prebuilt distribution with the same directory conventions as an install tree.</li>
+</ul>
+<p>Common subdirectories across install trees and release packages include:</p>
+<ul>
+<li><code>bin32/</code> and <code>bin64/</code> for helper tools and runtime libraries</li>
+<li><code>lib32/</code> and <code>lib64/</code> for libraries</li>
+<li><code>include/</code> for headers</li>
+<li><code>cmake/</code> for CMake configuration files</li>
+<li><code>tools/</code> for tool front-end helpers and configuration files</li>
+<li><code>samples/</code> for example clients</li>
+</ul>
+<h2><a class="anchor" id="sec_build_platforms"></a>
+Platform and Architecture Support</h2>
+<p>The examples on this page cover the following platforms and architectures:</p>
+<ul>
+<li><b>x86 / x86_64 native builds</b>: The Quick Start <a class="el" href="page_building.html#sec_build_quick_linux">Linux</a> and <a class="el" href="page_building.html#sec_build_quick_windows">Windows</a> steps build 64-bit binaries on the host platform.</li>
+<li><b>Multi-architecture native builds</b>: The <a class="el" href="page_building.html#sec_build_linux_multiarch">Setup for Simultaneous 64-bit and 32-bit Building</a> and <a class="el" href="page_building.html#sec_build_linux_32on64">Building 32-bit DynamoRIO on 64-bit Linux</a> sections build both architectures on one host.</li>
+<li><b>AArch64 / ARM cross-compilation</b>: The <a class="el" href="page_building.html#sec_build_cross_aarch64">Cross-Compiling for 64-bit ARM (AArch64) on Linux</a> and <a class="el" href="page_building.html#sec_build_cross_aarch32">Cross-Compiling for 32-bit ARM (AArch32) on Linux</a> sections use toolchain files and cross compilers.</li>
+<li><b>RISCV64 cross-compilation</b>: The <a class="el" href="page_building.html#sec_build_cross_riscv64">Cross-Compiling for 64-bit RISC-V (RISCV64) on Linux</a> section is a Linux cross-compile workflow using a dedicated toolchain file.</li>
+<li><b>Android ARM cross-compilation</b>: The <a class="el" href="page_building.html#sec_build_cross_android">Cross-Compiling for ARM Android</a> section uses the NDK toolchain on a host machine to build ARM binaries.</li>
+</ul>
+<h2><a class="anchor" id="sec_build_outputs"></a>
+Build Artifacts and Expectations</h2>
+<p>After a source build, the build tree contains architecture-specific output subdirectories (for example, <code>bin32/</code> and <code>bin64/</code>). After running the <code>install</code> target, those outputs are staged under the install prefix in a layout that matches an official release package. A release package is produced by the DynamoRIO project build infrastructure and already contains the install-style directory structure, without requiring any local build steps.</p>
+<hr  />
+<h1><a class="anchor" id="sec_build_advanced"></a>
+Advanced Build Scenarios</h1>
+<h2><a class="anchor" id="sec_build_windows_variants"></a>
+Windows Build Variants</h2>
+<p>If you need a 32-bit build, choose <code>x86 Native Tools Command Prompt</code> and pass <code>-G"Visual Studio 17 2022" -A Win32</code> to cmake.</p>
 <p>An alternative to the command prompt is to execute the appropriate vcvars.bat command for your compiler in your shell of choice.</p>
 <p>For developers who plan to modify the DynamoRIO sources and build on a regular basis, we recommend using <a class="el" href="page_building.html#sec_ninja">Ninja</a>.</p>
-<h2><a class="anchor" id="autotoc_md76"></a>
-Debug Build</h2>
+<h3><a class="anchor" id="sec_cmake_debug"></a>
+Debug Build</h3>
 <p>If you plan to make changes to the source code, or for debugging problems in clients, you may wish to configure DynamoRIO in debug mode. Turn on the DEBUG flag when configuring, like this on Linux:</p>
 <div class="fragment"><div class="line">$ cmake -DDEBUG=ON ..</div>
 <div class="line">$ make -j</div>
@@ -88,43 +130,7 @@ Debug Build</h2>
 <div class="line">$ cmake --build . --config Debug</div>
 </div><!-- fragment --><p>For 32-bit build on 64-bit Linux </p><div class="fragment"><div class="line">$ CFLAGS=-m32 CXXFLAGS=-m32 cmake -DDEBUG=ON ..</div>
 <div class="line">$ make -j</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md77"></a>
-Installing from a Local Build</h2>
-<p>To mirror the layout and functionality of an official released package, build the <code>install</code> target. The <code>CMAKE_INSTALL_PREFIX</code> cmake variable controls the destination of the installation.</p>
-<p>Once you've installed locally, you can now point at the installation just like you'd point at a release package for the purposes of building separate clients.</p>
-<hr  />
-<h1><a class="anchor" id="sec_build_linux"></a>
-Details for Building on Linux</h1>
-<p>In order to build you'll need the following packages:</p>
-<ul>
-<li>gcc</li>
-<li>binutils</li>
-<li>cmake (at least version 3.14)</li>
-<li>perl</li>
-</ul>
-<p>In order to build the documentation, you will additionally need:</p>
-<ul>
-<li>doxygen</li>
-</ul>
-<p>To see which versions of these packages we have tested, look up the versions for the Github Actions runner images that execute our continuous integration tests at <a href="https://github.com/actions/runner-images">https://github.com/actions/runner-images</a>. You can find the images we are currently using in our <a href="https://github.com/DynamoRIO/dynamorio/tree/master/.github/workflows">workflow files</a>.</p>
-<p>If your machine does not have support for running 32-bit applications and its version of binutils is older than 2.18.50 then you'll need to set the <code>CMAKE_ASM_COMPILER</code> CMake cache variable to point at a GNU assembler of at least version 2.18.50.</p>
-<h2><a class="anchor" id="autotoc_md79"></a>
-Setup for Simultaneous 64-bit and 32-bit Building</h2>
-<p>In order to build both 32-bit and 64-bit on the same platform you'll need compiler support for targeting both architectures. Then install these packages:</p>
-<div class="fragment"><div class="line">sudo apt-get install cmake g++ g++-multilib doxygen zlib1g-dev libunwind-dev libunwind-dev:i386 libsnappy-dev liblz4-dev libxxhash-dev</div>
-</div><!-- fragment --><p>For older distributions, the <code>ia32-libs</code> package is needed.</p>
-<p>For 64-bit Fedora, you'll need this package to build the samples:</p>
-<div class="fragment"><div class="line">yum -y install glibc-devel.i?86</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md80"></a>
-Building 32-bit DynamoRIO on 64-bit Linux</h2>
-<p>To build a 32-bit version of DynamoRIO on a 64-bit platform, add -m32 to CFLAGS and CXXFLAGS in your environment when you first generate your Makefiles with CMake. Adding -m32 to the environment and re-running CMake in an existing build directory will not re-configure the makefiles to produce a 32-bit build, so you will need to create a separate build directory.</p>
-<div class="fragment"><div class="line">CXXFLAGS=-m32 CFLAGS=-m32 cmake ..</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md81"></a>
-Useful Configuration Options</h2>
-<p>By default we build with -Werror on Linux, so if your build fails due to compiler warnings that we have not encountered, you should enable the DISABLE_WARNINGS option to allow the build to proceed.</p>
-<p>If you wish to run the test suite, you should enable BUILD_TESTS.</p>
-<hr  />
-<h2><a class="anchor" id="autotoc_md83"></a>
+</div><!-- fragment --><h2><a class="anchor" id="sec_build_cross_aarch64"></a>
 Cross-Compiling for 64-bit ARM (AArch64) on Linux</h2>
 <p>Install the cross compiler for the <code>gnu</code> target:</p>
 <div class="fragment"><div class="line">$ sudo apt-get install g++-aarch64-linux-gnu</div>
@@ -135,8 +141,7 @@ Cross-Compiling for 64-bit ARM (AArch64) on Linux</h2>
 <div class="line">$ cmake -DCMAKE_TOOLCHAIN_FILE=../<a class="code" href="namespacedynamorio.html">dynamorio</a>/make/toolchain-aarch64.cmake ../<a class="code" href="namespacedynamorio.html">dynamorio</a></div>
 <div class="line">$ make -j</div>
 </div><!-- fragment --><p>To build a client, again use the toolchain file, as well as pointing at a DynamoRIO installation using <code>-DDynamoRIO_DIR=&lt;path&gt;</code> as described in the package documentation.</p>
-<hr  />
-<h2><a class="anchor" id="autotoc_md85"></a>
+<h2><a class="anchor" id="sec_build_cross_aarch32"></a>
 Cross-Compiling for 32-bit ARM (AArch32) on Linux</h2>
 <p>Install the cross compiler for the <code>gnueabihf</code> target:</p>
 <div class="fragment"><div class="line">$ sudo apt-get install gcc-arm-linux-gnueabihf binutils-arm-linux-gnueabihf g++-arm-linux-gnueabihf</div>
@@ -147,8 +152,7 @@ Cross-Compiling for 32-bit ARM (AArch32) on Linux</h2>
 <div class="line">$ cmake -DCMAKE_TOOLCHAIN_FILE=../<a class="code" href="namespacedynamorio.html">dynamorio</a>/make/toolchain-arm32.cmake ../<a class="code" href="namespacedynamorio.html">dynamorio</a></div>
 <div class="line">$ make -j</div>
 </div><!-- fragment --><p>To build a client, again use the toolchain file, as well as pointing at a DynamoRIO installation using <code>-DDynamoRIO_DIR=&lt;path&gt;</code> as described in the package documentation.</p>
-<hr  />
-<h2><a class="anchor" id="autotoc_md87"></a>
+<h2><a class="anchor" id="sec_build_cross_riscv64"></a>
 Cross-Compiling for 64-bit RISC-V (RISCV64) on Linux</h2>
 <p>Prepare cross-compiling environment for RISCV64:</p>
 <div class="fragment"><div class="line">$ sudo apt-get -y install doxygen vera++ cmake crossbuild-essential-riscv64 git</div>
@@ -170,8 +174,7 @@ Cross-Compiling for 64-bit RISC-V (RISCV64) on Linux</h2>
 <div class="line">$ cmake -DCMAKE_TOOLCHAIN_FILE=../<a class="code" href="namespacedynamorio.html">dynamorio</a>/make/toolchain-riscv64.cmake ../<a class="code" href="namespacedynamorio.html">dynamorio</a></div>
 <div class="line">$ make -j</div>
 </div><!-- fragment --><p>To build a client, again use the toolchain file, as well as pointing at a DynamoRIO installation using <code>-DDynamoRIO_DIR=&lt;path&gt;</code> as described in the package documentation.</p>
-<hr  />
-<h2><a class="anchor" id="autotoc_md89"></a>
+<h2><a class="anchor" id="sec_build_cross_android"></a>
 Cross-Compiling for ARM Android</h2>
 <p>Install the Android NDK (Note: currently only version r10e can be used to build DynamoRIO, later versions do not work, see #1927, #2556) and configure it for the androideabi standalone toolchain. Something like this:</p>
 <div class="fragment"><div class="line">wget https:<span class="comment">//dl.google.com/android/repository/android-ndk-r10e-linux-x86_64.zip</span></div>
@@ -191,8 +194,7 @@ Cross-Compiling for ARM Android</h2>
 <div class="fragment"><div class="line">readelf -l lib32/debug/libdynamorio.so | grep INTERP</div>
 </div><!-- fragment --><p>If it does, then you have probably used the gold linker instead of the bfd linker; see above.</p>
 <p>If you have an Android device set up for access through the <code>adb shell</code> utility, the Android build is capable of automatically copying binaries to the device and running tests. First, ensure that <code>adb</code> is on your PATH, and that <code>adb status</code> indicates an attached device. Next, set the cmake variable <code>DR_COPY_TO_DEVICE</code>. This sets up post-build steps for each target needed by the tests to copy binaries over to the device. Now <code>ctest</code> should work when run from the host machine.</p>
-<hr  />
-<h2><a class="anchor" id="sec_aarch_on_x86"></a>
+<h2><a class="anchor" id="sec_build_aarch_on_x86"></a>
 Building AArchXX Tooling to Execute on x86</h2>
 <p>DR has support for executing on x86/amd64 while decoding and encoding for AArch64 or ARM. This is mostly used for standalone decoding and for analyzing on an x86 machine drcachesim memory address traces gathered on an AArch64 machine.</p>
 <p>To build, set the <code>TARGET_ARCH</code> CMake variable:</p>
@@ -204,19 +206,50 @@ Building AArchXX Tooling to Execute on x86</h2>
 <div class="line"> 12345678   and    %w19 $0xfffff003 $0x0d15 -&gt; %w24</div>
 </div><!-- fragment --><p>Support for aarch64-on-x86 on Windows is not yet finished; nor is support for other target-host combinations.</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md92"></a>
+<h1><a class="anchor" id="sec_build_linux"></a>
+Details for Building on Linux</h1>
+<p>In order to build you'll need the following packages:</p>
+<ul>
+<li>gcc</li>
+<li>binutils</li>
+<li>cmake (at least version 3.14)</li>
+<li>perl</li>
+</ul>
+<p>In order to build the documentation, you will additionally need:</p>
+<ul>
+<li>doxygen</li>
+</ul>
+<p>To see which versions of these packages we have tested, look up the versions for the Github Actions runner images that execute our continuous integration tests at <a href="https://github.com/actions/runner-images">https://github.com/actions/runner-images</a>. You can find the images we are currently using in our <a href="https://github.com/DynamoRIO/dynamorio/tree/master/.github/workflows">workflow files</a>.</p>
+<p>If your machine does not have support for running 32-bit applications and its version of binutils is older than 2.18.50 then you'll need to set the <code>CMAKE_ASM_COMPILER</code> CMake cache variable to point at a GNU assembler of at least version 2.18.50.</p>
+<h2><a class="anchor" id="sec_build_linux_multiarch"></a>
+Setup for Simultaneous 64-bit and 32-bit Building</h2>
+<p>In order to build both 32-bit and 64-bit on the same platform you'll need compiler support for targeting both architectures. Then install these packages:</p>
+<div class="fragment"><div class="line">sudo apt-get install cmake g++ g++-multilib doxygen zlib1g-dev libunwind-dev libunwind-dev:i386 libsnappy-dev liblz4-dev libxxhash-dev</div>
+</div><!-- fragment --><p>For older distributions, the <code>ia32-libs</code> package is needed.</p>
+<p>For 64-bit Fedora, you'll need this package to build the samples:</p>
+<div class="fragment"><div class="line">yum -y install glibc-devel.i?86</div>
+</div><!-- fragment --><h2><a class="anchor" id="sec_build_linux_32on64"></a>
+Building 32-bit DynamoRIO on 64-bit Linux</h2>
+<p>To build a 32-bit version of DynamoRIO on a 64-bit platform, add -m32 to CFLAGS and CXXFLAGS in your environment when you first generate your Makefiles with CMake. Adding -m32 to the environment and re-running CMake in an existing build directory will not re-configure the makefiles to produce a 32-bit build, so you will need to create a separate build directory.</p>
+<div class="fragment"><div class="line">CXXFLAGS=-m32 CFLAGS=-m32 cmake ..</div>
+</div><!-- fragment --><h2><a class="anchor" id="sec_build_linux_config"></a>
+Useful Configuration Options</h2>
+<p>By default we build with -Werror on Linux, so if your build fails due to compiler warnings that we have not encountered, you should enable the DISABLE_WARNINGS option to allow the build to proceed.</p>
+<p>If you wish to run the test suite, you should enable BUILD_TESTS.</p>
+<hr  />
+<h1><a class="anchor" id="sec_build_windows"></a>
 Details for Building on Windows</h1>
-<h2><a class="anchor" id="autotoc_md93"></a>
+<h2><a class="anchor" id="sec_build_windows_compiler"></a>
 Compiler</h2>
 <p>First, you need the compiler, linker, and associated tools. Install Visual Studio 2022 which is the version used by our automated tests.</p>
 <p>You need to use a shell with command line support for using your compiler. For example, this could be the <code>cmd</code> shell or a Cygwin shell. You need to set the environment variables <code>INCLUDE</code>, <code>LIB</code>, <code>LIBPATH</code>, and <code>PATH</code> to point at the proper directories for your compiler. You can use the <code>vcvarsall.bat</code> script that comes with the compiler (in the <code>VC</code> directory) to set these variables for the <code>cmd</code> shell. For 64-bit, be sure to use <code>vcvarsall.bat amd64</code>, or directly run <code>vcvarsamd64.bat</code>. Do NOT use <code>vcvarsall.bat x86_amd64</code> or <code>vcvarsx86_amd64.bat</code>.</p>
 <p>To build a 32-bit version of DynamoRIO on a 64-bit platform, set up your environment to use the x64 tools. As mentioned above, you can launch the command prompt from the Visual Studio Start menu folder, or run the "vcvarsall.bat amd64" script.</p>
-<h2><a class="anchor" id="autotoc_md94"></a>
+<h2><a class="anchor" id="sec_build_windows_cmake"></a>
 CMake</h2>
 <p>You need CMake (version 3.14+) for Windows (<em>not</em> for Cygwin, as we need to pass paths with drive letters to our compiler). You can download a binary installation here:</p>
 <p><a href="http://www.cmake.org/cmake/resources/software.html">http://www.cmake.org/cmake/resources/software.html</a></p>
 <p>Install CMake and put its bin directory on the path for your shell.</p>
-<h2><a class="anchor" id="autotoc_md95"></a>
+<h2><a class="anchor" id="sec_build_windows_other_tools"></a>
 Other Tools</h2>
 <p>In order to build you must have a version of perl. It can be either a Cygwin perl or a native Windows perl.</p>
 <p>In order to build the documentation, you will additionally need:</p>
@@ -224,7 +257,7 @@ Other Tools</h2>
 <li>doxygen</li>
 </ul>
 <p>These can be either Cygwin packages or native Windows. TH`.</p>
-<h2><a class="anchor" id="autotoc_md96"></a>
+<h2><a class="anchor" id="sec_build_windows_cygwin"></a>
 Using Cygwin</h2>
 <p>If you wish to run your build commands in a Cygwin bash shell, you will need to set up your environment the way that Visual Studio sets up the environment. Below is an example that supports multiple versions of Visual Studio installed simultaneously; however, it has not been updated for Visual Studio 2022. It assumes that <code>/cygdrive/c</code> has been mounted as <code>/c</code>. Note the use of <em>mixed paths</em> (i.e., using a drive letter but forward slashes) for all variables except for <code>PATH</code>:</p>
 <pre class="fragment">  # save PATH so we can swap between VS versions below
@@ -328,9 +361,9 @@ Using Cygwin</h2>
   fi</pre><p>However, if you get errors about mspdb80.dll or windows.h, this probably means that the environment isn't set up correctly. Open a cmd prompt with the correct Visual C++ environment variables and compare the INCLUDE, LIB, LIBPATH, and PATH environment variables in the two shells.</p>
 <p>Note that you need Visual Studio's bin directories on your <code>PATH</code> <em>before</em> Cygwin's as there are conflicts: both have <code>mc.exe</code> and <code>link.exe</code>.</p>
 <hr  />
-<h1><a class="anchor" id="sec_cmake"></a>
-Details of Building with CMake</h1>
-<h2><a class="anchor" id="autotoc_md98"></a>
+<h2><a class="anchor" id="sec_cmake"></a>
+Details of Building with CMake</h2>
+<h2><a class="anchor" id="autotoc_md78"></a>
 Components</h2>
 <p>DynamoRIO contains several distinct components:</p>
 <ul>
@@ -341,7 +374,7 @@ Components</h2>
 <li>suite/ = tests</li>
 </ul>
 <p>All components are combined into a single CMake project.</p>
-<h2><a class="anchor" id="autotoc_md99"></a>
+<h2><a class="anchor" id="autotoc_md79"></a>
 Configuring Your Build</h2>
 <p>First, configure your compiler. On Windows this means setting up the environment variables (including <code>PATH</code>). On Linux, if your compiler supports both 64-bit and 32-bit targets, you can select the non-default type by setting the <code>CFLAGS</code> and <code>CXXFLAGS</code> environment variables to the flags used to change your compiler's target. For example, for gcc:</p>
 <div class="fragment"><div class="line">export CXXFLAGS=-m32</div>
@@ -376,13 +409,13 @@ Configuring Your Build</h2>
 </div><!-- fragment --><p>To improve compilation speed on Windows, if you are using a makefile-based generator (i.e., not Visual Studio), you can turn off the progress and status messages with this CMake define:</p>
 <div class="fragment"><div class="line">-DCMAKE_RULE_MESSAGES:BOOL=OFF</div>
 </div><!-- fragment --><p>On Windows, if you use Cygwin and hit <a href="http://www.cmake.org/Bug/print_bug_page.php?bug_id=13131">CMake bug#13131</a>, you may need to kill all running MSBuild instances and unset the <code>TMP</code> and <code>TEMP</code> environment variables.</p>
-<h2><a class="anchor" id="autotoc_md100"></a>
+<h2><a class="anchor" id="autotoc_md80"></a>
 Building</h2>
 <p>After the configuration step is complete, for release build, type </p><div class="fragment"><div class="line">cmake --build . --config RelWithDebInfo</div>
 </div><!-- fragment --><p> or if you turned on DEBUG, type </p><div class="fragment"><div class="line">cmake --build .</div>
 </div><!-- fragment --><p> or if you are using <b>NMake Makefiles</b>, type </p><div class="fragment"><div class="line">nmake</div>
 </div><!-- fragment --><p> or on Linux, type </p><div class="fragment"><div class="line">make</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md101"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md81"></a>
 An Example of Building DynamoRIO in Windows-XP 64bit in cmd</h2>
 <ul>
 <li>step 1: set INCLUDE, LIB, LIBPATH, and PATH by running the Visual Studio Command Prompt, under the Visual Studio Tools in the Visual Studio start menu entry. Alternatively, from a plain cmd window: <div class="fragment"><div class="line">E:\&gt;<span class="stringliteral">&quot;c:\Program Files (x86)\Microsoft Visual Studio 8\VC\vcvarsall.bat&quot;</span></div>
@@ -402,7 +435,7 @@ An Example of Building DynamoRIO in Windows-XP 64bit in cmd</h2>
 <li>step 5: build and install <pre class="fragment">E:\dynamorio\build\&gt;cmake --build . --config Release
 </pre></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md102"></a>
+<h2><a class="anchor" id="autotoc_md82"></a>
 Configuring in Batch Mode</h2>
 <p>Instead of interactive configuration you can pass all your parameter changes to CMake on the command line. For example:</p>
 <p>On Windows: </p><div class="fragment"><div class="line">mkdir build</div>
@@ -414,7 +447,7 @@ Configuring in Batch Mode</h2>
 <div class="line">cmake -DBUILD_DOCS:BOOL=OFF ..</div>
 <div class="line">make</div>
 </div><!-- fragment --><p>Developers may wish to pass <code>-DCMAKE_VERBOSE_MAKEFILE=1</code> to CMake in order to see the compilation command lines. They can alternatively be seen for any individual build with <code>make VERBOSE=1</code>.</p>
-<h2><a class="anchor" id="autotoc_md103"></a>
+<h2><a class="anchor" id="autotoc_md83"></a>
 Re-Configuring</h2>
 <p>You can re-run the configure step, using the same parameters that you originally used, in two ways:</p>
 <div class="fragment"><div class="line">make rebuild_cache</div>
@@ -423,14 +456,14 @@ Re-Configuring</h2>
 </div><!-- fragment --><p>With the latter command you can also change the configuration, but be sure to do a <code>make clean</code> prior to building as CMake does not perform dependence checking on this type of modification. As an example:</p>
 <div class="fragment"><div class="line">cmake -DDEBUG=ON -DINTERNAL=ON .</div>
 <div class="line">make clean</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md104"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md84"></a>
 Building a Distributable Package</h2>
 <p>If you've been working with DynamoRIO's packaged binaries, you may find it easiest to install all of the dependencies listed above for your platform and then run the packaging script:</p>
 <div class="fragment"><div class="line">cd <a class="code" href="namespacedynamorio.html">dynamorio</a></div>
 <div class="line">mkdir <span class="keyword">package</span></div>
 <div class="line"><span class="keyword"></span>cd package</div>
 <div class="line">ctest -V -S ../make/package.cmake,build=1</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md105"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md85"></a>
 Details of CMake Visual Studio Generators</h2>
 <p>As of version 577, DynamoRIO supports building from Visual Studio. The /MP flag is set by default for not only parallel project builds but parallel file builds. The fastest DynamoRIO build is a Visual Studio build from the command line.</p>
 <p>First, DynamoRIO requires CMake version 3.14 or higher.</p>
@@ -473,7 +506,7 @@ Using Ninja For Better Error Messages, Faster Builds, and Proper Incremental Bui
 </div><!-- fragment --><p>One downside of the current CMake Ninja generator is that one must change the environment in order to switch to a 64-bit build directory (both the Visual Studio toolchain environment and the ASM environment variable mentioned above), whereas with the Visual Studio generator one can switch build directories without any environment changes (once the build directories are configured using the right environment).</p>
 <p>The test suite supports using Ninja by passing the use_ninja parameter:</p>
 <div class="fragment"><div class="line">ctest -V -S c:/mycheckout/suite/runsuite.cmake,use_ninja</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md106"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md86"></a>
 Using Ninja With Pre-7.0 SDK</h3>
 <p>If you end up using the (no longer officially supported) Visual Studio 2008, it's best to pair it with a pre-7.0 SDK, but Ninja runs into a problem there running <code>rc.exe</code>:</p>
 <div class="fragment"><div class="line">fatal error RC1106: invalid option: -ologo</div>
@@ -482,7 +515,7 @@ Using Ninja With Pre-7.0 SDK</h3>
 <div class="line">mv /c/Program\ Files/Microsoft\ SDKs/Windows/v6.0A/Bin/RcDll.Dll /c/Program\ Files/Microsoft\ SDKs/Windows/v6.0A/Bin/RcDll-ORIG.Dll</div>
 <div class="line">cp /c/Program\ Files/Microsoft\ SDKs/Windows/v7.1/Bin/RC.Exe /c/Program\ Files/Microsoft\ SDKs/Windows/v6.0A/Bin/</div>
 <div class="line">cp /c/Program\ Files/Microsoft\ SDKs/Windows/v7.1/Bin/RcDll.Dll /c/Program\ Files/Microsoft\ SDKs/Windows/v6.0A/Bin/</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md107"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md87"></a>
 Using MSBuild For Slightly Better Error Messages And Faster Builds</h2>
 <p>We recommend Ninja (see above) over MSBuild, but we're leaving the information on MSBuild here as it is recommended over devenv.</p>
 <p>By default, CMake will use devenv when building for Visual Studio generators.</p>
@@ -498,7 +531,7 @@ Using MSBuild For Slightly Better Error Messages And Faster Builds</h2>
 <div class="line">    config=$(grep ^CMAKE_CONFIGURATION_TYPES:S CMakeCache.txt | sed <span class="stringliteral">&#39;s/^.*=//&#39;</span>)</div>
 <div class="line">    /usr/bin/time cmake --build . --config $config -- /m</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md108"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md88"></a>
 Using Unix Makefiles On Windows For Parallel Builds</h2>
 <p>On Windows you can target <b>Unix Makefiles</b> in order to use GNU make and build in parallel (NMake does not support parallel builds; see also issue 71). However, note that Visual Studio generators support parallel builds and are faster than using Cygwin make. The instructions here are relatively old and are kept just for completeness.</p>
 <p>If you have gcc installed you will have to explicitly tell the CMake generator to prefer cl:</p>
@@ -514,8 +547,8 @@ Using Unix Makefiles On Windows For Parallel Builds</h2>
 </div><!-- fragment --><p>Build time on Windows can be further improved by disabling progress and status messages (see <a href="https://github.com/DynamoRIO/dynamorio/issues#issue/71">issue 71</a>). To do so, use <code>-DCMAKE_RULE_MESSAGES=OFF</code>.</p>
 <p>See <a href="https://github.com/DynamoRIO/dynamorio/issues#issue/71">issue 71</a> for some representative performance numbers, and for instructions on building with Mingw and the MSYS shell, which is a little faster than building under Cygwin.</p>
 <p>Note that with more recent Visual Studio versions and machines with more than two cores we have seen some strange build errors that may be pdb creation races. We recommend using the Visual Studio generator instead if you are hitting these problems.</p>
-<h1><a class="anchor" id="sec_drgui"></a>
-Building the Qt DrGUI extension</h1>
+<h2><a class="anchor" id="sec_drgui"></a>
+Building the Qt DrGUI extension</h2>
 <p>Simply install Qt 5.x and ensure that the architecture and compiler match what you will be using to build DynamoRIO. E.g., on Fedora: </p><div class="fragment"><div class="line">yum -y install qt5-qtbase.i686 qt5-qtbase-devel.i686</div>
 </div><!-- fragment --><p>On Ubuntu, Qt 5 may not be in the standard repositories. You can install the 64-bit version with: </p><div class="fragment"><div class="line">apt-add-repository ppa:ubuntu-sdk-team/ppa</div>
 <div class="line">apt-get install -y qtbase5-dev qtbase5-dbg</div>
@@ -527,5 +560,5 @@ Building the Qt DrGUI extension</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20496 --- Fri Feb 13 2026 03:52:56 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20499 --- Sun Feb 15 2026 04:13:08 &nbsp; <img border=0 src="favicon.png">
 </small></address>

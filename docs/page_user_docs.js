@@ -50,13 +50,16 @@
     ] ],
     [ "How to Build a Tool", "page_build_client.html", null ],
     [ "How to Run", "page_deploy.html", [
-      [ "Windows Deployment", "page_deploy.html#win_deploy", null ],
-      [ "Linux Deployment", "page_deploy.html#lin_deploy", null ],
-      [ "Android Deployment", "page_deploy.html#android_deploy", null ],
-      [ "Running Under QEMU", "page_deploy.html#qemu_deploy", null ],
-      [ "Passing Options to Clients", "page_deploy.html#client_ops", null ],
-      [ "Multiple Clients", "page_deploy.html#multi_client", null ],
-      [ "End-User Tools", "page_deploy.html#tool_frontend", null ],
+      [ "Choosing a Launch Method", "page_deploy.html#sec_deploy_launch_models", null ],
+      [ "Windows Deployment", "page_deploy.html#sec_win_deploy", null ],
+      [ "Linux Deployment", "page_deploy.html#sec_lin_deploy", null ],
+      [ "Advanced / Platform-Specific Deployment", "page_deploy.html#sec_deploy_advanced", [
+        [ "Android Deployment", "page_deploy.html#sec_android_deploy", null ],
+        [ "Running Under QEMU", "page_deploy.html#sec_qemu_deploy", null ]
+      ] ],
+      [ "Passing Options to Clients", "page_deploy.html#sec_client_ops", null ],
+      [ "Multiple Clients", "page_deploy.html#sec_multi_client", null ],
+      [ "End-User Tools", "page_deploy.html#sec_tool_frontend", null ],
       [ "Running a Subset of an Application", "page_deploy.html#sec_startstop", null ],
       [ "Statically Linking DynamoRIO", "page_deploy.html#sec_static_DR", null ],
       [ "DynamoRIO Runtime Options", "page_deploy.html#sec_options", null ]
@@ -127,7 +130,7 @@
       [ "DynamoRIO Shared Library Issues", "page_standalone.html#sec_standalone_shared", null ]
     ] ],
     [ "DynamoRIO System Overview", "overview.html", {% include_relative overview.js %} ],
-    [ "Release Notes for Version 11.91.20496", "release_notes.html", [
+    [ "Release Notes for Version 11.91.20499", "release_notes.html", [
       [ "Distribution Contents", "release_notes.html#sec_package", null ],
       [ "Changes Since Prior Releases", "release_notes.html#sec_changes", null ],
       [ "Limitations", "release_notes.html#sec_limits", [
