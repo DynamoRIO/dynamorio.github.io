@@ -3561,7 +3561,7 @@ When printing floating-point values, the caller's code should use <a class="el" 
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Utility function that aids in tokenizing a string, such as a client options string from <a class="el" href="dr__tools_8h.html#a5d530e46aa828faede9bbf4bf15e868a">dr_get_options()</a>. The function scans <code>str</code> until a non-whitespace character is found. It then starts copying into <code>buf</code> until a whitespace character is found denoting the end of the token. If the token begins with a quote, the token continues (including across whitespace) until the matching end quote is found. Characters considered whitespace are ' ', '\t', '\r', and '\n'; characters considered quotes are '\'', '\"', and '&lsquo;&rsquo;.</p>
+<p>Utility function that aids in tokenizing a string, such as a client options string from <a class="el" href="dr__tools_8h.html#a5d530e46aa828faede9bbf4bf15e868a">dr_get_options()</a>. The function scans <code>str</code> until a non-whitespace character is found. It then starts copying into <code>buf</code> until a whitespace character is found denoting the end of the token. If the token begins with a quote, the token continues (including across whitespace) until the matching end quote is found. Characters considered whitespace are ' ', '\t', '\r', and '\n'; characters considered quotes are '\'', '\"', and '`'.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>The start of the string containing the next token. </td></tr>
@@ -6713,5 +6713,5 @@ This routine is only available with either the -thread_private or -enable_full_a
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20508 --- Fri Feb 27 2026 03:49:50 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20517 --- Fri Mar 6 2026 03:48:58 &nbsp; <img border=0 src="favicon.png">
 </small></address>
