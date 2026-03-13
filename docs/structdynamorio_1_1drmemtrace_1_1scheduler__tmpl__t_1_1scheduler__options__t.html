@@ -109,6 +109,8 @@ Data Fields</h2></td></tr>
 <tr class="separator:a0a08d4779407ad848c57c49e12f668d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb03123ae868a8da8a499d664336b321"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; ReaderType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#afb03123ae868a8da8a499d664336b321">kernel_syscall_reader_end</a></td></tr>
 <tr class="separator:afb03123ae868a8da8a499d664336b321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bbaaa1baf9f7cd1b3521d2dea54d50d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a5bbaaa1baf9f7cd1b3521d2dea54d50d">random_initial_layout</a> = -1</td></tr>
+<tr class="separator:a5bbaaa1baf9f7cd1b3521d2dea54d50d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename RecordType, typename ReaderType&gt;<br />
@@ -572,6 +574,23 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 
 </div>
 </div>
+<a id="a5bbaaa1baf9f7cd1b3521d2dea54d50d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bbaaa1baf9f7cd1b3521d2dea54d50d">&#9670;&nbsp;</a></span>random_initial_layout</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::scheduler_options_t::random_initial_layout = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>If &lt;0, the initial assignment of inputs to outputs is done in a round-robin fashion. If &gt;=0, each input is assigned to a random output, using a seed equal to this field's value (unless it is 0 in which case the current time is used). A rebalance is always run after the initial layout. </p>
+
+</div>
+</div>
 <a id="a9b9eb1d470d20cf68c3fa76250b074fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9b9eb1d470d20cf68c3fa76250b074fe">&#9670;&nbsp;</a></span>randomize_next_input</h2>
 
@@ -768,5 +787,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20517 --- Fri Mar 6 2026 03:48:59 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20524 --- Fri Mar 13 2026 03:50:19 &nbsp; <img border=0 src="favicon.png">
 </small></address>

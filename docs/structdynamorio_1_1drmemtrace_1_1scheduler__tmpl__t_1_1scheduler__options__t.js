@@ -23,6 +23,7 @@
     [ "quantum_duration_instrs", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a893632f58364745f024b00365beef461", null ],
     [ "quantum_duration_us", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a287db4eea35cf618e9dcd2d44b1e7e15", null ],
     [ "quantum_unit", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a9c57c376cbbfab5749e673c2b54ff1fb", null ],
+    [ "random_initial_layout", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a5bbaaa1baf9f7cd1b3521d2dea54d50d", null ],
     [ "randomize_next_input", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a9b9eb1d470d20cf68c3fa76250b074fe", null ],
     [ "read_inputs_in_init", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a34eaff9f2887f3469d737f73ad093343", null ],
     [ "rebalance_period_us", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#ab94dd7429c3b333b663526268441d7a3", null ],
