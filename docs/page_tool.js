@@ -10,6 +10,12 @@
       [ "Simulator Parameters", "page_drcpusim.html#sec_drcpusim_ops", null ]
     ] ],
     [ "Disassembly Tool", "page_drdisas.html", null ],
+    [ "DrPoints", "page_drpoints.html", [
+      [ "Usage", "page_drpoints.html#sec_drpoints_usage", null ],
+      [ "BBV Output Format", "page_drpoints.html#sec_drpoints_bbv_format", null ],
+      [ "Basic Block Definition", "page_drpoints.html#sec_drpoints_bb_definition", null ],
+      [ "Limitations", "page_drpoints.html#sec_drpoints_limitations", null ]
+    ] ],
     [ "Dr. Memory Memory Debugging Tool", "page_drmemory.html", null ],
     [ "System Call Tracer for Windows", "page_drstrace.html", null ],
     [ "Library Call Tracer", "page_drltrace.html", null ],

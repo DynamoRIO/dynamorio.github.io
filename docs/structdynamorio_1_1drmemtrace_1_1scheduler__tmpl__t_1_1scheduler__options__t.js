@@ -11,6 +11,7 @@
     [ "flags", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a0aaac9f5b93b10fa4c72b620312f1bcd", null ],
     [ "honor_direct_switches", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a02c2216050c0dd876a43990c44919ba9", null ],
     [ "honor_infinite_timeouts", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#ace64ac5c9ce99ff13be8a80d287d9f46", null ],
+    [ "ignore_low_latency_unsched", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a8f5e07edc417838b94c87747f0487cb6", null ],
     [ "kernel_switch_reader", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a9e02a6e38c2872b6b0c0dc287772544c", null ],
     [ "kernel_switch_reader_end", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#ae6b1d12f5c6c169d92d12c045fe653a1", null ],
     [ "kernel_switch_trace_path", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a5665d877a7b54ed406752c2bf26cebea", null ],

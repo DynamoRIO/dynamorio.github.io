@@ -111,6 +111,8 @@ Data Fields</h2></td></tr>
 <tr class="separator:afb03123ae868a8da8a499d664336b321"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bbaaa1baf9f7cd1b3521d2dea54d50d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a5bbaaa1baf9f7cd1b3521d2dea54d50d">random_initial_layout</a> = -1</td></tr>
 <tr class="separator:a5bbaaa1baf9f7cd1b3521d2dea54d50d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f5e07edc417838b94c87747f0487cb6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a8f5e07edc417838b94c87747f0487cb6">ignore_low_latency_unsched</a> = false</td></tr>
+<tr class="separator:a8f5e07edc417838b94c87747f0487cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename RecordType, typename ReaderType&gt;<br />
@@ -366,6 +368,23 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Determines whether an unscheduled-indefinitely input really is unscheduled for an infinite time, or instead is treated as blocked for the maxiumim time (<a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#ad3bf45c6ae11854a847a1c5ff27c03a0">block_time_max_us</a>) scaled by <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a76efe32409f8e56731cf218c67cb28ef">block_time_multiplier</a>. </p>
+
+</div>
+</div>
+<a id="a8f5e07edc417838b94c87747f0487cb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f5e07edc417838b94c87747f0487cb6">&#9670;&nbsp;</a></span>ignore_low_latency_unsched</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::scheduler_options_t::ignore_low_latency_unsched = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>If <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a02c2216050c0dd876a43990c44919ba9">honor_direct_switches</a> is true, unschedule requests coming from <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca6033baf3bb4bf61879c01e91e246b115">TRACE_MARKER_TYPE_SYSCALL_UNSCHEDULE</a> markers ignore syscall latency and always block and switch. If this <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a8f5e07edc417838b94c87747f0487cb6">ignore_low_latency_unsched</a> option is true, unschedule requests only block and switch if their latency is above the <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a0ea4a3f44bad298c9dffcc555f5d4241">blocking_switch_threshold</a>, just like other maybe-blocking syscalls. This can help deflate these requests if tracing overhead has inflated their frequency. </p>
 
 </div>
 </div>
@@ -787,5 +806,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20524 --- Fri Mar 13 2026 03:50:19 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20531 --- Fri Mar 20 2026 03:49:51 &nbsp; <img border=0 src="favicon.png">
 </small></address>
