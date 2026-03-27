@@ -7,6 +7,7 @@
     [ "block_time_scale", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a6c8933439fdf03dd72c3b849e1c4052c", null ],
     [ "blocking_switch_threshold", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a0ea4a3f44bad298c9dffcc555f5d4241", null ],
     [ "deps", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a70309788c8288f6981dffb5bb9513920", null ],
+    [ "direct_switch_fallbacks", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a0e53fa17265fe4dd9bf40312d16e1199", null ],
     [ "exit_if_fraction_inputs_left", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#ac627a524c333875673d4a1302e9ee2f3", null ],
     [ "flags", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a0aaac9f5b93b10fa4c72b620312f1bcd", null ],
     [ "honor_direct_switches", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a02c2216050c0dd876a43990c44919ba9", null ],
