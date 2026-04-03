@@ -65,7 +65,7 @@ Data Fields</h2></td></tr>
 <tr class="separator:a5367da0081dd5caed8d3d0c02fb9b6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ea3487c8bbdb7ae52212b245c866608"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a6ea3487c8bbdb7ae52212b245c866608">syscall_switch_threshold</a> = 30000000</td></tr>
 <tr class="separator:a6ea3487c8bbdb7ae52212b245c866608"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ea4a3f44bad298c9dffcc555f5d4241"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a0ea4a3f44bad298c9dffcc555f5d4241">blocking_switch_threshold</a> = 500</td></tr>
+<tr class="memitem:a0ea4a3f44bad298c9dffcc555f5d4241"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a0ea4a3f44bad298c9dffcc555f5d4241">blocking_switch_threshold</a> = 600</td></tr>
 <tr class="separator:a0ea4a3f44bad298c9dffcc555f5d4241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c8933439fdf03dd72c3b849e1c4052c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a6c8933439fdf03dd72c3b849e1c4052c">block_time_scale</a> = 0.</td></tr>
 <tr class="separator:a6c8933439fdf03dd72c3b849e1c4052c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,7 +109,7 @@ Data Fields</h2></td></tr>
 <tr class="separator:a0a08d4779407ad848c57c49e12f668d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb03123ae868a8da8a499d664336b321"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; ReaderType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#afb03123ae868a8da8a499d664336b321">kernel_syscall_reader_end</a></td></tr>
 <tr class="separator:afb03123ae868a8da8a499d664336b321"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bbaaa1baf9f7cd1b3521d2dea54d50d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a5bbaaa1baf9f7cd1b3521d2dea54d50d">random_initial_layout</a> = -1</td></tr>
+<tr class="memitem:a5bbaaa1baf9f7cd1b3521d2dea54d50d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a5bbaaa1baf9f7cd1b3521d2dea54d50d">random_initial_layout</a> = 1</td></tr>
 <tr class="separator:a5bbaaa1baf9f7cd1b3521d2dea54d50d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f5e07edc417838b94c87747f0487cb6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a8f5e07edc417838b94c87747f0487cb6">ignore_low_latency_unsched</a> = false</td></tr>
 <tr class="separator:a8f5e07edc417838b94c87747f0487cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -280,7 +280,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 template&lt;typename RecordType , typename ReaderType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">uint64_t <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::scheduler_options_t::blocking_switch_threshold = 500</td>
+          <td class="memname">uint64_t <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::scheduler_options_t::blocking_switch_threshold = 600</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -621,7 +621,7 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 template&lt;typename RecordType , typename ReaderType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::scheduler_options_t::random_initial_layout = -1</td>
+          <td class="memname">int <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::scheduler_options_t::random_initial_layout = 1</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -825,5 +825,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20536 --- Fri Mar 27 2026 03:59:55 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20545 --- Fri Apr 3 2026 03:58:40 &nbsp; <img border=0 src="favicon.png">
 </small></address>
