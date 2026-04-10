@@ -354,7 +354,7 @@ By default, the sharding mode is determined by the preferred shard type of theto
 <em>default value: false</em> <br  />
 In this mode, scheduling is performed just like for -core_sharded. However, the resulting schedule is acted upon by a single analysis threadwhich walks the N cores in lockstep in round robin fashion. How the scheduling is performed is controlled by a set of options with the prefix "sched_" along with -cores. If only core-sharded-preferring tools are enabled (e.g., cache_simulator, TLB_simulator, schedule_stats) and not all of them support parallel operation, -core_serial is automatically turned on for offline analysis.</li>
 <li><b>-sched_quantum</b> <br  />
-<em>default value: 10000000</em> <br  />
+<em>default value: 20000000</em> <br  />
 Applies to -core_sharded and -core_serial. Scheduling quantum in instructions, unless -sched_time is set in which case this value is the quantum in simulated microseconds (equal to wall-clock microseconds multiplied by -sched_time_per_us).</li>
 <li><b>-sched_time</b> <br  />
 <em>default value: false</em> <br  />
@@ -478,5 +478,5 @@ If &gt;1, time arguments to certain system calls (currently Linux-only sleeps) a
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20545 --- Fri Apr 3 2026 03:58:40 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20552 --- Fri Apr 10 2026 04:04:13 &nbsp; <img border=0 src="favicon.png">
 </small></address>
