@@ -38,6 +38,7 @@
       [ "OFFLINE_FILE_TYPE_KERNEL_SYSCALL_INSTR_ONLY", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa2eceb27369ebaa4b1acb9db29b7d64e0", null ],
       [ "OFFLINE_FILE_TYPE_CORE_SHARDED", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa86be29047ad4643d1e92a11b8c535335", null ],
       [ "OFFLINE_FILE_TYPE_ARCH_REGDEPS", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa00dce088778fce7d653921465f82e71f", null ],
+      [ "OFFLINE_FILE_TYPE_WHOLE_SYSTEM", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaa3ba2f62bdf5d06643ea9d1a2f7f1eb5a", null ],
       [ "OFFLINE_FILE_TYPE_ARCH_ALL", "trace__entry_8h.html#a017717a4b9ef5ae1f6d1fef1df834baaac9118269c36e185fe2a9b0b6895e0d07", null ]
     ] ],
     [ "switch_type_t", "trace__entry_8h.html#ad43c30e27dd0fd0f05906eebbea5997b", [
@@ -88,7 +89,9 @@
       [ "TRACE_MARKER_TYPE_SYSCALL_ARG_TIMEOUT", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca8c60aa290a1c83f0119e7590fee5af0b", null ],
       [ "TRACE_MARKER_TYPE_SIGNAL_NUMBER", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295caeab5ab5189617728fec57d491ef1d63d", null ],
       [ "TRACE_MARKER_TYPE_UNCOMPLETED_INSTRUCTION", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca27cc562c02c8a0f07411d2a349091950", null ],
-      [ "TRACE_MARKER_TYPE_MIDBLOCK_END_PC", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca46d34740a104840abc5dd52eccb8e00c", null ]
+      [ "TRACE_MARKER_TYPE_MIDBLOCK_END_PC", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca46d34740a104840abc5dd52eccb8e00c", null ],
+      [ "TRACE_MARKER_TYPE_HARDWARE_EVENT", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca1d5ca4599b282b78daa861477a12388f", null ],
+      [ "TRACE_MARKER_TYPE_HARDWARE_CONTEXT_RETURN", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca1bf8d4bd00c753b8d18e33c7372c4e04", null ]
     ] ],
     [ "trace_type_t", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59c", [
       [ "TRACE_TYPE_READ", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59ca018585565e72f9ebe6723e089f3d343d", null ],
