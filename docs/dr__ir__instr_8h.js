@@ -146,6 +146,8 @@
     [ "instr_get_dst", "dr__ir__instr_8h.html#a82807d01f70f547181c3b09e09548f6b", null ],
     [ "instr_get_eflags", "dr__ir__instr_8h.html#a35d5a7d70a380ef810267fa62d0a0d60", null ],
     [ "instr_get_interrupt_number", "dr__ir__instr_8h.html#ab5ebe3165e4385bb813e50e92eb23269", null ],
+    [ "instr_get_isa_feature", "dr__ir__instr_8h.html#a2596f649ae7b6cc64a1066e078295d14", null ],
+    [ "instr_get_isa_feature_name", "dr__ir__instr_8h.html#ad960eb76969c84e33901cbfd25c2d386", null ],
     [ "instr_get_isa_mode", "dr__ir__instr_8h.html#a4362c9281f6555d65240e447eed9e5c0", null ],
     [ "instr_get_label_data_area", "dr__ir__instr_8h.html#a946303e1c9c3d1102603dc9842479b0c", null ],
     [ "instr_get_next", "dr__ir__instr_8h.html#ac897243e24d71890e196586b8373b821", null ],
