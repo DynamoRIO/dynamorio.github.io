@@ -329,6 +329,7 @@
     [ "pid_from_memref_pid", "namespacedynamorio_1_1drmemtrace.html#a8acb004d3ab8b200b5fc4d4ac145c55e", null ],
     [ "read_module_file", "namespacedynamorio_1_1drmemtrace.html#a8405aaf95b3dbc5fbe8950578b6d6079", null ],
     [ "record_filter_tool_create", "namespacedynamorio_1_1drmemtrace.html#a0899d1bf800b8f44a4f915ecde343e85", null ],
+    [ "record_schedule_stats_tool_create", "namespacedynamorio_1_1drmemtrace.html#a31f62713639869902d90f45f7dbae846", null ],
     [ "reuse_distance_tool_create", "namespacedynamorio_1_1drmemtrace.html#a7b1651c8a97181eb4afe2c45476ce41e", null ],
     [ "reuse_time_tool_create", "namespacedynamorio_1_1drmemtrace.html#a97b5e872335cb7666b7758a9f50b4579", null ],
     [ "schedule_stats_tool_create", "namespacedynamorio_1_1drmemtrace.html#a0663b8e5453e6c7ef5e52d467c7afdd0", null ],

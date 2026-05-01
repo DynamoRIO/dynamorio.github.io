@@ -23,17 +23,17 @@
     [ "drx_buf_t", "group__drx.html#ga839a0a82cdb05bc4285369d905e3daaf", null ],
     [ "drx_time_scale_stat_t", "group__drx.html#gaebe9cf738140a05b45496364cd328bc2", null ],
     [ "drx_time_scale_t", "group__drx.html#ga5b54714f9acdae0b7623033df07ecbd9", [
-      [ "DRMGR_PRIORITY_FAULT_DRX", "group__drx.html#gga16685eea158879e41b101ca3634de462a8cd3adf4599b9be81a32a0d111df47ed", null ],
-      [ "DRX_COUNTER_64BIT", "group__drx.html#ggafa231099d07583c3ed0981e0bb665f55a507636af18a8858c214066682d013a1a", null ],
-      [ "DRX_COUNTER_REL_ACQ", "group__drx.html#ggafa231099d07583c3ed0981e0bb665f55aa50fccbd9d5dc9f300d6033c971f95e4", null ],
-      [ "DRX_COUNTER_LOCK", "group__drx.html#ggafa231099d07583c3ed0981e0bb665f55aa45e32a1d62398b84858de6759364688", null ],
-      [ "DRX_BUF_FAST_CIRCULAR_BUFSZ", "group__drx.html#gga394b3903fbf00ba2b6243f60689a5a5fa72c2469ba268615b188959b3ffbef685", null ],
-      [ "DRMGR_PRIORITY_THREAD_INIT_DRX_BUF", "group__drx.html#ggac205be2172292384dd687b5471a87eddad97fe2f57b9c6ec96fd3b8461b0cfeb1", null ],
-      [ "DRMGR_PRIORITY_THREAD_EXIT_DRX_BUF", "group__drx.html#ggac205be2172292384dd687b5471a87edda2c71daa1f7dc4665d5e32997578809c0", null ],
-      [ "DRMGR_PRIORITY_THREAD_INIT_DRX_SCALE", "group__drx.html#gga157d5577a5b2f5986037d0d09c7dc77dace263d9f5b6baee08bbfc15ad8a0a739", null ],
-      [ "DRMGR_PRIORITY_THREAD_EXIT_DRX_SCALE", "group__drx.html#gga157d5577a5b2f5986037d0d09c7dc77dab74ef9f52fd6072563a764408dc7366d", null ],
-      [ "DRMGR_PRIORITY_PRE_SYS_DRX_SCALE", "group__drx.html#gga157d5577a5b2f5986037d0d09c7dc77da96655f33bca516aa98f800f41be80270", null ],
-      [ "DRMGR_PRIORITY_POST_SYS_DRX_SCALE", "group__drx.html#gga157d5577a5b2f5986037d0d09c7dc77daf5b18ed4bf8cc3f6ed299f135bd45754", null ]
+      [ "DRMGR_PRIORITY_FAULT_DRX", "group__drx.html#gga394b3903fbf00ba2b6243f60689a5a5fa8cd3adf4599b9be81a32a0d111df47ed", null ],
+      [ "DRX_COUNTER_64BIT", "group__drx.html#gga157d5577a5b2f5986037d0d09c7dc77da507636af18a8858c214066682d013a1a", null ],
+      [ "DRX_COUNTER_REL_ACQ", "group__drx.html#gga157d5577a5b2f5986037d0d09c7dc77daa50fccbd9d5dc9f300d6033c971f95e4", null ],
+      [ "DRX_COUNTER_LOCK", "group__drx.html#gga157d5577a5b2f5986037d0d09c7dc77daa45e32a1d62398b84858de6759364688", null ],
+      [ "DRX_BUF_FAST_CIRCULAR_BUFSZ", "group__drx.html#gga1fb9092bcdeada2d206bdc74afbbe122a72c2469ba268615b188959b3ffbef685", null ],
+      [ "DRMGR_PRIORITY_THREAD_INIT_DRX_BUF", "group__drx.html#gga84627a72058502328269676b81780f89ad97fe2f57b9c6ec96fd3b8461b0cfeb1", null ],
+      [ "DRMGR_PRIORITY_THREAD_EXIT_DRX_BUF", "group__drx.html#gga84627a72058502328269676b81780f89a2c71daa1f7dc4665d5e32997578809c0", null ],
+      [ "DRMGR_PRIORITY_THREAD_INIT_DRX_SCALE", "group__drx.html#ggaf3520ff6d43011872bab77edd27d4de3ace263d9f5b6baee08bbfc15ad8a0a739", null ],
+      [ "DRMGR_PRIORITY_THREAD_EXIT_DRX_SCALE", "group__drx.html#ggaf3520ff6d43011872bab77edd27d4de3ab74ef9f52fd6072563a764408dc7366d", null ],
+      [ "DRMGR_PRIORITY_PRE_SYS_DRX_SCALE", "group__drx.html#ggaf3520ff6d43011872bab77edd27d4de3a96655f33bca516aa98f800f41be80270", null ],
+      [ "DRMGR_PRIORITY_POST_SYS_DRX_SCALE", "group__drx.html#ggaf3520ff6d43011872bab77edd27d4de3af5b18ed4bf8cc3f6ed299f135bd45754", null ]
     ] ],
     [ "drx_time_scale_type_t", "group__drx.html#ga5c416996ed85cb27363274f7ca027892", [
       [ "DRX_SCALE_ITIMER", "group__drx.html#gga5c416996ed85cb27363274f7ca027892ac17355e44156a80c51d4b3ef30e212cf", null ],

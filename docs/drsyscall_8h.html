@@ -74,17 +74,17 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a0ed680fdb405e7195d9f14032851eebb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="drsyscall_8h.html#a0ed680fdb405e7195d9f14032851eebba179104300f12ecd050332f3441838b51">DRMGR_PRIORITY_PRESYS_DRSYS</a> = -100
+<tr class="memitem:a4caf8d8f829279fba122163d961608a4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="drsyscall_8h.html#a4caf8d8f829279fba122163d961608a4a179104300f12ecd050332f3441838b51">DRMGR_PRIORITY_PRESYS_DRSYS</a> = -100
 , <br />
-&#160;&#160;<a class="el" href="drsyscall_8h.html#a0ed680fdb405e7195d9f14032851eebbaab7d918613c5e1773fda02845ab33f07">DRMGR_PRIORITY_POSTSYS_DRSYS</a> = -100
+&#160;&#160;<a class="el" href="drsyscall_8h.html#a4caf8d8f829279fba122163d961608a4aab7d918613c5e1773fda02845ab33f07">DRMGR_PRIORITY_POSTSYS_DRSYS</a> = -100
 , <br />
-&#160;&#160;<a class="el" href="drsyscall_8h.html#a0ed680fdb405e7195d9f14032851eebba3846a3da09148d154362a8b1b756b572">DRMGR_PRIORITY_POSTSYS_DRSYS_LAST</a> = 10000
+&#160;&#160;<a class="el" href="drsyscall_8h.html#a4caf8d8f829279fba122163d961608a4a3846a3da09148d154362a8b1b756b572">DRMGR_PRIORITY_POSTSYS_DRSYS_LAST</a> = 10000
 , <br />
-&#160;&#160;<a class="el" href="drsyscall_8h.html#a0ed680fdb405e7195d9f14032851eebbaa805229054c9ea0bd956ec60fd3f148a">DRMGR_PRIORITY_MODLOAD_DRSYS</a> = -100
+&#160;&#160;<a class="el" href="drsyscall_8h.html#a4caf8d8f829279fba122163d961608a4aa805229054c9ea0bd956ec60fd3f148a">DRMGR_PRIORITY_MODLOAD_DRSYS</a> = -100
 <br />
  }</td></tr>
-<tr class="separator:a0ed680fdb405e7195d9f14032851eebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a4caf8d8f829279fba122163d961608a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae53f35a45772ead54b9dd29db92c831"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drsyscall_8h.html#aae53f35a45772ead54b9dd29db92c831">drsys_param_mode_t</a> { <br />
 &#160;&#160;<a class="el" href="drsyscall_8h.html#aae53f35a45772ead54b9dd29db92c831ad70df0ce77ca0bd28f4aaaa6d96d3dc0">DRSYS_PARAM_IN</a> = 0x01
 , <br />
@@ -414,8 +414,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a0ed680fdb405e7195d9f14032851eebb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ed680fdb405e7195d9f14032851eebb">&#9670;&nbsp;</a></span>anonymous enum</h2>
+<a id="a4caf8d8f829279fba122163d961608a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4caf8d8f829279fba122163d961608a4">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -427,13 +427,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Priority of drsyscall events. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0ed680fdb405e7195d9f14032851eebba179104300f12ecd050332f3441838b51"></a>DRMGR_PRIORITY_PRESYS_DRSYS&#160;</td><td class="fielddoc"><p>Priority of the drsyscall pre-syscall and post-syscall events that are meant to take place before the corresponding events of a regular user of drsyscall. Dynamic iteration is not allowed until these events have taken place. Users of drsyscall should arrange their pre-syscall and post-syscall event callbacks to be called after the drsyscall event, unless they want to modify the pre-syscall arguments before they're stored or they want to modify the application's context, in which case their event should go beforehand. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4caf8d8f829279fba122163d961608a4a179104300f12ecd050332f3441838b51"></a>DRMGR_PRIORITY_PRESYS_DRSYS&#160;</td><td class="fielddoc"><p>Priority of the drsyscall pre-syscall and post-syscall events that are meant to take place before the corresponding events of a regular user of drsyscall. Dynamic iteration is not allowed until these events have taken place. Users of drsyscall should arrange their pre-syscall and post-syscall event callbacks to be called after the drsyscall event, unless they want to modify the pre-syscall arguments before they're stored or they want to modify the application's context, in which case their event should go beforehand. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a0ed680fdb405e7195d9f14032851eebbaab7d918613c5e1773fda02845ab33f07"></a>DRMGR_PRIORITY_POSTSYS_DRSYS&#160;</td><td class="fielddoc"><p>See the comment for DRMGR_PRIORITY_PRESYS_DRSYS. </p>
+<tr><td class="fieldname"><a id="a4caf8d8f829279fba122163d961608a4aab7d918613c5e1773fda02845ab33f07"></a>DRMGR_PRIORITY_POSTSYS_DRSYS&#160;</td><td class="fielddoc"><p>See the comment for DRMGR_PRIORITY_PRESYS_DRSYS. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a0ed680fdb405e7195d9f14032851eebba3846a3da09148d154362a8b1b756b572"></a>DRMGR_PRIORITY_POSTSYS_DRSYS_LAST&#160;</td><td class="fielddoc"><p>Priority of the drsyscall last-chance post-syscall event. This event must take place after any dynamic iteration of system call arguments, which means it must be after the post-syscall event in all users of drsyscall. </p>
+<tr><td class="fieldname"><a id="a4caf8d8f829279fba122163d961608a4a3846a3da09148d154362a8b1b756b572"></a>DRMGR_PRIORITY_POSTSYS_DRSYS_LAST&#160;</td><td class="fielddoc"><p>Priority of the drsyscall last-chance post-syscall event. This event must take place after any dynamic iteration of system call arguments, which means it must be after the post-syscall event in all users of drsyscall. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a0ed680fdb405e7195d9f14032851eebbaa805229054c9ea0bd956ec60fd3f148a"></a>DRMGR_PRIORITY_MODLOAD_DRSYS&#160;</td><td class="fielddoc"><p>Priority of the drsyscall module load event. This event must take place before any user of drsyscall in order to populate the tables used by <a class="el" href="drsyscall_8h.html#a714acb6972b5a14bd7a9b339da39f7bb">drsys_name_to_syscall()</a>. </p>
+<tr><td class="fieldname"><a id="a4caf8d8f829279fba122163d961608a4aa805229054c9ea0bd956ec60fd3f148a"></a>DRMGR_PRIORITY_MODLOAD_DRSYS&#160;</td><td class="fielddoc"><p>Priority of the drsyscall module load event. This event must take place before any user of drsyscall in order to populate the tables used by <a class="el" href="drsyscall_8h.html#a714acb6972b5a14bd7a9b339da39f7bb">drsys_name_to_syscall()</a>. </p>
 </td></tr>
 </table>
 
@@ -1641,5 +1641,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20566 --- Fri Apr 24 2026 04:07:51 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20573 --- Fri May 1 2026 04:25:55 &nbsp; <img border=0 src="favicon.png">
 </small></address>
