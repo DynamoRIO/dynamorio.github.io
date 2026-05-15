@@ -33,6 +33,7 @@
     [ "schedule_record_ostream", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a0d951e6e51647de93dc52083157dab81", null ],
     [ "schedule_replay_istream", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#aebd6e85c8a7b37a2cbdfc64efc60537e", null ],
     [ "single_lockstep_output", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a1783ff3a0ff0f81cb38922f8093a9118", null ],
+    [ "steal_attempt_period", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#ad6318cc20ec7de59be5df009deae3435", null ],
     [ "struct_size", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a2b8c561839112c900eda07ec8171abfb", null ],
     [ "syscall_switch_threshold", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a6ea3487c8bbdb7ae52212b245c866608", null ],
     [ "time_units_per_us", "structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a57204006ea4057e5a53e21abdc4e5dc3", null ],

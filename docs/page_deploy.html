@@ -226,6 +226,8 @@ DynamoRIO Runtime Options</h1>
 <li><b>-disasm_mask:</b> This option sets the disassembly style to the specified bitmask of dr_disasm_flags_t values. This option overlaps with -syntax_intel, -syntax_att, and -syntax_arm. The style can also be set using <a class="el" href="dr__ir__disassemble_8h.html#ac5e34cc6c23ce496b13eebb043184552">disassemble_set_syntax()</a>.</li>
 <li><b>-tracedump_text</b> and <b>-tracedump_binary:</b> These options cause DynamoRIO to output all traces that were created to the log file <em>traces-shared.0.TID.html</em>, where <em>TID</em> is the thread id of the initial thread; any thread-private traces (see <a class="el" href="page_deploy.html#op_thread_priv">-thread_private option</a>) produce per-thread files <em>traces.TID.html</em>. Traces are logged whenever they are flushed from the cache (which can be during execution or at the latest at program termination). The two options select either a text dump or a binary dump. The text dump takes up considerable room and time to dump, while the binary dump requires more effort to examine. The binary trace dump format is documented in <a class="el" href="dr__tools_8h.html" title="Main API routines, including transparency support.">dr_tools.h</a>, and a sample reader is provided with this distribution.</li>
 <li><b>-tracedump_origins</b> When selected by itself with neither -tracedump_text nor -tracedump_binary, dumps only a text list of the constituent basic block tags of each trace to the trace log file. When combined with either of -tracedump_text or -tracedump_binary, adds a full disassembly of the constituent basic blocks to the selected dump.</li>
+<li><b>-attach_unmask_suspend_signal</b> The API's attach mechanism is based on signals an application is unlikely to use, SIGILL on Linux and SIGSTKFLT if running on QEMU. Applications which do use these signals may block them. The -attach_unmask_suspend_signal option changes the way DynamoRIO attaches, by unmasking the signals so that the usual attach-via-signal mechanism can be used. This option also enables attaching when such signals are blocked and the thread is waiting in one of the sigwait syscalls. Note that this feature is currently available on AArch64 Linux only and requires ptrace privileges, which can be enabled with this command: <div class="fragment"><div class="line">% echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope</div>
+</div><!-- fragment --></li>
 </ul>
 <p>Options controlling notifications from DynamoRIO:</p>
 <ul>
@@ -264,5 +266,5 @@ DynamoRIO Runtime Options</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20580 --- Fri May 8 2026 04:07:49 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20587 --- Fri May 15 2026 04:25:09 &nbsp; <img border=0 src="favicon.png">
 </small></address>
