@@ -247,7 +247,8 @@
       [ "TRACE_MARKER_TYPE_UNCOMPLETED_INSTRUCTION", "namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca27cc562c02c8a0f07411d2a349091950", null ],
       [ "TRACE_MARKER_TYPE_MIDBLOCK_END_PC", "namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca46d34740a104840abc5dd52eccb8e00c", null ],
       [ "TRACE_MARKER_TYPE_HARDWARE_EVENT", "namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca1d5ca4599b282b78daa861477a12388f", null ],
-      [ "TRACE_MARKER_TYPE_HARDWARE_CONTEXT_RETURN", "namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca1bf8d4bd00c753b8d18e33c7372c4e04", null ]
+      [ "TRACE_MARKER_TYPE_HARDWARE_CONTEXT_RETURN", "namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca1bf8d4bd00c753b8d18e33c7372c4e04", null ],
+      [ "TRACE_MARKER_TYPE_KERNEL_EVENT_RAW", "namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca54bc39b76030132578731c0e73defea6", null ]
     ] ],
     [ "trace_type_t", "namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59c", [
       [ "TRACE_TYPE_READ", "namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca018585565e72f9ebe6723e089f3d343d", null ],

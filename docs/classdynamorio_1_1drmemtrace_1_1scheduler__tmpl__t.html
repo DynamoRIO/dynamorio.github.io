@@ -172,6 +172,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a9b4920e65f3dd2894db0e815b90b86a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0113e22f99b0567bb696e7acbd2fa772"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html">scheduler_options_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a0113e22f99b0567bb696e7acbd2fa772">make_scheduler_serial_options</a> (int verbosity=0)</td></tr>
 <tr class="separator:a0113e22f99b0567bb696e7acbd2fa772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95e629a0652a2966e0e02c7ca7ab8e92"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a95e629a0652a2966e0e02c7ca7ab8e92">record_type_canonicalization_supported</a> ()</td></tr>
+<tr class="separator:a95e629a0652a2966e0e02c7ca7ab8e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -660,6 +662,34 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 
 </div>
 </div>
+<a id="a95e629a0652a2966e0e02c7ca7ab8e92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95e629a0652a2966e0e02c7ca7ab8e92">&#9670;&nbsp;</a></span>record_type_canonicalization_supported()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::record_type_canonicalization_supported </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns whether auto-canonicalization of addresses is supported by this <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">scheduler_tmpl_t</a> template instantiation's RecordType. If supported, it can be enabled via <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>:: <a class="el" href="structdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1scheduler__options__t.html#a13c096742c7d8a7a21fffa27daf17ec1">scheduler_options_t.canonicalize_addresses</a>. </p>
+
+</div>
+</div>
 <a id="a7549f7d208bc562f8d1baf44b5eb9649"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7549f7d208bc562f8d1baf44b5eb9649">&#9670;&nbsp;</a></span>write_recorded_schedule()</h2>
 
@@ -740,5 +770,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20587 --- Fri May 22 2026 04:29:15 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20601 --- Fri May 29 2026 04:32:15 &nbsp; <img border=0 src="favicon.png">
 </small></address>

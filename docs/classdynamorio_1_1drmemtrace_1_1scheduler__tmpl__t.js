@@ -63,6 +63,7 @@
     [ "init", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a7d51e5baa505e36110a502f46c676d07", null ],
     [ "make_scheduler_parallel_options", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a9b4920e65f3dd2894db0e815b90b86a2", null ],
     [ "make_scheduler_serial_options", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a0113e22f99b0567bb696e7acbd2fa772", null ],
+    [ "record_type_canonicalization_supported", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a95e629a0652a2966e0e02c7ca7ab8e92", null ],
     [ "write_recorded_schedule", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a7549f7d208bc562f8d1baf44b5eb9649", null ],
     [ "INVALID_INPUT_ORDINAL", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a398cc507d2536ab133db95b54712ed50", null ],
     [ "INVALID_OUTPUT_ORDINAL", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a56ee6d0a122e5d754c7d834b2e4dd4aa", null ]

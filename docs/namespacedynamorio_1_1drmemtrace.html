@@ -515,6 +515,8 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca1bf8d4bd00c753b8d18e33c7372c4e04">TRACE_MARKER_TYPE_HARDWARE_CONTEXT_RETURN</a>
 , <br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca54bc39b76030132578731c0e73defea6">TRACE_MARKER_TYPE_KERNEL_EVENT_RAW</a>
+, <br />
 &#160;&#160;<b>TRACE_MARKER_TYPE_RESERVED_END</b> = 100
 <br />
  }</td></tr>
@@ -1683,6 +1685,8 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca1d5ca4599b282b78daa861477a12388f"></a>TRACE_MARKER_TYPE_HARDWARE_EVENT&#160;</td><td class="fielddoc"><p>This marker is used to indicate an occurrence of a discontinuity in regular execution flow caused by an exception, interrupt, or system call, in traces with the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa3ba2f62bdf5d06643ea9d1a2f7f1eb5a">OFFLINE_FILE_TYPE_WHOLE_SYSTEM</a> file type bit. It is used in traces that record the whole-system view of events; it is loosely similar to the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca3b75f9115bb4146ed5540412e36bdd5a">dynamorio::drmemtrace::TRACE_MARKER_TYPE_KERNEL_EVENT</a> marker that is used to indicate discontinuities in the regular user-mode view traces. The value of this marker contains the program counter at the interruption point. If the interruption point is just after a branch, this value is the target of that branch. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca1bf8d4bd00c753b8d18e33c7372c4e04"></a>TRACE_MARKER_TYPE_HARDWARE_CONTEXT_RETURN&#160;</td><td class="fielddoc"><p>This marker is used to indicate an occurrence of a hardware context return event, such as an eret on AArch64 or iret on x86, in traces with the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a017717a4b9ef5ae1f6d1fef1df834baaa3ba2f62bdf5d06643ea9d1a2f7f1eb5a">OFFLINE_FILE_TYPE_WHOLE_SYSTEM</a> file type bit. Such instructions perform various implicit operations, which may include restoring state, and modifying the exception/ring level. It is used in traces that record the whole system view of events; it is loosely similar to the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca6b85d979c3dbcd4dd614c4399067ba73">dynamorio::drmemtrace::TRACE_MARKER_TYPE_KERNEL_XFER</a> marker that is used to indicate control-altering syscalls which includes user event (UNIX signal, Windows callback, exception, or APC) handler returns that match up to prior <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca3b75f9115bb4146ed5540412e36bdd5a">dynamorio::drmemtrace::TRACE_MARKER_TYPE_KERNEL_EVENT</a> markers in the regular user-mode view traces. Note that this may not be present on other cases that change the privilege level (e.g., far branch on x86; syscall gateways). The marker value does not hold any information currently. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca54bc39b76030132578731c0e73defea6"></a>TRACE_MARKER_TYPE_KERNEL_EVENT_RAW&#160;</td><td class="fielddoc"><p>Appears only in offline raw records. This is turned into <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca3b75f9115bb4146ed5540412e36bdd5a">TRACE_MARKER_TYPE_KERNEL_EVENT</a> in post-processing. Its purpose is to have a non-canonical value in bits 48..55 of offline_entry_t (unlike <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca3b75f9115bb4146ed5540412e36bdd5a">TRACE_MARKER_TYPE_KERNEL_EVENT</a> which has 0 in 48..55) so we can distinguish it from an address with the top byte set and ignored. </p>
 </td></tr>
 </table>
 
@@ -3159,5 +3163,5 @@ For additional file open parameters with the thread and window identifiers, use 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20587 --- Fri May 22 2026 04:29:15 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20601 --- Fri May 29 2026 04:32:15 &nbsp; <img border=0 src="favicon.png">
 </small></address>

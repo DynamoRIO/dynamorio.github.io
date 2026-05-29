@@ -213,7 +213,7 @@ Instruction Generation</h2>
 <p>Clients can construct instructions from scratch in two different ways:</p>
 <ol type="1">
 <li>Using the INSTR_CREATE_opcode macros that fill in implicit operands automatically: <div class="fragment"><div class="line"><a class="code" href="structinstr__t.html">instr_t</a> *instr = <a class="code" href="dr__ir__macros__x86_8h.html#a648549a9f8c47a283ae9ffbd3a51fde8">INSTR_CREATE_dec</a>(dcontext, <a class="code" href="dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda">opnd_create_reg</a>(REG_EDX));</div>
-<div class="ttc" id="adr__ir__macros__x86_8h_html_a648549a9f8c47a283ae9ffbd3a51fde8"><div class="ttname"><a href="dr__ir__macros__x86_8h.html#a648549a9f8c47a283ae9ffbd3a51fde8">INSTR_CREATE_dec</a></div><div class="ttdeci">#define INSTR_CREATE_dec(dc, d)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_x86.h:1627</div></div>
+<div class="ttc" id="adr__ir__macros__x86_8h_html_a648549a9f8c47a283ae9ffbd3a51fde8"><div class="ttname"><a href="dr__ir__macros__x86_8h.html#a648549a9f8c47a283ae9ffbd3a51fde8">INSTR_CREATE_dec</a></div><div class="ttdeci">#define INSTR_CREATE_dec(dc, d)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_x86.h:1630</div></div>
 <div class="ttc" id="adr__ir__opnd_8h_html_ae6cf2a1e25144a7c81b3b3a4a89f8dda"><div class="ttname"><a href="dr__ir__opnd_8h.html#ae6cf2a1e25144a7c81b3b3a4a89f8dda">opnd_create_reg</a></div><div class="ttdeci">DR_API INSTR_INLINE opnd_t opnd_create_reg(reg_id_t r)</div></div>
 </div><!-- fragment --></li>
 <li>Specifying the opcode and all operands (including implicit operands): <div class="fragment"><div class="line"><a class="code" href="structinstr__t.html">instr_t</a> *instr = <a class="code" href="dr__ir__instr_8h.html#a9d9a1662aed6669a42a8284dae0e8019">instr_create</a>(dcontext);</div>
@@ -419,7 +419,7 @@ State Translation</h1>
 <div class="line">app_pc xl8 = <a class="code" href="dr__ir__instr_8h.html#a090b27b5334c6be542c4fcfed7b97ffb">instr_get_app_pc</a>(inst);</div>
 <div class="line">PREM(bb, inst, <a class="code" href="dr__ir__macros_8h.html#ad21fbdff8a5631b3e31b8221180a2a9c">INSTR_XL8</a>(<a class="code" href="dr__ir__macros__x86_8h.html#a9d0f07bc39f6e37f5f4a9836f342e077">INSTR_CREATE_mov_st</a>(drcontext, dst, src), xl8));</div>
 <div class="ttc" id="adr__ir__macros_8h_html_ad21fbdff8a5631b3e31b8221180a2a9c"><div class="ttname"><a href="dr__ir__macros_8h.html#ad21fbdff8a5631b3e31b8221180a2a9c">INSTR_XL8</a></div><div class="ttdeci">#define INSTR_XL8(instr_ptr, app_addr)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros.h:65</div></div>
-<div class="ttc" id="adr__ir__macros__x86_8h_html_a9d0f07bc39f6e37f5f4a9836f342e077"><div class="ttname"><a href="dr__ir__macros__x86_8h.html#a9d0f07bc39f6e37f5f4a9836f342e077">INSTR_CREATE_mov_st</a></div><div class="ttdeci">#define INSTR_CREATE_mov_st(dc, d, s)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_x86.h:1245</div></div>
+<div class="ttc" id="adr__ir__macros__x86_8h_html_a9d0f07bc39f6e37f5f4a9836f342e077"><div class="ttname"><a href="dr__ir__macros__x86_8h.html#a9d0f07bc39f6e37f5f4a9836f342e077">INSTR_CREATE_mov_st</a></div><div class="ttdeci">#define INSTR_CREATE_mov_st(dc, d, s)</div><div class="ttdef"><b>Definition:</b> dr_ir_macros_x86.h:1248</div></div>
 </div><!-- fragment --><p> 
 <table width=100% bgcolor="#000000" cellspacing=0 cellpadding=2 border=0>
   <tr><td><table width=100% bgcolor="#0000C0" cellspacing=0 cellpadding=1 border=0>
@@ -499,5 +499,5 @@ Persisting Code</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20587 --- Fri May 22 2026 04:29:14 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20601 --- Fri May 29 2026 04:32:14 &nbsp; <img border=0 src="favicon.png">
 </small></address>

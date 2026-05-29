@@ -13,6 +13,7 @@
       [ "SCHED_STAT_HIT_OUTPUT_LIMIT", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a86e5d510793bb63af0144b38eded2d12a33821b8d30bd4131212647a5b05bb42f", null ],
       [ "SCHED_STAT_KERNEL_SWITCH_SEQUENCE_INJECTIONS", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a86e5d510793bb63af0144b38eded2d12a1c2fd6335109142c45c84673f8be5859", null ],
       [ "SCHED_STAT_KERNEL_SYSCALL_SEQUENCE_INJECTIONS", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a86e5d510793bb63af0144b38eded2d12a1cf05c989ce5472fa2589589d8891dd3", null ],
+      [ "SCHED_STAT_CANONICALIZED_ADDRESSES", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a86e5d510793bb63af0144b38eded2d12a044d55985dfc1da47d8d24c7fe2670c5", null ],
       [ "SCHED_STAT_TYPE_COUNT", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a86e5d510793bb63af0144b38eded2d12a3664b14b9015df679671119ba98e4e1b", null ]
     ] ],
     [ "~memtrace_stream_t", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#a9456c6d4e4f7d8e70ad65345ebb2808a", null ],
