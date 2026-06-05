@@ -92,7 +92,8 @@
       [ "TRACE_MARKER_TYPE_MIDBLOCK_END_PC", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca46d34740a104840abc5dd52eccb8e00c", null ],
       [ "TRACE_MARKER_TYPE_HARDWARE_EVENT", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca1d5ca4599b282b78daa861477a12388f", null ],
       [ "TRACE_MARKER_TYPE_HARDWARE_CONTEXT_RETURN", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca1bf8d4bd00c753b8d18e33c7372c4e04", null ],
-      [ "TRACE_MARKER_TYPE_KERNEL_EVENT_RAW", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca54bc39b76030132578731c0e73defea6", null ]
+      [ "TRACE_MARKER_TYPE_KERNEL_EVENT_RAW", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca54bc39b76030132578731c0e73defea6", null ],
+      [ "TRACE_MARKER_TYPE_SKIPPED_MEMREF", "trace__entry_8h.html#ab8531c7f66ccc0d7fe59f436844a295ca677a166fd944e82c5c6add3f3341d1e4", null ]
     ] ],
     [ "trace_type_t", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59c", [
       [ "TRACE_TYPE_READ", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59ca018585565e72f9ebe6723e089f3d343d", null ],
