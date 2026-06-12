@@ -58,7 +58,8 @@
       [ "CACHE_SIZE_512_KB", "dr__proc_8h.html#abde92db21512f07aaf05d073c43832dfa593e599689231f45277e4d1a5511eec0", null ],
       [ "CACHE_SIZE_1_MB", "dr__proc_8h.html#abde92db21512f07aaf05d073c43832dfa58dea49b51e5168e79577f232e328011", null ],
       [ "CACHE_SIZE_2_MB", "dr__proc_8h.html#abde92db21512f07aaf05d073c43832dfa46ac784cfe39e0369ebfb5ece5c0dfb7", null ],
-      [ "CACHE_SIZE_UNKNOWN", "dr__proc_8h.html#abde92db21512f07aaf05d073c43832dfa33d137f8dcd660a19592fb6c76007d93", null ]
+      [ "CACHE_SIZE_UNKNOWN", "dr__proc_8h.html#abde92db21512f07aaf05d073c43832dfa33d137f8dcd660a19592fb6c76007d93", null ],
+      [ "CACHE_SIZE_48_KB", "dr__proc_8h.html#abde92db21512f07aaf05d073c43832dfab45751ab7062870f6b2dd1a571f12366", null ]
     ] ],
     [ "feature_bit_t", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bf", [
       [ "FEATURE_FPU", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac39f532dceb337cb996ebf5a8d658668", null ],
