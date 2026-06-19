@@ -31,7 +31,9 @@
       [ "Deprecated Google Workload Traces (Version 1)", "google_workload_traces.html#sec_public_v1_deprecated", null ]
     ] ],
     [ "Configuration File", "sec_drcachesim_config_file.html", null ],
-    [ "Offline Traces and Analysis", "sec_drcachesim_offline.html", null ],
+    [ "Offline Traces and Analysis", "sec_drcachesim_offline.html", [
+      [ "Offline Overhead", "sec_drcachesim_offline.html#sec_drcachesim_overhead", null ]
+    ] ],
     [ "Filtered Traces", "sec_drcachesim_filter.html", null ],
     [ "Tracing a Subset of Execution", "sec_drcachesim_partial.html", null ],
     [ "Simulator Details", "sec_drcachesim_sim.html", null ],
