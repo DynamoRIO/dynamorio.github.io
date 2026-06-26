@@ -7,6 +7,7 @@
     [ "f", "namespacemembers_f.html", null ],
     [ "h", "namespacemembers_h.html", null ],
     [ "i", "namespacemembers_i.html", null ],
+    [ "k", "namespacemembers_k.html", null ],
     [ "m", "namespacemembers_m.html", null ],
     [ "o", "namespacemembers_o.html", null ],
     [ "p", "namespacemembers_p.html", null ],

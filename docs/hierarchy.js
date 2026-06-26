@@ -107,6 +107,9 @@
     [ "instr_t", "structinstr__t.html", null ],
     [ "dynamorio::drmemtrace::analysis_tool_tmpl_t< RecordType >::interval_state_snapshot_t", "classdynamorio_1_1drmemtrace_1_1analysis__tool__tmpl__t_1_1interval__state__snapshot__t.html", null ],
     [ "dynamorio::drmemtrace::ir2trace_t", "classdynamorio_1_1drmemtrace_1_1ir2trace__t.html", null ],
+    [ "dynamorio::drmemtrace::kernel_tracker_tmpl_t< RecordType >", "classdynamorio_1_1drmemtrace_1_1kernel__tracker__tmpl__t.html", null ],
+    [ "dynamorio::drmemtrace::kernel_tracker_tmpl_t< memref_t >", "classdynamorio_1_1drmemtrace_1_1kernel__tracker__tmpl__t.html", null ],
+    [ "dynamorio::drmemtrace::kernel_tracker_tmpl_t< trace_entry_t >", "classdynamorio_1_1drmemtrace_1_1kernel__tracker__tmpl__t.html", null ],
     [ "dynamorio::drmemtrace::instr_summary_t::memref_summary_t", "structdynamorio_1_1drmemtrace_1_1instr__summary__t_1_1memref__summary__t.html", null ],
     [ "dynamorio::drmemtrace::memtrace_stream_t", "classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html", [
       [ "dynamorio::drmemtrace::default_memtrace_stream_t", "classdynamorio_1_1drmemtrace_1_1default__memtrace__stream__t.html", null ],

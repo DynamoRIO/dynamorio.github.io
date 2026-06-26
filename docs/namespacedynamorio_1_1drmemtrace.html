@@ -63,6 +63,8 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1ir2trace__t.html">ir2trace_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1kernel__tracker__tmpl__t.html">kernel_tracker_tmpl_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1__memref__data__t.html">_memref_data_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdynamorio_1_1drmemtrace_1_1__memref__instr__t.html">_memref_instr_t</a></td></tr>
@@ -172,6 +174,10 @@ Typedefs</h2></td></tr>
 <tr class="separator:adb903e64e7cde6b14e10c7f0c00b1e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a312662ae4babe9b8a3a4c7a07785ed39"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a312662ae4babe9b8a3a4c7a07785ed39">drmemtrace_exit_func_t</a>) (void *arg)</td></tr>
 <tr class="separator:a312662ae4babe9b8a3a4c7a07785ed39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a485b318e32d71001385d624c26862f2b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a485b318e32d71001385d624c26862f2b">kernel_tracker_t</a> = <a class="el" href="classdynamorio_1_1drmemtrace_1_1kernel__tracker__tmpl__t.html">kernel_tracker_tmpl_t</a>&lt; <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae4a471ed806967b2b6f911b6ef770704">memref_t</a> &gt;</td></tr>
+<tr class="separator:a485b318e32d71001385d624c26862f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a249fd351a99275b5b66eea0affcdcf85"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a249fd351a99275b5b66eea0affcdcf85">kernel_record_tracker_t</a> = <a class="el" href="classdynamorio_1_1drmemtrace_1_1kernel__tracker__tmpl__t.html">kernel_tracker_tmpl_t</a>&lt; <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a067f98c2dab7fe5329e2ba248836370e">trace_entry_t</a> &gt;</td></tr>
+<tr class="separator:a249fd351a99275b5b66eea0affcdcf85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a513b2e3221fb3f740542d7498ab25fa8"><td class="memItemLeft" align="right" valign="top">typedef int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a513b2e3221fb3f740542d7498ab25fa8">memref_pid_t</a></td></tr>
 <tr class="separator:a513b2e3221fb3f740542d7498ab25fa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e5e148e77271ee047c9f3e79f82fd87"><td class="memItemLeft" align="right" valign="top">typedef int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedynamorio_1_1drmemtrace.html#a3e5e148e77271ee047c9f3e79f82fd87">memref_tid_t</a></td></tr>
@@ -953,6 +959,36 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the actual number of bytes written. </dd></dl>
+
+</div>
+</div>
+<a id="a249fd351a99275b5b66eea0affcdcf85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a249fd351a99275b5b66eea0affcdcf85">&#9670;&nbsp;</a></span>kernel_record_tracker_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a249fd351a99275b5b66eea0affcdcf85">dynamorio::drmemtrace::kernel_record_tracker_t</a> = typedef <a class="el" href="classdynamorio_1_1drmemtrace_1_1kernel__tracker__tmpl__t.html">kernel_tracker_tmpl_t</a>&lt;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a067f98c2dab7fe5329e2ba248836370e">trace_entry_t</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instantiation of <a class="el" href="classdynamorio_1_1drmemtrace_1_1kernel__tracker__tmpl__t.html">dynamorio::drmemtrace::kernel_tracker_tmpl_t</a> for <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a067f98c2dab7fe5329e2ba248836370e">trace_entry_t</a> records. </p>
+
+</div>
+</div>
+<a id="a485b318e32d71001385d624c26862f2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a485b318e32d71001385d624c26862f2b">&#9670;&nbsp;</a></span>kernel_tracker_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a485b318e32d71001385d624c26862f2b">dynamorio::drmemtrace::kernel_tracker_t</a> = typedef <a class="el" href="classdynamorio_1_1drmemtrace_1_1kernel__tracker__tmpl__t.html">kernel_tracker_tmpl_t</a>&lt;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae4a471ed806967b2b6f911b6ef770704">memref_t</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instantiation of <a class="el" href="classdynamorio_1_1drmemtrace_1_1kernel__tracker__tmpl__t.html">dynamorio::drmemtrace::kernel_tracker_tmpl_t</a> for <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ae4a471ed806967b2b6f911b6ef770704">memref_t</a> records. </p>
 
 </div>
 </div>
@@ -3167,5 +3203,5 @@ For additional file open parameters with the thread and window identifiers, use 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20622 --- Fri Jun 19 2026 04:34:24 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20630 --- Fri Jun 26 2026 04:32:02 &nbsp; <img border=0 src="favicon.png">
 </small></address>
