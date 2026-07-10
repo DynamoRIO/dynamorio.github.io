@@ -14,7 +14,7 @@
     [ "PAGE_START", "dr__os__utils_8h.html#adef0efe8b0b596d8f85a144c2f2c2c3a", null ],
     [ "dr_app_arg_t", "dr__os__utils_8h.html#adfdd1e3337ce543e3031abb445aaacb1", null ],
     [ "dr_auxlib_handle_t", "dr__os__utils_8h.html#ad4bb25312a86996379357f79a4c7c1c1", null ],
-    [ "dr_auxlib_routine_ptr_t", "dr__os__utils_8h.html#ac429103cb983108880aee9b1377c430c", null ],
+    [ "dr_auxlib_routine_ptr_t", "dr__os__utils_8h.html#ab125c2852c8e52606bd0fe6a6e6204fe", null ],
     [ "dr_mem_info_t", "dr__os__utils_8h.html#a24463a9c32e3efac726c6fc9e97a77d6", null ],
     [ "dr_os_version_info_t", "dr__os__utils_8h.html#a1074b84b2b9eb05337a431193789c9e2", null ],
     [ "dr_app_arg_encoding_t", "dr__os__utils_8h.html#a89e2e3ce9a2265d4adeefdf951ac6a1a", [

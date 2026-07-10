@@ -211,10 +211,10 @@ Functions</h2></td></tr>
 <tr class="separator:a8f0c200ef1c92ac8bf43b1a62968838a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad58f41cd6ee8aca1fa27f84712dcc000"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#ad58f41cd6ee8aca1fa27f84712dcc000">dr_unregister_signal_event</a> (<a class="el" href="dr__events_8h.html#af86ce68b89c76d46c92d36e58ddb7a33">dr_signal_action_t</a>(*func)(void *drcontext, <a class="el" href="dr__events_8h.html#a5387c3c355661ff049c4480e55ca6633">dr_siginfo_t</a> *siginfo))</td></tr>
 <tr class="separator:ad58f41cd6ee8aca1fa27f84712dcc000"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a101820819df420894a4fbb6a6c0651c3"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#a101820819df420894a4fbb6a6c0651c3">dr_register_low_on_memory_event</a> (void(*func)())</td></tr>
-<tr class="separator:a101820819df420894a4fbb6a6c0651c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe0a489b6ecfbd83b5a1ed8bc7915930"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#afe0a489b6ecfbd83b5a1ed8bc7915930">dr_unregister_low_on_memory_event</a> (void(*func)())</td></tr>
-<tr class="separator:afe0a489b6ecfbd83b5a1ed8bc7915930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4271466202a274f00d410e698ca252fb"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#a4271466202a274f00d410e698ca252fb">dr_register_low_on_memory_event</a> (void(*func)(void))</td></tr>
+<tr class="separator:a4271466202a274f00d410e698ca252fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7004ba1d2ca8fd3630bef59fa2b99a87"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#a7004ba1d2ca8fd3630bef59fa2b99a87">dr_unregister_low_on_memory_event</a> (void(*func)(void))</td></tr>
+<tr class="separator:a7004ba1d2ca8fd3630bef59fa2b99a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfbfebb6df4c756bb9e4c2a9cac82ce9"><td class="memItemLeft" align="right" valign="top">DR_API void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#abfbfebb6df4c756bb9e4c2a9cac82ce9">dr_register_clean_call_insertion_event</a> (void(*func)(void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212">dr_cleancall_save_t</a> call_flags))</td></tr>
 <tr class="separator:abfbfebb6df4c756bb9e4c2a9cac82ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac528d652d8df5dc001fcf15b413f9a92"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__events_8h.html#ac528d652d8df5dc001fcf15b413f9a92">dr_unregister_clean_call_insertion_event</a> (void(*func)(void *drcontext, <a class="el" href="dr__defines_8h.html#a3fb73c55def575ec5705577625491d66">instrlist_t</a> *ilist, <a class="el" href="structinstr__t.html">instr_t</a> *where, <a class="el" href="dr__defines_8h.html#af1b1bc23c42ffb7452568176b09b1212">dr_cleancall_save_t</a> call_flags))</td></tr>
@@ -912,8 +912,8 @@ The function is not called for RaiseException. </dd></dl>
 
 </div>
 </div>
-<a id="a101820819df420894a4fbb6a6c0651c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a101820819df420894a4fbb6a6c0651c3">&#9670;&nbsp;</a></span>dr_register_low_on_memory_event()</h2>
+<a id="a4271466202a274f00d410e698ca252fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4271466202a274f00d410e698ca252fb">&#9670;&nbsp;</a></span>dr_register_low_on_memory_event()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -921,7 +921,7 @@ The function is not called for RaiseException. </dd></dl>
         <tr>
           <td class="memname">DR_API void dr_register_low_on_memory_event </td>
           <td>(</td>
-          <td class="paramtype">void(*)()&#160;</td>
+          <td class="paramtype">void(*)(void)&#160;</td>
           <td class="paramname"><em>func</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1620,8 +1620,8 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
 
 </div>
 </div>
-<a id="afe0a489b6ecfbd83b5a1ed8bc7915930"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe0a489b6ecfbd83b5a1ed8bc7915930">&#9670;&nbsp;</a></span>dr_unregister_low_on_memory_event()</h2>
+<a id="a7004ba1d2ca8fd3630bef59fa2b99a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7004ba1d2ca8fd3630bef59fa2b99a87">&#9670;&nbsp;</a></span>dr_unregister_low_on_memory_event()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1629,7 +1629,7 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
         <tr>
           <td class="memname">DR_API bool dr_unregister_low_on_memory_event </td>
           <td>(</td>
-          <td class="paramtype">void(*)()&#160;</td>
+          <td class="paramtype">void(*)(void)&#160;</td>
           <td class="paramname"><em>func</em></td><td>)</td>
           <td></td>
         </tr>
@@ -2028,5 +2028,5 @@ Traces can be deleted due to hitting capacity limits or cache consistency events
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20634 --- Fri Jul 3 2026 04:20:36 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20643 --- Fri Jul 10 2026 04:23:52 &nbsp; <img border=0 src="favicon.png">
 </small></address>

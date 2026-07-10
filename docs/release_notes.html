@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for Version 11.91.20634"
+title: "Release Notes for Version 11.91.20643"
 layout: default
 permalink: /release_notes.html
 ---
@@ -21,7 +21,7 @@ permalink: /release_notes.html
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Release Notes for Version 11.91.20634 </div>  </div>
+<div class="title">Release Notes for Version 11.91.20643 </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section is divided into the following subsections:</p>
@@ -63,8 +63,8 @@ Distribution Contents</h1>
  </p>
 <h1><a class="anchor" id="sec_changes"></a>
 Changes Since Prior Releases</h1>
-<p>The current version is 11.91.20634. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
-<p>The changes between version 11.91.20634 and 11.3.0 include the following compatibility changes:</p><ul>
+<p>The current version is 11.91.20643. It includes Dr. Memory and the Dr. Memory Framework (DRMF) in the same package as DynamoRIO. DRMF provides the umbra, drsyscall, and drsymcache Extensions for use by clients.</p>
+<p>The changes between version 11.91.20643 and 11.3.0 include the following compatibility changes:</p><ul>
 <li>On 32-bit Arm the size of <a class="el" href="dr__defines_8h.html#ab55fe2529e760adfd88197d0246bc074">dr_mcontext_t</a> has been increased by 4 and the struct is now required to be 8-byte aligned. The offset of the field "simd" has changed.</li>
 <li>Added new fields elf_path and elf_path_size to dr_memory_dump_spec_t. When <a class="el" href="dr__tools_8h.html#afa268a6496cad930513c1f0353fdd06e">dr_create_memory_dump()</a> returns true and elf_path is not NULL, elf_path will be written with the path to the memory dump file.</li>
 <li>Added new argument access_type of enum cache_access_type_t to the method access_update() of the classes <a class="el" href="classdynamorio_1_1drmemtrace_1_1cache__replacement__policy__t.html">dynamorio::drmemtrace::cache_replacement_policy_t</a> and dynamorio::drmemtrace::caching_device_t. Possible values are:<ul>
@@ -80,7 +80,7 @@ Changes Since Prior Releases</h1>
 <li>Moved the switch type enum from <a class="el" href="scheduler_8h.html" title="DrMemtrace top-level trace scheduler.">scheduler.h</a> to <a class="el" href="trace__entry_8h.html" title="DrMemtrace trace entry enum types and definitions.">trace_entry.h</a>, now referenced as <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad43c30e27dd0fd0f05906eebbea5997b">dynamorio::drmemtrace::switch_type_t</a>.</li>
 <li>Added <a class="el" href="struct__drvector__t.html#a7f9c936043bda2da52ac08d4fddd9b87">drvector_t.config</a> field which contains additional configuration parameters for a <a class="el" href="group__drcontainers.html#gad6c70a83ab635d96376710bffe4e4ced">drvector_t</a>. It currently contains <a class="el" href="struct__drvector__config__t.html#a9f725ad445b7a9daf513e084da1b875c">drvector_config_t.zero_alloc</a> that when set to true sets every entry pointer of the drvector's storage to 0 using memset().</li>
 </ul>
-<p>The changes between version 11.91.20634 and 11.3.0 include the following minor compatibility changes:</p>
+<p>The changes between version 11.91.20643 and 11.3.0 include the following minor compatibility changes:</p>
 <ul>
 <li>Added <a class="el" href="group__drmgr.html#ga233a12a964639905520d64c38bda40ef">drmgr_register_exit_event()</a>, <a class="el" href="group__drmgr.html#ga05642880e7d09b468bb28cc4d4bc9fd9">drmgr_unregister_exit_event()</a>, <a class="el" href="group__drmgr.html#ga47ac0eb7ae1d63f4a80e7e77dac0e647">drmgr_register_exit_event_user_data()</a>, and <a class="el" href="group__drmgr.html#ga450ef70dcea0b533e9627c71818510d2">drmgr_unregister_exit_event_user_data()</a>, which are required to be used instead of <a class="el" href="dr__events_8h.html#a32f38cabf4b2c554ce4e476c5d5f6f3a">dr_register_exit_event()</a> when using drmgr and provide priorities and user data to the exit event.</li>
 <li>Added <a class="el" href="group__drmgr.html#ga27249c169d56944f813995dc93c82867">drmgr_register_filter_syscall_event()</a>, <a class="el" href="group__drmgr.html#gad476b725b2b1098b1ec6e624f259dced">drmgr_unregister_filter_syscall_event()</a>, <a class="el" href="group__drmgr.html#ga1538ad0a664e9af608b3f0f91f29ae4a">drmgr_register_filter_syscall_event_user_data()</a>, and <a class="el" href="group__drmgr.html#ga245e5f1c3d186a91e67116a0261df13e">drmgr_unregister_filter_syscall_event_user_data()</a>, which are required to be used instead of <a class="el" href="dr__events_8h.html#a1f98fd4c247abe6c7fcc6d02291b44de">dr_register_filter_syscall_event()</a> when using drmgr and provide priorities and user data to the filter event.</li>
@@ -128,6 +128,7 @@ Changes Since Prior Releases</h1>
 <li>Added <a class="el" href="group__drcontainers.html#gafc8c2293e2712d00a4aa81668e7fdfab">drvector_init_ex()</a> API that initializes a <a class="el" href="group__drcontainers.html#gad6c70a83ab635d96376710bffe4e4ced">drvector_t</a> with extra parameters defined in <a class="el" href="group__drcontainers.html#ga299ffcce5c591c3664ade219fa24305c">drvector_config_t</a>.</li>
 <li>Added <a class="el" href="dr__ir__instr_8h.html#a2596f649ae7b6cc64a1066e078295d14">instr_get_isa_feature()</a> which performs an encoding walk and returns the instruction ISA_FEAT_ constant.</li>
 <li>Added <a class="el" href="dr__ir__instr_8h.html#ad960eb76969c84e33901cbfd25c2d386">instr_get_isa_feature_name()</a> which returns the string name of an ISA_FEAT_ constant.</li>
+<li>Added -filter_kernel and -filter_kernel_except_syscalls to the drmemtrace analyzer that invokes <a class="el" href="classdynamorio_1_1drmemtrace_1_1kernel__filter__t.html">dynamorio::drmemtrace::kernel_filter_t</a> to remove kernel content from a trace.</li>
 </ul>
 <hr  />
 <p>The changes between version 11.3.0 and 11.2.0 include the following compatibility changes:</p><ul>
@@ -390,7 +391,7 @@ Changes Since Prior Releases</h1>
 <li>Added the type <a class="el" href="dr__ir__instr_8h.html#aea5eb2378e8c8e2e928f4e501f5b3808">dr_encoding_hint_type_t</a>.</li>
 <li>Added <a class="el" href="dr__ir__macros_8h.html#a3dd77ca1e79cf1b15b215694bef0affa">INSTR_ENCODING_HINT</a> macro.</li>
 <li>Added <a class="el" href="dr__tools_8h.html#a407fa7ac15e482174d2ff75dcc312192">dr_standalone_exit()</a> with support for re-attaching afterward.</li>
-<li>Added <a class="el" href="dr__events_8h.html#a101820819df420894a4fbb6a6c0651c3">dr_register_low_on_memory_event()</a> for tracking low on memory events.</li>
+<li>Added <a class="el" href="dr__events_8h.html#a4271466202a274f00d410e698ca252fb">dr_register_low_on_memory_event()</a> for tracking low on memory events.</li>
 <li>Added <a class="el" href="dr__ir__utils_8h.html#a86f35e8073bbec6ba326b7c3ff2d6284">dr_mcontext_zmm_fields_valid()</a> to query the state of lazy AVX-512 context switching.</li>
 <li>Added the function <a class="el" href="dr__proc_8h.html#aaba068462550d9b73c32c0991c5f7551">proc_avx512_enabled()</a>.</li>
 <li>Added support for applications using the Linux kernel's restartable sequence ("rseq") feature, subject to the limitations listed in <a class="el" href="API_BT.html#sec_rseq">Restartable Sequence Instrumentation Constraints</a>.</li>
@@ -404,7 +405,7 @@ Changes Since Prior Releases</h1>
 <li>Added the function <a class="el" href="dr__ir__instr_8h.html#ada14ae87adcc52a9804b4645f43ceb48">instr_reads_from_exact_reg()</a> to test whether instructions read from exact registers.</li>
 <li>Added the function <a class="el" href="dr__ir__opnd_8h.html#a02b51b4c365d63eff45b310f8eb680dd">reg_is_vector_simd()</a> to test whether registers are either XMM, YMM or ZMM, excluding any MMX register checks.</li>
 <li>Added DR_NUM_SIMD_VECTOR_REGS as an alias to MCXT_NUM_SIMD_SLOTS in order to get the static number of supported SIMD vectors.</li>
-<li>Added <a class="el" href="group__drmgr.html#ga604545b4d3e296acdbfe92e0af275fcc">drmgr_register_low_on_memory_event()</a>, <a class="el" href="group__drmgr.html#ga29d5f9f8bf50ec7cfbc2ac1f7dff8820">drmgr_unregister_low_on_memory_event()</a> and their variants so that drmgr can support low-on-memory events.</li>
+<li>Added <a class="el" href="group__drmgr.html#ga736255042d42ee91ca570d2e900b19ce">drmgr_register_low_on_memory_event()</a>, <a class="el" href="group__drmgr.html#ga2f2036d152e1ffac3e64ae5814806384">drmgr_unregister_low_on_memory_event()</a> and their variants so that drmgr can support low-on-memory events.</li>
 <li>Added <a class="el" href="group__drmgr.html#ga6d7f56824be0f6b04d5b6353f0681d70">drmgr_is_first_nonlabel_instr()</a> and <a class="el" href="dr__ir__instrlist_8h.html#a2f7cbf7ff74de027258b006cb71da483">instrlist_first_nonlabel()</a>.</li>
 <li>Added a new standalone tool "drdisas" which disassembles raw bytes using DR's decoder.</li>
 <li>Added <a class="el" href="dr__ir__decode_8h.html#ae858a4329f5eab4fd5c2562831ddc196">decode_sizeof_ex()</a> and <a class="el" href="dr__ir__instr_8h.html#ab4dd9c7a0964854463773c9a88e06fea">instr_get_rel_data_or_instr_target()</a> handling relative instruction references.</li>
@@ -1285,5 +1286,5 @@ Plans for Future Releases</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20634 --- Fri Jul 3 2026 04:20:38 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20643 --- Fri Jul 10 2026 04:23:55 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -18,6 +18,7 @@
         [ "file_reader_t", "classdynamorio_1_1drmemtrace_1_1file__reader__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1file__reader__t.js %} ],
         [ "flexible_queue_t", "classdynamorio_1_1drmemtrace_1_1flexible__queue__t.html", null ],
         [ "ir2trace_t", "classdynamorio_1_1drmemtrace_1_1ir2trace__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1ir2trace__t.js %} ],
+        [ "kernel_filter_t", "classdynamorio_1_1drmemtrace_1_1kernel__filter__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1kernel__filter__t.js %} ],
         [ "kernel_tracker_tmpl_t", "classdynamorio_1_1drmemtrace_1_1kernel__tracker__tmpl__t.html", {% include_relative classdynamorio_1_1drmemtrace_1_1kernel__tracker__tmpl__t.js %} ],
         [ "_memref_data_t", "structdynamorio_1_1drmemtrace_1_1__memref__data__t.html", {% include_relative structdynamorio_1_1drmemtrace_1_1__memref__data__t.js %} ],
         [ "_memref_instr_t", "structdynamorio_1_1drmemtrace_1_1__memref__instr__t.html", {% include_relative structdynamorio_1_1drmemtrace_1_1__memref__instr__t.js %} ],

@@ -78,8 +78,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:a1074b84b2b9eb05337a431193789c9e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4bb25312a86996379357f79a4c7c1c1"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#ad4bb25312a86996379357f79a4c7c1c1">dr_auxlib_handle_t</a></td></tr>
 <tr class="separator:ad4bb25312a86996379357f79a4c7c1c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac429103cb983108880aee9b1377c430c"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#ac429103cb983108880aee9b1377c430c">dr_auxlib_routine_ptr_t</a>) ()</td></tr>
-<tr class="separator:ac429103cb983108880aee9b1377c430c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab125c2852c8e52606bd0fe6a6e6204fe"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#ab125c2852c8e52606bd0fe6a6e6204fe">dr_auxlib_routine_ptr_t</a>) (void)</td></tr>
+<tr class="separator:ab125c2852c8e52606bd0fe6a6e6204fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24463a9c32e3efac726c6fc9e97a77d6"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__dr__mem__info__t.html">_dr_mem_info_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#a24463a9c32e3efac726c6fc9e97a77d6">dr_mem_info_t</a></td></tr>
 <tr class="separator:a24463a9c32e3efac726c6fc9e97a77d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -200,7 +200,7 @@ Functions</h2></td></tr>
 <tr class="separator:a8eaacb8d6e7e0934088e74475c9e7b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad63441e619a7b933e3198816cdc672c5"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__os__utils_8h.html#ad4bb25312a86996379357f79a4c7c1c1">dr_auxlib_handle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#ad63441e619a7b933e3198816cdc672c5">dr_load_aux_library</a> (const char *name, byte **lib_start, byte **lib_end)</td></tr>
 <tr class="separator:ad63441e619a7b933e3198816cdc672c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2c609dbb7bc2e23a268946ccbaa622a"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__os__utils_8h.html#ac429103cb983108880aee9b1377c430c">dr_auxlib_routine_ptr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#ab2c609dbb7bc2e23a268946ccbaa622a">dr_lookup_aux_library_routine</a> (<a class="el" href="dr__os__utils_8h.html#ad4bb25312a86996379357f79a4c7c1c1">dr_auxlib_handle_t</a> lib, const char *name)</td></tr>
+<tr class="memitem:ab2c609dbb7bc2e23a268946ccbaa622a"><td class="memItemLeft" align="right" valign="top">DR_API <a class="el" href="dr__os__utils_8h.html#ab125c2852c8e52606bd0fe6a6e6204fe">dr_auxlib_routine_ptr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#ab2c609dbb7bc2e23a268946ccbaa622a">dr_lookup_aux_library_routine</a> (<a class="el" href="dr__os__utils_8h.html#ad4bb25312a86996379357f79a4c7c1c1">dr_auxlib_handle_t</a> lib, const char *name)</td></tr>
 <tr class="separator:ab2c609dbb7bc2e23a268946ccbaa622a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b8b8e8368257c45d6b5a973a963d19d"><td class="memItemLeft" align="right" valign="top">DR_API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dr__os__utils_8h.html#a7b8b8e8368257c45d6b5a973a963d19d">dr_unload_aux_library</a> (<a class="el" href="dr__os__utils_8h.html#ad4bb25312a86996379357f79a4c7c1c1">dr_auxlib_handle_t</a> lib)</td></tr>
 <tr class="separator:a7b8b8e8368257c45d6b5a973a963d19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -466,14 +466,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac429103cb983108880aee9b1377c430c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac429103cb983108880aee9b1377c430c">&#9670;&nbsp;</a></span>dr_auxlib_routine_ptr_t</h2>
+<a id="ab125c2852c8e52606bd0fe6a6e6204fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab125c2852c8e52606bd0fe6a6e6204fe">&#9670;&nbsp;</a></span>dr_auxlib_routine_ptr_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* dr_auxlib_routine_ptr_t) ()</td>
+          <td class="memname">typedef void(* dr_auxlib_routine_ptr_t) (void)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -953,7 +953,7 @@ The Windows API routine GetVersionEx may hide distinctions between versions, suc
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">DR_API <a class="el" href="dr__os__utils_8h.html#ac429103cb983108880aee9b1377c430c">dr_auxlib_routine_ptr_t</a> dr_lookup_aux_library_routine </td>
+          <td class="memname">DR_API <a class="el" href="dr__os__utils_8h.html#ab125c2852c8e52606bd0fe6a6e6204fe">dr_auxlib_routine_ptr_t</a> dr_lookup_aux_library_routine </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="dr__os__utils_8h.html#ad4bb25312a86996379357f79a4c7c1c1">dr_auxlib_handle_t</a>&#160;</td>
           <td class="paramname"><em>lib</em>, </td>
@@ -1540,5 +1540,5 @@ DR may mark writable code pages as read-only but pretend they're writable. When 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20634 --- Fri Jul 3 2026 04:20:37 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20643 --- Fri Jul 10 2026 04:23:54 &nbsp; <img border=0 src="favicon.png">
 </small></address>

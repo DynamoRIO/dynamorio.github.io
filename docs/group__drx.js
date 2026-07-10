@@ -69,5 +69,5 @@
     [ "drx_register_time_scaling", "group__drx.html#ga4f657728a448e98f041dc8df7adacaeb", null ],
     [ "drx_reserve_note_range", "group__drx.html#ga3189cbfbf85d5c32965bd8a140b2c35e", null ],
     [ "drx_tail_pad_block", "group__drx.html#ga8f9c7628a63632568aaeb62beeb3a89a", null ],
-    [ "drx_unregister_time_scaling", "group__drx.html#gadb73fd51afeefebe64992c18ffde4a69", null ]
+    [ "drx_unregister_time_scaling", "group__drx.html#gabf6adace71eb2d40d5f5907b02899f35", null ]
 ],

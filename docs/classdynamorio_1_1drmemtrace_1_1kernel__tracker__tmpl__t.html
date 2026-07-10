@@ -37,6 +37,8 @@ permalink: /classdynamorio_1_1drmemtrace_1_1kernel__tracker__tmpl__t.html
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab3eb3a8e89d93d0b3673a63ced770660"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1kernel__tracker__tmpl__t.html#ab3eb3a8e89d93d0b3673a63ced770660">in_kernel_trace</a> () const</td></tr>
 <tr class="separator:ab3eb3a8e89d93d0b3673a63ced770660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6613f7acfe40c3215d7cb68bd6a0840d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1kernel__tracker__tmpl__t.html#a6613f7acfe40c3215d7cb68bd6a0840d">in_syscall_trace</a> () const</td></tr>
+<tr class="separator:a6613f7acfe40c3215d7cb68bd6a0840d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae41cb41da9e49d75fc4c87de207db34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1kernel__tracker__tmpl__t.html#aae41cb41da9e49d75fc4c87de207db34">update</a> (const RecordType &amp;record)</td></tr>
 <tr class="separator:aae41cb41da9e49d75fc4c87de207db34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -73,6 +75,34 @@ template&lt;typename RecordType &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Returns whether the current point in the trace is inside a kernel region. Kernel regions include system calls, context switches, and hardware events such an interrupts. </p>
+
+</div>
+</div>
+<a id="a6613f7acfe40c3215d7cb68bd6a0840d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6613f7acfe40c3215d7cb68bd6a0840d">&#9670;&nbsp;</a></span>in_syscall_trace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classdynamorio_1_1drmemtrace_1_1kernel__tracker__tmpl__t.html">dynamorio::drmemtrace::kernel_tracker_tmpl_t</a>&lt; RecordType &gt;::in_syscall_trace </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns whether the current point in the trace is inside a system call trace region. </p>
 
 </div>
 </div>
@@ -114,5 +144,5 @@ template&lt;typename RecordType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20634 --- Fri Jul 3 2026 04:20:39 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20643 --- Fri Jul 10 2026 04:23:56 &nbsp; <img border=0 src="favicon.png">
 </small></address>
