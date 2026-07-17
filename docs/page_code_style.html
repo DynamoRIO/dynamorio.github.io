@@ -41,7 +41,7 @@ Naming Conventions</h1>
 </li>
 <li>Type names are all lowercase, with underscores dividing words, and ending in <code>_t</code>: <div class="fragment"><div class="line"><a class="code" href="structinstr__t.html">instr_t</a></div>
 <div class="line">build_bb_t</div>
-<div class="ttc" id="astructinstr__t_html"><div class="ttname"><a href="structinstr__t.html">instr_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:385</div></div>
+<div class="ttc" id="astructinstr__t_html"><div class="ttname"><a href="structinstr__t.html">instr_t</a></div><div class="ttdef"><b>Definition:</b> dr_defines.h:399</div></div>
 </div><!-- fragment --> This is true for C++ class names as well.</li>
 <li>The name of a struct in a C typedef should be the type name with an underscore prefixed: <div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>_build_bb_t {</div>
 <div class="line">    ...</div>
@@ -75,6 +75,8 @@ Naming Conventions</h1>
 <li>Use <code>static</code> when possible for every function or variable that is not needed outside of its own file.</li>
 <li>Do not shadow global variables (or variables in containing scopes) by using local variables of the same name: choose a distinct name for the local variable.</li>
 <li>Template parameters in C++ should have a descriptive CamelCase identifier.</li>
+<li>Do not use <code>_</code> as a name (using it implies the language treats it specially, as some other languages do, yet it is not special-cased in C++; leading underscores are not supposed to be used in regular code per the language specification; other project code styles discourage <code>_</code>): use <code>unused</code> or something similar when a variable is not used, as in C++ structured bindings: <div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;[unused, shard] : shard_map_) {</div>
+</div><!-- fragment --></li>
 </ol>
 <h1><a class="anchor" id="autotoc_md106"></a>
 Types</h1>
@@ -132,6 +134,8 @@ Types</h1>
 <div class="line">};</div>
 </div><!-- fragment --></li>
 <li>Do not assume that <code>char</code> is signed: use our <code>sbyte</code> typedef for a signed one-byte type.</li>
+<li>Only use <code>auto</code> when it aids readability, when the type is already clear from the context: do not use it to save typing. In practice, <code>auto</code> should only be used for range-based for loops, iterators, and cases where an assignment includes the type such as casts or smart pointer creation.</li>
+<li>Only fully qualify namespaces (i.e., use a leading <code>::</code>) in aliases and using declarations. In all other uses, do not fully qualify, as collisions are very rare and the extra characters hinder readability.</li>
 </ol>
 <h1><a class="anchor" id="autotoc_md107"></a>
 Commenting Conventions</h1>
@@ -317,5 +321,5 @@ C++</h1>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20646 --- Sun Jul 12 2026 02:27:58 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20651 --- Fri Jul 17 2026 04:03:35 &nbsp; <img border=0 src="favicon.png">
 </small></address>
