@@ -48,7 +48,7 @@ Unix x64 Expression</h2>
 <div class="line"><span class="preprocessor">#define ANNOTATION_FUNCTION_CLOBBER_LIST &quot;%rax&quot;</span>,&quot;%rcx&quot;,&quot;%rdx&quot;,&quot;%rsi&quot;,&quot;%rdi&quot;,&quot;%r8&quot;,&quot;%r9&quot;</div>
 <div class="line"><span class="preprocessor">#define _CALL_TYPE</span></div>
 <div class="line"><span class="preprocessor">#define DR_ANNOTATION_ATTRIBUTES \</span></div>
-<div class="line"><span class="preprocessor">    __attribute__((noinline, visibility(&quot;hidden&quot;</span>) _CALL_TYPE))</div>
+<div class="line"><span class="preprocessor">    __attribute__((__noinline__, visibility(&quot;hidden&quot;</span>) _CALL_TYPE))</div>
 <div class="line"><span class="preprocessor">#define DR_DEFINE_ANNOTATION(return_type, annotation, parameters, body) \</span></div>
 <div class="line"><span class="preprocessor">    const char *annotation##_label = &quot;dynamorio-annotation:&quot;</span>#annotation; \</div>
 <div class="line">    DR_ANNOTATION_ATTRIBUTES return_type annotation parameters \</div>
@@ -569,5 +569,5 @@ Statement</h2>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20651 --- Fri Jul 17 2026 04:03:35 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20657 --- Fri Jul 24 2026 04:05:07 &nbsp; <img border=0 src="favicon.png">
 </small></address>
