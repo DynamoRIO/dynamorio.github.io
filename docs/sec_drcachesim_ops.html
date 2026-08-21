@@ -279,7 +279,7 @@ Causes trace analyzers to only analyze this many instructions (and any number of
 <em>default value: 0</em> <br  />
 Causes trace analyzers to only analyze this many records and then exit. A 0 value disables. If instructions are skipped (-skip_instrs), that happens first before record counting starts here. This is similar to -sim_refs, though it is implemented in the framework and so applies to all tools. This option is not compatible with -sim_refs, -skip_refs, -warmup_refs, or -warmup_fraction. For traces with multiple shards, each output shard separately stops when it reaches this count within the shard.</li>
 <li><b>-view_syntax</b> <br  />
-<em>default value: att/arm/dr/riscv</em> <br  />
+<em>default value: att/intel/arm/dr/riscv</em> <br  />
 Specifies the syntax to use when viewing disassembled offline traces. The option can be set to one of "att" (AT&amp;T style), "intel" (Intel style), "dr" (DynamoRIO's native style with all implicit operands listed), "arm" (32-bit ARM style), and "riscv" (RISC-V style). An invalid specification falls back to the default, which is "att" for x86, "arm" for ARM (32-bit), "dr" for AArch64, and "riscv" for RISC-V.</li>
 <li><b>-config_file</b> <br  />
 <em>default value: ""</em> <br  />
@@ -487,5 +487,5 @@ This applies only to dynamic -core_sharded scheduling. The activity (the sum of 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20676 --- Fri Aug 14 2026 03:47:26 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20685 --- Fri Aug 21 2026 03:23:42 &nbsp; <img border=0 src="favicon.png">
 </small></address>
