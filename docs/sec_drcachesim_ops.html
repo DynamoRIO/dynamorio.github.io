@@ -37,7 +37,7 @@ By default, traces are processed online, sent over a pipe to a simulator. If thi
 For online tracing and simulation (the default, unless -offline is requested), specifies the name of the named pipe used to communicate between the target application processes and the caching device simulator. On Linux this can include an absolute path (if it doesn't, a default temp directory will be used). A unique name must be chosen for each instance of the simulator being run at any one time. On Windows, the name is limited to 247 characters.</li>
 <li><b>-outdir</b> <br  />
 <em>default value: .</em> <br  />
-For the offline analysis mode (when -offline is requested), specifies the path to a directory where per-thread trace files will be written. The contents of this directory are internal to the tool. Do not alter, add, or delete files here.</li>
+For the offline analysis mode (when -offline is requested), specifies the path to a directory where per-thread trace files will be written, or 'none' to discard trace data in-memory (evaluating pure instrumentation overhead). The contents of this directory are internal to the tool. Do not alter, add, or delete files here.</li>
 <li><b>-subdir_prefix</b> <br  />
 <em>default value: drmemtrace</em> <br  />
 For the offline analysis mode (when -offline is requested), specifies the prefix for the name of the sub-directory where per-thread trace files will be written. The sub-directory is created inside -outdir and has the form 'prefix.app-name.pid.id.dir'.</li>
@@ -164,6 +164,9 @@ If non-zero, after tracing the specified number of references, the process is ex
 <li><b>-raw_compress</b> <br  />
 <em>default value: lz4</em> <br  />
 Specifies the compression type to use for raw offline files: "snappy", "snappy_nocrc" (snappy without checksums, which is much faster), "gzip", "zlib", "lz4", or "none". Whether this reduces overhead depends on the storage type: for an SSD, zlib and gzip typically add overhead and would only be used if space is at a premium; snappy_nocrc and lz4 are nearly always performance wins.</li>
+<li><b>-raw_compress_level</b> <br  />
+<em>default value: 0</em> <br  />
+Specifies the compression level to use for raw offline files (when supported by the selected compression type, currently only lz4). For lz4, accepts any integer value including negative numbers (values &lt; 0 provide faster compression with lower compression ratios). The default value is 0.</li>
 <li><b>-compress</b> <br  />
 <em>default value: zip</em> <br  />
 Specifies the compression type to use for trace files: "zip", "gzip", "zlib", "lz4", or "none". In most cases where fast skipping by instruction count is not needed lz4 compression generally improves performance and is recommended. When it comes to storage types, the impact on overhead varies: for SSDs, zip and gzip often increase overhead and should only be chosen if space is limited.</li>
@@ -487,5 +490,5 @@ This applies only to dynamic -core_sharded scheduling. The activity (the sum of 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20692 --- Fri Aug 28 2026 05:45:31 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20699 --- Fri Sep 4 2026 03:12:29 &nbsp; <img border=0 src="favicon.png">
 </small></address>
