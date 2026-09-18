@@ -165,6 +165,8 @@ Enumerations</h2></td></tr>
 &#160;&#160;<b>DR_NOTE_CALL_SEQUENCE_END</b>
 , <br />
 &#160;&#160;<a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a217ca0bfff6b13fc74018b26084764fe">DR_NOTE_RSEQ_ENTRY</a>
+, <br />
+&#160;&#160;<a class="el" href="dr__defines_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a862d4ed08842a9d4c2a38dddda92b790">DR_NOTE_SELFMOD_COPY</a>
 <br />
  }</td></tr>
 <tr class="separator:adf764cbdea00d65edcd07bb9953ad2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -757,6 +759,8 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7a217ca0bfff6b13fc74018b26084764fe"></a>DR_NOTE_RSEQ_ENTRY&#160;</td><td class="fielddoc"><p>Placed at the top of a basic block, this identifies the entry to an "rseq" (Linux restartable sequence) region. The first two label data fields (see <a class="el" href="dr__ir__instr_8h.html#a946303e1c9c3d1102603dc9842479b0c">instr_get_label_data_area()</a>) are filled in with this rseq region's end PC and its abort handler PC, in that order. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7a862d4ed08842a9d4c2a38dddda92b790"></a>DR_NOTE_SELFMOD_COPY&#160;</td><td class="fielddoc"><p>On AArch64, identifies the ADR that should be patched to point to a fragment's selfmod copy. </p>
+</td></tr>
 </table>
 
 </div>
@@ -997,5 +1001,5 @@ Variables</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20706 --- Fri Sep 11 2026 03:11:24 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20712 --- Fri Sep 18 2026 03:11:10 &nbsp; <img border=0 src="favicon.png">
 </small></address>

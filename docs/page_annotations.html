@@ -24,7 +24,7 @@ permalink: /page_annotations.html
 <div class="title">Annotations </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md18"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md22"></a>
 Annotation Types</h1>
 <ol type="1">
 <li><b>Statement</b>: the annotation directly precedes the call site<ul>
@@ -38,9 +38,9 @@ Annotation Types</h1>
 </li>
 </ol>
 <p>Every annotation function is defined as an expression, i.e., its body begins with the annotation tag. If a particular call site is annotated, that invocation becomes a statement, and the annotation function call is skipped in a native run. When calling an annotation as an expression, the annotation function is invoked (i.e., not skipped) to avoid control flow confusion in nested expressions (especially where annotation expressions are nested). The annotation tag is placed inside the annotation function for the expression context because (1) it is easy to find there, (2) it requires only one instrumentation per run, and (3) the function is being invoked anyway.</p>
-<h1><a class="anchor" id="autotoc_md19"></a>
+<h1><a class="anchor" id="autotoc_md23"></a>
 Annotation Samples from Debug Builds</h1>
-<h2><a class="anchor" id="autotoc_md20"></a>
+<h2><a class="anchor" id="autotoc_md24"></a>
 Unix x64 Expression</h2>
 <p><b>C function definition</b> </p><div class="fragment"><div class="line">DR_DEFINE_ANNOTATION(<span class="keywordtype">char</span>, dynamorio_annotate_running_on_dynamorio, (), <span class="keywordflow">return</span> 0)</div>
 </div><!-- fragment --><p><b>C macro</b> for definition of <code>dynamorio_annotate_running_on_dynamorio()</code>: </p><div class="fragment"><div class="line"><span class="preprocessor">#define LABEL_REFERENCE_LENGTH &quot;0x11&quot;</span></div>
@@ -78,7 +78,7 @@ Unix x64 Expression</h2>
 <div class="line">40215e:   eb 00                   jmp    402160</div>
 <div class="line">402160:   5d                      pop    %rbp</div>
 <div class="line">402161:   c3                      retq</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md21"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md25"></a>
 Unix x64 Statement</h2>
 <p><b>C code</b> </p><div class="fragment"><div class="line">TEST_ANNOTATION_SET_MODE(init-&gt;id, MODE_1,</div>
 <div class="line">{</div>
@@ -121,7 +121,7 @@ Unix x64 Statement</h2>
 <div class="line">401b96:   b8 00 00 00 00          mov    $0x0,%eax</div>
 <div class="line">401b9b:   e8 f0 f5 ff ff          callq  401190 &lt;printf@plt&gt;</div>
 <div class="line">401ba0:   c7 45 e8 00 00 00 00    movl   $0x0,-0x18(%rbp)         # app code...</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md22"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md26"></a>
 Unix x86 Expression</h2>
 <p><b>C function definition</b> </p><div class="fragment"><div class="line">DR_DEFINE_ANNOTATION(<span class="keywordtype">char</span>, dynamorio_annotate_running_on_dynamorio, (), <span class="keywordflow">return</span> 0)</div>
 </div><!-- fragment --><p><b>C macro</b> for definition of <code>dynamorio_annotate_running_on_dynamorio()</code>: </p><div class="fragment"><div class="line"><span class="preprocessor">#define LABEL_REFERENCE_LENGTH &quot;0xc&quot;</span></div>
@@ -157,7 +157,7 @@ Unix x86 Expression</h2>
 <div class="line">8049b82:   eb 00                   jmp    8049b84</div>
 <div class="line">8049b84:   5d                      pop    %ebp</div>
 <div class="line">8049b85:   c3                      ret</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md23"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md27"></a>
 Unix x86 Statement</h2>
 <p><b>C code</b> </p><div class="fragment"><div class="line">TEST_ANNOTATION_SET_MODE(init-&gt;id, MODE_1,</div>
 <div class="line">{</div>
@@ -197,7 +197,7 @@ Unix x86 Statement</h2>
 <div class="line">804963c:   c7 04 24 9a 9f 04 08    movl   $0x8049f9a,(%esp)</div>
 <div class="line">8049643:   e8 88 f6 ff ff          call   8048cd0 &lt;printf@plt&gt;</div>
 <div class="line">8049648:   c7 45 e8 00 00 00 00    movl   $0x0,-0x18(%ebp)      # app code...</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md24"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md28"></a>
 Windows x64 Expression</h2>
 <p><b>C function definition</b> </p><div class="fragment"><div class="line">DR_DEFINE_ANNOTATION(<span class="keywordtype">char</span>, dynamorio_annotate_running_on_dynamorio, (), <span class="keywordflow">return</span> 0)</div>
 </div><!-- fragment --><p><b>C macro</b> for definition of <code>dynamorio_annotate_running_on_dynamorio()</code>: </p><div class="fragment"><div class="line"><span class="preprocessor">#define DR_DEFINE_ANNOTATION_LABELS(annotation) \</span></div>
@@ -229,7 +229,7 @@ Windows x64 Expression</h2>
 <div class="line">0000000140002006: EB 02              jmp         000000014000200A   # jump over the native version</div>
 <div class="line">0000000140002008: 32 C0              xor         al,al              # native version (<span class="keywordflow">return</span> 0)</div>
 <div class="line">000000014000200A: F3 C3              rep ret</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md25"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md29"></a>
 Windows x64 Statement</h2>
 <p><em>C code</em> </p><div class="fragment"><div class="line">TEST_ANNOTATION_SET_MODE(init-&gt;id, MODE_1,</div>
 <div class="line">{</div>
@@ -270,7 +270,7 @@ Windows x64 Statement</h2>
 <div class="line">0000000140001A05: 77 AF              ja          00000001400019B6         # loopback to annotation head (never taken)</div>
 <div class="line">0000000140001A07: C7 44 24 50 00 00  mov         dword ptr [# app code...</div>
 <div class="line">                  00 00</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md26"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md30"></a>
 Windows x86 Expression</h2>
 <p><em>C function definition</em> </p><div class="fragment"><div class="line">DR_DEFINE_ANNOTATION(<span class="keywordtype">char</span>, dynamorio_annotate_running_on_dynamorio, (), <span class="keywordflow">return</span> 0)</div>
 </div><!-- fragment --><p><em>C macro</em> for definition of <code>dynamorio_annotate_running_on_dynamorio()</code>: </p><div class="fragment"><div class="line"><span class="preprocessor">#define DR_DEFINE_ANNOTATION(return_type, annotation, parameters, body) \</span></div>
@@ -302,7 +302,7 @@ Windows x86 Expression</h2>
 <div class="line">0040199F: 32 C0              xor         al,al      # native version</div>
 <div class="line">004019A1: 5D                 pop         ebp</div>
 <div class="line">004019A2: C3                 ret</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md27"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md31"></a>
 Windows x86 Statement</h2>
 <p><b>C code</b> </p><div class="fragment"><div class="line">TEST_ANNOTATION_SET_MODE(init-&gt;id, MODE_1,</div>
 <div class="line">{</div>
@@ -339,9 +339,9 @@ Windows x86 Statement</h2>
 <div class="line">004017AF: 83 C4 08           add         esp,8</div>
 <div class="line">004017B2: C7 45 FC 00 00 00  mov         dword ptr [ebp-4](42C770h]),0                   # app code...</div>
 <div class="line">          00</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md28"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md32"></a>
 Samples of Special Cases</h1>
-<h2><a class="anchor" id="autotoc_md29"></a>
+<h2><a class="anchor" id="autotoc_md33"></a>
 Nested annotations: Windows x64 (/Ox /GL)</h2>
 <p><b>C code</b> for nested annotations </p><div class="fragment"><div class="line"><span class="keyword">static</span> __inline <span class="keywordtype">int</span></div>
 <div class="line">annotated_function()</div>
@@ -382,7 +382,7 @@ Nested annotations: Windows x64 (/Ox /GL)</h2>
 <div class="line">                  FF</div>
 <div class="line">000000014000F994: 77 AA              ja          000000014000F940</div>
 <div class="line">000000014000F996: 33 C0              xor         eax,eax                    # app code...</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md30"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md34"></a>
 Nested annotations with shared label: Windows x64 (/Ox /GL)</h2>
 <p><em>C code</em> for nested annotations with shared label </p><div class="fragment"><div class="line">INLINE <span class="keywordtype">double</span> Triangle::get_b()</div>
 <div class="line">{</div>
@@ -443,9 +443,9 @@ Nested annotations with shared label: Windows x64 (/Ox /GL)</h2>
 <div class="line">0000000140001240: 48 81 FF D8 FE FF  cmp         rdi,0FFFFFFFFFFFFFED8h    # outer annotation tail</div>
 <div class="line">                  FF</div>
 <div class="line">0000000140001247: 0F 87 65 FF FF FF  ja          00000001400011B2</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md31"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md35"></a>
 Detection Algorithms</h1>
-<h2><a class="anchor" id="autotoc_md32"></a>
+<h2><a class="anchor" id="autotoc_md36"></a>
 Unix</h2>
 <ul>
 <li>For each ubr with exact byte sequence "`EB XX`" (where "`XX`" is "`11`" on x64 and "`0c`" on x86)<ul>
@@ -474,7 +474,7 @@ Unix</h2>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md33"></a>
+<h2><a class="anchor" id="autotoc_md37"></a>
 Windows x86</h2>
 <ul>
 <li>For each ubr with exact byte sequence "`EB 06`"<ul>
@@ -500,7 +500,7 @@ Windows x86</h2>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md34"></a>
+<h2><a class="anchor" id="autotoc_md38"></a>
 Windows x64</h2>
 <ul>
 <li>For each cbr<ul>
@@ -537,9 +537,9 @@ Windows x64</h2>
 </ul>
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md35"></a>
+<h1><a class="anchor" id="autotoc_md39"></a>
 Instrumentation Algorithms</h1>
-<h2><a class="anchor" id="autotoc_md36"></a>
+<h2><a class="anchor" id="autotoc_md40"></a>
 Expression</h2>
 <p><em>Occurs at the top of an annotation function body</em></p>
 <ul>
@@ -549,7 +549,7 @@ Expression</h2>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md37"></a>
+<h2><a class="anchor" id="autotoc_md41"></a>
 Statement</h2>
 <p><em>Occurs at an annotation site</em></p>
 <ul>
@@ -569,5 +569,5 @@ Statement</h2>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20706 --- Fri Sep 11 2026 03:11:27 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20712 --- Fri Sep 18 2026 03:11:12 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -363,7 +363,7 @@ Using Cygwin</h2>
 <hr  />
 <h2><a class="anchor" id="sec_cmake"></a>
 Details of Building with CMake</h2>
-<h2><a class="anchor" id="autotoc_md78"></a>
+<h2><a class="anchor" id="autotoc_md82"></a>
 Components</h2>
 <p>DynamoRIO contains several distinct components:</p>
 <ul>
@@ -374,7 +374,7 @@ Components</h2>
 <li>suite/ = tests</li>
 </ul>
 <p>All components are combined into a single CMake project.</p>
-<h2><a class="anchor" id="autotoc_md79"></a>
+<h2><a class="anchor" id="autotoc_md83"></a>
 Configuring Your Build</h2>
 <p>First, configure your compiler. On Windows this means setting up the environment variables (including <code>PATH</code>). On Linux, if your compiler supports both 64-bit and 32-bit targets, you can select the non-default type by setting the <code>CFLAGS</code> and <code>CXXFLAGS</code> environment variables to the flags used to change your compiler's target. For example, for gcc:</p>
 <div class="fragment"><div class="line">export CXXFLAGS=-m32</div>
@@ -409,13 +409,13 @@ Configuring Your Build</h2>
 </div><!-- fragment --><p>To improve compilation speed on Windows, if you are using a makefile-based generator (i.e., not Visual Studio), you can turn off the progress and status messages with this CMake define:</p>
 <div class="fragment"><div class="line">-DCMAKE_RULE_MESSAGES:BOOL=OFF</div>
 </div><!-- fragment --><p>On Windows, if you use Cygwin and hit <a href="http://www.cmake.org/Bug/print_bug_page.php?bug_id=13131">CMake bug#13131</a>, you may need to kill all running MSBuild instances and unset the <code>TMP</code> and <code>TEMP</code> environment variables.</p>
-<h2><a class="anchor" id="autotoc_md80"></a>
+<h2><a class="anchor" id="autotoc_md84"></a>
 Building</h2>
 <p>After the configuration step is complete, for release build, type </p><div class="fragment"><div class="line">cmake --build . --config RelWithDebInfo</div>
 </div><!-- fragment --><p> or if you turned on DEBUG, type </p><div class="fragment"><div class="line">cmake --build .</div>
 </div><!-- fragment --><p> or if you are using <b>NMake Makefiles</b>, type </p><div class="fragment"><div class="line">nmake</div>
 </div><!-- fragment --><p> or on Linux, type </p><div class="fragment"><div class="line">make</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md81"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md85"></a>
 An Example of Building DynamoRIO in Windows-XP 64bit in cmd</h2>
 <ul>
 <li>step 1: set INCLUDE, LIB, LIBPATH, and PATH by running the Visual Studio Command Prompt, under the Visual Studio Tools in the Visual Studio start menu entry. Alternatively, from a plain cmd window: <div class="fragment"><div class="line">E:\&gt;<span class="stringliteral">&quot;c:\Program Files (x86)\Microsoft Visual Studio 8\VC\vcvarsall.bat&quot;</span></div>
@@ -435,7 +435,7 @@ An Example of Building DynamoRIO in Windows-XP 64bit in cmd</h2>
 <li>step 5: build and install <pre class="fragment">E:\dynamorio\build\&gt;cmake --build . --config Release
 </pre></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md82"></a>
+<h2><a class="anchor" id="autotoc_md86"></a>
 Configuring in Batch Mode</h2>
 <p>Instead of interactive configuration you can pass all your parameter changes to CMake on the command line. For example:</p>
 <p>On Windows: </p><div class="fragment"><div class="line">mkdir build</div>
@@ -447,7 +447,7 @@ Configuring in Batch Mode</h2>
 <div class="line">cmake -DBUILD_DOCS:BOOL=OFF ..</div>
 <div class="line">make</div>
 </div><!-- fragment --><p>Developers may wish to pass <code>-DCMAKE_VERBOSE_MAKEFILE=1</code> to CMake in order to see the compilation command lines. They can alternatively be seen for any individual build with <code>make VERBOSE=1</code>.</p>
-<h2><a class="anchor" id="autotoc_md83"></a>
+<h2><a class="anchor" id="autotoc_md87"></a>
 Re-Configuring</h2>
 <p>You can re-run the configure step, using the same parameters that you originally used, in two ways:</p>
 <div class="fragment"><div class="line">make rebuild_cache</div>
@@ -456,14 +456,14 @@ Re-Configuring</h2>
 </div><!-- fragment --><p>With the latter command you can also change the configuration, but be sure to do a <code>make clean</code> prior to building as CMake does not perform dependence checking on this type of modification. As an example:</p>
 <div class="fragment"><div class="line">cmake -DDEBUG=ON -DINTERNAL=ON .</div>
 <div class="line">make clean</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md84"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md88"></a>
 Building a Distributable Package</h2>
 <p>If you've been working with DynamoRIO's packaged binaries, you may find it easiest to install all of the dependencies listed above for your platform and then run the packaging script:</p>
 <div class="fragment"><div class="line">cd <a class="code" href="namespacedynamorio.html">dynamorio</a></div>
 <div class="line">mkdir <span class="keyword">package</span></div>
 <div class="line"><span class="keyword"></span>cd package</div>
 <div class="line">ctest -V -S ../make/package.cmake,build=1</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md85"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md89"></a>
 Details of CMake Visual Studio Generators</h2>
 <p>As of version 577, DynamoRIO supports building from Visual Studio. The /MP flag is set by default for not only parallel project builds but parallel file builds. The fastest DynamoRIO build is a Visual Studio build from the command line.</p>
 <p>First, DynamoRIO requires CMake version 3.14 or higher.</p>
@@ -506,7 +506,7 @@ Using Ninja For Better Error Messages, Faster Builds, and Proper Incremental Bui
 </div><!-- fragment --><p>One downside of the current CMake Ninja generator is that one must change the environment in order to switch to a 64-bit build directory (both the Visual Studio toolchain environment and the ASM environment variable mentioned above), whereas with the Visual Studio generator one can switch build directories without any environment changes (once the build directories are configured using the right environment).</p>
 <p>The test suite supports using Ninja by passing the use_ninja parameter:</p>
 <div class="fragment"><div class="line">ctest -V -S c:/mycheckout/suite/runsuite.cmake,use_ninja</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md86"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md90"></a>
 Using Ninja With Pre-7.0 SDK</h3>
 <p>If you end up using the (no longer officially supported) Visual Studio 2008, it's best to pair it with a pre-7.0 SDK, but Ninja runs into a problem there running <code>rc.exe</code>:</p>
 <div class="fragment"><div class="line">fatal error RC1106: invalid option: -ologo</div>
@@ -515,7 +515,7 @@ Using Ninja With Pre-7.0 SDK</h3>
 <div class="line">mv /c/Program\ Files/Microsoft\ SDKs/Windows/v6.0A/Bin/RcDll.Dll /c/Program\ Files/Microsoft\ SDKs/Windows/v6.0A/Bin/RcDll-ORIG.Dll</div>
 <div class="line">cp /c/Program\ Files/Microsoft\ SDKs/Windows/v7.1/Bin/RC.Exe /c/Program\ Files/Microsoft\ SDKs/Windows/v6.0A/Bin/</div>
 <div class="line">cp /c/Program\ Files/Microsoft\ SDKs/Windows/v7.1/Bin/RcDll.Dll /c/Program\ Files/Microsoft\ SDKs/Windows/v6.0A/Bin/</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md87"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md91"></a>
 Using MSBuild For Slightly Better Error Messages And Faster Builds</h2>
 <p>We recommend Ninja (see above) over MSBuild, but we're leaving the information on MSBuild here as it is recommended over devenv.</p>
 <p>By default, CMake will use devenv when building for Visual Studio generators.</p>
@@ -531,7 +531,7 @@ Using MSBuild For Slightly Better Error Messages And Faster Builds</h2>
 <div class="line">    config=$(grep ^CMAKE_CONFIGURATION_TYPES:S CMakeCache.txt | sed <span class="stringliteral">&#39;s/^.*=//&#39;</span>)</div>
 <div class="line">    /usr/bin/time cmake --build . --config $config -- /m</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md88"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md92"></a>
 Using Unix Makefiles On Windows For Parallel Builds</h2>
 <p>On Windows you can target <b>Unix Makefiles</b> in order to use GNU make and build in parallel (NMake does not support parallel builds; see also issue 71). However, note that Visual Studio generators support parallel builds and are faster than using Cygwin make. The instructions here are relatively old and are kept just for completeness.</p>
 <p>If you have gcc installed you will have to explicitly tell the CMake generator to prefer cl:</p>
@@ -560,5 +560,5 @@ Building the Qt DrGUI extension</h2>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20706 --- Fri Sep 11 2026 03:11:27 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20712 --- Fri Sep 18 2026 03:11:12 &nbsp; <img border=0 src="favicon.png">
 </small></address>

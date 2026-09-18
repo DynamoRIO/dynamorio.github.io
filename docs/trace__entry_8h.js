@@ -11,6 +11,7 @@
     [ "DRMEMTRACE_V2P_FILENAME", "trace__entry_8h.html#ae034780b4c90664a8ccd8a0a6cdf5884", null ],
     [ "OFFLINE_FILE_VERSION_ELIDE_X86_PUSH", "trace__entry_8h.html#aec1ca9565fad693f558f6788c31179fc", null ],
     [ "OFFLINE_FILE_VERSION_NO_OP", "trace__entry_8h.html#a19844721609cff137a54735dc6da0715", null ],
+    [ "OFFLINE_FILE_VERSION_REPSTR_LOOP", "trace__entry_8h.html#af120a5fce53b023fdec571980fe4623d", null ],
     [ "OFFLINE_FILE_VERSION_XFER_ABS_PC", "trace__entry_8h.html#a754cc9677551e4d9cfb1c5e7267b7cb1", null ],
     [ "addr_t", "trace__entry_8h.html#a55b7fcd36826c1ba1b6c06daddfcb777", null ],
     [ "trace_entry_t", "trace__entry_8h.html#a067f98c2dab7fe5329e2ba248836370e", null ],
