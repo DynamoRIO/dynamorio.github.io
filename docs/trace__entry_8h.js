@@ -9,6 +9,8 @@
     [ "DRMEMTRACE_MODULE_LIST_FILENAME", "trace__entry_8h.html#a11362437617ea146f226243e4de7ce7b", null ],
     [ "DRMEMTRACE_SERIAL_SCHEDULE_FILENAME", "trace__entry_8h.html#a8e130e1aa80df762896518a84d8d602d", null ],
     [ "DRMEMTRACE_V2P_FILENAME", "trace__entry_8h.html#ae034780b4c90664a8ccd8a0a6cdf5884", null ],
+    [ "OFFLINE_FILE_VERSION_ELIDE_AARCH64_SP", "trace__entry_8h.html#a34843f4a5554005b85fa7c08c6d7cf15", null ],
+    [ "OFFLINE_FILE_VERSION_ELIDE_IMMED_BASE", "trace__entry_8h.html#aca554dfd52a145259f2e9841237c4fd3", null ],
     [ "OFFLINE_FILE_VERSION_ELIDE_X86_PUSH", "trace__entry_8h.html#aec1ca9565fad693f558f6788c31179fc", null ],
     [ "OFFLINE_FILE_VERSION_NO_OP", "trace__entry_8h.html#a19844721609cff137a54735dc6da0715", null ],
     [ "OFFLINE_FILE_VERSION_REPSTR_LOOP", "trace__entry_8h.html#af120a5fce53b023fdec571980fe4623d", null ],
