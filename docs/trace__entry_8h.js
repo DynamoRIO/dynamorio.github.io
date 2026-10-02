@@ -145,7 +145,8 @@
       [ "TRACE_TYPE_PREFETCH_WRITE_L3_NT", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59caa6100a7e6394bb5c1b5f6f1c56a49639", null ],
       [ "TRACE_TYPE_INSTR_TAKEN_JUMP", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59ca9c9d51773f51a184dbe43b9382cc305c", null ],
       [ "TRACE_TYPE_INSTR_UNTAKEN_JUMP", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59ca93a6bfcd5d3af5e73765fe053fff98ae", null ],
-      [ "TRACE_TYPE_INVALID", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59ca06211f6221b1a91d18eb4dafa6d8aede", null ]
+      [ "TRACE_TYPE_INVALID", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59ca06211f6221b1a91d18eb4dafa6d8aede", null ],
+      [ "TRACE_TYPE_INSTR_REPEATED", "trace__entry_8h.html#a00e926de2230d3f712dcae422e6cb59ca8f793be064cf0e1b73fea6a3ad2252cd", null ]
     ] ],
     [ "trace_version_t", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5da", [
       [ "TRACE_ENTRY_VERSION_NO_KERNEL_PC", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daa51a5fc9f55436b5c610058a01825779a", null ],
@@ -154,6 +155,7 @@
       [ "TRACE_ENTRY_VERSION_BRANCH_INFO", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daa15c44ecec7fe8199d013bac8b759909e", null ],
       [ "TRACE_ENTRY_VERSION_FREQUENT_TIMESTAMPS", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daaf97ac42c62a634e8c33ffad2c4953f39", null ],
       [ "TRACE_ENTRY_VERSION_RETIRED_INSTRUCTIONS_ONLY", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daaa9e2b8bacdf4a63bdcf4f6c15ec5855a", null ],
+      [ "TRACE_ENTRY_VERSION_NO_UNFETCHED_INSTRUCTIONS", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daa5b2bc14027092d92538c1cb9d7df0c4b", null ],
       [ "TRACE_ENTRY_VERSION", "trace__entry_8h.html#ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e", null ]
     ] ],
     [ "entry_has_pc", "trace__entry_8h.html#a936a4942bde0193daddcb026ee138c59", null ],

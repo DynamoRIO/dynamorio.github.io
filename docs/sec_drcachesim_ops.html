@@ -148,10 +148,10 @@ Capture a memory dump upon the initiation of tracing triggered by -trace_after_i
 If non-zero, this causes tracing to be suppressed until this many dynamic instruction executions are observed from the start of the application. At that point, regular tracing is put into place. The threshold should be considered approximate, especially for larger values. Use -trace_for_instrs, -max_trace_size, or -max_global_trace_refs to set a limit on the subsequent trace length. Use -retrace_every_instrs to trace repeatedly.</li>
 <li><b>-trace_for_instrs</b> <br  />
 <em>default value: 0</em> <br  />
-If non-zero, this stops recording a trace after the specified number of instructions are traced. Unlike -exit_after_tracing, which kills the application (and counts data as well as instructions), the application continues executing. This can be combined with -retrace_every_instrs. The actual trace period may vary slightly from this number due to optimizations that reduce the overhead of instruction counting.</li>
+If non-zero, this stops recording a trace after the specified number of instructions are traced. Unlike -exit_after_tracing, which kills the application (and counts data as well as instructions), the application continues executing. This can be combined with -retrace_every_instrs. The actual instruction count traced has a granularity of the buffer size, so shrink -main_buf_records and -trace_buf_records to increase the accuracy (but at a possible performance cost.</li>
 <li><b>-retrace_every_instrs</b> <br  />
 <em>default value: 0</em> <br  />
-This option augments -trace_for_instrs. After tracing concludes, this option causes non-traced instructions to be counted and after the number specified by this option, tracing will start up again for the -trace_for_instrs duration. This process repeats itself. This can be combined with -trace_after_instrs for an initial period of non-tracing. Each tracing window is delimited by TRACE_MARKER_TYPE_WINDOW_ID markers. For -offline traces, each window is placed into its own separate set of output files, unless -no_split_windows is set.</li>
+This option augments -trace_for_instrs. After tracing concludes, this option causes non-traced instructions to be counted and after the number specified by this option, tracing will start up again for the -trace_for_instrs duration. This process repeats itself. This can be combined with -trace_after_instrs for an initial period of non-tracing. Each tracing window is delimited by TRACE_MARKER_TYPE_WINDOW_ID markers. For -offline traces, each window is placed into its own separate set of output files, unless -no_split_windows is set. The actual trace period may vary slightly from this number due to optimizations that reduce the overhead of instruction counting.</li>
 <li><b>-trace_instr_intervals_file</b> <br  />
 <em>default value: ""</em> <br  />
 File containing instruction intervals to trace in csv format. Intervals are specified as a &lt;start, duration&gt; pair per line. Example in: clients/drcachesim/tests/instr_intervals_example.csv</li>
@@ -160,9 +160,9 @@ File containing instruction intervals to trace in csv format. Intervals are spec
 By default, offline traces in separate windows from -retrace_every_instrs are written to a different set of files for each window. If this option is disabled, all windows are concatenated into a single trace, separated by TRACE_MARKER_TYPE_WINDOW_ID markers.</li>
 <li><b>-exit_after_tracing</b> <br  />
 <em>default value: 0</em> <br  />
-If non-zero, after tracing the specified number of references, the process is exited with an exit code of 0. The reference count is approximate. Use -max_global_trace_refs instead to avoid terminating the process.</li>
+If non-zero, after tracing the specified number of references, the process is exited with an exit code of 0. The reference count is approximate with a granularity of the buffer size, so shrink -main_buf_records and -trace_buf_records to increase the accuracy (but at a possible performance cost). Use -max_global_trace_refs instead to avoid terminating the process.</li>
 <li><b>-main_buf_records</b> <br  />
-<em>default value: 4K</em> <br  />
+<em>default value: 32K</em> <br  />
 The capacity of the main (initial) thread's output buffer, as a count of 8-byte records.</li>
 <li><b>-trace_buf_records</b> <br  />
 <em>default value: 4K</em> <br  />
@@ -496,5 +496,5 @@ This applies only to dynamic -core_sharded scheduling. The activity (the sum of 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20720 --- Fri Sep 25 2026 03:11:53 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20727 --- Fri Oct 2 2026 03:12:54 &nbsp; <img border=0 src="favicon.png">
 </small></address>

@@ -315,9 +315,11 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daaf97ac42c62a634e8c33ffad2c4953f39">TRACE_ENTRY_VERSION_FREQUENT_TIMESTAMPS</a> = 6
 , <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daaa9e2b8bacdf4a63bdcf4f6c15ec5855a">TRACE_ENTRY_VERSION_RETIRED_INSTRUCTIONS_ONLY</a>
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daaa9e2b8bacdf4a63bdcf4f6c15ec5855a">TRACE_ENTRY_VERSION_RETIRED_INSTRUCTIONS_ONLY</a> = 7
 , <br />
-&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e">TRACE_ENTRY_VERSION</a> = TRACE_ENTRY_VERSION_RETIRED_INSTRUCTIONS_ONLY
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa5b2bc14027092d92538c1cb9d7df0c4b">TRACE_ENTRY_VERSION_NO_UNFETCHED_INSTRUCTIONS</a> = 8
+, <br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e">TRACE_ENTRY_VERSION</a> = TRACE_ENTRY_VERSION_NO_UNFETCHED_INSTRUCTIONS
 <br />
  }</td></tr>
 <tr class="separator:ad84239da3ba299ee4ebcf24134e6b5da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -429,6 +431,8 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca93a6bfcd5d3af5e73765fe053fff98ae">TRACE_TYPE_INSTR_UNTAKEN_JUMP</a>
 , <br />
 &#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca06211f6221b1a91d18eb4dafa6d8aede">TRACE_TYPE_INVALID</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca8f793be064cf0e1b73fea6a3ad2252cd">TRACE_TYPE_INSTR_REPEATED</a>
 <br />
  }</td></tr>
 <tr class="separator:a00e926de2230d3f712dcae422e6cb59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1799,7 +1803,8 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59cae19f584c29d740425418affdbbbeb423"></a>TRACE_TYPE_MARKER&#160;</td><td class="fielddoc"><p>A marker containing metadata about this point in the trace. It includes a marker sub-type <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295c">trace_marker_type_t</a> and a value. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59ca232a2e0ec49a9bbfff1a8b89cdf0f9eb"></a>TRACE_TYPE_INSTR_NO_FETCH&#160;</td><td class="fielddoc"><p>For core simulators, a trace includes instructions that do not incur instruction cache fetches, such as on each subsequent iteration of a rep string loop on x86. </p>
+<tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59ca232a2e0ec49a9bbfff1a8b89cdf0f9eb"></a>TRACE_TYPE_INSTR_NO_FETCH&#160;</td><td class="fielddoc"><p>For core simulators, a trace includes instructions that do not incur instruction cache fetches, such as on each subsequent iteration of a rep string loop on x86.</p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000037">Deprecated:</a></b></dt><dd>This record only appears in legacy traces with a version less than <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa5b2bc14027092d92538c1cb9d7df0c4b">TRACE_ENTRY_VERSION_NO_UNFETCHED_INSTRUCTIONS</a>. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59ca9683a384856bcbe15987ace941a22b29"></a>TRACE_TYPE_INSTR_SYSENTER&#160;</td><td class="fielddoc"><p>We separate out the x86 sysenter instruction as it has a hardcoded return point that shows up as a discontinuity in the user mode program counter execution sequence. </p>
 </td></tr>
@@ -1839,6 +1844,8 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59ca06211f6221b1a91d18eb4dafa6d8aede"></a>TRACE_TYPE_INVALID&#160;</td><td class="fielddoc"><p>An invalid record, meant for use as a sentinel value. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a00e926de2230d3f712dcae422e6cb59ca8f793be064cf0e1b73fea6a3ad2252cd"></a>TRACE_TYPE_INSTR_REPEATED&#160;</td><td class="fielddoc"><p>We separate out the x86 string loop instructions (from <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5daa5b2bc14027092d92538c1cb9d7df0c4b">TRACE_ENTRY_VERSION_NO_UNFETCHED_INSTRUCTIONS</a> onward) to make it easier to handle their potentially very long sequences of load/store records. </p>
+</td></tr>
 </table>
 
 </div>
@@ -1866,7 +1873,10 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daaf97ac42c62a634e8c33ffad2c4953f39"></a>TRACE_ENTRY_VERSION_FREQUENT_TIMESTAMPS&#160;</td><td class="fielddoc"><p>The trace contains additional timestamps to identify and distinguish application instruction execution, application syscall invocation, and trace i/o. The pre-syscall and post-syscall timestamps are as expected. Prior versions have the post-syscall timestamp actually containing the pre-syscall time. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daaa9e2b8bacdf4a63bdcf4f6c15ec5855a"></a>TRACE_ENTRY_VERSION_RETIRED_INSTRUCTIONS_ONLY&#160;</td><td class="fielddoc"><p>Trace version which has only retired instructions in drmemtraces. </p>
+<tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daaa9e2b8bacdf4a63bdcf4f6c15ec5855a"></a>TRACE_ENTRY_VERSION_RETIRED_INSTRUCTIONS_ONLY&#160;</td><td class="fielddoc"><p>The trace supports <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca27cc562c02c8a0f07411d2a349091950">TRACE_MARKER_TYPE_UNCOMPLETED_INSTRUCTION</a>. The marker is used to indicate an instruction started to execute but didn't retire. The instruction was either preempted by an asynchronous signal or caused a fault. The instruction and corresponding memrefs are removed from the trace.</p>
+<p>The marker value is the raw encoding bytes of the instruction up to the length of a pointer. The encoding will be incomplete for instructions with long encodings. It is best-effort to help understand the sequence of generated code where encodings are not available offline. The PC of this instruction is available in a subsequent <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca3b75f9115bb4146ed5540412e36bdd5a">dynamorio::drmemtrace::TRACE_MARKER_TYPE_KERNEL_EVENT</a> marker. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daa5b2bc14027092d92538c1cb9d7df0c4b"></a>TRACE_ENTRY_VERSION_NO_UNFETCHED_INSTRUCTIONS&#160;</td><td class="fielddoc"><p>The trace completely omits <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca232a2e0ec49a9bbfff1a8b89cdf0f9eb">TRACE_TYPE_INSTR_NO_FETCH</a> records. Repeated string instructions consist of a single instruction record of the new type <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca8f793be064cf0e1b73fea6a3ad2252cd">TRACE_TYPE_INSTR_REPEATED</a> followed by consecutive memory access records with no further instruction fetch record for any subsequent iteration. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ad84239da3ba299ee4ebcf24134e6b5daa8a83957a4c0707ce278f788bcdc0ed8e"></a>TRACE_ENTRY_VERSION&#160;</td><td class="fielddoc"><p>The latest version of the trace format. </p>
 </td></tr>
@@ -2423,7 +2433,7 @@ For additional file open parameters with the thread and window identifiers, use 
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns whether <code>type</code> represents any type of instruction record whether an instruction fetch or operation hint. This is a superset of <a class="el" href="namespacedynamorio_1_1drmemtrace.html#aa1ba1cd782ffa190a5110b94f88186b5">type_is_instr()</a> and includes <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca232a2e0ec49a9bbfff1a8b89cdf0f9eb">TRACE_TYPE_INSTR_NO_FETCH</a>. </p>
+<p>Returns whether <code>type</code> represents any type of instruction record whether an instruction fetch or operation hint. This is a superset of <a class="el" href="namespacedynamorio_1_1drmemtrace.html#aa1ba1cd782ffa190a5110b94f88186b5">type_is_instr()</a> and includes <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca232a2e0ec49a9bbfff1a8b89cdf0f9eb">TRACE_TYPE_INSTR_NO_FETCH</a>. Note that <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca232a2e0ec49a9bbfff1a8b89cdf0f9eb">TRACE_TYPE_INSTR_NO_FETCH</a> is now deprecated and only present in legacy traces. </p>
 
 </div>
 </div>
@@ -2901,7 +2911,7 @@ For additional file open parameters with the thread and window identifiers, use 
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns whether the type represents an instruction fetch. Deliberately excludes TRACE_TYPE_INSTR_NO_FETCH and TRACE_TYPE_INSTR_BUNDLE. </p>
+<p>Returns whether the type represents an instruction fetch. Deliberately excludes <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca232a2e0ec49a9bbfff1a8b89cdf0f9eb">TRACE_TYPE_INSTR_NO_FETCH</a> and TRACE_TYPE_INSTR_BUNDLE. <a class="el" href="namespacedynamorio_1_1drmemtrace.html#a00e926de2230d3f712dcae422e6cb59ca232a2e0ec49a9bbfff1a8b89cdf0f9eb">TRACE_TYPE_INSTR_NO_FETCH</a> is now deprecated and only present in legacy traces. </p>
 
 </div>
 </div>
@@ -3212,5 +3222,5 @@ For additional file open parameters with the thread and window identifiers, use 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20720 --- Fri Sep 25 2026 03:11:54 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20727 --- Fri Oct 2 2026 03:12:54 &nbsp; <img border=0 src="favicon.png">
 </small></address>
