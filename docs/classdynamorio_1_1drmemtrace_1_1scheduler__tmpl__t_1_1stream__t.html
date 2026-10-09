@@ -56,6 +56,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abd2352ca7b195e33fcf4aa1876daf925"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae98f622acca7b8f682c08443861fbc87"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5">stream_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#ae98f622acca7b8f682c08443861fbc87">set_active</a> (bool active)</td></tr>
 <tr class="separator:ae98f622acca7b8f682c08443861fbc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adad691a27a5b369ae75fe791c5c73a05"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#adad691a27a5b369ae75fe791c5c73a05">get_error_string</a> () const</td></tr>
+<tr class="separator:adad691a27a5b369ae75fe791c5c73a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92f2930a8d82b87898edf1b774c7e757"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a92f2930a8d82b87898edf1b774c7e757">get_record_ordinal</a> () const override</td></tr>
 <tr class="separator:a92f2930a8d82b87898edf1b774c7e757"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adad13986931ac7087d4dc63204336120"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#adad13986931ac7087d4dc63204336120">get_output_record_ordinal</a> () const</td></tr>
@@ -210,6 +212,34 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <p>Returns the chunk instruction count from the <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ab8531c7f66ccc0d7fe59f436844a295ca54de3443995c20736cd284390f727a5e">TRACE_MARKER_TYPE_CHUNK_INSTR_COUNT</a> record in the trace header. </p>
 
 <p>Implements <a class="el" href="classdynamorio_1_1drmemtrace_1_1memtrace__stream__t.html#aa26fd2f925dffce16ad913ecc03900c5">dynamorio::drmemtrace::memtrace_stream_t</a>.</p>
+
+</div>
+</div>
+<a id="adad691a27a5b369ae75fe791c5c73a05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adad691a27a5b369ae75fe791c5c73a05">&#9670;&nbsp;</a></span>get_error_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RecordType , typename ReaderType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html">dynamorio::drmemtrace::scheduler_tmpl_t</a>&lt; RecordType, ReaderType &gt;::stream_t::get_error_string </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a string further describing an error code on this stream. For scheduler-wide errors such as during initialization, use the scheduler object function of the same name instead. </p>
 
 </div>
 </div>
@@ -1101,5 +1131,5 @@ template&lt;typename RecordType , typename ReaderType &gt; </div>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20727 --- Fri Oct 2 2026 03:12:55 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20735 --- Fri Oct 9 2026 03:16:08 &nbsp; <img border=0 src="favicon.png">
 </small></address>

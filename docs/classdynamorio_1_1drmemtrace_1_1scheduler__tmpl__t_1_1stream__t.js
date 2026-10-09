@@ -1,6 +1,7 @@
 [
     [ "get_cache_line_size", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a026b9e604a2d9681f9943931789fac85", null ],
     [ "get_chunk_instr_count", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a9d35d11a82bc130f7e0b3ecade8b9023", null ],
+    [ "get_error_string", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#adad691a27a5b369ae75fe791c5c73a05", null ],
     [ "get_filetype", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#acd2cb76686b11cd99757ca215340001e", null ],
     [ "get_first_timestamp", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#aa6ab7b95a0ef459d80e19c917510fb92", null ],
     [ "get_input_id", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t_1_1stream__t.html#a6ef53eeeb2adb92de55343420202d5b5", null ],

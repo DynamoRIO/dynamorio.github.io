@@ -1659,7 +1659,7 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295cad6dbac78ce7bd51c3ecb18894248ff4c"></a>TRACE_MARKER_TYPE_CACHE_LINE_SIZE&#160;</td><td class="fielddoc"><p>The marker value contains the traced processor's cache line size in bytes. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca733229fc49ba6154769dba79b6f20943"></a>TRACE_MARKER_TYPE_INSTRUCTION_COUNT&#160;</td><td class="fielddoc"><p>The marker value contains the count of dynamic instruction executions in this software thread since the start of the trace. This marker type is only present in online-cache-filtered traces and is placed at thread exit. </p>
+<tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca733229fc49ba6154769dba79b6f20943"></a>TRACE_MARKER_TYPE_INSTRUCTION_COUNT&#160;</td><td class="fielddoc"><p>The marker value contains the count of dynamic instruction executions in this software thread since the start of the trace. This marker type is only present in online-cache-filtered traces and is placed at each thread buffer boundary and at thread exit. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ab8531c7f66ccc0d7fe59f436844a295ca5f4d633b1e1075218c8e1067d12d496e"></a>TRACE_MARKER_TYPE_VERSION&#160;</td><td class="fielddoc"><p>The marker value contains the version of the trace format: a value of type <a class="el" href="namespacedynamorio_1_1drmemtrace.html#ad84239da3ba299ee4ebcf24134e6b5da">trace_version_t</a>. The marker is present in the first few entries of a trace file. </p>
 </td></tr>
@@ -3222,5 +3222,5 @@ For additional file open parameters with the thread and window identifiers, use 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20727 --- Fri Oct 2 2026 03:12:54 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20735 --- Fri Oct 9 2026 03:16:08 &nbsp; <img border=0 src="favicon.png">
 </small></address>
