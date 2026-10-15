@@ -433,7 +433,7 @@ If non-zero, only this many live cores can be scheduled at any one time. Other c
 A letter is printed every N instrs or N waits</li>
 <li><b>-syscall_template_file</b> <br  />
 <em>default value: ""</em> <br  />
-Path to the file that contains system call trace templates. If set, system call traces will be injected from the file into the resulting trace. This is still experimental so the template file format may change without backward compatibility.</li>
+Path to the file that contains system call trace templates. If set, during post-processing system call traces will be injected from the file into the resulting trace. Use -sched_syscall_file for dynamic injection.</li>
 <li><b>-filter_stop_timestamp</b> <br  />
 <em>default value: 0</em> <br  />
 Record filtering will be disabled (everything will be output) when the tool sees a TRACE_MARKER_TYPE_TIMESTAMP marker with timestamp greater than the specified value.</li>
@@ -496,5 +496,5 @@ This applies only to dynamic -core_sharded scheduling. The activity (the sum of 
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20735 --- Fri Oct 9 2026 03:16:08 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20741 --- Thu Oct 15 2026 21:36:02 &nbsp; <img border=0 src="favicon.png">
 </small></address>

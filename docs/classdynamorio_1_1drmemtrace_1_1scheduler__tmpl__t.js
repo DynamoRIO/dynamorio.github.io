@@ -51,7 +51,8 @@
       [ "STATUS_RECORD_FAILED", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a1ce722940239ccf3b81c2da8cd50a4f1", null ],
       [ "STATUS_IDLE", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a12d188836f862a7a68b558460b725f72", null ],
       [ "STATUS_IMPOSSIBLE_BINDING", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a0c0b48538026e54ccfe1f5066eb59185", null ],
-      [ "STATUS_STOLE", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a882cd290b0efb076ccc59f6322551561", null ]
+      [ "STATUS_STOLE", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a882cd290b0efb076ccc59f6322551561", null ],
+      [ "STATUS_MISSING_TEMPLATE", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a23d5caa35aed595282c65964326860d5a8bdb022741e9eab58a3c7ed8e8f9b10d", null ]
     ] ],
     [ "scheduler_tmpl_t", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#aef76c4829ea214c9440b782db10ec346", null ],
     [ "get_error_string", "classdynamorio_1_1drmemtrace_1_1scheduler__tmpl__t.html#a13a243f7d2fe325711ab0fab69576f9e", null ],
