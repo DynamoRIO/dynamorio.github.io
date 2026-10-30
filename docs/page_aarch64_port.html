@@ -65,7 +65,7 @@ Stolen register</h1>
 <p>If the fragment cache were not shared between threads it would be possible to avoid stealing a general-purpose register: borrow TPIDR_EL0 instead and spill registers, when necessary, by first spilling a general-purpose register into TPIDR_EL0 and then generating a memory address with ADRP. This way one could avoid the expense of mangling instructions that use a stolen general-purpose register, but instrumentation would be more expensive in some cases, so the value for DynamoRIO of this approach is unclear.</p>
 <h1><a class="anchor" id="autotoc_md16"></a>
 Reachability</h1>
-<p>An AArch64 unconditional immediate/direct branch (B or BL) has a range of +/- 128 MiB. If the fragment cache were restricted to a 128 MiB block of memory then it would be possible to branch from any fragment to any other fragment. DynamoRIO does not currently restrict the memory range used for the fragment cache so in general it is necessary to use a register/indirect branch when exiting from a fragment. There are opportunities for improvement in this area.</p>
+<p>An AArch64 unconditional immediate/direct branch (B or BL) has a range of +/- 128 MiB. If the fragment cache were restricted to a 128 MiB block of memory then it would be possible to branch from any fragment to any other fragment. DynamoRIO does not currently restrict the fragment cache to 128 MiB, so far-away fragments are linked via an indirect branch in the exit stub. See <a class="el" href="page_aarch64_far.html">Linking Far Fragments on AArch64</a> for details.</p>
 <h1><a class="anchor" id="autotoc_md17"></a>
 Self-modifying code</h1>
 <p>The X86 architecture requires hardware to detect when the instruction cache has been invalided by a write to memory, so DynamoRIO must detect when code that has already been rewritten into the fragment cache is subsequently modified, which is not trivial to implement efficiently.</p>
@@ -95,5 +95,5 @@ Sandboxing implementation</h2>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20749 --- Fri Oct 23 2026 03:11:25 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20755 --- Fri Oct 30 2026 03:08:57 &nbsp; <img border=0 src="favicon.png">
 </small></address>
