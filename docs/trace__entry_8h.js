@@ -170,5 +170,6 @@
     [ "type_is_prefetch", "trace__entry_8h.html#a1ba3d847cac01db253754e37a4833d63", null ],
     [ "type_is_read", "trace__entry_8h.html#a73a3b41d08fe1a6ff4f002ae7b643507", null ],
     [ "DEFAULT_SYSCALL_TRACE_TEMPLATE_SYSNUM", "trace__entry_8h.html#a84c5c002f14824453f8111dad40d6277", null ],
+    [ "IDLE_PROCESS_ID", "trace__entry_8h.html#aaaf2f3fe2adaaea73a4e38eeb58195a1", null ],
     [ "IDLE_THREAD_ID", "trace__entry_8h.html#addb5db6cd9a35b731ae9f0f3f3b174ba", null ]
 ],

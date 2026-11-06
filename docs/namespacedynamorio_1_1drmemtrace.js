@@ -358,6 +358,7 @@
     [ "workload_from_memref_pid", "namespacedynamorio_1_1drmemtrace.html#a5d4cea2caf82880722e32975f5ed9885", null ],
     [ "workload_from_memref_tid", "namespacedynamorio_1_1drmemtrace.html#a4ce9436b26857c5c3cdb79f03087a163", null ],
     [ "DEFAULT_SYSCALL_TRACE_TEMPLATE_SYSNUM", "namespacedynamorio_1_1drmemtrace.html#a84c5c002f14824453f8111dad40d6277", null ],
+    [ "IDLE_PROCESS_ID", "namespacedynamorio_1_1drmemtrace.html#aaaf2f3fe2adaaea73a4e38eeb58195a1", null ],
     [ "IDLE_THREAD_ID", "namespacedynamorio_1_1drmemtrace.html#addb5db6cd9a35b731ae9f0f3f3b174ba", null ],
     [ "MEMREF_T_SIZE_BYTES", "namespacedynamorio_1_1drmemtrace.html#ac830533bb90de0ee0ccc3a573fe12f3e", null ]
 ],
