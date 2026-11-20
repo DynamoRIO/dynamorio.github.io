@@ -789,6 +789,7 @@
     [ "INSTR_CREATE_saddw_vector", "dr__ir__macros__aarch64_8h.html#a44e3b5792bb314ede89e5e0c04e37d1d", null ],
     [ "INSTR_CREATE_saddwb_sve", "dr__ir__macros__aarch64_8h.html#a5773e190a1f2a770cee8f446b73176c1", null ],
     [ "INSTR_CREATE_saddwt_sve", "dr__ir__macros__aarch64_8h.html#a2c24ff76a65e5bf144db975ca46f5414", null ],
+    [ "INSTR_CREATE_sb", "dr__ir__macros__aarch64_8h.html#a61ec835fa00c4a82198e68fdd1ca58ef", null ],
     [ "INSTR_CREATE_sbclb_sve", "dr__ir__macros__aarch64_8h.html#a0646204271777d25681baea856e5f453", null ],
     [ "INSTR_CREATE_sbclt_sve", "dr__ir__macros__aarch64_8h.html#a6cf6aa1d25ab758151bc2713a0d252e1", null ],
     [ "INSTR_CREATE_scvtf_scalar", "dr__ir__macros__aarch64_8h.html#adf6ce2bede30ab1d573d8d6bb0e39595", null ],

@@ -3,11 +3,13 @@
     [ "DRMGR_PRIORITY_NAME_MEMTRACE", "drmemtrace_8h.html#a015a9ac79ac244f338bb44ad12d2d958", null ],
     [ "drmemtrace_close_file_func_t", "drmemtrace_8h.html#a6c7e76d856b394beffbdc8bdc3b91b79", null ],
     [ "drmemtrace_create_dir_func_t", "drmemtrace_8h.html#a93371846367775f0bd0ecb584f9e8ade", null ],
+    [ "drmemtrace_ended_tracing_func_t", "drmemtrace_8h.html#ab15423b4caff39933f839ce0c635c3fc", null ],
     [ "drmemtrace_exit_func_t", "drmemtrace_8h.html#a312662ae4babe9b8a3a4c7a07785ed39", null ],
     [ "drmemtrace_handoff_func_t", "drmemtrace_8h.html#adb903e64e7cde6b14e10c7f0c00b1e71", null ],
     [ "drmemtrace_open_file_ex_func_t", "drmemtrace_8h.html#af108777bb52e17d0c37400719bb9ceab", null ],
     [ "drmemtrace_open_file_func_t", "drmemtrace_8h.html#abad5e1e6e82153deac224f868769f2a3", null ],
     [ "drmemtrace_read_file_func_t", "drmemtrace_8h.html#abb0469132d20c60df19807a6795eb5ee", null ],
+    [ "drmemtrace_started_tracing_func_t", "drmemtrace_8h.html#a091cd2531857ef516d91c2094c8fd1bf", null ],
     [ "drmemtrace_write_file_func_t", "drmemtrace_8h.html#aa3f2df28dee259f08721af1e800f0cd4", null ],
     [ "drmemtrace_status_t", "drmemtrace_8h.html#a2e273d2446c97f759c93ee0bbd941f34", [
       [ "DRMEMTRACE_SUCCESS", "drmemtrace_8h.html#a2e273d2446c97f759c93ee0bbd941f34a6b6ba763503b22bd32d68f6d96ecc41d", null ],
@@ -15,6 +17,7 @@
       [ "DRMEMTRACE_ERROR_INVALID_PARAMETER", "drmemtrace_8h.html#a2e273d2446c97f759c93ee0bbd941f34ab9278af3f1dc3a975312d7be63958fe2", null ],
       [ "DRMEMTRACE_ERROR_NOT_IMPLEMENTED", "drmemtrace_8h.html#a2e273d2446c97f759c93ee0bbd941f34ae060c60786807d77cb63eee62cd99b86", null ]
     ] ],
+    [ "drmemtrace_boundary_events", "drmemtrace_8h.html#a4f0e6ee4c40b30f4fd21d19c3b319c38", null ],
     [ "drmemtrace_buffer_handoff", "drmemtrace_8h.html#ac1494261afdcd992385876afdd660e1a", null ],
     [ "drmemtrace_client_main", "drmemtrace_8h.html#a9e7c889c48426d00d708b6374c1fdcf7", null ],
     [ "drmemtrace_custom_module_data", "drmemtrace_8h.html#ae928b4aceb19475c965eb8de4d7ca07a", null ],

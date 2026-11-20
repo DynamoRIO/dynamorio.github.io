@@ -348,6 +348,8 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac605f4f78478d02373fa0c694b129fa2">FEATURE_AVX512BW</a> = 30 + 128
 , <br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaa3ff5155666b1a3022cf60f404c0be12">FEATURE_LA57</a> = 16 + 160
+, <br />
 &#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa650351ab203638f53d96bcbf0775da75">FEATURE_AESX</a> = DEF_FEAT(AA64ISAR0, 1, 1, FEAT_GR_EQ)
 , <br />
 &#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa79127c7fb09d20205c16b9c607d7bee1">FEATURE_PMULL</a> = DEF_FEAT(AA64ISAR0, 1, 2, FEAT_EQ)
@@ -449,6 +451,8 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa33b4ca0ebed3b1796f1cedaf74bbc68e">FEATURE_FPAC</a>
 , <br />
 &#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa1d9a9167ebf1cd1c75d552a89ceae069">FEATURE_FPACCOMBINE</a>
+, <br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa59c1161918d11c647423585444c8d084">FEATURE_SB</a> = DEF_FEAT(AA64ISAR1, 9, 1, FEAT_EQ)
 <br />
  }</td></tr>
 <tr class="separator:a5e226019d68bd13050692da392f6c4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -623,6 +627,8 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac605f4f78478d02373fa0c694b129fa2">FEATURE_AVX512BW</a> = 30 + 128
 , <br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaa3ff5155666b1a3022cf60f404c0be12">FEATURE_LA57</a> = 16 + 160
+, <br />
 &#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa650351ab203638f53d96bcbf0775da75">FEATURE_AESX</a> = DEF_FEAT(AA64ISAR0, 1, 1, FEAT_GR_EQ)
 , <br />
 &#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa79127c7fb09d20205c16b9c607d7bee1">FEATURE_PMULL</a> = DEF_FEAT(AA64ISAR0, 1, 2, FEAT_EQ)
@@ -724,6 +730,8 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa33b4ca0ebed3b1796f1cedaf74bbc68e">FEATURE_FPAC</a>
 , <br />
 &#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa1d9a9167ebf1cd1c75d552a89ceae069">FEATURE_FPACCOMBINE</a>
+, <br />
+&#160;&#160;<a class="el" href="dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa59c1161918d11c647423585444c8d084">FEATURE_SB</a> = DEF_FEAT(AA64ISAR1, 9, 1, FEAT_EQ)
 <br />
  }</td></tr>
 <tr class="separator:a5e226019d68bd13050692da392f6c4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1781,6 +1789,8 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfac605f4f78478d02373fa0c694b129fa2"></a>FEATURE_AVX512BW&#160;</td><td class="fielddoc"><p>AVX-512BW instructions supported (X86) </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfaa3ff5155666b1a3022cf60f404c0be12"></a>FEATURE_LA57&#160;</td><td class="fielddoc"><p>57-bit linear addresses (5-level paging) (X86) </p>
+</td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa650351ab203638f53d96bcbf0775da75"></a>FEATURE_AESX&#160;</td><td class="fielddoc"><p>AES&lt;x&gt; (AArch64) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa79127c7fb09d20205c16b9c607d7bee1"></a>FEATURE_PMULL&#160;</td><td class="fielddoc"><p>PMULL/PMULL2 (AArch64) </p>
@@ -1882,6 +1892,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa33b4ca0ebed3b1796f1cedaf74bbc68e"></a>FEATURE_FPAC&#160;</td><td class="fielddoc"><p>Faulting on AUTI* instructions (AArch64) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa1d9a9167ebf1cd1c75d552a89ceae069"></a>FEATURE_FPACCOMBINE&#160;</td><td class="fielddoc"><p>Faulting on combined branch pointer authentication instructions (AArch64) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa59c1161918d11c647423585444c8d084"></a>FEATURE_SB&#160;</td><td class="fielddoc"><p>SB (AArch64) </p>
 </td></tr>
 </table>
 
@@ -2070,6 +2082,8 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfac605f4f78478d02373fa0c694b129fa2"></a>FEATURE_AVX512BW&#160;</td><td class="fielddoc"><p>AVX-512BW instructions supported (X86) </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfaa3ff5155666b1a3022cf60f404c0be12"></a>FEATURE_LA57&#160;</td><td class="fielddoc"><p>57-bit linear addresses (5-level paging) (X86) </p>
+</td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa650351ab203638f53d96bcbf0775da75"></a>FEATURE_AESX&#160;</td><td class="fielddoc"><p>AES&lt;x&gt; (AArch64) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa79127c7fb09d20205c16b9c607d7bee1"></a>FEATURE_PMULL&#160;</td><td class="fielddoc"><p>PMULL/PMULL2 (AArch64) </p>
@@ -2171,6 +2185,8 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa33b4ca0ebed3b1796f1cedaf74bbc68e"></a>FEATURE_FPAC&#160;</td><td class="fielddoc"><p>Faulting on AUTI* instructions (AArch64) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa1d9a9167ebf1cd1c75d552a89ceae069"></a>FEATURE_FPACCOMBINE&#160;</td><td class="fielddoc"><p>Faulting on combined branch pointer authentication instructions (AArch64) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5e226019d68bd13050692da392f6c4bfa59c1161918d11c647423585444c8d084"></a>FEATURE_SB&#160;</td><td class="fielddoc"><p>SB (AArch64) </p>
 </td></tr>
 </table>
 
@@ -2722,5 +2738,5 @@ Functions</h2></td></tr>
 <!--BEGIN GENERATE_TREEVIEW-->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.91.20766 --- Fri Nov 13 2026 03:07:06 &nbsp; <img border=0 src="favicon.png">
+    <li class="footer" style="float:none;text-align:center"><img border=0 src="favicon.png"> &nbsp;  DynamoRIO version 11.92.20777 --- Fri Nov 20 2026 03:09:05 &nbsp; <img border=0 src="favicon.png">
 </small></address>

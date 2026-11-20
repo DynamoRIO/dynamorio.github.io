@@ -147,6 +147,7 @@
       [ "FEATURE_RTM", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa38f4845f31f888ade766a5db0bbd1c17", null ],
       [ "FEATURE_AVX512F", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa1cc6def6616c9e39d309e5320048e567", null ],
       [ "FEATURE_AVX512BW", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac605f4f78478d02373fa0c694b129fa2", null ],
+      [ "FEATURE_LA57", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaa3ff5155666b1a3022cf60f404c0be12", null ],
       [ "FEATURE_AESX", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa650351ab203638f53d96bcbf0775da75", null ],
       [ "FEATURE_PMULL", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa79127c7fb09d20205c16b9c607d7bee1", null ],
       [ "FEATURE_SHA1", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa9076766d3f75068f3d59b79f2a2f7131", null ],
@@ -197,7 +198,8 @@
       [ "FEATURE_LSE2", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa234ee1a77e16297c1255164d9551c550", null ],
       [ "FEATURE_WFxT", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa872dd8c4fda04ab8d2a69be5a22b5709", null ],
       [ "FEATURE_FPAC", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa33b4ca0ebed3b1796f1cedaf74bbc68e", null ],
-      [ "FEATURE_FPACCOMBINE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa1d9a9167ebf1cd1c75d552a89ceae069", null ]
+      [ "FEATURE_FPACCOMBINE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa1d9a9167ebf1cd1c75d552a89ceae069", null ],
+      [ "FEATURE_SB", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa59c1161918d11c647423585444c8d084", null ]
     ] ],
     [ "feature_bit_t", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bf", [
       [ "FEATURE_FPU", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac39f532dceb337cb996ebf5a8d658668", null ],
@@ -285,6 +287,7 @@
       [ "FEATURE_RTM", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa38f4845f31f888ade766a5db0bbd1c17", null ],
       [ "FEATURE_AVX512F", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa1cc6def6616c9e39d309e5320048e567", null ],
       [ "FEATURE_AVX512BW", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfac605f4f78478d02373fa0c694b129fa2", null ],
+      [ "FEATURE_LA57", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfaa3ff5155666b1a3022cf60f404c0be12", null ],
       [ "FEATURE_AESX", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa650351ab203638f53d96bcbf0775da75", null ],
       [ "FEATURE_PMULL", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa79127c7fb09d20205c16b9c607d7bee1", null ],
       [ "FEATURE_SHA1", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa9076766d3f75068f3d59b79f2a2f7131", null ],
@@ -335,7 +338,8 @@
       [ "FEATURE_LSE2", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa234ee1a77e16297c1255164d9551c550", null ],
       [ "FEATURE_WFxT", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa872dd8c4fda04ab8d2a69be5a22b5709", null ],
       [ "FEATURE_FPAC", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa33b4ca0ebed3b1796f1cedaf74bbc68e", null ],
-      [ "FEATURE_FPACCOMBINE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa1d9a9167ebf1cd1c75d552a89ceae069", null ]
+      [ "FEATURE_FPACCOMBINE", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa1d9a9167ebf1cd1c75d552a89ceae069", null ],
+      [ "FEATURE_SB", "dr__proc_8h.html#a5e226019d68bd13050692da392f6c4bfa59c1161918d11c647423585444c8d084", null ]
     ] ],
     [ "feature_reg_idx_t", "dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911", [
       [ "AA64ISAR0", "dr__proc_8h.html#a9ffeec9fb13eabb34411ecd31d122911a1a828488d3f29269229746cd59a0e9e6", null ],
