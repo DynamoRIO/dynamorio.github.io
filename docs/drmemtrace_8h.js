@@ -17,10 +17,11 @@
       [ "DRMEMTRACE_ERROR_INVALID_PARAMETER", "drmemtrace_8h.html#a2e273d2446c97f759c93ee0bbd941f34ab9278af3f1dc3a975312d7be63958fe2", null ],
       [ "DRMEMTRACE_ERROR_NOT_IMPLEMENTED", "drmemtrace_8h.html#a2e273d2446c97f759c93ee0bbd941f34ae060c60786807d77cb63eee62cd99b86", null ]
     ] ],
-    [ "drmemtrace_boundary_events", "drmemtrace_8h.html#a4f0e6ee4c40b30f4fd21d19c3b319c38", null ],
+    [ "drmemtrace_boundary_events", "drmemtrace_8h.html#a4fb4a8afd6abb80b5c54b2a817280a7a", null ],
     [ "drmemtrace_buffer_handoff", "drmemtrace_8h.html#ac1494261afdcd992385876afdd660e1a", null ],
     [ "drmemtrace_client_main", "drmemtrace_8h.html#a9e7c889c48426d00d708b6374c1fdcf7", null ],
     [ "drmemtrace_custom_module_data", "drmemtrace_8h.html#ae928b4aceb19475c965eb8de4d7ca07a", null ],
+    [ "drmemtrace_dump_module_info", "drmemtrace_8h.html#a76494671bfb06e1c0a1e758feb819e70", null ],
     [ "drmemtrace_filter_threads", "drmemtrace_8h.html#a0c628011b0f875bb8dc3397052b4d0b5", null ],
     [ "drmemtrace_get_bytes_written", "drmemtrace_8h.html#afd092a382178b0c3d26a46431c062c75", null ],
     [ "drmemtrace_get_encoding_path", "drmemtrace_8h.html#a29b5fb1574fa31468d064659fdae6efc", null ],
